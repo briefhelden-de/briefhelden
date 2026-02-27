@@ -2,389 +2,545 @@
 <html lang="de">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BriefHelden</title>
-
+  <meta name="description" content="Einfach. Verständlich. Diskret. Premium-Erklärung für offizielle Briefe & Formulare." />
   <style>
-    /* ====== HIER: Dein vorhandenes CSS (ich lasse deine Optik) ====== */
-    /* (Falls du oben davor noch Styles hast: einfach drin lassen.) */
-
-    .badgePill{
+    :root{
+      --nav-bg: rgba(9,24,33,.78);
+      --nav-border: rgba(255,255,255,.10);
+      --text: #0b1220;
+      --muted: rgba(11,18,32,.70);
+      --heroText: #fff;
+      --heroMuted: rgba(255,255,255,.82);
+      --glass: rgba(255,255,255,.26);
+      --glass2: rgba(255,255,255,.16);
+      --stroke: rgba(255,255,255,.35);
+      --shadow: 0 18px 40px rgba(0,0,0,.18);
+      --btn1: #2f6fff;
+      --btn2: #1f56b8;
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --radius-md: 14px;
+      --max: 1120px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(1200px 700px at 12% 24%, rgba(120,180,255,.32), rgba(255,255,255,0) 60%),
+        radial-gradient(1200px 800px at 88% 18%, rgba(120,140,255,.26), rgba(255,255,255,0) 62%),
+        radial-gradient(1000px 700px at 50% 92%, rgba(170,210,255,.28), rgba(255,255,255,0) 60%),
+        linear-gradient(180deg, #f8fbff 0%, #eef6ff 45%, #f8fbff 100%);
+      min-height: 100vh;
+    }
+    a{color:inherit;text-decoration:none}
+    /* NAV */
+    header{
+      position:sticky; top:0; z-index:10;
+      background: var(--nav-bg);
+      backdrop-filter: blur(12px) saturate(140%);
+      border-bottom: 1px solid var(--nav-border);
+    }
+    .nav{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      color:#fff;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight: 900;
+      letter-spacing:.2px;
+      white-space:nowrap;
+    }
+    .brand .logo{
+      width:26px; height:26px; border-radius:10px;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.85), rgba(255,255,255,.08)),
+                  linear-gradient(180deg, rgba(55,120,255,.9), rgba(20,70,190,.9));
+      box-shadow: 0 10px 18px rgba(0,0,0,.18);
+      position:relative;
+    }
+    .brand .logo:after{
+      content:"";
+      position:absolute; inset:7px 6px 7px 10px;
+      border-radius:8px;
+      background: rgba(255,255,255,.85);
+      clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+      opacity:.12;
+    }
+    nav.links{
+      display:flex; align-items:center; gap:16px; flex-wrap:wrap;
+    }
+    nav.links a{
+      color: rgba(255,255,255,.82);
+      font-weight:700;
+      font-size: 14px;
+    }
+    nav.links a:hover{color:#fff}
+    .langWrap{
+      display:flex; align-items:center; gap:10px;
+    }
+    .langSelect{
+      appearance:none;
+      border:1px solid rgba(255,255,255,.18);
+      background: rgba(0,0,0,.18);
+      color:#fff;
+      padding: 8px 36px 8px 12px;
+      border-radius: 12px;
+      font-weight:800;
+      cursor:pointer;
+      position:relative;
+      outline:none;
+    }
+    .langSelect:focus{box-shadow: 0 0 0 3px rgba(90,160,255,.25)}
+    .langWrap{position:relative}
+    .langWrap:after{
+      content:"▾";
+      position:absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(255,255,255,.85);
+      pointer-events:none;
+      font-size: 12px;
+    }
+    /* HERO */
+    .hero{
+      position:relative;
+      color: var(--heroText);
+      padding: 64px 18px 36px;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.55)),
+url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=2200&q=60");
+      background-size: cover;
+      background-position: center;
+    }
+    .hero .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      text-align:center;
+    }
+    .hero h1{
+      margin:0 0 10px;
+      font-weight: 950;
+      font-size: clamp(30px, 3.7vw, 48px);
+      letter-spacing:.2px;
+      text-shadow: 0 10px 24px rgba(0,0,0,.35);
+    }
+    .hero p{
+      margin:0 auto 18px;
+      max-width: 820px;
+      color: var(--heroMuted);
+      font-size: clamp(15px, 2vw, 18px);
+      line-height: 1.5;
+    }
+    .cta{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 14px 20px;
+      border-radius: 16px;
+      background: linear-gradient(180deg, var(--btn1), var(--btn2));
+      color:#fff;
+      font-weight: 950;
+      box-shadow: 0 18px 38px rgba(0,0,0,.28);
+      border: 1px solid rgba(255,255,255,.20);
+      min-width: min(560px, 92vw);
+    }
+    .cta:hover{filter: brightness(1.05)}
+    .heroMeta{
+      margin-top: 14px;
+      display:flex;
+      gap:14px;
+      justify-content:center;
+      flex-wrap:wrap;
+      color: rgba(255,255,255,.86);
+      font-weight: 700;
+      font-size: 13px;
+    }
+    .heroMeta span{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(10px);
+    }
+    /* SECTIONS */
+    .section{padding: 26px 18px 10px}
+    .wrap{max-width: var(--max); margin:0 auto}
+    .glassCard{
+      background: linear-gradient(180deg, var(--glass), var(--glass2));
+      border: 1px solid var(--stroke);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px) saturate(140%);
+      -webkit-backdrop-filter: blur(14px) saturate(140%);
+      overflow:hidden;
+    }
+    .pad{padding: 22px 22px}
+    .headline{
+      text-align:center;
+      margin: 0 0 10px;
+      font-weight: 950;
+      font-size: clamp(22px, 2.6vw, 34px);
+      letter-spacing:.2px;
+    }
+    .lead{
+      text-align:center;
+      margin: 0 auto 16px;
+      max-width: 880px;
+      color: rgba(11,18,32,.76);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    .howTitle{
+      text-align:center;
+      font-weight: 950;
+      margin: 0 0 10px;
+      font-size: 22px;
+    }
+    .howRow{
+      display:flex;
+      gap:18px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top: 8px;
+      color: rgba(11,18,32,.85);
+      font-weight: 800;
+    }
+    .howRow .mini{
+      display:flex; gap:10px; align-items:center;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.55);
+      background: rgba(255,255,255,.22);
+    }
+    .pillRow{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 14px;
+    }
+    .pill{
       display:flex;
       align-items:center;
       justify-content:center;
       gap:10px;
-      padding:12px 16px;
-      border-radius:999px;
-      background: rgba(255,255,255,.30);
-      border:1px solid rgba(255,255,255,.55);
-      backdrop-filter: blur(12px) saturate(140%);
-      -webkit-backdrop-filter: blur(12px) saturate(140%);
-      box-shadow: 0 10px 26px rgba(0,25,60,.10);
-      font-weight:800;
-      color:rgba(18,34,55,.88);
-      min-width: min(280px, 92vw);
+      padding: 12px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.55);
+      background: rgba(255,255,255,.22);
+      font-weight: 900;
+      color: rgba(11,18,32,.86);
+      text-align:center;
     }
-    .flow{
-      margin:14px auto 0;
-      max-width:920px;
-      display:grid;
-      grid-template-columns: 1fr;
-      gap:8px;
-      color:rgba(10,18,32,.86);
-      font-size:16px;
-      line-height:1.55;
+    .flowBox{
+      margin-top: 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,.55);
+      background: rgba(255,255,255,.18);
+      padding: 14px 16px;
+      color: rgba(11,18,32,.82);
     }
-    .flow li{
-      list-style:none;
+    .flowLine{
       display:flex;
       gap:10px;
       align-items:flex-start;
+      margin: 8px 0;
+      font-weight: 800;
     }
-    .flow .dot{
-      width:10px;height:10px;border-radius:999px;
-      margin-top:7px;
-      background: rgba(47,110,230,.85);
-      box-shadow: 0 6px 16px rgba(47,110,230,.35);
-      flex:0 0 10px;
+    .flowDot{
+      width:10px; height:10px; border-radius:999px;
+      margin-top: 6px;
+      background: rgba(47,111,255,.85);
+      box-shadow: 0 8px 16px rgba(47,111,255,.25);
     }
-    .legalNote{
-      margin-top:14px;
+    .disclaimer{
+      margin-top: 12px;
       text-align:center;
-      padding:14px 16px;
-      border-radius:999px;
-      background: rgba(255,255,255,.24);
-      border: 1px solid rgba(255,255,255,.50);
-      color: rgba(20,35,55,.80);
-      font-weight:850;
+      font-weight: 800;
+      color: rgba(11,18,32,.70);
     }
-    /* Für welche Briefe */
+    /* DOCUMENT TYPES */
+    .typesTitle{
+      text-align:center;
+      font-weight: 950;
+      margin: 0 0 6px;
+      font-size: clamp(22px, 2.6vw, 34px);
+    }
+    .typesSub{
+      text-align:center;
+      margin: 0 0 18px;
+      color: rgba(11,18,32,.72);
+      font-weight: 700;
+    }
     .grid{
-      margin-top:14px;
       display:grid;
       grid-template-columns: repeat(2, 1fr);
-      gap:14px;
+      gap: 14px;
     }
-    .tile{
-      padding:16px 16px;
-      border-radius:18px;
-      background: rgba(255,255,255,.26);
-      border:1px solid rgba(255,255,255,.55);
-      box-shadow: 0 10px 26px rgba(0,25,60,.08);
+    .typeCard{
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(255,255,255,.55);
+      background: rgba(255,255,255,.20);
+      padding: 16px 16px;
       display:flex;
-      gap:12px;
+      gap: 12px;
       align-items:flex-start;
     }
     .icon{
-      width:34px;height:34px;border-radius:12px;
-      display:flex;align-items:center;justify-content:center;
-      background: rgba(47,110,230,.16);
-      border:1px solid rgba(47,110,230,.20);
-      flex:0 0 34px;
-      font-size:18px;
+      width: 40px; height:40px;
+      border-radius: 14px;
+      display:grid; place-items:center;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.85), rgba(255,255,255,.10)),
+        linear-gradient(180deg, rgba(70,140,255,.8), rgba(30,80,200,.8));
+      box-shadow: 0 16px 30px rgba(0,0,0,.12);
+      color:#fff;
+      font-weight: 950;
     }
-    .tile h3{
+    .typeCard h3{
       margin:0 0 6px;
-      font-weight:950;
-      font-size:18px;
+      font-size: 18px;
+      font-weight: 950;
     }
-    .tile p{
+    .typeCard p{
       margin:0;
-      color:rgba(20,35,55,.82);
-      font-weight:650;
-      line-height:1.45;
+      color: rgba(11,18,32,.74);
+      line-height: 1.45;
+      font-weight: 700;
     }
-    .smallLine{
-      margin-top:12px;
+    .typeCard ul{
+      margin: 8px 0 0;
+      padding-left: 18px;
+      color: rgba(11,18,32,.72);
+      font-weight: 700;
+    }
+    .bottomNote{
+      margin-top: 16px;
       text-align:center;
-      color:rgba(20,35,55,.78);
-      font-weight:700;
-      line-height:1.55;
+      color: rgba(11,18,32,.72);
+      font-weight: 800;
     }
-
-    /* Footer */
+    /* FOOTER */
     footer{
-      margin-top:18px;
-      background: rgba(12,34,48,.86);
-      color: rgba(255,255,255,.80);
+      margin-top: 18px;
+      padding: 18px 18px 28px;
+      color: rgba(255,255,255,.82);
+      background: rgba(9,24,33,.82);
       border-top: 1px solid rgba(255,255,255,.10);
-      backdrop-filter: blur(14px) saturate(140%);
-      -webkit-backdrop-filter: blur(14px) saturate(140%);
+      backdrop-filter: blur(12px) saturate(140%);
     }
-    .footerInner{
-      padding:18px 0;
+    .footWrap{
+      max-width: var(--max);
+      margin:0 auto;
       display:flex;
       justify-content:space-between;
       align-items:center;
-      gap:14px;
       flex-wrap:wrap;
-      font-weight:650;
+      gap: 12px;
     }
-    .footerLinks{display:flex; gap:14px; flex-wrap:wrap}
-    .footerLinks a{
-      color: rgba(255,255,255,.82);
-      font-weight:750;
-      text-decoration:none;
+    .footLinks{
+      display:flex; gap:14px; flex-wrap:wrap;
+      font-weight: 800;
     }
-    .footerLinks a:hover{color:#fff}
-
-    @media (max-width: 920px){
+    .footLinks a{color: rgba(255,255,255,.80)}
+    .footLinks a:hover{color:#fff}
+    /* Responsive */
+    @media (max-width: 900px){
       nav.links{display:none}
-      .grid{grid-template-columns: 1fr}
-      .badgePill{min-width: min(340px, 92vw)}
-      .cta{min-width:min(520px, 92vw)}
+      .pillRow{grid-template-columns:1fr}
+      .grid{grid-template-columns:1fr}
+      .cta{min-width: 92vw}
     }
-
-    /* ====== NEU: Modal/Popup für Pflicht-Häkchen ====== */
-    .modalBack{
-      position:fixed; inset:0; z-index:9999;
-      background: rgba(0,0,0,.45);
-      display:none;
-      align-items:center;
-      justify-content:center;
-      padding:18px;
-    }
-    .modalBox{
-      width:min(720px, 96vw);
-      background: rgba(255,255,255,.92);
-      border:1px solid rgba(255,255,255,.65);
-      border-radius:18px;
-      box-shadow: 0 28px 70px rgba(0,0,0,.25);
-      padding:18px 16px;
-      color:#111;
-    }
-    .modalBox h3{margin:0 0 8px;font-weight:950;font-size:20px}
-    .modalBox p{margin:0 0 10px;line-height:1.5;font-weight:650;color:rgba(10,18,32,.86)}
-    .checkRow{display:flex;gap:10px;align-items:flex-start;margin-top:10px}
-    .checkRow input{margin-top:4px}
-    .modalActions{display:flex;gap:10px;justify-content:flex-end;margin-top:14px;flex-wrap:wrap}
-    .btn{
-      border-radius:12px;
-      padding:12px 14px;
-      border:1px solid rgba(10,18,32,.18);
-      background:#fff;
-      font-weight:900;
-      cursor:pointer;
-    }
-    .btnPrimary{
-      background: rgba(47,110,230,.92);
-      border: 1px solid rgba(47,110,230,.92);
-      color:#fff;
-    }
-    .btnPrimary:disabled{opacity:.55;cursor:not-allowed}
-    .err{display:none;margin-top:10px;color:#b00020;font-weight:900}
-    .fine{margin-top:10px;font-size:13px;color:rgba(10,18,32,.70);font-weight:650}
-    .fine a{color:rgba(47,110,230,.95);font-weight:900}
-
   </style>
 </head>
-
 <body>
 <header>
-  <div class="wrap">
-    <div class="nav">
-      <div class="brand">
-        <span class="logo">💬</span>
-        <span>BriefHelden</span>
-      </div>
-
-      <nav class="links" aria-label="Hauptnavigation">
-        <a href="index.html" data-i18n="nav_home">Startseite</a>
-        <a href="widerruf.html" data-i18n="nav_refund">Widerrufs- und Rückerstattung</a>
-        <a href="impressum.html" data-i18n="nav_imprint">Impressum</a>
-        <a href="agb.html" data-i18n="nav_terms">AGB</a>
-        <a href="datenschutz.html" data-i18n="nav_privacy">Datenschutz</a>
-      </nav>
-
-      <div class="lang">
-        <div class="langWrap">
-          <select id="langSelect" aria-label="Sprache wählen">
-            <option value="de">DE</option>
-            <option value="en">EN</option>
-            <option value="tr">TR</option>
-            <option value="ru">RU</option>
-          </select>
-        </div>
-      </div>
+  <div class="nav">
+    <div class="brand">
+      <div class="logo" aria-hidden="true"></div>
+      <div>BriefHelden</div>
+    </div>
+    <nav class="links" aria-label="Hauptnavigation">
+      <a href="index.html" data-i18n="nav_home">Startseite</a>
+      <a href="widerruf.html" data-i18n="nav_refund">Widerrufs- und Rückerstattung</a>
+      <a href="impressum.html" data-i18n="nav_imprint">Impressum</a>
+      <a href="agb.html" data-i18n="nav_terms">AGB</a>
+      <a href="datenschutz.html" data-i18n="nav_privacy">Datenschutz</a>
+    </nav>
+    <div class="langWrap">
+      <select class="langSelect" id="langSelect" aria-label="Sprache">
+        <option value="de">DE</option>
+        <option value="en">EN</option>
+        <option value="tr">TR</option>
+        <option value="ru">RU</option>
+      </select>
     </div>
   </div>
 </header>
 
 <section class="hero">
   <div class="wrap">
-    <div class="heroInner">
-      <h1 data-i18n="hero_title">Einfach. Verständlich. Diskret.</h1>
-      <p data-i18n="hero_sub">
-        Premium-Erklärung für offizielle Briefe &amp; Formulare – in Ihrer Sprache.
-      </p>
+    <h1 data-i18n="hero_title">Einfach. Verständlich. Diskret.</h1>
+    <p data-i18n="hero_sub">Premium-Erklärung für offizielle Briefe &amp; Formulare – in Ihrer Sprache.</p>
 
-<!-- WICHTIG: Hier nicht mehr buy.stripe.com direkt,
-           sondern Modal -> Netlify Function -> Stripe Session (mit locale) -->
-      <a class="cta" href="#" id="stripeCta">
-        <span data-i18n="hero_cta">Jetzt Premium-Erklärung erhalten – 6,90 €</span>
-        <span aria-hidden="true">›</span>
-      </a>
+    <!-- Stripe Link (wird per JS auf die richtige Sprache gesetzt) -->
+    <a class="cta" id="stripeBtn" href="#" target="_blank" rel="noopener">
+      <span data-i18n="hero_cta">Jetzt Premium-Erklärung erhalten – 6,90 €</span>
+      <span aria-hidden="true">›</span>
+    </a>
 
-      <div class="heroMeta">
-        <div class="metaPill">✅ <span data-i18n="meta_price">Einmalig 6,90 €</span></div>
-        <div class="metaPill">🕒 <span data-i18n="meta_time">Antwort meist in Minuten</span></div>
-        <div class="metaPill">🔒 <span data-i18n="meta_trust">100% vertraulich</span></div>
-      </div>
+    <div class="heroMeta" aria-label="Kurzvorteile">
+      <span>✅ <span data-i18n="meta_once">Einmalig 6,90 €</span></span>
+      <span>🕒 <span data-i18n="meta_fast">Antwort meist in Minuten</span></span>
+      <span>🔒 <span data-i18n="meta_private">100% vertraulich</span></span>
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <div class="glass card">
-      <h2 class="title" data-i18n="q_title">Sie verstehen Ihren Brief nicht?</h2>
-      <p class="subtitle" data-i18n="q_text">
-        Viele offizielle Schreiben vom <b>Amt</b>, <b>Inkasso</b> oder <b>Mahnungen</b> sind kompliziert formuliert.
-        Laden Sie Ihr Dokument hoch – wir erklären Ihnen den Inhalt klar und verständlich,
-        damit Sie wissen, worum es geht und was Sie als Nächstes tun können.
-      </p>
+    <div class="glassCard">
+      <div class="pad">
+        <div class="headline" data-i18n="mid_title">Sie verstehen Ihren Brief nicht?</div>
+        <p class="lead" data-i18n="mid_text">
+          Viele offizielle Schreiben vom <b>Amt</b>, <b>Inkasso</b> oder <b>Mahnungen</b> sind kompliziert formuliert.
+          Laden Sie Ihr Dokument hoch – wir erklären Ihnen den Inhalt klar und verständlich, damit Sie wissen,
+          worum es geht und was Sie als Nächstes tun können.
+        </p>
 
-      <div class="glass card howBox" style="margin-top:16px;">
-        <div class="howTitle" data-i18n="how_title">So funktioniert es:</div>
+        <div class="glassCard" style="border-radius: 22px;">
+          <div class="pad" style="padding:18px 18px;">
+            <div class="howTitle" data-i18n="how_title">So funktioniert es:</div>
 
-        <div class="howRow">
-          <div class="checkLine">✓ <span data-i18n="how_item1">Dokument hochladen</span></div>
-          <div class="checkLine">✓ <span data-i18n="how_item2">100% Vertraulichkeit</span></div>
-        </div>
+            <div class="howRow" aria-label="Kurzablauf">
+              <div class="mini">✅ <span data-i18n="how_a">Dokument hochladen</span></div>
+              <div class="mini">✅ <span data-i18n="how_b">100% Vertraulichkeit</span></div>
+            </div>
 
-        <div class="badges" aria-label="Vorteile">
-          <div class="badgePill">🔒 <span data-i18n="badge_pay">Sichere Zahlung (Stripe)</span></div>
-          <div class="badgePill">⚡ <span data-i18n="badge_fast">Schnelle Antwort</span></div>
-          <div class="badgePill">🌍 <span data-i18n="badge_lang">Mehrsprachig</span></div>
-        </div>
+            <div class="pillRow" aria-label="Vorteile">
+              <div class="pill">🔒 <span data-i18n="pill_pay">Sichere Zahlung (Stripe)</span></div>
+              <div class="pill">⚡ <span data-i18n="pill_reply">Schnelle Antwort</span></div>
+              <div class="pill">🌍 <span data-i18n="pill_lang">Mehrsprachig</span></div>
+            </div>
 
-        <ul class="flow" aria-label="Ablauf" style="margin-top:16px;">
-          <li><span class="dot"></span><span data-i18n="flow_1">Sie laden Ihren Brief oder Ihr Formular hoch.</span></li>
-          <li><span class="dot"></span><span data-i18n="flow_2">Wir erklären Ihnen den Inhalt in einfacher, verständlicher Sprache.</span></li>
-          <li><span class="dot"></span><span data-i18n="flow_3">Sie erhalten die Erklärung per E-Mail.</span></li>
-        </ul>
+            <div class="flowBox" aria-label="Ablaufbeschreibung">
+              <div class="flowLine"><span class="flowDot"></span> <span data-i18n="flow_1">Sie laden Ihren Brief oder Ihr Formular hoch.</span></div>
+              <div class="flowLine"><span class="flowDot"></span> <span data-i18n="flow_2">Wir erklären Ihnen den Inhalt in einfacher, verständlicher Sprache.</span></div>
+              <div class="flowLine"><span class="flowDot"></span> <span data-i18n="flow_3">Sie erhalten die Erklärung per E-Mail.</span></div>
+            </div>
 
-        <div class="legalNote" data-i18n="legal_note">
-          Kein Rechtsrat – nur klare und verständliche Texterklärung.
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" style="padding-top:6px;">
-  <div class="wrap">
-    <div class="glass card">
-      <h2 class="title" data-i18n="for_title">Für welche Briefe &amp; Dokumente eignet sich BriefHelden?</h2>
-      <p class="subtitle" style="margin-top:8px;" data-i18n="for_sub">
-        Wir helfen bei komplizierten Schreiben wie:
-      </p>
-
-      <div class="grid" role="list">
-        <div class="tile" role="listitem">
-          <div class="icon">🏛️</div>
-          <div>
-            <h3 data-i18n="tile1_t">Briefe vom Amt</h3>
-            <p data-i18n="tile1_p">(Jobcenter, Finanzamt, Behörden, etc.)</p>
+            <div class="disclaimer" data-i18n="disclaimer">
+              Kein Rechtsrat – nur klare und verständliche Texterklärung.
+            </div>
           </div>
         </div>
 
-        <div class="tile" role="listitem">
-          <div class="icon">📩</div>
-          <div>
-            <h3 data-i18n="tile2_t">Inkasso</h3>
-            <p data-i18n="tile2_p">Forderungen, Zahlungsaufforderungen</p>
+        <div style="height:18px"></div>
+
+        <div class="glassCard">
+          <div class="pad">
+            <div class="typesTitle" data-i18n="types_title">Für welche Briefe &amp; Dokumente eignet sich BriefHelden?</div>
+            <div class="typesSub" data-i18n="types_sub">Wir helfen bei komplizierten Schreiben wie:</div>
+
+            <div class="grid">
+              <div class="typeCard">
+                <div class="icon">🏛️</div>
+                <div>
+                  <h3 data-i18n="t1_title">Briefe vom Amt</h3>
+                  <p data-i18n="t1_text">(Jobcenter, Finanzamt, Behörden, etc.)</p>
+                </div>
+              </div>
+
+              <div class="typeCard">
+                <div class="icon">📩</div>
+                <div>
+                  <h3 data-i18n="t2_title">Inkasso</h3>
+                  <ul>
+                    <li data-i18n="t2_li1">Forderungen</li>
+                    <li data-i18n="t2_li2">Zahlungsaufforderungen</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="typeCard">
+                <div class="icon">⚠️</div>
+                <div>
+                  <h3 data-i18n="t3_title">Kündigungen</h3>
+                  <ul>
+                    <li data-i18n="t3_li1">Mietwohnung</li>
+                    <li data-i18n="t3_li2">Arbeitsvertrag, Handy, etc.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="typeCard">
+                <div class="icon">⏳</div>
+                <div>
+                  <h3 data-i18n="t4_title">Mahnungen</h3>
+                  <ul>
+                    <li data-i18n="t4_li1">Fristen &amp; Zahlungsziele</li>
+                    <li data-i18n="t4_li2">Wichtige Schritte</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="typeCard">
+                <div class="icon">📄</div>
+                <div>
+                  <h3 data-i18n="t5_title">Verträge</h3>
+                  <p data-i18n="t5_text">Klauseln, Pflichten, Laufzeiten – verständlich erklärt.</p>
+                </div>
+              </div>
+
+              <div class="typeCard">
+                <div class="icon">🧾</div>
+                <div>
+                  <h3 data-i18n="t6_title">Formulare</h3>
+                  <p data-i18n="t6_text">Ausfüllhilfe &amp; verständliche Erklärung der Inhalte.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bottomNote" data-i18n="bottom_note">
+              Egal ob Fristen, Forderungen oder unklare Formulierungen – wir erklären Ihnen verständlich, worum es geht.
+            </div>
           </div>
         </div>
 
-        <div class="tile" role="listitem">
-          <div class="icon">⚠️</div>
-          <div>
-            <h3 data-i18n="tile3_t">Kündigungen</h3>
-            <p data-i18n="tile3_p">Mietwohnung, Arbeitsvertrag, Handy, etc.</p>
-          </div>
-        </div>
-
-        <div class="tile" role="listitem">
-          <div class="icon">⏳</div>
-          <div>
-            <h3 data-i18n="tile4_t">Mahnungen</h3>
-            <p data-i18n="tile4_p">Fristen &amp; Zahlungsziele, wichtige Schritte</p>
-          </div>
-        </div>
-
-        <div class="tile" role="listitem">
-          <div class="icon">📄</div>
-          <div>
-            <h3 data-i18n="tile5_t">Verträge</h3>
-            <p data-i18n="tile5_p">Klauseln, Pflichten, Laufzeiten – verständlich erklärt</p>
-          </div>
-        </div>
-
-        <div class="tile" role="listitem">
-          <div class="icon">📝</div>
-          <div>
-            <h3 data-i18n="tile6_t">Formulare</h3>
-            <p data-i18n="tile6_p">Ausfüllen &amp; verständliche Erklärung der Inhalte</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="smallLine" data-i18n="for_footer">
-        Egal ob Fristen, Forderungen oder unklare Formulierungen – wir erklären Ihnen verständlich, worum es geht.
       </div>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="wrap">
-    <div class="footerInner">
-      <div>© 2026 BriefHelden – Alle Rechte vorbehalten</div>
-      <div class="footerLinks">
-        <a href="widerruf.html" data-i18n="footer_refund">Widerruf</a>
-        <a href="impressum.html" data-i18n="footer_imprint">Impressum</a>
-        <a href="agb.html" data-i18n="footer_terms">AGB</a>
-        <a href="datenschutz.html" data-i18n="footer_privacy">Datenschutz</a>
-      </div>
+  <div class="footWrap">
+    <div>© 2026 BriefHelden – Alle Rechte vorbehalten</div>
+    <div class="footLinks">
+      <a href="widerruf.html" data-i18n="foot_refund">Widerruf</a>
+      <a href="impressum.html" data-i18n="foot_imprint">Impressum</a>
+      <a href="agb.html" data-i18n="foot_terms">AGB</a>
+      <a href="datenschutz.html" data-i18n="foot_privacy">Datenschutz</a>
     </div>
   </div>
 </footer>
 
-<!-- ===== Modal HTML ===== -->
-<div class="modalBack" id="modalBack" aria-hidden="true">
-  <div class="modalBox" role="dialog" aria-modal="true">
-    <h3 data-i18n="modal_title">Bitte bestätigen</h3>
-    <p data-i18n="modal_text">Bevor wir starten, benötigen wir Ihre Zustimmung zu AGB/Datenschutz sowie den Hinweis zum Sofortbeginn.</p>
-
-    <div class="checkRow">
-      <input type="checkbox" id="chkTerms" />
-      <label for="chkTerms" id="lblTerms"></label>
-    </div>
-
-    <div class="checkRow">
-      <input type="checkbox" id="chkWaiver" />
-      <label for="chkWaiver" id="lblWaiver"></label>
-    </div>
-
-    <div class="err" id="modalErr" data-i18n="modal_error">Bitte beide Häkchen setzen.</div>
-
-    <div class="fine" data-i18n="modal_hint">
-      Hinweis: Die deutsche Version ist rechtlich maßgeblich. Übersetzungen dienen nur der besseren Verständlichkeit.
-    </div>
-
-    <div class="modalActions">
-      <button class="btn" id="btnCancel" data-i18n="modal_cancel">Abbrechen</button>
-      <button class="btn btnPrimary" id="btnPay" data-i18n="modal_pay">Weiter zur Zahlung</button>
-    </div>
-  </div>
-</div>
-
 <script>
-  /* ====== WICHTIG: Hier deinen Upload-Formular-Link eintragen ====== */
-  const SUCCESS_FORM_URL = "HIER_DEIN_UPLOAD_FORMULAR_LINK_EINTRAGEN";
+  // Dein Stripe Payment Link (Basis)
+const STRIPE_BASE_URL = "https://buy.stripe.com/14A9ASbhP2c083deR74sE00";
 
-  /* ====== i18n (dein vorhandenes Wörterbuch + Modal-Texte ergänzt) ====== */
   const i18n = {
     de: {
       nav_home: "Startseite",
@@ -392,254 +548,204 @@
       nav_imprint: "Impressum",
       nav_terms: "AGB",
       nav_privacy: "Datenschutz",
-
       hero_title: "Einfach. Verständlich. Diskret.",
       hero_sub: "Premium-Erklärung für offizielle Briefe & Formulare – in Ihrer Sprache.",
       hero_cta: "Jetzt Premium-Erklärung erhalten – 6,90 €",
-      meta_price: "Einmalig 6,90 €",
-      meta_time: "Antwort meist in Minuten",
-      meta_trust: "100% vertraulich",
-
-      q_title: "Sie verstehen Ihren Brief nicht?",
-      q_text: "Viele offizielle Schreiben vom <b>Amt</b>, <b>Inkasso</b> oder <b>Mahnungen</b> sind kompliziert formuliert. Laden Sie Ihr Dokument hoch – wir erklären Ihnen den Inhalt klar und verständlich, damit Sie wissen, worum es geht und was Sie als Nächstes tun können.",
-
+      meta_once: "Einmalig 6,90 €",
+      meta_fast: "Antwort meist in Minuten",
+      meta_private: "100% vertraulich",
+      mid_title: "Sie verstehen Ihren Brief nicht?",
+      mid_text:
+        "Viele offizielle Schreiben vom <b>Amt</b>, <b>Inkasso</b> oder <b>Mahnungen</b> sind kompliziert formuliert. " +
+        "Laden Sie Ihr Dokument hoch – wir erklären Ihnen den Inhalt klar und verständlich, damit Sie wissen, " +
+        "worum es geht und was Sie als Nächstes tun können.",
       how_title: "So funktioniert es:",
-      how_item1: "Dokument hochladen",
-      how_item2: "100% Vertraulichkeit",
-      badge_pay: "Sichere Zahlung (Stripe)",
-      badge_fast: "Schnelle Antwort",
-      badge_lang: "Mehrsprachig",
-
+      how_a: "Dokument hochladen",
+      how_b: "100% Vertraulichkeit",
+      pill_pay: "Sichere Zahlung (Stripe)",
+      pill_reply: "Schnelle Antwort",
+      pill_lang: "Mehrsprachig",
       flow_1: "Sie laden Ihren Brief oder Ihr Formular hoch.",
       flow_2: "Wir erklären Ihnen den Inhalt in einfacher, verständlicher Sprache.",
       flow_3: "Sie erhalten die Erklärung per E-Mail.",
-
-      legal_note: "Kein Rechtsrat – nur klare und verständliche Texterklärung.",
-
-      for_title: "Für welche Briefe & Dokumente eignet sich BriefHelden?",
-      for_sub: "Wir helfen bei komplizierten Schreiben wie:",
-      tile1_t: "Briefe vom Amt",
-      tile1_p: "(Jobcenter, Finanzamt, Behörden, etc.)",
-      tile2_t: "Inkasso",
-      tile2_p: "Forderungen, Zahlungsaufforderungen",
-      tile3_t: "Kündigungen",
-      tile3_p: "Mietwohnung, Arbeitsvertrag, Handy, etc.",
-      tile4_t: "Mahnungen",
-      tile4_p: "Fristen & Zahlungsziele, wichtige Schritte",
-      tile5_t: "Verträge",
-      tile5_p: "Klauseln, Pflichten, Laufzeiten – verständlich erklärt",
-      tile6_t: "Formulare",
-      tile6_p: "Ausfüllen & verständliche Erklärung der Inhalte",
-      for_footer: "Egal ob Fristen, Forderungen oder unklare Formulierungen – wir erklären Ihnen verständlich, worum es geht.",
-
-      footer_refund: "Widerruf",
-      footer_imprint: "Impressum",
-      footer_terms: "AGB",
-      footer_privacy: "Datenschutz",
-
-      modal_title: "Bitte bestätigen",
-      modal_text: "Bevor wir starten, benötigen wir Ihre Zustimmung zu AGB/Datenschutz sowie den Hinweis zum Sofortbeginn.",
-      modal_error: "Bitte beide Häkchen setzen.",
-      modal_hint: "Hinweis: Die deutsche Version ist rechtlich maßgeblich. Übersetzungen dienen nur der besseren Verständlichkeit.",
-      modal_cancel: "Abbrechen",
-      modal_pay: "Weiter zur Zahlung",
-
-      terms_label: 'Ich stimme den <a href="agb.html" target="_blank" rel="noopener">AGB</a> und der <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a> zu.',
-      waiver_label: 'Ich verlange ausdrücklich, dass die Dienstleistung vor Ablauf der Widerrufsfrist beginnt. Mir ist bekannt, dass ich dadurch mein Widerrufsrecht verliere (siehe <a href="widerruf.html" target="_blank" rel="noopener">Widerruf</a>).'
+      disclaimer: "Kein Rechtsrat – nur klare und verständliche Texterklärung.",
+      types_title: "Für welche Briefe & Dokumente eignet sich BriefHelden?",
+      types_sub: "Wir helfen bei komplizierten Schreiben wie:",
+      t1_title: "Briefe vom Amt",
+      t1_text: "(Jobcenter, Finanzamt, Behörden, etc.)",
+      t2_title: "Inkasso",
+      t2_li1: "Forderungen",
+      t2_li2: "Zahlungsaufforderungen",
+      t3_title: "Kündigungen",
+      t3_li1: "Mietwohnung",
+      t3_li2: "Arbeitsvertrag, Handy, etc.",
+      t4_title: "Mahnungen",
+      t4_li1: "Fristen & Zahlungsziele",
+      t4_li2: "Wichtige Schritte",
+      t5_title: "Verträge",
+      t5_text: "Klauseln, Pflichten, Laufzeiten – verständlich erklärt.",
+      t6_title: "Formulare",
+      t6_text: "Ausfüllhilfe & verständliche Erklärung der Inhalte.",
+      bottom_note: "Egal ob Fristen, Forderungen oder unklare Formulierungen – wir erklären Ihnen verständlich, worum es geht.",
+      foot_refund: "Widerruf",
+      foot_imprint: "Impressum",
+      foot_terms: "AGB",
+      foot_privacy: "Datenschutz"
     },
-
     en: {
       nav_home: "Home",
-      nav_refund: "Refund policy",
+      nav_refund: "Refund Policy",
       nav_imprint: "Imprint",
       nav_terms: "Terms",
       nav_privacy: "Privacy",
-
       hero_title: "Simple. Clear. Discreet.",
-      hero_sub: "Premium explanation for official letters & forms – in your language.",
-      hero_cta: "Get premium explanation – €6.90",
-      meta_price: "One-time €6.90",
-      meta_time: "Answer usually in minutes",
-      meta_trust: "100% confidential",
-
-      q_title: "Don’t understand your letter?",
-      q_text: "Many official letters from <b>authorities</b>, <b>debt collection</b> or <b>reminders</b> are hard to understand. Upload your document – we’ll explain it clearly so you know what it’s about and what to do next.",
-
+      hero_sub: "Premium explanation for official letters & forms — in your language.",
+      hero_cta: "Get a premium explanation — €6.90",
+      meta_once: "One-time €6.90",
+      meta_fast: "Reply usually in minutes",
+      meta_private: "100% confidential",
+      mid_title: "Don't understand your letter?",
+      mid_text:
+        "Many official letters from authorities, debt collection, or reminders are hard to understand. " +
+        "Upload your document — we explain it clearly so you know what it means and what you can do next.",
       how_title: "How it works:",
-      how_item1: "Upload document",
-      how_item2: "100% confidentiality",
-      badge_pay: "Secure payment (Stripe)",
-      badge_fast: "Fast response",
-      badge_lang: "Multiple languages",
-
+      how_a: "Upload document",
+      how_b: "100% confidentiality",
+      pill_pay: "Secure payment (Stripe)",
+      pill_reply: "Fast response",
+      pill_lang: "Multilingual",
       flow_1: "You upload your letter or form.",
-      flow_2: "We explain it in simple, easy language.",
+      flow_2: "We explain the content in simple, clear language.",
       flow_3: "You receive the explanation by email.",
-
-      legal_note: "No legal advice – only a clear text explanation.",
-
-      for_title: "Which letters & documents can BriefHelden explain?",
-      for_sub: "We help with complicated documents such as:",
-      tile1_t: "Letters from authorities",
-      tile1_p: "(Jobcenter, tax office, authorities, etc.)",
-      tile2_t: "Debt collection",
-      tile2_p: "Claims, payment requests",
-      tile3_t: "Cancellations",
-      tile3_p: "Rental, employment, phone contracts, etc.",
-      tile4_t: "Reminders",
-      tile4_p: "Deadlines & payment dates, next steps",
-      tile5_t: "Contracts",
-      tile5_p: "Clauses, duties, terms – explained clearly",
-      tile6_t: "Forms",
-      tile6_p: "How to fill out & understand the content",
-      for_footer: "Deadlines, claims or unclear wording – we explain what it means in plain language.",
-
-      footer_refund: "Refunds",
-      footer_imprint: "Imprint",
-      footer_terms: "Terms",
-      footer_privacy: "Privacy",
-
-      modal_title: "Please confirm",
-      modal_text: "Before we start, we need your consent to Terms/Privacy and the immediate start notice.",
-      modal_error: "Please tick both checkboxes.",
-      modal_hint: "Note: The German version is legally binding. Translations are for convenience only.",
-      modal_cancel: "Cancel",
-      modal_pay: "Proceed to payment",
-
-      terms_label: 'I agree to the <a href="agb.html" target="_blank" rel="noopener">Terms</a> and the <a href="datenschutz.html" target="_blank" rel="noopener">Privacy Policy</a>.',
-      waiver_label: 'I expressly request the service to start immediately before the withdrawal period ends. I understand that this waives my right of withdrawal (see <a href="widerruf.html" target="_blank" rel="noopener">Withdrawal</a>).'
+      disclaimer: "No legal advice — only clear and understandable text explanation.",
+      types_title: "What letters & documents are suitable for BriefHelden?",
+      types_sub: "We help with complicated documents such as:",
+      t1_title: "Letters from authorities",
+      t1_text: "(Jobcenter, tax office, authorities, etc.)",
+      t2_title: "Debt collection",
+      t2_li1: "Claims",
+      t2_li2: "Payment requests",
+      t3_title: "Cancellations",
+      t3_li1: "Rent / apartment",
+      t3_li2: "Work contract, phone, etc.",
+      t4_title: "Reminders",
+      t4_li1: "Deadlines & due dates",
+      t4_li2: "Next steps",
+      t5_title: "Contracts",
+      t5_text: "Clauses, duties, terms — explained clearly.",
+      t6_title: "Forms",
+      t6_text: "Help understanding and filling in forms.",
+      bottom_note: "Whether deadlines, claims or unclear wording — we explain what it means in plain terms.",
+      foot_refund: "Refund",
+      foot_imprint: "Imprint",
+      foot_terms: "Terms",
+      foot_privacy: "Privacy"
     },
-
     tr: {
-      nav_home: "Ana sayfa",
-      nav_refund: "İade politikası",
+      nav_home: "Ana Sayfa",
+      nav_refund: "İade Politikası",
       nav_imprint: "Künye",
       nav_terms: "Şartlar",
       nav_privacy: "Gizlilik",
-
       hero_title: "Basit. Anlaşılır. Gizli.",
-      hero_sub: "Resmî mektuplar ve formlar için açıklama – kendi dilinizde.",
-      hero_cta: "Premium açıklama al – 6,90 €",
-      meta_price: "Tek sefer 6,90 €",
-      meta_time: "Genelde dakikalar içinde",
-      meta_trust: "%100 gizli",
-
-      q_title: "Mektubunuzu anlamıyor musunuz?",
-      q_text: "<b>Kurum</b>, <b>tahsilat</b> veya <b>ihtar</b> mektupları çoğu zaman karmaşıktır. Belgenizi yükleyin – içeriğini açık ve anlaşılır şekilde açıklayalım; ne olduğunu ve sonraki adımı bilin.",
-
+      hero_sub: "Resmi mektuplar ve formlar için açıklama — sizin dilinizde.",
+      hero_cta: "Premium açıklama al — 6,90 €",
+      meta_once: "Tek seferlik 6,90 €",
+      meta_fast: "Genelde dakikalar içinde",
+      meta_private: "%100 gizli",
+      mid_title: "Mektubunuzu anlamıyor musunuz?",
+      mid_text:
+        "Resmi kurum yazıları, icra/inkasso veya ihtarlar çoğu zaman karmaşıktır. " +
+        "Belgenizi yükleyin — ne anlama geldiğini ve sırada ne yapabileceğinizi açıkça anlatalım.",
       how_title: "Nasıl çalışır:",
-      how_item1: "Belge yükle",
-      how_item2: "%100 gizlilik",
-      badge_pay: "Güvenli ödeme (Stripe)",
-      badge_fast: "Hızlı yanıt",
-      badge_lang: "Çok dilli",
-
+      how_a: "Belge yükle",
+      how_b: "%100 gizlilik",
+      pill_pay: "Güvenli ödeme (Stripe)",
+      pill_reply: "Hızlı cevap",
+      pill_lang: "Çok dilli",
       flow_1: "Mektubunuzu veya formunuzu yüklersiniz.",
-      flow_2: "İçeriği basit ve anlaşılır dille açıklarız.",
+      flow_2: "İçeriği basit ve anlaşılır şekilde açıklarız.",
       flow_3: "Açıklamayı e-posta ile alırsınız.",
-
-      legal_note: "Hukuki danışmanlık yok – sadece anlaşılır metin açıklaması.",
-
-      for_title: "Hangi mektup ve belgeler için uygundur?",
-      for_sub: "Şu tür belgelerde yardımcı oluruz:",
-      tile1_t: "Kurum mektupları",
-      tile1_p: "(Jobcenter, vergi dairesi, kurumlar, vb.)",
-      tile2_t: "Tahsilat",
-      tile2_p: "Talepler, ödeme istekleri",
-      tile3_t: "İptaller",
-      tile3_p: "Kira, iş sözleşmesi, telefon, vb.",
-      tile4_t: "İhtarlar",
-      tile4_p: "Süreler & ödeme tarihleri, adımlar",
-      tile5_t: "Sözleşmeler",
-      tile5_p: "Maddeler, yükümlülükler, süreler – açıklanır",
-      tile6_t: "Formlar",
-      tile6_p: "Doldurma & içerik açıklaması",
-      for_footer: "Süre, talep veya belirsiz ifadeler – ne anlama geldiğini açıklarız.",
-
-      footer_refund: "İade",
-      footer_imprint: "Künye",
-      footer_terms: "Şartlar",
-      footer_privacy: "Gizlilik",
-
-      modal_title: "Lütfen onaylayın",
-      modal_text: "Başlamadan önce Şartlar/Gizlilik ve hemen başlatma bilgilendirmesi için onay gerekir.",
-      modal_error: "Lütfen iki kutuyu da işaretleyin.",
-      modal_hint: "Not: Hukuken bağlayıcı olan sürüm Almanca sürümdür. Çeviriler kolaylık içindir.",
-      modal_cancel: "İptal",
-      modal_pay: "Ödemeye geç",
-
-      terms_label: '<a href="agb.html" target="_blank" rel="noopener">Şartlar</a> ve <a href="datenschutz.html" target="_blank" rel="noopener">Gizlilik Politikası</a>nı kabul ediyorum.',
-      waiver_label: 'Hizmetin, cayma süresi bitmeden hemen başlamasını açıkça talep ediyorum. Bu durumda cayma hakkımı kaybedeceğimi biliyorum (bkz. <a href="widerruf.html" target="_blank" rel="noopener">Cayma</a>).'
+      disclaimer: "Hukuki danışmanlık yok — sadece anlaşılır metin açıklaması.",
+      types_title: "Hangi mektuplar ve belgeler için uygun?",
+      types_sub: "Şu tür belgelerde yardımcı oluyoruz:",
+      t1_title: "Resmi kurum mektupları",
+      t1_text: "(Jobcenter, vergi dairesi, kurumlar vb.)",
+      t2_title: "İnkasso",
+      t2_li1: "Alacaklar",
+      t2_li2: "Ödeme talepleri",
+      t3_title: "Fesih / İptal",
+      t3_li1: "Kira / konut",
+      t3_li2: "İş sözleşmesi, telefon vb.",
+      t4_title: "İhtarlar",
+      t4_li1: "Süreler & son tarihler",
+      t4_li2: "Sonraki adımlar",
+      t5_title: "Sözleşmeler",
+      t5_text: "Maddeler, yükümlülükler, süreler — açık anlatım.",
+      t6_title: "Formlar",
+      t6_text: "Formları anlama ve doldurma yardımı.",
+      bottom_note: "Süre, alacak veya belirsiz ifadeler fark etmez — ne olduğunu anlaşılır şekilde açıklarız.",
+      foot_refund: "İade",
+      foot_imprint: "Künye",
+      foot_terms: "Şartlar",
+      foot_privacy: "Gizlilik"
     },
-
     ru: {
       nav_home: "Главная",
-      nav_refund: "Возврат",
-      nav_imprint: "Реквизиты",
+      nav_refund: "Возврат средств",
+      nav_imprint: "Выходные данные",
       nav_terms: "Условия",
       nav_privacy: "Конфиденциальность",
-
       hero_title: "Просто. Понятно. Конфиденциально.",
       hero_sub: "Премиум-объяснение официальных писем и форм — на вашем языке.",
       hero_cta: "Получить объяснение — 6,90 €",
-      meta_price: "Разово 6,90 €",
-      meta_time: "Обычно за минуты",
-      meta_trust: "100% конфиденциально",
-
-      q_title: "Не понимаете письмо?",
-      q_text: "Многие официальные письма от <b>ведомств</b>, <b>инкассо</b> или <b>напоминания</b> написаны сложно. Загрузите документ — мы объясним простым языком, чтобы вы понимали, о чём речь и что делать дальше.",
-
+      meta_once: "Разово 6,90 €",
+      meta_fast: "Обычно за минуты",
+      meta_private: "100% конфиденциально",
+      mid_title: "Не понимаете письмо?",
+      mid_text:
+        "Официальные письма, инкассо или напоминания часто написаны сложно. " +
+        "Загрузите документ — мы объясним простыми словами, что это значит и что делать дальше.",
       how_title: "Как это работает:",
-      how_item1: "Загрузить документ",
-      how_item2: "100% конфиденциальность",
-      badge_pay: "Безопасная оплата (Stripe)",
-      badge_fast: "Быстрый ответ",
-      badge_lang: "Несколько языков",
-
+      how_a: "Загрузить документ",
+      how_b: "100% конфиденциальность",
+      pill_pay: "Безопасная оплата (Stripe)",
+      pill_reply: "Быстрый ответ",
+      pill_lang: "Несколько языков",
       flow_1: "Вы загружаете письмо или форму.",
-      flow_2: "Мы объясняем содержание простым языком.",
+      flow_2: "Мы объясняем содержание простым, понятным языком.",
       flow_3: "Вы получаете объяснение по e-mail.",
-
-      legal_note: "Не юридическая консультация — только понятное объяснение текста.",
-
-      for_title: "Какие письма и документы мы объясняем?",
-      for_sub: "Помогаем с такими документами, как:",
-      tile1_t: "Письма от ведомств",
-      tile1_p: "(Jobcenter, налоговая, органы и т.д.)",
-      tile2_t: "Инкассо",
-      tile2_p: "Требования, запросы оплаты",
-      tile3_t: "Расторжения",
-      tile3_p: "Аренда, трудовой договор, телефон и т.д.",
-      tile4_t: "Напоминания",
-      tile4_p: "Сроки и даты оплаты, шаги",
-      tile5_t: "Договоры",
-      tile5_p: "Пункты, обязанности, сроки — понятно",
-      tile6_t: "Формы",
-      tile6_p: "Как заполнить и понять содержание",
-      for_footer: "Сроки, требования или непонятные формулировки — объясним, что это значит.",
-
-      footer_refund: "Возврат",
-      footer_imprint: "Реквизиты",
-      footer_terms: "Условия",
-      footer_privacy: "Конфиденциальность",
-
-      modal_title: "Подтвердите, пожалуйста",
-      modal_text: "Перед началом нам нужно ваше согласие с Условиями/Политикой и уведомление о немедленном начале.",
-      modal_error: "Пожалуйста, отметьте оба пункта.",
-      modal_hint: "Примечание: юридически действует немецкая версия. Переводы — только для удобства.",
-      modal_cancel: "Отмена",
-      modal_pay: "Перейти к оплате",
-
-      terms_label: 'Я согласен с <a href="agb.html" target="_blank" rel="noopener">Условиями</a> и <a href="datenschutz.html" target="_blank" rel="noopener">Политикой конфиденциальности</a>.',
-      waiver_label: 'Я прошу начать услугу немедленно до истечения срока отказа и понимаю, что теряю право отказа (см. <a href="widerruf.html" target="_blank" rel="noopener">Отказ</a>).'
+      disclaimer: "Не юридическая консультация — только понятное объяснение текста.",
+      types_title: "Для каких писем и документов подходит BriefHelden?",
+      types_sub: "Мы помогаем с такими документами, как:",
+      t1_title: "Письма от ведомств",
+      t1_text: "(Jobcenter, налоговая, ведомства и т.д.)",
+      t2_title: "Инкассо",
+      t2_li1: "Требования",
+      t2_li2: "Запросы оплаты",
+      t3_title: "Расторжения",
+      t3_li1: "Аренда / жильё",
+      t3_li2: "Трудовой договор, телефон и т.д.",
+      t4_title: "Напоминания",
+      t4_li1: "Сроки и даты",
+      t4_li2: "Следующие шаги",
+      t5_title: "Договоры",
+      t5_text: "Пункты, обязанности, сроки — понятно объясним.",
+      t6_title: "Формы",
+      t6_text: "Поможем понять и заполнить формы.",
+      bottom_note: "Сроки, требования или непонятные формулировки — объясним, о чём речь, простыми словами.",
+      foot_refund: "Возврат",
+      foot_imprint: "Выходные данные",
+      foot_terms: "Условия",
+      foot_privacy: "Конфиденциальность"
     }
   };
 
-  const langSelect = document.getElementById("langSelect");
-
-  function getLang(){
-    const saved = localStorage.getItem("bh_lang");
-    return (saved && i18n[saved]) ? saved : "de";
+  // Stripe-Link auf Sprache setzen (locale=de/en/tr/ru)
+  function updateStripeLink(lang){
+    const btn = document.getElementById("stripeBtn");
+    if(!btn) return;
+    btn.href = STRIPE_BASE_URL + "?locale=" + encodeURIComponent(lang);
   }
 
   function applyLang(lang){
@@ -648,97 +754,20 @@ const dict = i18n[lang] || i18n.de;
 
     document.querySelectorAll("[data-i18n]").forEach(el=>{
       const key = el.getAttribute("data-i18n");
-      if(dict[key] !== undefined) el.innerHTML = dict[key];
+      if(!(key in dict)) return;
+      // allow HTML for mid_text only (contains <b>)
+      if(key === "mid_text") el.innerHTML = dict[key];
+      else el.textContent = dict[key];
     });
 
-    // Modal Labels mit Links
-    document.getElementById("lblTerms").innerHTML = dict.terms_label;
-    document.getElementById("lblWaiver").innerHTML = dict.waiver_label;
-
-    localStorage.setItem("bh_lang", lang);
+    updateStripeLink(lang); // ✅ wichtig: Stripe Checkout Sprache
   }
 
-  // init
-  const saved = localStorage.getItem("bh_lang");
-  if(saved && i18n[saved]){
-    langSelect.value = saved;
-    applyLang(saved);
-  } else {
-    applyLang("de");
-  }
-  langSelect.addEventListener("change", e => applyLang(e.target.value));
+  const select = document.getElementById("langSelect");
+  select.addEventListener("change", () => applyLang(select.value));
 
-  /* ====== Modal + Stripe Checkout (sprachgesteuert) ====== */
-  const modalBack = document.getElementById("modalBack");
-  const stripeCta = document.getElementById("stripeCta");
-  const btnCancel = document.getElementById("btnCancel");
-  const btnPay = document.getElementById("btnPay");
-  const chkTerms = document.getElementById("chkTerms");
-  const chkWaiver = document.getElementById("chkWaiver");
-  const modalErr = document.getElementById("modalErr");
-
-  function openModal(){
-    chkTerms.checked = false;
-    chkWaiver.checked = false;
-    modalErr.style.display = "none";
-    modalBack.style.display = "flex";
-    modalBack.setAttribute("aria-hidden","false");
-  }
-  function closeModal(){
-    modalBack.style.display = "none";
-    modalBack.setAttribute("aria-hidden","true");
-  }
-
-  stripeCta.addEventListener("click", (e)=>{
-    e.preventDefault();
-    openModal();
-  });
-  btnCancel.addEventListener("click", closeModal);
-  modalBack.addEventListener("click", (e)=>{
-    if(e.target === modalBack) closeModal();
-  });
-
-  async function startCheckout(){
-    if(!chkTerms.checked || !chkWaiver.checked){
-      modalErr.style.display = "block";
-      return;
-    }
-
-    btnPay.disabled = true;
-    modalErr.style.display = "none";
-
-    try{
-      const lang = getLang();
-
-      // Session erstellen (Netlify Function) -> Stripe URL zurück
-      const res = await fetch(`/.netlify/functions/create-checkout?lang=${encodeURIComponent(lang)}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          // optional: damit success.html weiß wohin es soll
-          formUrl: SUCCESS_FORM_URL
-        })
-      });
-
-      if(!res.ok){
-        const t = await res.text().catch(()=> "");
-        throw new Error("Checkout error: " + t);
-      }
-
-      const data = await res.json();
-      if(!data?.url) throw new Error("No checkout URL returned");
-
-      window.location.href = data.url;
-    } catch(err){
-      console.error(err);
-      modalErr.style.display = "block";
-    } finally{
-      btnPay.disabled = false;
-    }
-  }
-
-  btnPay.addEventListener("click", startCheckout);
+  // default
+  applyLang("de");
 </script>
 </body>
 </html>
-const SUCCESS_FORM_URL = "HIER_DEIN_UPLOAD_FORMULAR_LINK_EINTRAGEN";
