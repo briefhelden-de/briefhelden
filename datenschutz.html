@@ -1,0 +1,747 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Datenschutz – BriefHelden</title>
+  <style>
+    :root{
+      --bg:#0b0f18;
+      --card:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --line:#e5e7eb;
+      --pill:#111827;
+      --pillText:#e5e7eb;
+      --accent:#2563eb;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Noto Sans", Arial;
+      background: radial-gradient(1200px 700px at 20% -10%, rgba(37,99,235,.35), transparent 60%),
+                  radial-gradient(900px 600px at 90% 0%, rgba(99,102,241,.25), transparent 55%),
+                  var(--bg);
+      color: var(--pillText);
+    }
+    .topbar{
+      max-width: 980px;
+      margin: 28px auto 14px;
+      padding: 0 16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px; font-weight:700;
+      letter-spacing:.2px;
+    }
+    .dot{
+      width:10px;height:10px;border-radius:50%;
+      background: var(--accent);
+      box-shadow:0 0 18px rgba(37,99,235,.7);
+    }
+    .nav{
+      display:flex; gap:10px; flex-wrap:wrap;
+    }
+    .pill{
+      border:1px solid rgba(229,231,235,.18);
+      background: rgba(17,24,39,.55);
+      color: var(--pillText);
+      padding:10px 14px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:600;
+      font-size:14px;
+      backdrop-filter: blur(8px);
+    }
+    .pill.active{
+      border-color: rgba(37,99,235,.75);
+      box-shadow: 0 0 0 3px rgba(37,99,235,.18);
+    }
+    .lang{
+      display:flex; align-items:center; gap:10px;
+    }
+    .lang label{font-size:14px; opacity:.9}
+    select{
+      border-radius: 10px;
+      border:1px solid rgba(229,231,235,.25);
+      background: rgba(17,24,39,.55);
+      color: var(--pillText);
+      padding:10px 12px;
+      font-weight:700;
+      outline:none;
+      cursor:pointer;
+      backdrop-filter: blur(8px);
+    }
+
+    .wrap{
+      max-width: 980px;
+      margin: 0 auto 40px;
+      padding: 0 16px;
+    }
+    .card{
+      background: var(--card);
+      color: var(--text);
+      border-radius: 18px;
+      padding: 26px 22px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.35);
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .headerRow{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:14px;
+      margin-bottom: 8px;
+    }
+    h1{
+      margin:0 0 8px 0;
+      font-size: 34px;
+      line-height:1.15;
+      letter-spacing:-.2px;
+    }
+    .rightTag{
+      font-weight:700;
+      color: var(--muted);
+      white-space:nowrap;
+      padding-top:8px;
+    }
+    .note{
+      background:#f8fafc;
+      border:1px solid var(--line);
+      padding:12px 14px;
+      border-radius:12px;
+      color:#0f172a;
+      margin: 10px 0 18px;
+    }
+    h2{
+      margin:22px 0 8px;
+      font-size: 18px;
+      letter-spacing:.1px;
+    }
+    p{margin:8px 0; line-height:1.55; color:#0f172a}
+    ul{margin:8px 0 8px 18px; color:#0f172a}
+    li{margin:6px 0}
+    .small{color: var(--muted); font-size: 14px}
+    a{color: var(--accent)}
+    .footer{
+      max-width: 980px;
+      margin: 18px auto 24px;
+      padding: 0 16px;
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+      color: rgba(229,231,235,.85);
+      font-size: 13px;
+    }
+    .footer a{color: rgba(229,231,235,.95); text-decoration:none; border-bottom:1px dashed rgba(229,231,235,.45)}
+    .footer a:hover{border-bottom-color: rgba(229,231,235,.9)}
+    code{background:#f1f5f9; padding:2px 6px; border-radius:8px}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <span>BriefHelden</span>
+    </div>
+
+    <div class="nav" aria-label="Rechtliches Navigation">
+      <a class="pill active" href="/datenschutz">Datenschutz</a>
+      <a class="pill" href="/agb">AGB</a>
+      <a class="pill" href="/widerruf">Widerruf</a>
+      <a class="pill" href="/impressum">Impressum</a>
+    </div>
+
+    <div class="lang">
+      <label for="langSelect" id="langLabel">Sprache</label>
+      <select id="langSelect" aria-label="Sprache wählen">
+        <option value="DE">DE</option>
+        <option value="EN">EN</option>
+        <option value="TR">TR</option>
+        <option value="RU">RU</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="card">
+      <div class="headerRow">
+        <div>
+          <h1 id="title">Datenschutzerklärung</h1>
+        </div>
+        <div class="rightTag">BriefHelden · Rechtliches</div>
+      </div>
+
+      <div class="note" id="bindingNote"></div>
+
+      <div id="content"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>© <span id="year"></span> BriefHelden – Alle Rechte vorbehalten</div>
+    <div style="display:flex; gap:14px; flex-wrap:wrap;">
+      <a href="/datenschutz">Datenschutz</a>
+      <a href="/agb">AGB</a>
+      <a href="/widerruf">Widerruf</a>
+      <a href="/impressum">Impressum</a>
+    </div>
+  </div>
+
+<script>
+(function(){
+  const yearEl = document.getElementById("year");
+  yearEl.textContent = new Date().getFullYear();
+
+  const TEXT = {
+    DE: {
+      langLabel: "Sprache",
+      title: "Datenschutzerklärung",
+      bindingNote: "<strong>Hinweis:</strong> Die deutsche Version ist rechtlich maßgeblich. Übersetzungen dienen ausschließlich der besseren Verständlichkeit.",
+      sections: [
+        {
+          h: "1. Allgemeine Hinweise",
+          p: [
+            "Der Schutz Ihrer persönlichen Daten ist uns sehr wichtig.",
+            "Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung."
+          ]
+        },
+        {
+          h: "2. Verantwortlicher",
+          p: [
+            "Verantwortlich für die Datenverarbeitung auf dieser Website ist:",
+"<strong>David Hirschfeld – BriefHelden</strong><br>Carl-Maria-von-Weber-Str. 2<br>74928 Hüffenhardt<br>Deutschland<br><br><strong>E-Mail:</strong> <a href=\"mailto:kontakt@briefhelden-service.de\">kontakt@briefhelden-service.de</a>"
+          ]
+        },
+        {
+          h: "3. Welche Daten wir verarbeiten",
+          p: [
+            "Wenn Sie unser Formular nutzen, werden insbesondere folgende Daten verarbeitet:"
+          ],
+          ul: [
+            "Name",
+            "E-Mail-Adresse",
+            "hochgeladene Dokumente (z. B. PDF, Foto)",
+            "Ihre Nachricht / Angaben im Formular",
+            "technische Daten (z. B. IP-Adresse), soweit dies für Betrieb/Sicherheit erforderlich ist"
+          ],
+          p2: [
+            "Technische Umsetzung: Für die Übermittlung und Verarbeitung Ihrer Eingaben nutzen wir Google-Dienste (z. B. Google Sites, Google Forms, Google Drive und Google Apps Script). Dadurch werden Ihre Daten innerhalb dieser Systeme verarbeitet und gespeichert, soweit dies zur Bearbeitung erforderlich ist."
+          ]
+        },
+        {
+          h: "4. Zweck der Verarbeitung",
+          p: ["Die Verarbeitung erfolgt insbesondere zu folgenden Zwecken:"],
+          ul: [
+            "Erklärung Ihrer eingereichten Dokumente (in verständlicher Sprache)",
+            "Kommunikation per E-Mail (Rückfragen und Ergebnisversand)",
+            "Abwicklung der Zahlung (über Stripe)",
+            "Sicherstellung des technischen Betriebs und Schutz vor Missbrauch"
+          ]
+        },
+        {
+          h: "5. Rechtsgrundlagen",
+          p: ["Wir verarbeiten personenbezogene Daten auf folgenden Rechtsgrundlagen:"],
+          ul: [
+            "Art. 6 Abs. 1 lit. b DSGVO (Vertrag / vorvertragliche Maßnahmen): zur Durchführung Ihrer Anfrage und Leistungserbringung",
+            "Art. 6 Abs. 1 lit. a DSGVO (Einwilligung): falls in Einzelfällen eine Einwilligung erforderlich ist",
+            "Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse): z. B. IT-Sicherheit, Fehleranalyse, Missbrauchsvermeidung"
+          ]
+        },
+        {
+          h: "6. Empfänger / Weitergabe",
+          p: [
+            "Eine Weitergabe Ihrer Daten erfolgt nur, soweit dies zur Erbringung der Dienstleistung erforderlich ist. Empfänger können insbesondere sein:"
+          ],
+          ul: [
+            "Stripe (Zahlungsabwicklung)",
+            "Google (Hosting über Google Sites; Formular-/Dateiverarbeitung über Google Forms/Drive; technische Verarbeitung über Google Apps Script)"
+          ],
+          p2: [
+            "Eine darüber hinausgehende Weitergabe an Dritte findet nicht statt, außer wir sind gesetzlich dazu verpflichtet."
+          ]
+        },
+        {
+          h: "7. Zahlungsanbieter Stripe",
+          p: [
+            "Für die Zahlungsabwicklung nutzen wir Stripe.",
+            "Anbieter ist: Stripe Payments Europe Ltd., 1 Grand Canal Street Lower, Grand Canal Dock, Dublin, Irland.",
+            "Bei Zahlung werden Zahlungsdaten direkt an Stripe übermittelt.",
+"Weitere Informationen: <a href=\"https://stripe.com/de/privacy\" target=\"_blank\" rel=\"noopener\">https://stripe.com/de/privacy</a>"
+          ]
+        },
+        {
+          h: "8. Hosting & Verarbeitung über Google",
+          p: [
+            "Diese Website wird über Google Sites betrieben. Anbieter ist Google Ireland Limited.",
+            "Google kann technische Daten (z. B. IP-Adresse) verarbeiten.",
+"Weitere Informationen: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">https://policies.google.com/privacy</a>",
+            "<strong>Drittländhinweis:</strong> Bei Google kann es – abhängig von der Verarbeitung – zu Datenübermittlungen in Drittländer kommen. Informationen hierzu stellt Google in seinen Datenschutzhinweisen bereit."
+          ]
+        },
+        {
+          h: "9. Speicherdauer",
+          p: [
+            "Ihre Daten werden nur so lange gespeichert, wie es zur Bearbeitung notwendig ist.",
+            "Sofern gesetzliche Aufbewahrungspflichten bestehen (z. B. handels- oder steuerrechtlich), werden relevante Daten entsprechend länger gespeichert."
+          ]
+        },
+        {
+          h: "10. Ihre Rechte",
+          p: ["Sie haben das Recht auf:"],
+          ul: [
+            "Auskunft (Art. 15 DSGVO)",
+            "Berichtigung (Art. 16 DSGVO)",
+            "Löschung (Art. 17 DSGVO)",
+            "Einschränkung der Verarbeitung (Art. 18 DSGVO)",
+            "Datenübertragbarkeit (Art. 20 DSGVO)",
+            "Widerspruch (Art. 21 DSGVO)"
+          ],
+          p2: [
+            "Sie können sich jederzeit per E-Mail an uns wenden.",
+            "<strong>Beschwerderecht:</strong> Sie haben zudem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde zu beschweren (z. B. Landesbeauftragter für Datenschutz und Informationsfreiheit Baden-Württemberg)."
+          ]
+        },
+        {
+          h: "11. Hinweis",
+          p: [
+            "Wir erbringen keine Rechtsberatung.",
+            "Die Erklärungen dienen ausschließlich der verständlichen Darstellung von Dokumenten."
+          ]
+        }
+      ]
+    },
+
+    EN: {
+      langLabel: "Language",
+      title: "Privacy Policy",
+      bindingNote: "<strong>Note:</strong> The German version is legally binding. Translations are provided for convenience only.",
+      sections: [
+        {
+          h: "1. General information",
+          p: [
+            "Protecting your personal data is very important to us.",
+            "We treat your personal data confidentially and in accordance with applicable data protection laws and this privacy policy."
+          ]
+        },
+        {
+          h: "2. Controller",
+          p: [
+            "The controller responsible for processing personal data on this website is:",
+"<strong>David Hirschfeld – BriefHelden</strong><br>Carl-Maria-von-Weber-Str. 2<br>74928 Hüffenhardt<br>Germany<br><br><strong>Email:</strong> <a href=\"mailto:kontakt@briefhelden-service.de\">kontakt@briefhelden-service.de</a>"
+          ]
+        },
+        {
+          h: "3. Data we process",
+          p: [
+            "When you use our form, we process in particular the following data:"
+          ],
+          ul: [
+            "Name",
+            "Email address",
+            "Uploaded documents (e.g., PDF, photo)",
+            "Your message / information provided in the form",
+            "Technical data (e.g., IP address) where required for operation/security"
+          ],
+          p2: [
+            "Technical implementation: We use Google services (e.g., Google Sites, Google Forms, Google Drive and Google Apps Script) to transmit and process your entries. Your data is processed and stored within these systems as necessary to handle your request."
+          ]
+        },
+        {
+          h: "4. Purpose of processing",
+          p: ["We process data for the following purposes:"],
+          ul: [
+            "Explaining your submitted documents in plain language",
+            "Email communication (questions and delivery of results)",
+            "Payment processing (via Stripe)",
+            "Ensuring technical operation and preventing misuse"
+          ]
+        },
+        {
+          h: "5. Legal bases",
+          p: ["We process personal data on the following legal bases:"],
+          ul: [
+            "Art. 6(1)(b) GDPR (contract / pre-contractual steps): to handle your request and provide the service",
+            "Art. 6(1)(a) GDPR (consent): where consent is required in individual cases",
+            "Art. 6(1)(f) GDPR (legitimate interests): e.g., IT security, troubleshooting, abuse prevention"
+          ]
+        },
+        {
+          h: "6. Recipients / disclosure",
+          p: [
+            "We disclose your data only to the extent necessary to provide the service. Recipients may include:"
+          ],
+          ul: [
+            "Stripe (payment processing)",
+            "Google (hosting via Google Sites; form/file processing via Google Forms/Drive; technical processing via Google Apps Script)"
+          ],
+          p2: [
+            "We do not disclose data to other third parties unless we are legally obliged to do so."
+          ]
+        },
+        {
+          h: "7. Payment provider Stripe",
+          p: [
+            "We use Stripe to process payments.",
+            "Provider: Stripe Payments Europe Ltd., 1 Grand Canal Street Lower, Grand Canal Dock, Dublin, Ireland.",
+            "Payment data is transmitted directly to Stripe.",
+"More information: <a href=\"https://stripe.com/de/privacy\" target=\"_blank\" rel=\"noopener\">https://stripe.com/de/privacy</a>"
+          ]
+        },
+        {
+          h: "8. Google hosting & processing",
+          p: [
+            "This website is operated via Google Sites. Provider: Google Ireland Limited.",
+            "Google may process technical data (e.g., IP address).",
+"More information: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">https://policies.google.com/privacy</a>",
+            "<strong>Third-country notice:</strong> Depending on processing, Google may transfer data to third countries. Google provides details in its privacy information."
+          ]
+        },
+        {
+          h: "9. Retention",
+          p: [
+            "We store your data only as long as necessary to handle your request.",
+            "Where statutory retention obligations apply (e.g., commercial or tax law), relevant data is stored for a longer period accordingly."
+          ]
+        },
+        {
+          h: "10. Your rights",
+          p: ["You have the right to:"],
+          ul: [
+            "Access (Art. 15 GDPR)",
+            "Rectification (Art. 16 GDPR)",
+            "Erasure (Art. 17 GDPR)",
+            "Restriction of processing (Art. 18 GDPR)",
+            "Data portability (Art. 20 GDPR)",
+            "Objection (Art. 21 GDPR)"
+          ],
+          p2: [
+            "You can contact us at any time by email.",
+            "<strong>Right to lodge a complaint:</strong> You also have the right to lodge a complaint with a supervisory authority (e.g., the data protection authority in Baden-Württemberg, Germany)."
+          ]
+        },
+        {
+          h: "11. No legal advice",
+          p: [
+            "We do not provide legal advice.",
+            "Our explanations are for understandable presentation of documents only."
+          ]
+        }
+      ]
+    },
+
+    TR: {
+      langLabel: "Dil",
+      title: "Gizlilik Politikası",
+      bindingNote: "<strong>Not:</strong> Hukuken bağlayıcı olan sürüm Almanca sürümdür. Çeviriler yalnızca kolaylık içindir.",
+      sections: [
+        {
+          h: "1. Genel bilgiler",
+          p: [
+            "Kişisel verilerinizin korunması bizim için çok önemlidir.",
+            "Kişisel verilerinizi gizli tutar ve yürürlükteki veri koruma mevzuatı ile bu gizlilik politikası uyarınca işleriz."
+          ]
+        },
+        {
+          h: "2. Veri sorumlusu",
+          p: [
+            "Bu web sitesindeki kişisel verilerin işlenmesinden sorumlu kişi/kurum:",
+"<strong>David Hirschfeld – BriefHelden</strong><br>Carl-Maria-von-Weber-Str. 2<br>74928 Hüffenhardt<br>Almanya<br><br><strong>E-posta:</strong> <a href=\"mailto:kontakt@briefhelden-service.de\">kontakt@briefhelden-service.de</a>"
+          ]
+        },
+        {
+          h: "3. İşlediğimiz veriler",
+          p: [
+            "Formumuzu kullandığınızda özellikle aşağıdaki veriler işlenir:"
+          ],
+          ul: [
+            "Ad",
+            "E-posta adresi",
+            "Yüklenen belgeler (örn. PDF, fotoğraf)",
+            "Mesajınız / formda verdiğiniz bilgiler",
+            "İşletim/güvenlik için gerekli olduğu ölçüde teknik veriler (örn. IP adresi)"
+          ],
+          p2: [
+            "Teknik uygulama: Girdilerinizi iletmek ve işlemek için Google hizmetlerini (örn. Google Sites, Google Forms, Google Drive ve Google Apps Script) kullanırız. Verileriniz, talebinizi işlemek için gerekli olduğu ölçüde bu sistemler içinde işlenir ve saklanır."
+          ]
+        },
+        {
+          h: "4. İşleme amaçları",
+          p: ["Verileri özellikle şu amaçlarla işleriz:"],
+          ul: [
+            "Gönderdiğiniz belgelerin anlaşılır dille açıklanması",
+            "E-posta iletişimi (sorular ve sonuçların iletilmesi)",
+            "Ödeme işlemlerinin yürütülmesi (Stripe üzerinden)",
+            "Teknik işletimin sağlanması ve kötüye kullanımın önlenmesi"
+          ]
+        },
+        {
+          h: "5. Hukuki dayanaklar",
+          p: ["Kişisel verileri aşağıdaki hukuki dayanaklara göre işleriz:"],
+          ul: [
+            "GDPR Madde 6(1)(b) (sözleşme / sözleşme öncesi işlemler): talebinizi yürütmek ve hizmet sunmak için",
+            "GDPR Madde 6(1)(a) (açık rıza): bazı durumlarda rıza gerektiğinde",
+            "GDPR Madde 6(1)(f) (meşru menfaat): örn. BT güvenliği, hata analizi, kötüye kullanımın önlenmesi"
+          ]
+        },
+        {
+          h: "6. Alıcılar / paylaşım",
+          p: [
+            "Verileriniz yalnızca hizmetin sunulması için gerekli olduğu ölçüde paylaşılır. Alıcılar özellikle şunlar olabilir:"
+          ],
+          ul: [
+            "Stripe (ödeme işlemleri)",
+            "Google (Google Sites üzerinden barındırma; Google Forms/Drive üzerinden form/dosya işleme; Google Apps Script üzerinden teknik işleme)"
+          ],
+          p2: [
+            "Yasal zorunluluk olmadıkça üçüncü kişilere ek bir aktarım yapılmaz."
+          ]
+        },
+        {
+          h: "7. Ödeme sağlayıcısı Stripe",
+          p: [
+            "Ödeme işlemleri için Stripe kullanırız.",
+            "Sağlayıcı: Stripe Payments Europe Ltd., 1 Grand Canal Street Lower, Grand Canal Dock, Dublin, İrlanda.",
+            "Ödeme verileri doğrudan Stripe’a aktarılır.",
+"Daha fazla bilgi: <a href=\"https://stripe.com/de/privacy\" target=\"_blank\" rel=\"noopener\">https://stripe.com/de/privacy</a>"
+          ]
+        },
+        {
+          h: "8. Google barındırma ve işleme",
+          p: [
+            "Bu web sitesi Google Sites üzerinden işletilmektedir. Sağlayıcı: Google Ireland Limited.",
+            "Google teknik verileri (örn. IP adresi) işleyebilir.",
+"Daha fazla bilgi: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">https://policies.google.com/privacy</a>",
+            "<strong>Üçüncü ülke uyarısı:</strong> İşlemeye bağlı olarak Google, verileri üçüncü ülkelere aktarabilir. Detayları Google’ın gizlilik bilgilerinde bulabilirsiniz."
+          ]
+        },
+        {
+          h: "9. Saklama süresi",
+          p: [
+            "Verilerinizi yalnızca talebinizi işlemek için gerekli olduğu süre boyunca saklarız.",
+            "Yasal saklama yükümlülükleri (örn. ticari veya vergi hukuku) varsa ilgili veriler daha uzun süre saklanır."
+          ]
+        },
+        {
+          h: "10. Haklarınız",
+          p: ["Şu haklara sahipsiniz:"],
+          ul: [
+            "Bilgi edinme (GDPR Madde 15)",
+            "Düzeltme (GDPR Madde 16)",
+            "Silme (GDPR Madde 17)",
+            "İşlemeyi kısıtlama (GDPR Madde 18)",
+            "Veri taşınabilirliği (GDPR Madde 20)",
+            "İtiraz (GDPR Madde 21)"
+          ],
+          p2: [
+            "Bize her zaman e-posta ile ulaşabilirsiniz.",
+            "<strong>Şikâyet hakkı:</strong> Ayrıca bir denetim makamına şikâyette bulunma hakkınız vardır (örn. Almanya Baden-Württemberg veri koruma otoritesi)."
+          ]
+        },
+        {
+          h: "11. Hukuki danışmanlık yok",
+          p: [
+            "Hukuki danışmanlık vermiyoruz.",
+            "Açıklamalar yalnızca belgelerin anlaşılır biçimde sunulması içindir."
+          ]
+        }
+      ]
+    },
+
+    RU: {
+      langLabel: "Язык",
+      title: "Политика конфиденциальности",
+      bindingNote: "<strong>Примечание:</strong> Юридически обязательной является немецкая версия. Переводы — только для удобства.",
+      sections: [
+        {
+          h: "1. Общая информация",
+          p: [
+            "Защита ваших персональных данных для нас очень важна.",
+            "Мы обрабатываем персональные данные конфиденциально и в соответствии с применимым законодательством о защите данных и данной политикой конфиденциальности."
+          ]
+        },
+        {
+          h: "2. Ответственный (контролёр)",
+          p: [
+            "Ответственным за обработку персональных данных на этом сайте является:",
+"<strong>David Hirschfeld – BriefHelden</strong><br>Carl-Maria-von-Weber-Str. 2<br>74928 Hüffenhardt<br>Германия<br><br><strong>Email:</strong> <a href=\"mailto:kontakt@briefhelden-service.de\">kontakt@briefhelden-service.de</a>"
+          ]
+        },
+        {
+          h: "3. Какие данные мы обрабатываем",
+          p: [
+            "При использовании нашей формы мы, в частности, обрабатываем следующие данные:"
+          ],
+          ul: [
+            "Имя",
+            "Адрес электронной почты",
+            "Загруженные документы (например, PDF, фото)",
+            "Ваше сообщение / сведения, указанные в форме",
+            "Технические данные (например, IP-адрес) — если это необходимо для работы/безопасности"
+          ],
+          p2: [
+            "Техническая реализация: Для передачи и обработки ваших данных мы используем сервисы Google (например, Google Sites, Google Forms, Google Drive и Google Apps Script). Ваши данные обрабатываются и хранятся в этих системах в объёме, необходимом для обработки запроса."
+          ]
+        },
+        {
+          h: "4. Цели обработки",
+          p: ["Мы обрабатываем данные, в частности, для следующих целей:"],
+          ul: [
+            "Понятное объяснение предоставленных документов",
+            "Связь по электронной почте (уточнения и отправка результата)",
+            "Обработка платежей (через Stripe)",
+            "Обеспечение технической работы и предотвращение злоупотреблений"
+          ]
+        },
+        {
+          h: "5. Правовые основания",
+          p: ["Мы обрабатываем персональные данные на следующих правовых основаниях:"],
+          ul: [
+            "Ст. 6(1)(b) GDPR (договор / преддоговорные меры): для обработки запроса и оказания услуги",
+            "Ст. 6(1)(a) GDPR (согласие): когда в отдельных случаях требуется согласие",
+            "Ст. 6(1)(f) GDPR (законный интерес): например, ИТ-безопасность, анализ ошибок, предотвращение злоупотреблений"
+          ]
+        },
+        {
+          h: "6. Получатели / передача данных",
+          p: [
+            "Мы передаём ваши данные только в объёме, необходимом для оказания услуги. Получателями могут быть:"
+          ],
+          ul: [
+            "Stripe (обработка платежей)",
+            "Google (хостинг через Google Sites; обработка форм/файлов через Google Forms/Drive; техническая обработка через Google Apps Script)"
+          ],
+          p2: [
+            "Дальнейшая передача третьим лицам не осуществляется, если только мы не обязаны сделать это по закону."
+          ]
+        },
+        {
+          h: "7. Платёжный провайдер Stripe",
+          p: [
+            "Для обработки платежей мы используем Stripe.",
+            "Провайдер: Stripe Payments Europe Ltd., 1 Grand Canal Street Lower, Grand Canal Dock, Dublin, Ireland.",
+            "Платёжные данные передаются напрямую в Stripe.",
+"Подробнее: <a href=\"https://stripe.com/de/privacy\" target=\"_blank\" rel=\"noopener\">https://stripe.com/de/privacy</a>"
+          ]
+        },
+        {
+          h: "8. Хостинг и обработка через Google",
+          p: [
+            "Сайт работает через Google Sites. Провайдер: Google Ireland Limited.",
+            "Google может обрабатывать технические данные (например, IP-адрес).",
+"Подробнее: <a href=\"https://policies.google.com/privacy\" target=\"_blank\" rel=\"noopener\">https://policies.google.com/privacy</a>",
+            "<strong>Уведомление о третьих странах:</strong> В зависимости от обработки Google может передавать данные в третьи страны. Информацию об этом Google предоставляет в своей политике конфиденциальности."
+          ]
+        },
+        {
+          h: "9. Срок хранения",
+          p: [
+            "Мы храним данные только столько, сколько необходимо для обработки запроса.",
+            "Если применяются обязательные сроки хранения (например, по торговому или налоговому праву), соответствующие данные хранятся дольше."
+          ]
+        },
+        {
+          h: "10. Ваши права",
+          p: ["Вы имеете право на:"],
+          ul: [
+            "Доступ (ст. 15 GDPR)",
+            "Исправление (ст. 16 GDPR)",
+            "Удаление (ст. 17 GDPR)",
+            "Ограничение обработки (ст. 18 GDPR)",
+            "Переносимость данных (ст. 20 GDPR)",
+            "Возражение (ст. 21 GDPR)"
+          ],
+          p2: [
+            "Вы можете связаться с нами в любое время по электронной почте.",
+            "<strong>Право на жалобу:</strong> Вы также можете подать жалобу в надзорный орган (например, орган по защите данных земли Баден-Вюртемберг, Германия)."
+          ]
+        },
+        {
+          h: "11. Нет юридической консультации",
+          p: [
+            "Мы не предоставляем юридические консультации.",
+            "Наши объяснения предназначены только для понятного изложения документов."
+          ]
+        }
+      ]
+    }
+  };
+
+  const langSelect = document.getElementById("langSelect");
+  const langLabel = document.getElementById("langLabel");
+  const titleEl = document.getElementById("title");
+  const noteEl = document.getElementById("bindingNote");
+  const contentEl = document.getElementById("content");
+
+  function escapeHtml(s){
+    return s.replace(/[&<>"']/g, (c) => ({
+      "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"
+    }[c]));
+  }
+
+  function render(lang){
+    const t = TEXT[lang] || TEXT.DE;
+
+    // Set HTML lang attribute roughly
+    document.documentElement.lang = (lang === "DE") ? "de" : (lang === "EN") ? "en" : (lang === "TR") ? "tr" : "ru";
+
+    langLabel.textContent = t.langLabel;
+    titleEl.textContent = t.title;
+    noteEl.innerHTML = t.bindingNote;
+
+    const parts = [];
+    for(const s of t.sections){
+      parts.push(`<h2>${escapeHtml(s.h)}</h2>`);
+      if(s.p){
+        for(const para of s.p){
+          parts.push(`<p>${para}</p>`);
+        }
+      }
+      if(s.ul){
+        parts.push("<ul>");
+        for(const li of s.ul){
+          parts.push(`<li>${escapeHtml(li)}</li>`);
+        }
+        parts.push("</ul>");
+      }
+      if(s.p2){
+        for(const para of s.p2){
+          parts.push(`<p>${para}</p>`);
+        }
+      }
+    }
+    contentEl.innerHTML = parts.join("\n");
+  }
+
+  function getLangFromUrl(){
+    const url = new URL(window.location.href);
+    const q = (url.searchParams.get("lang") || "").toUpperCase().trim();
+    if(["DE","EN","TR","RU"].includes(q)) return q;
+    return null;
+  }
+
+  const saved = (localStorage.getItem("briefhelden_lang") || "").toUpperCase();
+  const fromUrl = getLangFromUrl();
+  const initial = fromUrl || (["DE","EN","TR","RU"].includes(saved) ? saved : "DE");
+
+  langSelect.value = initial;
+  render(initial);
+
+  langSelect.addEventListener("change", () => {
+    const lang = langSelect.value;
+    localStorage.setItem("briefhelden_lang", lang);
+    render(lang);
+
+    // Optional: keep URL clean but store choice; or set ?lang=
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", lang);
+    window.history.replaceState({}, "", url.toString());
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Widerruf – BriefHelden</title>
+<style>
+:root{
+--bg:#0b0f18;
+--card:#ffffff;
+--text:#0f172a;
+--muted:#475569;
+--accent:#2563eb;
+}
+body{
+margin:0;
+font-family:system-ui,Arial;
+background:radial-gradient(1200px 700px at 20% -10%, rgba(37,99,235,.35), transparent 60%),
+radial-gradient(900px 600px at 90% 0%, rgba(99,102,241,.25), transparent 55%),var(--bg);
+color:#e5e7eb;
+}
+.topbar{max-width:980px;margin:28px auto 14px;padding:0 16px;display:flex;justify-content:space-between;align-items:center}
+.brand{font-weight:700}
+.nav a{margin-right:10px;text-decoration:none;color:#e5e7eb;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.2)}
+.nav a.active{border-color:#2563eb}
+select{padding:8px;border-radius:8px}
+.wrap{max-width:980px;margin:auto;padding:0 16px}
+.card{background:#fff;color:#0f172a;border-radius:18px;padding:26px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+h1{margin-top:0}
+h2{margin-top:22px}
+.note{background:#f8fafc;padding:12px;border-radius:10px;margin-bottom:18px}
+.footer{text-align:center;margin:20px 0;color:#ccc;font-size:13px}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+<div class="brand">BriefHelden</div>
+<div class="nav">
+<a href="/datenschutz">Datenschutz</a>
+<a href="/agb">AGB</a>
+<a class="active" href="/widerruf">Widerruf</a>
+<a href="/impressum">Impressum</a>
+</div>
+<select id="lang">
+<option value="DE">DE</option>
+<option value="EN">EN</option>
+<option value="TR">TR</option>
+<option value="RU">RU</option>
+</select>
+</div>
+
+<div class="wrap">
+<div class="card">
+<h1 id="title"></h1>
+<div class="note" id="note"></div>
+<div id="content"></div>
+</div>
+</div>
+
+<div class="footer">
+© 2026 BriefHelden – Alle Rechte vorbehalten
+</div>
+
+<script>
+const TEXT = {
+
+DE:{
+title:"Widerrufs- und Rückerstattungsrichtlinie",
+note:"Die deutsche Version ist rechtlich maßgeblich.",
+content:`
+<h2>Digitale Dienstleistungen</h2>
+<p>Bei den angebotenen Leistungen handelt es sich um digitale Dienstleistungen, die individuell für Kundinnen und Kunden erbracht werden.</p>
+
+<h2>Erlöschen des Widerrufsrechts</h2>
+<p>Gemäß § 356 Abs. 5 BGB erlischt das Widerrufsrecht bei digitalen Dienstleistungen, wenn mit der Ausführung der Dienstleistung begonnen wurde, nachdem die Kundin oder der Kunde ausdrücklich zugestimmt hat, dass mit der Ausführung vor Ablauf der Widerrufsfrist begonnen wird und bestätigt hat, dass dadurch das Widerrufsrecht erlischt.</p>
+
+<h2>Beginn nach Zahlungseingang</h2>
+<p>Mit Abschluss des Kaufs stimmen Sie ausdrücklich zu, dass die Dienstleistung unmittelbar nach Zahlungseingang begonnen wird.</p>
+
+<h2>Rückerstattung</h2>
+<p>Da es sich um eine individuell erbrachte digitale Leistung handelt, besteht nach vollständiger Leistungserbringung kein Anspruch auf Rückerstattung.</p>
+`
+},
+
+EN:{
+title:"Withdrawal and Refund Policy",
+note:"The German version is legally binding.",
+content:`
+<h2>Digital Services</h2>
+<p>The services offered are digital services provided individually for customers.</p>
+
+<h2>Expiry of Right of Withdrawal</h2>
+<p>According to Section 356 (5) German Civil Code, the right of withdrawal expires for digital services once performance has begun after the customer has expressly agreed and acknowledged the loss of the right of withdrawal.</p>
+
+<h2>Start After Payment</h2>
+<p>By completing the purchase, you expressly agree that the service begins immediately after payment is received.</p>
+
+<h2>Refunds</h2>
+<p>As this is an individually provided digital service, there is no entitlement to a refund once the service has been fully performed.</p>
+`
+},
+
+TR:{
+title:"Cayma ve İade Politikası",
+note:"Hukuken bağlayıcı olan sürüm Almanca sürümdür.",
+content:`
+<h2>Dijital Hizmetler</h2>
+<p>Sunulan hizmetler müşterilere özel olarak sağlanan dijital hizmetlerdir.</p>
+
+<h2>Cayma Hakkının Sona Ermesi</h2>
+<p>Alman Medeni Kanunu §356(5) uyarınca, hizmetin ifasına başlanması ve müşterinin açık onayı ile cayma hakkı sona erer.</p>
+
+<h2>Ödeme Sonrası Başlangıç</h2>
+<p>Satın alma tamamlandığında hizmetin ödeme alındıktan hemen sonra başlayacağını kabul etmiş olursunuz.</p>
+
+<h2>İade</h2>
+<p>Bireysel olarak sunulan dijital hizmetlerde hizmet tamamlandıktan sonra iade hakkı bulunmamaktadır.</p>
+`
+},
+
+RU:{
+title:"Политика отказа и возврата",
+note:"Юридически обязательной является немецкая версия.",
+content:`
+<h2>Цифровые услуги</h2>
+<p>Предлагаемые услуги являются индивидуальными цифровыми услугами.</p>
+
+<h2>Прекращение права на отказ</h2>
+<p>Согласно §356(5) Гражданского кодекса Германии право на отказ прекращается после начала оказания услуги при согласии клиента.</p>
+
+<h2>Начало после оплаты</h2>
+<p>Завершая покупку, вы соглашаетесь, что услуга начинается сразу после получения оплаты.</p>
+
+<h2>Возврат средств</h2>
+<p>После полного оказания индивидуальной цифровой услуги право на возврат отсутствует.</p>
+`
+}
+
+};
+
+const langSelect=document.getElementById("lang");
+const title=document.getElementById("title");
+const note=document.getElementById("note");
+const content=document.getElementById("content");
+
+function render(lang){
+title.innerHTML=TEXT[lang].title;
+note.innerHTML=TEXT[lang].note;
+content.innerHTML=TEXT[lang].content;
+}
+
+langSelect.addEventListener("change",()=>render(langSelect.value));
+render("DE");
+</script>
+
+</body>
+</html>
