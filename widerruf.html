@@ -1,158 +1,419 @@
 <!doctype html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Widerruf – BriefHelden</title>
-<style>
-:root{
---bg:#0b0f18;
---card:#ffffff;
---text:#0f172a;
---muted:#475569;
---accent:#2563eb;
-}
-body{
-margin:0;
-font-family:system-ui,Arial;
-background:radial-gradient(1200px 700px at 20% -10%, rgba(37,99,235,.35), transparent 60%),
-radial-gradient(900px 600px at 90% 0%, rgba(99,102,241,.25), transparent 55%),var(--bg);
-color:#e5e7eb;
-}
-.topbar{max-width:980px;margin:28px auto 14px;padding:0 16px;display:flex;justify-content:space-between;align-items:center}
-.brand{font-weight:700}
-.nav a{margin-right:10px;text-decoration:none;color:#e5e7eb;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.2)}
-.nav a.active{border-color:#2563eb}
-select{padding:8px;border-radius:8px}
-.wrap{max-width:980px;margin:auto;padding:0 16px}
-.card{background:#fff;color:#0f172a;border-radius:18px;padding:26px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
-h1{margin-top:0}
-h2{margin-top:22px}
-.note{background:#f8fafc;padding:12px;border-radius:10px;margin-bottom:18px}
-.footer{text-align:center;margin:20px 0;color:#ccc;font-size:13px}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Widerruf – BriefHelden</title>
+  <style>
+    :root{
+      --bg:#0b0f18;
+      --card:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --line:#e5e7eb;
+      --pill:#111827;
+      --pillText:#e5e7eb;
+      --accent:#2563eb;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:
+        radial-gradient(1200px 700px at 20% -10%, rgba(37,99,235,.35), transparent 60%),
+        radial-gradient(900px 600px at 90% 0%, rgba(99,102,241,.25), transparent 55%),
+        var(--bg);
+      color:var(--pillText);
+    }
+    .topbar{
+      max-width:980px;
+      margin:28px auto 14px;
+      padding:0 16px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:700;
+      letter-spacing:.2px;
+    }
+    .dot{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:var(--accent);
+      box-shadow:0 0 18px rgba(37,99,235,.7);
+    }
+    .nav{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .pill{
+      border:1px solid rgba(229,231,235,.18);
+      background:rgba(17,24,39,.55);
+      color:var(--pillText);
+      padding:10px 14px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:600;
+      font-size:14px;
+      backdrop-filter:blur(8px);
+    }
+    .pill.active{
+      border-color:rgba(37,99,235,.75);
+      box-shadow:0 0 0 3px rgba(37,99,235,.18);
+    }
+    .lang{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    .lang label{font-size:14px;opacity:.9}
+    select{
+      border-radius:10px;
+      border:1px solid rgba(229,231,235,.25);
+      background:rgba(17,24,39,.55);
+      color:var(--pillText);
+      padding:10px 12px;
+      font-weight:700;
+      outline:none;
+      cursor:pointer;
+      backdrop-filter:blur(8px);
+    }
+    .wrap{
+      max-width:980px;
+      margin:0 auto 40px;
+      padding:0 16px;
+    }
+    .card{
+      background:var(--card);
+      color:var(--text);
+      border-radius:18px;
+      padding:26px 22px;
+      box-shadow:0 20px 60px rgba(0,0,0,.35);
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .headerRow{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:14px;
+      margin-bottom:8px;
+      flex-wrap:wrap;
+    }
+    h1{
+      margin:0 0 8px 0;
+      font-size:34px;
+      line-height:1.15;
+      letter-spacing:-.2px;
+    }
+    .rightTag{
+      font-weight:700;
+      color:var(--muted);
+      white-space:nowrap;
+      padding-top:8px;
+    }
+    .note{
+      background:#f8fafc;
+      border:1px solid var(--line);
+      padding:12px 14px;
+      border-radius:12px;
+      color:#0f172a;
+      margin:10px 0 18px;
+    }
+    h2{
+      margin:22px 0 8px;
+      font-size:18px;
+      letter-spacing:.1px;
+    }
+    p{
+      margin:8px 0;
+      line-height:1.6;
+      color:#0f172a;
+    }
+    ul{
+      margin:8px 0 8px 18px;
+      color:#0f172a;
+    }
+    li{margin:6px 0}
+    .small{
+      color:var(--muted);
+      font-size:14px;
+    }
+    a{color:var(--accent)}
+    .footer{
+      max-width:980px;
+      margin:18px auto 24px;
+      padding:0 16px;
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
+      color:rgba(229,231,235,.85);
+      font-size:13px;
+    }
+    .footer a{
+      color:rgba(229,231,235,.95);
+      text-decoration:none;
+      border-bottom:1px dashed rgba(229,231,235,.45);
+    }
+    .footer a:hover{
+      border-bottom-color:rgba(229,231,235,.9);
+    }
+  </style>
 </head>
 <body>
 
-<div class="topbar">
-<div class="brand">BriefHelden</div>
-<div class="nav">
-<a href="/datenschutz">Datenschutz</a>
-<a href="/agb">AGB</a>
-<a class="active" href="/widerruf">Widerruf</a>
-<a href="/impressum">Impressum</a>
-</div>
-<select id="lang">
-<option value="DE">DE</option>
-<option value="EN">EN</option>
-<option value="TR">TR</option>
-<option value="RU">RU</option>
-</select>
-</div>
+  <div class="topbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <span>BriefHelden</span>
+    </div>
 
-<div class="wrap">
-<div class="card">
-<h1 id="title"></h1>
-<div class="note" id="note"></div>
-<div id="content"></div>
-</div>
-</div>
+    <div class="nav">
+      <a class="pill" href="/datenschutz">Datenschutz</a>
+      <a class="pill" href="/agb">AGB</a>
+      <a class="pill active" href="/widerruf">Widerruf</a>
+      <a class="pill" href="/impressum">Impressum</a>
+    </div>
 
-<div class="footer">
-© 2026 BriefHelden – Alle Rechte vorbehalten
-</div>
+    <div class="lang">
+      <label for="langSelect" id="langLabel">Sprache</label>
+      <select id="langSelect" aria-label="Sprache wählen">
+        <option value="DE">DE</option>
+        <option value="EN">EN</option>
+        <option value="TR">TR</option>
+        <option value="RU">RU</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="card">
+      <div class="headerRow">
+        <div>
+          <h1 id="title"></h1>
+        </div>
+        <div class="rightTag">BriefHelden · Rechtliches</div>
+      </div>
+
+      <div class="note" id="note"></div>
+      <div id="content"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div>© <span id="year"></span> BriefHelden – Alle Rechte vorbehalten</div>
+    <div style="display:flex; gap:14px; flex-wrap:wrap;">
+      <a href="/datenschutz">Datenschutz</a>
+      <a href="/agb">AGB</a>
+      <a href="/widerruf">Widerruf</a>
+      <a href="/impressum">Impressum</a>
+    </div>
+  </div>
 
 <script>
-const TEXT = {
+(function(){
+  document.getElementById("year").textContent = new Date().getFullYear();
 
-DE:{
-title:"Widerrufs- und Rückerstattungsrichtlinie",
-note:"Die deutsche Version ist rechtlich maßgeblich.",
-content:`
-<h2>Digitale Dienstleistungen</h2>
-<p>Bei den angebotenen Leistungen handelt es sich um digitale Dienstleistungen, die individuell für Kundinnen und Kunden erbracht werden.</p>
+  const TEXT = {
+    DE: {
+      langLabel: "Sprache",
+      title: "Widerrufsbelehrung und Rückerstattung",
+      note: "<strong>Hinweis:</strong> Die deutsche Version ist rechtlich maßgeblich. Übersetzungen dienen ausschließlich der besseren Verständlichkeit.",
+      content: `
+        <h2>1. Widerrufsrecht</h2>
+        <p>Verbraucher haben bei Fernabsatzverträgen grundsätzlich das Recht, binnen vierzehn Tagen ohne Angabe von Gründen diesen Vertrag zu widerrufen.</p>
+        <p>Die Widerrufsfrist beträgt vierzehn Tage ab dem Tag des Vertragsschlusses.</p>
 
-<h2>Erlöschen des Widerrufsrechts</h2>
-<p>Gemäß § 356 Abs. 5 BGB erlischt das Widerrufsrecht bei digitalen Dienstleistungen, wenn mit der Ausführung der Dienstleistung begonnen wurde, nachdem die Kundin oder der Kunde ausdrücklich zugestimmt hat, dass mit der Ausführung vor Ablauf der Widerrufsfrist begonnen wird und bestätigt hat, dass dadurch das Widerrufsrecht erlischt.</p>
+        <h2>2. Ausübung des Widerrufs</h2>
+        <p>Um Ihr Widerrufsrecht auszuüben, müssen Sie uns</p>
+        <p>
+          <strong>David Hirschfeld – BriefHelden</strong><br>
+          Carl-Maria-von-Weber-Str. 2<br>
+          74928 Hüffenhardt<br>
+          Deutschland<br><br>
+<strong>E-Mail:</strong> <a href="mailto:kontakt@briefhelden-service.de">kontakt@briefhelden-service.de</a>
+        </p>
+        <p>mittels einer eindeutigen Erklärung (z. B. per E-Mail) über Ihren Entschluss informieren, diesen Vertrag zu widerrufen.</p>
 
-<h2>Beginn nach Zahlungseingang</h2>
-<p>Mit Abschluss des Kaufs stimmen Sie ausdrücklich zu, dass die Dienstleistung unmittelbar nach Zahlungseingang begonnen wird.</p>
+        <h2>3. Folgen des Widerrufs</h2>
+        <p>Wenn Sie diesen Vertrag widerrufen, erstatten wir Ihnen alle Zahlungen, die wir von Ihnen erhalten haben, unverzüglich und spätestens binnen vierzehn Tagen ab dem Tag, an dem die Mitteilung über Ihren Widerruf bei uns eingegangen ist.</p>
+        <p>Für diese Rückzahlung verwenden wir dasselbe Zahlungsmittel, das Sie bei der ursprünglichen Transaktion eingesetzt haben, es sei denn, mit Ihnen wurde ausdrücklich etwas anderes vereinbart.</p>
 
-<h2>Rückerstattung</h2>
-<p>Da es sich um eine individuell erbrachte digitale Leistung handelt, besteht nach vollständiger Leistungserbringung kein Anspruch auf Rückerstattung.</p>
-`
-},
+        <h2>4. Vorzeitiges Erlöschen des Widerrufsrechts</h2>
+        <p>Bei digitalen Dienstleistungen kann das Widerrufsrecht vorzeitig erlöschen, wenn wir mit der Ausführung der Leistung begonnen haben, nachdem Sie</p>
+        <ul>
+          <li>ausdrücklich zugestimmt haben, dass wir vor Ablauf der Widerrufsfrist mit der Ausführung beginnen, und</li>
+          <li>bestätigt haben, dass Sie durch diese Zustimmung mit Beginn der Ausführung Ihr Widerrufsrecht verlieren.</li>
+        </ul>
 
-EN:{
-title:"Withdrawal and Refund Policy",
-note:"The German version is legally binding.",
-content:`
-<h2>Digital Services</h2>
-<p>The services offered are digital services provided individually for customers.</p>
+        <h2>5. Hinweis zu BriefHelden</h2>
+        <p>BriefHelden erbringt digitale Dienstleistungen in Form einer verständlichen sprachlichen Erklärung von eingereichten Schreiben und Dokumenten.</p>
+        <p>Wenn Sie im Bestell- oder Anfrageprozess ausdrücklich zustimmen, dass wir vor Ablauf der Widerrufsfrist mit der Bearbeitung beginnen, und Sie gleichzeitig bestätigen, dass Sie dadurch Ihr Widerrufsrecht verlieren, erlischt Ihr Widerrufsrecht mit Beginn der Ausführung der Leistung.</p>
 
-<h2>Expiry of Right of Withdrawal</h2>
-<p>According to Section 356 (5) German Civil Code, the right of withdrawal expires for digital services once performance has begun after the customer has expressly agreed and acknowledged the loss of the right of withdrawal.</p>
+        <h2>6. Rückerstattung</h2>
+        <p>Besteht ein wirksames Widerrufsrecht und ist dieses noch nicht erloschen, erfolgt eine Rückerstattung nach den gesetzlichen Vorgaben.</p>
+        <p>Ist das Widerrufsrecht jedoch aufgrund Ihrer ausdrücklichen Zustimmung und des Beginns der Bearbeitung erloschen, besteht kein Anspruch auf Rückerstattung für die bereits begonnene oder vollständig erbrachte digitale Dienstleistung.</p>
 
-<h2>Start After Payment</h2>
-<p>By completing the purchase, you expressly agree that the service begins immediately after payment is received.</p>
+        <h2>7. Wichtiger Hinweis</h2>
+        <p>Damit das vorzeitige Erlöschen des Widerrufsrechts wirksam ist, muss Ihre ausdrückliche Zustimmung im Bestell- oder Formularprozess gesondert eingeholt werden.</p>
+      `
+    },
 
-<h2>Refunds</h2>
-<p>As this is an individually provided digital service, there is no entitlement to a refund once the service has been fully performed.</p>
-`
-},
+    EN: {
+      langLabel: "Language",
+      title: "Withdrawal Information and Refunds",
+      note: "<strong>Note:</strong> The German version is legally binding. Translations are provided for convenience only.",
+      content: `
+        <h2>1. Right of withdrawal</h2>
+        <p>Consumers generally have the right to withdraw from distance contracts within fourteen days without giving any reason.</p>
+        <p>The withdrawal period is fourteen days from the date the contract is concluded.</p>
 
-TR:{
-title:"Cayma ve İade Politikası",
-note:"Hukuken bağlayıcı olan sürüm Almanca sürümdür.",
-content:`
-<h2>Dijital Hizmetler</h2>
-<p>Sunulan hizmetler müşterilere özel olarak sağlanan dijital hizmetlerdir.</p>
+        <h2>2. Exercising the withdrawal</h2>
+        <p>To exercise your right of withdrawal, you must inform us:</p>
+        <p>
+          <strong>David Hirschfeld – BriefHelden</strong><br>
+          Carl-Maria-von-Weber-Str. 2<br>
+          74928 Hüffenhardt<br>
+          Germany<br><br>
+<strong>Email:</strong> <a href="mailto:kontakt@briefhelden-service.de">kontakt@briefhelden-service.de</a>
+        </p>
+        <p>by means of a clear statement (for example by email) of your decision to withdraw from this contract.</p>
 
-<h2>Cayma Hakkının Sona Ermesi</h2>
-<p>Alman Medeni Kanunu §356(5) uyarınca, hizmetin ifasına başlanması ve müşterinin açık onayı ile cayma hakkı sona erer.</p>
+        <h2>3. Effects of withdrawal</h2>
+        <p>If you withdraw from this contract, we will reimburse all payments received from you without undue delay and at the latest within fourteen days from the day on which we received your notice of withdrawal.</p>
+        <p>We will use the same means of payment that you used for the original transaction, unless expressly agreed otherwise.</p>
 
-<h2>Ödeme Sonrası Başlangıç</h2>
-<p>Satın alma tamamlandığında hizmetin ödeme alındıktan hemen sonra başlayacağını kabul etmiş olursunuz.</p>
+        <h2>4. Early expiry of the right of withdrawal</h2>
+        <p>For digital services, the right of withdrawal may expire early if we have started performing the service after you have</p>
+        <ul>
+          <li>expressly agreed that we begin performance before the withdrawal period expires, and</li>
+          <li>confirmed that you lose your right of withdrawal once performance begins.</li>
+        </ul>
 
-<h2>İade</h2>
-<p>Bireysel olarak sunulan dijital hizmetlerde hizmet tamamlandıktan sonra iade hakkı bulunmamaktadır.</p>
-`
-},
+        <h2>5. Notice regarding BriefHelden</h2>
+        <p>BriefHelden provides digital services in the form of an understandable plain-language explanation of submitted letters and documents.</p>
+        <p>If, during the order or request process, you expressly agree that we begin processing before the withdrawal period expires and at the same time confirm that you thereby lose your right of withdrawal, your right of withdrawal expires once performance begins.</p>
 
-RU:{
-title:"Политика отказа и возврата",
-note:"Юридически обязательной является немецкая версия.",
-content:`
-<h2>Цифровые услуги</h2>
-<p>Предлагаемые услуги являются индивидуальными цифровыми услугами.</p>
+        <h2>6. Refunds</h2>
+        <p>If a valid right of withdrawal exists and has not yet expired, refunds will be made in accordance with the applicable legal requirements.</p>
+        <p>If the right of withdrawal has expired due to your express consent and the beginning of processing, there is no entitlement to a refund for the digital service already started or fully performed.</p>
 
-<h2>Прекращение права на отказ</h2>
-<p>Согласно §356(5) Гражданского кодекса Германии право на отказ прекращается после начала оказания услуги при согласии клиента.</p>
+        <h2>7. Important notice</h2>
+        <p>For the early expiry of the right of withdrawal to be effective, your express consent must be obtained separately during the order or form process.</p>
+      `
+    },
 
-<h2>Начало после оплаты</h2>
-<p>Завершая покупку, вы соглашаетесь, что услуга начинается сразу после получения оплаты.</p>
+    TR: {
+      langLabel: "Dil",
+      title: "Cayma Bilgilendirmesi ve İade",
+      note: "<strong>Not:</strong> Hukuken bağlayıcı olan sürüm Almanca sürümdür. Çeviriler yalnızca kolaylık içindir.",
+      content: `
+        <h2>1. Cayma hakkı</h2>
+        <p>Tüketiciler, mesafeli sözleşmelerde genel olarak on dört gün içinde herhangi bir gerekçe göstermeden sözleşmeden cayma hakkına sahiptir.</p>
+        <p>Cayma süresi, sözleşmenin kurulduğu tarihten itibaren on dört gündür.</p>
 
-<h2>Возврат средств</h2>
-<p>После полного оказания индивидуальной цифровой услуги право на возврат отсутствует.</p>
-`
-}
+        <h2>2. Caymanın kullanılması</h2>
+        <p>Cayma hakkınızı kullanmak için bize aşağıdaki adresten açık bir beyan ile bildirmeniz gerekir:</p>
+        <p>
+          <strong>David Hirschfeld – BriefHelden</strong><br>
+          Carl-Maria-von-Weber-Str. 2<br>
+          74928 Hüffenhardt<br>
+          Almanya<br><br>
+<strong>E-posta:</strong> <a href="mailto:kontakt@briefhelden-service.de">kontakt@briefhelden-service.de</a>
+        </p>
+        <p>Örneğin e-posta yoluyla sözleşmeden cayma kararınızı bize açıkça bildirebilirsiniz.</p>
 
-};
+        <h2>3. Caymanın sonuçları</h2>
+        <p>Sözleşmeden caymanız halinde, sizden aldığımız tüm ödemeleri, cayma bildiriminizin bize ulaştığı tarihten itibaren en geç on dört gün içinde iade ederiz.</p>
+        <p>Aksi açıkça kararlaştırılmadıkça, geri ödeme için ilk işlemde kullandığınız ödeme yöntemini kullanırız.</p>
 
-const langSelect=document.getElementById("lang");
-const title=document.getElementById("title");
-const note=document.getElementById("note");
-const content=document.getElementById("content");
+        <h2>4. Cayma hakkının erken sona ermesi</h2>
+        <p>Dijital hizmetlerde cayma hakkı, aşağıdaki durumlarda erken sona erebilir:</p>
+        <ul>
+          <li>hizmetin cayma süresi dolmadan başlamasını açıkça kabul etmeniz ve</li>
+          <li>hizmetin başlamasıyla cayma hakkınızı kaybedeceğinizi onaylamanız.</li>
+        </ul>
 
-function render(lang){
-title.innerHTML=TEXT[lang].title;
-note.innerHTML=TEXT[lang].note;
-content.innerHTML=TEXT[lang].content;
-}
+        <h2>5. BriefHelden hakkında bilgi</h2>
+        <p>BriefHelden, gönderilen yazı ve belgelerin anlaşılır dille açıklanması şeklinde dijital hizmet sunar.</p>
+        <p>Sipariş veya başvuru sürecinde, hizmetin cayma süresi dolmadan başlamasını açıkça kabul eder ve bu nedenle cayma hakkınızı kaybedeceğinizi onaylarsanız, hizmetin başlamasıyla cayma hakkınız sona erer.</p>
 
-langSelect.addEventListener("change",()=>render(langSelect.value));
-render("DE");
+        <h2>6. İade</h2>
+        <p>Geçerli bir cayma hakkı mevcutsa ve henüz sona ermemişse, geri ödeme yasal hükümlere göre yapılır.</p>
+        <p>Ancak açık onayınız ve işlemin başlaması nedeniyle cayma hakkı sona ermişse, başlanmış veya tamamen yerine getirilmiş dijital hizmet için iade hakkı yoktur.</p>
+
+        <h2>7. Önemli not</h2>
+        <p>Cayma hakkının erken sona ermesinin geçerli olabilmesi için açık onayınızın sipariş veya form sürecinde ayrıca alınması gerekir.</p>
+      `
+    },
+
+    RU: {
+      langLabel: "Язык",
+      title: "Информация об отказе и возврате",
+      note: "<strong>Примечание:</strong> Юридически обязательной является немецкая версия. Переводы приведены только для удобства.",
+      content: `
+        <h2>1. Право на отказ</h2>
+        <p>Потребители, как правило, имеют право отказаться от дистанционного договора в течение четырнадцати дней без указания причин.</p>
+        <p>Срок отказа составляет четырнадцать дней с даты заключения договора.</p>
+
+        <h2>2. Осуществление отказа</h2>
+        <p>Чтобы воспользоваться правом на отказ, вы должны сообщить нам по адресу:</p>
+        <p>
+          <strong>David Hirschfeld – BriefHelden</strong><br>
+          Carl-Maria-von-Weber-Str. 2<br>
+          74928 Hüffenhardt<br>
+          Германия<br><br>
+<strong>Email:</strong> <a href="mailto:kontakt@briefhelden-service.de">kontakt@briefhelden-service.de</a>
+        </p>
+        <p>посредством однозначного заявления, например по электронной почте, о своём решении отказаться от договора.</p>
+
+        <h2>3. Последствия отказа</h2>
+        <p>Если вы отказываетесь от договора, мы вернём все полученные от вас платежи без неоправданной задержки и не позднее четырнадцати дней с момента получения вашего уведомления.</p>
+        <p>Возврат осуществляется тем же способом оплаты, который вы использовали при первоначальной операции, если иное прямо не согласовано.</p>
+
+        <h2>4. Досрочное прекращение права на отказ</h2>
+        <p>Для цифровых услуг право на отказ может прекратиться досрочно, если мы начали исполнение услуги после того, как вы</p>
+        <ul>
+          <li>прямо согласились на начало оказания услуги до истечения срока отказа, и</li>
+          <li>подтвердили, что с началом исполнения вы теряете право на отказ.</li>
+        </ul>
+
+        <h2>5. Уведомление относительно BriefHelden</h2>
+        <p>BriefHelden оказывает цифровые услуги в форме понятного языкового объяснения переданных писем и документов.</p>
+        <p>Если в процессе заказа или запроса вы прямо соглашаетесь на начало обработки до истечения срока отказа и одновременно подтверждаете потерю права на отказ, это право прекращается с началом исполнения услуги.</p>
+
+        <h2>6. Возврат средств</h2>
+        <p>Если действительное право на отказ существует и ещё не прекратилось, возврат осуществляется в соответствии с применимыми правовыми требованиями.</p>
+        <p>Если право на отказ прекратилось в связи с вашим прямым согласием и началом обработки, право на возврат за уже начатую или полностью оказанную цифровую услугу отсутствует.</p>
+
+        <h2>7. Важное примечание</h2>
+        <p>Чтобы досрочное прекращение права на отказ было действительным, ваше прямое согласие должно быть получено отдельно в процессе заказа или заполнения формы.</p>
+      `
+    }
+  };
+
+  const langSelect = document.getElementById("lang");
+  const title = document.getElementById("title");
+  const note = document.getElementById("note");
+  const content = document.getElementById("content");
+
+  function render(lang){
+    title.innerHTML = TEXT[lang].title;
+    note.innerHTML = TEXT[lang].note;
+    content.innerHTML = TEXT[lang].content;
+  }
+
+  langSelect.addEventListener("change", () => render(langSelect.value));
+  render("DE");
+})();
 </script>
-
 </body>
 </html>
