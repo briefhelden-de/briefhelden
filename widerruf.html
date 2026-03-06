@@ -169,7 +169,6 @@
   </style>
 </head>
 <body>
-
   <div class="topbar">
     <div class="brand">
       <span class="dot"></span>
@@ -222,6 +221,9 @@
 (function(){
   document.getElementById("year").textContent = new Date().getFullYear();
 
+const EMAIL = "kontakt@briefhelden-service.de";
+  const EMAIL_LINK = `<a href="mailto:${EMAIL}">${EMAIL}</a>`;
+
   const TEXT = {
     DE: {
       langLabel: "Sprache",
@@ -239,7 +241,7 @@
           Carl-Maria-von-Weber-Str. 2<br>
           74928 Hüffenhardt<br>
           Deutschland<br><br>
-<strong>E-Mail:</strong> <a href="mailto:kontakt@briefhelden-service.de">kontakt@briefhelden-service.de</a>
+          <strong>E-Mail:</strong> ${EMAIL_LINK}
         </p>
         <p>mittels einer eindeutigen Erklärung (z. B. per E-Mail) über Ihren Entschluss informieren, diesen Vertrag zu widerrufen.</p>
 
@@ -283,7 +285,7 @@
           Carl-Maria-von-Weber-Str. 2<br>
           74928 Hüffenhardt<br>
           Germany<br><br>
-<strong>Email:</strong> <a href="mailto:kontakt@briefhelden-service.de">kontakt@briefhelden-service.de</a>
+          <strong>Email:</strong> ${EMAIL_LINK}
         </p>
         <p>by means of a clear statement (for example by email) of your decision to withdraw from this contract.</p>
 
@@ -327,7 +329,7 @@
           Carl-Maria-von-Weber-Str. 2<br>
           74928 Hüffenhardt<br>
           Almanya<br><br>
-<strong>E-posta:</strong> <a href="mailto:kontakt@briefhelden-service.de">kontakt@briefhelden-service.de</a>
+          <strong>E-posta:</strong> ${EMAIL_LINK}
         </p>
         <p>Örneğin e-posta yoluyla sözleşmeden cayma kararınızı bize açıkça bildirebilirsiniz.</p>
 
@@ -371,7 +373,7 @@
           Carl-Maria-von-Weber-Str. 2<br>
           74928 Hüffenhardt<br>
           Германия<br><br>
-<strong>Email:</strong> <a href="mailto:kontakt@briefhelden-service.de">kontakt@briefhelden-service.de</a>
+          <strong>Email:</strong> ${EMAIL_LINK}
         </p>
         <p>посредством однозначного заявления, например по электронной почте, о своём решении отказаться от договора.</p>
 
@@ -400,19 +402,49 @@
     }
   };
 
-  const langSelect = document.getElementById("lang");
+  const langSelect = document.getElementById("langSelect");
   const title = document.getElementById("title");
   const note = document.getElementById("note");
   const content = document.getElementById("content");
+  const langLabel = document.getElementById("langLabel");
 
   function render(lang){
-    title.innerHTML = TEXT[lang].title;
-    note.innerHTML = TEXT[lang].note;
-    content.innerHTML = TEXT[lang].content;
+    const t = TEXT[lang] || TEXT.DE;
+
+    document.documentElement.lang =
+      (lang === "DE") ? "de" :
+      (lang === "EN") ? "en" :
+      (lang === "TR") ? "tr" : "ru";
+
+    langLabel.textContent = t.langLabel;
+    title.innerHTML = t.title;
+    note.innerHTML = t.note;
+    content.innerHTML = t.content;
   }
 
-  langSelect.addEventListener("change", () => render(langSelect.value));
-  render("DE");
+  function getLangFromUrl(){
+    const url = new URL(window.location.href);
+    const q = (url.searchParams.get("lang") || "").toUpperCase().trim();
+    if(["DE","EN","TR","RU"].includes(q)) return q;
+    return null;
+  }
+
+  const saved = (localStorage.getItem("briefhelden_lang") || "").toUpperCase();
+  const fromUrl = getLangFromUrl();
+  const initial = fromUrl || (["DE","EN","TR","RU"].includes(saved) ? saved : "DE");
+
+  langSelect.value = initial;
+  render(initial);
+
+  langSelect.addEventListener("change", () => {
+    const lang = langSelect.value;
+    localStorage.setItem("briefhelden_lang", lang);
+    render(lang);
+
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", lang);
+    window.history.replaceState({}, "", url.toString());
+  });
 })();
 </script>
 </body>
