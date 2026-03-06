@@ -1,103 +1,193 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>BriefHelden – Zahlung erfolgreich</title>
-  <style>
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#0b2230;color:#fff}
-    .wrap{max-width:900px;margin:0 auto;padding:24px 18px}
-    .card{
-      margin-top:22px;
-      background: rgba(255,255,255,.10);
-      border:1px solid rgba(255,255,255,.18);
-      border-radius:18px;
-      padding:18px 16px;
-      box-shadow: 0 18px 42px rgba(0,0,0,.18);
-    }
-    .btn{
-      display:inline-block;
-      margin-top:14px;
-      padding:12px 14px;
-      border-radius:14px;
-      background: rgba(47,110,230,.92);
-      color:#fff;
-      text-decoration:none;
-      font-weight:950;
-      border:1px solid rgba(47,110,230,.92);
-    }
-    .small{opacity:.86;line-height:1.5}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BriefHelden – Zahlung erfolgreich</title>
+
+<style>
+:root{
+--bg:#0b0f18;
+--card:#ffffff;
+--text:#0f172a;
+--muted:#475569;
+--accent:#2563eb;
+}
+
+body{
+margin:0;
+font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;
+background:
+radial-gradient(1200px 700px at 20% -10%, rgba(37,99,235,.35), transparent 60%),
+radial-gradient(900px 600px at 90% 0%, rgba(99,102,241,.25), transparent 55%),
+var(--bg);
+color:#e5e7eb;
+}
+
+.wrap{
+max-width:900px;
+margin:auto;
+padding:24px 16px;
+}
+
+h1{
+margin-top:10px;
+font-size:32px;
+}
+
+.card{
+margin-top:22px;
+background:#fff;
+color:#0f172a;
+border-radius:18px;
+padding:26px 22px;
+box-shadow:0 20px 60px rgba(0,0,0,.35);
+}
+
+.steps{
+margin-top:12px;
+line-height:1.6;
+}
+
+.step{
+margin:6px 0;
+}
+
+.btn{
+display:inline-block;
+margin-top:18px;
+padding:14px 18px;
+border-radius:14px;
+background:#2563eb;
+color:#fff;
+text-decoration:none;
+font-weight:700;
+}
+
+.note{
+margin-top:18px;
+background:#f8fafc;
+padding:12px;
+border-radius:10px;
+font-size:14px;
+}
+
+.footer{
+margin-top:22px;
+font-size:13px;
+opacity:.8;
+}
+</style>
 </head>
+
 <body>
-  <div class="wrap">
-    <h1 id="t1">Zahlung erfolgreich ✅</h1>
 
-    <div class="card">
-      <p class="small" id="t2">
-        Danke! Als nächstes laden Sie bitte Ihren Brief / Ihr Formular hoch. Danach bekommen Sie die Erklärung per E-Mail.
-      </p>
+<div class="wrap">
 
-      <a class="btn" id="goBtn" href="#">Zum Upload-Formular</a>
+<h1 id="title"></h1>
 
-      <p class="small" style="margin-top:12px" id="t3">
-        Hinweis: Die deutsche Version ist rechtlich maßgeblich. Übersetzungen dienen nur der besseren Verständlichkeit.
-      </p>
-    </div>
-  </div>
+<div class="card">
+
+<p id="intro"></p>
+
+<div class="steps">
+
+<div class="step" id="s1"></div>
+<div class="step" id="s2"></div>
+<div class="step" id="s3"></div>
+
+</div>
+
+<a id="btn" class="btn"></a>
+
+<div class="note" id="note"></div>
+
+<p class="footer" id="footer"></p>
+
+</div>
+
+</div>
 
 <script>
-  const dict = {
-    de: {
-      t1:"Zahlung erfolgreich ✅",
-      t2:"Danke! Als nächstes laden Sie bitte Ihren Brief / Ihr Formular hoch. Danach bekommen Sie die Erklärung per E-Mail.",
-      btn:"Zum Upload-Formular",
-      t3:"Hinweis: Die deutsche Version ist rechtlich maßgeblich. Übersetzungen dienen nur der besseren Verständlichkeit."
-    },
-    en: {
-      t1:"Payment successful ✅",
-      t2:"Thank you! Next, please upload your letter / form. You will then receive the explanation by email.",
-      btn:"Go to upload form",
-      t3:"Note: The German version is legally binding. Translations are for convenience only."
-    },
-    tr: {
-      t1:"Ödeme başarılı ✅",
-      t2:"Teşekkürler! Şimdi lütfen mektubunuzu / formunuzu yükleyin. Daha sonra açıklamayı e-posta ile alırsınız.",
-      btn:"Yükleme formuna git",
-      t3:"Not: Hukuken bağlayıcı olan sürüm Almanca sürümdür. Çeviriler kolaylık içindir."
-    },
-    ru: {
-      t1:"Оплата прошла успешно ✅",
-      t2:"Спасибо! Далее загрузите письмо / форму. Затем вы получите объяснение по e-mail.",
-      btn:"Перейти к форме загрузки",
-      t3:"Примечание: юридически действует немецкая версия. Переводы — только для удобства."
-    }
-  };
 
-  const params = new URLSearchParams(location.search);
-  const lang = (params.get("lang") || localStorage.getItem("bh_lang") || "de").toLowerCase();
-  const l = dict[lang] ? lang : "de";
+const TEXT = {
 
-  localStorage.setItem("bh_lang", l);
-  document.documentElement.lang = l;
+de:{
+title:"Zahlung erfolgreich ✅",
+intro:"Vielen Dank für Ihre Bestellung bei BriefHelden.",
+s1:"1️⃣ Laden Sie jetzt Ihren Brief oder Ihr Dokument über das Upload-Formular hoch.",
+s2:"2️⃣ Wir erstellen eine verständliche Erklärung des Schreibens.",
+s3:"3️⃣ Sie erhalten die Erklärung anschließend per E-Mail.",
+btn:"Zum Upload-Formular",
+note:"Hinweis: Bitte laden Sie nur Dokumente hoch, die für die Erklärung erforderlich sind. Schwärzen Sie sensible Daten, wenn diese für das Verständnis nicht notwendig sind.",
+footer:"BriefHelden bietet keine Rechtsberatung. Es erfolgt ausschließlich eine verständliche Erklärung von Dokumenten."
+},
 
-  document.getElementById("t1").innerText = dict[l].t1;
-  document.getElementById("t2").innerText = dict[l].t2;
-  document.getElementById("t3").innerText = dict[l].t3;
+en:{
+title:"Payment successful ✅",
+intro:"Thank you for your order at BriefHelden.",
+s1:"1️⃣ Please upload your letter or document using the upload form.",
+s2:"2️⃣ We will create a clear explanation of the document.",
+s3:"3️⃣ You will receive the explanation by email.",
+btn:"Go to upload form",
+note:"Note: Please upload only documents required for the explanation. Remove sensitive information if it is not necessary.",
+footer:"BriefHelden does not provide legal advice. The service only explains documents in plain language."
+},
 
-  const form = params.get("form") || "";
-  const btn = document.getElementById("goBtn");
-  btn.innerText = dict[l].btn;
+tr:{
+title:"Ödeme başarılı ✅",
+intro:"BriefHelden siparişiniz için teşekkür ederiz.",
+s1:"1️⃣ Şimdi mektubunuzu veya belgenizi yükleme formu üzerinden yükleyin.",
+s2:"2️⃣ Belgenin anlaşılır bir açıklamasını oluşturuyoruz.",
+s3:"3️⃣ Açıklamayı daha sonra e-posta ile alacaksınız.",
+btn:"Yükleme formuna git",
+note:"Not: Lütfen yalnızca açıklama için gerekli belgeleri yükleyin. Gerekli değilse hassas verileri gizleyin.",
+footer:"BriefHelden hukuki danışmanlık vermez. Hizmet yalnızca belgelerin anlaşılır şekilde açıklanmasını sağlar."
+},
 
-  // Wenn du willst: Auto-Weiterleitung nach 2 Sekunden (optional)
-  // const AUTO_REDIRECT_MS = 2000;
+ru:{
+title:"Оплата прошла успешно ✅",
+intro:"Спасибо за ваш заказ в BriefHelden.",
+s1:"1️⃣ Загрузите ваше письмо или документ через форму загрузки.",
+s2:"2️⃣ Мы подготовим понятное объяснение документа.",
+s3:"3️⃣ Вы получите объяснение по электронной почте.",
+btn:"Перейти к форме загрузки",
+note:"Примечание: загружайте только документы, необходимые для объяснения. Удалите чувствительные данные, если они не требуются.",
+footer:"BriefHelden не предоставляет юридические консультации. Сервис только объясняет документы простым языком."
+}
 
-  if(form){
-    btn.href = form;
-    // setTimeout(()=>location.href=form, AUTO_REDIRECT_MS);
-  } else {
-    btn.href = "/"; // fallback
-  }
+};
+
+const params = new URLSearchParams(location.search);
+
+const lang =
+(params.get("lang") ||
+localStorage.getItem("bh_lang") ||
+"de").toLowerCase();
+
+const L = TEXT[lang] ? lang : "de";
+
+localStorage.setItem("bh_lang",L);
+
+document.documentElement.lang=L;
+
+document.getElementById("title").innerText=TEXT[L].title;
+document.getElementById("intro").innerText=TEXT[L].intro;
+document.getElementById("s1").innerText=TEXT[L].s1;
+document.getElementById("s2").innerText=TEXT[L].s2;
+document.getElementById("s3").innerText=TEXT[L].s3;
+
+const btn=document.getElementById("btn");
+btn.innerText=TEXT[L].btn;
+
+const form=params.get("form") || "/";
+
+btn.href=form;
+
+document.getElementById("note").innerText=TEXT[L].note;
+document.getElementById("footer").innerText=TEXT[L].footer;
+
 </script>
+
 </body>
 </html>
