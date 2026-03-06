@@ -1,247 +1,279 @@
 <!doctype html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Impressum – BriefHelden</title>
-<style>
-:root{
---bg:#0b0f18;
---card:#ffffff;
---text:#0f172a;
---muted:#475569;
---accent:#2563eb;
-}
-body{
-margin:0;
-font-family:system-ui,Arial;
-background:radial-gradient(1200px 700px at 20% -10%, rgba(37,99,235,.35), transparent 60%),
-radial-gradient(900px 600px at 90% 0%, rgba(99,102,241,.25), transparent 55%),var(--bg);
-color:#e5e7eb;
-}
-.topbar{max-width:980px;margin:28px auto 14px;padding:0 16px;display:flex;justify-content:space-between;align-items:center}
-.brand{font-weight:700}
-.nav a{margin-right:10px;text-decoration:none;color:#e5e7eb;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.2)}
-.nav a.active{border-color:#2563eb}
-select{padding:8px;border-radius:8px}
-.wrap{max-width:980px;margin:auto;padding:0 16px}
-.card{background:#fff;color:#0f172a;border-radius:18px;padding:26px;box-shadow:0 20px 60px rgba(0,0,0,.35)}
-h1{margin-top:0}
-h2{margin-top:22px}
-.note{background:#f8fafc;padding:12px;border-radius:10px;margin-bottom:18px;color:#0f172a}
-.p{color:#0f172a}
-a{color:#2563eb}
-.footer{text-align:center;margin:20px 0;color:#ccc;font-size:13px}
-.small{color:#334155;font-size:14px}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Impressum – BriefHelden</title>
+  <style>
+    :root{
+      --bg:#0b0f18;
+      --card:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --accent:#2563eb;
+    }
+    body{
+      margin:0;
+      font-family:system-ui,Arial,sans-serif;
+      background:
+        radial-gradient(1200px 700px at 20% -10%, rgba(37,99,235,.35), transparent 60%),
+        radial-gradient(900px 600px at 90% 0%, rgba(99,102,241,.25), transparent 55%),
+        var(--bg);
+      color:#e5e7eb;
+    }
+    .topbar{
+      max-width:980px;
+      margin:28px auto 14px;
+      padding:0 16px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+    .brand{font-weight:700}
+    .nav{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .nav a{
+      text-decoration:none;
+      color:#e5e7eb;
+      padding:8px 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.2);
+    }
+    .nav a.active{border-color:#2563eb}
+    select{
+      padding:8px;
+      border-radius:8px;
+      border:1px solid #cbd5e1;
+    }
+    .wrap{
+      max-width:980px;
+      margin:auto;
+      padding:0 16px;
+    }
+    .card{
+      background:#fff;
+      color:#0f172a;
+      border-radius:18px;
+      padding:26px;
+      box-shadow:0 20px 60px rgba(0,0,0,.35);
+    }
+    h1{margin-top:0}
+    h2{margin-top:22px}
+    .note{
+      background:#f8fafc;
+      padding:12px;
+      border-radius:10px;
+      margin-bottom:18px;
+      color:#0f172a;
+    }
+    a{color:#2563eb}
+    .footer{
+      text-align:center;
+      margin:20px 0;
+      color:#ccc;
+      font-size:13px;
+    }
+    .small{
+      color:#334155;
+      font-size:14px;
+    }
+  </style>
 </head>
 <body>
 
-<div class="topbar">
-  <div class="brand">BriefHelden</div>
-  <div class="nav">
-    <a href="/datenschutz">Datenschutz</a>
-    <a href="/agb">AGB</a>
-    <a href="/widerruf">Widerruf</a>
-    <a class="active" href="/impressum">Impressum</a>
+  <div class="topbar">
+    <div class="brand">BriefHelden</div>
+
+    <div class="nav">
+      <a href="/datenschutz">Datenschutz</a>
+      <a href="/agb">AGB</a>
+      <a href="/widerruf">Widerruf</a>
+      <a class="active" href="/impressum">Impressum</a>
+    </div>
+
+    <select id="lang">
+      <option value="DE">DE</option>
+      <option value="EN">EN</option>
+      <option value="TR">TR</option>
+      <option value="RU">RU</option>
+    </select>
   </div>
-  <select id="lang">
-    <option value="DE">DE</option>
-    <option value="EN">EN</option>
-    <option value="TR">TR</option>
-    <option value="RU">RU</option>
-  </select>
-</div>
 
-<div class="wrap">
-  <div class="card">
-    <h1 id="title"></h1>
-    <div class="note" id="note"></div>
-    <div id="content"></div>
+  <div class="wrap">
+    <div class="card">
+      <h1 id="title"></h1>
+      <div class="note" id="note"></div>
+      <div id="content"></div>
+    </div>
   </div>
-</div>
 
-<div class="footer">
-  © 2026 BriefHelden – Alle Rechte vorbehalten
-</div>
+  <div class="footer">
+    © 2026 BriefHelden – Alle Rechte vorbehalten
+  </div>
 
-<script>
-const DATA = {
-  ownerName: "David Hirschfeld",
-  brand: "BriefHelden",
-  street: "Carl-Maria-von-Weber-Str. 2",
-  zipCity: "74928 Hüffenhardt",
-  countryDE: "Deutschland",
-  countryEN: "Germany",
+  <script>
+    const DATA = {
+      ownerName: "David Hirschfeld",
+      brand: "BriefHelden",
+      street: "Carl-Maria-von-Weber-Str. 2",
+      zipCity: "74928 Hüffenhardt",
+      countryDE: "Deutschland",
+      countryEN: "Germany",
 email: "kontakt@briefhelden-service.de"
-};
+    };
 
-const TEXT = {
+    const TEXT = {
+      DE: {
+        title: "Impressum",
+        note: "Hinweis: Die deutsche Version ist rechtlich maßgeblich. Übersetzungen dienen ausschließlich der besseren Verständlichkeit.",
+        content: `
+          <p class="small">Angaben gemäß § 5 DDG.</p>
 
-DE:{
-  title:"Impressum",
-  note:"Hinweis: Die deutsche Version ist rechtlich maßgeblich. Übersetzungen dienen ausschließlich der besseren Verständlichkeit.",
-  content:`
-  <p class="small">Angaben gemäß § 5 TMG.</p>
+          <h2>Anbieter</h2>
+          <p><strong>${DATA.brand}</strong></p>
 
-  <h2>Anbieter</h2>
-  <p><strong>${DATA.brand}</strong></p>
+          <h2>Inhaber</h2>
+          <p>
+            <strong>${DATA.ownerName}</strong><br>
+            ${DATA.street}<br>
+            ${DATA.zipCity}<br>
+            ${DATA.countryDE}
+          </p>
 
-  <h2>Inhaber</h2>
-  <p>
-    <strong>${DATA.ownerName}</strong><br>
-    ${DATA.street}<br>
-    ${DATA.zipCity}<br>
-    ${DATA.countryDE}
-  </p>
+          <p><strong>E-Mail:</strong> <a href="mailto:${DATA.email}">${DATA.email}</a></p>
 
-  <p><strong>E-Mail:</strong> <a href="mailto:${DATA.email}">${DATA.email}</a></p>
+          <h2>Verantwortlich für den Inhalt</h2>
+          <p class="small">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</p>
+          <p>
+            <strong>${DATA.ownerName}</strong><br>
+            ${DATA.street}<br>
+            ${DATA.zipCity}<br>
+            ${DATA.countryDE}
+          </p>
 
-  <h2>Verantwortlich für den Inhalt</h2>
-  <p class="small">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</p>
-  <p>
-    <strong>${DATA.ownerName}</strong><br>
-    ${DATA.street}<br>
-    ${DATA.zipCity}<br>
-    ${DATA.countryDE}
-  </p>
+          <h2>Verbraucherstreitbeilegung / Universalschlichtungsstelle</h2>
+          <p>Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+        `
+      },
 
-  <h2>EU-Streitschlichtung</h2>
-  <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit. Diese finden Sie unter:</p>
-<p><a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a></p>
+      EN: {
+        title: "Imprint",
+        note: "Note: The German version is legally binding. Translations are provided for convenience only.",
+        content: `
+          <p class="small">Information pursuant to § 5 DDG (German Digital Services Act).</p>
 
-  <h2>Verbraucherstreitbeilegung / Universalschlichtungsstelle</h2>
-  <p>Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
-  `
-},
+          <h2>Provider</h2>
+          <p><strong>${DATA.brand}</strong></p>
 
-EN:{
-  title:"Imprint",
-  note:"Note: The German version is legally binding. Translations are provided for convenience only.",
-  content:`
-  <p class="small">Information pursuant to German law (§ 5 TMG).</p>
+          <h2>Owner</h2>
+          <p>
+            <strong>${DATA.ownerName}</strong><br>
+            ${DATA.street}<br>
+            ${DATA.zipCity}<br>
+            ${DATA.countryEN}
+          </p>
 
-  <h2>Provider</h2>
-  <p><strong>${DATA.brand}</strong></p>
+          <p><strong>Email:</strong> <a href="mailto:${DATA.email}">${DATA.email}</a></p>
 
-  <h2>Owner</h2>
-  <p>
-    <strong>${DATA.ownerName}</strong><br>
-    ${DATA.street}<br>
-    ${DATA.zipCity}<br>
-    ${DATA.countryEN}
-  </p>
+          <h2>Responsible for content</h2>
+          <p class="small">Responsible for content pursuant to § 18(2) MStV:</p>
+          <p>
+            <strong>${DATA.ownerName}</strong><br>
+            ${DATA.street}<br>
+            ${DATA.zipCity}<br>
+            ${DATA.countryEN}
+          </p>
 
-  <p><strong>Email:</strong> <a href="mailto:${DATA.email}">${DATA.email}</a></p>
+          <h2>Consumer dispute resolution</h2>
+          <p>We are not obliged and not willing to participate in dispute resolution proceedings before a consumer arbitration board.</p>
+        `
+      },
 
-  <h2>Responsible for content</h2>
-  <p class="small">Responsible for content according to § 18(2) MStV:</p>
-  <p>
-    <strong>${DATA.ownerName}</strong><br>
-    ${DATA.street}<br>
-    ${DATA.zipCity}<br>
-    ${DATA.countryEN}
-  </p>
+      TR: {
+        title: "Künye",
+        note: "Not: Hukuken bağlayıcı olan sürüm Almanca sürümdür. Çeviriler yalnızca kolaylık içindir.",
+        content: `
+          <p class="small">Alman Dijital Hizmetler Yasası (§ 5 DDG) uyarınca bilgiler.</p>
 
-  <h2>EU Online Dispute Resolution</h2>
-  <p>The European Commission provides a platform for online dispute resolution (ODR):</p>
-<p><a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a></p>
+          <h2>Sağlayıcı</h2>
+          <p><strong>${DATA.brand}</strong></p>
 
-  <h2>Consumer dispute resolution</h2>
-  <p>We are not obliged and not willing to participate in dispute resolution proceedings before a consumer arbitration board.</p>
-  `
-},
+          <h2>Sahip</h2>
+          <p>
+            <strong>${DATA.ownerName}</strong><br>
+            ${DATA.street}<br>
+            ${DATA.zipCity}<br>
+            ${DATA.countryEN}
+          </p>
 
-TR:{
-  title:"Künye",
-  note:"Not: Hukuken bağlayıcı olan sürüm Almanca sürümdür. Çeviriler yalnızca kolaylık içindir.",
-  content:`
-  <p class="small">Alman yasasına göre bilgiler (§ 5 TMG).</p>
+          <p><strong>E-posta:</strong> <a href="mailto:${DATA.email}">${DATA.email}</a></p>
 
-  <h2>Sağlayıcı</h2>
-  <p><strong>${DATA.brand}</strong></p>
+          <h2>İçerikten sorumlu</h2>
+          <p class="small">§ 18(2) MStV uyarınca içerikten sorumlu kişi:</p>
+          <p>
+            <strong>${DATA.ownerName}</strong><br>
+            ${DATA.street}<br>
+            ${DATA.zipCity}<br>
+            ${DATA.countryEN}
+          </p>
 
-  <h2>Sahip</h2>
-  <p>
-    <strong>${DATA.ownerName}</strong><br>
-    ${DATA.street}<br>
-    ${DATA.zipCity}<br>
-    ${DATA.countryEN}
-  </p>
+          <h2>Tüketici uyuşmazlık çözümü</h2>
+          <p>Bir tüketici hakem heyeti önünde uyuşmazlık çözüm sürecine katılmak zorunda değiliz ve buna hazır da değiliz.</p>
+        `
+      },
 
-  <p><strong>E-posta:</strong> <a href="mailto:${DATA.email}">${DATA.email}</a></p>
+      RU: {
+        title: "Выходные данные",
+        note: "Примечание: юридически обязательной является немецкая версия. Переводы приведены только для удобства.",
+        content: `
+          <p class="small">Информация согласно § 5 DDG (Закон Германии о цифровых услугах).</p>
 
-  <h2>İçerikten sorumlu</h2>
-  <p class="small">§ 18(2) MStV uyarınca içerikten sorumlu:</p>
-  <p>
-    <strong>${DATA.ownerName}</strong><br>
-    ${DATA.street}<br>
-    ${DATA.zipCity}<br>
-    ${DATA.countryEN}
-  </p>
+          <h2>Поставщик</h2>
+          <p><strong>${DATA.brand}</strong></p>
 
-  <h2>AB Çevrimiçi Uyuşmazlık Çözümü</h2>
-  <p>Avrupa Komisyonu çevrimiçi uyuşmazlık çözüm platformu (ODR) sunar:</p>
-<p><a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a></p>
+          <h2>Владелец</h2>
+          <p>
+            <strong>${DATA.ownerName}</strong><br>
+            ${DATA.street}<br>
+            ${DATA.zipCity}<br>
+            ${DATA.countryEN}
+          </p>
 
-  <h2>Tüketici uyuşmazlık çözümü</h2>
-  <p>Bir tüketici hakem heyeti önünde uyuşmazlık çözümüne katılmak zorunda değiliz ve katılmayı da istemiyoruz.</p>
-  `
-},
+          <p><strong>Email:</strong> <a href="mailto:${DATA.email}">${DATA.email}</a></p>
 
-RU:{
-  title:"Выходные данные",
-  note:"Примечание: юридически обязательной является немецкая версия. Переводы — только для удобства.",
-  content:`
-  <p class="small">Информация согласно немецкому праву (§ 5 TMG).</p>
+          <h2>Ответственный за содержание</h2>
+          <p class="small">Ответственный за содержание согласно § 18(2) MStV:</p>
+          <p>
+            <strong>${DATA.ownerName}</strong><br>
+            ${DATA.street}<br>
+            ${DATA.zipCity}<br>
+            ${DATA.countryEN}
+          </p>
 
-  <h2>Поставщик</h2>
-  <p><strong>${DATA.brand}</strong></p>
+          <h2>Потребительское урегулирование споров</h2>
+          <p>Мы не обязаны и не готовы участвовать в процедурах урегулирования споров в органе потребительского арбитража.</p>
+        `
+      }
+    };
 
-  <h2>Владелец</h2>
-  <p>
-    <strong>${DATA.ownerName}</strong><br>
-    ${DATA.street}<br>
-    ${DATA.zipCity}<br>
-    ${DATA.countryEN}
-  </p>
+    const langSelect = document.getElementById("lang");
+    const title = document.getElementById("title");
+    const note = document.getElementById("note");
+    const content = document.getElementById("content");
 
-  <p><strong>Email:</strong> <a href="mailto:${DATA.email}">${DATA.email}</a></p>
+    function render(lang) {
+      title.innerHTML = TEXT[lang].title;
+      note.innerHTML = TEXT[lang].note;
+      content.innerHTML = TEXT[lang].content;
+    }
 
-  <h2>Ответственный за содержание</h2>
-  <p class="small">Ответственный за содержание по § 18(2) MStV:</p>
-  <p>
-    <strong>${DATA.ownerName}</strong><br>
-    ${DATA.street}<br>
-    ${DATA.zipCity}<br>
-    ${DATA.countryEN}
-  </p>
-
-  <h2>Онлайн-урегулирование споров в ЕС</h2>
-  <p>Европейская комиссия предоставляет платформу онлайн-урегулирования споров (ODR):</p>
-<p><a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr/</a></p>
-
-  <h2>Потребительский арбитраж</h2>
-  <p>Мы не обязаны и не готовы участвовать в процедурах урегулирования споров в потребительском арбитражном органе.</p>
-  `
-}
-
-};
-
-const langSelect=document.getElementById("lang");
-const title=document.getElementById("title");
-const note=document.getElementById("note");
-const content=document.getElementById("content");
-
-function render(lang){
-  title.innerHTML = TEXT[lang].title;
-  note.innerHTML = TEXT[lang].note;
-  content.innerHTML = TEXT[lang].content;
-}
-
-langSelect.addEventListener("change",()=>render(langSelect.value));
-render("DE");
-</script>
-
+    langSelect.addEventListener("change", () => render(langSelect.value));
+    render("DE");
+  </script>
 </body>
 </html>
