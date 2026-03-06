@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BriefHelden</title>
-  <meta name="description" content="Einfach. Verständlich. Diskret. Premium-Erklärung für offizielle Briefe & Formulare." />
+  <meta name="description" content="Einfach. Verständlich. Diskret. Verständliche Texterklärung für offizielle Briefe und Formulare." />
   <style>
     :root{
       --nav-bg: rgba(9,24,33,.78);
@@ -37,9 +37,11 @@
       min-height: 100vh;
     }
     a{color:inherit;text-decoration:none}
-    /* NAV */
+
     header{
-      position:sticky; top:0; z-index:10;
+      position:sticky;
+      top:0;
+      z-index:10;
       background: var(--nav-bg);
       backdrop-filter: blur(12px) saturate(140%);
       border-bottom: 1px solid var(--nav-border);
@@ -55,28 +57,37 @@
       color:#fff;
     }
     .brand{
-      display:flex; align-items:center; gap:10px;
+      display:flex;
+      align-items:center;
+      gap:10px;
       font-weight: 900;
       letter-spacing:.2px;
       white-space:nowrap;
     }
     .brand .logo{
-      width:26px; height:26px; border-radius:10px;
-      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.85), rgba(255,255,255,.08)),
-                  linear-gradient(180deg, rgba(55,120,255,.9), rgba(20,70,190,.9));
+      width:26px;
+      height:26px;
+      border-radius:10px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.85), rgba(255,255,255,.08)),
+        linear-gradient(180deg, rgba(55,120,255,.9), rgba(20,70,190,.9));
       box-shadow: 0 10px 18px rgba(0,0,0,.18);
       position:relative;
     }
     .brand .logo:after{
       content:"";
-      position:absolute; inset:7px 6px 7px 10px;
+      position:absolute;
+      inset:7px 6px 7px 10px;
       border-radius:8px;
       background: rgba(255,255,255,.85);
       clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
       opacity:.12;
     }
     nav.links{
-      display:flex; align-items:center; gap:16px; flex-wrap:wrap;
+      display:flex;
+      align-items:center;
+      gap:16px;
+      flex-wrap:wrap;
     }
     nav.links a{
       color: rgba(255,255,255,.82);
@@ -85,7 +96,10 @@
     }
     nav.links a:hover{color:#fff}
     .langWrap{
-      display:flex; align-items:center; gap:10px;
+      display:flex;
+      align-items:center;
+      gap:10px;
+      position:relative;
     }
     .langSelect{
       appearance:none;
@@ -96,11 +110,9 @@
       border-radius: 12px;
       font-weight:800;
       cursor:pointer;
-      position:relative;
       outline:none;
     }
     .langSelect:focus{box-shadow: 0 0 0 3px rgba(90,160,255,.25)}
-    .langWrap{position:relative}
     .langWrap:after{
       content:"▾";
       position:absolute;
@@ -111,7 +123,7 @@
       pointer-events:none;
       font-size: 12px;
     }
-    /* HERO */
+
     .hero{
       position:relative;
       color: var(--heroText);
@@ -176,7 +188,7 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
       border: 1px solid rgba(255,255,255,.12);
       backdrop-filter: blur(10px);
     }
-    /* SECTIONS */
+
     .section{padding: 26px 18px 10px}
     .wrap{max-width: var(--max); margin:0 auto}
     .glassCard{
@@ -220,7 +232,9 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
       font-weight: 800;
     }
     .howRow .mini{
-      display:flex; gap:10px; align-items:center;
+      display:flex;
+      gap:10px;
+      align-items:center;
       padding: 10px 14px;
       border-radius: 999px;
       border: 1px solid rgba(255,255,255,.55);
@@ -261,7 +275,9 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
       font-weight: 800;
     }
     .flowDot{
-      width:10px; height:10px; border-radius:999px;
+      width:10px;
+      height:10px;
+      border-radius:999px;
       margin-top: 6px;
       background: rgba(47,111,255,.85);
       box-shadow: 0 8px 16px rgba(47,111,255,.25);
@@ -272,7 +288,7 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
       font-weight: 800;
       color: rgba(11,18,32,.70);
     }
-    /* DOCUMENT TYPES */
+
     .typesTitle{
       text-align:center;
       font-weight: 950;
@@ -300,9 +316,11 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
       align-items:flex-start;
     }
     .icon{
-      width: 40px; height:40px;
+      width: 40px;
+      height:40px;
       border-radius: 14px;
-      display:grid; place-items:center;
+      display:grid;
+      place-items:center;
       background:
         radial-gradient(circle at 30% 30%, rgba(255,255,255,.85), rgba(255,255,255,.10)),
         linear-gradient(180deg, rgba(70,140,255,.8), rgba(30,80,200,.8));
@@ -333,7 +351,7 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
       color: rgba(11,18,32,.72);
       font-weight: 800;
     }
-    /* FOOTER */
+
     footer{
       margin-top: 18px;
       padding: 18px 18px 28px;
@@ -352,12 +370,14 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
       gap: 12px;
     }
     .footLinks{
-      display:flex; gap:14px; flex-wrap:wrap;
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
       font-weight: 800;
     }
     .footLinks a{color: rgba(255,255,255,.80)}
     .footLinks a:hover{color:#fff}
-    /* Responsive */
+
     @media (max-width: 900px){
       nav.links{display:none}
       .pillRow{grid-template-columns:1fr}
@@ -373,13 +393,15 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
       <div class="logo" aria-hidden="true"></div>
       <div>BriefHelden</div>
     </div>
+
     <nav class="links" aria-label="Hauptnavigation">
       <a href="index.html" data-i18n="nav_home">Startseite</a>
-      <a href="widerruf.html" data-i18n="nav_refund">Widerrufs- und Rückerstattung</a>
+      <a href="widerruf.html" data-i18n="nav_refund">Widerruf und Rückerstattung</a>
       <a href="impressum.html" data-i18n="nav_imprint">Impressum</a>
       <a href="agb.html" data-i18n="nav_terms">AGB</a>
       <a href="datenschutz.html" data-i18n="nav_privacy">Datenschutz</a>
     </nav>
+
     <div class="langWrap">
       <select class="langSelect" id="langSelect" aria-label="Sprache">
         <option value="de">DE</option>
@@ -394,17 +416,16 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
 <section class="hero">
   <div class="wrap">
     <h1 data-i18n="hero_title">Einfach. Verständlich. Diskret.</h1>
-    <p data-i18n="hero_sub">Premium-Erklärung für offizielle Briefe &amp; Formulare – in Ihrer Sprache.</p>
+    <p data-i18n="hero_sub">Verständliche Texterklärung für offizielle Briefe und Formulare – in Ihrer Sprache.</p>
 
-    <!-- Stripe Link (wird per JS auf die richtige Sprache gesetzt) -->
     <a class="cta" id="stripeBtn" href="#" target="_blank" rel="noopener">
-      <span data-i18n="hero_cta">Jetzt Premium-Erklärung erhalten – 6,90 €</span>
+      <span data-i18n="hero_cta">Jetzt verständliche Erklärung erhalten – 6,90 €</span>
       <span aria-hidden="true">›</span>
     </a>
 
     <div class="heroMeta" aria-label="Kurzvorteile">
       <span>✅ <span data-i18n="meta_once">Einmalig 6,90 €</span></span>
-      <span>🕒 <span data-i18n="meta_fast">Antwort meist in Minuten</span></span>
+      <span>🕒 <span data-i18n="meta_fast">Antwort meist in kurzer Zeit</span></span>
       <span>🔒 <span data-i18n="meta_private">100% vertraulich</span></span>
     </div>
   </div>
@@ -416,9 +437,9 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
       <div class="pad">
         <div class="headline" data-i18n="mid_title">Sie verstehen Ihren Brief nicht?</div>
         <p class="lead" data-i18n="mid_text">
-          Viele offizielle Schreiben vom <b>Amt</b>, <b>Inkasso</b> oder <b>Mahnungen</b> sind kompliziert formuliert.
-          Laden Sie Ihr Dokument hoch – wir erklären Ihnen den Inhalt klar und verständlich, damit Sie wissen,
-          worum es geht und was Sie als Nächstes tun können.
+          Viele offizielle Schreiben vom <b>Amt</b>, <b>Inkasso</b> oder bei <b>Mahnungen</b> sind kompliziert formuliert.
+          Laden Sie Ihr Dokument hoch – wir erklären Ihnen den Inhalt klar und verständlich, damit Sie besser verstehen,
+          worum es in dem Schreiben geht.
         </p>
 
         <div class="glassCard" style="border-radius: 22px;">
@@ -432,7 +453,7 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
 
             <div class="pillRow" aria-label="Vorteile">
               <div class="pill">🔒 <span data-i18n="pill_pay">Sichere Zahlung (Stripe)</span></div>
-              <div class="pill">⚡ <span data-i18n="pill_reply">Schnelle Antwort</span></div>
+              <div class="pill">⚡ <span data-i18n="pill_reply">Schnelle Rückmeldung</span></div>
               <div class="pill">🌍 <span data-i18n="pill_lang">Mehrsprachig</span></div>
             </div>
 
@@ -443,7 +464,7 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
             </div>
 
             <div class="disclaimer" data-i18n="disclaimer">
-              Kein Rechtsrat – nur klare und verständliche Texterklärung.
+              Keine Rechtsberatung – nur verständliche Texterklärung.
             </div>
           </div>
         </div>
@@ -452,7 +473,7 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
 
         <div class="glassCard">
           <div class="pad">
-            <div class="typesTitle" data-i18n="types_title">Für welche Briefe &amp; Dokumente eignet sich BriefHelden?</div>
+            <div class="typesTitle" data-i18n="types_title">Für welche Briefe und Dokumente eignet sich BriefHelden?</div>
             <div class="typesSub" data-i18n="types_sub">Wir helfen bei komplizierten Schreiben wie:</div>
 
             <div class="grid">
@@ -460,7 +481,7 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
                 <div class="icon">🏛️</div>
                 <div>
                   <h3 data-i18n="t1_title">Briefe vom Amt</h3>
-                  <p data-i18n="t1_text">(Jobcenter, Finanzamt, Behörden, etc.)</p>
+                  <p data-i18n="t1_text">(Jobcenter, Finanzamt, Behörden usw.)</p>
                 </div>
               </div>
 
@@ -481,7 +502,7 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
                   <h3 data-i18n="t3_title">Kündigungen</h3>
                   <ul>
                     <li data-i18n="t3_li1">Mietwohnung</li>
-                    <li data-i18n="t3_li2">Arbeitsvertrag, Handy, etc.</li>
+                    <li data-i18n="t3_li2">Arbeitsvertrag, Handy usw.</li>
                   </ul>
                 </div>
               </div>
@@ -491,8 +512,8 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
                 <div>
                   <h3 data-i18n="t4_title">Mahnungen</h3>
                   <ul>
-                    <li data-i18n="t4_li1">Fristen &amp; Zahlungsziele</li>
-                    <li data-i18n="t4_li2">Wichtige Schritte</li>
+                    <li data-i18n="t4_li1">Erklärung von Fristen und Angaben</li>
+                    <li data-i18n="t4_li2">Verständliche Einordnung des Inhalts</li>
                   </ul>
                 </div>
               </div>
@@ -501,7 +522,7 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
                 <div class="icon">📄</div>
                 <div>
                   <h3 data-i18n="t5_title">Verträge</h3>
-                  <p data-i18n="t5_text">Klauseln, Pflichten, Laufzeiten – verständlich erklärt.</p>
+                  <p data-i18n="t5_text">Klauseln, Pflichten und Laufzeiten – verständlich erklärt.</p>
                 </div>
               </div>
 
@@ -509,17 +530,16 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
                 <div class="icon">🧾</div>
                 <div>
                   <h3 data-i18n="t6_title">Formulare</h3>
-                  <p data-i18n="t6_text">Ausfüllhilfe &amp; verständliche Erklärung der Inhalte.</p>
+                  <p data-i18n="t6_text">Verständliche Erklärung der Inhalte und Angaben.</p>
                 </div>
               </div>
             </div>
 
             <div class="bottomNote" data-i18n="bottom_note">
-              Egal ob Fristen, Forderungen oder unklare Formulierungen – wir erklären Ihnen verständlich, worum es geht.
+              Egal ob Fristen, Forderungen oder unklare Formulierungen – wir erklären verständlich, worum es in dem Schreiben geht.
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -538,55 +558,54 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
 </footer>
 
 <script>
-  // Dein Stripe Payment Link (Basis)
 const STRIPE_BASE_URL = "https://buy.stripe.com/14A9ASbhP2c083deR74sE00";
 
   const i18n = {
     de: {
       nav_home: "Startseite",
-      nav_refund: "Widerrufs- und Rückerstattung",
+      nav_refund: "Widerruf und Rückerstattung",
       nav_imprint: "Impressum",
       nav_terms: "AGB",
       nav_privacy: "Datenschutz",
       hero_title: "Einfach. Verständlich. Diskret.",
-      hero_sub: "Premium-Erklärung für offizielle Briefe & Formulare – in Ihrer Sprache.",
-      hero_cta: "Jetzt Premium-Erklärung erhalten – 6,90 €",
+      hero_sub: "Verständliche Texterklärung für offizielle Briefe und Formulare – in Ihrer Sprache.",
+      hero_cta: "Jetzt verständliche Erklärung erhalten – 6,90 €",
       meta_once: "Einmalig 6,90 €",
-      meta_fast: "Antwort meist in Minuten",
+      meta_fast: "Antwort meist in kurzer Zeit",
       meta_private: "100% vertraulich",
       mid_title: "Sie verstehen Ihren Brief nicht?",
       mid_text:
-        "Viele offizielle Schreiben vom <b>Amt</b>, <b>Inkasso</b> oder <b>Mahnungen</b> sind kompliziert formuliert. " +
-        "Laden Sie Ihr Dokument hoch – wir erklären Ihnen den Inhalt klar und verständlich, damit Sie wissen, " +
-        "worum es geht und was Sie als Nächstes tun können.",
+        "Viele offizielle Schreiben vom <b>Amt</b>, <b>Inkasso</b> oder bei <b>Mahnungen</b> sind kompliziert formuliert. " +
+        "Laden Sie Ihr Dokument hoch – wir erklären Ihnen den Inhalt klar und verständlich, damit Sie besser verstehen, " +
+        "worum es in dem Schreiben geht.",
       how_title: "So funktioniert es:",
       how_a: "Dokument hochladen",
       how_b: "100% Vertraulichkeit",
       pill_pay: "Sichere Zahlung (Stripe)",
-      pill_reply: "Schnelle Antwort",
+      pill_reply: "Schnelle Rückmeldung",
       pill_lang: "Mehrsprachig",
       flow_1: "Sie laden Ihren Brief oder Ihr Formular hoch.",
       flow_2: "Wir erklären Ihnen den Inhalt in einfacher, verständlicher Sprache.",
       flow_3: "Sie erhalten die Erklärung per E-Mail.",
-      disclaimer: "Kein Rechtsrat – nur klare und verständliche Texterklärung.",
-      types_title: "Für welche Briefe & Dokumente eignet sich BriefHelden?",
+      disclaimer: "Keine Rechtsberatung – nur verständliche Texterklärung.",
+      types_title: "Für welche Briefe und Dokumente eignet sich BriefHelden?",
       types_sub: "Wir helfen bei komplizierten Schreiben wie:",
       t1_title: "Briefe vom Amt",
-      t1_text: "(Jobcenter, Finanzamt, Behörden, etc.)",
+      t1_text: "(Jobcenter, Finanzamt, Behörden usw.)",
       t2_title: "Inkasso",
       t2_li1: "Forderungen",
       t2_li2: "Zahlungsaufforderungen",
       t3_title: "Kündigungen",
       t3_li1: "Mietwohnung",
-      t3_li2: "Arbeitsvertrag, Handy, etc.",
+      t3_li2: "Arbeitsvertrag, Handy usw.",
       t4_title: "Mahnungen",
-      t4_li1: "Fristen & Zahlungsziele",
-      t4_li2: "Wichtige Schritte",
+      t4_li1: "Erklärung von Fristen und Angaben",
+      t4_li2: "Verständliche Einordnung des Inhalts",
       t5_title: "Verträge",
-      t5_text: "Klauseln, Pflichten, Laufzeiten – verständlich erklärt.",
+      t5_text: "Klauseln, Pflichten und Laufzeiten – verständlich erklärt.",
       t6_title: "Formulare",
-      t6_text: "Ausfüllhilfe & verständliche Erklärung der Inhalte.",
-      bottom_note: "Egal ob Fristen, Forderungen oder unklare Formulierungen – wir erklären Ihnen verständlich, worum es geht.",
+      t6_text: "Verständliche Erklärung der Inhalte und Angaben.",
+      bottom_note: "Egal ob Fristen, Forderungen oder unklare Formulierungen – wir erklären verständlich, worum es in dem Schreiben geht.",
       foot_refund: "Widerruf",
       foot_imprint: "Impressum",
       foot_terms: "AGB",
@@ -594,20 +613,20 @@ const STRIPE_BASE_URL = "https://buy.stripe.com/14A9ASbhP2c083deR74sE00";
     },
     en: {
       nav_home: "Home",
-      nav_refund: "Refund Policy",
+      nav_refund: "Withdrawal and Refunds",
       nav_imprint: "Imprint",
       nav_terms: "Terms",
       nav_privacy: "Privacy",
       hero_title: "Simple. Clear. Discreet.",
-      hero_sub: "Premium explanation for official letters & forms — in your language.",
-      hero_cta: "Get a premium explanation — €6.90",
+      hero_sub: "Plain-language text explanation for official letters and forms — in your language.",
+      hero_cta: "Get a clear explanation – €6.90",
       meta_once: "One-time €6.90",
-      meta_fast: "Reply usually in minutes",
+      meta_fast: "Reply usually within a short time",
       meta_private: "100% confidential",
       mid_title: "Don't understand your letter?",
       mid_text:
-        "Many official letters from authorities, debt collection, or reminders are hard to understand. " +
-        "Upload your document — we explain it clearly so you know what it means and what you can do next.",
+        "Many official letters from authorities, debt collection, or reminders are difficult to understand. " +
+        "Upload your document — we explain the content clearly and simply so you can better understand what the letter is about.",
       how_title: "How it works:",
       how_a: "Upload document",
       how_b: "100% confidentiality",
@@ -617,8 +636,8 @@ const STRIPE_BASE_URL = "https://buy.stripe.com/14A9ASbhP2c083deR74sE00";
       flow_1: "You upload your letter or form.",
       flow_2: "We explain the content in simple, clear language.",
       flow_3: "You receive the explanation by email.",
-      disclaimer: "No legal advice — only clear and understandable text explanation.",
-      types_title: "What letters & documents are suitable for BriefHelden?",
+      disclaimer: "No legal advice — only a clear text explanation.",
+      types_title: "What letters and documents is BriefHelden suitable for?",
       types_sub: "We help with complicated documents such as:",
       t1_title: "Letters from authorities",
       t1_text: "(Jobcenter, tax office, authorities, etc.)",
@@ -629,83 +648,83 @@ const STRIPE_BASE_URL = "https://buy.stripe.com/14A9ASbhP2c083deR74sE00";
       t3_li1: "Rent / apartment",
       t3_li2: "Work contract, phone, etc.",
       t4_title: "Reminders",
-      t4_li1: "Deadlines & due dates",
-      t4_li2: "Next steps",
+      t4_li1: "Explanation of deadlines and details",
+      t4_li2: "Understandable explanation of the content",
       t5_title: "Contracts",
-      t5_text: "Clauses, duties, terms — explained clearly.",
+      t5_text: "Clauses, obligations and terms — explained clearly.",
       t6_title: "Forms",
-      t6_text: "Help understanding and filling in forms.",
-      bottom_note: "Whether deadlines, claims or unclear wording — we explain what it means in plain terms.",
-      foot_refund: "Refund",
+      t6_text: "Understandable explanation of the content and fields.",
+      bottom_note: "Whether deadlines, claims or unclear wording — we explain clearly what the letter is about.",
+      foot_refund: "Withdrawal",
       foot_imprint: "Imprint",
       foot_terms: "Terms",
       foot_privacy: "Privacy"
     },
     tr: {
       nav_home: "Ana Sayfa",
-      nav_refund: "İade Politikası",
+      nav_refund: "Cayma ve İade",
       nav_imprint: "Künye",
       nav_terms: "Şartlar",
       nav_privacy: "Gizlilik",
       hero_title: "Basit. Anlaşılır. Gizli.",
-      hero_sub: "Resmi mektuplar ve formlar için açıklama — sizin dilinizde.",
-      hero_cta: "Premium açıklama al — 6,90 €",
+      hero_sub: "Resmi mektuplar ve formlar için anlaşılır metin açıklaması — sizin dilinizde.",
+      hero_cta: "Anlaşılır açıklama al – 6,90 €",
       meta_once: "Tek seferlik 6,90 €",
-      meta_fast: "Genelde dakikalar içinde",
+      meta_fast: "Genelde kısa sürede yanıt",
       meta_private: "%100 gizli",
       mid_title: "Mektubunuzu anlamıyor musunuz?",
       mid_text:
-        "Resmi kurum yazıları, icra/inkasso veya ihtarlar çoğu zaman karmaşıktır. " +
-        "Belgenizi yükleyin — ne anlama geldiğini ve sırada ne yapabileceğinizi açıkça anlatalım.",
+        "Resmi kurum yazıları, inkasso veya ihtarlar çoğu zaman karmaşıktır. " +
+        "Belgenizi yükleyin — içeriği açık ve anlaşılır şekilde açıklayalım, böylece yazının ne hakkında olduğunu daha iyi anlayın.",
       how_title: "Nasıl çalışır:",
       how_a: "Belge yükle",
       how_b: "%100 gizlilik",
       pill_pay: "Güvenli ödeme (Stripe)",
-      pill_reply: "Hızlı cevap",
+      pill_reply: "Hızlı geri dönüş",
       pill_lang: "Çok dilli",
       flow_1: "Mektubunuzu veya formunuzu yüklersiniz.",
       flow_2: "İçeriği basit ve anlaşılır şekilde açıklarız.",
       flow_3: "Açıklamayı e-posta ile alırsınız.",
       disclaimer: "Hukuki danışmanlık yok — sadece anlaşılır metin açıklaması.",
-      types_title: "Hangi mektuplar ve belgeler için uygun?",
+      types_title: "BriefHelden hangi mektup ve belgeler için uygundur?",
       types_sub: "Şu tür belgelerde yardımcı oluyoruz:",
       t1_title: "Resmi kurum mektupları",
       t1_text: "(Jobcenter, vergi dairesi, kurumlar vb.)",
       t2_title: "İnkasso",
       t2_li1: "Alacaklar",
       t2_li2: "Ödeme talepleri",
-      t3_title: "Fesih / İptal",
+      t3_title: "Fesih / iptal",
       t3_li1: "Kira / konut",
       t3_li2: "İş sözleşmesi, telefon vb.",
       t4_title: "İhtarlar",
-      t4_li1: "Süreler & son tarihler",
-      t4_li2: "Sonraki adımlar",
+      t4_li1: "Süre ve bilgilerin açıklanması",
+      t4_li2: "İçeriğin anlaşılır açıklaması",
       t5_title: "Sözleşmeler",
-      t5_text: "Maddeler, yükümlülükler, süreler — açık anlatım.",
+      t5_text: "Maddeler, yükümlülükler ve süreler — açık şekilde anlatılır.",
       t6_title: "Formlar",
-      t6_text: "Formları anlama ve doldurma yardımı.",
-      bottom_note: "Süre, alacak veya belirsiz ifadeler fark etmez — ne olduğunu anlaşılır şekilde açıklarız.",
-      foot_refund: "İade",
+      t6_text: "İçeriğin ve alanların anlaşılır açıklaması.",
+      bottom_note: "Süreler, alacaklar veya belirsiz ifadeler fark etmez — yazının ne hakkında olduğunu anlaşılır şekilde açıklarız.",
+      foot_refund: "Cayma",
       foot_imprint: "Künye",
       foot_terms: "Şartlar",
       foot_privacy: "Gizlilik"
     },
     ru: {
       nav_home: "Главная",
-      nav_refund: "Возврат средств",
+      nav_refund: "Отказ и возврат",
       nav_imprint: "Выходные данные",
       nav_terms: "Условия",
       nav_privacy: "Конфиденциальность",
       hero_title: "Просто. Понятно. Конфиденциально.",
-      hero_sub: "Премиум-объяснение официальных писем и форм — на вашем языке.",
-      hero_cta: "Получить объяснение — 6,90 €",
+      hero_sub: "Понятное текстовое объяснение официальных писем и форм — на вашем языке.",
+      hero_cta: "Получить понятное объяснение – 6,90 €",
       meta_once: "Разово 6,90 €",
-      meta_fast: "Обычно за минуты",
+      meta_fast: "Обычно быстрый ответ",
       meta_private: "100% конфиденциально",
       mid_title: "Не понимаете письмо?",
       mid_text:
         "Официальные письма, инкассо или напоминания часто написаны сложно. " +
-        "Загрузите документ — мы объясним простыми словами, что это значит и что делать дальше.",
+        "Загрузите документ — мы понятно объясним содержание, чтобы вы лучше поняли, о чём это письмо.",
       how_title: "Как это работает:",
       how_a: "Загрузить документ",
       how_b: "100% конфиденциальность",
@@ -713,9 +732,9 @@ const STRIPE_BASE_URL = "https://buy.stripe.com/14A9ASbhP2c083deR74sE00";
       pill_reply: "Быстрый ответ",
       pill_lang: "Несколько языков",
       flow_1: "Вы загружаете письмо или форму.",
-      flow_2: "Мы объясняем содержание простым, понятным языком.",
+      flow_2: "Мы объясняем содержание простым и понятным языком.",
       flow_3: "Вы получаете объяснение по e-mail.",
-      disclaimer: "Не юридическая консультация — только понятное объяснение текста.",
+      disclaimer: "Не юридическая консультация — только понятное текстовое объяснение.",
       types_title: "Для каких писем и документов подходит BriefHelden?",
       types_sub: "Мы помогаем с такими документами, как:",
       t1_title: "Письма от ведомств",
@@ -727,21 +746,20 @@ const STRIPE_BASE_URL = "https://buy.stripe.com/14A9ASbhP2c083deR74sE00";
       t3_li1: "Аренда / жильё",
       t3_li2: "Трудовой договор, телефон и т.д.",
       t4_title: "Напоминания",
-      t4_li1: "Сроки и даты",
-      t4_li2: "Следующие шаги",
+      t4_li1: "Объяснение сроков и данных",
+      t4_li2: "Понятное объяснение содержания",
       t5_title: "Договоры",
-      t5_text: "Пункты, обязанности, сроки — понятно объясним.",
+      t5_text: "Пункты, обязанности и сроки — понятно объясним.",
       t6_title: "Формы",
-      t6_text: "Поможем понять и заполнить формы.",
-      bottom_note: "Сроки, требования или непонятные формулировки — объясним, о чём речь, простыми словами.",
-      foot_refund: "Возврат",
+      t6_text: "Понятное объяснение содержания и полей формы.",
+      bottom_note: "Сроки, требования или непонятные формулировки — мы понятно объясним, о чём это письмо.",
+      foot_refund: "Отказ",
       foot_imprint: "Выходные данные",
       foot_terms: "Условия",
       foot_privacy: "Конфиденциальность"
     }
   };
 
-  // Stripe-Link auf Sprache setzen (locale=de/en/tr/ru)
   function updateStripeLink(lang){
     const btn = document.getElementById("stripeBtn");
     if(!btn) return;
@@ -752,22 +770,25 @@ const STRIPE_BASE_URL = "https://buy.stripe.com/14A9ASbhP2c083deR74sE00";
 const dict = i18n[lang] || i18n.de;
     document.documentElement.lang = lang;
 
-    document.querySelectorAll("[data-i18n]").forEach(el=>{
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
       const key = el.getAttribute("data-i18n");
       if(!(key in dict)) return;
-      // allow HTML for mid_text only (contains <b>)
       if(key === "mid_text") el.innerHTML = dict[key];
       else el.textContent = dict[key];
     });
 
-    updateStripeLink(lang); // ✅ wichtig: Stripe Checkout Sprache
+    updateStripeLink(lang);
+    localStorage.setItem("briefhelden_lang", lang);
   }
 
   const select = document.getElementById("langSelect");
-  select.addEventListener("change", () => applyLang(select.value));
+  const savedLang = localStorage.getItem("briefhelden_lang");
+  const initialLang = ["de","en","tr","ru"].includes(savedLang) ? savedLang : "de";
 
-  // default
-  applyLang("de");
+  select.value = initialLang;
+  applyLang(initialLang);
+
+  select.addEventListener("change", () => applyLang(select.value));
 </script>
 </body>
 </html>
