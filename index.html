@@ -280,6 +280,7 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
     }
 
     .pad{padding:22px}
+
     .headline{
       text-align:center;
       margin:0 0 10px;
@@ -836,6 +837,13 @@ tr: "https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
 ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
     };
 
+    const QUESTION_LINKS = {
+de: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
+en: "https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
+tr: "https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
+ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
+    };
+
     const i18n = {
       de: {
         nav_home: "Startseite",
@@ -1074,7 +1082,7 @@ ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
         faq1_q: "Bir inkasso mektubu ne anlama gelir?",
         faq1_a: "İnkasso mektubu genelde açık olduğu söylenen bir borç için ödeme talep eder. Bu tür mektuplar çoğu zaman zor anlaşılır. BriefHelden içeriği açık şekilde anlatır.",
         faq2_q: "Jobcenter mektubunda ne yazar?",
-        faq2_a: "Jobcenter mektupları genelde süreler, istekler veya önemli bilgiler içerir. Mektubu basit dille anlamanıza yardımcı oluruz.",
+        faq2_a: "Jobcenter mektupları genelde süreler, istekler veya wichtige bilgiler içerir. Mektubu basit dille anlamanıza yardımcı oluruz.",
         faq3_q: "Resmi kurumdan gelen mektubu da yükleyebilir miyim?",
         faq3_a: "Evet. Birçok kişi resmi kurum, vergi dairesi veya başka resmi yazıları yükleyerek içeriği anlaşılır şekilde öğrenmek ister.",
         faq4_q: "BriefHelden hukuki danışmanlık mı veriyor?",
@@ -1172,7 +1180,7 @@ ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
 
     function updateLinks(lang){
 const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
-      const questionPage = "frage.html?lang=" + lang;
+const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
 
       const stripeBtn = document.getElementById("stripeBtn");
       const servicePrimaryBtn = document.getElementById("servicePrimaryBtn");
@@ -1181,8 +1189,8 @@ const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
 
       if(stripeBtn) stripeBtn.href = mainLink;
       if(servicePrimaryBtn) servicePrimaryBtn.href = mainLink;
-      if(questionBtn) questionBtn.href = questionPage;
-      if(serviceQuestionBtn) serviceQuestionBtn.href = questionPage;
+      if(questionBtn) questionBtn.href = questionLink;
+      if(serviceQuestionBtn) serviceQuestionBtn.href = questionLink;
     }
 
     function updateVisitorLabel(lang, count){
@@ -1199,6 +1207,7 @@ el.textContent = (dict.visitor_text || i18n.de.visitor_text).replace("{count}", 
       try{
 const res = await fetch("https://api.countapi.xyz/hit/briefhelden-service.de/visits");
         const data = await res.json();
+
         if(data && typeof data.value !== "undefined"){
           updateVisitorLabel(lang, data.value);
         }else{
