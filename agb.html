@@ -18,17 +18,17 @@
     *{box-sizing:border-box}
     body{
       margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Noto Sans", Arial, sans-serif;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Noto Sans",Arial,sans-serif;
       background:
         radial-gradient(1200px 700px at 20% -10%, rgba(37,99,235,.35), transparent 60%),
         radial-gradient(900px 600px at 90% 0%, rgba(99,102,241,.25), transparent 55%),
         var(--bg);
-      color: var(--pillText);
+      color:var(--pillText);
     }
     .topbar{
-      max-width: 980px;
-      margin: 28px auto 14px;
-      padding: 0 16px;
+      max-width:980px;
+      margin:28px auto 14px;
+      padding:0 16px;
       display:flex;
       align-items:center;
       justify-content:space-between;
@@ -46,7 +46,7 @@
       width:10px;
       height:10px;
       border-radius:50%;
-      background: var(--accent);
+      background:var(--accent);
       box-shadow:0 0 18px rgba(37,99,235,.7);
     }
     .nav{
@@ -56,18 +56,23 @@
     }
     .pill{
       border:1px solid rgba(229,231,235,.18);
-      background: rgba(17,24,39,.55);
-      color: var(--pillText);
+      background:rgba(17,24,39,.55);
+      color:var(--pillText);
       padding:10px 14px;
       border-radius:999px;
       text-decoration:none;
       font-weight:600;
       font-size:14px;
-      backdrop-filter: blur(8px);
+      backdrop-filter:blur(8px);
+      transition:.2s ease;
+    }
+    .pill:hover{
+      border-color:rgba(37,99,235,.55);
+      box-shadow:0 0 0 3px rgba(37,99,235,.12);
     }
     .pill.active{
-      border-color: rgba(37,99,235,.75);
-      box-shadow: 0 0 0 3px rgba(37,99,235,.18);
+      border-color:rgba(37,99,235,.75);
+      box-shadow:0 0 0 3px rgba(37,99,235,.18);
     }
     .lang{
       display:flex;
@@ -76,27 +81,27 @@
     }
     .lang label{font-size:14px; opacity:.9}
     select{
-      border-radius: 10px;
+      border-radius:10px;
       border:1px solid rgba(229,231,235,.25);
-      background: rgba(17,24,39,.55);
-      color: var(--pillText);
+      background:rgba(17,24,39,.55);
+      color:var(--pillText);
       padding:10px 12px;
       font-weight:700;
       outline:none;
       cursor:pointer;
-      backdrop-filter: blur(8px);
+      backdrop-filter:blur(8px);
     }
     .wrap{
-      max-width: 980px;
-      margin: 0 auto 40px;
-      padding: 0 16px;
+      max-width:980px;
+      margin:0 auto 40px;
+      padding:0 16px;
     }
     .card{
-      background: var(--card);
-      color: var(--text);
-      border-radius: 18px;
-      padding: 26px 22px;
-      box-shadow: 0 20px 60px rgba(0,0,0,.35);
+      background:var(--card);
+      color:var(--text);
+      border-radius:18px;
+      padding:26px 22px;
+      box-shadow:0 20px 60px rgba(0,0,0,.35);
       border:1px solid rgba(255,255,255,.12);
     }
     .headerRow{
@@ -104,18 +109,18 @@
       justify-content:space-between;
       align-items:flex-start;
       gap:14px;
-      margin-bottom: 8px;
+      margin-bottom:8px;
       flex-wrap:wrap;
     }
     h1{
       margin:0 0 8px 0;
-      font-size: 34px;
+      font-size:34px;
       line-height:1.15;
       letter-spacing:-.2px;
     }
     .rightTag{
       font-weight:700;
-      color: var(--muted);
+      color:var(--muted);
       white-space:nowrap;
       padding-top:8px;
     }
@@ -125,35 +130,39 @@
       padding:12px 14px;
       border-radius:12px;
       color:#0f172a;
-      margin: 10px 0 18px;
+      margin:10px 0 18px;
     }
     h2{
       margin:22px 0 8px;
-      font-size: 18px;
+      font-size:18px;
       letter-spacing:.1px;
     }
     p{margin:8px 0; line-height:1.55; color:#0f172a}
     ul{margin:8px 0 8px 18px; color:#0f172a}
     li{margin:6px 0}
-    .small{color: var(--muted); font-size: 14px}
-    a{color: var(--accent)}
+    .small{color:var(--muted); font-size:14px}
+    .content-link{color:var(--accent)}
     .footer{
-      max-width: 980px;
-      margin: 18px auto 24px;
-      padding: 0 16px;
+      max-width:980px;
+      margin:18px auto 24px;
+      padding:0 16px;
       display:flex;
       justify-content:space-between;
       gap:10px;
       flex-wrap:wrap;
-      color: rgba(229,231,235,.85);
-      font-size: 13px;
+      color:rgba(229,231,235,.85);
+      font-size:13px;
     }
     .footer a{
-      color: rgba(229,231,235,.95);
+      color:rgba(229,231,235,.95);
       text-decoration:none;
-      border-bottom:1px dashed rgba(229,231,235,.45)
+      border-bottom:1px dashed rgba(229,231,235,.45);
     }
-    .footer a:hover{border-bottom-color: rgba(229,231,235,.9)}
+    .footer a:hover{border-bottom-color:rgba(229,231,235,.9)}
+    @media (max-width:760px){
+      h1{font-size:28px}
+      .topbar{margin-top:18px}
+    }
   </style>
 </head>
 <body>
@@ -163,17 +172,15 @@
       <span>BriefHelden</span>
     </div>
 
-   <div class="nav" aria-label="Navigation">
-
-<a class="pill" href="/">Startseite</a>
-<a class="pill" href="/frage">Frage stellen (1,49 €)</a>
-<a class="pill" href="/#upload">Dokument erklären (6,90 €)</a>
-
-<a class="pill" href="/datenschutz">Datenschutz</a>
-<a class="pill" href="/agb">AGB</a>
-<a class="pill" href="/widerruf">Widerruf</a>
-<a class="pill" href="/impressum">Impressum</a>
-</div>
+    <div class="nav" aria-label="Navigation">
+      <a class="pill" href="/">Startseite</a>
+      <a class="pill" href="/frage">Frage stellen (1,49 €)</a>
+      <a class="pill" href="/hupload">Dokument erklären (6,90 €)</a>
+      <a class="pill" href="/datenschutz">Datenschutz</a>
+      <a class="pill active" href="/agb">AGB</a>
+      <a class="pill" href="/widerruf">Widerruf</a>
+      <a class="pill" href="/impressum">Impressum</a>
+    </div>
 
     <div class="lang">
       <label for="langSelect" id="langLabel">Sprache</label>
@@ -203,6 +210,9 @@
   <div class="footer">
     <div>© <span id="year"></span> BriefHelden – Alle Rechte vorbehalten</div>
     <div style="display:flex; gap:14px; flex-wrap:wrap;">
+      <a href="/">Startseite</a>
+      <a href="/frage">Frage stellen</a>
+      <a href="/hupload">Dokument erklären</a>
       <a href="/datenschutz">Datenschutz</a>
       <a href="/agb">AGB</a>
       <a href="/widerruf">Widerruf</a>
@@ -230,7 +240,7 @@
         {
           h: "2. Anbieter / Kontakt",
           p: [
-"<strong>David Hirschfeld – BriefHelden</strong><br>Carl-Maria-von-Weber-Str. 2<br>74928 Hüffenhardt<br>Deutschland<br><br><strong>E-Mail:</strong> <a href=\"mailto:kontakt@briefhelden-service.de\">kontakt@briefhelden-service.de</a>"
+"<strong>David Hirschfeld – BriefHelden</strong><br>Carl-Maria-von-Weber-Str. 2<br>74928 Hüffenhardt<br>Deutschland<br><br><strong>E-Mail:</strong> <a class=\"content-link\" href=\"mailto:kontakt@briefhelden-service.de\">kontakt@briefhelden-service.de</a>"
           ]
         },
         {
@@ -289,7 +299,7 @@
           h: "10. Widerruf (Verbraucherhinweis)",
           p: [
             "Für digitale Dienstleistungen kann das Widerrufsrecht unter bestimmten gesetzlichen Voraussetzungen vorzeitig erlöschen, wenn mit der Ausführung der Leistung begonnen wurde.",
-            "Einzelheiten hierzu finden Sie in der Widerrufsbelehrung auf der Seite <a href=\"/widerruf\">Widerruf</a>."
+            "Einzelheiten hierzu finden Sie in der Widerrufsbelehrung auf der Seite <a class=\"content-link\" href=\"/widerruf\">Widerruf</a>."
           ]
         },
         {
@@ -310,7 +320,7 @@
         {
           h: "13. Datenschutz",
           p: [
-            "Informationen zur Verarbeitung personenbezogener Daten finden Sie in der Datenschutzerklärung unter <a href=\"/datenschutz\">Datenschutz</a>."
+            "Informationen zur Verarbeitung personenbezogener Daten finden Sie in der Datenschutzerklärung unter <a class=\"content-link\" href=\"/datenschutz\">Datenschutz</a>."
           ]
         },
         {
@@ -338,7 +348,7 @@
         {
           h: "2. Provider / Contact",
           p: [
-"<strong>David Hirschfeld – BriefHelden</strong><br>Carl-Maria-von-Weber-Str. 2<br>74928 Hüffenhardt<br>Germany<br><br><strong>Email:</strong> <a href=\"mailto:kontakt@briefhelden-service.de\">kontakt@briefhelden-service.de</a>"
+"<strong>David Hirschfeld – BriefHelden</strong><br>Carl-Maria-von-Weber-Str. 2<br>74928 Hüffenhardt<br>Germany<br><br><strong>Email:</strong> <a class=\"content-link\" href=\"mailto:kontakt@briefhelden-service.de\">kontakt@briefhelden-service.de</a>"
           ]
         },
         {
@@ -397,7 +407,7 @@
           h: "10. Withdrawal (consumer notice)",
           p: [
             "For digital services, the right of withdrawal may expire early under certain legal conditions once performance has begun.",
-            "Details can be found on the <a href=\"/widerruf\">Withdrawal</a> page."
+            "Details can be found on the <a class=\"content-link\" href=\"/widerruf\">Withdrawal</a> page."
           ]
         },
         {
@@ -418,7 +428,7 @@
         {
           h: "13. Data protection",
           p: [
-            "Information on the processing of personal data can be found in our <a href=\"/datenschutz\">Privacy Policy</a>."
+            "Information on the processing of personal data can be found in our <a class=\"content-link\" href=\"/datenschutz\">Privacy Policy</a>."
           ]
         },
         {
@@ -446,7 +456,7 @@
         {
           h: "2. Sağlayıcı / İletişim",
           p: [
-"<strong>David Hirschfeld – BriefHelden</strong><br>Carl-Maria-von-Weber-Str. 2<br>74928 Hüffenhardt<br>Almanya<br><br><strong>E-posta:</strong> <a href=\"mailto:kontakt@briefhelden-service.de\">kontakt@briefhelden-service.de</a>"
+"<strong>David Hirschfeld – BriefHelden</strong><br>Carl-Maria-von-Weber-Str. 2<br>74928 Hüffenhardt<br>Almanya<br><br><strong>E-posta:</strong> <a class=\"content-link\" href=\"mailto:kontakt@briefhelden-service.de\">kontakt@briefhelden-service.de</a>"
           ]
         },
         {
@@ -505,7 +515,7 @@
           h: "10. Cayma (tüketici bilgilendirmesi)",
           p: [
             "Dijital hizmetlerde, hizmetin ifasına başlanmasıyla belirli yasal şartlar altında cayma hakkı erken sona erebilir.",
-            "Ayrıntılar <a href=\"/widerruf\">Cayma</a> sayfasında yer alır."
+            "Ayrıntılar <a class=\"content-link\" href=\"/widerruf\">Cayma</a> sayfasında yer alır."
           ]
         },
         {
@@ -526,7 +536,7 @@
         {
           h: "13. Veri koruma",
           p: [
-            "Kişisel verilerin işlenmesine ilişkin bilgiler <a href=\"/datenschutz\">Gizlilik Politikası</a> sayfasında yer alır."
+            "Kişisel verilerin işlenmesine ilişkin bilgiler <a class=\"content-link\" href=\"/datenschutz\">Gizlilik Politikası</a> sayfasında yer alır."
           ]
         },
         {
@@ -554,7 +564,7 @@
         {
           h: "2. Поставщик / Контакты",
           p: [
-"<strong>David Hirschfeld – BriefHelden</strong><br>Carl-Maria-von-Weber-Str. 2<br>74928 Hüffenhardt<br>Германия<br><br><strong>Email:</strong> <a href=\"mailto:kontakt@briefhelden-service.de\">kontakt@briefhelden-service.de</a>"
+"<strong>David Hirschfeld – BriefHelden</strong><br>Carl-Maria-von-Weber-Str. 2<br>74928 Hüffenhardt<br>Германия<br><br><strong>Email:</strong> <a class=\"content-link\" href=\"mailto:kontakt@briefhelden-service.de\">kontakt@briefhelden-service.de</a>"
           ]
         },
         {
@@ -613,7 +623,7 @@
           h: "10. Отказ (информация для потребителей)",
           p: [
             "Для цифровых услуг право на отказ может прекратиться досрочно при определённых законных условиях после начала исполнения услуги.",
-            "Подробности указаны на странице <a href=\"/widerruf\">Отказ</a>."
+            "Подробности указаны на странице <a class=\"content-link\" href=\"/widerruf\">Отказ</a>."
           ]
         },
         {
@@ -634,7 +644,7 @@
         {
           h: "13. Защита данных",
           p: [
-            "Информация об обработке персональных данных содержится в разделе <a href=\"/datenschutz\">Политика конфиденциальности</a>."
+            "Информация об обработке персональных данных содержится в разделе <a class=\"content-link\" href=\"/datenschutz\">Политика конфиденциальности</a>."
           ]
         },
         {
@@ -655,47 +665,56 @@
   const contentEl = document.getElementById("content");
 
   function escapeHtml(s){
-    return s.replace(/[&<>"']/g, (c) => ({
-      "&":"&amp;",
-      "<":"&lt;",
-      ">":"&gt;",
-      "\"":"&quot;",
-      "'":"&#39;"
-    }[c]));
+    return String(s).replace(/[&<>"']/g, function(c){
+      return {
+        "&":"&amp;",
+        "<":"&lt;",
+        ">":"&gt;",
+        "\"":"&quot;",
+        "'":"&#39;"
+      }[c];
+    });
   }
 
   function render(lang){
     const t = TEXT[lang] || TEXT.DE;
-    document.documentElement.lang = (lang==="DE") ? "de" : (lang==="EN") ? "en" : (lang==="TR") ? "tr" : "ru";
+
+    document.documentElement.lang =
+      lang === "DE" ? "de" :
+      lang === "EN" ? "en" :
+      lang === "TR" ? "tr" : "ru";
 
     langLabel.textContent = t.langLabel;
     titleEl.textContent = t.title;
     noteEl.innerHTML = t.bindingNote;
 
     const parts = [];
+
     for (const s of t.sections){
-      parts.push(`<h2>${escapeHtml(s.h)}</h2>`);
+      parts.push("<h2>" + escapeHtml(s.h) + "</h2>");
+
       if (s.p){
         for (const para of s.p){
-          parts.push(`<p>${para}</p>`);
+          parts.push("<p>" + para + "</p>");
         }
       }
+
       if (s.ul){
         parts.push("<ul>");
         for (const li of s.ul){
-          parts.push(`<li>${escapeHtml(li)}</li>`);
+          parts.push("<li>" + escapeHtml(li) + "</li>");
         }
         parts.push("</ul>");
       }
     }
+
     contentEl.innerHTML = parts.join("\n");
   }
 
   function getLangFromUrl(){
     const url = new URL(window.location.href);
     const q = (url.searchParams.get("lang") || "").toUpperCase().trim();
-    if (["DE","EN","TR","RU"].includes(q)) return q;
-    return null;
+    return ["DE","EN","TR","RU"].includes(q) ? q : null;
   }
 
   const saved = (localStorage.getItem("briefhelden_lang") || "").toUpperCase();
@@ -705,7 +724,7 @@
   langSelect.value = initial;
   render(initial);
 
-  langSelect.addEventListener("change", () => {
+  langSelect.addEventListener("change", function(){
     const lang = langSelect.value;
     localStorage.setItem("briefhelden_lang", lang);
     render(lang);
@@ -718,6 +737,3 @@
 </script>
 </body>
 </html>
-
-
-
