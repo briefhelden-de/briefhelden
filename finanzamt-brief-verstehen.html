@@ -1,134 +1,961 @@
 <!doctype html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Finanzamt Brief verstehen – einfach erklärt | BriefHelden</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Finanzamt Brief verstehen – einfach erklärt | BriefHelden</title>
+  <meta
+    name="description"
+    content="Finanzamt Brief einfach verstehen: BriefHelden erklärt Steuerbescheid, Fristen, Nachzahlung, Rückfragen und wichtige Angaben klar, einfach und ohne komplizierte Fachsprache."
+  />
+  <meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://www.briefhelden-service.de/finanzamt-brief-verstehen.html" />
 
-<meta name="description" content="Finanzamt Brief erhalten und nicht verstanden? BriefHelden erklärt Schreiben vom Finanzamt verständlich und einfach – ohne komplizierte Fachbegriffe.">
+  <meta property="og:title" content="Finanzamt Brief verstehen – einfach erklärt | BriefHelden" />
+  <meta
+    property="og:description"
+    content="Finanzamt Brief einfach erklärt. Verstehen Sie Steuerbescheid, Fristen, Beträge und wichtige Angaben schnell und verständlich."
+  />
+  <meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.briefhelden-service.de/finanzamt-brief-verstehen.html" />
 
-<style>
-body{
-font-family:system-ui,Arial;
-background:#f5f7fb;
-margin:0;
-color:#111;
-line-height:1.6;
-}
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CVRQ9QBE94');
+  </script>
 
-header{
-background:#0f172a;
-color:white;
-padding:20px;
-font-weight:700;
-}
+  <style>
+    :root{
+      --nav-bg: rgba(9,24,33,.78);
+      --nav-border: rgba(255,255,255,.10);
+      --text: #0b1220;
+      --muted: rgba(11,18,32,.72);
+      --heroText: #fff;
+      --heroMuted: rgba(255,255,255,.84);
+      --glass: rgba(255,255,255,.28);
+      --glass2: rgba(255,255,255,.16);
+      --stroke: rgba(255,255,255,.36);
+      --shadow: 0 18px 40px rgba(0,0,0,.18);
+      --btn1: #2f6fff;
+      --btn2: #1f56b8;
+      --btnGreen1: #12b76a;
+      --btnGreen2: #079455;
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --radius-md: 14px;
+      --max: 1120px;
+    }
 
-.container{
-max-width:900px;
-margin:auto;
-padding:30px 20px;
-}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
 
-h1{
-font-size:34px;
-margin-bottom:10px;
-}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 12% 24%, rgba(120,180,255,.32), rgba(255,255,255,0) 60%),
+        radial-gradient(1200px 800px at 88% 18%, rgba(120,140,255,.26), rgba(255,255,255,0) 62%),
+        radial-gradient(1000px 700px at 50% 92%, rgba(170,210,255,.28), rgba(255,255,255,0) 60%),
+        linear-gradient(180deg, #f8fbff 0%, #eef6ff 45%, #f8fbff 100%);
+      min-height:100vh;
+    }
 
-h2{
-margin-top:40px;
-font-size:24px;
-}
+    a{color:inherit;text-decoration:none}
 
-.card{
-background:white;
-padding:25px;
-border-radius:14px;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
-margin-top:20px;
-}
+    header{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:var(--nav-bg);
+      backdrop-filter:blur(12px) saturate(140%);
+      border-bottom:1px solid var(--nav-border);
+    }
 
-.btn{
-display:inline-block;
-background:#2563eb;
-color:white;
-padding:14px 22px;
-border-radius:10px;
-text-decoration:none;
-font-weight:700;
-margin-top:15px;
-}
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      color:#fff;
+    }
 
-footer{
-margin-top:40px;
-padding:20px;
-background:#0f172a;
-color:white;
-text-align:center;
-}
-</style>
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:900;
+      letter-spacing:.2px;
+      white-space:nowrap;
+    }
+
+    .brand .logo{
+      width:26px;
+      height:26px;
+      border-radius:10px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.85), rgba(255,255,255,.08)),
+        linear-gradient(180deg, rgba(55,120,255,.9), rgba(20,70,190,.9));
+      box-shadow:0 10px 18px rgba(0,0,0,.18);
+      position:relative;
+    }
+
+    .brand .logo:after{
+      content:"";
+      position:absolute;
+      inset:7px 6px 7px 10px;
+      border-radius:8px;
+      background:rgba(255,255,255,.85);
+      clip-path:polygon(0 0, 100% 0, 85% 100%, 0 100%);
+      opacity:.12;
+    }
+
+    nav.links{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    nav.links a{
+      color:rgba(255,255,255,.82);
+      font-weight:700;
+      font-size:14px;
+    }
+
+    nav.links a:hover{color:#fff}
+
+    .langWrap{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      position:relative;
+    }
+
+    .langSelect{
+      appearance:none;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(0,0,0,.18);
+      color:#fff;
+      padding:8px 36px 8px 12px;
+      border-radius:12px;
+      font-weight:800;
+      cursor:pointer;
+      outline:none;
+    }
+
+    .langSelect:focus{
+      box-shadow:0 0 0 3px rgba(90,160,255,.25);
+    }
+
+    .langWrap:after{
+      content:"▾";
+      position:absolute;
+      right:12px;
+      top:50%;
+      transform:translateY(-50%);
+      color:rgba(255,255,255,.85);
+      pointer-events:none;
+      font-size:12px;
+    }
+
+    .hero{
+      position:relative;
+      color:var(--heroText);
+      padding:68px 18px 40px;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.58)),
+url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=2200&q=60");
+      background-size:cover;
+      background-position:center;
+    }
+
+    .hero .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      text-align:center;
+    }
+
+    .hero h1{
+      margin:0 0 10px;
+      font-weight:950;
+      font-size:clamp(30px, 3.7vw, 48px);
+      letter-spacing:.2px;
+      text-shadow:0 10px 24px rgba(0,0,0,.35);
+    }
+
+    .hero p{
+      margin:0 auto 18px;
+      max-width:860px;
+      color:var(--heroMuted);
+      font-size:clamp(15px, 2vw, 18px);
+      line-height:1.55;
+    }
+
+    .ctaGroup{
+      display:flex;
+      gap:14px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:8px;
+    }
+
+    .cta{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:14px 20px;
+      border-radius:16px;
+      color:#fff;
+      font-weight:950;
+      box-shadow:0 18px 38px rgba(0,0,0,.28);
+      border:1px solid rgba(255,255,255,.20);
+      min-width:min(560px, 92vw);
+      text-align:center;
+    }
+
+    .cta.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
+    .cta.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
+    .cta:hover{filter:brightness(1.05)}
+
+    .heroMeta{
+      margin-top:14px;
+      display:flex;
+      gap:14px;
+      justify-content:center;
+      flex-wrap:wrap;
+      color:rgba(255,255,255,.86);
+      font-weight:700;
+      font-size:13px;
+    }
+
+    .heroMeta span{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.12);
+      backdrop-filter:blur(10px);
+    }
+
+    .section{padding:26px 18px 10px}
+    .wrap{max-width:var(--max); margin:0 auto;}
+
+    .glassCard{
+      background:linear-gradient(180deg, var(--glass), var(--glass2));
+      border:1px solid var(--stroke);
+      border-radius:var(--radius-xl);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(14px) saturate(140%);
+      -webkit-backdrop-filter:blur(14px) saturate(140%);
+      overflow:hidden;
+    }
+
+    .pad{padding:22px}
+
+    .headline,
+    .sectionTitle{
+      text-align:center;
+      margin:0 0 10px;
+      font-weight:950;
+      font-size:clamp(22px, 2.6vw, 34px);
+      letter-spacing:.2px;
+    }
+
+    .lead,
+    .sectionSub{
+      text-align:center;
+      margin:0 auto 16px;
+      max-width:920px;
+      color:rgba(11,18,32,.76);
+      line-height:1.7;
+      font-size:16px;
+    }
+
+    .grid2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+
+    .infoCard,
+    .faqItem{
+      border-radius:var(--radius-lg);
+      border:1px solid rgba(255,255,255,.55);
+      background:rgba(255,255,255,.20);
+      padding:18px;
+    }
+
+    .infoCard h3,
+    .faqItem h3{
+      margin:0 0 10px;
+      font-size:22px;
+      font-weight:950;
+    }
+
+    .faqItem h3{
+      font-size:18px;
+      margin-bottom:8px;
+    }
+
+    .infoCard p,
+    .infoCard li,
+    .faqItem p{
+      color:rgba(11,18,32,.76);
+      line-height:1.65;
+      font-weight:700;
+      margin:0;
+    }
+
+    .infoCard p + p{margin-top:12px;}
+
+    .infoCard ul{
+      margin:0;
+      padding-left:18px;
+    }
+
+    .faqGrid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+
+    .serviceMini{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      margin-top:16px;
+    }
+
+    .serviceMini .box{
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.55);
+      background:rgba(255,255,255,.20);
+      padding:18px;
+      text-align:center;
+    }
+
+    .serviceMini .box h3{
+      margin:0 0 8px;
+      font-size:20px;
+      font-weight:950;
+    }
+
+    .serviceMini .box p{
+      margin:0;
+      color:rgba(11,18,32,.74);
+      line-height:1.55;
+      font-weight:700;
+    }
+
+    .miniBtn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      margin-top:14px;
+      padding:12px 18px;
+      border-radius:14px;
+      color:#fff;
+      font-weight:900;
+      min-width:220px;
+      box-shadow:0 10px 24px rgba(0,0,0,.16);
+      text-align:center;
+    }
+
+    .miniBtn.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
+    .miniBtn.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
+
+    footer{
+      margin-top:18px;
+      padding:18px 18px 28px;
+      color:rgba(255,255,255,.82);
+      background:rgba(9,24,33,.82);
+      border-top:1px solid rgba(255,255,255,.10);
+      backdrop-filter:blur(12px) saturate(140%);
+    }
+
+    .footWrap{
+      max-width:var(--max);
+      margin:0 auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .footLinks{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      font-weight:800;
+    }
+
+    .footLinks a{color:rgba(255,255,255,.80)}
+    .footLinks a:hover{color:#fff}
+
+    @media (max-width:900px){
+      nav.links{display:none}
+      .grid2,
+      .faqGrid,
+      .serviceMini{grid-template-columns:1fr}
+      .cta{min-width:92vw}
+      .miniBtn{min-width:100%}
+    }
+  </style>
 </head>
-
 <body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>BriefHelden</div>
+      </div>
 
-<header>
-BriefHelden
-</header>
+      <nav class="links" aria-label="Hauptnavigation">
+        <a href="index.html" data-i18n="nav_home">Startseite</a>
+        <a href="frage.html" data-i18n="nav_question">Frage stellen</a>
+        <a href="widerruf.html" data-i18n="nav_refund">Widerruf</a>
+        <a href="impressum.html" data-i18n="nav_imprint">Impressum</a>
+        <a href="agb.html" data-i18n="nav_terms">AGB</a>
+        <a href="datenschutz.html" data-i18n="nav_privacy">Datenschutz</a>
+      </nav>
 
-<div class="container">
+      <div class="langWrap">
+        <select class="langSelect" id="langSelect" aria-label="Sprache">
+          <option value="de">DE</option>
+          <option value="en">EN</option>
+          <option value="tr">TR</option>
+          <option value="ru">RU</option>
+        </select>
+      </div>
+    </div>
+  </header>
 
-<h1>Finanzamt Brief verstehen</h1>
+  <section class="hero">
+    <div class="wrap">
+      <h1 data-i18n="hero_title">Finanzamt Brief verstehen</h1>
+      <p data-i18n="hero_sub">
+        Ein Schreiben vom Finanzamt wirkt oft kompliziert oder wichtig. BriefHelden erklärt Ihnen Inhalt, Fristen, Beträge und wichtige Angaben einfach und verständlich.
+      </p>
 
-<p>
-Viele Menschen erhalten Briefe vom Finanzamt und verstehen den Inhalt nicht sofort. 
-Finanzamt Schreiben enthalten oft komplizierte Formulierungen, Fristen oder steuerliche Begriffe.
-</p>
+      <div class="ctaGroup">
+        <a class="cta primary" id="stripeBtn" href="#" rel="noopener">
+          <span data-i18n="hero_cta">Jetzt Finanzamt Brief erklären lassen – 6,90 €</span>
+          <span aria-hidden="true">›</span>
+        </a>
 
-<div class="card">
+        <a class="cta secondary" id="questionBtn" href="#" rel="noopener">
+          <span data-i18n="hero_question_cta">Kurze Frage stellen – 1,49 €</span>
+          <span aria-hidden="true">›</span>
+        </a>
+      </div>
 
-<h2>Typische Finanzamt Briefe</h2>
+      <div class="heroMeta" aria-label="Kurzvorteile">
+        <span>✅ <span data-i18n="meta_1">Einfach erklärt</span></span>
+        <span>⚡ <span data-i18n="meta_2">Schnelle Rückmeldung</span></span>
+        <span>🔒 <span data-i18n="meta_3">Vertraulich</span></span>
+      </div>
+    </div>
+  </section>
 
-<ul>
-<li>Steuerbescheid</li>
-<li>Nachzahlung</li>
-<li>Frist zur Abgabe von Unterlagen</li>
-<li>Anforderung zusätzlicher Informationen</li>
-<li>Erklärung zu steuerlichen Angaben</li>
-</ul>
+  <section class="section">
+    <div class="wrap">
+      <div class="glassCard">
+        <div class="pad">
+          <h2 class="headline" data-i18n="intro_title">Was ist ein Brief vom Finanzamt?</h2>
+          <p class="lead" data-i18n="intro_text">
+            Ein Brief vom Finanzamt enthält oft wichtige Informationen zu Steuern, Fristen, Nachzahlungen, Rückfragen oder Bescheiden. Viele Menschen möchten verstehen, was genau im Schreiben steht, ob sie reagieren müssen und welche Angaben besonders wichtig sind. Genau dabei hilft BriefHelden.
+          </p>
 
-</div>
+          <div class="grid2">
+            <div class="infoCard">
+              <h3 data-i18n="left_title">Einfach erklärt</h3>
+              <p data-i18n="left_text_1">
+                Ein Finanzamt Brief kann sich zum Beispiel auf einen Steuerbescheid, eine Nachzahlung, eine Erstattung oder die Anforderung weiterer Unterlagen beziehen.
+              </p>
+              <p data-i18n="left_text_2">
+                Wichtig sind dabei vor allem: Welche Frist wird genannt? Geht es um einen Betrag? Wird eine Reaktion erwartet? Und auf welches Jahr, welche Steuer oder welches Thema bezieht sich das Schreiben?
+              </p>
+              <p data-i18n="left_text_3">
+                BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie den Finanzamt Brief besser einordnen können.
+              </p>
+            </div>
 
-<div class="card">
+            <div class="infoCard">
+              <h3 data-i18n="right_title">So funktioniert es</h3>
+              <ul>
+                <li data-i18n="right_li_1">Finanzamt Brief sicher hochladen</li>
+                <li data-i18n="right_li_2">Wir lesen den Inhalt und erklären ihn verständlich</li>
+                <li data-i18n="right_li_3">Sie erhalten die Erklärung per E-Mail</li>
+                <li data-i18n="right_li_4">Keine Rechtsberatung – nur verständliche Texterklärung</li>
+              </ul>
+            </div>
+          </div>
 
-<h2>Warum sind Finanzamt Briefe oft schwer verständlich?</h2>
+          <div class="serviceMini">
+            <div class="box">
+              <h3 data-i18n="service1_title">Komplettes Schreiben erklären lassen</h3>
+              <p data-i18n="service1_text">
+                Ideal, wenn Sie den ganzen Finanzamt Brief vollständig verstehen möchten.
+              </p>
+              <a class="miniBtn primary" id="servicePrimaryBtn" href="#" rel="noopener">
+                <span data-i18n="service1_btn">Jetzt für 6,90 € starten</span>
+                <span aria-hidden="true">›</span>
+              </a>
+            </div>
 
-<p>
-Viele Schreiben enthalten Fachbegriffe aus dem Steuerrecht. Für Menschen ohne steuerliche Erfahrung
-sind diese Formulierungen häufig schwer nachvollziehbar.
-</p>
+            <div class="box">
+              <h3 data-i18n="service2_title">Kurze Rückfrage stellen</h3>
+              <p data-i18n="service2_text">
+                Ideal, wenn Sie nur eine kurze Frage zu Frist, Betrag oder Inhalt haben.
+              </p>
+              <a class="miniBtn secondary" id="serviceQuestionBtn" href="#" rel="noopener">
+                <span data-i18n="service2_btn">Jetzt für 1,49 € fragen</span>
+                <span aria-hidden="true">›</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<p>
-BriefHelden hilft dabei, den Inhalt eines Schreibens verständlich zu erklären.
-</p>
+      <div style="height:18px"></div>
 
-</div>
+      <div class="glassCard">
+        <div class="pad">
+          <h2 class="sectionTitle" data-i18n="faq_title">Häufige Fragen zum Finanzamt Brief</h2>
+          <p class="sectionSub" data-i18n="faq_sub">
+            Diese Fragen tauchen bei Schreiben vom Finanzamt besonders oft auf:
+          </p>
 
-<div class="card">
+          <div class="faqGrid">
+            <div class="faqItem">
+              <h3 data-i18n="faq1_q">Muss ich auf einen Finanzamt Brief reagieren?</h3>
+              <p data-i18n="faq1_a">
+                Das hängt vom Inhalt des Schreibens ab. Oft stehen Fristen, Rückfragen oder Hinweise im Brief. Wichtig ist deshalb, genau zu verstehen, was verlangt oder mitgeteilt wird.
+              </p>
+            </div>
 
-<h2>Brief vom Finanzamt verständlich erklären lassen</h2>
+            <div class="faqItem">
+              <h3 data-i18n="faq2_q">Welche Angaben sind besonders wichtig?</h3>
+              <p data-i18n="faq2_a">
+                Besonders wichtig sind Fristen, genannte Beträge, das betroffene Steuerjahr, die Art des Schreibens und mögliche Hinweise auf erforderliche Unterlagen.
+              </p>
+            </div>
 
-<p>
-Sie können Ihr Schreiben hochladen und erhalten eine einfache Erklärung des Inhalts.
-</p>
+            <div class="faqItem">
+              <h3 data-i18n="faq3_q">Geht es immer um eine Nachzahlung?</h3>
+              <p data-i18n="faq3_a">
+                Nicht immer. Ein Finanzamt Brief kann auch eine Erstattung, einen Hinweis, eine Nachfrage oder einen Bescheid enthalten. Der genaue Inhalt ist entscheidend.
+              </p>
+            </div>
 
-<a class="btn" href="index.html">Brief erklären lassen</a>
+            <div class="faqItem">
+              <h3 data-i18n="faq4_q">Ist BriefHelden eine Steuerberatung?</h3>
+              <p data-i18n="faq4_a">
+                Nein. BriefHelden bietet keine Steuerberatung und keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-</div>
+      <div style="height:18px"></div>
 
-</div>
+      <div class="glassCard">
+        <div class="pad">
+          <h2 class="sectionTitle" data-i18n="tip_title">Worauf sollten Sie bei einem Finanzamt Brief achten?</h2>
+          <p class="sectionSub" data-i18n="tip_sub">
+            Diese Punkte sind oft besonders wichtig:
+          </p>
 
-<footer>
-© 2026 BriefHelden
-</footer>
+          <div class="faqGrid">
+            <div class="faqItem">
+              <h3 data-i18n="tip1_title">Frist prüfen</h3>
+              <p data-i18n="tip1_text">
+                Schauen Sie, ob im Schreiben ein Datum oder eine konkrete Frist genannt wird.
+              </p>
+            </div>
 
+            <div class="faqItem">
+              <h3 data-i18n="tip2_title">Betrag ansehen</h3>
+              <p data-i18n="tip2_text">
+                Prüfen Sie, ob es um eine Nachzahlung, Erstattung oder einen anderen Betrag geht.
+              </p>
+            </div>
+
+            <div class="faqItem">
+              <h3 data-i18n="tip3_title">Thema erkennen</h3>
+              <p data-i18n="tip3_text">
+                Achten Sie darauf, auf welches Steuerjahr oder welche Art von Steuer sich der Brief bezieht.
+              </p>
+            </div>
+
+            <div class="faqItem">
+              <h3 data-i18n="tip4_title">Inhalt verständlich machen</h3>
+              <p data-i18n="tip4_text">
+                Wenn das Schreiben kompliziert oder unklar formuliert ist, hilft eine einfache Erklärung oft sofort weiter.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footWrap">
+      <div>© 2026 BriefHelden – Alle Rechte vorbehalten</div>
+      <div class="footLinks">
+        <a href="index.html" data-i18n="foot_home">Startseite</a>
+        <a href="frage.html" data-i18n="foot_question">Frage stellen</a>
+        <a href="widerruf.html" data-i18n="foot_refund">Widerruf</a>
+        <a href="impressum.html" data-i18n="foot_imprint">Impressum</a>
+        <a href="agb.html" data-i18n="foot_terms">AGB</a>
+        <a href="datenschutz.html" data-i18n="foot_privacy">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const STRIPE_LINKS = {
+de: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
+en: "https://buy.stripe.com/fZubJ0dpXbMAbfpcIZ4sE01",
+tr: "https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
+ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
+    };
+
+    const QUESTION_LINKS = {
+de: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
+en: "https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
+tr: "https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
+ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
+    };
+
+    const i18n = {
+      de: {
+        nav_home: "Startseite",
+        nav_question: "Frage stellen",
+        nav_refund: "Widerruf",
+        nav_imprint: "Impressum",
+        nav_terms: "AGB",
+        nav_privacy: "Datenschutz",
+
+        hero_title: "Finanzamt Brief verstehen",
+        hero_sub: "Ein Schreiben vom Finanzamt wirkt oft kompliziert oder wichtig. BriefHelden erklärt Ihnen Inhalt, Fristen, Beträge und wichtige Angaben einfach und verständlich.",
+        hero_cta: "Jetzt Finanzamt Brief erklären lassen – 6,90 €",
+        hero_question_cta: "Kurze Frage stellen – 1,49 €",
+        meta_1: "Einfach erklärt",
+        meta_2: "Schnelle Rückmeldung",
+        meta_3: "Vertraulich",
+
+        intro_title: "Was ist ein Brief vom Finanzamt?",
+        intro_text: "Ein Brief vom Finanzamt enthält oft wichtige Informationen zu Steuern, Fristen, Nachzahlungen, Rückfragen oder Bescheiden. Viele Menschen möchten verstehen, was genau im Schreiben steht, ob sie reagieren müssen und welche Angaben besonders wichtig sind. Genau dabei hilft BriefHelden.",
+
+        left_title: "Einfach erklärt",
+        left_text_1: "Ein Finanzamt Brief kann sich zum Beispiel auf einen Steuerbescheid, eine Nachzahlung, eine Erstattung oder die Anforderung weiterer Unterlagen beziehen.",
+        left_text_2: "Wichtig sind dabei vor allem: Welche Frist wird genannt? Geht es um einen Betrag? Wird eine Reaktion erwartet? Und auf welches Jahr, welche Steuer oder welches Thema bezieht sich das Schreiben?",
+        left_text_3: "BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie den Finanzamt Brief besser einordnen können.",
+
+        right_title: "So funktioniert es",
+        right_li_1: "Finanzamt Brief sicher hochladen",
+        right_li_2: "Wir lesen den Inhalt und erklären ihn verständlich",
+        right_li_3: "Sie erhalten die Erklärung per E-Mail",
+        right_li_4: "Keine Rechtsberatung – nur verständliche Texterklärung",
+
+        service1_title: "Komplettes Schreiben erklären lassen",
+        service1_text: "Ideal, wenn Sie den ganzen Finanzamt Brief vollständig verstehen möchten.",
+        service1_btn: "Jetzt für 6,90 € starten",
+
+        service2_title: "Kurze Rückfrage stellen",
+        service2_text: "Ideal, wenn Sie nur eine kurze Frage zu Frist, Betrag oder Inhalt haben.",
+        service2_btn: "Jetzt für 1,49 € fragen",
+
+        faq_title: "Häufige Fragen zum Finanzamt Brief",
+        faq_sub: "Diese Fragen tauchen bei Schreiben vom Finanzamt besonders oft auf:",
+        faq1_q: "Muss ich auf einen Finanzamt Brief reagieren?",
+        faq1_a: "Das hängt vom Inhalt des Schreibens ab. Oft stehen Fristen, Rückfragen oder Hinweise im Brief. Wichtig ist deshalb, genau zu verstehen, was verlangt oder mitgeteilt wird.",
+        faq2_q: "Welche Angaben sind besonders wichtig?",
+        faq2_a: "Besonders wichtig sind Fristen, genannte Beträge, das betroffene Steuerjahr, die Art des Schreibens und mögliche Hinweise auf erforderliche Unterlagen.",
+        faq3_q: "Geht es immer um eine Nachzahlung?",
+        faq3_a: "Nicht immer. Ein Finanzamt Brief kann auch eine Erstattung, einen Hinweis, eine Nachfrage oder einen Bescheid enthalten. Der genaue Inhalt ist entscheidend.",
+        faq4_q: "Ist BriefHelden eine Steuerberatung?",
+        faq4_a: "Nein. BriefHelden bietet keine Steuerberatung und keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.",
+
+        tip_title: "Worauf sollten Sie bei einem Finanzamt Brief achten?",
+        tip_sub: "Diese Punkte sind oft besonders wichtig:",
+        tip1_title: "Frist prüfen",
+        tip1_text: "Schauen Sie, ob im Schreiben ein Datum oder eine konkrete Frist genannt wird.",
+        tip2_title: "Betrag ansehen",
+        tip2_text: "Prüfen Sie, ob es um eine Nachzahlung, Erstattung oder einen anderen Betrag geht.",
+        tip3_title: "Thema erkennen",
+        tip3_text: "Achten Sie darauf, auf welches Steuerjahr oder welche Art von Steuer sich der Brief bezieht.",
+        tip4_title: "Inhalt verständlich machen",
+        tip4_text: "Wenn das Schreiben kompliziert oder unklar formuliert ist, hilft eine einfache Erklärung oft sofort weiter.",
+
+        foot_home: "Startseite",
+        foot_question: "Frage stellen",
+        foot_refund: "Widerruf",
+        foot_imprint: "Impressum",
+        foot_terms: "AGB",
+        foot_privacy: "Datenschutz"
+      },
+
+      en: {
+        nav_home: "Home",
+        nav_question: "Ask a question",
+        nav_refund: "Withdrawal",
+        nav_imprint: "Imprint",
+        nav_terms: "Terms",
+        nav_privacy: "Privacy",
+
+        hero_title: "Understand a tax office letter",
+        hero_sub: "A letter from the tax office often seems complicated or important. BriefHelden explains the content, deadlines, amounts and key details simply and clearly.",
+        hero_cta: "Get tax office letter explained now – €6.90",
+        hero_question_cta: "Ask a short question – €1.49",
+        meta_1: "Clearly explained",
+        meta_2: "Fast response",
+        meta_3: "Confidential",
+
+        intro_title: "What is a letter from the tax office?",
+        intro_text: "A letter from the tax office often contains important information about taxes, deadlines, additional payments, follow-up questions or notices. Many people want to understand what exactly the document says, whether they need to respond and which details are especially important. That is exactly where BriefHelden helps.",
+
+        left_title: "Simply explained",
+        left_text_1: "A tax office letter may refer, for example, to a tax assessment, an additional payment, a refund or a request for further documents.",
+        left_text_2: "Especially important are: Which deadline is mentioned? Is there an amount involved? Is a response expected? And which year, tax or topic does the document refer to?",
+        left_text_3: "BriefHelden explains the content in simple language so you can better understand the tax office letter.",
+
+        right_title: "How it works",
+        right_li_1: "Upload tax office letter securely",
+        right_li_2: "We read the content and explain it clearly",
+        right_li_3: "You receive the explanation by email",
+        right_li_4: "No legal or tax advice – plain-language explanation only",
+
+        service1_title: "Get the full document explained",
+        service1_text: "Ideal if you want to fully understand the entire tax office letter.",
+        service1_btn: "Start now for €6.90",
+
+        service2_title: "Ask a short follow-up question",
+        service2_text: "Ideal if you only have a short question about deadline, amount or content.",
+        service2_btn: "Ask now for €1.49",
+
+        faq_title: "Frequently asked questions about tax office letters",
+        faq_sub: "These questions often come up with letters from the tax office:",
+        faq1_q: "Do I need to respond to a tax office letter?",
+        faq1_a: "That depends on the content of the document. It often contains deadlines, follow-up questions or notices. It is therefore important to clearly understand what is being requested or communicated.",
+        faq2_q: "Which details are especially important?",
+        faq2_a: "Especially important are deadlines, stated amounts, the relevant tax year, the type of document and possible references to required documents.",
+        faq3_q: "Does it always concern an additional payment?",
+        faq3_a: "Not always. A tax office letter can also contain a refund, a notice, a query or an assessment. The exact content is decisive.",
+        faq4_q: "Is BriefHelden tax advice?",
+        faq4_a: "No. BriefHelden does not provide tax advice or legal advice. You only receive a clear explanation of the content.",
+
+        tip_title: "What should you look for in a tax office letter?",
+        tip_sub: "These points are often especially important:",
+        tip1_title: "Check the deadline",
+        tip1_text: "See whether the document mentions a date or a specific deadline.",
+        tip2_title: "Check the amount",
+        tip2_text: "Check whether it concerns an additional payment, a refund or another amount.",
+        tip3_title: "Recognize the topic",
+        tip3_text: "Pay attention to which tax year or which type of tax the document refers to.",
+        tip4_title: "Make the content understandable",
+        tip4_text: "If the wording seems complicated or unclear, a simple explanation often helps immediately.",
+
+        foot_home: "Home",
+        foot_question: "Ask a question",
+        foot_refund: "Withdrawal",
+        foot_imprint: "Imprint",
+        foot_terms: "Terms",
+        foot_privacy: "Privacy"
+      },
+
+      tr: {
+        nav_home: "Ana Sayfa",
+        nav_question: "Soru sor",
+        nav_refund: "Cayma",
+        nav_imprint: "Künye",
+        nav_terms: "Şartlar",
+        nav_privacy: "Gizlilik",
+
+        hero_title: "Vergi dairesi mektubunu anlayın",
+        hero_sub: "Vergi dairesinden gelen bir yazı çoğu zaman karmaşık veya önemli görünür. BriefHelden içeriği, süreleri, tutarları ve önemli bilgileri size basit ve açık şekilde açıklar.",
+        hero_cta: "Vergi dairesi mektubunu şimdi açıklat – 6,90 €",
+        hero_question_cta: "Kısa soru sor – 1,49 €",
+        meta_1: "Basit açıklandı",
+        meta_2: "Hızlı dönüş",
+        meta_3: "Gizli",
+
+        intro_title: "Vergi dairesinden gelen mektup nedir?",
+        intro_text: "Vergi dairesinden gelen bir mektup çoğu zaman vergiler, süreler, ek ödeme, geri ödeme, ek sorular veya kararlarla ilgili önemli bilgiler içerir. Birçok kişi yazıda tam olarak ne dendiğini, yanıt verip vermesi gerekip gerekmediğini ve hangi bilgilerin özellikle önemli olduğunu anlamak ister. BriefHelden tam bu konuda yardımcı olur.",
+
+        left_title: "Basit açıklama",
+        left_text_1: "Vergi dairesi mektubu örneğin vergi bildirimi, ek ödeme, geri ödeme veya ek belge talebiyle ilgili olabilir.",
+        left_text_2: "Özellikle şunlar önemlidir: Hangi süre belirtilmiş? Bir tutar var mı? Yanıt bekleniyor mu? Ve yazı hangi yıl, hangi vergi veya hangi konuyla ilgilidir?",
+        left_text_3: "BriefHelden içeriği basit dille açıklar, böylece vergi dairesi mektubunu daha iyi anlayabilirsiniz.",
+
+        right_title: "Nasıl çalışır",
+        right_li_1: "Vergi dairesi mektubunu güvenli şekilde yükleyin",
+        right_li_2: "İçeriği okuyup açık şekilde açıklıyoruz",
+        right_li_3: "Açıklamayı e-posta ile alırsınız",
+        right_li_4: "Vergi veya hukuk danışmanlığı değil – sadece anlaşılır açıklama",
+
+        service1_title: "Belgenin tamamını açıklat",
+        service1_text: "Vergi dairesi mektubunun tamamını anlamak istiyorsanız idealdir.",
+        service1_btn: "Şimdi 6,90 € ile başla",
+
+        service2_title: "Kısa bir soru sor",
+        service2_text: "Sadece süre, tutar veya içerikle ilgili kısa bir sorunuz varsa idealdir.",
+        service2_btn: "Şimdi 1,49 € ile sor",
+
+        faq_title: "Vergi dairesi mektubu hakkında sık sorulan sorular",
+        faq_sub: "Vergi dairesinden gelen yazılarda şu sorular sıkça ortaya çıkar:",
+        faq1_q: "Vergi dairesi mektubuna cevap vermem gerekir mi?",
+        faq1_a: "Bu, yazının içeriğine bağlıdır. Çoğu zaman süreler, sorular veya uyarılar bulunur. Bu yüzden sizden tam olarak ne istendiğini veya ne bildirildiğini anlamak önemlidir.",
+        faq2_q: "Hangi bilgiler özellikle önemlidir?",
+        faq2_a: "Özellikle süreler, belirtilen tutarlar, ilgili vergi yılı, yazının türü ve istenebilecek belgeler önemlidir.",
+        faq3_q: "Her zaman ek ödeme mi söz konusudur?",
+        faq3_a: "Hayır. Vergi dairesi mektubu geri ödeme, bilgi, soru veya bir bildirim de içerebilir. Belirleyici olan tam içeriktir.",
+        faq4_q: "BriefHelden vergi danışmanlığı mı veriyor?",
+        faq4_a: "Hayır. BriefHelden vergi danışmanlığı veya hukuk danışmanlığı vermez. Sadece içeriğin anlaşılır açıklamasını sunar.",
+
+        tip_title: "Vergi dairesi mektubunda nelere dikkat etmelisiniz?",
+        tip_sub: "Bu noktalar genelde özellikle önemlidir:",
+        tip1_title: "Süreyi kontrol edin",
+        tip1_text: "Yazıda bir tarih veya belirli bir süre olup olmadığına bakın.",
+        tip2_title: "Tutarı inceleyin",
+        tip2_text: "Ek ödeme, geri ödeme veya başka bir tutar olup olmadığını kontrol edin.",
+        tip3_title: "Konuyu tanıyın",
+        tip3_text: "Yazının hangi vergi yılına veya hangi vergi türüne ait olduğuna dikkat edin.",
+        tip4_title: "İçeriği anlaşılır hale getirin",
+        tip4_text: "İfadeler karmaşık veya belirsiz görünüyorsa, basit bir açıklama çoğu zaman hemen yardımcı olur.",
+
+        foot_home: "Ana Sayfa",
+        foot_question: "Soru sor",
+        foot_refund: "Cayma",
+        foot_imprint: "Künye",
+        foot_terms: "Şartlar",
+        foot_privacy: "Gizlilik"
+      },
+
+      ru: {
+        nav_home: "Главная",
+        nav_question: "Задать вопрос",
+        nav_refund: "Отказ",
+        nav_imprint: "Выходные данные",
+        nav_terms: "Условия",
+        nav_privacy: "Конфиденциальность",
+
+        hero_title: "Понять письмо из налоговой",
+        hero_sub: "Письмо из налоговой часто кажется сложным или важным. BriefHelden объяснит содержание, сроки, суммы и важные данные просто и ясно.",
+        hero_cta: "Объяснить письмо из налоговой – 6,90 €",
+        hero_question_cta: "Задать короткий вопрос – 1,49 €",
+        meta_1: "Просто объяснено",
+        meta_2: "Быстрый ответ",
+        meta_3: "Конфиденциально",
+
+        intro_title: "Что такое письмо из налоговой?",
+        intro_text: "Письмо из налоговой часто содержит важную информацию о налогах, сроках, доплатах, возвратах, уточняющих вопросах или решениях. Многие люди хотят понять, что именно написано в документе, нужно ли им реагировать и какие данные особенно важны. Именно здесь помогает BriefHelden.",
+
+        left_title: "Просто объясняем",
+        left_text_1: "Письмо из налоговой может касаться, например, налогового уведомления, доплаты, возврата или запроса дополнительных документов.",
+        left_text_2: "Особенно важно следующее: Какой срок указан? Есть ли сумма? Ожидается ли ответ? И к какому году, какому налогу или какой теме относится документ?",
+        left_text_3: "BriefHelden объясняет содержание простым языком, чтобы вам было легче понять письмо из налоговой.",
+
+        right_title: "Как это работает",
+        right_li_1: "Безопасно загрузите письмо из налоговой",
+        right_li_2: "Мы читаем содержание и понятно объясняем его",
+        right_li_3: "Вы получаете объяснение по e-mail",
+        right_li_4: "Не налоговая и не юридическая консультация – только понятное объяснение",
+
+        service1_title: "Получить полное объяснение документа",
+        service1_text: "Идеально, если вы хотите полностью понять всё письмо из налоговой.",
+        service1_btn: "Начать за 6,90 €",
+
+        service2_title: "Задать короткий вопрос",
+        service2_text: "Идеально, если у вас только короткий вопрос о сроке, сумме или содержании.",
+        service2_btn: "Спросить за 1,49 €",
+
+        faq_title: "Частые вопросы о письме из налоговой",
+        faq_sub: "Эти вопросы особенно часто возникают по письмам из налоговой:",
+        faq1_q: "Нужно ли мне реагировать на письмо из налоговой?",
+        faq1_a: "Это зависит от содержания документа. Часто в нём есть сроки, вопросы или указания. Поэтому важно точно понять, что именно от вас требуется или сообщается.",
+        faq2_q: "Какие данные особенно важны?",
+        faq2_a: "Особенно важны сроки, указанные суммы, соответствующий налоговый год, вид документа и возможные указания на требуемые документы.",
+        faq3_q: "Речь всегда идёт о доплате?",
+        faq3_a: "Не всегда. Письмо из налоговой может также содержать возврат, уведомление, запрос или решение. Решающее значение имеет точное содержание.",
+        faq4_q: "BriefHelden — это налоговая консультация?",
+        faq4_a: "Нет. BriefHelden не предоставляет налоговых и юридических консультаций. Вы получаете только понятное объяснение содержания.",
+
+        tip_title: "На что стоит обратить внимание в письме из налоговой?",
+        tip_sub: "Эти пункты часто особенно важны:",
+        tip1_title: "Проверьте срок",
+        tip1_text: "Посмотрите, указан ли в документе срок или конкретная дата.",
+        tip2_title: "Посмотрите сумму",
+        tip2_text: "Проверьте, идёт ли речь о доплате, возврате или другой сумме.",
+        tip3_title: "Определите тему",
+        tip3_text: "Обратите внимание, к какому налоговому году или какому виду налога относится письмо.",
+        tip4_title: "Сделайте содержание понятным",
+        tip4_text: "Если формулировки кажутся сложными или неясными, простое объяснение часто сразу помогает.",
+
+        foot_home: "Главная",
+        foot_question: "Задать вопрос",
+        foot_refund: "Отказ",
+        foot_imprint: "Выходные данные",
+        foot_terms: "Условия",
+        foot_privacy: "Конфиденциальность"
+      }
+    };
+
+    function updateLinks(lang){
+const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
+const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
+
+      const stripeBtn = document.getElementById("stripeBtn");
+      const servicePrimaryBtn = document.getElementById("servicePrimaryBtn");
+      const questionBtn = document.getElementById("questionBtn");
+      const serviceQuestionBtn = document.getElementById("serviceQuestionBtn");
+
+      if(stripeBtn) stripeBtn.href = mainLink;
+      if(servicePrimaryBtn) servicePrimaryBtn.href = mainLink;
+      if(questionBtn) questionBtn.href = questionLink;
+      if(serviceQuestionBtn) serviceQuestionBtn.href = questionLink;
+    }
+
+    function applyLang(lang){
+const dict = i18n[lang] || i18n.de;
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        if(key in dict){
+          el.textContent = dict[key];
+        }
+      });
+
+      updateLinks(lang);
+      localStorage.setItem("briefhelden_lang", lang);
+    }
+
+    const select = document.getElementById("langSelect");
+    const savedLang = localStorage.getItem("briefhelden_lang");
+    const initialLang = ["de","en","tr","ru"].includes(savedLang) ? savedLang : "de";
+
+    select.value = initialLang;
+    applyLang(initialLang);
+
+    select.addEventListener("change", () => {
+      applyLang(select.value);
+    });
+  </script>
 </body>
 </html>
