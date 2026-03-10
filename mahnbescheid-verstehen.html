@@ -4,12 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mahnbescheid verstehen – einfach erklärt | BriefHelden</title>
-  <meta name="description" content="Mahnbescheid verstehen: Was bedeutet ein Mahnbescheid, welche Fristen gelten und worauf Sie achten sollten? Einfach erklärt von BriefHelden." />
+  <meta
+    name="description"
+    content="Mahnbescheid einfach verstehen: BriefHelden erklärt Inhalt, Fristen, Forderungen und worauf Sie achten sollten – verständlich, klar und ohne komplizierte Fachsprache."
+  />
   <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://www.briefhelden-service.de/mahnbescheid-verstehen.html" />
 
   <meta property="og:title" content="Mahnbescheid verstehen – einfach erklärt | BriefHelden" />
-  <meta property="og:description" content="Was bedeutet ein Mahnbescheid? Fristen, Inhalt und wichtige Hinweise einfach verständlich erklärt." />
+  <meta
+    property="og:description"
+    content="Mahnbescheid einfach erklärt. Verstehen Sie Forderung, Fristen und die wichtigsten Punkte schnell und verständlich."
+  />
   <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.briefhelden-service.de/mahnbescheid-verstehen.html" />
 
@@ -39,6 +45,7 @@
       --btnGreen2: #079455;
       --radius-xl: 24px;
       --radius-lg: 18px;
+      --radius-md: 14px;
       --max: 1120px;
     }
 
@@ -124,6 +131,40 @@
 
     nav.links a:hover{color:#fff}
 
+    .langWrap{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      position:relative;
+    }
+
+    .langSelect{
+      appearance:none;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(0,0,0,.18);
+      color:#fff;
+      padding:8px 36px 8px 12px;
+      border-radius:12px;
+      font-weight:800;
+      cursor:pointer;
+      outline:none;
+    }
+
+    .langSelect:focus{
+      box-shadow:0 0 0 3px rgba(90,160,255,.25);
+    }
+
+    .langWrap:after{
+      content:"▾";
+      position:absolute;
+      right:12px;
+      top:50%;
+      transform:translateY(-50%);
+      color:rgba(255,255,255,.85);
+      pointer-events:none;
+      font-size:12px;
+    }
+
     .hero{
       position:relative;
       color:var(--heroText);
@@ -135,15 +176,14 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       background-position:center;
     }
 
-    .wrap{
+    .hero .wrap{
       max-width:var(--max);
       margin:0 auto;
+      text-align:center;
     }
 
-    .hero .wrap{text-align:center}
-
     .hero h1{
-      margin:0 0 12px;
+      margin:0 0 10px;
       font-weight:950;
       font-size:clamp(30px, 3.7vw, 48px);
       letter-spacing:.2px;
@@ -155,7 +195,7 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       max-width:860px;
       color:var(--heroMuted);
       font-size:clamp(15px, 2vw, 18px);
-      line-height:1.6;
+      line-height:1.55;
     }
 
     .ctaGroup{
@@ -177,14 +217,38 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       font-weight:950;
       box-shadow:0 18px 38px rgba(0,0,0,.28);
       border:1px solid rgba(255,255,255,.20);
-      min-width:min(360px, 92vw);
+      min-width:min(560px, 92vw);
+      text-align:center;
     }
 
     .cta.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
     .cta.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
     .cta:hover{filter:brightness(1.05)}
 
+    .heroMeta{
+      margin-top:14px;
+      display:flex;
+      gap:14px;
+      justify-content:center;
+      flex-wrap:wrap;
+      color:rgba(255,255,255,.86);
+      font-weight:700;
+      font-size:13px;
+    }
+
+    .heroMeta span{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.12);
+      backdrop-filter:blur(10px);
+    }
+
     .section{padding:26px 18px 10px}
+    .wrap{max-width:var(--max); margin:0 auto;}
 
     .glassCard{
       background:linear-gradient(180deg, var(--glass), var(--glass2));
@@ -198,7 +262,8 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
 
     .pad{padding:22px}
 
-    .headline{
+    .headline,
+    .sectionTitle{
       text-align:center;
       margin:0 0 10px;
       font-weight:950;
@@ -206,86 +271,56 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       letter-spacing:.2px;
     }
 
-    .sub{
+    .lead,
+    .sectionSub{
       text-align:center;
-      margin:0 auto 18px;
-      max-width:900px;
-      color:rgba(11,18,32,.74);
+      margin:0 auto 16px;
+      max-width:920px;
+      color:rgba(11,18,32,.76);
       line-height:1.7;
       font-size:16px;
-      font-weight:700;
     }
 
-    .contentGrid{
+    .grid2{
       display:grid;
-      grid-template-columns:1.2fr .8fr;
-      gap:18px;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
     }
 
-    .box{
-      border-radius:18px;
+    .infoCard,
+    .faqItem{
+      border-radius:var(--radius-lg);
       border:1px solid rgba(255,255,255,.55);
       background:rgba(255,255,255,.20);
       padding:18px;
     }
 
-    .box h2{
+    .infoCard h3,
+    .faqItem h3{
       margin:0 0 10px;
       font-size:22px;
       font-weight:950;
     }
 
-    .box h3{
-      margin:18px 0 8px;
+    .faqItem h3{
       font-size:18px;
-      font-weight:900;
+      margin-bottom:8px;
     }
 
-    .box p{
-      margin:0 0 12px;
+    .infoCard p,
+    .infoCard li,
+    .faqItem p{
       color:rgba(11,18,32,.76);
-      line-height:1.7;
+      line-height:1.65;
       font-weight:700;
-    }
-
-    .box ul{
-      margin:0 0 12px 0;
-      padding-left:20px;
-      color:rgba(11,18,32,.76);
-      line-height:1.7;
-      font-weight:700;
-    }
-
-    .infoCard{
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,.55);
-      background:rgba(255,255,255,.22);
-      padding:16px;
-      margin-bottom:14px;
-    }
-
-    .infoCard h3{
-      margin:0 0 8px;
-      font-size:18px;
-      font-weight:950;
-    }
-
-    .infoCard p{
       margin:0;
-      color:rgba(11,18,32,.75);
-      line-height:1.6;
-      font-weight:700;
     }
 
-    .highlight{
-      border-left:5px solid #2f6fff;
-      padding:14px 16px;
-      border-radius:14px;
-      background:rgba(47,111,255,.10);
-      color:#12316b;
-      font-weight:800;
-      line-height:1.6;
-      margin:14px 0;
+    .infoCard p + p{margin-top:12px;}
+
+    .infoCard ul{
+      margin:0;
+      padding-left:18px;
     }
 
     .faqGrid{
@@ -294,25 +329,51 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       gap:14px;
     }
 
-    .faqItem{
+    .serviceMini{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      margin-top:16px;
+    }
+
+    .serviceMini .box{
       border-radius:18px;
       border:1px solid rgba(255,255,255,.55);
       background:rgba(255,255,255,.20);
-      padding:16px;
+      padding:18px;
+      text-align:center;
     }
 
-    .faqItem h3{
+    .serviceMini .box h3{
       margin:0 0 8px;
-      font-size:18px;
+      font-size:20px;
       font-weight:950;
     }
 
-    .faqItem p{
+    .serviceMini .box p{
       margin:0;
       color:rgba(11,18,32,.74);
-      line-height:1.6;
+      line-height:1.55;
       font-weight:700;
     }
+
+    .miniBtn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      margin-top:14px;
+      padding:12px 18px;
+      border-radius:14px;
+      color:#fff;
+      font-weight:900;
+      min-width:220px;
+      box-shadow:0 10px 24px rgba(0,0,0,.16);
+      text-align:center;
+    }
+
+    .miniBtn.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
+    .miniBtn.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
 
     footer{
       margin-top:18px;
@@ -345,9 +406,11 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
 
     @media (max-width:900px){
       nav.links{display:none}
-      .contentGrid{grid-template-columns:1fr}
-      .faqGrid{grid-template-columns:1fr}
+      .grid2,
+      .faqGrid,
+      .serviceMini{grid-template-columns:1fr}
       .cta{min-width:92vw}
+      .miniBtn{min-width:100%}
     }
   </style>
 </head>
@@ -360,33 +423,48 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       </div>
 
       <nav class="links" aria-label="Hauptnavigation">
-        <a href="index.html">Startseite</a>
-        <a href="widerruf.html">Widerruf und Rückerstattung</a>
-        <a href="impressum.html">Impressum</a>
-        <a href="agb.html">AGB</a>
-        <a href="datenschutz.html">Datenschutz</a>
+        <a href="index.html" data-i18n="nav_home">Startseite</a>
+        <a href="frage.html" data-i18n="nav_question">Frage stellen</a>
+        <a href="widerruf.html" data-i18n="nav_refund">Widerruf</a>
+        <a href="impressum.html" data-i18n="nav_imprint">Impressum</a>
+        <a href="agb.html" data-i18n="nav_terms">AGB</a>
+        <a href="datenschutz.html" data-i18n="nav_privacy">Datenschutz</a>
       </nav>
+
+      <div class="langWrap">
+        <select class="langSelect" id="langSelect" aria-label="Sprache">
+          <option value="de">DE</option>
+          <option value="en">EN</option>
+          <option value="tr">TR</option>
+          <option value="ru">RU</option>
+        </select>
+      </div>
     </div>
   </header>
 
   <section class="hero">
     <div class="wrap">
-      <h1>Mahnbescheid verstehen – einfach erklärt</h1>
-      <p>
-        Ein Mahnbescheid wirkt oft ernst und beunruhigend. Viele Menschen wissen nicht sofort,
-        was genau drinsteht, ob sie reagieren müssen und welche Fristen wichtig sind.
-        BriefHelden hilft dabei, den Inhalt einfach und verständlich zu erklären.
+      <h1 data-i18n="hero_title">Mahnbescheid verstehen</h1>
+      <p data-i18n="hero_sub">
+        Ein Mahnbescheid wirkt oft ernst und beunruhigend. BriefHelden erklärt Ihnen den Inhalt einfach, klar und verständlich.
       </p>
 
       <div class="ctaGroup">
-<a class="cta primary" href="https://buy.stripe.com/14A9ASbhP2c083deR74sE00" rel="noopener">
-          <span>Kompletten Brief erklären lassen – 6,90 €</span>
+        <a class="cta primary" id="stripeBtn" href="#" rel="noopener">
+          <span data-i18n="hero_cta">Jetzt Mahnbescheid erklären lassen – 6,90 €</span>
           <span aria-hidden="true">›</span>
         </a>
-<a class="cta secondary" href="https://buy.stripe.com/8x228q71z5occjt4ct4sE04" rel="noopener">
-          <span>Kurze Frage stellen – 1,49 €</span>
+
+        <a class="cta secondary" id="questionBtn" href="#" rel="noopener">
+          <span data-i18n="hero_question_cta">Kurze Frage stellen – 1,49 €</span>
           <span aria-hidden="true">›</span>
         </a>
+      </div>
+
+      <div class="heroMeta" aria-label="Kurzvorteile">
+        <span>✅ <span data-i18n="meta_1">Einfach erklärt</span></span>
+        <span>⚡ <span data-i18n="meta_2">Schnelle Rückmeldung</span></span>
+        <span>🔒 <span data-i18n="meta_3">Vertraulich</span></span>
       </div>
     </div>
   </section>
@@ -395,74 +473,57 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
     <div class="wrap">
       <div class="glassCard">
         <div class="pad">
-          <div class="headline">Was ist ein Mahnbescheid?</div>
-          <p class="sub">
-            Ein Mahnbescheid ist ein offizielles Schreiben im gerichtlichen Mahnverfahren.
-            Meist geht es darum, dass jemand Geld von Ihnen fordert. Der Mahnbescheid bedeutet nicht automatisch,
-            dass schon alles endgültig entschieden ist – aber er ist wichtig und sollte nicht ignoriert werden.
+          <h2 class="headline" data-i18n="intro_title">Was ist ein Mahnbescheid?</h2>
+          <p class="lead" data-i18n="intro_text">
+            Ein Mahnbescheid ist ein offizielles Schreiben im gerichtlichen Mahnverfahren. Er bedeutet oft, dass jemand eine Geldforderung gegen Sie geltend macht. Viele Menschen wissen nicht genau, was das Schreiben bedeutet, ob eine Frist läuft und was jetzt wichtig ist. Genau dabei hilft BriefHelden.
           </p>
 
-          <div class="contentGrid">
-            <div class="box">
-              <h2>Mahnbescheid einfach erklärt</h2>
-
-              <p>
-                Ein Mahnbescheid kommt in der Regel per Post und enthält eine Geldforderung.
-                Darin steht meistens, wer Geld verlangt, in welcher Höhe etwas gefordert wird
-                und auf welchen Grund sich die Forderung beziehen soll.
+          <div class="grid2">
+            <div class="infoCard">
+              <h3 data-i18n="left_title">Einfach erklärt</h3>
+              <p data-i18n="left_text_1">
+                In einem Mahnbescheid geht es meist um eine Geldforderung, die über ein gerichtliches Verfahren geltend gemacht wird.
               </p>
-
-              <div class="highlight">
-                Wichtig: Ein Mahnbescheid sollte ernst genommen werden. Vor allem Fristen sind hier entscheidend.
-              </div>
-
-              <h3>Worauf sollten Sie achten?</h3>
-              <ul>
-                <li>Wer ist der Absender oder Antragsteller?</li>
-                <li>Wie hoch ist die geforderte Summe?</li>
-                <li>Wird eine Frist genannt?</li>
-                <li>Gibt es Angaben zu Zinsen, Kosten oder Gebühren?</li>
-                <li>Ist die Forderung für Sie überhaupt nachvollziehbar?</li>
-              </ul>
-
-              <h3>Warum ist das Schreiben oft schwer verständlich?</h3>
-              <p>
-                Viele Mahnbescheide enthalten juristische oder formale Begriffe.
-                Dazu kommen Zahlen, Fristen und verschiedene Kostenpositionen.
-                Dadurch fällt es vielen Menschen schwer, direkt zu erkennen,
-                was genau gefordert wird und was jetzt wichtig ist.
+              <p data-i18n="left_text_2">
+                Wichtig sind dabei vor allem: Wer fordert Geld? Welcher Betrag ist genannt? Gibt es Fristen? Und worauf bezieht sich die Forderung?
               </p>
-
-              <h3>Was bedeutet das für Sie?</h3>
-              <p>
-                Ein Mahnbescheid ist ein offizielles Warnsignal, dass eine Forderung auf gerichtlichem Weg
-                geltend gemacht wird. Deshalb ist es sinnvoll, das Schreiben genau zu verstehen,
-                anstatt es einfach beiseitezulegen.
+              <p data-i18n="left_text_3">
+                BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie das Schreiben besser einordnen können.
               </p>
             </div>
 
-            <div>
-              <div class="infoCard">
-                <h3>Typische Inhalte</h3>
-                <p>
-                  Forderung, Antragsteller, mögliche Zinsen, zusätzliche Kosten und Fristen.
-                </p>
-              </div>
+            <div class="infoCard">
+              <h3 data-i18n="right_title">So funktioniert es</h3>
+              <ul>
+                <li data-i18n="right_li_1">Mahnbescheid sicher hochladen</li>
+                <li data-i18n="right_li_2">Wir lesen den Inhalt und erklären ihn verständlich</li>
+                <li data-i18n="right_li_3">Sie erhalten die Erklärung per E-Mail</li>
+                <li data-i18n="right_li_4">Keine Rechtsberatung – nur verständliche Texterklärung</li>
+              </ul>
+            </div>
+          </div>
 
-              <div class="infoCard">
-                <h3>Besonders wichtig</h3>
-                <p>
-                  Das Datum des Schreibens und eventuelle Reaktionsfristen genau prüfen.
-                </p>
-              </div>
+          <div class="serviceMini">
+            <div class="box">
+              <h3 data-i18n="service1_title">Komplettes Schreiben erklären lassen</h3>
+              <p data-i18n="service1_text">
+                Ideal, wenn Sie den ganzen Mahnbescheid vollständig verstehen möchten.
+              </p>
+              <a class="miniBtn primary" id="servicePrimaryBtn" href="#" rel="noopener">
+                <span data-i18n="service1_btn">Jetzt für 6,90 € starten</span>
+                <span aria-hidden="true">›</span>
+              </a>
+            </div>
 
-              <div class="infoCard">
-                <h3>BriefHelden hilft</h3>
-                <p>
-                  Wir erklären den Inhalt einfach, verständlich und in normaler Sprache.
-                  Keine Rechtsberatung – nur klare Texterklärung.
-                </p>
-              </div>
+            <div class="box">
+              <h3 data-i18n="service2_title">Kurze Rückfrage stellen</h3>
+              <p data-i18n="service2_text">
+                Ideal, wenn Sie nur eine kurze Frage zu Frist, Betrag oder Inhalt haben.
+              </p>
+              <a class="miniBtn secondary" id="serviceQuestionBtn" href="#" rel="noopener">
+                <span data-i18n="service2_btn">Jetzt für 1,49 € fragen</span>
+                <span aria-hidden="true">›</span>
+              </a>
             </div>
           </div>
         </div>
@@ -472,36 +533,37 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
 
       <div class="glassCard">
         <div class="pad">
-          <div class="headline">Häufige Fragen zum Mahnbescheid</div>
+          <h2 class="sectionTitle" data-i18n="faq_title">Häufige Fragen zum Mahnbescheid</h2>
+          <p class="sectionSub" data-i18n="faq_sub">
+            Diese Fragen tauchen bei solchen Schreiben besonders oft auf:
+          </p>
+
           <div class="faqGrid">
             <div class="faqItem">
-              <h3>Ist ein Mahnbescheid schlimm?</h3>
-              <p>
-                Ein Mahnbescheid ist auf jeden Fall wichtig. Er bedeutet, dass eine Forderung offiziell geltend gemacht wird.
-                Deshalb sollte das Schreiben nicht ignoriert werden.
+              <h3 data-i18n="faq1_q">Ist ein Mahnbescheid ernst?</h3>
+              <p data-i18n="faq1_a">
+                Ja, ein Mahnbescheid ist in der Regel ein wichtiges Schreiben. Viele Menschen empfinden ihn als belastend, weil er meist mit einer Geldforderung zusammenhängt.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3>Muss ich sofort zahlen?</h3>
-              <p>
-                Aus dem Schreiben sollte zuerst genau verstanden werden, worum es geht, wer etwas fordert
-                und welche Angaben enthalten sind. Viele Menschen möchten den Inhalt erst verständlich erklärt bekommen.
+              <h3 data-i18n="faq2_q">Gibt es dabei oft eine Frist?</h3>
+              <p data-i18n="faq2_a">
+                Häufig sind in solchen Schreiben Fristen oder Zeiträume wichtig. BriefHelden hilft Ihnen, diese Angaben verständlich zu erkennen.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3>Was steht in einem Mahnbescheid?</h3>
-              <p>
-                Meist stehen darin Angaben zur Forderung, zum Antragsteller, zu möglichen Kosten
-                und zu wichtigen Fristen oder Formularen.
+              <h3 data-i18n="faq3_q">Was ist besonders wichtig?</h3>
+              <p data-i18n="faq3_a">
+                Besonders wichtig sind Absender, Forderung, genannter Betrag, Datum, Fristen und mögliche nächste Schritte.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3>Kann BriefHelden so einen Brief erklären?</h3>
-              <p>
-                Ja. Sie können Ihren Mahnbescheid hochladen und erhalten eine verständliche Erklärung in einfacher Sprache.
+              <h3 data-i18n="faq4_q">Ist BriefHelden eine Rechtsberatung?</h3>
+              <p data-i18n="faq4_a">
+                Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.
               </p>
             </div>
           </div>
@@ -511,26 +573,43 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       <div style="height:18px"></div>
 
       <div class="glassCard">
-        <div class="pad" style="text-align:center;">
-          <div class="headline">Mahnbescheid verständlich erklären lassen</div>
-          <p class="sub">
-            Wenn Sie nicht genau verstehen, was in Ihrem Mahnbescheid steht, können Sie das Schreiben
-            bei BriefHelden hochladen. Wir erklären Ihnen den Inhalt einfach und klar.
+        <div class="pad">
+          <h2 class="sectionTitle" data-i18n="tip_title">Worauf sollten Sie bei einem Mahnbescheid achten?</h2>
+          <p class="sectionSub" data-i18n="tip_sub">
+            Diese Punkte sind oft besonders wichtig:
           </p>
 
-          <div class="ctaGroup">
-<a class="cta primary" href="https://buy.stripe.com/14A9ASbhP2c083deR74sE00" rel="noopener">
-              <span>Jetzt Mahnbescheid erklären lassen – 6,90 €</span>
-              <span aria-hidden="true">›</span>
-            </a>
-<a class="cta secondary" href="https://buy.stripe.com/8x228q71z5occjt4ct4sE04" rel="noopener">
-              <span>Nur kurze Frage stellen – 1,49 €</span>
-              <span aria-hidden="true">›</span>
-            </a>
+          <div class="faqGrid">
+            <div class="faqItem">
+              <h3 data-i18n="tip1_title">Betrag prüfen</h3>
+              <p data-i18n="tip1_text">
+                Schauen Sie, welcher Betrag verlangt wird und ob zusätzliche Kosten, Zinsen oder Gebühren genannt werden.
+              </p>
+            </div>
+
+            <div class="faqItem">
+              <h3 data-i18n="tip2_title">Frist beachten</h3>
+              <p data-i18n="tip2_text">
+                Achten Sie darauf, ob ein Datum oder eine Frist im Schreiben genannt wird.
+              </p>
+            </div>
+
+            <div class="faqItem">
+              <h3 data-i18n="tip3_title">Absender ansehen</h3>
+              <p data-i18n="tip3_text">
+                Prüfen Sie, von welchem Gericht, Unternehmen oder Vertreter das Schreiben kommt.
+              </p>
+            </div>
+
+            <div class="faqItem">
+              <h3 data-i18n="tip4_title">Inhalt verständlich machen</h3>
+              <p data-i18n="tip4_text">
+                Wenn das Schreiben schwer verständlich ist, hilft eine einfache Erklärung oft sofort weiter.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -538,13 +617,345 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
     <div class="footWrap">
       <div>© 2026 BriefHelden – Alle Rechte vorbehalten</div>
       <div class="footLinks">
-        <a href="index.html">Startseite</a>
-        <a href="widerruf.html">Widerruf</a>
-        <a href="impressum.html">Impressum</a>
-        <a href="agb.html">AGB</a>
-        <a href="datenschutz.html">Datenschutz</a>
+        <a href="index.html" data-i18n="foot_home">Startseite</a>
+        <a href="frage.html" data-i18n="foot_question">Frage stellen</a>
+        <a href="widerruf.html" data-i18n="foot_refund">Widerruf</a>
+        <a href="impressum.html" data-i18n="foot_imprint">Impressum</a>
+        <a href="agb.html" data-i18n="foot_terms">AGB</a>
+        <a href="datenschutz.html" data-i18n="foot_privacy">Datenschutz</a>
       </div>
     </div>
   </footer>
+
+  <script>
+    const STRIPE_LINKS = {
+de: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
+en: "https://buy.stripe.com/fZubJ0dpXbMAbfpcIZ4sE01",
+tr: "https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
+ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
+    };
+
+    const QUESTION_LINKS = {
+de: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
+en: "https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
+tr: "https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
+ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
+    };
+
+    const i18n = {
+      de: {
+        nav_home: "Startseite",
+        nav_question: "Frage stellen",
+        nav_refund: "Widerruf",
+        nav_imprint: "Impressum",
+        nav_terms: "AGB",
+        nav_privacy: "Datenschutz",
+
+        hero_title: "Mahnbescheid verstehen",
+        hero_sub: "Ein Mahnbescheid wirkt oft ernst und beunruhigend. BriefHelden erklärt Ihnen den Inhalt einfach, klar und verständlich.",
+        hero_cta: "Jetzt Mahnbescheid erklären lassen – 6,90 €",
+        hero_question_cta: "Kurze Frage stellen – 1,49 €",
+        meta_1: "Einfach erklärt",
+        meta_2: "Schnelle Rückmeldung",
+        meta_3: "Vertraulich",
+
+        intro_title: "Was ist ein Mahnbescheid?",
+        intro_text: "Ein Mahnbescheid ist ein offizielles Schreiben im gerichtlichen Mahnverfahren. Er bedeutet oft, dass jemand eine Geldforderung gegen Sie geltend macht. Viele Menschen wissen nicht genau, was das Schreiben bedeutet, ob eine Frist läuft und was jetzt wichtig ist. Genau dabei hilft BriefHelden.",
+
+        left_title: "Einfach erklärt",
+        left_text_1: "In einem Mahnbescheid geht es meist um eine Geldforderung, die über ein gerichtliches Verfahren geltend gemacht wird.",
+        left_text_2: "Wichtig sind dabei vor allem: Wer fordert Geld? Welcher Betrag ist genannt? Gibt es Fristen? Und worauf bezieht sich die Forderung?",
+        left_text_3: "BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie das Schreiben besser einordnen können.",
+
+        right_title: "So funktioniert es",
+        right_li_1: "Mahnbescheid sicher hochladen",
+        right_li_2: "Wir lesen den Inhalt und erklären ihn verständlich",
+        right_li_3: "Sie erhalten die Erklärung per E-Mail",
+        right_li_4: "Keine Rechtsberatung – nur verständliche Texterklärung",
+
+        service1_title: "Komplettes Schreiben erklären lassen",
+        service1_text: "Ideal, wenn Sie den ganzen Mahnbescheid vollständig verstehen möchten.",
+        service1_btn: "Jetzt für 6,90 € starten",
+
+        service2_title: "Kurze Rückfrage stellen",
+        service2_text: "Ideal, wenn Sie nur eine kurze Frage zu Frist, Betrag oder Inhalt haben.",
+        service2_btn: "Jetzt für 1,49 € fragen",
+
+        faq_title: "Häufige Fragen zum Mahnbescheid",
+        faq_sub: "Diese Fragen tauchen bei solchen Schreiben besonders oft auf:",
+        faq1_q: "Ist ein Mahnbescheid ernst?",
+        faq1_a: "Ja, ein Mahnbescheid ist in der Regel ein wichtiges Schreiben. Viele Menschen empfinden ihn als belastend, weil er meist mit einer Geldforderung zusammenhängt.",
+        faq2_q: "Gibt es dabei oft eine Frist?",
+        faq2_a: "Häufig sind in solchen Schreiben Fristen oder Zeiträume wichtig. BriefHelden hilft Ihnen, diese Angaben verständlich zu erkennen.",
+        faq3_q: "Was ist besonders wichtig?",
+        faq3_a: "Besonders wichtig sind Absender, Forderung, genannter Betrag, Datum, Fristen und mögliche nächste Schritte.",
+        faq4_q: "Ist BriefHelden eine Rechtsberatung?",
+        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.",
+
+        tip_title: "Worauf sollten Sie bei einem Mahnbescheid achten?",
+        tip_sub: "Diese Punkte sind oft besonders wichtig:",
+        tip1_title: "Betrag prüfen",
+        tip1_text: "Schauen Sie, welcher Betrag verlangt wird und ob zusätzliche Kosten, Zinsen oder Gebühren genannt werden.",
+        tip2_title: "Frist beachten",
+        tip2_text: "Achten Sie darauf, ob ein Datum oder eine Frist im Schreiben genannt wird.",
+        tip3_title: "Absender ansehen",
+        tip3_text: "Prüfen Sie, von welchem Gericht, Unternehmen oder Vertreter das Schreiben kommt.",
+        tip4_title: "Inhalt verständlich machen",
+        tip4_text: "Wenn das Schreiben schwer verständlich ist, hilft eine einfache Erklärung oft sofort weiter.",
+
+        foot_home: "Startseite",
+        foot_question: "Frage stellen",
+        foot_refund: "Widerruf",
+        foot_imprint: "Impressum",
+        foot_terms: "AGB",
+        foot_privacy: "Datenschutz"
+      },
+
+      en: {
+        nav_home: "Home",
+        nav_question: "Ask a question",
+        nav_refund: "Withdrawal",
+        nav_imprint: "Imprint",
+        nav_terms: "Terms",
+        nav_privacy: "Privacy",
+
+        hero_title: "Understand a payment order",
+        hero_sub: "A payment order often seems serious and worrying. BriefHelden explains the content simply, clearly and understandably.",
+        hero_cta: "Get payment order explained now – €6.90",
+        hero_question_cta: "Ask a short question – €1.49",
+        meta_1: "Clearly explained",
+        meta_2: "Fast response",
+        meta_3: "Confidential",
+
+        intro_title: "What is a payment order?",
+        intro_text: "A payment order is an official document in a court dunning procedure. It often means that someone is asserting a money claim against you. Many people are unsure what the document means, whether a deadline is running and what matters now. That is exactly where BriefHelden helps.",
+
+        left_title: "Simply explained",
+        left_text_1: "A payment order usually concerns a money claim that is being asserted through a court procedure.",
+        left_text_2: "Important points are: Who is demanding money? What amount is mentioned? Are there deadlines? And what is the claim about?",
+        left_text_3: "BriefHelden explains the content in simple language so you can better understand the document.",
+
+        right_title: "How it works",
+        right_li_1: "Upload payment order securely",
+        right_li_2: "We read the content and explain it clearly",
+        right_li_3: "You receive the explanation by email",
+        right_li_4: "No legal advice – plain-language explanation only",
+
+        service1_title: "Get the full document explained",
+        service1_text: "Ideal if you want to fully understand the entire payment order.",
+        service1_btn: "Start now for €6.90",
+
+        service2_title: "Ask a short follow-up question",
+        service2_text: "Ideal if you only have a short question about deadline, amount or content.",
+        service2_btn: "Ask now for €1.49",
+
+        faq_title: "Frequently asked questions about payment orders",
+        faq_sub: "These questions often come up with this kind of document:",
+        faq1_q: "Is a payment order serious?",
+        faq1_a: "Yes, a payment order is usually an important document. Many people find it stressful because it is generally connected to a money claim.",
+        faq2_q: "Is there usually a deadline?",
+        faq2_a: "Deadlines or time periods are often important in such documents. BriefHelden helps you identify these details clearly.",
+        faq3_q: "What is especially important?",
+        faq3_a: "Especially important are sender, claim, stated amount, date, deadlines and possible next steps.",
+        faq4_q: "Is BriefHelden legal advice?",
+        faq4_a: "No. BriefHelden does not provide legal advice. You only receive a clear explanation of the content.",
+
+        tip_title: "What should you look for in a payment order?",
+        tip_sub: "These points are often especially important:",
+        tip1_title: "Check the amount",
+        tip1_text: "See what amount is being claimed and whether extra costs, interest or fees are listed.",
+        tip2_title: "Watch the deadline",
+        tip2_text: "Pay attention to whether a date or deadline is mentioned in the document.",
+        tip3_title: "Check the sender",
+        tip3_text: "See which court, company or representative sent the document.",
+        tip4_title: "Make the content understandable",
+        tip4_text: "If the document is difficult to understand, a simple explanation often helps immediately.",
+
+        foot_home: "Home",
+        foot_question: "Ask a question",
+        foot_refund: "Withdrawal",
+        foot_imprint: "Imprint",
+        foot_terms: "Terms",
+        foot_privacy: "Privacy"
+      },
+
+      tr: {
+        nav_home: "Ana Sayfa",
+        nav_question: "Soru sor",
+        nav_refund: "Cayma",
+        nav_imprint: "Künye",
+        nav_terms: "Şartlar",
+        nav_privacy: "Gizlilik",
+
+        hero_title: "Ödeme emrini anlayın",
+        hero_sub: "Bir ödeme emri ciddi ve endişe verici görünebilir. BriefHelden içeriği size basit, açık ve anlaşılır şekilde açıklar.",
+        hero_cta: "Ödeme emrini şimdi açıklat – 6,90 €",
+        hero_question_cta: "Kısa soru sor – 1,49 €",
+        meta_1: "Basit açıklandı",
+        meta_2: "Hızlı dönüş",
+        meta_3: "Gizli",
+
+        intro_title: "Ödeme emri nedir?",
+        intro_text: "Ödeme emri, mahkeme ödeme prosedüründeki resmi bir belgedir. Bu belge çoğu zaman birinin size karşı para alacağı ileri sürdüğü anlamına gelir. Birçok kişi belgenin ne anlama geldiğini, süre olup olmadığını ve şimdi neyin önemli olduğunu tam bilmez. BriefHelden tam bu konuda yardımcı olur.",
+
+        left_title: "Basit açıklama",
+        left_text_1: "Bir ödeme emri genelde mahkeme üzerinden ileri sürülen bir para alacağı ile ilgilidir.",
+        left_text_2: "Önemli noktalar şunlardır: Parayı kim istiyor? Hangi tutar yazıyor? Süre var mı? Talep neyle ilgili?",
+        left_text_3: "BriefHelden içeriği basit dille açıklar, böylece belgeyi daha iyi anlayabilirsiniz.",
+
+        right_title: "Nasıl çalışır",
+        right_li_1: "Ödeme emrini güvenli şekilde yükleyin",
+        right_li_2: "İçeriği okuyup açık şekilde açıklıyoruz",
+        right_li_3: "Açıklamayı e-posta ile alırsınız",
+        right_li_4: "Hukuki danışmanlık değil – sadece anlaşılır açıklama",
+
+        service1_title: "Belgenin tamamını açıklat",
+        service1_text: "Ödeme emrinin tamamını anlamak istiyorsanız idealdir.",
+        service1_btn: "Şimdi 6,90 € ile başla",
+
+        service2_title: "Kısa bir soru sor",
+        service2_text: "Sadece süre, tutar veya içerikle ilgili kısa bir sorunuz varsa idealdir.",
+        service2_btn: "Şimdi 1,49 € ile sor",
+
+        faq_title: "Ödeme emri hakkında sık sorulan sorular",
+        faq_sub: "Bu tür belgelerde şu sorular sıkça ortaya çıkar:",
+        faq1_q: "Ödeme emri ciddi midir?",
+        faq1_a: "Evet, ödeme emri genelde önemli bir belgedir. Birçok kişi bunu para talebiyle bağlantılı olduğu için stresli bulur.",
+        faq2_q: "Genelde süre var mıdır?",
+        faq2_a: "Bu tür belgelerde süreler veya zaman sınırları sık önemlidir. BriefHelden bu bilgileri açık şekilde görmenize yardım eder.",
+        faq3_q: "En önemli olan nedir?",
+        faq3_a: "Gönderen, talep, belirtilen tutar, tarih, süreler ve olası sonraki adımlar özellikle önemlidir.",
+        faq4_q: "BriefHelden hukuki danışmanlık mı veriyor?",
+        faq4_a: "Hayır. BriefHelden hukuki danışmanlık vermez. Sadece içeriğin anlaşılır açıklamasını sunar.",
+
+        tip_title: "Bir ödeme emrinde nelere dikkat etmelisiniz?",
+        tip_sub: "Bu noktalar genelde özellikle önemlidir:",
+        tip1_title: "Tutarı kontrol edin",
+        tip1_text: "Hangi tutarın istendiğine ve ek masraf, faiz veya ücret olup olmadığına bakın.",
+        tip2_title: "Süreyi takip edin",
+        tip2_text: "Belgede bir tarih veya süre yazılı olup olmadığına dikkat edin.",
+        tip3_title: "Göndereni inceleyin",
+        tip3_text: "Belgenin hangi mahkeme, şirket veya temsilciden geldiğine bakın.",
+        tip4_title: "İçeriği anlaşılır hale getirin",
+        tip4_text: "Belgeyi anlamak zorsa, basit bir açıklama çoğu zaman hemen yardımcı olur.",
+
+        foot_home: "Ana Sayfa",
+        foot_question: "Soru sor",
+        foot_refund: "Cayma",
+        foot_imprint: "Künye",
+        foot_terms: "Şartlar",
+        foot_privacy: "Gizlilik"
+      },
+
+      ru: {
+        nav_home: "Главная",
+        nav_question: "Задать вопрос",
+        nav_refund: "Отказ",
+        nav_imprint: "Выходные данные",
+        nav_terms: "Условия",
+        nav_privacy: "Конфиденциальность",
+
+        hero_title: "Понять судебный приказ",
+        hero_sub: "Судебный приказ часто кажется серьёзным и тревожным. BriefHelden объяснит содержание просто, ясно и понятно.",
+        hero_cta: "Объяснить судебный приказ – 6,90 €",
+        hero_question_cta: "Задать короткий вопрос – 1,49 €",
+        meta_1: "Просто объяснено",
+        meta_2: "Быстрый ответ",
+        meta_3: "Конфиденциально",
+
+        intro_title: "Что такое судебный приказ?",
+        intro_text: "Судебный приказ — это официальный документ в судебной процедуре взыскания. Он часто означает, что кто-то предъявляет к вам денежное требование. Многие люди не понимают, что означает этот документ, есть ли срок и что теперь важно. Именно здесь помогает BriefHelden.",
+
+        left_title: "Просто объясняем",
+        left_text_1: "Судебный приказ обычно касается денежного требования, которое предъявляется через судебную процедуру.",
+        left_text_2: "Особенно важно следующее: Кто требует деньги? Какая сумма указана? Есть ли сроки? И к чему относится требование?",
+        left_text_3: "BriefHelden объясняет содержание простым языком, чтобы вам было легче понять документ.",
+
+        right_title: "Как это работает",
+        right_li_1: "Безопасно загрузите судебный приказ",
+        right_li_2: "Мы читаем содержание и понятно объясняем его",
+        right_li_3: "Вы получаете объяснение по e-mail",
+        right_li_4: "Не юридическая консультация – только понятное объяснение",
+
+        service1_title: "Получить полное объяснение документа",
+        service1_text: "Идеально, если вы хотите полностью понять весь судебный приказ.",
+        service1_btn: "Начать за 6,90 €",
+
+        service2_title: "Задать короткий вопрос",
+        service2_text: "Идеально, если у вас только короткий вопрос о сроке, сумме или содержании.",
+        service2_btn: "Спросить за 1,49 €",
+
+        faq_title: "Частые вопросы о судебном приказе",
+        faq_sub: "Эти вопросы особенно часто возникают по таким документам:",
+        faq1_q: "Судебный приказ — это серьёзно?",
+        faq1_a: "Да, судебный приказ обычно является важным документом. Многие воспринимают его как тревожный, потому что он связан с денежным требованием.",
+        faq2_q: "Есть ли там обычно срок?",
+        faq2_a: "В таких документах сроки или периоды времени часто очень важны. BriefHelden помогает вам увидеть эти данные понятнее.",
+        faq3_q: "Что особенно важно?",
+        faq3_a: "Особенно важны отправитель, требование, указанная сумма, дата, сроки и возможные дальнейшие шаги.",
+        faq4_q: "BriefHelden — это юридическая консультация?",
+        faq4_a: "Нет. BriefHelden не даёт юридических консультаций. Вы получаете только понятное объяснение содержания.",
+
+        tip_title: "На что стоит обратить внимание в судебном приказе?",
+        tip_sub: "Эти пункты часто особенно важны:",
+        tip1_title: "Проверьте сумму",
+        tip1_text: "Посмотрите, какая сумма указана и есть ли дополнительные расходы, проценты или сборы.",
+        tip2_title: "Обратите внимание на срок",
+        tip2_text: "Проверьте, указана ли в документе дата или срок.",
+        tip3_title: "Посмотрите на отправителя",
+        tip3_text: "Проверьте, от какого суда, компании или представителя пришёл документ.",
+        tip4_title: "Сделайте содержание понятным",
+        tip4_text: "Если документ трудно понять, простое объяснение часто сразу помогает.",
+
+        foot_home: "Главная",
+        foot_question: "Задать вопрос",
+        foot_refund: "Отказ",
+        foot_imprint: "Выходные данные",
+        foot_terms: "Условия",
+        foot_privacy: "Конфиденциальность"
+      }
+    };
+
+    function updateLinks(lang){
+const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
+const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
+
+      const stripeBtn = document.getElementById("stripeBtn");
+      const servicePrimaryBtn = document.getElementById("servicePrimaryBtn");
+      const questionBtn = document.getElementById("questionBtn");
+      const serviceQuestionBtn = document.getElementById("serviceQuestionBtn");
+
+      if(stripeBtn) stripeBtn.href = mainLink;
+      if(servicePrimaryBtn) servicePrimaryBtn.href = mainLink;
+      if(questionBtn) questionBtn.href = questionLink;
+      if(serviceQuestionBtn) serviceQuestionBtn.href = questionLink;
+    }
+
+    function applyLang(lang){
+const dict = i18n[lang] || i18n.de;
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        if(key in dict){
+          el.textContent = dict[key];
+        }
+      });
+
+      updateLinks(lang);
+      localStorage.setItem("briefhelden_lang", lang);
+    }
+
+    const select = document.getElementById("langSelect");
+    const savedLang = localStorage.getItem("briefhelden_lang");
+    const initialLang = ["de","en","tr","ru"].includes(savedLang) ? savedLang : "de";
+
+    select.value = initialLang;
+    applyLang(initialLang);
+
+    select.addEventListener("change", () => {
+      applyLang(select.value);
+    });
+  </script>
 </body>
 </html>
