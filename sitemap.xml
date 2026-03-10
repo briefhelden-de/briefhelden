@@ -3,27 +3,38 @@
 
 <url>
 <loc>https://www.briefhelden-service.de/</loc>
-<priority>1.0</priority>
 </url>
 
 <url>
-<loc>https://www.briefhelden-service.de/impressum.html</loc>
+<loc>https://www.briefhelden-service.de/inkasso-brief-verstehen.html</loc>
 </url>
 
 <url>
-<loc>https://www.briefhelden-service.de/datenschutz.html</loc>
+<loc>https://www.briefhelden-service.de/mahnung-verstehen.html</loc>
 </url>
 
 <url>
-<loc>https://www.briefhelden-service.de/agb.html</loc>
+<loc>https://www.briefhelden-service.de/jobcenter-brief-verstehen.html</loc>
 </url>
 
 <url>
-<loc>https://www.briefhelden-service.de/widerruf.html</loc>
+<loc>https://www.briefhelden-service.de/behoerdenbrief-verstehen.html</loc>
 </url>
 
 <url>
-<loc>https://www.briefhelden-service.de/success.html</loc>
+<loc>https://www.briefhelden-service.de/brief-verstehen.html</loc>
+</url>
+
+<url>
+<loc>https://www.briefhelden-service.de/finanzamt-brief-verstehen.html</loc>
+</url>
+
+<url>
+<loc>https://www.briefhelden-service.de/kuendigung-verstehen.html</loc>
+</url>
+
+<url>
+<loc>https://www.briefhelden-service.de/formular-verstehen.html</loc>
 </url>
 
 </urlset>
