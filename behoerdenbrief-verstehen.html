@@ -6,7 +6,7 @@
   <title>Behördenbrief verstehen – einfach erklärt | BriefHelden</title>
   <meta
     name="description"
-    content="Behördenbrief erhalten? BriefHelden erklärt Schreiben von Behörden einfach und verständlich. Hilfe bei Fristen, Formularen und amtlichen Schreiben – ohne komplizierte Sprache."
+    content="Behördenbrief einfach verstehen: BriefHelden erklärt Inhalt, Fristen, Aufforderungen und worauf Sie achten sollten – verständlich, klar und ohne komplizierte Fachsprache."
   />
   <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://www.briefhelden-service.de/behoerdenbrief-verstehen.html" />
@@ -14,10 +14,18 @@
   <meta property="og:title" content="Behördenbrief verstehen – einfach erklärt | BriefHelden" />
   <meta
     property="og:description"
-    content="Verstehen Sie Behördenbriefe einfacher. BriefHelden erklärt amtliche Schreiben klar und verständlich."
+    content="Behördenbrief einfach erklärt. Verstehen Sie Fristen, Aufforderungen und die wichtigsten Punkte schnell und verständlich."
   />
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
 <meta property="og:url" content="https://www.briefhelden-service.de/behoerdenbrief-verstehen.html" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CVRQ9QBE94');
+  </script>
 
   <style>
     :root{
@@ -37,6 +45,7 @@
       --btnGreen2: #079455;
       --radius-xl: 24px;
       --radius-lg: 18px;
+      --radius-md: 14px;
       --max: 1120px;
     }
 
@@ -45,8 +54,8 @@
 
     body{
       margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: var(--text);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
       background:
         radial-gradient(1200px 700px at 12% 24%, rgba(120,180,255,.32), rgba(255,255,255,0) 60%),
         radial-gradient(1200px 800px at 88% 18%, rgba(120,140,255,.26), rgba(255,255,255,0) 62%),
@@ -61,15 +70,15 @@
       position:sticky;
       top:0;
       z-index:20;
-      background: var(--nav-bg);
-      backdrop-filter: blur(12px) saturate(140%);
-      border-bottom: 1px solid var(--nav-border);
+      background:var(--nav-bg);
+      backdrop-filter:blur(12px) saturate(140%);
+      border-bottom:1px solid var(--nav-border);
     }
 
     .nav{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 14px 18px;
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 18px;
       display:flex;
       align-items:center;
       justify-content:space-between;
@@ -93,7 +102,7 @@
       background:
         radial-gradient(circle at 30% 30%, rgba(255,255,255,.85), rgba(255,255,255,.08)),
         linear-gradient(180deg, rgba(55,120,255,.9), rgba(20,70,190,.9));
-      box-shadow: 0 10px 18px rgba(0,0,0,.18);
+      box-shadow:0 10px 18px rgba(0,0,0,.18);
       position:relative;
     }
 
@@ -102,8 +111,8 @@
       position:absolute;
       inset:7px 6px 7px 10px;
       border-radius:8px;
-      background: rgba(255,255,255,.85);
-      clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+      background:rgba(255,255,255,.85);
+      clip-path:polygon(0 0, 100% 0, 85% 100%, 0 100%);
       opacity:.12;
     }
 
@@ -115,47 +124,78 @@
     }
 
     nav.links a{
-      color: rgba(255,255,255,.82);
+      color:rgba(255,255,255,.82);
       font-weight:700;
       font-size:14px;
     }
 
     nav.links a:hover{color:#fff}
 
-    .hero{
+    .langWrap{
+      display:flex;
+      align-items:center;
+      gap:10px;
       position:relative;
-      color: var(--heroText);
-      padding: 74px 18px 44px;
-      background:
-        linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.58)),
-url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=2200&q=60");
-      background-size: cover;
-      background-position: center;
     }
 
-    .wrap{
-      max-width: var(--max);
-      margin:0 auto;
+    .langSelect{
+      appearance:none;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(0,0,0,.18);
+      color:#fff;
+      padding:8px 36px 8px 12px;
+      border-radius:12px;
+      font-weight:800;
+      cursor:pointer;
+      outline:none;
+    }
+
+    .langSelect:focus{
+      box-shadow:0 0 0 3px rgba(90,160,255,.25);
+    }
+
+    .langWrap:after{
+      content:"▾";
+      position:absolute;
+      right:12px;
+      top:50%;
+      transform:translateY(-50%);
+      color:rgba(255,255,255,.85);
+      pointer-events:none;
+      font-size:12px;
+    }
+
+    .hero{
+      position:relative;
+      color:var(--heroText);
+      padding:68px 18px 40px;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.58)),
+url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=2200&q=60");
+      background-size:cover;
+      background-position:center;
     }
 
     .hero .wrap{
+      max-width:var(--max);
+      margin:0 auto;
       text-align:center;
     }
 
     .hero h1{
-      margin:0 0 12px;
+      margin:0 0 10px;
       font-weight:950;
-      font-size: clamp(30px, 3.7vw, 48px);
+      font-size:clamp(30px, 3.7vw, 48px);
       letter-spacing:.2px;
-      text-shadow: 0 10px 24px rgba(0,0,0,.35);
+      text-shadow:0 10px 24px rgba(0,0,0,.35);
     }
 
     .hero p{
       margin:0 auto 18px;
       max-width:860px;
-      color: var(--heroMuted);
-      font-size: clamp(15px, 2vw, 18px);
-      line-height:1.6;
+      color:var(--heroMuted);
+      font-size:clamp(15px, 2vw, 18px);
+      line-height:1.55;
     }
 
     .ctaGroup{
@@ -163,7 +203,7 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       gap:14px;
       justify-content:center;
       flex-wrap:wrap;
-      margin-top: 8px;
+      margin-top:8px;
     }
 
     .cta{
@@ -171,153 +211,181 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       align-items:center;
       justify-content:center;
       gap:10px;
-      padding: 14px 20px;
+      padding:14px 20px;
       border-radius:16px;
       color:#fff;
       font-weight:950;
-      box-shadow: 0 18px 38px rgba(0,0,0,.28);
-      border: 1px solid rgba(255,255,255,.20);
+      box-shadow:0 18px 38px rgba(0,0,0,.28);
+      border:1px solid rgba(255,255,255,.20);
       min-width:min(560px, 92vw);
+      text-align:center;
     }
 
-    .cta.primary{background: linear-gradient(180deg, var(--btn1), var(--btn2));}
-    .cta.secondary{background: linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2));}
+    .cta.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
+    .cta.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
     .cta:hover{filter:brightness(1.05)}
 
-    .section{padding: 26px 18px 10px}
+    .heroMeta{
+      margin-top:14px;
+      display:flex;
+      gap:14px;
+      justify-content:center;
+      flex-wrap:wrap;
+      color:rgba(255,255,255,.86);
+      font-weight:700;
+      font-size:13px;
+    }
+
+    .heroMeta span{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.12);
+      backdrop-filter:blur(10px);
+    }
+
+    .section{padding:26px 18px 10px}
+    .wrap{max-width:var(--max); margin:0 auto;}
 
     .glassCard{
-      background: linear-gradient(180deg, var(--glass), var(--glass2));
-      border: 1px solid var(--stroke);
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(14px) saturate(140%);
-      -webkit-backdrop-filter: blur(14px) saturate(140%);
+      background:linear-gradient(180deg, var(--glass), var(--glass2));
+      border:1px solid var(--stroke);
+      border-radius:var(--radius-xl);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(14px) saturate(140%);
+      -webkit-backdrop-filter:blur(14px) saturate(140%);
       overflow:hidden;
     }
 
     .pad{padding:22px}
 
-    .headline{
+    .headline,
+    .sectionTitle{
       text-align:center;
       margin:0 0 10px;
       font-weight:950;
-      font-size: clamp(22px, 2.6vw, 34px);
+      font-size:clamp(22px, 2.6vw, 34px);
+      letter-spacing:.2px;
     }
 
-    .lead{
+    .lead,
+    .sectionSub{
       text-align:center;
       margin:0 auto 16px;
       max-width:920px;
-      color: rgba(11,18,32,.76);
-      line-height:1.75;
+      color:rgba(11,18,32,.76);
+      line-height:1.7;
       font-size:16px;
     }
 
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap:14px;
-    }
-
-    .card, .faqItem, .relatedCard{
-      border-radius: var(--radius-lg);
-      border: 1px solid rgba(255,255,255,.55);
-      background: rgba(255,255,255,.20);
-      padding: 16px;
-    }
-
-    .card h2, .card h3, .faqItem h3, .relatedCard h3{
-      margin:0 0 8px;
-      font-size:20px;
-      font-weight:950;
-    }
-
-    .card p, .card li, .faqItem p, .relatedCard p{
-      color: rgba(11,18,32,.78);
-      line-height:1.7;
-      font-weight:700;
-      margin:0;
-    }
-
-    .card ul{
-      margin:10px 0 0;
-      padding-left:18px;
-    }
-
-    .infoBox{
-      margin-top:14px;
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,.55);
-      background: rgba(255,255,255,.18);
-      padding:16px;
-    }
-
-    .infoBox p{
-      margin:0;
-      color: rgba(11,18,32,.78);
-      line-height:1.75;
-      font-weight:700;
-    }
-
-    .faqGrid, .relatedGrid{
+    .grid2{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:14px;
     }
 
-    .buttonRow{
-      display:flex;
-      gap:14px;
-      justify-content:center;
-      flex-wrap:wrap;
-      margin-top:18px;
+    .infoCard,
+    .faqItem{
+      border-radius:var(--radius-lg);
+      border:1px solid rgba(255,255,255,.55);
+      background:rgba(255,255,255,.20);
+      padding:18px;
     }
 
-    .serviceBtn{
+    .infoCard h3,
+    .faqItem h3{
+      margin:0 0 10px;
+      font-size:22px;
+      font-weight:950;
+    }
+
+    .faqItem h3{
+      font-size:18px;
+      margin-bottom:8px;
+    }
+
+    .infoCard p,
+    .infoCard li,
+    .faqItem p{
+      color:rgba(11,18,32,.76);
+      line-height:1.65;
+      font-weight:700;
+      margin:0;
+    }
+
+    .infoCard p + p{margin-top:12px;}
+
+    .infoCard ul{
+      margin:0;
+      padding-left:18px;
+    }
+
+    .faqGrid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+
+    .serviceMini{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      margin-top:16px;
+    }
+
+    .serviceMini .box{
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.55);
+      background:rgba(255,255,255,.20);
+      padding:18px;
+      text-align:center;
+    }
+
+    .serviceMini .box h3{
+      margin:0 0 8px;
+      font-size:20px;
+      font-weight:950;
+    }
+
+    .serviceMini .box p{
+      margin:0;
+      color:rgba(11,18,32,.74);
+      line-height:1.55;
+      font-weight:700;
+    }
+
+    .miniBtn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
       gap:8px;
-      padding: 12px 18px;
-      border-radius: 14px;
+      margin-top:14px;
+      padding:12px 18px;
+      border-radius:14px;
       color:#fff;
       font-weight:900;
-      min-width:240px;
-      box-shadow: 0 10px 24px rgba(0,0,0,.16);
-    }
-
-    .serviceBtn.primary{background: linear-gradient(180deg, var(--btn1), var(--btn2));}
-    .serviceBtn.secondary{background: linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2));}
-
-    .disclaimer{
-      margin-top:14px;
+      min-width:220px;
+      box-shadow:0 10px 24px rgba(0,0,0,.16);
       text-align:center;
-      font-weight:800;
-      color: rgba(11,18,32,.72);
     }
 
-    .relatedCard{
-      display:block;
-      transition: transform .18s ease, background .18s ease;
-    }
-
-    .relatedCard:hover{
-      transform: translateY(-2px);
-      background: rgba(255,255,255,.32);
-    }
+    .miniBtn.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
+    .miniBtn.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
 
     footer{
-      margin-top: 18px;
-      padding: 18px 18px 28px;
-      color: rgba(255,255,255,.82);
-      background: rgba(9,24,33,.82);
-      border-top: 1px solid rgba(255,255,255,.10);
-      backdrop-filter: blur(12px) saturate(140%);
+      margin-top:18px;
+      padding:18px 18px 28px;
+      color:rgba(255,255,255,.82);
+      background:rgba(9,24,33,.82);
+      border-top:1px solid rgba(255,255,255,.10);
+      backdrop-filter:blur(12px) saturate(140%);
     }
 
     .footWrap{
-      max-width: var(--max);
+      max-width:var(--max);
       margin:0 auto;
       display:flex;
       justify-content:space-between;
@@ -333,14 +401,16 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       font-weight:800;
     }
 
-    .footLinks a{color: rgba(255,255,255,.80)}
+    .footLinks a{color:rgba(255,255,255,.80)}
     .footLinks a:hover{color:#fff}
 
-    @media (max-width: 900px){
+    @media (max-width:900px){
       nav.links{display:none}
-      .grid, .faqGrid, .relatedGrid{grid-template-columns:1fr}
+      .grid2,
+      .faqGrid,
+      .serviceMini{grid-template-columns:1fr}
       .cta{min-width:92vw}
-      .serviceBtn{min-width:100%}
+      .miniBtn{min-width:100%}
     }
   </style>
 </head>
@@ -353,33 +423,48 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       </div>
 
       <nav class="links" aria-label="Hauptnavigation">
-        <a href="index.html">Startseite</a>
-        <a href="widerruf.html">Widerruf und Rückerstattung</a>
-        <a href="impressum.html">Impressum</a>
-        <a href="agb.html">AGB</a>
-        <a href="datenschutz.html">Datenschutz</a>
+        <a href="index.html" data-i18n="nav_home">Startseite</a>
+        <a href="frage.html" data-i18n="nav_question">Frage stellen</a>
+        <a href="widerruf.html" data-i18n="nav_refund">Widerruf</a>
+        <a href="impressum.html" data-i18n="nav_imprint">Impressum</a>
+        <a href="agb.html" data-i18n="nav_terms">AGB</a>
+        <a href="datenschutz.html" data-i18n="nav_privacy">Datenschutz</a>
       </nav>
+
+      <div class="langWrap">
+        <select class="langSelect" id="langSelect" aria-label="Sprache">
+          <option value="de">DE</option>
+          <option value="en">EN</option>
+          <option value="tr">TR</option>
+          <option value="ru">RU</option>
+        </select>
+      </div>
     </div>
   </header>
 
   <section class="hero">
     <div class="wrap">
-      <h1>Behördenbrief verstehen – einfach und klar erklärt</h1>
-      <p>
-        Schreiben von Behörden sind oft kompliziert formuliert. BriefHelden hilft Ihnen,
-        amtliche Briefe einfacher zu verstehen – verständlich, diskret und ohne komplizierte Sprache.
+      <h1 data-i18n="hero_title">Behördenbrief verstehen</h1>
+      <p data-i18n="hero_sub">
+        Ein Behördenbrief ist oft kompliziert und schwer verständlich. BriefHelden erklärt Ihnen den Inhalt einfach, klar und verständlich.
       </p>
 
       <div class="ctaGroup">
-<a class="cta primary" href="https://buy.stripe.com/14A9ASbhP2c083deR74sE00" rel="noopener">
-          <span>Jetzt verständliche Erklärung erhalten – 6,90 €</span>
+        <a class="cta primary" id="stripeBtn" href="#" rel="noopener">
+          <span data-i18n="hero_cta">Jetzt Behördenbrief erklären lassen – 6,90 €</span>
           <span aria-hidden="true">›</span>
         </a>
 
-<a class="cta secondary" href="https://buy.stripe.com/8x228q71z5occjt4ct4sE04" rel="noopener">
-          <span>Kurze Frage stellen – 1,49 €</span>
+        <a class="cta secondary" id="questionBtn" href="#" rel="noopener">
+          <span data-i18n="hero_question_cta">Kurze Frage stellen – 1,49 €</span>
           <span aria-hidden="true">›</span>
         </a>
+      </div>
+
+      <div class="heroMeta" aria-label="Kurzvorteile">
+        <span>✅ <span data-i18n="meta_1">Einfach erklärt</span></span>
+        <span>⚡ <span data-i18n="meta_2">Schnelle Rückmeldung</span></span>
+        <span>🔒 <span data-i18n="meta_3">Vertraulich</span></span>
       </div>
     </div>
   </section>
@@ -388,85 +473,57 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
     <div class="wrap">
       <div class="glassCard">
         <div class="pad">
-          <div class="headline">Was ist ein Behördenbrief?</div>
-          <p class="lead">
-            Ein Behördenbrief ist ein offizielles Schreiben von einer staatlichen oder kommunalen Stelle.
-            Dazu gehören zum Beispiel Briefe vom Jobcenter, vom Finanzamt, von der Familienkasse,
-            von der Stadt oder von anderen Ämtern. Solche Schreiben enthalten oft Fristen, Hinweise,
-            Nachweise oder Aufforderungen, die man nicht falsch verstehen sollte.
+          <h2 class="headline" data-i18n="intro_title">Was ist ein Behördenbrief?</h2>
+          <p class="lead" data-i18n="intro_text">
+            Ein Behördenbrief ist ein offizielles Schreiben von einer staatlichen Stelle oder einem Amt. Darin können Fristen, Aufforderungen, Bescheide, Nachweise oder Entscheidungen stehen. Viele Menschen wissen nicht genau, was das Schreiben bedeutet und ob sie etwas tun müssen. Genau dabei hilft BriefHelden.
           </p>
 
-          <div class="grid">
-            <div class="card">
-              <h2>Warum sind Behördenbriefe oft so schwer?</h2>
-              <p>
-                Viele amtliche Schreiben sind sehr formell geschrieben. Oft kommen schwierige Begriffe,
-                lange Sätze oder Paragraphen vor. Deshalb ist für viele Menschen nicht sofort klar:
+          <div class="grid2">
+            <div class="infoCard">
+              <h3 data-i18n="left_title">Einfach erklärt</h3>
+              <p data-i18n="left_text_1">
+                In einem Behördenbrief geht es oft um Anträge, Nachweise, Fristen, Entscheidungen oder Rückmeldungen von einem Amt.
               </p>
-              <ul>
-                <li>worum es überhaupt geht,</li>
-                <li>ob jetzt etwas getan werden muss,</li>
-                <li>welche Frist wichtig ist,</li>
-                <li>und welche Angaben besonders beachtet werden sollten.</li>
-              </ul>
+              <p data-i18n="left_text_2">
+                Wichtig sind dabei vor allem: Von welcher Behörde kommt das Schreiben? Gibt es eine Frist? Werden Unterlagen verlangt? Müssen Sie reagieren?
+              </p>
+              <p data-i18n="left_text_3">
+                BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie das Schreiben besser einordnen können.
+              </p>
             </div>
 
-            <div class="card">
-              <h2>Wie hilft BriefHelden?</h2>
-              <p>
-                BriefHelden erklärt Behördenbriefe in einfacher Sprache. So verstehen Sie schneller:
-              </p>
+            <div class="infoCard">
+              <h3 data-i18n="right_title">So funktioniert es</h3>
               <ul>
-                <li>wer Ihnen geschrieben hat,</li>
-                <li>welche Information oder Forderung im Brief steht,</li>
-                <li>welche Daten oder Unterlagen wichtig sind,</li>
-                <li>und welche Punkte im Schreiben besonders auffallen.</li>
+                <li data-i18n="right_li_1">Behördenbrief sicher hochladen</li>
+                <li data-i18n="right_li_2">Wir lesen den Inhalt und erklären ihn verständlich</li>
+                <li data-i18n="right_li_3">Sie erhalten die Erklärung per E-Mail</li>
+                <li data-i18n="right_li_4">Keine Rechtsberatung – nur verständliche Texterklärung</li>
               </ul>
             </div>
           </div>
 
-          <div class="infoBox">
-            <p>
-              Wichtig: BriefHelden bietet keine Rechtsberatung. Sie erhalten eine verständliche
-              Texterklärung des Inhalts, damit Sie das Schreiben besser einordnen können.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div style="height:18px"></div>
-
-      <div class="glassCard">
-        <div class="pad">
-          <div class="headline">Typische Beispiele für Behördenbriefe</div>
-
-          <div class="grid">
-            <div class="card">
-              <h3>Jobcenter Schreiben</h3>
-              <p>
-                Zum Beispiel Bescheide, Einladungen, Aufforderungen zur Mitwirkung oder Nachfragen zu Unterlagen.
+          <div class="serviceMini">
+            <div class="box">
+              <h3 data-i18n="service1_title">Komplettes Schreiben erklären lassen</h3>
+              <p data-i18n="service1_text">
+                Ideal, wenn Sie den ganzen Behördenbrief vollständig verstehen möchten.
               </p>
+              <a class="miniBtn primary" id="servicePrimaryBtn" href="#" rel="noopener">
+                <span data-i18n="service1_btn">Jetzt für 6,90 € starten</span>
+                <span aria-hidden="true">›</span>
+              </a>
             </div>
 
-            <div class="card">
-              <h3>Finanzamt Briefe</h3>
-              <p>
-                Zum Beispiel Bescheide, Rückfragen, Nachweise oder Zahlungsinformationen.
+            <div class="box">
+              <h3 data-i18n="service2_title">Kurze Rückfrage stellen</h3>
+              <p data-i18n="service2_text">
+                Ideal, wenn Sie nur eine kurze Frage zu Frist, Inhalt oder Unterlagen haben.
               </p>
-            </div>
-
-            <div class="card">
-              <h3>Schreiben von Stadt oder Gemeinde</h3>
-              <p>
-                Zum Beispiel Gebühren, Meldesachen, Formulare oder allgemeine amtliche Informationen.
-              </p>
-            </div>
-
-            <div class="card">
-              <h3>Familienkasse oder andere Stellen</h3>
-              <p>
-                Zum Beispiel Nachweise, Entscheidungen, Fristen oder Rückfragen zu Anträgen.
-              </p>
+              <a class="miniBtn secondary" id="serviceQuestionBtn" href="#" rel="noopener">
+                <span data-i18n="service2_btn">Jetzt für 1,49 € fragen</span>
+                <span aria-hidden="true">›</span>
+              </a>
             </div>
           </div>
         </div>
@@ -476,90 +533,39 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
 
       <div class="glassCard">
         <div class="pad">
-          <div class="headline">Was sollten Sie zuerst prüfen?</div>
-
-          <div class="grid">
-            <div class="card">
-              <h3>1. Wer ist der Absender?</h3>
-              <p>
-                Prüfen Sie zuerst, von welcher Behörde das Schreiben kommt.
-              </p>
-            </div>
-
-            <div class="card">
-              <h3>2. Gibt es eine Frist?</h3>
-              <p>
-                Achten Sie auf Daten, Termine oder Fristen. Diese sind oft besonders wichtig.
-              </p>
-            </div>
-
-            <div class="card">
-              <h3>3. Werden Unterlagen verlangt?</h3>
-              <p>
-                Häufig fordert eine Behörde bestimmte Nachweise, Formulare oder Angaben.
-              </p>
-            </div>
-
-            <div class="card">
-              <h3>4. Worum geht es insgesamt?</h3>
-              <p>
-                Handelt es sich um eine Information, einen Bescheid, eine Aufforderung oder eine Rückfrage?
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div style="height:18px"></div>
-
-      <div class="glassCard">
-        <div class="pad">
-          <div class="headline">Häufige Fragen zu Behördenbriefen</div>
+          <h2 class="sectionTitle" data-i18n="faq_title">Häufige Fragen zu Behördenbriefen</h2>
+          <p class="sectionSub" data-i18n="faq_sub">
+            Diese Fragen tauchen bei solchen Schreiben besonders oft auf:
+          </p>
 
           <div class="faqGrid">
             <div class="faqItem">
-              <h3>Kann BriefHelden einen Behördenbrief erklären?</h3>
-              <p>
-                Ja. BriefHelden hilft dabei, den Inhalt in einfacher Sprache verständlich zu machen.
+              <h3 data-i18n="faq1_q">Muss ich auf einen Behördenbrief reagieren?</h3>
+              <p data-i18n="faq1_a">
+                Das hängt vom Inhalt des Schreibens ab. Oft sind Fristen, Nachweise oder Rückmeldungen wichtig. BriefHelden hilft Ihnen, diese Angaben verständlich zu erkennen.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3>Kann ich auch Formulare von Behörden hochladen?</h3>
-              <p>
-                Ja. Auch Formulare, Bescheide oder andere amtliche Schreiben können erklärt werden.
+              <h3 data-i18n="faq2_q">Sind Fristen in Behördenbriefen wichtig?</h3>
+              <p data-i18n="faq2_a">
+                Ja, Fristen sind oft besonders wichtig. Deshalb sollte man genau prüfen, ob ein Datum oder eine Reaktionszeit genannt wird.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3>Ist das eine Rechtsberatung?</h3>
-              <p>
-                Nein. Sie erhalten keine rechtliche Prüfung, sondern eine klare Erklärung des Inhalts.
+              <h3 data-i18n="faq3_q">Was ist bei einem Behördenbrief besonders wichtig?</h3>
+              <p data-i18n="faq3_a">
+                Besonders wichtig sind Absender, Fristen, geforderte Unterlagen, der Grund des Schreibens und mögliche nächste Schritte.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3>Welcher Service ist sinnvoll?</h3>
-              <p>
-                Für die Erklärung eines ganzen Dokuments ist der 6,90 € Service passend. Für eine kurze Rückfrage der 1,49 € Service.
+              <h3 data-i18n="faq4_q">Ist BriefHelden eine Rechtsberatung?</h3>
+              <p data-i18n="faq4_a">
+                Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.
               </p>
             </div>
-          </div>
-
-          <div class="buttonRow">
-<a class="serviceBtn primary" href="https://buy.stripe.com/14A9ASbhP2c083deR74sE00" rel="noopener">
-              <span>Jetzt Behördenbrief erklären lassen</span>
-              <span aria-hidden="true">›</span>
-            </a>
-
-<a class="serviceBtn secondary" href="https://buy.stripe.com/8x228q71z5occjt4ct4sE04" rel="noopener">
-              <span>Jetzt kurze Frage stellen</span>
-              <span aria-hidden="true">›</span>
-            </a>
-          </div>
-
-          <div class="disclaimer">
-            Keine Rechtsberatung – nur verständliche Texterklärung.
           </div>
         </div>
       </div>
@@ -568,28 +574,39 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
 
       <div class="glassCard">
         <div class="pad">
-          <div class="headline">Verwandte Themen</div>
+          <h2 class="sectionTitle" data-i18n="tip_title">Worauf sollten Sie bei einem Behördenbrief achten?</h2>
+          <p class="sectionSub" data-i18n="tip_sub">
+            Diese Punkte sind oft besonders wichtig:
+          </p>
 
-          <div class="relatedGrid">
-            <a class="relatedCard" href="jobcenter-brief-verstehen.html">
-              <h3>Jobcenter Brief verstehen</h3>
-              <p>Schreiben vom Jobcenter einfach erklärt.</p>
-            </a>
+          <div class="faqGrid">
+            <div class="faqItem">
+              <h3 data-i18n="tip1_title">Frist prüfen</h3>
+              <p data-i18n="tip1_text">
+                Achten Sie darauf, ob im Schreiben eine Frist genannt wird oder bis wann etwas erledigt werden soll.
+              </p>
+            </div>
 
-            <a class="relatedCard" href="mahnung-verstehen.html">
-              <h3>Mahnung verstehen</h3>
-              <p>Mahnungen und Fristen besser einordnen.</p>
-            </a>
+            <div class="faqItem">
+              <h3 data-i18n="tip2_title">Absender ansehen</h3>
+              <p data-i18n="tip2_text">
+                Prüfen Sie, von welchem Amt oder welcher Behörde das Schreiben kommt.
+              </p>
+            </div>
 
-            <a class="relatedCard" href="inkasso-brief-verstehen.html">
-              <h3>Inkasso Brief verstehen</h3>
-              <p>Inkasso Schreiben verständlich erklärt.</p>
-            </a>
+            <div class="faqItem">
+              <h3 data-i18n="tip3_title">Unterlagen prüfen</h3>
+              <p data-i18n="tip3_text">
+                Schauen Sie, ob Nachweise, Formulare oder andere Unterlagen verlangt werden.
+              </p>
+            </div>
 
-            <a class="relatedCard" href="brief-verstehen.html">
-              <h3>Brief verstehen</h3>
-              <p>Allgemeine Hilfe für komplizierte Briefe und Schreiben.</p>
-            </a>
+            <div class="faqItem">
+              <h3 data-i18n="tip4_title">Inhalt verständlich machen</h3>
+              <p data-i18n="tip4_text">
+                Wenn das Schreiben schwer verständlich ist, hilft eine einfache Erklärung oft sofort weiter.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -600,13 +617,345 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
     <div class="footWrap">
       <div>© 2026 BriefHelden – Alle Rechte vorbehalten</div>
       <div class="footLinks">
-        <a href="index.html">Startseite</a>
-        <a href="widerruf.html">Widerruf</a>
-        <a href="impressum.html">Impressum</a>
-        <a href="agb.html">AGB</a>
-        <a href="datenschutz.html">Datenschutz</a>
+        <a href="index.html" data-i18n="foot_home">Startseite</a>
+        <a href="frage.html" data-i18n="foot_question">Frage stellen</a>
+        <a href="widerruf.html" data-i18n="foot_refund">Widerruf</a>
+        <a href="impressum.html" data-i18n="foot_imprint">Impressum</a>
+        <a href="agb.html" data-i18n="foot_terms">AGB</a>
+        <a href="datenschutz.html" data-i18n="foot_privacy">Datenschutz</a>
       </div>
     </div>
   </footer>
+
+  <script>
+    const STRIPE_LINKS = {
+de: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
+en: "https://buy.stripe.com/fZubJ0dpXbMAbfpcIZ4sE01",
+tr: "https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
+ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
+    };
+
+    const QUESTION_LINKS = {
+de: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
+en: "https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
+tr: "https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
+ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
+    };
+
+    const i18n = {
+      de: {
+        nav_home: "Startseite",
+        nav_question: "Frage stellen",
+        nav_refund: "Widerruf",
+        nav_imprint: "Impressum",
+        nav_terms: "AGB",
+        nav_privacy: "Datenschutz",
+
+        hero_title: "Behördenbrief verstehen",
+        hero_sub: "Ein Behördenbrief ist oft kompliziert und schwer verständlich. BriefHelden erklärt Ihnen den Inhalt einfach, klar und verständlich.",
+        hero_cta: "Jetzt Behördenbrief erklären lassen – 6,90 €",
+        hero_question_cta: "Kurze Frage stellen – 1,49 €",
+        meta_1: "Einfach erklärt",
+        meta_2: "Schnelle Rückmeldung",
+        meta_3: "Vertraulich",
+
+        intro_title: "Was ist ein Behördenbrief?",
+        intro_text: "Ein Behördenbrief ist ein offizielles Schreiben von einer staatlichen Stelle oder einem Amt. Darin können Fristen, Aufforderungen, Bescheide, Nachweise oder Entscheidungen stehen. Viele Menschen wissen nicht genau, was das Schreiben bedeutet und ob sie etwas tun müssen. Genau dabei hilft BriefHelden.",
+
+        left_title: "Einfach erklärt",
+        left_text_1: "In einem Behördenbrief geht es oft um Anträge, Nachweise, Fristen, Entscheidungen oder Rückmeldungen von einem Amt.",
+        left_text_2: "Wichtig sind dabei vor allem: Von welcher Behörde kommt das Schreiben? Gibt es eine Frist? Werden Unterlagen verlangt? Müssen Sie reagieren?",
+        left_text_3: "BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie das Schreiben besser einordnen können.",
+
+        right_title: "So funktioniert es",
+        right_li_1: "Behördenbrief sicher hochladen",
+        right_li_2: "Wir lesen den Inhalt und erklären ihn verständlich",
+        right_li_3: "Sie erhalten die Erklärung per E-Mail",
+        right_li_4: "Keine Rechtsberatung – nur verständliche Texterklärung",
+
+        service1_title: "Komplettes Schreiben erklären lassen",
+        service1_text: "Ideal, wenn Sie den ganzen Behördenbrief vollständig verstehen möchten.",
+        service1_btn: "Jetzt für 6,90 € starten",
+
+        service2_title: "Kurze Rückfrage stellen",
+        service2_text: "Ideal, wenn Sie nur eine kurze Frage zu Frist, Inhalt oder Unterlagen haben.",
+        service2_btn: "Jetzt für 1,49 € fragen",
+
+        faq_title: "Häufige Fragen zu Behördenbriefen",
+        faq_sub: "Diese Fragen tauchen bei solchen Schreiben besonders oft auf:",
+        faq1_q: "Muss ich auf einen Behördenbrief reagieren?",
+        faq1_a: "Das hängt vom Inhalt des Schreibens ab. Oft sind Fristen, Nachweise oder Rückmeldungen wichtig. BriefHelden hilft Ihnen, diese Angaben verständlich zu erkennen.",
+        faq2_q: "Sind Fristen in Behördenbriefen wichtig?",
+        faq2_a: "Ja, Fristen sind oft besonders wichtig. Deshalb sollte man genau prüfen, ob ein Datum oder eine Reaktionszeit genannt wird.",
+        faq3_q: "Was ist bei einem Behördenbrief besonders wichtig?",
+        faq3_a: "Besonders wichtig sind Absender, Fristen, geforderte Unterlagen, der Grund des Schreibens und mögliche nächste Schritte.",
+        faq4_q: "Ist BriefHelden eine Rechtsberatung?",
+        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.",
+
+        tip_title: "Worauf sollten Sie bei einem Behördenbrief achten?",
+        tip_sub: "Diese Punkte sind oft besonders wichtig:",
+        tip1_title: "Frist prüfen",
+        tip1_text: "Achten Sie darauf, ob im Schreiben eine Frist genannt wird oder bis wann etwas erledigt werden soll.",
+        tip2_title: "Absender ansehen",
+        tip2_text: "Prüfen Sie, von welchem Amt oder welcher Behörde das Schreiben kommt.",
+        tip3_title: "Unterlagen prüfen",
+        tip3_text: "Schauen Sie, ob Nachweise, Formulare oder andere Unterlagen verlangt werden.",
+        tip4_title: "Inhalt verständlich machen",
+        tip4_text: "Wenn das Schreiben schwer verständlich ist, hilft eine einfache Erklärung oft sofort weiter.",
+
+        foot_home: "Startseite",
+        foot_question: "Frage stellen",
+        foot_refund: "Widerruf",
+        foot_imprint: "Impressum",
+        foot_terms: "AGB",
+        foot_privacy: "Datenschutz"
+      },
+
+      en: {
+        nav_home: "Home",
+        nav_question: "Ask a question",
+        nav_refund: "Withdrawal",
+        nav_imprint: "Imprint",
+        nav_terms: "Terms",
+        nav_privacy: "Privacy",
+
+        hero_title: "Understand an authority letter",
+        hero_sub: "An official authority letter is often complicated and difficult to understand. BriefHelden explains the content simply, clearly and understandably.",
+        hero_cta: "Get authority letter explained now – €6.90",
+        hero_question_cta: "Ask a short question – €1.49",
+        meta_1: "Clearly explained",
+        meta_2: "Fast response",
+        meta_3: "Confidential",
+
+        intro_title: "What is an authority letter?",
+        intro_text: "An authority letter is an official document from a public office or authority. It may contain deadlines, requests, notices, required documents or decisions. Many people are unsure what the letter means and whether they need to do something. That is exactly where BriefHelden helps.",
+
+        left_title: "Simply explained",
+        left_text_1: "An authority letter often concerns applications, proof documents, deadlines, decisions or feedback from an office.",
+        left_text_2: "Important points are: Which authority sent the letter? Is there a deadline? Are documents required? Do you need to respond?",
+        left_text_3: "BriefHelden explains the content in simple language so you can better understand the letter.",
+
+        right_title: "How it works",
+        right_li_1: "Upload authority letter securely",
+        right_li_2: "We read the content and explain it clearly",
+        right_li_3: "You receive the explanation by email",
+        right_li_4: "No legal advice – plain-language explanation only",
+
+        service1_title: "Get the full document explained",
+        service1_text: "Ideal if you want to fully understand the entire authority letter.",
+        service1_btn: "Start now for €6.90",
+
+        service2_title: "Ask a short follow-up question",
+        service2_text: "Ideal if you only have a short question about deadline, content or documents.",
+        service2_btn: "Ask now for €1.49",
+
+        faq_title: "Frequently asked questions about authority letters",
+        faq_sub: "These questions often come up with this kind of document:",
+        faq1_q: "Do I have to respond to an authority letter?",
+        faq1_a: "That depends on the content of the letter. Deadlines, requested documents or replies are often important. BriefHelden helps you identify these details clearly.",
+        faq2_q: "Are deadlines in authority letters important?",
+        faq2_a: "Yes, deadlines are often especially important. That is why you should check carefully whether a date or response period is mentioned.",
+        faq3_q: "What is especially important in an authority letter?",
+        faq3_a: "Especially important are sender, deadlines, requested documents, the reason for the letter and possible next steps.",
+        faq4_q: "Is BriefHelden legal advice?",
+        faq4_a: "No. BriefHelden does not provide legal advice. You only receive a clear explanation of the content.",
+
+        tip_title: "What should you look for in an authority letter?",
+        tip_sub: "These points are often especially important:",
+        tip1_title: "Check the deadline",
+        tip1_text: "Pay attention to whether the letter mentions a deadline or by when something must be done.",
+        tip2_title: "Check the sender",
+        tip2_text: "See which office or authority sent the letter.",
+        tip3_title: "Review the documents",
+        tip3_text: "Check whether proof documents, forms or other papers are required.",
+        tip4_title: "Make the content understandable",
+        tip4_text: "If the letter is difficult to understand, a simple explanation often helps immediately.",
+
+        foot_home: "Home",
+        foot_question: "Ask a question",
+        foot_refund: "Withdrawal",
+        foot_imprint: "Imprint",
+        foot_terms: "Terms",
+        foot_privacy: "Privacy"
+      },
+
+      tr: {
+        nav_home: "Ana Sayfa",
+        nav_question: "Soru sor",
+        nav_refund: "Cayma",
+        nav_imprint: "Künye",
+        nav_terms: "Şartlar",
+        nav_privacy: "Gizlilik",
+
+        hero_title: "Resmi kurum mektubunu anlayın",
+        hero_sub: "Resmi kurumdan gelen bir mektup çoğu zaman karmaşık ve anlaşılması zor olur. BriefHelden içeriği size basit, açık ve anlaşılır şekilde açıklar.",
+        hero_cta: "Resmi kurum mektubunu şimdi açıklat – 6,90 €",
+        hero_question_cta: "Kısa soru sor – 1,49 €",
+        meta_1: "Basit açıklandı",
+        meta_2: "Hızlı dönüş",
+        meta_3: "Gizli",
+
+        intro_title: "Resmi kurum mektubu nedir?",
+        intro_text: "Resmi kurum mektubu, devlet kurumu veya resmi daire tarafından gönderilen resmi bir yazıdır. İçinde süreler, talepler, kararlar, belgeler veya başka resmi bilgiler olabilir. Birçok kişi mektubun ne anlama geldiğini ve bir şey yapması gerekip gerekmediğini tam bilmez. BriefHelden tam bu konuda yardımcı olur.",
+
+        left_title: "Basit açıklama",
+        left_text_1: "Resmi kurum mektubunda çoğu zaman başvurular, belgeler, süreler, kararlar veya kurumlardan gelen geri bildirimler yer alır.",
+        left_text_2: "Önemli noktalar şunlardır: Mektup hangi kurumdan geliyor? Süre var mı? Belgeler isteniyor mu? Cevap vermeniz gerekiyor mu?",
+        left_text_3: "BriefHelden içeriği basit dille açıklar, böylece mektubu daha iyi anlayabilirsiniz.",
+
+        right_title: "Nasıl çalışır",
+        right_li_1: "Resmi kurum mektubunu güvenli şekilde yükleyin",
+        right_li_2: "İçeriği okuyup açık şekilde açıklıyoruz",
+        right_li_3: "Açıklamayı e-posta ile alırsınız",
+        right_li_4: "Hukuki danışmanlık değil – sadece anlaşılır açıklama",
+
+        service1_title: "Belgenin tamamını açıklat",
+        service1_text: "Resmi kurum mektubunun tamamını anlamak istiyorsanız idealdir.",
+        service1_btn: "Şimdi 6,90 € ile başla",
+
+        service2_title: "Kısa bir soru sor",
+        service2_text: "Sadece süre, içerik veya belgelerle ilgili kısa bir sorunuz varsa idealdir.",
+        service2_btn: "Şimdi 1,49 € ile sor",
+
+        faq_title: "Resmi kurum mektupları hakkında sık sorulan sorular",
+        faq_sub: "Bu tür yazılarda şu sorular sıkça ortaya çıkar:",
+        faq1_q: "Resmi kurum mektubuna cevap vermek zorunda mıyım?",
+        faq1_a: "Bu, mektubun içeriğine bağlıdır. Çoğu zaman süreler, belgeler veya geri dönüşler önemlidir. BriefHelden bu bilgileri açık şekilde görmenize yardım eder.",
+        faq2_q: "Resmi kurum mektuplarında süreler önemli midir?",
+        faq2_a: "Evet, süreler çoğu zaman özellikle önemlidir. Bu yüzden bir tarih veya cevap süresi belirtilip belirtilmediği dikkatlice kontrol edilmelidir.",
+        faq3_q: "Bir resmi kurum mektubunda en önemli olan nedir?",
+        faq3_a: "Gönderen, süreler, istenen belgeler, mektubun nedeni ve olası sonraki adımlar özellikle önemlidir.",
+        faq4_q: "BriefHelden hukuki danışmanlık mı veriyor?",
+        faq4_a: "Hayır. BriefHelden hukuki danışmanlık vermez. Sadece içeriğin anlaşılır açıklamasını sunar.",
+
+        tip_title: "Bir resmi kurum mektubunda nelere dikkat etmelisiniz?",
+        tip_sub: "Bu noktalar genelde özellikle önemlidir:",
+        tip1_title: "Süreyi kontrol edin",
+        tip1_text: "Mektupta bir süre belirtilip belirtilmediğine veya bir şeyin ne zamana kadar yapılması gerektiğine bakın.",
+        tip2_title: "Göndereni inceleyin",
+        tip2_text: "Mektubun hangi kurum veya resmi daireden geldiğine bakın.",
+        tip3_title: "Belgeleri kontrol edin",
+        tip3_text: "Kanıt, form veya başka belgelerin istenip istenmediğine bakın.",
+        tip4_title: "İçeriği anlaşılır hale getirin",
+        tip4_text: "Mektubu anlamak zorsa, basit bir açıklama çoğu zaman hemen yardımcı olur.",
+
+        foot_home: "Ana Sayfa",
+        foot_question: "Soru sor",
+        foot_refund: "Cayma",
+        foot_imprint: "Künye",
+        foot_terms: "Şartlar",
+        foot_privacy: "Gizlilik"
+      },
+
+      ru: {
+        nav_home: "Главная",
+        nav_question: "Задать вопрос",
+        nav_refund: "Отказ",
+        nav_imprint: "Выходные данные",
+        nav_terms: "Условия",
+        nav_privacy: "Конфиденциальность",
+
+        hero_title: "Понять письмо от ведомства",
+        hero_sub: "Письмо от ведомства часто бывает сложным и трудным для понимания. BriefHelden объяснит содержание просто, ясно и понятно.",
+        hero_cta: "Объяснить письмо от ведомства – 6,90 €",
+        hero_question_cta: "Задать короткий вопрос – 1,49 €",
+        meta_1: "Просто объяснено",
+        meta_2: "Быстрый ответ",
+        meta_3: "Конфиденциально",
+
+        intro_title: "Что такое письмо от ведомства?",
+        intro_text: "Письмо от ведомства — это официальный документ от государственного органа или учреждения. В нём могут быть сроки, требования, решения, документы или другая официальная информация. Многие люди не понимают, что означает письмо и нужно ли им что-то делать. Именно здесь помогает BriefHelden.",
+
+        left_title: "Просто объясняем",
+        left_text_1: "В письме от ведомства часто речь идёт о заявлениях, подтверждающих документах, сроках, решениях или ответах от учреждения.",
+        left_text_2: "Особенно важно следующее: От какого ведомства письмо? Есть ли срок? Требуются ли документы? Нужно ли вам реагировать?",
+        left_text_3: "BriefHelden объясняет содержание простым языком, чтобы вам было легче понять письмо.",
+
+        right_title: "Как это работает",
+        right_li_1: "Безопасно загрузите письмо от ведомства",
+        right_li_2: "Мы читаем содержание и понятно объясняем его",
+        right_li_3: "Вы получаете объяснение по e-mail",
+        right_li_4: "Не юридическая консультация – только понятное объяснение",
+
+        service1_title: "Получить полное объяснение документа",
+        service1_text: "Идеально, если вы хотите полностью понять всё письмо от ведомства.",
+        service1_btn: "Начать за 6,90 €",
+
+        service2_title: "Задать короткий вопрос",
+        service2_text: "Идеально, если у вас только короткий вопрос о сроке, содержании или документах.",
+        service2_btn: "Спросить за 1,49 €",
+
+        faq_title: "Частые вопросы о письмах от ведомств",
+        faq_sub: "Эти вопросы особенно часто возникают по таким письмам:",
+        faq1_q: "Нужно ли реагировать на письмо от ведомства?",
+        faq1_a: "Это зависит от содержания письма. Часто важны сроки, документы или ответы. BriefHelden помогает вам увидеть эти данные понятнее.",
+        faq2_q: "Важны ли сроки в письмах от ведомств?",
+        faq2_a: "Да, сроки часто особенно важны. Поэтому важно внимательно проверить, указана ли дата или срок для ответа.",
+        faq3_q: "Что особенно важно в письме от ведомства?",
+        faq3_a: "Особенно важны отправитель, сроки, требуемые документы, причина письма и возможные дальнейшие шаги.",
+        faq4_q: "BriefHelden — это юридическая консультация?",
+        faq4_a: "Нет. BriefHelden не даёт юридических консультаций. Вы получаете только понятное объяснение содержания.",
+
+        tip_title: "На что стоит обратить внимание в письме от ведомства?",
+        tip_sub: "Эти пункты часто особенно важны:",
+        tip1_title: "Проверьте срок",
+        tip1_text: "Посмотрите, указан ли в письме срок или до какой даты нужно что-то сделать.",
+        tip2_title: "Посмотрите на отправителя",
+        tip2_text: "Проверьте, от какого ведомства или учреждения пришло письмо.",
+        tip3_title: "Проверьте документы",
+        tip3_text: "Посмотрите, требуются ли подтверждения, формы или другие документы.",
+        tip4_title: "Сделайте содержание понятным",
+        tip4_text: "Если письмо трудно понять, простое объяснение часто сразу помогает.",
+
+        foot_home: "Главная",
+        foot_question: "Задать вопрос",
+        foot_refund: "Отказ",
+        foot_imprint: "Выходные данные",
+        foot_terms: "Условия",
+        foot_privacy: "Конфиденциальность"
+      }
+    };
+
+    function updateLinks(lang){
+const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
+const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
+
+      const stripeBtn = document.getElementById("stripeBtn");
+      const servicePrimaryBtn = document.getElementById("servicePrimaryBtn");
+      const questionBtn = document.getElementById("questionBtn");
+      const serviceQuestionBtn = document.getElementById("serviceQuestionBtn");
+
+      if(stripeBtn) stripeBtn.href = mainLink;
+      if(servicePrimaryBtn) servicePrimaryBtn.href = mainLink;
+      if(questionBtn) questionBtn.href = questionLink;
+      if(serviceQuestionBtn) serviceQuestionBtn.href = questionLink;
+    }
+
+    function applyLang(lang){
+const dict = i18n[lang] || i18n.de;
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        if(key in dict){
+          el.textContent = dict[key];
+        }
+      });
+
+      updateLinks(lang);
+      localStorage.setItem("briefhelden_lang", lang);
+    }
+
+    const select = document.getElementById("langSelect");
+    const savedLang = localStorage.getItem("briefhelden_lang");
+    const initialLang = ["de","en","tr","ru"].includes(savedLang) ? savedLang : "de";
+
+    select.value = initialLang;
+    applyLang(initialLang);
+
+    select.addEventListener("change", () => {
+      applyLang(select.value);
+    });
+  </script>
 </body>
 </html>
