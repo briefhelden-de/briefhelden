@@ -1,0 +1,961 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rechnung verstehen – einfach erklärt | BriefHelden</title>
+  <meta
+    name="description"
+    content="Rechnung einfach verstehen: BriefHelden erklärt Beträge, Zahlungsziel, Rechnungsinhalt und wichtige Punkte klar, einfach und ohne komplizierte Fachsprache."
+  />
+  <meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://www.briefhelden-service.de/rechnung-verstehen.html" />
+
+  <meta property="og:title" content="Rechnung verstehen – einfach erklärt | BriefHelden" />
+  <meta
+    property="og:description"
+    content="Rechnung einfach erklärt. Verstehen Sie Beträge, Zahlungsziel und wichtige Angaben schnell und verständlich."
+  />
+  <meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.briefhelden-service.de/rechnung-verstehen.html" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CVRQ9QBE94');
+  </script>
+
+  <style>
+    :root{
+      --nav-bg: rgba(9,24,33,.78);
+      --nav-border: rgba(255,255,255,.10);
+      --text: #0b1220;
+      --muted: rgba(11,18,32,.72);
+      --heroText: #fff;
+      --heroMuted: rgba(255,255,255,.84);
+      --glass: rgba(255,255,255,.28);
+      --glass2: rgba(255,255,255,.16);
+      --stroke: rgba(255,255,255,.36);
+      --shadow: 0 18px 40px rgba(0,0,0,.18);
+      --btn1: #2f6fff;
+      --btn2: #1f56b8;
+      --btnGreen1: #12b76a;
+      --btnGreen2: #079455;
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --radius-md: 14px;
+      --max: 1120px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 12% 24%, rgba(120,180,255,.32), rgba(255,255,255,0) 60%),
+        radial-gradient(1200px 800px at 88% 18%, rgba(120,140,255,.26), rgba(255,255,255,0) 62%),
+        radial-gradient(1000px 700px at 50% 92%, rgba(170,210,255,.28), rgba(255,255,255,0) 60%),
+        linear-gradient(180deg, #f8fbff 0%, #eef6ff 45%, #f8fbff 100%);
+      min-height:100vh;
+    }
+
+    a{color:inherit;text-decoration:none}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:var(--nav-bg);
+      backdrop-filter:blur(12px) saturate(140%);
+      border-bottom:1px solid var(--nav-border);
+    }
+
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      color:#fff;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:900;
+      letter-spacing:.2px;
+      white-space:nowrap;
+    }
+
+    .brand .logo{
+      width:26px;
+      height:26px;
+      border-radius:10px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.85), rgba(255,255,255,.08)),
+        linear-gradient(180deg, rgba(55,120,255,.9), rgba(20,70,190,.9));
+      box-shadow:0 10px 18px rgba(0,0,0,.18);
+      position:relative;
+    }
+
+    .brand .logo:after{
+      content:"";
+      position:absolute;
+      inset:7px 6px 7px 10px;
+      border-radius:8px;
+      background:rgba(255,255,255,.85);
+      clip-path:polygon(0 0, 100% 0, 85% 100%, 0 100%);
+      opacity:.12;
+    }
+
+    nav.links{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    nav.links a{
+      color:rgba(255,255,255,.82);
+      font-weight:700;
+      font-size:14px;
+    }
+
+    nav.links a:hover{color:#fff}
+
+    .langWrap{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      position:relative;
+    }
+
+    .langSelect{
+      appearance:none;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(0,0,0,.18);
+      color:#fff;
+      padding:8px 36px 8px 12px;
+      border-radius:12px;
+      font-weight:800;
+      cursor:pointer;
+      outline:none;
+    }
+
+    .langSelect:focus{
+      box-shadow:0 0 0 3px rgba(90,160,255,.25);
+    }
+
+    .langWrap:after{
+      content:"▾";
+      position:absolute;
+      right:12px;
+      top:50%;
+      transform:translateY(-50%);
+      color:rgba(255,255,255,.85);
+      pointer-events:none;
+      font-size:12px;
+    }
+
+    .hero{
+      position:relative;
+      color:var(--heroText);
+      padding:68px 18px 40px;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.58)),
+url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=2200&q=60");
+      background-size:cover;
+      background-position:center;
+    }
+
+    .hero .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      text-align:center;
+    }
+
+    .hero h1{
+      margin:0 0 10px;
+      font-weight:950;
+      font-size:clamp(30px, 3.7vw, 48px);
+      letter-spacing:.2px;
+      text-shadow:0 10px 24px rgba(0,0,0,.35);
+    }
+
+    .hero p{
+      margin:0 auto 18px;
+      max-width:860px;
+      color:var(--heroMuted);
+      font-size:clamp(15px, 2vw, 18px);
+      line-height:1.55;
+    }
+
+    .ctaGroup{
+      display:flex;
+      gap:14px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:8px;
+    }
+
+    .cta{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:14px 20px;
+      border-radius:16px;
+      color:#fff;
+      font-weight:950;
+      box-shadow:0 18px 38px rgba(0,0,0,.28);
+      border:1px solid rgba(255,255,255,.20);
+      min-width:min(560px, 92vw);
+      text-align:center;
+    }
+
+    .cta.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
+    .cta.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
+    .cta:hover{filter:brightness(1.05)}
+
+    .heroMeta{
+      margin-top:14px;
+      display:flex;
+      gap:14px;
+      justify-content:center;
+      flex-wrap:wrap;
+      color:rgba(255,255,255,.86);
+      font-weight:700;
+      font-size:13px;
+    }
+
+    .heroMeta span{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.12);
+      backdrop-filter:blur(10px);
+    }
+
+    .section{padding:26px 18px 10px}
+    .wrap{max-width:var(--max); margin:0 auto;}
+
+    .glassCard{
+      background:linear-gradient(180deg, var(--glass), var(--glass2));
+      border:1px solid var(--stroke);
+      border-radius:var(--radius-xl);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(14px) saturate(140%);
+      -webkit-backdrop-filter:blur(14px) saturate(140%);
+      overflow:hidden;
+    }
+
+    .pad{padding:22px}
+
+    .headline,
+    .sectionTitle{
+      text-align:center;
+      margin:0 0 10px;
+      font-weight:950;
+      font-size:clamp(22px, 2.6vw, 34px);
+      letter-spacing:.2px;
+    }
+
+    .lead,
+    .sectionSub{
+      text-align:center;
+      margin:0 auto 16px;
+      max-width:920px;
+      color:rgba(11,18,32,.76);
+      line-height:1.7;
+      font-size:16px;
+    }
+
+    .grid2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+
+    .infoCard,
+    .faqItem{
+      border-radius:var(--radius-lg);
+      border:1px solid rgba(255,255,255,.55);
+      background:rgba(255,255,255,.20);
+      padding:18px;
+    }
+
+    .infoCard h3,
+    .faqItem h3{
+      margin:0 0 10px;
+      font-size:22px;
+      font-weight:950;
+    }
+
+    .faqItem h3{
+      font-size:18px;
+      margin-bottom:8px;
+    }
+
+    .infoCard p,
+    .infoCard li,
+    .faqItem p{
+      color:rgba(11,18,32,.76);
+      line-height:1.65;
+      font-weight:700;
+      margin:0;
+    }
+
+    .infoCard p + p{margin-top:12px;}
+
+    .infoCard ul{
+      margin:0;
+      padding-left:18px;
+    }
+
+    .faqGrid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+
+    .serviceMini{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      margin-top:16px;
+    }
+
+    .serviceMini .box{
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.55);
+      background:rgba(255,255,255,.20);
+      padding:18px;
+      text-align:center;
+    }
+
+    .serviceMini .box h3{
+      margin:0 0 8px;
+      font-size:20px;
+      font-weight:950;
+    }
+
+    .serviceMini .box p{
+      margin:0;
+      color:rgba(11,18,32,.74);
+      line-height:1.55;
+      font-weight:700;
+    }
+
+    .miniBtn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      margin-top:14px;
+      padding:12px 18px;
+      border-radius:14px;
+      color:#fff;
+      font-weight:900;
+      min-width:220px;
+      box-shadow:0 10px 24px rgba(0,0,0,.16);
+      text-align:center;
+    }
+
+    .miniBtn.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
+    .miniBtn.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
+
+    footer{
+      margin-top:18px;
+      padding:18px 18px 28px;
+      color:rgba(255,255,255,.82);
+      background:rgba(9,24,33,.82);
+      border-top:1px solid rgba(255,255,255,.10);
+      backdrop-filter:blur(12px) saturate(140%);
+    }
+
+    .footWrap{
+      max-width:var(--max);
+      margin:0 auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .footLinks{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      font-weight:800;
+    }
+
+    .footLinks a{color:rgba(255,255,255,.80)}
+    .footLinks a:hover{color:#fff}
+
+    @media (max-width:900px){
+      nav.links{display:none}
+      .grid2,
+      .faqGrid,
+      .serviceMini{grid-template-columns:1fr}
+      .cta{min-width:92vw}
+      .miniBtn{min-width:100%}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>BriefHelden</div>
+      </div>
+
+      <nav class="links" aria-label="Hauptnavigation">
+        <a href="index.html" data-i18n="nav_home">Startseite</a>
+        <a href="frage.html" data-i18n="nav_question">Frage stellen</a>
+        <a href="widerruf.html" data-i18n="nav_refund">Widerruf</a>
+        <a href="impressum.html" data-i18n="nav_imprint">Impressum</a>
+        <a href="agb.html" data-i18n="nav_terms">AGB</a>
+        <a href="datenschutz.html" data-i18n="nav_privacy">Datenschutz</a>
+      </nav>
+
+      <div class="langWrap">
+        <select class="langSelect" id="langSelect" aria-label="Sprache">
+          <option value="de">DE</option>
+          <option value="en">EN</option>
+          <option value="tr">TR</option>
+          <option value="ru">RU</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1 data-i18n="hero_title">Rechnung verstehen</h1>
+      <p data-i18n="hero_sub">
+        Eine Rechnung ist nicht immer sofort klar. BriefHelden erklärt Ihnen Inhalt, Beträge und wichtige Angaben einfach und verständlich.
+      </p>
+
+      <div class="ctaGroup">
+        <a class="cta primary" id="stripeBtn" href="#" rel="noopener">
+          <span data-i18n="hero_cta">Jetzt Rechnung erklären lassen – 6,90 €</span>
+          <span aria-hidden="true">›</span>
+        </a>
+
+        <a class="cta secondary" id="questionBtn" href="#" rel="noopener">
+          <span data-i18n="hero_question_cta">Kurze Frage stellen – 1,49 €</span>
+          <span aria-hidden="true">›</span>
+        </a>
+      </div>
+
+      <div class="heroMeta" aria-label="Kurzvorteile">
+        <span>✅ <span data-i18n="meta_1">Einfach erklärt</span></span>
+        <span>⚡ <span data-i18n="meta_2">Schnelle Rückmeldung</span></span>
+        <span>🔒 <span data-i18n="meta_3">Vertraulich</span></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="glassCard">
+        <div class="pad">
+          <h2 class="headline" data-i18n="intro_title">Was steht in einer Rechnung?</h2>
+          <p class="lead" data-i18n="intro_text">
+            In einer Rechnung stehen meist Leistungen, Produkte, Beträge, Rechnungsdatum und ein Zahlungsziel. Viele Menschen möchten verstehen, wie sich der Betrag zusammensetzt, ob zusätzliche Positionen enthalten sind und bis wann gezahlt werden soll. Genau dabei hilft BriefHelden.
+          </p>
+
+          <div class="grid2">
+            <div class="infoCard">
+              <h3 data-i18n="left_title">Einfach erklärt</h3>
+              <p data-i18n="left_text_1">
+                Eine Rechnung zeigt meistens, wofür Geld verlangt wird und wie hoch der Gesamtbetrag ist.
+              </p>
+              <p data-i18n="left_text_2">
+                Wichtig sind dabei vor allem: Wer hat die Rechnung geschickt? Welche Positionen sind aufgeführt? Gibt es Mehrwertsteuer, Zusatzkosten oder Gebühren? Bis wann soll gezahlt werden?
+              </p>
+              <p data-i18n="left_text_3">
+                BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie die Rechnung besser verstehen können.
+              </p>
+            </div>
+
+            <div class="infoCard">
+              <h3 data-i18n="right_title">So funktioniert es</h3>
+              <ul>
+                <li data-i18n="right_li_1">Rechnung sicher hochladen</li>
+                <li data-i18n="right_li_2">Wir lesen den Inhalt und erklären ihn verständlich</li>
+                <li data-i18n="right_li_3">Sie erhalten die Erklärung per E-Mail</li>
+                <li data-i18n="right_li_4">Keine Rechtsberatung – nur verständliche Texterklärung</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="serviceMini">
+            <div class="box">
+              <h3 data-i18n="service1_title">Komplettes Schreiben erklären lassen</h3>
+              <p data-i18n="service1_text">
+                Ideal, wenn Sie die ganze Rechnung vollständig verstehen möchten.
+              </p>
+              <a class="miniBtn primary" id="servicePrimaryBtn" href="#" rel="noopener">
+                <span data-i18n="service1_btn">Jetzt für 6,90 € starten</span>
+                <span aria-hidden="true">›</span>
+              </a>
+            </div>
+
+            <div class="box">
+              <h3 data-i18n="service2_title">Kurze Rückfrage stellen</h3>
+              <p data-i18n="service2_text">
+                Ideal, wenn Sie nur eine kurze Frage zu Betrag, Zahlungsziel oder Inhalt haben.
+              </p>
+              <a class="miniBtn secondary" id="serviceQuestionBtn" href="#" rel="noopener">
+                <span data-i18n="service2_btn">Jetzt für 1,49 € fragen</span>
+                <span aria-hidden="true">›</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:18px"></div>
+
+      <div class="glassCard">
+        <div class="pad">
+          <h2 class="sectionTitle" data-i18n="faq_title">Häufige Fragen zu Rechnungen</h2>
+          <p class="sectionSub" data-i18n="faq_sub">
+            Diese Fragen tauchen bei Rechnungen besonders oft auf:
+          </p>
+
+          <div class="faqGrid">
+            <div class="faqItem">
+              <h3 data-i18n="faq1_q">Was ist auf einer Rechnung besonders wichtig?</h3>
+              <p data-i18n="faq1_a">
+                Besonders wichtig sind Gesamtbetrag, einzelne Positionen, Rechnungsdatum, Zahlungsziel und der Absender der Rechnung.
+              </p>
+            </div>
+
+            <div class="faqItem">
+              <h3 data-i18n="faq2_q">Was bedeutet Zahlungsziel?</h3>
+              <p data-i18n="faq2_a">
+                Das Zahlungsziel zeigt, bis wann die Rechnung bezahlt werden soll. BriefHelden hilft Ihnen, solche Angaben klar zu erkennen.
+              </p>
+            </div>
+
+            <div class="faqItem">
+              <h3 data-i18n="faq3_q">Warum ist der Betrag höher als gedacht?</h3>
+              <p data-i18n="faq3_a">
+                Oft kommen Zusatzkosten, Versand, Gebühren oder Mehrwertsteuer hinzu. Eine verständliche Erklärung hilft beim Einordnen der Positionen.
+              </p>
+            </div>
+
+            <div class="faqItem">
+              <h3 data-i18n="faq4_q">Ist BriefHelden eine Rechtsberatung?</h3>
+              <p data-i18n="faq4_a">
+                Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:18px"></div>
+
+      <div class="glassCard">
+        <div class="pad">
+          <h2 class="sectionTitle" data-i18n="tip_title">Worauf sollten Sie bei einer Rechnung achten?</h2>
+          <p class="sectionSub" data-i18n="tip_sub">
+            Diese Punkte sind oft besonders wichtig:
+          </p>
+
+          <div class="faqGrid">
+            <div class="faqItem">
+              <h3 data-i18n="tip1_title">Beträge prüfen</h3>
+              <p data-i18n="tip1_text">
+                Schauen Sie, wie sich der Gesamtbetrag zusammensetzt und ob Zusatzkosten oder Steuer aufgeführt sind.
+              </p>
+            </div>
+
+            <div class="faqItem">
+              <h3 data-i18n="tip2_title">Zahlungsziel beachten</h3>
+              <p data-i18n="tip2_text">
+                Prüfen Sie, bis wann laut Rechnung gezahlt werden soll.
+              </p>
+            </div>
+
+            <div class="faqItem">
+              <h3 data-i18n="tip3_title">Positionen ansehen</h3>
+              <p data-i18n="tip3_text">
+                Achten Sie darauf, welche Produkte, Leistungen oder Gebühren genau genannt werden.
+              </p>
+            </div>
+
+            <div class="faqItem">
+              <h3 data-i18n="tip4_title">Inhalt verständlich machen</h3>
+              <p data-i18n="tip4_text">
+                Wenn die Rechnung unklar oder kompliziert wirkt, hilft eine einfache Erklärung oft sofort weiter.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footWrap">
+      <div>© 2026 BriefHelden – Alle Rechte vorbehalten</div>
+      <div class="footLinks">
+        <a href="index.html" data-i18n="foot_home">Startseite</a>
+        <a href="frage.html" data-i18n="foot_question">Frage stellen</a>
+        <a href="widerruf.html" data-i18n="foot_refund">Widerruf</a>
+        <a href="impressum.html" data-i18n="foot_imprint">Impressum</a>
+        <a href="agb.html" data-i18n="foot_terms">AGB</a>
+        <a href="datenschutz.html" data-i18n="foot_privacy">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const STRIPE_LINKS = {
+de: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
+en: "https://buy.stripe.com/fZubJ0dpXbMAbfpcIZ4sE01",
+tr: "https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
+ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
+    };
+
+    const QUESTION_LINKS = {
+de: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
+en: "https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
+tr: "https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
+ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
+    };
+
+    const i18n = {
+      de: {
+        nav_home: "Startseite",
+        nav_question: "Frage stellen",
+        nav_refund: "Widerruf",
+        nav_imprint: "Impressum",
+        nav_terms: "AGB",
+        nav_privacy: "Datenschutz",
+
+        hero_title: "Rechnung verstehen",
+        hero_sub: "Eine Rechnung ist nicht immer sofort klar. BriefHelden erklärt Ihnen Inhalt, Beträge und wichtige Angaben einfach und verständlich.",
+        hero_cta: "Jetzt Rechnung erklären lassen – 6,90 €",
+        hero_question_cta: "Kurze Frage stellen – 1,49 €",
+        meta_1: "Einfach erklärt",
+        meta_2: "Schnelle Rückmeldung",
+        meta_3: "Vertraulich",
+
+        intro_title: "Was steht in einer Rechnung?",
+        intro_text: "In einer Rechnung stehen meist Leistungen, Produkte, Beträge, Rechnungsdatum und ein Zahlungsziel. Viele Menschen möchten verstehen, wie sich der Betrag zusammensetzt, ob zusätzliche Positionen enthalten sind und bis wann gezahlt werden soll. Genau dabei hilft BriefHelden.",
+
+        left_title: "Einfach erklärt",
+        left_text_1: "Eine Rechnung zeigt meistens, wofür Geld verlangt wird und wie hoch der Gesamtbetrag ist.",
+        left_text_2: "Wichtig sind dabei vor allem: Wer hat die Rechnung geschickt? Welche Positionen sind aufgeführt? Gibt es Mehrwertsteuer, Zusatzkosten oder Gebühren? Bis wann soll gezahlt werden?",
+        left_text_3: "BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie die Rechnung besser verstehen können.",
+
+        right_title: "So funktioniert es",
+        right_li_1: "Rechnung sicher hochladen",
+        right_li_2: "Wir lesen den Inhalt und erklären ihn verständlich",
+        right_li_3: "Sie erhalten die Erklärung per E-Mail",
+        right_li_4: "Keine Rechtsberatung – nur verständliche Texterklärung",
+
+        service1_title: "Komplettes Schreiben erklären lassen",
+        service1_text: "Ideal, wenn Sie die ganze Rechnung vollständig verstehen möchten.",
+        service1_btn: "Jetzt für 6,90 € starten",
+
+        service2_title: "Kurze Rückfrage stellen",
+        service2_text: "Ideal, wenn Sie nur eine kurze Frage zu Betrag, Zahlungsziel oder Inhalt haben.",
+        service2_btn: "Jetzt für 1,49 € fragen",
+
+        faq_title: "Häufige Fragen zu Rechnungen",
+        faq_sub: "Diese Fragen tauchen bei Rechnungen besonders oft auf:",
+        faq1_q: "Was ist auf einer Rechnung besonders wichtig?",
+        faq1_a: "Besonders wichtig sind Gesamtbetrag, einzelne Positionen, Rechnungsdatum, Zahlungsziel und der Absender der Rechnung.",
+        faq2_q: "Was bedeutet Zahlungsziel?",
+        faq2_a: "Das Zahlungsziel zeigt, bis wann die Rechnung bezahlt werden soll. BriefHelden hilft Ihnen, solche Angaben klar zu erkennen.",
+        faq3_q: "Warum ist der Betrag höher als gedacht?",
+        faq3_a: "Oft kommen Zusatzkosten, Versand, Gebühren oder Mehrwertsteuer hinzu. Eine verständliche Erklärung hilft beim Einordnen der Positionen.",
+        faq4_q: "Ist BriefHelden eine Rechtsberatung?",
+        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.",
+
+        tip_title: "Worauf sollten Sie bei einer Rechnung achten?",
+        tip_sub: "Diese Punkte sind oft besonders wichtig:",
+        tip1_title: "Beträge prüfen",
+        tip1_text: "Schauen Sie, wie sich der Gesamtbetrag zusammensetzt und ob Zusatzkosten oder Steuer aufgeführt sind.",
+        tip2_title: "Zahlungsziel beachten",
+        tip2_text: "Prüfen Sie, bis wann laut Rechnung gezahlt werden soll.",
+        tip3_title: "Positionen ansehen",
+        tip3_text: "Achten Sie darauf, welche Produkte, Leistungen oder Gebühren genau genannt werden.",
+        tip4_title: "Inhalt verständlich machen",
+        tip4_text: "Wenn die Rechnung unklar oder kompliziert wirkt, hilft eine einfache Erklärung oft sofort weiter.",
+
+        foot_home: "Startseite",
+        foot_question: "Frage stellen",
+        foot_refund: "Widerruf",
+        foot_imprint: "Impressum",
+        foot_terms: "AGB",
+        foot_privacy: "Datenschutz"
+      },
+
+      en: {
+        nav_home: "Home",
+        nav_question: "Ask a question",
+        nav_refund: "Withdrawal",
+        nav_imprint: "Imprint",
+        nav_terms: "Terms",
+        nav_privacy: "Privacy",
+
+        hero_title: "Understand an invoice",
+        hero_sub: "An invoice is not always immediately clear. BriefHelden explains the content, amounts and important details simply and clearly.",
+        hero_cta: "Get invoice explained now – €6.90",
+        hero_question_cta: "Ask a short question – €1.49",
+        meta_1: "Clearly explained",
+        meta_2: "Fast response",
+        meta_3: "Confidential",
+
+        intro_title: "What is written on an invoice?",
+        intro_text: "An invoice usually contains services, products, amounts, invoice date and a payment deadline. Many people want to understand how the amount is made up, whether extra items are included and by when payment is due. That is exactly where BriefHelden helps.",
+
+        left_title: "Simply explained",
+        left_text_1: "An invoice usually shows what money is being charged for and what the total amount is.",
+        left_text_2: "Important points are: Who sent the invoice? Which items are listed? Is there VAT, extra costs or fees? By when should payment be made?",
+        left_text_3: "BriefHelden explains the content in simple language so you can better understand the invoice.",
+
+        right_title: "How it works",
+        right_li_1: "Upload invoice securely",
+        right_li_2: "We read the content and explain it clearly",
+        right_li_3: "You receive the explanation by email",
+        right_li_4: "No legal advice – plain-language explanation only",
+
+        service1_title: "Get the full document explained",
+        service1_text: "Ideal if you want to fully understand the entire invoice.",
+        service1_btn: "Start now for €6.90",
+
+        service2_title: "Ask a short follow-up question",
+        service2_text: "Ideal if you only have a short question about amount, payment deadline or content.",
+        service2_btn: "Ask now for €1.49",
+
+        faq_title: "Frequently asked questions about invoices",
+        faq_sub: "These questions often come up with invoices:",
+        faq1_q: "What is especially important on an invoice?",
+        faq1_a: "Especially important are total amount, individual items, invoice date, payment deadline and the sender of the invoice.",
+        faq2_q: "What does payment deadline mean?",
+        faq2_a: "The payment deadline shows by when the invoice should be paid. BriefHelden helps you identify such details clearly.",
+        faq3_q: "Why is the amount higher than expected?",
+        faq3_a: "Extra costs, shipping, fees or VAT are often added. A clear explanation helps classify the individual items.",
+        faq4_q: "Is BriefHelden legal advice?",
+        faq4_a: "No. BriefHelden does not provide legal advice. You only receive a clear explanation of the content.",
+
+        tip_title: "What should you look for on an invoice?",
+        tip_sub: "These points are often especially important:",
+        tip1_title: "Check the amounts",
+        tip1_text: "See how the total amount is made up and whether extra costs or taxes are listed.",
+        tip2_title: "Check the payment deadline",
+        tip2_text: "Check by when the invoice must be paid.",
+        tip3_title: "Review the listed items",
+        tip3_text: "Pay attention to which products, services or fees are specifically listed.",
+        tip4_title: "Make the content understandable",
+        tip4_text: "If the invoice seems unclear or complicated, a simple explanation often helps immediately.",
+
+        foot_home: "Home",
+        foot_question: "Ask a question",
+        foot_refund: "Withdrawal",
+        foot_imprint: "Imprint",
+        foot_terms: "Terms",
+        foot_privacy: "Privacy"
+      },
+
+      tr: {
+        nav_home: "Ana Sayfa",
+        nav_question: "Soru sor",
+        nav_refund: "Cayma",
+        nav_imprint: "Künye",
+        nav_terms: "Şartlar",
+        nav_privacy: "Gizlilik",
+
+        hero_title: "Faturayı anlayın",
+        hero_sub: "Bir fatura her zaman hemen anlaşılmaz. BriefHelden içeriği, tutarları ve önemli bilgileri size basit ve açık şekilde açıklar.",
+        hero_cta: "Faturayı şimdi açıklat – 6,90 €",
+        hero_question_cta: "Kısa soru sor – 1,49 €",
+        meta_1: "Basit açıklandı",
+        meta_2: "Hızlı dönüş",
+        meta_3: "Gizli",
+
+        intro_title: "Bir faturada neler yazar?",
+        intro_text: "Bir faturada genelde hizmetler, ürünler, tutarlar, fatura tarihi ve ödeme süresi yer alır. Birçok kişi tutarın nasıl oluştuğunu, ek kalemler olup olmadığını ve ödemenin ne zamana kadar yapılması gerektiğini anlamak ister. BriefHelden tam bu konuda yardımcı olur.",
+
+        left_title: "Basit açıklama",
+        left_text_1: "Bir fatura genelde paranın ne için istendiğini ve toplam tutarın ne kadar olduğunu gösterir.",
+        left_text_2: "Önemli noktalar şunlardır: Faturayı kim gönderdi? Hangi kalemler yazıyor? KDV, ek masraf veya ücret var mı? Ödeme ne zamana kadar yapılmalı?",
+        left_text_3: "BriefHelden içeriği basit dille açıklar, böylece faturayı daha iyi anlayabilirsiniz.",
+
+        right_title: "Nasıl çalışır",
+        right_li_1: "Faturayı güvenli şekilde yükleyin",
+        right_li_2: "İçeriği okuyup açık şekilde açıklıyoruz",
+        right_li_3: "Açıklamayı e-posta ile alırsınız",
+        right_li_4: "Hukuki danışmanlık değil – sadece anlaşılır açıklama",
+
+        service1_title: "Belgenin tamamını açıklat",
+        service1_text: "Faturanın tamamını anlamak istiyorsanız idealdir.",
+        service1_btn: "Şimdi 6,90 € ile başla",
+
+        service2_title: "Kısa bir soru sor",
+        service2_text: "Sadece tutar, ödeme süresi veya içerikle ilgili kısa bir sorunuz varsa idealdir.",
+        service2_btn: "Şimdi 1,49 € ile sor",
+
+        faq_title: "Faturalar hakkında sık sorulan sorular",
+        faq_sub: "Faturalarda şu sorular sıkça ortaya çıkar:",
+        faq1_q: "Bir faturada en önemli olan nedir?",
+        faq1_a: "Toplam tutar, tek tek kalemler, fatura tarihi, ödeme süresi ve faturayı gönderen taraf özellikle önemlidir.",
+        faq2_q: "Ödeme süresi ne demektir?",
+        faq2_a: "Ödeme süresi, faturanın en geç ne zamana kadar ödenmesi gerektiğini gösterir. BriefHelden bu bilgileri açık şekilde görmenize yardım eder.",
+        faq3_q: "Neden tutar beklediğimden daha yüksek?",
+        faq3_a: "Çoğu zaman ek masraflar, kargo, ücretler veya KDV eklenir. Açık bir açıklama kalemleri daha iyi anlamanıza yardımcı olur.",
+        faq4_q: "BriefHelden hukuki danışmanlık mı veriyor?",
+        faq4_a: "Hayır. BriefHelden hukuki danışmanlık vermez. Sadece içeriğin anlaşılır açıklamasını sunar.",
+
+        tip_title: "Bir faturada nelere dikkat etmelisiniz?",
+        tip_sub: "Bu noktalar genelde özellikle önemlidir:",
+        tip1_title: "Tutarları kontrol edin",
+        tip1_text: "Toplam tutarın nasıl oluştuğuna ve ek masraf veya vergi olup olmadığına bakın.",
+        tip2_title: "Ödeme süresini kontrol edin",
+        tip2_text: "Faturaya göre ödemenin en geç ne zamana kadar yapılması gerektiğini kontrol edin.",
+        tip3_title: "Kalemlere bakın",
+        tip3_text: "Hangi ürünlerin, hizmetlerin veya ücretlerin özellikle yazıldığını inceleyin.",
+        tip4_title: "İçeriği anlaşılır hale getirin",
+        tip4_text: "Fatura karışık veya anlaşılmaz görünüyorsa, basit bir açıklama çoğu zaman hemen yardımcı olur.",
+
+        foot_home: "Ana Sayfa",
+        foot_question: "Soru sor",
+        foot_refund: "Cayma",
+        foot_imprint: "Künye",
+        foot_terms: "Şartlar",
+        foot_privacy: "Gizlilik"
+      },
+
+      ru: {
+        nav_home: "Главная",
+        nav_question: "Задать вопрос",
+        nav_refund: "Отказ",
+        nav_imprint: "Выходные данные",
+        nav_terms: "Условия",
+        nav_privacy: "Конфиденциальность",
+
+        hero_title: "Понять счёт",
+        hero_sub: "Счёт не всегда сразу понятен. BriefHelden объяснит содержание, суммы и важные данные просто и ясно.",
+        hero_cta: "Объяснить счёт – 6,90 €",
+        hero_question_cta: "Задать короткий вопрос – 1,49 €",
+        meta_1: "Просто объяснено",
+        meta_2: "Быстрый ответ",
+        meta_3: "Конфиденциально",
+
+        intro_title: "Что указано в счёте?",
+        intro_text: "В счёте обычно указаны услуги, товары, суммы, дата счёта и срок оплаты. Многие люди хотят понять, из чего складывается сумма, есть ли дополнительные позиции и до какого срока нужно оплатить. Именно здесь помогает BriefHelden.",
+
+        left_title: "Просто объясняем",
+        left_text_1: "Счёт обычно показывает, за что требуют деньги и какова общая сумма.",
+        left_text_2: "Особенно важно следующее: Кто отправил счёт? Какие позиции указаны? Есть ли НДС, дополнительные расходы или сборы? До какого срока нужно оплатить?",
+        left_text_3: "BriefHelden объясняет содержание простым языком, чтобы вам было легче понять счёт.",
+
+        right_title: "Как это работает",
+        right_li_1: "Безопасно загрузите счёт",
+        right_li_2: "Мы читаем содержание и понятно объясняем его",
+        right_li_3: "Вы получаете объяснение по e-mail",
+        right_li_4: "Не юридическая консультация – только понятное объяснение",
+
+        service1_title: "Получить полное объяснение документа",
+        service1_text: "Идеально, если вы хотите полностью понять весь счёт.",
+        service1_btn: "Начать за 6,90 €",
+
+        service2_title: "Задать короткий вопрос",
+        service2_text: "Идеально, если у вас только короткий вопрос о сумме, сроке оплаты или содержании.",
+        service2_btn: "Спросить за 1,49 €",
+
+        faq_title: "Частые вопросы о счетах",
+        faq_sub: "Эти вопросы часто возникают по счетам:",
+        faq1_q: "Что особенно важно в счёте?",
+        faq1_a: "Особенно важны общая сумма, отдельные позиции, дата счёта, срок оплаты и отправитель счёта.",
+        faq2_q: "Что означает срок оплаты?",
+        faq2_a: "Срок оплаты показывает, до какого времени счёт нужно оплатить. BriefHelden помогает вам увидеть такие данные понятнее.",
+        faq3_q: "Почему сумма выше, чем я ожидал?",
+        faq3_a: "Часто добавляются дополнительные расходы, доставка, сборы или НДС. Понятное объяснение помогает лучше понять отдельные позиции.",
+        faq4_q: "BriefHelden — это юридическая консультация?",
+        faq4_a: "Нет. BriefHelden не даёт юридических консультаций. Вы получаете только понятное объяснение содержания.",
+
+        tip_title: "На что стоит обратить внимание в счёте?",
+        tip_sub: "Эти пункты часто особенно важны:",
+        tip1_title: "Проверьте суммы",
+        tip1_text: "Посмотрите, как складывается общая сумма и указаны ли дополнительные расходы или налоги.",
+        tip2_title: "Проверьте срок оплаты",
+        tip2_text: "Проверьте, до какого срока по счёту нужно оплатить.",
+        tip3_title: "Посмотрите позиции",
+        tip3_text: "Обратите внимание, какие товары, услуги или сборы конкретно указаны.",
+        tip4_title: "Сделайте содержание понятным",
+        tip4_text: "Если счёт кажется непонятным или сложным, простое объяснение часто сразу помогает.",
+
+        foot_home: "Главная",
+        foot_question: "Задать вопрос",
+        foot_refund: "Отказ",
+        foot_imprint: "Выходные данные",
+        foot_terms: "Условия",
+        foot_privacy: "Конфиденциальность"
+      }
+    };
+
+    function updateLinks(lang){
+const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
+const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
+
+      const stripeBtn = document.getElementById("stripeBtn");
+      const servicePrimaryBtn = document.getElementById("servicePrimaryBtn");
+      const questionBtn = document.getElementById("questionBtn");
+      const serviceQuestionBtn = document.getElementById("serviceQuestionBtn");
+
+      if(stripeBtn) stripeBtn.href = mainLink;
+      if(servicePrimaryBtn) servicePrimaryBtn.href = mainLink;
+      if(questionBtn) questionBtn.href = questionLink;
+      if(serviceQuestionBtn) serviceQuestionBtn.href = questionLink;
+    }
+
+    function applyLang(lang){
+const dict = i18n[lang] || i18n.de;
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        if(key in dict){
+          el.textContent = dict[key];
+        }
+      });
+
+      updateLinks(lang);
+      localStorage.setItem("briefhelden_lang", lang);
+    }
+
+    const select = document.getElementById("langSelect");
+    const savedLang = localStorage.getItem("briefhelden_lang");
+    const initialLang = ["de","en","tr","ru"].includes(savedLang) ? savedLang : "de";
+
+    select.value = initialLang;
+    applyLang(initialLang);
+
+    select.addEventListener("change", () => {
+      applyLang(select.value);
+    });
+  </script>
+</body>
+</html>
