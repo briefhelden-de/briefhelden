@@ -1,112 +1,825 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vollstreckungsbescheid verstehen – einfach erklärt | BriefHelden</title>
+  <meta name="description" content="Vollstreckungsbescheid einfach verstehen. BriefHelden erklärt Inhalt, Fristen und wichtige Punkte in klarer Sprache – keine Rechtsberatung, nur verständliche Erklärung." />
+  <meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://www.briefhelden-service.de/vollstreckungsbescheid-verstehen.html" />
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Vollstreckungsbescheid verstehen – einfach erklärt | BriefHelden" />
+  <meta property="og:description" content="Vollstreckungsbescheid einfach und verständlich erklärt. Hilfe beim Verstehen von Inhalt, Fristen und nächsten Schritten." />
+  <meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.briefhelden-service.de/vollstreckungsbescheid-verstehen.html" />
 
-<title>Vollstreckungsbescheid verstehen – einfach erklärt | BriefHelden</title>
+  <style>
+    :root{
+      --nav-bg: rgba(9,24,33,.78);
+      --nav-border: rgba(255,255,255,.10);
+      --text: #0b1220;
+      --muted: rgba(11,18,32,.72);
+      --heroText: #fff;
+      --heroMuted: rgba(255,255,255,.86);
+      --glass: rgba(255,255,255,.28);
+      --glass2: rgba(255,255,255,.16);
+      --stroke: rgba(255,255,255,.36);
+      --shadow: 0 18px 40px rgba(0,0,0,.18);
+      --btn1: #2f6fff;
+      --btn2: #1f56b8;
+      --btnGreen1: #12b76a;
+      --btnGreen2: #079455;
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --radius-md: 14px;
+      --max: 1120px;
+    }
 
-<meta name="description" content="Vollstreckungsbescheid vom Gericht erhalten? Wir erklären Ihnen verständlich, was ein Vollstreckungsbescheid bedeutet und welche Möglichkeiten Sie jetzt haben.">
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
 
-<link rel="canonical" href="https://www.briefhelden-service.de/vollstreckungsbescheid-verstehen.html">
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 12% 24%, rgba(120,180,255,.32), rgba(255,255,255,0) 60%),
+        radial-gradient(1200px 800px at 88% 18%, rgba(120,140,255,.26), rgba(255,255,255,0) 62%),
+        radial-gradient(1000px 700px at 50% 92%, rgba(170,210,255,.28), rgba(255,255,255,0) 60%),
+        linear-gradient(180deg, #f8fbff 0%, #eef6ff 45%, #f8fbff 100%);
+      min-height:100vh;
+    }
 
-<style>
+    a{color:inherit;text-decoration:none}
 
-body{
-font-family:Arial, sans-serif;
-background:#f5f7fb;
-margin:0;
-padding:0;
-}
+    header{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:var(--nav-bg);
+      backdrop-filter: blur(12px) saturate(140%);
+      border-bottom:1px solid var(--nav-border);
+    }
 
-.container{
-max-width:900px;
-margin:auto;
-padding:30px;
-}
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      color:#fff;
+    }
 
-h1{
-color:#1f2937;
-}
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:900;
+      letter-spacing:.2px;
+      white-space:nowrap;
+    }
 
-.card{
-background:white;
-padding:25px;
-border-radius:12px;
-margin-top:20px;
-box-shadow:0 5px 20px rgba(0,0,0,0.05);
-}
+    .brand .logo{
+      width:26px;
+      height:26px;
+      border-radius:10px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.85), rgba(255,255,255,.08)),
+        linear-gradient(180deg, rgba(55,120,255,.9), rgba(20,70,190,.9));
+      box-shadow:0 10px 18px rgba(0,0,0,.18);
+      position:relative;
+    }
 
-.cta{
-margin-top:30px;
-}
+    .brand .logo:after{
+      content:"";
+      position:absolute;
+      inset:7px 6px 7px 10px;
+      border-radius:8px;
+      background:rgba(255,255,255,.85);
+      clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+      opacity:.12;
+    }
 
-.button{
-display:inline-block;
-background:#2563eb;
-color:white;
-padding:14px 22px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-}
+    nav.links{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      flex-wrap:wrap;
+    }
 
-</style>
+    nav.links a{
+      color:rgba(255,255,255,.82);
+      font-weight:700;
+      font-size:14px;
+    }
 
+    nav.links a:hover{color:#fff}
+
+    .langWrap{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      position:relative;
+    }
+
+    .langSelect{
+      appearance:none;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(0,0,0,.18);
+      color:#fff;
+      padding:8px 36px 8px 12px;
+      border-radius:12px;
+      font-weight:800;
+      cursor:pointer;
+      outline:none;
+    }
+
+    .langWrap:after{
+      content:"▾";
+      position:absolute;
+      right:12px;
+      top:50%;
+      transform:translateY(-50%);
+      color:rgba(255,255,255,.85);
+      pointer-events:none;
+      font-size:12px;
+    }
+
+    .hero{
+      position:relative;
+      color:var(--heroText);
+      padding:68px 18px 40px;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.58), rgba(0,0,0,.60)),
+url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=2200&q=60");
+      background-size:cover;
+      background-position:center;
+    }
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+    }
+
+    .hero .wrap{
+      text-align:center;
+    }
+
+    .hero h1{
+      margin:0 0 10px;
+      font-weight:950;
+      font-size:clamp(30px, 3.7vw, 48px);
+      letter-spacing:.2px;
+      text-shadow:0 10px 24px rgba(0,0,0,.35);
+    }
+
+    .hero p{
+      margin:0 auto 18px;
+      max-width:860px;
+      color:var(--heroMuted);
+      font-size:clamp(15px, 2vw, 18px);
+      line-height:1.55;
+    }
+
+    .ctaGroup{
+      display:flex;
+      gap:14px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:8px;
+    }
+
+    .cta{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:14px 20px;
+      border-radius:16px;
+      color:#fff;
+      font-weight:950;
+      box-shadow:0 18px 38px rgba(0,0,0,.28);
+      border:1px solid rgba(255,255,255,.20);
+      min-width:min(560px, 92vw);
+    }
+
+    .cta.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
+    .cta.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
+    .cta:hover{filter:brightness(1.05)}
+
+    .heroMeta{
+      margin-top:14px;
+      display:flex;
+      gap:14px;
+      justify-content:center;
+      flex-wrap:wrap;
+      color:rgba(255,255,255,.86);
+      font-weight:700;
+      font-size:13px;
+    }
+
+    .heroMeta span{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.12);
+      backdrop-filter:blur(10px);
+    }
+
+    .section{padding:26px 18px 10px}
+
+    .glassCard{
+      background:linear-gradient(180deg, var(--glass), var(--glass2));
+      border:1px solid var(--stroke);
+      border-radius:var(--radius-xl);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(14px) saturate(140%);
+      -webkit-backdrop-filter:blur(14px) saturate(140%);
+      overflow:hidden;
+    }
+
+    .pad{padding:22px}
+
+    .headline{
+      text-align:center;
+      margin:0 0 10px;
+      font-weight:950;
+      font-size:clamp(22px, 2.6vw, 34px);
+      letter-spacing:.2px;
+    }
+
+    .lead{
+      text-align:center;
+      margin:0 auto 16px;
+      max-width:920px;
+      color:rgba(11,18,32,.76);
+      line-height:1.7;
+      font-size:16px;
+    }
+
+    .contentGrid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:18px;
+    }
+
+    .infoCard, .faqItem, .stepCard{
+      border-radius:var(--radius-lg);
+      border:1px solid rgba(255,255,255,.55);
+      background:rgba(255,255,255,.20);
+      padding:18px;
+    }
+
+    .infoCard h2, .faqTitle, .stepsTitle{
+      margin:0 0 10px;
+      font-size:24px;
+      font-weight:950;
+    }
+
+    .infoCard h3{
+      margin:18px 0 8px;
+      font-size:18px;
+      font-weight:900;
+    }
+
+    .infoCard p, .infoCard li, .faqItem p, .stepCard p{
+      color:rgba(11,18,32,.78);
+      line-height:1.65;
+      font-weight:700;
+      margin:0;
+    }
+
+    .infoCard ul{
+      margin:10px 0 0;
+      padding-left:18px;
+    }
+
+    .noteBox{
+      margin-top:16px;
+      padding:14px 16px;
+      border-radius:16px;
+      background:rgba(47,111,255,.08);
+      border:1px solid rgba(47,111,255,.16);
+      color:#12316b;
+      font-weight:800;
+      line-height:1.6;
+    }
+
+    .sideStack{
+      display:grid;
+      gap:18px;
+    }
+
+    .stepCard strong{
+      display:block;
+      font-size:16px;
+      margin-bottom:6px;
+      color:#0b1220;
+    }
+
+    .faqWrap{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+
+    .faqItem h3{
+      margin:0 0 8px;
+      font-size:18px;
+      font-weight:950;
+    }
+
+    .bottomCta{
+      margin-top:18px;
+      text-align:center;
+    }
+
+    .serviceBtn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      margin-top:10px;
+      padding:14px 22px;
+      border-radius:14px;
+      color:#fff;
+      font-weight:900;
+      min-width:260px;
+      box-shadow:0 10px 24px rgba(0,0,0,.16);
+    }
+
+    .serviceBtn.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
+    .serviceBtn.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
+
+    footer{
+      margin-top:18px;
+      padding:18px 18px 28px;
+      color:rgba(255,255,255,.82);
+      background:rgba(9,24,33,.82);
+      border-top:1px solid rgba(255,255,255,.10);
+      backdrop-filter:blur(12px) saturate(140%);
+    }
+
+    .footWrap{
+      max-width:var(--max);
+      margin:0 auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .footLinks{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      font-weight:800;
+    }
+
+    .footLinks a{color:rgba(255,255,255,.80)}
+    .footLinks a:hover{color:#fff}
+
+    @media (max-width: 900px){
+      nav.links{display:none}
+      .contentGrid{grid-template-columns:1fr}
+      .faqWrap{grid-template-columns:1fr}
+      .cta{min-width:92vw}
+      .serviceBtn{min-width:100%}
+    }
+  </style>
 </head>
-
 <body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>BriefHelden</div>
+      </div>
 
-<div class="container">
+      <nav class="links" aria-label="Hauptnavigation">
+        <a href="index.html" data-i18n="nav_home">Startseite</a>
+        <a href="frage.html" data-i18n="nav_question">Frage stellen</a>
+        <a href="widerruf.html" data-i18n="nav_refund">Widerruf</a>
+        <a href="impressum.html" data-i18n="nav_imprint">Impressum</a>
+        <a href="agb.html" data-i18n="nav_terms">AGB</a>
+        <a href="datenschutz.html" data-i18n="nav_privacy">Datenschutz</a>
+      </nav>
 
-<h1>Vollstreckungsbescheid verstehen</h1>
+      <div class="langWrap">
+        <select class="langSelect" id="langSelect" aria-label="Sprache">
+          <option value="de">DE</option>
+          <option value="en">EN</option>
+          <option value="tr">TR</option>
+          <option value="ru">RU</option>
+        </select>
+      </div>
+    </div>
+  </header>
 
-<div class="card">
+  <section class="hero">
+    <div class="wrap">
+      <h1 data-i18n="hero_title">Vollstreckungsbescheid verstehen</h1>
+      <p data-i18n="hero_sub">Ein Vollstreckungsbescheid wirkt oft ernst und beunruhigend. BriefHelden erklärt Ihnen den Inhalt einfach und verständlich – ohne komplizierte Fachsprache.</p>
 
-<p>
-Ein Vollstreckungsbescheid ist ein offizielles Schreiben vom Gericht. 
-Er folgt häufig auf einen Mahnbescheid, wenn gegen diesen kein Widerspruch eingelegt wurde.
-</p>
+      <div class="ctaGroup">
+        <a class="cta primary" id="stripeBtn" href="#" rel="noopener">
+          <span data-i18n="hero_cta">Jetzt Vollstreckungsbescheid erklären lassen – 6,90 €</span>
+          <span aria-hidden="true">›</span>
+        </a>
 
-<p>
-Mit einem Vollstreckungsbescheid kann ein Gläubiger rechtlich versuchen, eine Forderung durchzusetzen.
-Zum Beispiel durch eine Pfändung oder andere Vollstreckungsmaßnahmen.
-</p>
+        <a class="cta secondary" id="questionBtn" href="#" rel="noopener">
+          <span data-i18n="hero_question_cta">Kurze Frage stellen – 1,49 €</span>
+          <span aria-hidden="true">›</span>
+        </a>
+      </div>
 
-<h2>Was bedeutet ein Vollstreckungsbescheid?</h2>
+      <div class="heroMeta" aria-label="Kurzvorteile">
+        <span>✅ <span data-i18n="meta_1">Einfach erklärt</span></span>
+        <span>🕒 <span data-i18n="meta_2">Schnelle Rückmeldung</span></span>
+        <span>🔒 <span data-i18n="meta_3">Vertraulich</span></span>
+      </div>
+    </div>
+  </section>
 
-<p>
-Der Vollstreckungsbescheid bestätigt eine Forderung im gerichtlichen Mahnverfahren. 
-Er kann die Grundlage dafür sein, dass Geld zwangsweise eingezogen wird.
-</p>
+  <section class="section">
+    <div class="wrap">
+      <div class="glassCard">
+        <div class="pad">
+          <div class="headline" data-i18n="headline">Was ist ein Vollstreckungsbescheid?</div>
+          <p class="lead" data-i18n="lead">
+            Ein Vollstreckungsbescheid ist meist der nächste Schritt nach einem Mahnbescheid. Er bedeutet oft, dass eine Forderung weiterverfolgt wird. Viele Menschen wissen nicht genau, was das Schreiben bedeutet, ob eine Frist läuft und was jetzt wichtig ist. Genau dabei hilft BriefHelden.
+          </p>
 
-<h2>Welche Möglichkeiten haben Sie?</h2>
+          <div class="contentGrid">
+            <div class="infoCard">
+              <h2 data-i18n="content_title">Einfach erklärt</h2>
 
-<ul>
-<li>Bescheid genau prüfen</li>
-<li>Fristen beachten</li>
-<li>Einspruch prüfen</li>
-<li>Forderung nachvollziehen</li>
-</ul>
+              <h3 data-i18n="c1_title">Was steht meist in einem Vollstreckungsbescheid?</h3>
+              <p data-i18n="c1_text">
+                In einem Vollstreckungsbescheid geht es oft um eine Geldforderung, die nach einem vorherigen Mahnverfahren weiter verfolgt wird. Häufig stehen darin Beträge, Aktenzeichen, Fristen und Hinweise zum weiteren Verfahren.
+              </p>
 
-<h2>Vollstreckungsbescheid einfach erklären lassen</h2>
+              <h3 data-i18n="c2_title">Warum ist das Schreiben wichtig?</h3>
+              <p data-i18n="c2_text">
+                Weil dieses Dokument oft ernster ist als eine normale Mahnung. Es ist wichtig zu verstehen, was genau gefordert wird, von wem das Schreiben kommt und welche Daten oder Fristen genannt werden.
+              </p>
 
-<p>
-Wenn Sie einen Vollstreckungsbescheid erhalten haben und den Inhalt nicht verstehen, kann BriefHelden den Brief für Sie einfach und verständlich erklären.
-</p>
+              <h3 data-i18n="c3_title">Wobei hilft BriefHelden?</h3>
+              <ul>
+                <li data-i18n="c3_li1">Wir erklären den Inhalt in einfacher Sprache.</li>
+                <li data-i18n="c3_li2">Wir zeigen, welche Angaben besonders wichtig sind.</li>
+                <li data-i18n="c3_li3">Wir ordnen Fristen, Beträge und Hinweise verständlich ein.</li>
+                <li data-i18n="c3_li4">Keine Rechtsberatung – nur klare Texterklärung.</li>
+              </ul>
 
-<div class="cta">
+              <div class="noteBox" data-i18n="note_box">
+                Hinweis: BriefHelden ersetzt keine Anwältin und keinen Anwalt. Sie erhalten eine verständliche Erklärung des Schreibens, damit Sie besser verstehen, worum es geht.
+              </div>
+            </div>
 
-<a class="button" href="frage.html">
-Brief erklären lassen
-</a>
+            <div class="sideStack">
+              <div class="stepCard">
+                <div class="stepsTitle" data-i18n="steps_title">So funktioniert es</div>
+                <strong data-i18n="s1_title">1. Dokument hochladen</strong>
+                <p data-i18n="s1_text">Laden Sie Ihren Vollstreckungsbescheid sicher hoch.</p>
+              </div>
 
-</div>
+              <div class="stepCard">
+                <strong data-i18n="s2_title">2. Einfach erklärt bekommen</strong>
+                <p data-i18n="s2_text">Sie erhalten eine verständliche Erklärung per E-Mail.</p>
+              </div>
 
-</div>
+              <div class="stepCard">
+                <strong data-i18n="s3_title">3. Besser einschätzen</strong>
+                <p data-i18n="s3_text">So erkennen Sie schneller, worum es im Schreiben geht und welche Punkte wichtig sind.</p>
+              </div>
 
-</div>
+              <div class="bottomCta">
+                <a class="serviceBtn primary" id="servicePrimaryBtn" href="#" rel="noopener">
+                  <span data-i18n="service1_btn">Jetzt Vollstreckungsbescheid erklären lassen</span>
+                  <span aria-hidden="true">›</span>
+                </a>
+                <a class="serviceBtn secondary" id="serviceQuestionBtn" href="#" rel="noopener">
+                  <span data-i18n="service2_btn">Kurze Frage stellen</span>
+                  <span aria-hidden="true">›</span>
+                </a>
+              </div>
+            </div>
+          </div>
 
+          <div class="faqWrap">
+            <div class="faqItem">
+              <h3 data-i18n="faq1_q">Ist ein Vollstreckungsbescheid dasselbe wie eine Mahnung?</h3>
+              <p data-i18n="faq1_a">Nein. Ein Vollstreckungsbescheid ist in der Regel ein weiterer Schritt im Mahnverfahren und meist wichtiger als eine normale Mahnung.</p>
+            </div>
+
+            <div class="faqItem">
+              <h3 data-i18n="faq2_q">Kann ich den Bescheid bei BriefHelden hochladen?</h3>
+              <p data-i18n="faq2_a">Ja. Sie können das Schreiben hochladen und erhalten eine verständliche Erklärung des Inhalts.</p>
+            </div>
+
+            <div class="faqItem">
+              <h3 data-i18n="faq3_q">Bekomme ich Rechtsberatung?</h3>
+              <p data-i18n="faq3_a">Nein. BriefHelden bietet keine Rechtsberatung, sondern nur eine klare und verständliche Texterklärung.</p>
+            </div>
+
+            <div class="faqItem">
+              <h3 data-i18n="faq4_q">Für wen ist diese Seite gedacht?</h3>
+              <p data-i18n="faq4_a">Für Menschen, die einen Vollstreckungsbescheid erhalten haben und erst einmal verstehen möchten, was im Schreiben steht.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footWrap">
+      <div>© 2026 BriefHelden – Alle Rechte vorbehalten</div>
+      <div class="footLinks">
+        <a href="index.html" data-i18n="foot_home">Startseite</a>
+        <a href="frage.html" data-i18n="foot_question">Frage stellen</a>
+        <a href="widerruf.html" data-i18n="foot_refund">Widerruf</a>
+        <a href="impressum.html" data-i18n="foot_imprint">Impressum</a>
+        <a href="agb.html" data-i18n="foot_terms">AGB</a>
+        <a href="datenschutz.html" data-i18n="foot_privacy">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const STRIPE_LINKS = {
+de: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
+en: "https://buy.stripe.com/fZubJ0dpXbMAbfpcIZ4sE01",
+tr: "https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
+ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
+    };
+
+    const QUESTION_LINKS = {
+de: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
+en: "https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
+tr: "https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
+ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
+    };
+
+    const i18n = {
+      de: {
+        nav_home: "Startseite",
+        nav_question: "Frage stellen",
+        nav_refund: "Widerruf",
+        nav_imprint: "Impressum",
+        nav_terms: "AGB",
+        nav_privacy: "Datenschutz",
+        hero_title: "Vollstreckungsbescheid verstehen",
+        hero_sub: "Ein Vollstreckungsbescheid wirkt oft ernst und beunruhigend. BriefHelden erklärt Ihnen den Inhalt einfach und verständlich – ohne komplizierte Fachsprache.",
+        hero_cta: "Jetzt Vollstreckungsbescheid erklären lassen – 6,90 €",
+        hero_question_cta: "Kurze Frage stellen – 1,49 €",
+        meta_1: "Einfach erklärt",
+        meta_2: "Schnelle Rückmeldung",
+        meta_3: "Vertraulich",
+        headline: "Was ist ein Vollstreckungsbescheid?",
+        lead: "Ein Vollstreckungsbescheid ist meist der nächste Schritt nach einem Mahnbescheid. Er bedeutet oft, dass eine Forderung weiterverfolgt wird. Viele Menschen wissen nicht genau, was das Schreiben bedeutet, ob eine Frist läuft und was jetzt wichtig ist. Genau dabei hilft BriefHelden.",
+        content_title: "Einfach erklärt",
+        c1_title: "Was steht meist in einem Vollstreckungsbescheid?",
+        c1_text: "In einem Vollstreckungsbescheid geht es oft um eine Geldforderung, die nach einem vorherigen Mahnverfahren weiter verfolgt wird. Häufig stehen darin Beträge, Aktenzeichen, Fristen und Hinweise zum weiteren Verfahren.",
+        c2_title: "Warum ist das Schreiben wichtig?",
+        c2_text: "Weil dieses Dokument oft ernster ist als eine normale Mahnung. Es ist wichtig zu verstehen, was genau gefordert wird, von wem das Schreiben kommt und welche Daten oder Fristen genannt werden.",
+        c3_title: "Wobei hilft BriefHelden?",
+        c3_li1: "Wir erklären den Inhalt in einfacher Sprache.",
+        c3_li2: "Wir zeigen, welche Angaben besonders wichtig sind.",
+        c3_li3: "Wir ordnen Fristen, Beträge und Hinweise verständlich ein.",
+        c3_li4: "Keine Rechtsberatung – nur klare Texterklärung.",
+        note_box: "Hinweis: BriefHelden ersetzt keine Anwältin und keinen Anwalt. Sie erhalten eine verständliche Erklärung des Schreibens, damit Sie besser verstehen, worum es geht.",
+        steps_title: "So funktioniert es",
+        s1_title: "1. Dokument hochladen",
+        s1_text: "Laden Sie Ihren Vollstreckungsbescheid sicher hoch.",
+        s2_title: "2. Einfach erklärt bekommen",
+        s2_text: "Sie erhalten eine verständliche Erklärung per E-Mail.",
+        s3_title: "3. Besser einschätzen",
+        s3_text: "So erkennen Sie schneller, worum es im Schreiben geht und welche Punkte wichtig sind.",
+        service1_btn: "Jetzt Vollstreckungsbescheid erklären lassen",
+        service2_btn: "Kurze Frage stellen",
+        faq1_q: "Ist ein Vollstreckungsbescheid dasselbe wie eine Mahnung?",
+        faq1_a: "Nein. Ein Vollstreckungsbescheid ist in der Regel ein weiterer Schritt im Mahnverfahren und meist wichtiger als eine normale Mahnung.",
+        faq2_q: "Kann ich den Bescheid bei BriefHelden hochladen?",
+        faq2_a: "Ja. Sie können das Schreiben hochladen und erhalten eine verständliche Erklärung des Inhalts.",
+        faq3_q: "Bekomme ich Rechtsberatung?",
+        faq3_a: "Nein. BriefHelden bietet keine Rechtsberatung, sondern nur eine klare und verständliche Texterklärung.",
+        faq4_q: "Für wen ist diese Seite gedacht?",
+        faq4_a: "Für Menschen, die einen Vollstreckungsbescheid erhalten haben und erst einmal verstehen möchten, was im Schreiben steht.",
+        foot_home: "Startseite",
+        foot_question: "Frage stellen",
+        foot_refund: "Widerruf",
+        foot_imprint: "Impressum",
+        foot_terms: "AGB",
+        foot_privacy: "Datenschutz"
+      },
+
+      en: {
+        nav_home: "Home",
+        nav_question: "Ask a question",
+        nav_refund: "Withdrawal",
+        nav_imprint: "Imprint",
+        nav_terms: "Terms",
+        nav_privacy: "Privacy",
+        hero_title: "Understand an enforcement order",
+        hero_sub: "An enforcement order often feels serious and worrying. BriefHelden explains the content in simple and clear language.",
+        hero_cta: "Get enforcement order explained – €6.90",
+        hero_question_cta: "Ask a short question – €1.49",
+        meta_1: "Clearly explained",
+        meta_2: "Fast response",
+        meta_3: "Confidential",
+        headline: "What is an enforcement order?",
+        lead: "An enforcement order is often the next step after a payment order. It usually means that a claim is being pursued further. Many people do not know what the letter means, whether a deadline is running, or what matters now. That is exactly where BriefHelden helps.",
+        content_title: "Simple explanation",
+        c1_title: "What is usually written in an enforcement order?",
+        c1_text: "An enforcement order usually concerns a money claim that is being pursued further after a prior collection procedure. It often contains amounts, file numbers, deadlines and notes about the next steps.",
+        c2_title: "Why is this letter important?",
+        c2_text: "Because this document is often more serious than a normal reminder. It is important to understand what exactly is being claimed, who sent it and which dates or deadlines are mentioned.",
+        c3_title: "How does BriefHelden help?",
+        c3_li1: "We explain the content in simple language.",
+        c3_li2: "We show which details are especially important.",
+        c3_li3: "We explain deadlines, amounts and notes clearly.",
+        c3_li4: "No legal advice – only a clear text explanation.",
+        note_box: "Note: BriefHelden does not replace a lawyer. You receive a clear explanation of the letter so you can better understand what it is about.",
+        steps_title: "How it works",
+        s1_title: "1. Upload document",
+        s1_text: "Upload your enforcement order securely.",
+        s2_title: "2. Get it explained clearly",
+        s2_text: "You receive a simple explanation by email.",
+        s3_title: "3. Understand it better",
+        s3_text: "This helps you see more quickly what the document is about and which points matter.",
+        service1_btn: "Get enforcement order explained now",
+        service2_btn: "Ask a short question",
+        faq1_q: "Is an enforcement order the same as a reminder?",
+        faq1_a: "No. An enforcement order is usually a further step in a dunning procedure and is generally more serious than a normal reminder.",
+        faq2_q: "Can I upload it to BriefHelden?",
+        faq2_a: "Yes. You can upload the document and receive a simple explanation of the content.",
+        faq3_q: "Do I get legal advice?",
+        faq3_a: "No. BriefHelden does not provide legal advice, only a clear explanation in plain language.",
+        faq4_q: "Who is this page for?",
+        faq4_a: "For people who received an enforcement order and first want to understand what the document says.",
+        foot_home: "Home",
+        foot_question: "Ask a question",
+        foot_refund: "Withdrawal",
+        foot_imprint: "Imprint",
+        foot_terms: "Terms",
+        foot_privacy: "Privacy"
+      },
+
+      tr: {
+        nav_home: "Ana Sayfa",
+        nav_question: "Soru sor",
+        nav_refund: "Cayma",
+        nav_imprint: "Künye",
+        nav_terms: "Şartlar",
+        nav_privacy: "Gizlilik",
+        hero_title: "İcra kararını anlayın",
+        hero_sub: "Bir icra kararı çoğu zaman ciddi ve endişe verici görünür. BriefHelden içeriği basit ve anlaşılır şekilde açıklar.",
+        hero_cta: "İcra kararını açıkla – 6,90 €",
+        hero_question_cta: "Kısa soru sor – 1,49 €",
+        meta_1: "Basit açıklama",
+        meta_2: "Hızlı dönüş",
+        meta_3: "Gizli",
+        headline: "İcra kararı nedir?",
+        lead: "İcra kararı çoğu zaman ödeme emrinden sonraki adımdır. Bu, bir alacağın daha ileri götürüldüğü anlamına gelebilir. Birçok kişi bu belgenin ne anlama geldiğini, süre olup olmadığını ve şimdi neyin önemli olduğunu bilmez. BriefHelden tam bu noktada yardımcı olur.",
+        content_title: "Basit açıklama",
+        c1_title: "İcra kararında genelde ne yazar?",
+        c1_text: "İcra kararında genelde önceki bir takip sürecinden sonra devam eden bir para alacağı yer alır. Belgede çoğu zaman tutarlar, dosya numaraları, tarihler ve sonraki adımlarla ilgili bilgiler bulunur.",
+        c2_title: "Bu belge neden önemlidir?",
+        c2_text: "Çünkü bu belge normal bir hatırlatma mektubundan daha ciddi olabilir. Tam olarak ne talep edildiğini, belgenin kimden geldiğini ve hangi tarihlerin veya sürelerin yer aldığını anlamak önemlidir.",
+        c3_title: "BriefHelden nasıl yardımcı olur?",
+        c3_li1: "İçeriği basit dilde açıklarız.",
+        c3_li2: "Hangi bilgilerin önemli olduğunu gösteririz.",
+        c3_li3: "Süreleri, tutarları ve notları anlaşılır şekilde açıklarız.",
+        c3_li4: "Hukuki danışmanlık yoktur – sadece anlaşılır metin açıklaması vardır.",
+        note_box: "Not: BriefHelden bir avukatın yerini tutmaz. Belgenin ne hakkında olduğunu daha iyi anlamanız için anlaşılır bir açıklama alırsınız.",
+        steps_title: "Nasıl çalışır",
+        s1_title: "1. Belgeyi yükleyin",
+        s1_text: "İcra kararınızı güvenli şekilde yükleyin.",
+        s2_title: "2. Anlaşılır açıklama alın",
+        s2_text: "Size e-posta ile basit bir açıklama gönderilir.",
+        s3_title: "3. Daha iyi anlayın",
+        s3_text: "Böylece belgenin ne hakkında olduğunu ve hangi noktaların önemli olduğunu daha hızlı görürsünüz.",
+        service1_btn: "İcra kararını şimdi açıklat",
+        service2_btn: "Kısa soru sor",
+        faq1_q: "İcra kararı normal bir ihtar ile aynı mı?",
+        faq1_a: "Hayır. İcra kararı genelde takip sürecindeki sonraki adımdır ve normal bir ihtardan daha ciddi olabilir.",
+        faq2_q: "Belgeyi BriefHelden'e yükleyebilir miyim?",
+        faq2_a: "Evet. Belgeyi yükleyebilir ve içeriğin basit açıklamasını alabilirsiniz.",
+        faq3_q: "Hukuki danışmanlık alıyor muyum?",
+        faq3_a: "Hayır. BriefHelden hukuki danışmanlık vermez, sadece anlaşılır açıklama sunar.",
+        faq4_q: "Bu sayfa kimler için?",
+        faq4_a: "İcra kararı alan ve önce belgenin ne dediğini anlamak isteyen kişiler içindir.",
+        foot_home: "Ana Sayfa",
+        foot_question: "Soru sor",
+        foot_refund: "Cayma",
+        foot_imprint: "Künye",
+        foot_terms: "Şartlar",
+        foot_privacy: "Gizlilik"
+      },
+
+      ru: {
+        nav_home: "Главная",
+        nav_question: "Задать вопрос",
+        nav_refund: "Отказ",
+        nav_imprint: "Выходные данные",
+        nav_terms: "Условия",
+        nav_privacy: "Конфиденциальность",
+        hero_title: "Понять исполнительный документ",
+        hero_sub: "Исполнительный документ часто выглядит серьёзно и тревожно. BriefHelden объясняет его содержание простым и понятным языком.",
+        hero_cta: "Объяснить исполнительный документ – 6,90 €",
+        hero_question_cta: "Задать короткий вопрос – 1,49 €",
+        meta_1: "Понятно объясним",
+        meta_2: "Быстрый ответ",
+        meta_3: "Конфиденциально",
+        headline: "Что такое исполнительный документ?",
+        lead: "Исполнительный документ часто является следующим шагом после судебного приказа. Обычно это означает, что требование продолжают взыскивать. Многие люди не понимают, что означает это письмо, есть ли срок и что теперь важно. Именно здесь помогает BriefHelden.",
+        content_title: "Простое объяснение",
+        c1_title: "Что обычно написано в исполнительном документе?",
+        c1_text: "Обычно речь идёт о денежном требовании, которое продолжают взыскивать после предыдущей процедуры. Часто в документе указаны суммы, номера дел, сроки и указания по дальнейшим шагам.",
+        c2_title: "Почему этот документ важен?",
+        c2_text: "Потому что он часто серьёзнее обычного напоминания об оплате. Важно понять, что именно требуют, кто отправитель и какие даты или сроки указаны.",
+        c3_title: "Как помогает BriefHelden?",
+        c3_li1: "Мы объясняем содержание простым языком.",
+        c3_li2: "Мы показываем, какие данные особенно важны.",
+        c3_li3: "Мы понятно объясняем сроки, суммы и примечания.",
+        c3_li4: "Без юридической консультации — только понятное объяснение текста.",
+        note_box: "Примечание: BriefHelden не заменяет юриста. Вы получаете понятное объяснение документа, чтобы лучше понимать, о чём идёт речь.",
+        steps_title: "Как это работает",
+        s1_title: "1. Загрузите документ",
+        s1_text: "Безопасно загрузите исполнительный документ.",
+        s2_title: "2. Получите понятное объяснение",
+        s2_text: "Вы получите простое объяснение по e-mail.",
+        s3_title: "3. Лучше поймите ситуацию",
+        s3_text: "Так вы быстрее увидите, о чём документ и какие пункты важны.",
+        service1_btn: "Объяснить документ сейчас",
+        service2_btn: "Задать короткий вопрос",
+        faq1_q: "Это то же самое, что обычное напоминание?",
+        faq1_a: "Нет. Исполнительный документ обычно является следующим шагом в процедуре взыскания и, как правило, серьёзнее обычного напоминания.",
+        faq2_q: "Можно ли загрузить документ в BriefHelden?",
+        faq2_a: "Да. Вы можете загрузить документ и получить понятное объяснение его содержания.",
+        faq3_q: "Я получу юридическую консультацию?",
+        faq3_a: "Нет. BriefHelden не даёт юридических консультаций, а только понятно объясняет текст.",
+        faq4_q: "Для кого эта страница?",
+        faq4_a: "Для людей, которые получили исполнительный документ и сначала хотят понять, что в нём написано.",
+        foot_home: "Главная",
+        foot_question: "Задать вопрос",
+        foot_refund: "Отказ",
+        foot_imprint: "Выходные данные",
+        foot_terms: "Условия",
+        foot_privacy: "Конфиденциальность"
+      }
+    };
+
+    function updateLinks(lang){
+const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
+const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
+
+      const stripeBtn = document.getElementById("stripeBtn");
+      const servicePrimaryBtn = document.getElementById("servicePrimaryBtn");
+      const questionBtn = document.getElementById("questionBtn");
+      const serviceQuestionBtn = document.getElementById("serviceQuestionBtn");
+
+      if (stripeBtn) stripeBtn.href = mainLink;
+      if (servicePrimaryBtn) servicePrimaryBtn.href = mainLink;
+      if (questionBtn) questionBtn.href = questionLink;
+      if (serviceQuestionBtn) serviceQuestionBtn.href = questionLink;
+    }
+
+    function applyLang(lang){
+const dict = i18n[lang] || i18n.de;
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        if (key in dict) {
+          el.textContent = dict[key];
+        }
+      });
+
+      updateLinks(lang);
+      localStorage.setItem("briefhelden_lang", lang);
+    }
+
+    const select = document.getElementById("langSelect");
+    const savedLang = localStorage.getItem("briefhelden_lang");
+    const initialLang = ["de","en","tr","ru"].includes(savedLang) ? savedLang : "de";
+
+    select.value = initialLang;
+    applyLang(initialLang);
+
+    select.addEventListener("change", () => {
+      applyLang(select.value);
+    });
+  </script>
 </body>
 </html>
