@@ -1,0 +1,961 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zahlungserinnerung verstehen – einfach erklärt | BriefHelden</title>
+  <meta
+    name="description"
+    content="Zahlungserinnerung einfach verstehen: BriefHelden erklärt Fristen, Beträge, Zahlungsaufforderung und wichtige Angaben klar, einfach und ohne komplizierte Fachsprache."
+  />
+  <meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://www.briefhelden-service.de/zahlungserinnerung-verstehen.html" />
+
+  <meta property="og:title" content="Zahlungserinnerung verstehen – einfach erklärt | BriefHelden" />
+  <meta
+    property="og:description"
+    content="Zahlungserinnerung einfach erklärt. Verstehen Sie Fristen, Beträge und wichtige Angaben schnell und verständlich."
+  />
+  <meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.briefhelden-service.de/zahlungserinnerung-verstehen.html" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CVRQ9QBE94');
+  </script>
+
+  <style>
+    :root{
+      --nav-bg: rgba(9,24,33,.78);
+      --nav-border: rgba(255,255,255,.10);
+      --text: #0b1220;
+      --muted: rgba(11,18,32,.72);
+      --heroText: #fff;
+      --heroMuted: rgba(255,255,255,.84);
+      --glass: rgba(255,255,255,.28);
+      --glass2: rgba(255,255,255,.16);
+      --stroke: rgba(255,255,255,.36);
+      --shadow: 0 18px 40px rgba(0,0,0,.18);
+      --btn1: #2f6fff;
+      --btn2: #1f56b8;
+      --btnGreen1: #12b76a;
+      --btnGreen2: #079455;
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --radius-md: 14px;
+      --max: 1120px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 12% 24%, rgba(120,180,255,.32), rgba(255,255,255,0) 60%),
+        radial-gradient(1200px 800px at 88% 18%, rgba(120,140,255,.26), rgba(255,255,255,0) 62%),
+        radial-gradient(1000px 700px at 50% 92%, rgba(170,210,255,.28), rgba(255,255,255,0) 60%),
+        linear-gradient(180deg, #f8fbff 0%, #eef6ff 45%, #f8fbff 100%);
+      min-height:100vh;
+    }
+
+    a{color:inherit;text-decoration:none}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:var(--nav-bg);
+      backdrop-filter:blur(12px) saturate(140%);
+      border-bottom:1px solid var(--nav-border);
+    }
+
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      color:#fff;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:900;
+      letter-spacing:.2px;
+      white-space:nowrap;
+    }
+
+    .brand .logo{
+      width:26px;
+      height:26px;
+      border-radius:10px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.85), rgba(255,255,255,.08)),
+        linear-gradient(180deg, rgba(55,120,255,.9), rgba(20,70,190,.9));
+      box-shadow:0 10px 18px rgba(0,0,0,.18);
+      position:relative;
+    }
+
+    .brand .logo:after{
+      content:"";
+      position:absolute;
+      inset:7px 6px 7px 10px;
+      border-radius:8px;
+      background:rgba(255,255,255,.85);
+      clip-path:polygon(0 0, 100% 0, 85% 100%, 0 100%);
+      opacity:.12;
+    }
+
+    nav.links{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    nav.links a{
+      color:rgba(255,255,255,.82);
+      font-weight:700;
+      font-size:14px;
+    }
+
+    nav.links a:hover{color:#fff}
+
+    .langWrap{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      position:relative;
+    }
+
+    .langSelect{
+      appearance:none;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(0,0,0,.18);
+      color:#fff;
+      padding:8px 36px 8px 12px;
+      border-radius:12px;
+      font-weight:800;
+      cursor:pointer;
+      outline:none;
+    }
+
+    .langSelect:focus{
+      box-shadow:0 0 0 3px rgba(90,160,255,.25);
+    }
+
+    .langWrap:after{
+      content:"▾";
+      position:absolute;
+      right:12px;
+      top:50%;
+      transform:translateY(-50%);
+      color:rgba(255,255,255,.85);
+      pointer-events:none;
+      font-size:12px;
+    }
+
+    .hero{
+      position:relative;
+      color:var(--heroText);
+      padding:68px 18px 40px;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.58)),
+url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=2200&q=60");
+      background-size:cover;
+      background-position:center;
+    }
+
+    .hero .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      text-align:center;
+    }
+
+    .hero h1{
+      margin:0 0 10px;
+      font-weight:950;
+      font-size:clamp(30px, 3.7vw, 48px);
+      letter-spacing:.2px;
+      text-shadow:0 10px 24px rgba(0,0,0,.35);
+    }
+
+    .hero p{
+      margin:0 auto 18px;
+      max-width:860px;
+      color:var(--heroMuted);
+      font-size:clamp(15px, 2vw, 18px);
+      line-height:1.55;
+    }
+
+    .ctaGroup{
+      display:flex;
+      gap:14px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:8px;
+    }
+
+    .cta{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:14px 20px;
+      border-radius:16px;
+      color:#fff;
+      font-weight:950;
+      box-shadow:0 18px 38px rgba(0,0,0,.28);
+      border:1px solid rgba(255,255,255,.20);
+      min-width:min(560px, 92vw);
+      text-align:center;
+    }
+
+    .cta.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
+    .cta.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
+    .cta:hover{filter:brightness(1.05)}
+
+    .heroMeta{
+      margin-top:14px;
+      display:flex;
+      gap:14px;
+      justify-content:center;
+      flex-wrap:wrap;
+      color:rgba(255,255,255,.86);
+      font-weight:700;
+      font-size:13px;
+    }
+
+    .heroMeta span{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.12);
+      backdrop-filter:blur(10px);
+    }
+
+    .section{padding:26px 18px 10px}
+    .wrap{max-width:var(--max); margin:0 auto;}
+
+    .glassCard{
+      background:linear-gradient(180deg, var(--glass), var(--glass2));
+      border:1px solid var(--stroke);
+      border-radius:var(--radius-xl);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(14px) saturate(140%);
+      -webkit-backdrop-filter:blur(14px) saturate(140%);
+      overflow:hidden;
+    }
+
+    .pad{padding:22px}
+
+    .headline,
+    .sectionTitle{
+      text-align:center;
+      margin:0 0 10px;
+      font-weight:950;
+      font-size:clamp(22px, 2.6vw, 34px);
+      letter-spacing:.2px;
+    }
+
+    .lead,
+    .sectionSub{
+      text-align:center;
+      margin:0 auto 16px;
+      max-width:920px;
+      color:rgba(11,18,32,.76);
+      line-height:1.7;
+      font-size:16px;
+    }
+
+    .grid2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+
+    .infoCard,
+    .faqItem{
+      border-radius:var(--radius-lg);
+      border:1px solid rgba(255,255,255,.55);
+      background:rgba(255,255,255,.20);
+      padding:18px;
+    }
+
+    .infoCard h3,
+    .faqItem h3{
+      margin:0 0 10px;
+      font-size:22px;
+      font-weight:950;
+    }
+
+    .faqItem h3{
+      font-size:18px;
+      margin-bottom:8px;
+    }
+
+    .infoCard p,
+    .infoCard li,
+    .faqItem p{
+      color:rgba(11,18,32,.76);
+      line-height:1.65;
+      font-weight:700;
+      margin:0;
+    }
+
+    .infoCard p + p{margin-top:12px;}
+
+    .infoCard ul{
+      margin:0;
+      padding-left:18px;
+    }
+
+    .faqGrid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+
+    .serviceMini{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      margin-top:16px;
+    }
+
+    .serviceMini .box{
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.55);
+      background:rgba(255,255,255,.20);
+      padding:18px;
+      text-align:center;
+    }
+
+    .serviceMini .box h3{
+      margin:0 0 8px;
+      font-size:20px;
+      font-weight:950;
+    }
+
+    .serviceMini .box p{
+      margin:0;
+      color:rgba(11,18,32,.74);
+      line-height:1.55;
+      font-weight:700;
+    }
+
+    .miniBtn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      margin-top:14px;
+      padding:12px 18px;
+      border-radius:14px;
+      color:#fff;
+      font-weight:900;
+      min-width:220px;
+      box-shadow:0 10px 24px rgba(0,0,0,.16);
+      text-align:center;
+    }
+
+    .miniBtn.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
+    .miniBtn.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
+
+    footer{
+      margin-top:18px;
+      padding:18px 18px 28px;
+      color:rgba(255,255,255,.82);
+      background:rgba(9,24,33,.82);
+      border-top:1px solid rgba(255,255,255,.10);
+      backdrop-filter:blur(12px) saturate(140%);
+    }
+
+    .footWrap{
+      max-width:var(--max);
+      margin:0 auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .footLinks{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      font-weight:800;
+    }
+
+    .footLinks a{color:rgba(255,255,255,.80)}
+    .footLinks a:hover{color:#fff}
+
+    @media (max-width:900px){
+      nav.links{display:none}
+      .grid2,
+      .faqGrid,
+      .serviceMini{grid-template-columns:1fr}
+      .cta{min-width:92vw}
+      .miniBtn{min-width:100%}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>BriefHelden</div>
+      </div>
+
+      <nav class="links" aria-label="Hauptnavigation">
+        <a href="index.html" data-i18n="nav_home">Startseite</a>
+        <a href="frage.html" data-i18n="nav_question">Frage stellen</a>
+        <a href="widerruf.html" data-i18n="nav_refund">Widerruf</a>
+        <a href="impressum.html" data-i18n="nav_imprint">Impressum</a>
+        <a href="agb.html" data-i18n="nav_terms">AGB</a>
+        <a href="datenschutz.html" data-i18n="nav_privacy">Datenschutz</a>
+      </nav>
+
+      <div class="langWrap">
+        <select class="langSelect" id="langSelect" aria-label="Sprache">
+          <option value="de">DE</option>
+          <option value="en">EN</option>
+          <option value="tr">TR</option>
+          <option value="ru">RU</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <h1 data-i18n="hero_title">Zahlungserinnerung verstehen</h1>
+      <p data-i18n="hero_sub">
+        Eine Zahlungserinnerung wirkt oft unangenehm oder dringend. BriefHelden erklärt Ihnen Inhalt, Frist und wichtige Angaben einfach und verständlich.
+      </p>
+
+      <div class="ctaGroup">
+        <a class="cta primary" id="stripeBtn" href="#" rel="noopener">
+          <span data-i18n="hero_cta">Jetzt Zahlungserinnerung erklären lassen – 6,90 €</span>
+          <span aria-hidden="true">›</span>
+        </a>
+
+        <a class="cta secondary" id="questionBtn" href="#" rel="noopener">
+          <span data-i18n="hero_question_cta">Kurze Frage stellen – 1,49 €</span>
+          <span aria-hidden="true">›</span>
+        </a>
+      </div>
+
+      <div class="heroMeta" aria-label="Kurzvorteile">
+        <span>✅ <span data-i18n="meta_1">Einfach erklärt</span></span>
+        <span>⚡ <span data-i18n="meta_2">Schnelle Rückmeldung</span></span>
+        <span>🔒 <span data-i18n="meta_3">Vertraulich</span></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="glassCard">
+        <div class="pad">
+          <h2 class="headline" data-i18n="intro_title">Was ist eine Zahlungserinnerung?</h2>
+          <p class="lead" data-i18n="intro_text">
+            Eine Zahlungserinnerung ist ein Schreiben, das daran erinnern soll, dass ein Betrag noch offen ist. Oft wird dabei auf eine Rechnung, ein Zahlungsziel oder eine frühere Forderung hingewiesen. Viele Menschen möchten verstehen, ob die Zahlungserinnerung schon ernst ist, welche Frist gilt und worauf sie achten sollten. Genau dabei hilft BriefHelden.
+          </p>
+
+          <div class="grid2">
+            <div class="infoCard">
+              <h3 data-i18n="left_title">Einfach erklärt</h3>
+              <p data-i18n="left_text_1">
+                Eine Zahlungserinnerung bedeutet meistens, dass laut Schreiben noch nicht bezahlt wurde und jetzt erneut an die Zahlung erinnert wird.
+              </p>
+              <p data-i18n="left_text_2">
+                Wichtig sind dabei vor allem: Welcher Betrag wird genannt? Auf welche Rechnung oder Forderung bezieht sich das Schreiben? Gibt es eine neue Frist? Und ist von weiteren Schritten die Rede?
+              </p>
+              <p data-i18n="left_text_3">
+                BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie die Zahlungserinnerung besser einordnen können.
+              </p>
+            </div>
+
+            <div class="infoCard">
+              <h3 data-i18n="right_title">So funktioniert es</h3>
+              <ul>
+                <li data-i18n="right_li_1">Zahlungserinnerung sicher hochladen</li>
+                <li data-i18n="right_li_2">Wir lesen den Inhalt und erklären ihn verständlich</li>
+                <li data-i18n="right_li_3">Sie erhalten die Erklärung per E-Mail</li>
+                <li data-i18n="right_li_4">Keine Rechtsberatung – nur verständliche Texterklärung</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="serviceMini">
+            <div class="box">
+              <h3 data-i18n="service1_title">Komplettes Schreiben erklären lassen</h3>
+              <p data-i18n="service1_text">
+                Ideal, wenn Sie die ganze Zahlungserinnerung vollständig verstehen möchten.
+              </p>
+              <a class="miniBtn primary" id="servicePrimaryBtn" href="#" rel="noopener">
+                <span data-i18n="service1_btn">Jetzt für 6,90 € starten</span>
+                <span aria-hidden="true">›</span>
+              </a>
+            </div>
+
+            <div class="box">
+              <h3 data-i18n="service2_title">Kurze Rückfrage stellen</h3>
+              <p data-i18n="service2_text">
+                Ideal, wenn Sie nur eine kurze Frage zu Betrag, Frist oder Inhalt haben.
+              </p>
+              <a class="miniBtn secondary" id="serviceQuestionBtn" href="#" rel="noopener">
+                <span data-i18n="service2_btn">Jetzt für 1,49 € fragen</span>
+                <span aria-hidden="true">›</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:18px"></div>
+
+      <div class="glassCard">
+        <div class="pad">
+          <h2 class="sectionTitle" data-i18n="faq_title">Häufige Fragen zur Zahlungserinnerung</h2>
+          <p class="sectionSub" data-i18n="faq_sub">
+            Diese Fragen tauchen bei Zahlungserinnerungen besonders oft auf:
+          </p>
+
+          <div class="faqGrid">
+            <div class="faqItem">
+              <h3 data-i18n="faq1_q">Ist eine Zahlungserinnerung schon eine Mahnung?</h3>
+              <p data-i18n="faq1_a">
+                Nicht immer. Eine Zahlungserinnerung ist oft zunächst ein Hinweis darauf, dass eine Zahlung noch offen sein soll. Der genaue Inhalt des Schreibens ist entscheidend.
+              </p>
+            </div>
+
+            <div class="faqItem">
+              <h3 data-i18n="faq2_q">Welche Angaben sind besonders wichtig?</h3>
+              <p data-i18n="faq2_a">
+                Besonders wichtig sind Betrag, Bezug zur Rechnung oder Forderung, neue Frist und mögliche Hinweise auf weitere Schritte.
+              </p>
+            </div>
+
+            <div class="faqItem">
+              <h3 data-i18n="faq3_q">Muss ich auf eine Zahlungserinnerung achten?</h3>
+              <p data-i18n="faq3_a">
+                Ja, solche Schreiben sollten ernst genommen werden. Viele Menschen möchten zuerst verstehen, worauf sich die Erinnerung genau bezieht.
+              </p>
+            </div>
+
+            <div class="faqItem">
+              <h3 data-i18n="faq4_q">Ist BriefHelden eine Rechtsberatung?</h3>
+              <p data-i18n="faq4_a">
+                Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="height:18px"></div>
+
+      <div class="glassCard">
+        <div class="pad">
+          <h2 class="sectionTitle" data-i18n="tip_title">Worauf sollten Sie bei einer Zahlungserinnerung achten?</h2>
+          <p class="sectionSub" data-i18n="tip_sub">
+            Diese Punkte sind oft besonders wichtig:
+          </p>
+
+          <div class="faqGrid">
+            <div class="faqItem">
+              <h3 data-i18n="tip1_title">Betrag prüfen</h3>
+              <p data-i18n="tip1_text">
+                Schauen Sie, welcher offene Betrag genannt wird und ob zusätzliche Kosten erwähnt werden.
+              </p>
+            </div>
+
+            <div class="faqItem">
+              <h3 data-i18n="tip2_title">Frist beachten</h3>
+              <p data-i18n="tip2_text">
+                Prüfen Sie, ob eine neue Zahlungsfrist oder ein konkretes Datum genannt wird.
+              </p>
+            </div>
+
+            <div class="faqItem">
+              <h3 data-i18n="tip3_title">Bezug ansehen</h3>
+              <p data-i18n="tip3_text">
+                Achten Sie darauf, auf welche Rechnung, Forderung oder frühere Zahlung sich das Schreiben bezieht.
+              </p>
+            </div>
+
+            <div class="faqItem">
+              <h3 data-i18n="tip4_title">Inhalt verständlich machen</h3>
+              <p data-i18n="tip4_text">
+                Wenn die Formulierungen unklar oder kompliziert wirken, hilft eine einfache Erklärung oft sofort weiter.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footWrap">
+      <div>© 2026 BriefHelden – Alle Rechte vorbehalten</div>
+      <div class="footLinks">
+        <a href="index.html" data-i18n="foot_home">Startseite</a>
+        <a href="frage.html" data-i18n="foot_question">Frage stellen</a>
+        <a href="widerruf.html" data-i18n="foot_refund">Widerruf</a>
+        <a href="impressum.html" data-i18n="foot_imprint">Impressum</a>
+        <a href="agb.html" data-i18n="foot_terms">AGB</a>
+        <a href="datenschutz.html" data-i18n="foot_privacy">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const STRIPE_LINKS = {
+de: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
+en: "https://buy.stripe.com/fZubJ0dpXbMAbfpcIZ4sE01",
+tr: "https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
+ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
+    };
+
+    const QUESTION_LINKS = {
+de: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
+en: "https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
+tr: "https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
+ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
+    };
+
+    const i18n = {
+      de: {
+        nav_home: "Startseite",
+        nav_question: "Frage stellen",
+        nav_refund: "Widerruf",
+        nav_imprint: "Impressum",
+        nav_terms: "AGB",
+        nav_privacy: "Datenschutz",
+
+        hero_title: "Zahlungserinnerung verstehen",
+        hero_sub: "Eine Zahlungserinnerung wirkt oft unangenehm oder dringend. BriefHelden erklärt Ihnen Inhalt, Frist und wichtige Angaben einfach und verständlich.",
+        hero_cta: "Jetzt Zahlungserinnerung erklären lassen – 6,90 €",
+        hero_question_cta: "Kurze Frage stellen – 1,49 €",
+        meta_1: "Einfach erklärt",
+        meta_2: "Schnelle Rückmeldung",
+        meta_3: "Vertraulich",
+
+        intro_title: "Was ist eine Zahlungserinnerung?",
+        intro_text: "Eine Zahlungserinnerung ist ein Schreiben, das daran erinnern soll, dass ein Betrag noch offen ist. Oft wird dabei auf eine Rechnung, ein Zahlungsziel oder eine frühere Forderung hingewiesen. Viele Menschen möchten verstehen, ob die Zahlungserinnerung schon ernst ist, welche Frist gilt und worauf sie achten sollten. Genau dabei hilft BriefHelden.",
+
+        left_title: "Einfach erklärt",
+        left_text_1: "Eine Zahlungserinnerung bedeutet meistens, dass laut Schreiben noch nicht bezahlt wurde und jetzt erneut an die Zahlung erinnert wird.",
+        left_text_2: "Wichtig sind dabei vor allem: Welcher Betrag wird genannt? Auf welche Rechnung oder Forderung bezieht sich das Schreiben? Gibt es eine neue Frist? Und ist von weiteren Schritten die Rede?",
+        left_text_3: "BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie die Zahlungserinnerung besser einordnen können.",
+
+        right_title: "So funktioniert es",
+        right_li_1: "Zahlungserinnerung sicher hochladen",
+        right_li_2: "Wir lesen den Inhalt und erklären ihn verständlich",
+        right_li_3: "Sie erhalten die Erklärung per E-Mail",
+        right_li_4: "Keine Rechtsberatung – nur verständliche Texterklärung",
+
+        service1_title: "Komplettes Schreiben erklären lassen",
+        service1_text: "Ideal, wenn Sie die ganze Zahlungserinnerung vollständig verstehen möchten.",
+        service1_btn: "Jetzt für 6,90 € starten",
+
+        service2_title: "Kurze Rückfrage stellen",
+        service2_text: "Ideal, wenn Sie nur eine kurze Frage zu Betrag, Frist oder Inhalt haben.",
+        service2_btn: "Jetzt für 1,49 € fragen",
+
+        faq_title: "Häufige Fragen zur Zahlungserinnerung",
+        faq_sub: "Diese Fragen tauchen bei Zahlungserinnerungen besonders oft auf:",
+        faq1_q: "Ist eine Zahlungserinnerung schon eine Mahnung?",
+        faq1_a: "Nicht immer. Eine Zahlungserinnerung ist oft zunächst ein Hinweis darauf, dass eine Zahlung noch offen sein soll. Der genaue Inhalt des Schreibens ist entscheidend.",
+        faq2_q: "Welche Angaben sind besonders wichtig?",
+        faq2_a: "Besonders wichtig sind Betrag, Bezug zur Rechnung oder Forderung, neue Frist und mögliche Hinweise auf weitere Schritte.",
+        faq3_q: "Muss ich auf eine Zahlungserinnerung achten?",
+        faq3_a: "Ja, solche Schreiben sollten ernst genommen werden. Viele Menschen möchten zuerst verstehen, worauf sich die Erinnerung genau bezieht.",
+        faq4_q: "Ist BriefHelden eine Rechtsberatung?",
+        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.",
+
+        tip_title: "Worauf sollten Sie bei einer Zahlungserinnerung achten?",
+        tip_sub: "Diese Punkte sind oft besonders wichtig:",
+        tip1_title: "Betrag prüfen",
+        tip1_text: "Schauen Sie, welcher offene Betrag genannt wird und ob zusätzliche Kosten erwähnt werden.",
+        tip2_title: "Frist beachten",
+        tip2_text: "Prüfen Sie, ob eine neue Zahlungsfrist oder ein konkretes Datum genannt wird.",
+        tip3_title: "Bezug ansehen",
+        tip3_text: "Achten Sie darauf, auf welche Rechnung, Forderung oder frühere Zahlung sich das Schreiben bezieht.",
+        tip4_title: "Inhalt verständlich machen",
+        tip4_text: "Wenn die Formulierungen unklar oder kompliziert wirken, hilft eine einfache Erklärung oft sofort weiter.",
+
+        foot_home: "Startseite",
+        foot_question: "Frage stellen",
+        foot_refund: "Widerruf",
+        foot_imprint: "Impressum",
+        foot_terms: "AGB",
+        foot_privacy: "Datenschutz"
+      },
+
+      en: {
+        nav_home: "Home",
+        nav_question: "Ask a question",
+        nav_refund: "Withdrawal",
+        nav_imprint: "Imprint",
+        nav_terms: "Terms",
+        nav_privacy: "Privacy",
+
+        hero_title: "Understand a payment reminder",
+        hero_sub: "A payment reminder often feels unpleasant or urgent. BriefHelden explains the content, deadline and important details simply and clearly.",
+        hero_cta: "Get payment reminder explained now – €6.90",
+        hero_question_cta: "Ask a short question – €1.49",
+        meta_1: "Clearly explained",
+        meta_2: "Fast response",
+        meta_3: "Confidential",
+
+        intro_title: "What is a payment reminder?",
+        intro_text: "A payment reminder is a document intended to remind you that an amount is still outstanding. It often refers to an invoice, a payment target or an earlier claim. Many people want to understand whether the reminder is already serious, which deadline applies and what they should pay attention to. That is exactly where BriefHelden helps.",
+
+        left_title: "Simply explained",
+        left_text_1: "A payment reminder usually means that, according to the document, payment has not yet been made and you are now being reminded again.",
+        left_text_2: "Important points are: Which amount is mentioned? Which invoice or claim does the document refer to? Is there a new deadline? Are further steps mentioned?",
+        left_text_3: "BriefHelden explains the content in simple language so you can better understand the payment reminder.",
+
+        right_title: "How it works",
+        right_li_1: "Upload payment reminder securely",
+        right_li_2: "We read the content and explain it clearly",
+        right_li_3: "You receive the explanation by email",
+        right_li_4: "No legal advice – plain-language explanation only",
+
+        service1_title: "Get the full document explained",
+        service1_text: "Ideal if you want to fully understand the entire payment reminder.",
+        service1_btn: "Start now for €6.90",
+
+        service2_title: "Ask a short follow-up question",
+        service2_text: "Ideal if you only have a short question about amount, deadline or content.",
+        service2_btn: "Ask now for €1.49",
+
+        faq_title: "Frequently asked questions about payment reminders",
+        faq_sub: "These questions often come up with payment reminders:",
+        faq1_q: "Is a payment reminder already a formal reminder?",
+        faq1_a: "Not always. A payment reminder is often first an indication that a payment is still said to be open. The exact content of the document is decisive.",
+        faq2_q: "Which details are especially important?",
+        faq2_a: "Especially important are the amount, the reference to the invoice or claim, the new deadline and possible indications of further steps.",
+        faq3_q: "Should I pay attention to a payment reminder?",
+        faq3_a: "Yes, such documents should be taken seriously. Many people first want to understand what exactly the reminder refers to.",
+        faq4_q: "Is BriefHelden legal advice?",
+        faq4_a: "No. BriefHelden does not provide legal advice. You only receive a clear explanation of the content.",
+
+        tip_title: "What should you look for in a payment reminder?",
+        tip_sub: "These points are often especially important:",
+        tip1_title: "Check the amount",
+        tip1_text: "See which outstanding amount is mentioned and whether extra costs are listed.",
+        tip2_title: "Check the deadline",
+        tip2_text: "Check whether a new payment deadline or a specific date is mentioned.",
+        tip3_title: "Check the reference",
+        tip3_text: "Pay attention to which invoice, claim or previous payment the document refers to.",
+        tip4_title: "Make the content understandable",
+        tip4_text: "If the wording seems unclear or complicated, a simple explanation often helps immediately.",
+
+        foot_home: "Home",
+        foot_question: "Ask a question",
+        foot_refund: "Withdrawal",
+        foot_imprint: "Imprint",
+        foot_terms: "Terms",
+        foot_privacy: "Privacy"
+      },
+
+      tr: {
+        nav_home: "Ana Sayfa",
+        nav_question: "Soru sor",
+        nav_refund: "Cayma",
+        nav_imprint: "Künye",
+        nav_terms: "Şartlar",
+        nav_privacy: "Gizlilik",
+
+        hero_title: "Ödeme hatırlatmasını anlayın",
+        hero_sub: "Bir ödeme hatırlatması çoğu zaman rahatsız edici veya acil görünebilir. BriefHelden içeriği, süreyi ve önemli bilgileri size basit ve açık şekilde açıklar.",
+        hero_cta: "Ödeme hatırlatmasını şimdi açıklat – 6,90 €",
+        hero_question_cta: "Kısa soru sor – 1,49 €",
+        meta_1: "Basit açıklandı",
+        meta_2: "Hızlı dönüş",
+        meta_3: "Gizli",
+
+        intro_title: "Ödeme hatırlatması nedir?",
+        intro_text: "Ödeme hatırlatması, bir tutarın hâlâ açık olduğunu hatırlatmak için gönderilen bir yazıdır. Çoğu zaman bir faturaya, ödeme süresine veya önceki bir alacağa atıf yapılır. Birçok kişi bunun ne kadar ciddi olduğunu, hangi sürenin geçerli olduğunu ve nelere dikkat etmesi gerektiğini anlamak ister. BriefHelden tam bu konuda yardımcı olur.",
+
+        left_title: "Basit açıklama",
+        left_text_1: "Ödeme hatırlatması genelde, yazıya göre ödemenin henüz yapılmadığı ve şimdi yeniden hatırlatıldığı anlamına gelir.",
+        left_text_2: "Önemli noktalar şunlardır: Hangi tutar belirtilmiş? Yazı hangi fatura veya alacakla ilgili? Yeni bir süre var mı? Sonraki adımlardan söz ediliyor mu?",
+        left_text_3: "BriefHelden içeriği basit dille açıklar, böylece ödeme hatırlatmasını daha iyi anlayabilirsiniz.",
+
+        right_title: "Nasıl çalışır",
+        right_li_1: "Ödeme hatırlatmasını güvenli şekilde yükleyin",
+        right_li_2: "İçeriği okuyup açık şekilde açıklıyoruz",
+        right_li_3: "Açıklamayı e-posta ile alırsınız",
+        right_li_4: "Hukuki danışmanlık değil – sadece anlaşılır açıklama",
+
+        service1_title: "Belgenin tamamını açıklat",
+        service1_text: "Ödeme hatırlatmasının tamamını anlamak istiyorsanız idealdir.",
+        service1_btn: "Şimdi 6,90 € ile başla",
+
+        service2_title: "Kısa bir soru sor",
+        service2_text: "Sadece tutar, süre veya içerikle ilgili kısa bir sorunuz varsa idealdir.",
+        service2_btn: "Şimdi 1,49 € ile sor",
+
+        faq_title: "Ödeme hatırlatması hakkında sık sorulan sorular",
+        faq_sub: "Ödeme hatırlatmalarında şu sorular sıkça ortaya çıkar:",
+        faq1_q: "Ödeme hatırlatması zaten ihtar mıdır?",
+        faq1_a: "Her zaman değil. Ödeme hatırlatması çoğu zaman önce, ödemenin hâlâ açık olduğu yönünde bir uyarıdır. Asıl belirleyici olan yazının tam içeriğidir.",
+        faq2_q: "Hangi bilgiler özellikle önemlidir?",
+        faq2_a: "Tutar, faturaya veya alacağa yapılan atıf, yeni süre ve olası sonraki adımlara dair bilgiler özellikle önemlidir.",
+        faq3_q: "Ödeme hatırlatmasını dikkate almalı mıyım?",
+        faq3_a: "Evet, bu tür yazılar ciddiye alınmalıdır. Birçok kişi önce hatırlatmanın tam olarak neye ilişkin olduğunu anlamak ister.",
+        faq4_q: "BriefHelden hukuki danışmanlık mı veriyor?",
+        faq4_a: "Hayır. BriefHelden hukuki danışmanlık vermez. Sadece içeriğin anlaşılır açıklamasını sunar.",
+
+        tip_title: "Ödeme hatırlatmasında nelere dikkat etmelisiniz?",
+        tip_sub: "Bu noktalar genelde özellikle önemlidir:",
+        tip1_title: "Tutarı kontrol edin",
+        tip1_text: "Hangi açık tutarın yazıldığını ve ek masraf olup olmadığını kontrol edin.",
+        tip2_title: "Süreyi kontrol edin",
+        tip2_text: "Yeni bir ödeme süresi veya belirli bir tarih yazılı mı bakın.",
+        tip3_title: "İlgili belgeyi inceleyin",
+        tip3_text: "Yazının hangi fatura, alacak veya önceki ödemeye dayandığına dikkat edin.",
+        tip4_title: "İçeriği anlaşılır hale getirin",
+        tip4_text: "İfade belirsiz veya karmaşık görünüyorsa, basit bir açıklama çoğu zaman hemen yardımcı olur.",
+
+        foot_home: "Ana Sayfa",
+        foot_question: "Soru sor",
+        foot_refund: "Cayma",
+        foot_imprint: "Künye",
+        foot_terms: "Şartlar",
+        foot_privacy: "Gizlilik"
+      },
+
+      ru: {
+        nav_home: "Главная",
+        nav_question: "Задать вопрос",
+        nav_refund: "Отказ",
+        nav_imprint: "Выходные данные",
+        nav_terms: "Условия",
+        nav_privacy: "Конфиденциальность",
+
+        hero_title: "Понять напоминание об оплате",
+        hero_sub: "Напоминание об оплате часто кажется неприятным или срочным. BriefHelden объяснит содержание, срок и важные данные просто и ясно.",
+        hero_cta: "Объяснить напоминание об оплате – 6,90 €",
+        hero_question_cta: "Задать короткий вопрос – 1,49 €",
+        meta_1: "Просто объяснено",
+        meta_2: "Быстрый ответ",
+        meta_3: "Конфиденциально",
+
+        intro_title: "Что такое напоминание об оплате?",
+        intro_text: "Напоминание об оплате — это документ, который должен напомнить о том, что сумма всё ещё считается открытой. Часто в нём есть ссылка на счёт, срок оплаты или предыдущее требование. Многие люди хотят понять, насколько это уже серьёзно, какой срок действует и на что стоит обратить внимание. Именно здесь помогает BriefHelden.",
+
+        left_title: "Просто объясняем",
+        left_text_1: "Напоминание об оплате обычно означает, что, согласно документу, платёж ещё не поступил и теперь об этом напоминают снова.",
+        left_text_2: "Особенно важно следующее: Какая сумма указана? К какому счёту или требованию относится документ? Есть ли новый срок? Упоминаются ли дальнейшие шаги?",
+        left_text_3: "BriefHelden объясняет содержание простым языком, чтобы вам было легче понять напоминание об оплате.",
+
+        right_title: "Как это работает",
+        right_li_1: "Безопасно загрузите напоминание об оплате",
+        right_li_2: "Мы читаем содержание и понятно объясняем его",
+        right_li_3: "Вы получаете объяснение по e-mail",
+        right_li_4: "Не юридическая консультация – только понятное объяснение",
+
+        service1_title: "Получить полное объяснение документа",
+        service1_text: "Идеально, если вы хотите полностью понять всё напоминание об оплате.",
+        service1_btn: "Начать за 6,90 €",
+
+        service2_title: "Задать короткий вопрос",
+        service2_text: "Идеально, если у вас только короткий вопрос о сумме, сроке или содержании.",
+        service2_btn: "Спросить за 1,49 €",
+
+        faq_title: "Частые вопросы о напоминании об оплате",
+        faq_sub: "Эти вопросы особенно часто возникают по напоминаниям об оплате:",
+        faq1_q: "Напоминание об оплате — это уже официальная претензия?",
+        faq1_a: "Не всегда. Напоминание об оплате часто сначала является указанием на то, что платёж якобы всё ещё открыт. Решающим является точное содержание документа.",
+        faq2_q: "Какие данные особенно важны?",
+        faq2_a: "Особенно важны сумма, ссылка на счёт или требование, новый срок и возможные указания на дальнейшие шаги.",
+        faq3_q: "Нужно ли обращать внимание на напоминание об оплате?",
+        faq3_a: "Да, такие документы следует воспринимать серьёзно. Многие люди сначала хотят понять, к чему именно относится это напоминание.",
+        faq4_q: "BriefHelden — это юридическая консультация?",
+        faq4_a: "Нет. BriefHelden не даёт юридических консультаций. Вы получаете только понятное объяснение содержания.",
+
+        tip_title: "На что стоит обратить внимание в напоминании об оплате?",
+        tip_sub: "Эти пункты часто особенно важны:",
+        tip1_title: "Проверьте сумму",
+        tip1_text: "Посмотрите, какая открытая сумма указана и упоминаются ли дополнительные расходы.",
+        tip2_title: "Проверьте срок",
+        tip2_text: "Проверьте, указан ли новый срок оплаты или конкретная дата.",
+        tip3_title: "Посмотрите, к чему есть ссылка",
+        tip3_text: "Обратите внимание, к какому счёту, требованию или предыдущему платежу относится документ.",
+        tip4_title: "Сделайте содержание понятным",
+        tip4_text: "Если формулировки кажутся непонятными или сложными, простое объяснение часто сразу помогает.",
+
+        foot_home: "Главная",
+        foot_question: "Задать вопрос",
+        foot_refund: "Отказ",
+        foot_imprint: "Выходные данные",
+        foot_terms: "Условия",
+        foot_privacy: "Конфиденциальность"
+      }
+    };
+
+    function updateLinks(lang){
+const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
+const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
+
+      const stripeBtn = document.getElementById("stripeBtn");
+      const servicePrimaryBtn = document.getElementById("servicePrimaryBtn");
+      const questionBtn = document.getElementById("questionBtn");
+      const serviceQuestionBtn = document.getElementById("serviceQuestionBtn");
+
+      if(stripeBtn) stripeBtn.href = mainLink;
+      if(servicePrimaryBtn) servicePrimaryBtn.href = mainLink;
+      if(questionBtn) questionBtn.href = questionLink;
+      if(serviceQuestionBtn) serviceQuestionBtn.href = questionLink;
+    }
+
+    function applyLang(lang){
+const dict = i18n[lang] || i18n.de;
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        if(key in dict){
+          el.textContent = dict[key];
+        }
+      });
+
+      updateLinks(lang);
+      localStorage.setItem("briefhelden_lang", lang);
+    }
+
+    const select = document.getElementById("langSelect");
+    const savedLang = localStorage.getItem("briefhelden_lang");
+    const initialLang = ["de","en","tr","ru"].includes(savedLang) ? savedLang : "de";
+
+    select.value = initialLang;
+    applyLang(initialLang);
+
+    select.addEventListener("change", () => {
+      applyLang(select.value);
+    });
+  </script>
+</body>
+</html>
