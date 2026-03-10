@@ -1,620 +1,961 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mahnung verstehen – einfach erklärt | BriefHelden</title>
   <meta
     name="description"
-    content="Mahnung erhalten? BriefHelden erklärt Mahnungen einfach und verständlich. Verstehen Sie Fristen, Forderungen und wichtige Punkte ohne komplizierte Sprache."
-  />
-  <meta
-    name="keywords"
-    content="Mahnung verstehen, Mahnung erklären, Zahlungserinnerung verstehen, Mahnung was tun, Brief Mahnung Hilfe"
+    content="Mahnung einfach verstehen: BriefHelden erklärt Inhalt, Fristen, Beträge und worauf Sie achten sollten – verständlich, klar und ohne komplizierte Fachsprache."
   />
   <meta name="robots" content="index, follow" />
-  <meta name="author" content="BriefHelden" />
+<link rel="canonical" href="https://www.briefhelden-service.de/mahnung-verstehen.html" />
 
   <meta property="og:title" content="Mahnung verstehen – einfach erklärt | BriefHelden" />
   <meta
     property="og:description"
-    content="Mahnung erhalten? Wir erklären Mahnungen einfach und verständlich."
+    content="Mahnung einfach erklärt. Verstehen Sie Fristen, Beträge und die wichtigsten Punkte schnell und verständlich."
   />
-  <meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.briefhelden-service.de/mahnung-verstehen" />
-<meta property="og:image" content="https://www.briefhelden-service.de/og-image.jpg" />
+  <meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.briefhelden-service.de/mahnung-verstehen.html" />
 
-<link rel="canonical" href="https://www.briefhelden-service.de/mahnung-verstehen" />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CVRQ9QBE94');
+  </script>
 
   <style>
-    :root {
-      --bg: #f4f7fb;
-      --card: rgba(255, 255, 255, 0.78);
-      --card-solid: #ffffff;
-      --text: #162033;
-      --muted: #5f6b85;
-      --primary: #2563eb;
-      --primary-dark: #1747b5;
-      --border: rgba(37, 99, 235, 0.12);
-      --shadow: 0 18px 50px rgba(22, 32, 51, 0.10);
-      --radius: 22px;
-      --max: 1160px;
+    :root{
+      --nav-bg: rgba(9,24,33,.78);
+      --nav-border: rgba(255,255,255,.10);
+      --text: #0b1220;
+      --muted: rgba(11,18,32,.72);
+      --heroText: #fff;
+      --heroMuted: rgba(255,255,255,.84);
+      --glass: rgba(255,255,255,.28);
+      --glass2: rgba(255,255,255,.16);
+      --stroke: rgba(255,255,255,.36);
+      --shadow: 0 18px 40px rgba(0,0,0,.18);
+      --btn1: #2f6fff;
+      --btn2: #1f56b8;
+      --btnGreen1: #12b76a;
+      --btnGreen2: #079455;
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --radius-md: 14px;
+      --max: 1120px;
     }
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
       background:
-        radial-gradient(circle at top left, rgba(37,99,235,0.08), transparent 28%),
-        radial-gradient(circle at top right, rgba(59,130,246,0.08), transparent 22%),
-        linear-gradient(180deg, #eef4ff 0%, var(--bg) 100%);
-      color: var(--text);
-      line-height: 1.65;
+        radial-gradient(1200px 700px at 12% 24%, rgba(120,180,255,.32), rgba(255,255,255,0) 60%),
+        radial-gradient(1200px 800px at 88% 18%, rgba(120,140,255,.26), rgba(255,255,255,0) 62%),
+        radial-gradient(1000px 700px at 50% 92%, rgba(170,210,255,.28), rgba(255,255,255,0) 60%),
+        linear-gradient(180deg, #f8fbff 0%, #eef6ff 45%, #f8fbff 100%);
+      min-height:100vh;
     }
 
-    a {
-      color: var(--primary);
-      text-decoration: none;
+    a{color:inherit;text-decoration:none}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:var(--nav-bg);
+      backdrop-filter:blur(12px) saturate(140%);
+      border-bottom:1px solid var(--nav-border);
     }
 
-    a:hover {
-      text-decoration: underline;
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      color:#fff;
     }
 
-    .container {
-      width: min(var(--max), calc(100% - 32px));
-      margin: 0 auto;
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:900;
+      letter-spacing:.2px;
+      white-space:nowrap;
     }
 
-    .topbar {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(10px);
-      background: rgba(244, 247, 251, 0.78);
-      border-bottom: 1px solid rgba(22, 32, 51, 0.06);
+    .brand .logo{
+      width:26px;
+      height:26px;
+      border-radius:10px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.85), rgba(255,255,255,.08)),
+        linear-gradient(180deg, rgba(55,120,255,.9), rgba(20,70,190,.9));
+      box-shadow:0 10px 18px rgba(0,0,0,.18);
+      position:relative;
     }
 
-    .topbar-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 14px 0;
+    .brand .logo:after{
+      content:"";
+      position:absolute;
+      inset:7px 6px 7px 10px;
+      border-radius:8px;
+      background:rgba(255,255,255,.85);
+      clip-path:polygon(0 0, 100% 0, 85% 100%, 0 100%);
+      opacity:.12;
     }
 
-    .brand {
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: var(--text);
+    nav.links{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      flex-wrap:wrap;
     }
 
-    .nav {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      align-items: center;
+    nav.links a{
+      color:rgba(255,255,255,.82);
+      font-weight:700;
+      font-size:14px;
     }
 
-    .nav a {
-      font-size: 0.95rem;
-      color: var(--muted);
-      font-weight: 600;
+    nav.links a:hover{color:#fff}
+
+    .langWrap{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      position:relative;
     }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 14px 22px;
-      border-radius: 999px;
-      border: none;
-      font-size: 1rem;
-      font-weight: 700;
-      cursor: pointer;
-      transition: 0.2s ease;
-      text-decoration: none;
+    .langSelect{
+      appearance:none;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(0,0,0,.18);
+      color:#fff;
+      padding:8px 36px 8px 12px;
+      border-radius:12px;
+      font-weight:800;
+      cursor:pointer;
+      outline:none;
     }
 
-    .btn-primary {
-      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-      color: #fff;
-      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.28);
+    .langSelect:focus{
+      box-shadow:0 0 0 3px rgba(90,160,255,.25);
     }
 
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      text-decoration: none;
+    .langWrap:after{
+      content:"▾";
+      position:absolute;
+      right:12px;
+      top:50%;
+      transform:translateY(-50%);
+      color:rgba(255,255,255,.85);
+      pointer-events:none;
+      font-size:12px;
     }
 
-    .btn-secondary {
-      background: #fff;
-      color: var(--primary);
-      border: 1px solid rgba(37,99,235,0.20);
+    .hero{
+      position:relative;
+      color:var(--heroText);
+      padding:68px 18px 40px;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.58)),
+url("https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=2200&q=60");
+      background-size:cover;
+      background-position:center;
     }
 
-    .btn-secondary:hover {
-      text-decoration: none;
-      background: #f8fbff;
+    .hero .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      text-align:center;
     }
 
-    .hero {
-      padding: 72px 0 32px;
+    .hero h1{
+      margin:0 0 10px;
+      font-weight:950;
+      font-size:clamp(30px, 3.7vw, 48px);
+      letter-spacing:.2px;
+      text-shadow:0 10px 24px rgba(0,0,0,.35);
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 28px;
-      align-items: stretch;
+    .hero p{
+      margin:0 auto 18px;
+      max-width:860px;
+      color:var(--heroMuted);
+      font-size:clamp(15px, 2vw, 18px);
+      line-height:1.55;
     }
 
-    .glass-card {
-      background: var(--card);
-      backdrop-filter: blur(14px);
-      border: 1px solid rgba(255,255,255,0.55);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
+    .ctaGroup{
+      display:flex;
+      gap:14px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:8px;
     }
 
-    .hero-content {
-      padding: 38px;
+    .cta{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:14px 20px;
+      border-radius:16px;
+      color:#fff;
+      font-weight:950;
+      box-shadow:0 18px 38px rgba(0,0,0,.28);
+      border:1px solid rgba(255,255,255,.20);
+      min-width:min(560px, 92vw);
+      text-align:center;
     }
 
-    .badge {
-      display: inline-block;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(37,99,235,0.09);
-      color: var(--primary);
-      font-size: 0.9rem;
-      font-weight: 700;
-      margin-bottom: 16px;
+    .cta.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
+    .cta.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
+    .cta:hover{filter:brightness(1.05)}
+
+    .heroMeta{
+      margin-top:14px;
+      display:flex;
+      gap:14px;
+      justify-content:center;
+      flex-wrap:wrap;
+      color:rgba(255,255,255,.86);
+      font-weight:700;
+      font-size:13px;
     }
 
-    h1 {
-      font-size: clamp(2rem, 5vw, 3.35rem);
-      line-height: 1.1;
-      margin: 0 0 16px;
-      letter-spacing: -0.03em;
+    .heroMeta span{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.12);
+      backdrop-filter:blur(10px);
     }
 
-    .lead {
-      font-size: 1.08rem;
-      color: var(--muted);
-      margin: 0 0 24px;
-      max-width: 760px;
+    .section{padding:26px 18px 10px}
+    .wrap{max-width:var(--max); margin:0 auto;}
+
+    .glassCard{
+      background:linear-gradient(180deg, var(--glass), var(--glass2));
+      border:1px solid var(--stroke);
+      border-radius:var(--radius-xl);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(14px) saturate(140%);
+      -webkit-backdrop-filter:blur(14px) saturate(140%);
+      overflow:hidden;
     }
 
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 22px;
+    .pad{padding:22px}
+
+    .headline,
+    .sectionTitle{
+      text-align:center;
+      margin:0 0 10px;
+      font-weight:950;
+      font-size:clamp(22px, 2.6vw, 34px);
+      letter-spacing:.2px;
     }
 
-    .mini-points {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 16px;
+    .lead,
+    .sectionSub{
+      text-align:center;
+      margin:0 auto 16px;
+      max-width:920px;
+      color:rgba(11,18,32,.76);
+      line-height:1.7;
+      font-size:16px;
     }
 
-    .mini-point {
-      background: rgba(255,255,255,0.7);
-      border: 1px solid rgba(22,32,51,0.06);
-      border-radius: 16px;
-      padding: 14px;
-      color: var(--muted);
-      font-size: 0.95rem;
+    .grid2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
     }
 
-    .hero-side {
-      padding: 26px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+    .infoCard,
+    .faqItem{
+      border-radius:var(--radius-lg);
+      border:1px solid rgba(255,255,255,.55);
+      background:rgba(255,255,255,.20);
+      padding:18px;
     }
 
-    .hero-side h2 {
-      margin-top: 0;
-      margin-bottom: 12px;
-      font-size: 1.35rem;
+    .infoCard h3,
+    .faqItem h3{
+      margin:0 0 10px;
+      font-size:22px;
+      font-weight:950;
     }
 
-    .check-list {
-      margin: 0;
-      padding-left: 18px;
-      color: var(--muted);
+    .faqItem h3{
+      font-size:18px;
+      margin-bottom:8px;
     }
 
-    .section {
-      padding: 22px 0;
+    .infoCard p,
+    .infoCard li,
+    .faqItem p{
+      color:rgba(11,18,32,.76);
+      line-height:1.65;
+      font-weight:700;
+      margin:0;
     }
 
-    .content-grid {
-      display: grid;
-      grid-template-columns: 1fr 340px;
-      gap: 26px;
-      align-items: start;
+    .infoCard p + p{margin-top:12px;}
+
+    .infoCard ul{
+      margin:0;
+      padding-left:18px;
     }
 
-    .content-card,
-    .sidebar-card {
-      background: var(--card-solid);
-      border-radius: 22px;
-      box-shadow: var(--shadow);
-      border: 1px solid rgba(22,32,51,0.05);
+    .faqGrid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
     }
 
-    .content-card {
-      padding: 34px;
+    .serviceMini{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      margin-top:16px;
     }
 
-    .sidebar-card {
-      padding: 24px;
-      position: sticky;
-      top: 86px;
+    .serviceMini .box{
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.55);
+      background:rgba(255,255,255,.20);
+      padding:18px;
+      text-align:center;
     }
 
-    h2 {
-      font-size: 1.7rem;
-      line-height: 1.2;
-      margin: 0 0 14px;
+    .serviceMini .box h3{
+      margin:0 0 8px;
+      font-size:20px;
+      font-weight:950;
     }
 
-    h3 {
-      font-size: 1.2rem;
-      margin: 26px 0 10px;
+    .serviceMini .box p{
+      margin:0;
+      color:rgba(11,18,32,.74);
+      line-height:1.55;
+      font-weight:700;
     }
 
-    p {
-      margin: 0 0 16px;
+    .miniBtn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      margin-top:14px;
+      padding:12px 18px;
+      border-radius:14px;
+      color:#fff;
+      font-weight:900;
+      min-width:220px;
+      box-shadow:0 10px 24px rgba(0,0,0,.16);
+      text-align:center;
     }
 
-    ul,
-    ol {
-      margin: 0 0 18px;
-      padding-left: 22px;
+    .miniBtn.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
+    .miniBtn.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
+
+    footer{
+      margin-top:18px;
+      padding:18px 18px 28px;
+      color:rgba(255,255,255,.82);
+      background:rgba(9,24,33,.82);
+      border-top:1px solid rgba(255,255,255,.10);
+      backdrop-filter:blur(12px) saturate(140%);
     }
 
-    li {
-      margin-bottom: 8px;
+    .footWrap{
+      max-width:var(--max);
+      margin:0 auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:12px;
     }
 
-    .highlight-box {
-      background: linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%);
-      border: 1px solid rgba(37,99,235,0.15);
-      border-radius: 18px;
-      padding: 18px 18px 6px;
-      margin: 22px 0;
+    .footLinks{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      font-weight:800;
     }
 
-    .cta-box {
-      margin-top: 28px;
-      background: linear-gradient(135deg, #eff6ff, #ffffff);
-      border: 1px solid rgba(37,99,235,0.14);
-      border-radius: 20px;
-      padding: 24px;
-    }
+    .footLinks a{color:rgba(255,255,255,.80)}
+    .footLinks a:hover{color:#fff}
 
-    .faq-item {
-      border-top: 1px solid rgba(22,32,51,0.08);
-      padding: 18px 0;
-    }
-
-    .faq-item:first-child {
-      border-top: none;
-      padding-top: 0;
-    }
-
-    .faq-item strong {
-      display: block;
-      margin-bottom: 8px;
-      font-size: 1rem;
-    }
-
-    .related-links {
-      display: grid;
-      gap: 10px;
-      margin-top: 14px;
-    }
-
-    .related-links a {
-      display: block;
-      padding: 12px 14px;
-      border-radius: 14px;
-      background: #f8fbff;
-      border: 1px solid rgba(37,99,235,0.10);
-      font-weight: 600;
-    }
-
-    .footer {
-      padding: 38px 0 54px;
-      color: var(--muted);
-      font-size: 0.95rem;
-    }
-
-    .footer-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 10px;
-    }
-
-    @media (max-width: 980px) {
-      .hero-grid,
-      .content-grid,
-      .mini-points {
-        grid-template-columns: 1fr;
-      }
-
-      .sidebar-card {
-        position: static;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .hero {
-        padding-top: 40px;
-      }
-
-      .hero-content,
-      .hero-side,
-      .content-card,
-      .sidebar-card {
-        padding: 22px;
-      }
-
-      .topbar-inner {
-        align-items: flex-start;
-        flex-direction: column;
-      }
-
-      .hero-actions {
-        flex-direction: column;
-      }
-
-      .btn {
-        width: 100%;
-      }
+    @media (max-width:900px){
+      nav.links{display:none}
+      .grid2,
+      .faqGrid,
+      .serviceMini{grid-template-columns:1fr}
+      .cta{min-width:92vw}
+      .miniBtn{min-width:100%}
     }
   </style>
-
-  <script type="application/ld+json">
-  {
-"@context": "https://schema.org",
-    "@type": "Service",
-    "name": "BriefHelden",
-"url": "https://www.briefhelden-service.de/mahnung-verstehen",
-    "description": "BriefHelden erklärt Mahnungen einfach und verständlich. Kein Rechtsrat, nur verständliche Texterklärung.",
-    "provider": {
-      "@type": "Organization",
-      "name": "BriefHelden"
-    },
-    "areaServed": "DE",
-    "availableLanguage": ["de", "en", "tr", "ru"]
-  }
-  </script>
 </head>
 <body>
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <div class="brand">BriefHelden</div>
-      <nav class="nav" aria-label="Hauptnavigation">
-        <a href="/index.html">Startseite</a>
-        <a href="/frage.html">Service</a>
-        <a href="/agb.html">AGB</a>
-        <a href="/datenschutz.html">Datenschutz</a>
-        <a href="/impressum.html">Impressum</a>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>BriefHelden</div>
+      </div>
+
+      <nav class="links" aria-label="Hauptnavigation">
+        <a href="index.html" data-i18n="nav_home">Startseite</a>
+        <a href="frage.html" data-i18n="nav_question">Frage stellen</a>
+        <a href="widerruf.html" data-i18n="nav_refund">Widerruf</a>
+        <a href="impressum.html" data-i18n="nav_imprint">Impressum</a>
+        <a href="agb.html" data-i18n="nav_terms">AGB</a>
+        <a href="datenschutz.html" data-i18n="nav_privacy">Datenschutz</a>
       </nav>
+
+      <div class="langWrap">
+        <select class="langSelect" id="langSelect" aria-label="Sprache">
+          <option value="de">DE</option>
+          <option value="en">EN</option>
+          <option value="tr">TR</option>
+          <option value="ru">RU</option>
+        </select>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="glass-card hero-content">
-          <div class="badge">Mahnung einfach erklärt</div>
-          <h1>Mahnung erhalten und nicht sicher, was jetzt wichtig ist?</h1>
-          <p class="lead">
-            Eine Mahnung wirkt oft unangenehm und druckvoll. Viele Menschen wissen nicht sofort,
-            was genau im Schreiben steht, wie dringend es ist und welche Angaben wirklich wichtig sind.
-            BriefHelden erklärt Mahnungen einfach und verständlich.
+  <section class="hero">
+    <div class="wrap">
+      <h1 data-i18n="hero_title">Mahnung verstehen</h1>
+      <p data-i18n="hero_sub">
+        Eine Mahnung wirkt oft ernst und belastend. BriefHelden erklärt Ihnen den Inhalt einfach, klar und verständlich.
+      </p>
+
+      <div class="ctaGroup">
+        <a class="cta primary" id="stripeBtn" href="#" rel="noopener">
+          <span data-i18n="hero_cta">Jetzt Mahnung erklären lassen – 6,90 €</span>
+          <span aria-hidden="true">›</span>
+        </a>
+
+        <a class="cta secondary" id="questionBtn" href="#" rel="noopener">
+          <span data-i18n="hero_question_cta">Kurze Frage stellen – 1,49 €</span>
+          <span aria-hidden="true">›</span>
+        </a>
+      </div>
+
+      <div class="heroMeta" aria-label="Kurzvorteile">
+        <span>✅ <span data-i18n="meta_1">Einfach erklärt</span></span>
+        <span>⚡ <span data-i18n="meta_2">Schnelle Rückmeldung</span></span>
+        <span>🔒 <span data-i18n="meta_3">Vertraulich</span></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="glassCard">
+        <div class="pad">
+          <h2 class="headline" data-i18n="intro_title">Was ist eine Mahnung?</h2>
+          <p class="lead" data-i18n="intro_text">
+            Eine Mahnung ist ein Schreiben, in dem auf eine offene Zahlung hingewiesen wird. Oft stehen darin ein Betrag, ein Grund, zusätzliche Kosten oder eine Frist. Viele Menschen wissen nicht genau, wie dringend das Schreiben ist und worauf sie jetzt achten sollten. Genau dabei hilft BriefHelden.
           </p>
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="/frage.html">Mahnung hochladen und erklären lassen</a>
-            <a class="btn btn-secondary" href="#mahnung-erklaerung">Mehr erfahren</a>
+          <div class="grid2">
+            <div class="infoCard">
+              <h3 data-i18n="left_title">Einfach erklärt</h3>
+              <p data-i18n="left_text_1">
+                In einer Mahnung geht es meistens darum, dass eine Rechnung oder Forderung noch nicht bezahlt wurde.
+              </p>
+              <p data-i18n="left_text_2">
+                Wichtig sind dabei vor allem: Wer schreibt Ihnen? Welcher Betrag ist genannt? Gibt es zusätzliche Gebühren? Bis wann soll gezahlt werden?
+              </p>
+              <p data-i18n="left_text_3">
+                BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie das Schreiben besser einordnen können.
+              </p>
+            </div>
+
+            <div class="infoCard">
+              <h3 data-i18n="right_title">So funktioniert es</h3>
+              <ul>
+                <li data-i18n="right_li_1">Mahnung sicher hochladen</li>
+                <li data-i18n="right_li_2">Wir lesen den Inhalt und erklären ihn verständlich</li>
+                <li data-i18n="right_li_3">Sie erhalten die Erklärung per E-Mail</li>
+                <li data-i18n="right_li_4">Keine Rechtsberatung – nur verständliche Texterklärung</li>
+              </ul>
+            </div>
           </div>
 
-          <div class="mini-points">
-            <div class="mini-point">Verständliche Erklärung statt komplizierter Formulierungen</div>
-            <div class="mini-point">Wichtige Punkte, Fristen und Beträge schnell erkennen</div>
-            <div class="mini-point">Ideal bei Rechnungen, Mahnungen und weiteren Schreiben</div>
-            <div class="mini-point">Kein Rechtsrat – nur klare Texterklärung</div>
+          <div class="serviceMini">
+            <div class="box">
+              <h3 data-i18n="service1_title">Komplettes Schreiben erklären lassen</h3>
+              <p data-i18n="service1_text">
+                Ideal, wenn Sie die ganze Mahnung vollständig verstehen möchten.
+              </p>
+              <a class="miniBtn primary" id="servicePrimaryBtn" href="#" rel="noopener">
+                <span data-i18n="service1_btn">Jetzt für 6,90 € starten</span>
+                <span aria-hidden="true">›</span>
+              </a>
+            </div>
+
+            <div class="box">
+              <h3 data-i18n="service2_title">Kurze Rückfrage stellen</h3>
+              <p data-i18n="service2_text">
+                Ideal, wenn Sie nur eine kurze Frage zu Betrag, Frist oder Inhalt haben.
+              </p>
+              <a class="miniBtn secondary" id="serviceQuestionBtn" href="#" rel="noopener">
+                <span data-i18n="service2_btn">Jetzt für 1,49 € fragen</span>
+                <span aria-hidden="true">›</span>
+              </a>
+            </div>
           </div>
         </div>
-
-        <aside class="glass-card hero-side">
-          <h2>Was wir bei einer Mahnung erklären</h2>
-          <ul class="check-list">
-            <li>Worum es in der Mahnung geht</li>
-            <li>Welche Rechnung oder Forderung gemeint ist</li>
-            <li>Welche Frist genannt wird</li>
-            <li>Welche Beträge oder Zusatzkosten auftauchen</li>
-            <li>Welche Punkte Sie genauer prüfen sollten</li>
-          </ul>
-        </aside>
       </div>
-    </section>
 
-    <section class="section" id="mahnung-erklaerung">
-      <div class="container content-grid">
-        <article class="content-card">
-          <h2>Was ist eine Mahnung?</h2>
-          <p>
-            Eine Mahnung ist ein Schreiben, mit dem auf eine offene Zahlung hingewiesen wird.
-            Meist geht es darum, dass eine Rechnung aus Sicht des Absenders noch nicht bezahlt wurde.
-            Im Schreiben steht dann oft, welcher Betrag offen sein soll und bis wann gezahlt werden soll.
-          </p>
-          <p>
-            Viele Mahnungen klingen streng und erzeugen sofort Druck. Trotzdem ist es wichtig,
-            den Inhalt zuerst ruhig und verständlich einzuordnen.
+      <div style="height:18px"></div>
+
+      <div class="glassCard">
+        <div class="pad">
+          <h2 class="sectionTitle" data-i18n="faq_title">Häufige Fragen zu Mahnungen</h2>
+          <p class="sectionSub" data-i18n="faq_sub">
+            Diese Fragen tauchen bei solchen Schreiben besonders oft auf:
           </p>
 
-          <div class="highlight-box">
-            <h3>Typische Inhalte einer Mahnung</h3>
-            <ul>
-              <li>Hinweis auf eine offene Rechnung</li>
-              <li>genannter Betrag</li>
-              <li>Zahlungsfrist</li>
-              <li>mögliche zusätzliche Gebühren</li>
-              <li>Hinweis auf weitere Schritte bei Nichtzahlung</li>
-            </ul>
+          <div class="faqGrid">
+            <div class="faqItem">
+              <h3 data-i18n="faq1_q">Ist eine Mahnung ernst?</h3>
+              <p data-i18n="faq1_a">
+                Ja, eine Mahnung sollte ernst genommen werden. Viele Menschen sind unsicher, weil Beträge, Fristen oder Folgen oft nicht sofort klar sind.
+              </p>
+            </div>
+
+            <div class="faqItem">
+              <h3 data-i18n="faq2_q">Sind Fristen in einer Mahnung wichtig?</h3>
+              <p data-i18n="faq2_a">
+                Ja, Fristen sind oft besonders wichtig. BriefHelden hilft Ihnen, diese Angaben verständlich zu erkennen.
+              </p>
+            </div>
+
+            <div class="faqItem">
+              <h3 data-i18n="faq3_q">Was ist bei einer Mahnung besonders wichtig?</h3>
+              <p data-i18n="faq3_a">
+                Besonders wichtig sind Betrag, Frist, zusätzliche Kosten, der Grund der Forderung und der Absender des Schreibens.
+              </p>
+            </div>
+
+            <div class="faqItem">
+              <h3 data-i18n="faq4_q">Ist BriefHelden eine Rechtsberatung?</h3>
+              <p data-i18n="faq4_a">
+                Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.
+              </p>
+            </div>
           </div>
-
-          <h2>Warum ist eine Mahnung oft schwer verständlich?</h2>
-          <p>
-            In vielen Mahnungen stehen mehrere Daten, Rechnungsnummern, Fristen und Beträge.
-            Dazu kommen oft Formulierungen, die eher formell als verständlich sind.
-            Deshalb ist oft nicht sofort klar:
-          </p>
-          <ul>
-            <li>welche Rechnung genau gemeint ist,</li>
-            <li>ob der Betrag nachvollziehbar ist,</li>
-            <li>ob Zusatzkosten genannt werden,</li>
-            <li>und wie dringend das Schreiben tatsächlich wirkt.</li>
-          </ul>
-
-          <h2>Was sollte man bei einer Mahnung prüfen?</h2>
-          <ol>
-            <li>Wer hat die Mahnung geschickt?</li>
-            <li>Welche Rechnung oder Leistung wird genannt?</li>
-            <li>Welcher Betrag steht im Schreiben?</li>
-            <li>Wird eine konkrete Frist genannt?</li>
-            <li>Gibt es Mahngebühren oder weitere Kosten?</li>
-          </ol>
-
-          <h2>Was ist der Unterschied zwischen Rechnung, Zahlungserinnerung und Mahnung?</h2>
-          <p>
-            Im Alltag werden diese Begriffe oft durcheinander verwendet. Eine Rechnung ist zuerst
-            nur die Zahlungsaufforderung für eine Leistung. Eine Zahlungserinnerung erinnert
-            daran, dass noch nicht bezahlt wurde. Eine Mahnung wirkt in der Regel deutlicher und
-            nennt oft auch Fristen oder mögliche Folgen.
-          </p>
-          <p>
-            Im einzelnen Schreiben ist aber wichtig, was dort konkret steht. Genau das erklärt BriefHelden
-            in einfacher Sprache.
-          </p>
-
-          <div class="cta-box">
-            <h3>Mahnung hochladen und verständlich erklären lassen</h3>
-            <p>
-              Sie haben eine Mahnung erhalten und möchten verstehen, was sie bedeutet?
-              BriefHelden erklärt den Inhalt klar und verständlich.
-            </p>
-            <ul>
-              <li>worum es im Schreiben geht</li>
-              <li>welche Frist oder welcher Betrag wichtig ist</li>
-              <li>welche Formulierungen im Brief gemeint sind</li>
-              <li>welche Punkte Sie genauer ansehen sollten</li>
-            </ul>
-            <a class="btn btn-primary" href="/frage.html">Jetzt Mahnung erklären lassen</a>
-          </div>
-
-          <h2>Häufige Fragen zu Mahnungen</h2>
-
-          <div class="faq-item">
-            <strong>Ist eine Mahnung immer sofort sehr schlimm?</strong>
-            <p>
-              Viele Menschen erschrecken bei einer Mahnung. Wichtig ist aber zuerst, den Inhalt
-              genau zu verstehen. Nicht jedes Schreiben ist gleich aufgebaut und nicht jede Mahnung
-              sieht gleich aus.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <strong>Stehen in einer Mahnung oft zusätzliche Kosten?</strong>
-            <p>
-              Ja, in vielen Schreiben werden neben dem ursprünglichen Betrag auch Mahnkosten oder
-              weitere Positionen genannt. Eine verständliche Erklärung hilft dabei, diese Angaben
-              besser zu erkennen und einzuordnen.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <strong>Kann BriefHelden eine Mahnung verständlich erklären?</strong>
-            <p>
-              Ja. BriefHelden erklärt den Inhalt einer Mahnung in einfacher Sprache, damit Sie
-              schneller verstehen, worum es geht und was im Schreiben steht.
-            </p>
-          </div>
-
-          <div class="faq-item">
-            <strong>Ist das Rechtsberatung?</strong>
-            <p>
-              Nein. BriefHelden bietet keine Rechtsberatung, sondern nur eine verständliche
-              Texterklärung des Inhalts.
-            </p>
-          </div>
-
-          <h2>Fazit</h2>
-          <p>
-            Eine Mahnung sollte nicht ignoriert werden, aber vor allem sollte sie zuerst
-            verständlich gelesen werden. Wer genau versteht, was im Schreiben steht, kann die
-            wichtigsten Punkte viel besser einordnen.
-          </p>
-          <p>
-            BriefHelden hilft dabei, Mahnungen klar, ruhig und einfach zu erklären.
-          </p>
-        </article>
-
-        <aside class="sidebar-card">
-          <h2>Direkt starten</h2>
-          <p>
-            Laden Sie Ihre Mahnung hoch oder stellen Sie Ihre Frage. Wir erklären den Inhalt
-            verständlich und klar.
-          </p>
-          <a class="btn btn-primary" href="/frage.html" style="width:100%; margin-bottom:12px;">
-            Service öffnen
-          </a>
-          <a class="btn btn-secondary" href="/index.html" style="width:100%;">
-            Zur Startseite
-          </a>
-
-          <h3 style="margin-top:26px;">Verwandte Themen</h3>
-          <div class="related-links">
-            <a href="/inkasso-brief-verstehen.html">Inkasso Brief verstehen</a>
-            <a href="/jobcenter-brief-verstehen.html">Jobcenter Brief verstehen</a>
-            <a href="/behoerdenbrief-verstehen.html">Behördenbrief verstehen</a>
-            <a href="/brief-verstehen.html">Allgemein: Brief verstehen</a>
-          </div>
-
-          <h3 style="margin-top:26px;">Wichtiger Hinweis</h3>
-          <p style="margin-bottom:0;">
-            BriefHelden bietet keine Rechtsberatung, sondern nur eine verständliche Erklärung des Inhalts.
-          </p>
-        </aside>
+        </div>
       </div>
-    </section>
-  </main>
 
-  <footer class="footer">
-    <div class="container">
-      <strong>BriefHelden</strong><br />
-      Dokumente. Einfach erklärt.
-      <div class="footer-links">
-        <a href="/agb.html">AGB</a>
-        <a href="/datenschutz.html">Datenschutz</a>
-        <a href="/widerruf.html">Widerruf</a>
-        <a href="/impressum.html">Impressum</a>
+      <div style="height:18px"></div>
+
+      <div class="glassCard">
+        <div class="pad">
+          <h2 class="sectionTitle" data-i18n="tip_title">Worauf sollten Sie bei einer Mahnung achten?</h2>
+          <p class="sectionSub" data-i18n="tip_sub">
+            Diese Punkte sind oft besonders wichtig:
+          </p>
+
+          <div class="faqGrid">
+            <div class="faqItem">
+              <h3 data-i18n="tip1_title">Betrag prüfen</h3>
+              <p data-i18n="tip1_text">
+                Schauen Sie, welcher Betrag verlangt wird und ob zusätzliche Gebühren oder Kosten genannt werden.
+              </p>
+            </div>
+
+            <div class="faqItem">
+              <h3 data-i18n="tip2_title">Frist beachten</h3>
+              <p data-i18n="tip2_text">
+                Prüfen Sie, ob im Schreiben eine Frist oder ein Zahlungsdatum genannt wird.
+              </p>
+            </div>
+
+            <div class="faqItem">
+              <h3 data-i18n="tip3_title">Absender ansehen</h3>
+              <p data-i18n="tip3_text">
+                Achten Sie darauf, welche Firma, Stelle oder welcher Anbieter die Mahnung geschickt hat.
+              </p>
+            </div>
+
+            <div class="faqItem">
+              <h3 data-i18n="tip4_title">Inhalt verständlich machen</h3>
+              <p data-i18n="tip4_text">
+                Wenn das Schreiben schwer verständlich ist, hilft eine einfache Erklärung oft sofort weiter.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footWrap">
+      <div>© 2026 BriefHelden – Alle Rechte vorbehalten</div>
+      <div class="footLinks">
+        <a href="index.html" data-i18n="foot_home">Startseite</a>
+        <a href="frage.html" data-i18n="foot_question">Frage stellen</a>
+        <a href="widerruf.html" data-i18n="foot_refund">Widerruf</a>
+        <a href="impressum.html" data-i18n="foot_imprint">Impressum</a>
+        <a href="agb.html" data-i18n="foot_terms">AGB</a>
+        <a href="datenschutz.html" data-i18n="foot_privacy">Datenschutz</a>
       </div>
     </div>
   </footer>
+
+  <script>
+    const STRIPE_LINKS = {
+de: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
+en: "https://buy.stripe.com/fZubJ0dpXbMAbfpcIZ4sE01",
+tr: "https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
+ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
+    };
+
+    const QUESTION_LINKS = {
+de: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
+en: "https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
+tr: "https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
+ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
+    };
+
+    const i18n = {
+      de: {
+        nav_home: "Startseite",
+        nav_question: "Frage stellen",
+        nav_refund: "Widerruf",
+        nav_imprint: "Impressum",
+        nav_terms: "AGB",
+        nav_privacy: "Datenschutz",
+
+        hero_title: "Mahnung verstehen",
+        hero_sub: "Eine Mahnung wirkt oft ernst und belastend. BriefHelden erklärt Ihnen den Inhalt einfach, klar und verständlich.",
+        hero_cta: "Jetzt Mahnung erklären lassen – 6,90 €",
+        hero_question_cta: "Kurze Frage stellen – 1,49 €",
+        meta_1: "Einfach erklärt",
+        meta_2: "Schnelle Rückmeldung",
+        meta_3: "Vertraulich",
+
+        intro_title: "Was ist eine Mahnung?",
+        intro_text: "Eine Mahnung ist ein Schreiben, in dem auf eine offene Zahlung hingewiesen wird. Oft stehen darin ein Betrag, ein Grund, zusätzliche Kosten oder eine Frist. Viele Menschen wissen nicht genau, wie dringend das Schreiben ist und worauf sie jetzt achten sollten. Genau dabei hilft BriefHelden.",
+
+        left_title: "Einfach erklärt",
+        left_text_1: "In einer Mahnung geht es meistens darum, dass eine Rechnung oder Forderung noch nicht bezahlt wurde.",
+        left_text_2: "Wichtig sind dabei vor allem: Wer schreibt Ihnen? Welcher Betrag ist genannt? Gibt es zusätzliche Gebühren? Bis wann soll gezahlt werden?",
+        left_text_3: "BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie das Schreiben besser einordnen können.",
+
+        right_title: "So funktioniert es",
+        right_li_1: "Mahnung sicher hochladen",
+        right_li_2: "Wir lesen den Inhalt und erklären ihn verständlich",
+        right_li_3: "Sie erhalten die Erklärung per E-Mail",
+        right_li_4: "Keine Rechtsberatung – nur verständliche Texterklärung",
+
+        service1_title: "Komplettes Schreiben erklären lassen",
+        service1_text: "Ideal, wenn Sie die ganze Mahnung vollständig verstehen möchten.",
+        service1_btn: "Jetzt für 6,90 € starten",
+
+        service2_title: "Kurze Rückfrage stellen",
+        service2_text: "Ideal, wenn Sie nur eine kurze Frage zu Betrag, Frist oder Inhalt haben.",
+        service2_btn: "Jetzt für 1,49 € fragen",
+
+        faq_title: "Häufige Fragen zu Mahnungen",
+        faq_sub: "Diese Fragen tauchen bei solchen Schreiben besonders oft auf:",
+        faq1_q: "Ist eine Mahnung ernst?",
+        faq1_a: "Ja, eine Mahnung sollte ernst genommen werden. Viele Menschen sind unsicher, weil Beträge, Fristen oder Folgen oft nicht sofort klar sind.",
+        faq2_q: "Sind Fristen in einer Mahnung wichtig?",
+        faq2_a: "Ja, Fristen sind oft besonders wichtig. BriefHelden hilft Ihnen, diese Angaben verständlich zu erkennen.",
+        faq3_q: "Was ist bei einer Mahnung besonders wichtig?",
+        faq3_a: "Besonders wichtig sind Betrag, Frist, zusätzliche Kosten, der Grund der Forderung und der Absender des Schreibens.",
+        faq4_q: "Ist BriefHelden eine Rechtsberatung?",
+        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.",
+
+        tip_title: "Worauf sollten Sie bei einer Mahnung achten?",
+        tip_sub: "Diese Punkte sind oft besonders wichtig:",
+        tip1_title: "Betrag prüfen",
+        tip1_text: "Schauen Sie, welcher Betrag verlangt wird und ob zusätzliche Gebühren oder Kosten genannt werden.",
+        tip2_title: "Frist beachten",
+        tip2_text: "Prüfen Sie, ob im Schreiben eine Frist oder ein Zahlungsdatum genannt wird.",
+        tip3_title: "Absender ansehen",
+        tip3_text: "Achten Sie darauf, welche Firma, Stelle oder welcher Anbieter die Mahnung geschickt hat.",
+        tip4_title: "Inhalt verständlich machen",
+        tip4_text: "Wenn das Schreiben schwer verständlich ist, hilft eine einfache Erklärung oft sofort weiter.",
+
+        foot_home: "Startseite",
+        foot_question: "Frage stellen",
+        foot_refund: "Widerruf",
+        foot_imprint: "Impressum",
+        foot_terms: "AGB",
+        foot_privacy: "Datenschutz"
+      },
+
+      en: {
+        nav_home: "Home",
+        nav_question: "Ask a question",
+        nav_refund: "Withdrawal",
+        nav_imprint: "Imprint",
+        nav_terms: "Terms",
+        nav_privacy: "Privacy",
+
+        hero_title: "Understand a reminder letter",
+        hero_sub: "A reminder letter often seems serious and stressful. BriefHelden explains the content simply, clearly and understandably.",
+        hero_cta: "Get reminder letter explained now – €6.90",
+        hero_question_cta: "Ask a short question – €1.49",
+        meta_1: "Clearly explained",
+        meta_2: "Fast response",
+        meta_3: "Confidential",
+
+        intro_title: "What is a reminder letter?",
+        intro_text: "A reminder letter is a document pointing out an outstanding payment. It often includes an amount, a reason, extra costs or a deadline. Many people are unsure how urgent the letter is and what they should pay attention to now. That is exactly where BriefHelden helps.",
+
+        left_title: "Simply explained",
+        left_text_1: "A reminder letter usually means that an invoice or claim has not yet been paid.",
+        left_text_2: "Important points are: Who is writing to you? What amount is mentioned? Are there extra fees? By when should payment be made?",
+        left_text_3: "BriefHelden explains the content in simple language so you can better understand the letter.",
+
+        right_title: "How it works",
+        right_li_1: "Upload reminder letter securely",
+        right_li_2: "We read the content and explain it clearly",
+        right_li_3: "You receive the explanation by email",
+        right_li_4: "No legal advice – plain-language explanation only",
+
+        service1_title: "Get the full document explained",
+        service1_text: "Ideal if you want to fully understand the entire reminder letter.",
+        service1_btn: "Start now for €6.90",
+
+        service2_title: "Ask a short follow-up question",
+        service2_text: "Ideal if you only have a short question about amount, deadline or content.",
+        service2_btn: "Ask now for €1.49",
+
+        faq_title: "Frequently asked questions about reminder letters",
+        faq_sub: "These questions often come up with this kind of document:",
+        faq1_q: "Is a reminder letter serious?",
+        faq1_a: "Yes, a reminder letter should be taken seriously. Many people are unsure because amounts, deadlines or consequences are not immediately clear.",
+        faq2_q: "Are deadlines in a reminder letter important?",
+        faq2_a: "Yes, deadlines are often especially important. BriefHelden helps you identify these details clearly.",
+        faq3_q: "What is especially important in a reminder letter?",
+        faq3_a: "Especially important are amount, deadline, extra costs, the reason for the claim and the sender of the letter.",
+        faq4_q: "Is BriefHelden legal advice?",
+        faq4_a: "No. BriefHelden does not provide legal advice. You only receive a clear explanation of the content.",
+
+        tip_title: "What should you look for in a reminder letter?",
+        tip_sub: "These points are often especially important:",
+        tip1_title: "Check the amount",
+        tip1_text: "See what amount is being demanded and whether extra fees or costs are listed.",
+        tip2_title: "Watch the deadline",
+        tip2_text: "Check whether a deadline or payment date is mentioned in the letter.",
+        tip3_title: "Check the sender",
+        tip3_text: "Pay attention to which company, office or provider sent the reminder.",
+        tip4_title: "Make the content understandable",
+        tip4_text: "If the letter is difficult to understand, a simple explanation often helps immediately.",
+
+        foot_home: "Home",
+        foot_question: "Ask a question",
+        foot_refund: "Withdrawal",
+        foot_imprint: "Imprint",
+        foot_terms: "Terms",
+        foot_privacy: "Privacy"
+      },
+
+      tr: {
+        nav_home: "Ana Sayfa",
+        nav_question: "Soru sor",
+        nav_refund: "Cayma",
+        nav_imprint: "Künye",
+        nav_terms: "Şartlar",
+        nav_privacy: "Gizlilik",
+
+        hero_title: "İhtar mektubunu anlayın",
+        hero_sub: "Bir ihtar mektubu çoğu zaman ciddi ve yorucu görünür. BriefHelden içeriği size basit, açık ve anlaşılır şekilde açıklar.",
+        hero_cta: "İhtar mektubunu şimdi açıklat – 6,90 €",
+        hero_question_cta: "Kısa soru sor – 1,49 €",
+        meta_1: "Basit açıklandı",
+        meta_2: "Hızlı dönüş",
+        meta_3: "Gizli",
+
+        intro_title: "İhtar mektubu nedir?",
+        intro_text: "İhtar mektubu, açık bir ödemenin hatırlatıldığı bir yazıdır. İçinde çoğu zaman bir tutar, neden, ek masraflar veya bir süre yer alır. Birçok kişi yazının ne kadar acil olduğunu ve şimdi nelere dikkat etmesi gerektiğini tam bilmez. BriefHelden tam bu konuda yardımcı olur.",
+
+        left_title: "Basit açıklama",
+        left_text_1: "Bir ihtar mektubunda çoğu zaman bir fatura veya borcun henüz ödenmediği belirtilir.",
+        left_text_2: "Önemli noktalar şunlardır: Size kim yazıyor? Hangi tutar belirtilmiş? Ek ücretler var mı? Ödeme ne zamana kadar yapılmalı?",
+        left_text_3: "BriefHelden içeriği basit dille açıklar, böylece mektubu daha iyi anlayabilirsiniz.",
+
+        right_title: "Nasıl çalışır",
+        right_li_1: "İhtar mektubunu güvenli şekilde yükleyin",
+        right_li_2: "İçeriği okuyup açık şekilde açıklıyoruz",
+        right_li_3: "Açıklamayı e-posta ile alırsınız",
+        right_li_4: "Hukuki danışmanlık değil – sadece anlaşılır açıklama",
+
+        service1_title: "Belgenin tamamını açıklat",
+        service1_text: "İhtar mektubunun tamamını anlamak istiyorsanız idealdir.",
+        service1_btn: "Şimdi 6,90 € ile başla",
+
+        service2_title: "Kısa bir soru sor",
+        service2_text: "Sadece tutar, süre veya içerikle ilgili kısa bir sorunuz varsa idealdir.",
+        service2_btn: "Şimdi 1,49 € ile sor",
+
+        faq_title: "İhtar mektupları hakkında sık sorulan sorular",
+        faq_sub: "Bu tür yazılarda şu sorular sıkça ortaya çıkar:",
+        faq1_q: "Bir ihtar mektubu ciddi midir?",
+        faq1_a: "Evet, ihtar mektubu ciddiye alınmalıdır. Birçok kişi tutarlar, süreler veya sonuçlar hemen anlaşılmadığı için emin olamaz.",
+        faq2_q: "İhtar mektubundaki süreler önemli midir?",
+        faq2_a: "Evet, süreler çoğu zaman özellikle önemlidir. BriefHelden bu bilgileri açık şekilde görmenize yardım eder.",
+        faq3_q: "Bir ihtar mektubunda en önemli olan nedir?",
+        faq3_a: "Tutar, süre, ek masraflar, talebin nedeni ve yazının göndereni özellikle önemlidir.",
+        faq4_q: "BriefHelden hukuki danışmanlık mı veriyor?",
+        faq4_a: "Hayır. BriefHelden hukuki danışmanlık vermez. Sadece içeriğin anlaşılır açıklamasını sunar.",
+
+        tip_title: "Bir ihtar mektubunda nelere dikkat etmelisiniz?",
+        tip_sub: "Bu noktalar genelde özellikle önemlidir:",
+        tip1_title: "Tutarı kontrol edin",
+        tip1_text: "Hangi tutarın istendiğine ve ek ücret veya masraf olup olmadığına bakın.",
+        tip2_title: "Süreyi takip edin",
+        tip2_text: "Mektupta bir süre veya ödeme tarihi belirtilip belirtilmediğini kontrol edin.",
+        tip3_title: "Göndereni inceleyin",
+        tip3_text: "İhtarı hangi şirketin, kurumun veya sağlayıcının gönderdiğine dikkat edin.",
+        tip4_title: "İçeriği anlaşılır hale getirin",
+        tip4_text: "Mektubu anlamak zorsa, basit bir açıklama çoğu zaman hemen yardımcı olur.",
+
+        foot_home: "Ana Sayfa",
+        foot_question: "Soru sor",
+        foot_refund: "Cayma",
+        foot_imprint: "Künye",
+        foot_terms: "Şartlar",
+        foot_privacy: "Gizlilik"
+      },
+
+      ru: {
+        nav_home: "Главная",
+        nav_question: "Задать вопрос",
+        nav_refund: "Отказ",
+        nav_imprint: "Выходные данные",
+        nav_terms: "Условия",
+        nav_privacy: "Конфиденциальность",
+
+        hero_title: "Понять письмо-напоминание",
+        hero_sub: "Письмо-напоминание часто кажется серьёзным и тяжёлым. BriefHelden объяснит содержание просто, ясно и понятно.",
+        hero_cta: "Объяснить письмо-напоминание – 6,90 €",
+        hero_question_cta: "Задать короткий вопрос – 1,49 €",
+        meta_1: "Просто объяснено",
+        meta_2: "Быстрый ответ",
+        meta_3: "Конфиденциально",
+
+        intro_title: "Что такое письмо-напоминание?",
+        intro_text: "Письмо-напоминание — это документ, в котором напоминают об открытом платеже. В нём часто указываются сумма, причина, дополнительные расходы или срок. Многие люди не понимают, насколько срочно это письмо и на что теперь нужно обратить внимание. Именно здесь помогает BriefHelden.",
+
+        left_title: "Просто объясняем",
+        left_text_1: "В письме-напоминании обычно говорится о том, что счёт или требование ещё не были оплачены.",
+        left_text_2: "Особенно важно следующее: Кто вам пишет? Какая сумма указана? Есть ли дополнительные сборы? До какого срока нужно оплатить?",
+        left_text_3: "BriefHelden объясняет содержание простым языком, чтобы вам было легче понять письмо.",
+
+        right_title: "Как это работает",
+        right_li_1: "Безопасно загрузите письмо-напоминание",
+        right_li_2: "Мы читаем содержание и понятно объясняем его",
+        right_li_3: "Вы получаете объяснение по e-mail",
+        right_li_4: "Не юридическая консультация – только понятное объяснение",
+
+        service1_title: "Получить полное объяснение документа",
+        service1_text: "Идеально, если вы хотите полностью понять всё письмо-напоминание.",
+        service1_btn: "Начать за 6,90 €",
+
+        service2_title: "Задать короткий вопрос",
+        service2_text: "Идеально, если у вас только короткий вопрос о сумме, сроке или содержании.",
+        service2_btn: "Спросить за 1,49 €",
+
+        faq_title: "Частые вопросы о письмах-напоминаниях",
+        faq_sub: "Эти вопросы особенно часто возникают по таким письмам:",
+        faq1_q: "Письмо-напоминание — это серьёзно?",
+        faq1_a: "Да, письмо-напоминание следует воспринимать серьёзно. Многие люди не уверены, потому что суммы, сроки или последствия не всегда сразу понятны.",
+        faq2_q: "Важны ли сроки в письме-напоминании?",
+        faq2_a: "Да, сроки часто особенно важны. BriefHelden помогает вам увидеть эти данные понятнее.",
+        faq3_q: "Что особенно важно в письме-напоминании?",
+        faq3_a: "Особенно важны сумма, срок, дополнительные расходы, причина требования и отправитель письма.",
+        faq4_q: "BriefHelden — это юридическая консультация?",
+        faq4_a: "Нет. BriefHelden не даёт юридических консультаций. Вы получаете только понятное объяснение содержания.",
+
+        tip_title: "На что стоит обратить внимание в письме-напоминании?",
+        tip_sub: "Эти пункты часто особенно важны:",
+        tip1_title: "Проверьте сумму",
+        tip1_text: "Посмотрите, какая сумма указана и есть ли дополнительные сборы или расходы.",
+        tip2_title: "Обратите внимание на срок",
+        tip2_text: "Проверьте, указан ли в письме срок или дата оплаты.",
+        tip3_title: "Посмотрите на отправителя",
+        tip3_text: "Обратите внимание, какая компания, служба или поставщик отправили напоминание.",
+        tip4_title: "Сделайте содержание понятным",
+        tip4_text: "Если письмо трудно понять, простое объяснение часто сразу помогает.",
+
+        foot_home: "Главная",
+        foot_question: "Задать вопрос",
+        foot_refund: "Отказ",
+        foot_imprint: "Выходные данные",
+        foot_terms: "Условия",
+        foot_privacy: "Конфиденциальность"
+      }
+    };
+
+    function updateLinks(lang){
+const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
+const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
+
+      const stripeBtn = document.getElementById("stripeBtn");
+      const servicePrimaryBtn = document.getElementById("servicePrimaryBtn");
+      const questionBtn = document.getElementById("questionBtn");
+      const serviceQuestionBtn = document.getElementById("serviceQuestionBtn");
+
+      if(stripeBtn) stripeBtn.href = mainLink;
+      if(servicePrimaryBtn) servicePrimaryBtn.href = mainLink;
+      if(questionBtn) questionBtn.href = questionLink;
+      if(serviceQuestionBtn) serviceQuestionBtn.href = questionLink;
+    }
+
+    function applyLang(lang){
+const dict = i18n[lang] || i18n.de;
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        if(key in dict){
+          el.textContent = dict[key];
+        }
+      });
+
+      updateLinks(lang);
+      localStorage.setItem("briefhelden_lang", lang);
+    }
+
+    const select = document.getElementById("langSelect");
+    const savedLang = localStorage.getItem("briefhelden_lang");
+    const initialLang = ["de","en","tr","ru"].includes(savedLang) ? savedLang : "de";
+
+    select.value = initialLang;
+    applyLang(initialLang);
+
+    select.addEventListener("change", () => {
+      applyLang(select.value);
+    });
+  </script>
 </body>
 </html>
