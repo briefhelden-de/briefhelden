@@ -1,138 +1,350 @@
 <!doctype html>
 <html lang="de">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>Formular verstehen – Behördenformulare einfach erklärt | BriefHelden</title>
+<title>Formular verstehen – einfach erklärt | BriefHelden</title>
 
-<meta name="description" content="Behördenformular oder Antrag erhalten und unsicher wie man ihn versteht? BriefHelden erklärt Formulare einfach und verständlich.">
+<meta name="description"
+content="Formular einfach verstehen: BriefHelden erklärt Behördenformulare, Anträge, Felder und wichtige Angaben klar, einfach und ohne komplizierte Fachsprache." />
+
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://www.briefhelden-service.de/formular-verstehen.html" />
+
+<meta property="og:title" content="Formular verstehen – einfach erklärt | BriefHelden" />
+<meta property="og:description"
+content="Formular einfach erklärt. Verstehen Sie Anträge, Felder und wichtige Angaben schnell und verständlich." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.briefhelden-service.de/formular-verstehen.html" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-CVRQ9QBE94');
+</script>
 
 <style>
+:root{
+--nav-bg: rgba(9,24,33,.78);
+--nav-border: rgba(255,255,255,.10);
+--text:#0b1220;
+--heroText:#fff;
+--heroMuted:rgba(255,255,255,.84);
+--glass:rgba(255,255,255,.28);
+--glass2:rgba(255,255,255,.16);
+--stroke:rgba(255,255,255,.36);
+--shadow:0 18px 40px rgba(0,0,0,.18);
+--btn1:#2f6fff;
+--btn2:#1f56b8;
+--btnGreen1:#12b76a;
+--btnGreen2:#079455;
+--radius-xl:24px;
+--radius-lg:18px;
+--max:1120px;
+}
 
+*{box-sizing:border-box}
 body{
-font-family:system-ui,Arial;
-background:#f5f7fb;
 margin:0;
-color:#111;
-line-height:1.6;
+font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+color:var(--text);
+background:#f6f9ff;
 }
 
 header{
-background:#0f172a;
-color:white;
-padding:20px;
-font-weight:700;
+position:sticky;
+top:0;
+background:var(--nav-bg);
+border-bottom:1px solid var(--nav-border);
+backdrop-filter:blur(10px);
+z-index:20;
 }
 
-.container{
-max-width:900px;
+.nav{
+max-width:var(--max);
 margin:auto;
+padding:14px 18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:#fff;
+}
+
+.brand{
+font-weight:900;
+display:flex;
+gap:8px;
+align-items:center;
+}
+
+nav.links{
+display:flex;
+gap:16px;
+}
+
+nav.links a{
+color:rgba(255,255,255,.85);
+font-weight:700;
+font-size:14px;
+}
+
+.hero{
+color:white;
+padding:70px 20px 50px;
+text-align:center;
+background:
+linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.6)),
+url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=2200&q=60");
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:40px;
+margin:0 0 10px;
+font-weight:900;
+}
+
+.hero p{
+max-width:760px;
+margin:auto;
+color:var(--heroMuted);
+}
+
+.ctaGroup{
+margin-top:20px;
+display:flex;
+justify-content:center;
+gap:14px;
+flex-wrap:wrap;
+}
+
+.cta{
+padding:14px 22px;
+border-radius:16px;
+color:#fff;
+font-weight:900;
+text-decoration:none;
+min-width:260px;
+}
+
+.primary{background:linear-gradient(180deg,var(--btn1),var(--btn2))}
+.secondary{background:linear-gradient(180deg,var(--btnGreen1),var(--btnGreen2))}
+
+.section{
 padding:30px 20px;
 }
 
-h1{
-font-size:34px;
-margin-bottom:10px;
+.wrap{
+max-width:var(--max);
+margin:auto;
 }
 
-h2{
-margin-top:40px;
-font-size:24px;
+.glassCard{
+background:linear-gradient(180deg,var(--glass),var(--glass2));
+border:1px solid var(--stroke);
+border-radius:var(--radius-xl);
+box-shadow:var(--shadow);
+padding:24px;
 }
 
-.card{
-background:white;
-padding:25px;
-border-radius:14px;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
-margin-top:20px;
+.grid2{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px;
 }
 
-.btn{
-display:inline-block;
-background:#2563eb;
-color:white;
-padding:14px 22px;
-border-radius:10px;
-text-decoration:none;
-font-weight:700;
-margin-top:15px;
+.infoCard{
+background:rgba(255,255,255,.25);
+border-radius:var(--radius-lg);
+padding:18px;
+}
+
+.infoCard h3{
+margin-top:0;
+font-size:22px;
+}
+
+.faqGrid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:14px;
+}
+
+.faqItem{
+background:rgba(255,255,255,.25);
+border-radius:var(--radius-lg);
+padding:18px;
 }
 
 footer{
-margin-top:40px;
+background:#091821;
+color:#fff;
 padding:20px;
-background:#0f172a;
-color:white;
-text-align:center;
+margin-top:20px;
 }
 
+.footWrap{
+max-width:var(--max);
+margin:auto;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:10px;
+}
+
+@media(max-width:900px){
+.grid2,.faqGrid{grid-template-columns:1fr}
+}
 </style>
 </head>
 
 <body>
 
 <header>
-BriefHelden
+<div class="nav">
+<div class="brand">BriefHelden</div>
+
+<nav class="links">
+<a href="index.html">Startseite</a>
+<a href="frage.html">Frage stellen</a>
+<a href="impressum.html">Impressum</a>
+<a href="agb.html">AGB</a>
+<a href="datenschutz.html">Datenschutz</a>
+</nav>
+</div>
 </header>
 
-<div class="container">
-
+<section class="hero">
 <h1>Formular verstehen</h1>
-
 <p>
-Viele Menschen erhalten Formulare von Behörden oder Firmen und wissen nicht genau,
-was sie ausfüllen müssen oder was einzelne Felder bedeuten.
+Viele Formulare von Behörden oder Firmen sind kompliziert aufgebaut.  
+BriefHelden erklärt Ihnen Felder, Fragen und wichtige Angaben einfach und verständlich.
 </p>
 
-<div class="card">
+<div class="ctaGroup">
+<a class="cta primary" id="stripeBtn" href="#">Formular erklären lassen – 6,90 €</a>
+<a class="cta secondary" id="questionBtn" href="#">Kurze Frage stellen – 1,49 €</a>
+</div>
+</section>
 
-<h2>Typische Formulare</h2>
+<section class="section">
+<div class="wrap">
 
+<div class="glassCard">
+
+<h2>Was ist ein Formular?</h2>
+
+<p>
+Formulare werden häufig von Behörden, Versicherungen, Arbeitgebern oder Firmen verwendet.  
+Sie enthalten Fragen und Felder, die ausgefüllt werden müssen.
+</p>
+
+<div class="grid2">
+
+<div class="infoCard">
+<h3>Typische Formulare</h3>
+<p>
+Jobcenter Formulare  
+Finanzamt Formulare  
+Versicherungsanträge  
+Mietformulare  
+Behördenanträge
+</p>
+</div>
+
+<div class="infoCard">
+<h3>So hilft BriefHelden</h3>
+<p>
+Sie laden das Formular hoch und wir erklären Ihnen:
+</p>
 <ul>
-<li>Jobcenter Formulare</li>
-<li>Behörden Anträge</li>
-<li>Versicherungsformulare</li>
-<li>Bankformulare</li>
-<li>Finanzamt Formulare</li>
+<li>Was die einzelnen Felder bedeuten</li>
+<li>Welche Angaben gefragt sind</li>
+<li>Worum es im Formular insgesamt geht</li>
 </ul>
+</div>
 
 </div>
 
-<div class="card">
+</div>
 
-<h2>Warum sind Formulare oft schwer verständlich?</h2>
+<div style="height:18px"></div>
 
+<div class="glassCard">
+
+<h2>Häufige Fragen zu Formularen</h2>
+
+<div class="faqGrid">
+
+<div class="faqItem">
+<h3>Warum sind Formulare oft schwer zu verstehen?</h3>
 <p>
-Viele Formulare enthalten komplizierte Begriffe oder Felder, die ohne Erklärung
-nicht sofort verständlich sind.
+Viele Formulare verwenden Fachbegriffe oder kurze Fragen, die ohne Erklärung schwer verständlich sind.
 </p>
+</div>
 
+<div class="faqItem">
+<h3>Muss jedes Feld ausgefüllt werden?</h3>
 <p>
-BriefHelden hilft dabei, den Inhalt eines Formulars verständlich zu erklären.
+Nicht immer. Manche Felder sind optional, andere verpflichtend. Der genaue Kontext im Formular ist wichtig.
 </p>
-
 </div>
 
-<div class="card">
-
-<h2>Formular einfach erklären lassen</h2>
-
+<div class="faqItem">
+<h3>Kann BriefHelden beim Ausfüllen helfen?</h3>
 <p>
-Sie können Ihr Formular hochladen und erhalten eine einfache Erklärung
-der wichtigsten Inhalte und Angaben.
+BriefHelden erklärt den Inhalt und die Bedeutung der Felder, damit Sie das Formular besser verstehen.
 </p>
+</div>
 
-<a class="btn" href="index.html">Formular erklären lassen</a>
+<div class="faqItem">
+<h3>Ist das eine Beratung?</h3>
+<p>
+Nein. BriefHelden bietet keine Rechtsberatung oder Steuerberatung. Sie erhalten nur eine verständliche Texterklärung.
+</p>
+</div>
+
+</div>
 
 </div>
 
 </div>
+</section>
 
 <footer>
-© 2026 BriefHelden
+<div class="footWrap">
+<div>© 2026 BriefHelden</div>
+</div>
 </footer>
+
+<script>
+
+const STRIPE_LINKS={
+de:"https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
+en:"https://buy.stripe.com/fZubJ0dpXbMAbfpcIZ4sE01",
+tr:"https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
+ru:"https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
+};
+
+const QUESTION_LINKS={
+de:"https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
+en:"https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
+tr:"https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
+ru:"https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
+};
+
+function updateLinks(lang){
+document.getElementById("stripeBtn").href=STRIPE_LINKS[lang];
+document.getElementById("questionBtn").href=QUESTION_LINKS[lang];
+}
+
+updateLinks("de");
+
+</script>
 
 </body>
 </html>
