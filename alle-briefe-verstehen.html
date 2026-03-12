@@ -48,8 +48,10 @@
       --radius-md: 14px;
       --max: 1120px;
     }
+
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
+
     body{
       margin:0;
       font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
@@ -61,7 +63,9 @@
         linear-gradient(180deg, #f8fbff 0%, #eef6ff 45%, #f8fbff 100%);
       min-height:100vh;
     }
+
     a{color:inherit;text-decoration:none}
+
     header{
       position:sticky;
       top:0;
@@ -70,6 +74,7 @@
       backdrop-filter:blur(12px) saturate(140%);
       border-bottom:1px solid var(--nav-border);
     }
+
     .nav{
       max-width:var(--max);
       margin:0 auto;
@@ -80,6 +85,7 @@
       gap:16px;
       color:#fff;
     }
+
     .brand{
       display:flex;
       align-items:center;
@@ -88,6 +94,7 @@
       letter-spacing:.2px;
       white-space:nowrap;
     }
+
     .brand .logo{
       width:26px;
       height:26px;
@@ -98,6 +105,7 @@
       box-shadow:0 10px 18px rgba(0,0,0,.18);
       position:relative;
     }
+
     .brand .logo:after{
       content:"";
       position:absolute;
@@ -107,24 +115,29 @@
       clip-path:polygon(0 0, 100% 0, 85% 100%, 0 100%);
       opacity:.12;
     }
+
     nav.links{
       display:flex;
       align-items:center;
       gap:16px;
       flex-wrap:wrap;
     }
+
     nav.links a{
       color:rgba(255,255,255,.82);
       font-weight:700;
       font-size:14px;
     }
+
     nav.links a:hover{color:#fff}
+
     .langWrap{
       display:flex;
       align-items:center;
       gap:10px;
       position:relative;
     }
+
     .langSelect{
       appearance:none;
       border:1px solid rgba(255,255,255,.18);
@@ -136,9 +149,11 @@
       cursor:pointer;
       outline:none;
     }
+
     .langSelect:focus{
       box-shadow:0 0 0 3px rgba(90,160,255,.25);
     }
+
     .langWrap:after{
       content:"▾";
       position:absolute;
@@ -149,6 +164,7 @@
       pointer-events:none;
       font-size:12px;
     }
+
     .hero{
       position:relative;
       color:var(--heroText);
@@ -159,11 +175,13 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       background-size:cover;
       background-position:center;
     }
+
     .hero .wrap{
       max-width:var(--max);
       margin:0 auto;
       text-align:center;
     }
+
     .hero h1{
       margin:0 0 10px;
       font-weight:950;
@@ -171,6 +189,7 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       letter-spacing:.2px;
       text-shadow:0 10px 24px rgba(0,0,0,.35);
     }
+
     .hero p{
       margin:0 auto 18px;
       max-width:860px;
@@ -178,6 +197,7 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       font-size:clamp(15px, 2vw, 18px);
       line-height:1.55;
     }
+
     .ctaGroup{
       display:flex;
       gap:14px;
@@ -185,6 +205,7 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       flex-wrap:wrap;
       margin-top:8px;
     }
+
     .cta{
       display:inline-flex;
       align-items:center;
@@ -199,9 +220,11 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       min-width:min(560px, 92vw);
       text-align:center;
     }
+
     .cta.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
     .cta.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
     .cta:hover{filter:brightness(1.05)}
+
     .heroMeta{
       margin-top:14px;
       display:flex;
@@ -212,6 +235,7 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       font-weight:700;
       font-size:13px;
     }
+
     .heroMeta span{
       display:inline-flex;
       align-items:center;
@@ -222,8 +246,10 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       border:1px solid rgba(255,255,255,.12);
       backdrop-filter:blur(10px);
     }
+
     .section{padding:26px 18px 10px}
     .wrap{max-width:var(--max); margin:0 auto;}
+
     .glassCard{
       background:linear-gradient(180deg, var(--glass), var(--glass2));
       border:1px solid var(--stroke);
@@ -233,7 +259,9 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       -webkit-backdrop-filter:blur(14px) saturate(140%);
       overflow:hidden;
     }
+
     .pad{padding:22px}
+
     .headline,
     .sectionTitle{
       text-align:center;
@@ -242,6 +270,7 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       font-size:clamp(22px, 2.6vw, 34px);
       letter-spacing:.2px;
     }
+
     .lead,
     .sectionSub{
       text-align:center;
@@ -251,11 +280,13 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       line-height:1.7;
       font-size:16px;
     }
+
     .grid2{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:14px;
     }
+
     .infoCard,
     .faqItem{
       border-radius:var(--radius-lg);
@@ -263,16 +294,19 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       background:rgba(255,255,255,.20);
       padding:18px;
     }
+
     .infoCard h3,
     .faqItem h3{
       margin:0 0 10px;
       font-size:22px;
       font-weight:950;
     }
+
     .faqItem h3{
       font-size:18px;
       margin-bottom:8px;
     }
+
     .infoCard p,
     .infoCard li,
     .faqItem p{
@@ -281,17 +315,21 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       font-weight:700;
       margin:0;
     }
+
     .infoCard p + p{margin-top:12px;}
+
     .infoCard ul{
       margin:0;
       padding-left:18px;
     }
+
     .faqGrid,
     .lettersGrid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:14px;
     }
+
     .letterCard{
       border-radius:var(--radius-lg);
       border:1px solid rgba(255,255,255,.55);
@@ -299,29 +337,34 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       padding:18px;
       transition:transform .18s ease, background .18s ease, border-color .18s ease;
     }
+
     .letterCard:hover{
       transform:translateY(-2px);
       background:rgba(255,255,255,.30);
       border-color:rgba(47,111,255,.22);
     }
+
     .letterCard h3{
       margin:0 0 8px;
       font-size:20px;
       font-weight:950;
       color:#12316b;
     }
+
     .letterCard p{
       margin:0;
       color:rgba(11,18,32,.74);
       line-height:1.55;
       font-weight:700;
     }
+
     .serviceMini{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:14px;
       margin-top:16px;
     }
+
     .serviceMini .box{
       border-radius:18px;
       border:1px solid rgba(255,255,255,.55);
@@ -329,17 +372,20 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       padding:18px;
       text-align:center;
     }
+
     .serviceMini .box h3{
       margin:0 0 8px;
       font-size:20px;
       font-weight:950;
     }
+
     .serviceMini .box p{
       margin:0;
       color:rgba(11,18,32,.74);
       line-height:1.55;
       font-weight:700;
     }
+
     .miniBtn{
       display:inline-flex;
       align-items:center;
@@ -354,8 +400,10 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       box-shadow:0 10px 24px rgba(0,0,0,.16);
       text-align:center;
     }
+
     .miniBtn.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
     .miniBtn.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
+
     footer{
       margin-top:18px;
       padding:18px 18px 28px;
@@ -364,6 +412,7 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       border-top:1px solid rgba(255,255,255,.10);
       backdrop-filter:blur(12px) saturate(140%);
     }
+
     .footWrap{
       max-width:var(--max);
       margin:0 auto;
@@ -373,14 +422,17 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       flex-wrap:wrap;
       gap:12px;
     }
+
     .footLinks{
       display:flex;
       gap:14px;
       flex-wrap:wrap;
       font-weight:800;
     }
+
     .footLinks a{color:rgba(255,255,255,.80)}
     .footLinks a:hover{color:#fff}
+
     @media (max-width:900px){
       nav.links{display:none}
       .grid2,
@@ -399,6 +451,7 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
         <div class="logo" aria-hidden="true"></div>
         <div>BriefHelden</div>
       </div>
+
       <nav class="links" aria-label="Hauptnavigation">
         <a href="index.html" data-i18n="nav_home">Startseite</a>
         <a href="frage.html" data-i18n="nav_question">Frage stellen</a>
@@ -407,6 +460,7 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
         <a href="agb.html" data-i18n="nav_terms">AGB</a>
         <a href="datenschutz.html" data-i18n="nav_privacy">Datenschutz</a>
       </nav>
+
       <div class="langWrap">
         <select class="langSelect" id="langSelect" aria-label="Sprache">
           <option value="de">DE</option>
@@ -613,6 +667,56 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
               <h3 data-i18n="l20_title">Mietvertrag verstehen</h3>
               <p data-i18n="l20_text">Mietvertrag, Klauseln und Pflichten verständlich erklärt.</p>
             </a>
+
+            <a class="letterCard" href="bussgeldbescheid-verstehen.html">
+              <h3 data-i18n="l21_title">Bußgeldbescheid verstehen</h3>
+              <p data-i18n="l21_text">Bußgeldbescheid, Vorwurf und Fristen verständlich erklärt.</p>
+            </a>
+
+            <a class="letterCard" href="krankenkasse-brief-verstehen.html">
+              <h3 data-i18n="l22_title">Krankenkasse Brief verstehen</h3>
+              <p data-i18n="l22_text">Briefe der Krankenkasse einfach und verständlich erklärt.</p>
+            </a>
+
+            <a class="letterCard" href="versicherung-brief-verstehen.html">
+              <h3 data-i18n="l23_title">Versicherung Brief verstehen</h3>
+              <p data-i18n="l23_text">Versicherungsschreiben, Fristen und Inhalte verständlich erklärt.</p>
+            </a>
+
+            <a class="letterCard" href="nebenkostenabrechnung-verstehen.html">
+              <h3 data-i18n="l24_title">Nebenkostenabrechnung verstehen</h3>
+              <p data-i18n="l24_text">Nebenkosten, Nachzahlung und Guthaben besser verstehen.</p>
+            </a>
+
+            <a class="letterCard" href="stromrechnung-verstehen.html">
+              <h3 data-i18n="l25_title">Stromrechnung verstehen</h3>
+              <p data-i18n="l25_text">Verbrauch, Abschlag und Kosten einfach erklärt.</p>
+            </a>
+
+            <a class="letterCard" href="gasrechnung-verstehen.html">
+              <h3 data-i18n="l26_title">Gasrechnung verstehen</h3>
+              <p data-i18n="l26_text">Gasverbrauch, Abschläge und Endbetrag verständlich erklärt.</p>
+            </a>
+
+            <a class="letterCard" href="bank-brief-verstehen.html">
+              <h3 data-i18n="l27_title">Bank Brief verstehen</h3>
+              <p data-i18n="l27_text">Bank Schreiben zu Konto, Gebühren oder Kredit besser verstehen.</p>
+            </a>
+
+            <a class="letterCard" href="kreditvertrag-verstehen.html">
+              <h3 data-i18n="l28_title">Kreditvertrag verstehen</h3>
+              <p data-i18n="l28_text">Rate, Laufzeit, Zinsen und Kosten einfach erklärt.</p>
+            </a>
+
+            <a class="letterCard" href="vertragsbrief-verstehen.html">
+              <h3 data-i18n="l29_title">Vertragsbrief verstehen</h3>
+              <p data-i18n="l29_text">Vertragsänderungen, Fristen und Inhalte verständlich erklärt.</p>
+            </a>
+
+            <a class="letterCard" href="mahnung-inkasso-unterschied.html">
+              <h3 data-i18n="l30_title">Mahnung Inkasso Unterschied</h3>
+              <p data-i18n="l30_text">Unterschied zwischen Mahnung und Inkasso einfach erklärt.</p>
+            </a>
           </div>
         </div>
       </div>
@@ -730,6 +834,7 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
 
         letters_title: "Wichtige Briefe und Schreiben im Überblick",
         letters_sub: "Hier finden Sie die wichtigsten BriefHelden Seiten zu oft gesuchten Briefen:",
+
         l1_title: "Inkasso Brief verstehen",
         l1_text: "Inkasso Schreiben einfach und verständlich erklärt.",
         l2_title: "Inkasso Forderung prüfen",
@@ -770,6 +875,26 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         l19_text: "Formulare und Angaben einfach erklärt.",
         l20_title: "Mietvertrag verstehen",
         l20_text: "Mietvertrag, Klauseln und Pflichten verständlich erklärt.",
+        l21_title: "Bußgeldbescheid verstehen",
+        l21_text: "Bußgeldbescheid, Vorwurf und Fristen verständlich erklärt.",
+        l22_title: "Krankenkasse Brief verstehen",
+        l22_text: "Briefe der Krankenkasse einfach und verständlich erklärt.",
+        l23_title: "Versicherung Brief verstehen",
+        l23_text: "Versicherungsschreiben, Fristen und Inhalte verständlich erklärt.",
+        l24_title: "Nebenkostenabrechnung verstehen",
+        l24_text: "Nebenkosten, Nachzahlung und Guthaben besser verstehen.",
+        l25_title: "Stromrechnung verstehen",
+        l25_text: "Verbrauch, Abschlag und Kosten einfach erklärt.",
+        l26_title: "Gasrechnung verstehen",
+        l26_text: "Gasverbrauch, Abschläge und Endbetrag verständlich erklärt.",
+        l27_title: "Bank Brief verstehen",
+        l27_text: "Bank Schreiben zu Konto, Gebühren oder Kredit besser verstehen.",
+        l28_title: "Kreditvertrag verstehen",
+        l28_text: "Rate, Laufzeit, Zinsen und Kosten einfach erklärt.",
+        l29_title: "Vertragsbrief verstehen",
+        l29_text: "Vertragsänderungen, Fristen und Inhalte verständlich erklärt.",
+        l30_title: "Mahnung Inkasso Unterschied",
+        l30_text: "Unterschied zwischen Mahnung und Inkasso einfach erklärt.",
 
         faq_title: "Häufige Fragen zu Briefen und Schreiben",
         faq_sub: "Diese Fragen stellen sich viele Menschen vor dem Hochladen eines Dokuments:",
@@ -830,6 +955,7 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
 
         letters_title: "Important letters and documents at a glance",
         letters_sub: "Here you can find the most important BriefHelden pages for frequently searched letters:",
+
         l1_title: "Understand a debt collection letter",
         l1_text: "Debt collection letters explained simply and clearly.",
         l2_title: "Check debt collection claim",
@@ -870,6 +996,26 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         l19_text: "Forms and information explained simply.",
         l20_title: "Understand a rental agreement",
         l20_text: "Rental agreement, clauses and obligations explained clearly.",
+        l21_title: "Understand a fine notice",
+        l21_text: "Fine notice, accusation and deadlines explained clearly.",
+        l22_title: "Understand a health insurance letter",
+        l22_text: "Health insurance letters explained simply and clearly.",
+        l23_title: "Understand an insurance letter",
+        l23_text: "Insurance letters, deadlines and contents explained clearly.",
+        l24_title: "Understand a utility cost statement",
+        l24_text: "Better understand utility costs, extra payment and credit balance.",
+        l25_title: "Understand an electricity bill",
+        l25_text: "Consumption, advance payment and costs explained simply.",
+        l26_title: "Understand a gas bill",
+        l26_text: "Gas consumption, advance payments and final amount explained clearly.",
+        l27_title: "Understand a bank letter",
+        l27_text: "Better understand bank letters about account, fees or loan.",
+        l28_title: "Understand a credit agreement",
+        l28_text: "Installment, term, interest and costs explained simply.",
+        l29_title: "Understand a contract letter",
+        l29_text: "Contract changes, deadlines and contents explained clearly.",
+        l30_title: "Reminder vs debt collection difference",
+        l30_text: "Difference between reminder and debt collection explained simply.",
 
         faq_title: "Frequently asked questions about letters and documents",
         faq_sub: "These are common questions many people ask before uploading a document:",
@@ -930,6 +1076,7 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
 
         letters_title: "Önemli mektup ve belgeler genel bakış",
         letters_sub: "Burada sık aranan mektuplar için en önemli BriefHelden sayfalarını bulabilirsiniz:",
+
         l1_title: "İnkasso mektubunu anla",
         l1_text: "İnkasso yazıları basit ve anlaşılır şekilde açıklanır.",
         l2_title: "İnkasso alacağını kontrol et",
@@ -970,6 +1117,26 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         l19_text: "Formlar ve bilgiler basit şekilde açıklanır.",
         l20_title: "Kira sözleşmesini anla",
         l20_text: "Kira sözleşmesi, maddeler ve yükümlülükler açık şekilde açıklanır.",
+        l21_title: "Ceza bildirimini anla",
+        l21_text: "Ceza bildirimi, suçlama ve süreler anlaşılır şekilde açıklanır.",
+        l22_title: "Sağlık sigortası mektubunu anla",
+        l22_text: "Sağlık sigortası yazıları basit ve anlaşılır şekilde açıklanır.",
+        l23_title: "Sigorta mektubunu anla",
+        l23_text: "Sigorta yazıları, süreler ve içerikler anlaşılır şekilde açıklanır.",
+        l24_title: "Yan gider hesaplamasını anla",
+        l24_text: "Yan giderler, ek ödeme ve alacak daha iyi anlaşılır.",
+        l25_title: "Elektrik faturasını anla",
+        l25_text: "Tüketim, avans ve masraflar basitçe açıklanır.",
+        l26_title: "Gaz faturasını anla",
+        l26_text: "Gaz tüketimi, avanslar ve toplam tutar anlaşılır şekilde açıklanır.",
+        l27_title: "Banka mektubunu anla",
+        l27_text: "Hesap, ücret veya krediyle ilgili banka yazılarını daha iyi anlayın.",
+        l28_title: "Kredi sözleşmesini anla",
+        l28_text: "Taksit, vade, faiz ve masraflar basitçe açıklanır.",
+        l29_title: "Sözleşme mektubunu anla",
+        l29_text: "Sözleşme değişiklikleri, süreler ve içerikler anlaşılır şekilde açıklanır.",
+        l30_title: "İhtar ve inkasso farkı",
+        l30_text: "İhtar ile inkasso arasındaki fark basitçe açıklanır.",
 
         faq_title: "Mektup ve belgeler hakkında sık sorulan sorular",
         faq_sub: "Birçok kişi belge yüklemeden önce şu soruları sorar:",
@@ -1030,6 +1197,7 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
 
         letters_title: "Важные письма и документы — обзор",
         letters_sub: "Здесь вы найдёте самые важные страницы BriefHelden по часто ищущимся письмам:",
+
         l1_title: "Понять письмо от инкассо",
         l1_text: "Письма от инкассо объяснены просто и понятно.",
         l2_title: "Проверить требование инкассо",
@@ -1070,6 +1238,26 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         l19_text: "Формы и данные объяснены просто.",
         l20_title: "Понять договор аренды",
         l20_text: "Договор аренды, пункты и обязанности объяснены понятно.",
+        l21_title: "Понять штрафное уведомление",
+        l21_text: "Штрафное уведомление, обвинение и сроки объяснены понятно.",
+        l22_title: "Понять письмо от медстраховки",
+        l22_text: "Письма медицинской страховки объяснены просто и понятно.",
+        l23_title: "Понять письмо от страховой",
+        l23_text: "Страховые письма, сроки и содержание объяснены понятно.",
+        l24_title: "Понять расчёт коммунальных расходов",
+        l24_text: "Коммунальные расходы, доплата и переплата понятнее.",
+        l25_title: "Понять счёт за электричество",
+        l25_text: "Потребление, аванс и расходы объяснены просто.",
+        l26_title: "Понять счёт за газ",
+        l26_text: "Потребление газа, авансы и итоговая сумма объяснены понятно.",
+        l27_title: "Понять письмо из банка",
+        l27_text: "Лучше понять банковские письма о счёте, комиссиях или кредите.",
+        l28_title: "Понять кредитный договор",
+        l28_text: "Платёж, срок, проценты и расходы объяснены просто.",
+        l29_title: "Понять письмо по договору",
+        l29_text: "Изменения договора, сроки и содержание объяснены понятно.",
+        l30_title: "Разница между напоминанием и инкассо",
+        l30_text: "Разница между напоминанием и инкассо объяснена просто.",
 
         faq_title: "Частые вопросы о письмах и документах",
         faq_sub: "Вот вопросы, которые многие задают перед загрузкой документа:",
