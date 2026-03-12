@@ -211,6 +211,7 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
       box-shadow:0 18px 38px rgba(0,0,0,.28);
       border:1px solid rgba(255,255,255,.20);
       min-width:min(560px, 92vw);
+      text-align:center;
     }
 
     .cta.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
@@ -298,14 +299,14 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
       font-size:16px;
     }
 
-    .howTitle,.typesTitle,.faqTitle,.tipsTitle,.serviceTitle,.seoTitle{
+    .howTitle,.typesTitle,.faqTitle,.tipsTitle,.serviceTitle,.seoTitle,.reviewTitle{
       text-align:center;
       font-weight:950;
       margin:0 0 8px;
       font-size:clamp(22px, 2.6vw, 34px);
     }
 
-    .typesSub,.faqSub,.tipsSub,.serviceSub,.seoSub{
+    .typesSub,.faqSub,.tipsSub,.serviceSub,.seoSub,.reviewSub{
       text-align:center;
       margin:0 0 18px;
       color:rgba(11,18,32,.72);
@@ -392,7 +393,7 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
       gap:14px;
     }
 
-    .typeCard,.faqItem,.tipItem,.serviceCard,.seoCard{
+    .typeCard,.faqItem,.tipItem,.serviceCard,.seoCard,.reviewCard{
       border-radius:var(--radius-lg);
       border:1px solid rgba(255,255,255,.55);
       background:rgba(255,255,255,.20);
@@ -420,13 +421,13 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
       flex:0 0 40px;
     }
 
-    .typeCard h3,.faqItem h3,.tipItem h3,.serviceCard h3,.seoCard h3{
+    .typeCard h3,.faqItem h3,.tipItem h3,.serviceCard h3,.seoCard h3,.reviewCard h3{
       margin:0 0 8px;
       font-size:18px;
       font-weight:950;
     }
 
-    .typeCard p,.faqItem p,.tipItem p,.serviceCard p,.seoCard p{
+    .typeCard p,.faqItem p,.tipItem p,.serviceCard p,.seoCard p,.reviewCard p{
       margin:0;
       color:rgba(11,18,32,.74);
       line-height:1.55;
@@ -447,7 +448,7 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
       font-weight:800;
     }
 
-    .faqGrid,.tipsGrid,.serviceGrid,.seoGrid{
+    .faqGrid,.tipsGrid,.serviceGrid,.seoGrid,.reviewGrid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:14px;
@@ -457,9 +458,30 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
       grid-template-columns:repeat(3, 1fr);
     }
 
+    .reviewGrid{
+      grid-template-columns:repeat(3, 1fr);
+    }
+
     .serviceCard{
       text-align:center;
       padding:20px;
+    }
+
+    .reviewCard{
+      text-align:left;
+      padding:20px;
+    }
+
+    .reviewStars{
+      font-size:20px;
+      margin-bottom:10px;
+    }
+
+    .reviewMeta{
+      margin-top:10px;
+      font-weight:800;
+      color:rgba(11,18,32,.65);
+      font-size:14px;
     }
 
     .priceBadge{
@@ -485,6 +507,7 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
       font-weight:900;
       min-width:240px;
       box-shadow:0 10px 24px rgba(0,0,0,.16);
+      text-align:center;
     }
 
     .serviceBtn.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
@@ -535,7 +558,7 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
     @media (max-width:900px){
       nav.links{display:none}
       .pillRow{grid-template-columns:1fr}
-      .grid,.faqGrid,.tipsGrid,.serviceGrid,.seoGrid{grid-template-columns:1fr}
+      .grid,.faqGrid,.tipsGrid,.serviceGrid,.seoGrid,.reviewGrid{grid-template-columns:1fr}
       .cta{min-width:92vw}
       .serviceBtn{min-width:100%}
     }
@@ -667,6 +690,44 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
                     <span data-i18n="service2_btn">Jetzt kurze Frage stellen</span>
                     <span aria-hidden="true">›</span>
                   </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div style="height:18px"></div>
+
+          <div class="glassCard">
+            <div class="pad">
+              <div class="reviewTitle" data-i18n="review_title">Das sagen Kunden</div>
+              <div class="reviewSub" data-i18n="review_sub">Vertrauen durch verständliche Hilfe und schnelle Rückmeldung.</div>
+
+              <div class="reviewGrid">
+                <div class="reviewCard">
+                  <div class="reviewStars">★★★★★</div>
+                  <h3 data-i18n="review1_title">Sehr verständlich erklärt</h3>
+                  <p data-i18n="review1_text">
+                    Ich habe endlich verstanden, worum es in meinem Schreiben geht. Die Erklärung war klar und einfach.
+                  </p>
+                  <div class="reviewMeta" data-i18n="review_meta">– Verifizierte Rückmeldung</div>
+                </div>
+
+                <div class="reviewCard">
+                  <div class="reviewStars">★★★★★</div>
+                  <h3 data-i18n="review2_title">Hat mir sehr geholfen</h3>
+                  <p data-i18n="review2_text">
+                    Ich war erst unsicher, aber die Antwort war schnell und gut verständlich. Genau das habe ich gebraucht.
+                  </p>
+                  <div class="reviewMeta" data-i18n="review_meta">– Verifizierte Rückmeldung</div>
+                </div>
+
+                <div class="reviewCard">
+                  <div class="reviewStars">★★★★★</div>
+                  <h3 data-i18n="review3_title">Einfach und seriös</h3>
+                  <p data-i18n="review3_text">
+                    Gute Hilfe bei einem komplizierten Brief. Ohne Fachsprache und ohne dass es unnötig kompliziert gemacht wurde.
+                  </p>
+                  <div class="reviewMeta" data-i18n="review_meta">– Verifizierte Rückmeldung</div>
                 </div>
               </div>
             </div>
@@ -996,6 +1057,16 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         service2_text: "Ideal, wenn Sie nur eine kurze Rückfrage zu einem Brief, Formular oder Schreiben haben und nicht das ganze Dokument hochladen möchten.",
         service2_btn: "Jetzt kurze Frage stellen",
 
+        review_title: "Das sagen Kunden",
+        review_sub: "Vertrauen durch verständliche Hilfe und schnelle Rückmeldung.",
+        review1_title: "Sehr verständlich erklärt",
+        review1_text: "Ich habe endlich verstanden, worum es in meinem Schreiben geht. Die Erklärung war klar und einfach.",
+        review2_title: "Hat mir sehr geholfen",
+        review2_text: "Ich war erst unsicher, aber die Antwort war schnell und gut verständlich. Genau das habe ich gebraucht.",
+        review3_title: "Einfach und seriös",
+        review3_text: "Gute Hilfe bei einem komplizierten Brief. Ohne Fachsprache und ohne dass es unnötig kompliziert gemacht wurde.",
+        review_meta: "– Verifizierte Rückmeldung",
+
         seo_title: "Häufig gesuchte Briefe",
         seo_sub: "Hier finden Sie direkte Hilfeseiten zu oft gesuchten Schreiben.",
         seo0_title: "Alle Briefe verstehen",
@@ -1123,6 +1194,16 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         service2_title: "Ask a short question",
         service2_text: "Ideal if you only have one short question about a letter, form or document and do not want to upload the full document.",
         service2_btn: "Ask a short question now",
+
+        review_title: "What customers say",
+        review_sub: "Build trust through clear help and fast responses.",
+        review1_title: "Very clearly explained",
+        review1_text: "I finally understood what my document was about. The explanation was clear and simple.",
+        review2_title: "Helped me a lot",
+        review2_text: "I was unsure at first, but the reply was fast and easy to understand. Exactly what I needed.",
+        review3_title: "Simple and professional",
+        review3_text: "Good help with a complicated letter. No legal jargon and no unnecessary complexity.",
+        review_meta: "– Verified feedback",
 
         seo_title: "Frequently searched letters",
         seo_sub: "Here you can find direct help pages for common types of letters.",
@@ -1252,6 +1333,16 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         service2_text: "Sadece kısa bir sorunuz varsa ve tüm belgeyi yüklemek istemiyorsanız bu seçenek sizin için uygundur.",
         service2_btn: "Şimdi kısa soru sor",
 
+        review_title: "Müşteriler ne diyor",
+        review_sub: "Açık yardım ve hızlı dönüşlerle güven oluşturun.",
+        review1_title: "Çok anlaşılır açıklandı",
+        review1_text: "Belgemde ne yazdığını sonunda anladım. Açıklama açık ve basitti.",
+        review2_title: "Bana çok yardımcı oldu",
+        review2_text: "Başta emin değildim ama cevap hızlı ve anlaşılırdı. Tam ihtiyacım olan buydu.",
+        review3_title: "Basit ve güven verici",
+        review3_text: "Karmaşık bir mektup için iyi bir yardımdı. Gereksiz karmaşıklık ve ağır dil yoktu.",
+        review_meta: "– Doğrulanmış geri bildirim",
+
         seo_title: "Sık aranan mektuplar",
         seo_sub: "Burada sık aranan yazılar için doğrudan yardım sayfaları bulabilirsiniz.",
         seo0_title: "Tüm mektupları anlayın",
@@ -1379,6 +1470,16 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         service2_title: "Задать короткий вопрос",
         service2_text: "Идеально, если у вас только один короткий вопрос по письму, форме или документу и вы не хотите загружать весь документ.",
         service2_btn: "Задать короткий вопрос",
+
+        review_title: "Что говорят клиенты",
+        review_sub: "Доверие благодаря понятной помощи и быстрому ответу.",
+        review1_title: "Очень понятно объяснено",
+        review1_text: "Я наконец понял, о чём идёт речь в моём письме. Объяснение было простым и понятным.",
+        review2_title: "Очень помогло",
+        review2_text: "Сначала я сомневался, но ответ пришёл быстро и был понятным. Именно то, что мне было нужно.",
+        review3_title: "Просто и серьёзно",
+        review3_text: "Хорошая помощь с трудным письмом. Без сложного языка и лишней путаницы.",
+        review_meta: "– Проверенный отзыв",
 
         seo_title: "Часто ищут",
         seo_sub: "Здесь вы найдёте прямые страницы помощи по часто встречающимся письмам.",
