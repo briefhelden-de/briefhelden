@@ -6,11 +6,14 @@
   <title>BriefHelden – Briefe einfach verstehen | Behörden, Inkasso, Jobcenter</title>
   <meta name="description" content="BriefHelden erklärt komplizierte Briefe einfach und verständlich. Hilfe bei Behördenbriefen, Inkasso, Mahnungen, Jobcenter und Formularen – keine Rechtsberatung, nur klare Erklärungen." />
   <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0f2740" />
 <link rel="canonical" href="https://www.briefhelden-service.de/" />
+
   <meta property="og:title" content="BriefHelden – Briefe einfach verstehen" />
   <meta property="og:description" content="Verständliche Hilfe bei Behördenbriefen, Inkasso, Mahnungen, Jobcenter und Formularen." />
   <meta property="og:type" content="website" />
 <meta property="og:url" content="https://www.briefhelden-service.de/" />
+  <meta property="og:site_name" content="BriefHelden" />
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
   <script>
@@ -20,14 +23,80 @@
     gtag('config', 'G-CVRQ9QBE94');
   </script>
 
+  <script type="application/ld+json">
+  {
+"@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Organization",
+        "name":"BriefHelden",
+"url":"https://www.briefhelden-service.de/"
+      },
+      {
+        "@type":"WebSite",
+        "name":"BriefHelden",
+"url":"https://www.briefhelden-service.de/"
+      },
+      {
+        "@type":"Service",
+        "name":"BriefHelden – Briefe einfach verstehen",
+        "provider":{
+          "@type":"Organization",
+          "name":"BriefHelden"
+        },
+        "areaServed":"DE",
+        "availableLanguage":["de","en","tr","ru"],
+        "description":"BriefHelden erklärt komplizierte Briefe und Formulare in verständlicher Sprache. Keine Rechtsberatung, nur verständliche Texterklärung."
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"Was bedeutet ein Inkasso Brief?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Ein Inkasso Brief fordert meist Geld für eine offene Forderung. Oft sind solche Schreiben schwer verständlich. BriefHelden erklärt den Inhalt einfach und verständlich."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Was steht in einem Jobcenter Brief?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Jobcenter Schreiben enthalten oft Fristen, Anforderungen oder Hinweise. Wir helfen dabei, den Brief in einfacher Sprache besser zu verstehen."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Kann ich auch einen Brief vom Amt hochladen?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Ja. Viele Menschen laden Behördenbriefe, Schreiben vom Finanzamt oder andere offizielle Dokumente hoch, um den Inhalt verständlich erklärt zu bekommen."
+            }
+          },
+          {
+            "@type":"Question",
+            "name":"Ist BriefHelden eine Rechtsberatung?",
+            "acceptedAnswer":{
+              "@type":"Answer",
+              "text":"Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Texterklärung des Inhalts Ihres Dokuments."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
   <style>
     :root{
-      --nav-bg: rgba(9,24,33,.78);
+      --nav-bg: rgba(9,24,33,.84);
       --nav-border: rgba(255,255,255,.10);
       --text: #0b1220;
       --muted: rgba(11,18,32,.72);
       --heroText: #fff;
-      --heroMuted: rgba(255,255,255,.84);
+      --heroMuted: rgba(255,255,255,.88);
       --glass: rgba(255,255,255,.28);
       --glass2: rgba(255,255,255,.16);
       --stroke: rgba(255,255,255,.36);
@@ -36,6 +105,8 @@
       --btn2: #1f56b8;
       --btnGreen1: #12b76a;
       --btnGreen2: #079455;
+      --chipBg: rgba(255,255,255,.12);
+      --chipBorder: rgba(255,255,255,.16);
       --radius-xl: 24px;
       --radius-lg: 18px;
       --radius-md: 14px;
@@ -59,10 +130,32 @@
 
     a{color:inherit;text-decoration:none}
 
+    .skipLink{
+      position:absolute;
+      left:-9999px;
+      top:auto;
+      width:1px;
+      height:1px;
+      overflow:hidden;
+    }
+
+    .skipLink:focus{
+      left:16px;
+      top:16px;
+      width:auto;
+      height:auto;
+      z-index:999;
+      background:#fff;
+      color:#000;
+      padding:10px 14px;
+      border-radius:10px;
+      font-weight:800;
+    }
+
     header{
       position:sticky;
       top:0;
-      z-index:20;
+      z-index:30;
       background:var(--nav-bg);
       backdrop-filter:blur(12px) saturate(140%);
       border-bottom:1px solid var(--nav-border);
@@ -86,6 +179,7 @@
       font-weight:900;
       letter-spacing:.2px;
       white-space:nowrap;
+      flex-shrink:0;
     }
 
     .brand .logo{
@@ -107,6 +201,12 @@
       background:rgba(255,255,255,.85);
       clip-path:polygon(0 0, 100% 0, 85% 100%, 0 100%);
       opacity:.12;
+    }
+
+    .navRight{
+      display:flex;
+      align-items:center;
+      gap:12px;
     }
 
     nav.links{
@@ -158,12 +258,48 @@
       font-size:12px;
     }
 
+    .menuBtn{
+      display:none;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(255,255,255,.08);
+      color:#fff;
+      padding:10px 12px;
+      border-radius:12px;
+      font-weight:900;
+      cursor:pointer;
+    }
+
+    .mobileMenu{
+      display:none;
+      padding:0 18px 18px;
+      max-width:var(--max);
+      margin:0 auto;
+    }
+
+    .mobileMenuInner{
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.06);
+      border-radius:18px;
+      overflow:hidden;
+      backdrop-filter:blur(10px);
+    }
+
+    .mobileMenu a{
+      display:block;
+      padding:14px 16px;
+      color:#fff;
+      font-weight:800;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .mobileMenu a:last-child{border-bottom:none}
+
     .hero{
       position:relative;
       color:var(--heroText);
       padding:68px 18px 40px;
       background:
-        linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.58)),
+        linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.60)),
 url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=2200&q=60");
       background-size:cover;
       background-position:center;
@@ -178,7 +314,7 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
     .hero h1{
       margin:0 0 10px;
       font-weight:950;
-      font-size:clamp(30px, 3.7vw, 48px);
+      font-size:clamp(30px, 3.7vw, 50px);
       letter-spacing:.2px;
       text-shadow:0 10px 24px rgba(0,0,0,.35);
     }
@@ -267,6 +403,28 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
       backdrop-filter:blur(10px);
     }
 
+    .trustRow{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:repeat(4, 1fr);
+      gap:12px;
+    }
+
+    .trustChip{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:12px 14px;
+      border-radius:16px;
+      background:var(--chipBg);
+      border:1px solid var(--chipBorder);
+      color:#fff;
+      font-weight:800;
+      font-size:14px;
+      backdrop-filter:blur(10px);
+    }
+
     .section{padding:26px 18px 10px}
     .wrap{max-width:var(--max);margin:0 auto;}
 
@@ -299,14 +457,14 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
       font-size:16px;
     }
 
-    .howTitle,.typesTitle,.faqTitle,.tipsTitle,.serviceTitle,.seoTitle,.reviewTitle{
+    .howTitle,.typesTitle,.faqTitle,.tipsTitle,.serviceTitle,.seoTitle,.reviewTitle,.trustTitle{
       text-align:center;
       font-weight:950;
       margin:0 0 8px;
       font-size:clamp(22px, 2.6vw, 34px);
     }
 
-    .typesSub,.faqSub,.tipsSub,.serviceSub,.seoSub,.reviewSub{
+    .typesSub,.faqSub,.tipsSub,.serviceSub,.seoSub,.reviewSub,.trustSub{
       text-align:center;
       margin:0 0 18px;
       color:rgba(11,18,32,.72);
@@ -393,7 +551,7 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
       gap:14px;
     }
 
-    .typeCard,.faqItem,.tipItem,.serviceCard,.seoCard,.reviewCard{
+    .typeCard,.faqItem,.tipItem,.serviceCard,.seoCard,.reviewCard,.trustCard{
       border-radius:var(--radius-lg);
       border:1px solid rgba(255,255,255,.55);
       background:rgba(255,255,255,.20);
@@ -421,13 +579,13 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
       flex:0 0 40px;
     }
 
-    .typeCard h3,.faqItem h3,.tipItem h3,.serviceCard h3,.seoCard h3,.reviewCard h3{
+    .typeCard h3,.faqItem h3,.tipItem h3,.serviceCard h3,.seoCard h3,.reviewCard h3,.trustCard h3{
       margin:0 0 8px;
       font-size:18px;
       font-weight:950;
     }
 
-    .typeCard p,.faqItem p,.tipItem p,.serviceCard p,.seoCard p,.reviewCard p{
+    .typeCard p,.faqItem p,.tipItem p,.serviceCard p,.seoCard p,.reviewCard p,.trustCard p{
       margin:0;
       color:rgba(11,18,32,.74);
       line-height:1.55;
@@ -448,7 +606,7 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
       font-weight:800;
     }
 
-    .faqGrid,.tipsGrid,.serviceGrid,.seoGrid,.reviewGrid{
+    .faqGrid,.tipsGrid,.serviceGrid,.seoGrid,.reviewGrid,.trustGrid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:14px;
@@ -460,6 +618,10 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
 
     .reviewGrid{
       grid-template-columns:repeat(3, 1fr);
+    }
+
+    .trustGrid{
+      grid-template-columns:repeat(4, 1fr);
     }
 
     .serviceCard{
@@ -555,16 +717,24 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
     .footLinks a{color:rgba(255,255,255,.80)}
     .footLinks a:hover{color:#fff}
 
+    @media (max-width:980px){
+      .trustRow{grid-template-columns:1fr 1fr}
+      .reviewGrid,.seoGrid,.trustGrid{grid-template-columns:1fr 1fr}
+    }
+
     @media (max-width:900px){
       nav.links{display:none}
+      .menuBtn{display:inline-flex}
       .pillRow{grid-template-columns:1fr}
-      .grid,.faqGrid,.tipsGrid,.serviceGrid,.seoGrid,.reviewGrid{grid-template-columns:1fr}
+      .grid,.faqGrid,.tipsGrid,.serviceGrid,.seoGrid,.reviewGrid,.trustGrid{grid-template-columns:1fr}
       .cta{min-width:92vw}
       .serviceBtn{min-width:100%}
     }
   </style>
 </head>
 <body>
+  <a class="skipLink" href="#mainContent">Zum Inhalt springen</a>
+
   <header>
     <div class="nav">
       <div class="brand">
@@ -572,416 +742,467 @@ url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fi
         <div>BriefHelden</div>
       </div>
 
-      <nav class="links" aria-label="Hauptnavigation">
+      <div class="navRight">
+        <nav class="links" aria-label="Hauptnavigation">
+          <a href="index.html" data-i18n="nav_home">Startseite</a>
+          <a href="widerruf.html" data-i18n="nav_refund">Widerruf und Rückerstattung</a>
+          <a href="impressum.html" data-i18n="nav_imprint">Impressum</a>
+          <a href="agb.html" data-i18n="nav_terms">AGB</a>
+          <a href="datenschutz.html" data-i18n="nav_privacy">Datenschutz</a>
+        </nav>
+
+        <div class="langWrap">
+          <select class="langSelect" id="langSelect" aria-label="Sprache">
+            <option value="de">DE</option>
+            <option value="en">EN</option>
+            <option value="tr">TR</option>
+            <option value="ru">RU</option>
+          </select>
+        </div>
+
+        <button class="menuBtn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu" data-i18n="menu_btn">Menü</button>
+      </div>
+    </div>
+
+    <div class="mobileMenu" id="mobileMenu">
+      <div class="mobileMenuInner">
         <a href="index.html" data-i18n="nav_home">Startseite</a>
         <a href="widerruf.html" data-i18n="nav_refund">Widerruf und Rückerstattung</a>
         <a href="impressum.html" data-i18n="nav_imprint">Impressum</a>
         <a href="agb.html" data-i18n="nav_terms">AGB</a>
         <a href="datenschutz.html" data-i18n="nav_privacy">Datenschutz</a>
-      </nav>
-
-      <div class="langWrap">
-        <select class="langSelect" id="langSelect" aria-label="Sprache">
-          <option value="de">DE</option>
-          <option value="en">EN</option>
-          <option value="tr">TR</option>
-          <option value="ru">RU</option>
-        </select>
       </div>
     </div>
   </header>
 
-  <section class="hero">
-    <div class="wrap">
-      <h1 data-i18n="hero_title">Komplizierte Briefe einfach verstehen</h1>
-      <p data-i18n="hero_sub">Verständliche Texterklärung für offizielle Briefe und Formulare – in Ihrer Sprache.</p>
+  <main id="mainContent">
+    <section class="hero">
+      <div class="wrap">
+        <h1 data-i18n="hero_title">Komplizierte Briefe einfach verstehen</h1>
+        <p data-i18n="hero_sub">Verständliche Texterklärung für offizielle Briefe und Formulare – in Ihrer Sprache.</p>
 
-      <div class="ctaGroup">
-        <a class="cta primary" id="stripeBtn" href="#" rel="noopener">
-          <span data-i18n="hero_cta">Jetzt verständliche Erklärung erhalten – 6,90 €</span>
-          <span aria-hidden="true">›</span>
-        </a>
+        <div class="ctaGroup">
+          <a class="cta primary" id="stripeBtn" href="#" rel="noopener">
+            <span data-i18n="hero_cta">Jetzt verständliche Erklärung erhalten – 6,90 €</span>
+            <span aria-hidden="true">›</span>
+          </a>
 
-        <a class="cta secondary" id="questionBtn" href="#" rel="noopener">
-          <span data-i18n="hero_question_cta">Kurze Frage stellen – 1,49 €</span>
-          <span aria-hidden="true">›</span>
-        </a>
-      </div>
+          <a class="cta secondary" id="questionBtn" href="#" rel="noopener">
+            <span data-i18n="hero_question_cta">Kurze Frage stellen – 1,49 €</span>
+            <span aria-hidden="true">›</span>
+          </a>
+        </div>
 
-      <div class="microHint" data-i18n="hero_question_hint">
-        Für kurze Rückfragen zu einem Brief, Formular oder Schreiben.
-      </div>
+        <div class="microHint" data-i18n="hero_question_hint">
+          Für kurze Rückfragen zu einem Brief, Formular oder Schreiben.
+        </div>
 
-      <div class="heroMeta" aria-label="Kurzvorteile">
-        <span>✅ <span data-i18n="meta_once">Einmalig 6,90 €</span></span>
-        <span>🕒 <span data-i18n="meta_fast">Antwort meist in kurzer Zeit</span></span>
-        <span>🔒 <span data-i18n="meta_private">100% vertraulich</span></span>
-      </div>
+        <div class="heroMeta" aria-label="Kurzvorteile">
+          <span>✅ <span data-i18n="meta_once">Einmalig 6,90 €</span></span>
+          <span>🕒 <span data-i18n="meta_fast">Antwort meist in kurzer Zeit</span></span>
+          <span>🔒 <span data-i18n="meta_private">100% vertraulich</span></span>
+        </div>
 
-      <div class="visitorWrap">
-        <div class="visitorBadge" id="visitorCount" data-i18n="visitor_loading">👀 Besucher werden geladen ...</div>
-      </div>
-    </div>
-  </section>
+        <div class="visitorWrap">
+          <div class="visitorBadge" id="visitorCount" data-i18n="visitor_loading">👀 Besucher werden geladen ...</div>
+        </div>
 
-  <section class="section">
-    <div class="wrap">
-      <div class="glassCard">
-        <div class="pad">
-          <div class="headline" data-i18n="mid_title">Sie verstehen Ihren Brief nicht?</div>
-          <p class="lead" data-i18n="mid_text">
-            Viele Menschen verstehen komplizierte Briefe von Behörden, Inkasso oder Mahnungen nicht sofort. Besonders Schreiben vom Jobcenter, Finanzamt oder anderen Ämtern sind oft schwer verständlich. Mit BriefHelden können Sie Ihren Brief hochladen und erhalten eine einfache und verständliche Erklärung des Inhalts. So verstehen Sie besser, worum es in dem Schreiben geht und was die wichtigsten Punkte sind. Wir helfen Ihnen dabei, komplizierte Briefe verständlich zu erklären – einfach, diskret und schnell.
-          </p>
-
-          <div class="glassCard" style="border-radius:22px;">
-            <div class="pad" style="padding:18px 18px;">
-              <div class="howTitle" data-i18n="how_title">So funktioniert es:</div>
-
-              <div class="howRow" aria-label="Kurzablauf">
-                <div class="mini">✅ <span data-i18n="how_a">Dokument hochladen</span></div>
-                <div class="mini">✅ <span data-i18n="how_b">100% Vertraulichkeit</span></div>
-              </div>
-
-              <div class="pillRow" aria-label="Vorteile">
-                <div class="pill">🔒 <span data-i18n="pill_pay">Sichere Zahlung (Stripe)</span></div>
-                <div class="pill">⚡ <span data-i18n="pill_reply">Schnelle Rückmeldung</span></div>
-                <div class="pill">🌍 <span data-i18n="pill_lang">Mehrsprachig</span></div>
-              </div>
-
-              <div class="flowBox" aria-label="Ablaufbeschreibung">
-                <div class="flowLine"><span class="flowDot"></span> <span data-i18n="flow_1">Sie laden Ihren Brief oder Ihr Formular hoch.</span></div>
-                <div class="flowLine"><span class="flowDot"></span> <span data-i18n="flow_2">Wir erklären Ihnen den Inhalt in einfacher, verständlicher Sprache.</span></div>
-                <div class="flowLine"><span class="flowDot"></span> <span data-i18n="flow_3">Sie erhalten die Erklärung per E-Mail.</span></div>
-              </div>
-
-              <div class="disclaimer" data-i18n="disclaimer">
-                Keine Rechtsberatung – nur verständliche Texterklärung.
-              </div>
-            </div>
-          </div>
-
-          <div style="height:18px"></div>
-
-          <div class="glassCard">
-            <div class="pad">
-              <div class="serviceTitle" data-i18n="service_title">Welcher Service passt zu Ihnen?</div>
-              <div class="serviceSub" data-i18n="service_sub">Wählen Sie je nach Situation die passende Option:</div>
-
-              <div class="serviceGrid">
-                <div class="serviceCard">
-                  <div class="priceBadge" data-i18n="service1_price">6,90 € einmalig</div>
-                  <h3 data-i18n="service1_title">Kompletten Brief erklären lassen</h3>
-                  <p data-i18n="service1_text">
-                    Ideal, wenn Sie ein offizielles Schreiben, eine Mahnung, einen Inkasso-Brief oder ein Formular vollständig verständlich erklärt haben möchten.
-                  </p>
-                  <a class="serviceBtn primary" id="servicePrimaryBtn" href="#" rel="noopener">
-                    <span data-i18n="service1_btn">Jetzt Brief erklären lassen</span>
-                    <span aria-hidden="true">›</span>
-                  </a>
-                </div>
-
-                <div class="serviceCard">
-                  <div class="priceBadge" data-i18n="service2_price">1,49 € einmalig</div>
-                  <h3 data-i18n="service2_title">Kurze Frage stellen</h3>
-                  <p data-i18n="service2_text">
-                    Ideal, wenn Sie nur eine kurze Rückfrage zu einem Brief, Formular oder Schreiben haben und nicht das ganze Dokument hochladen möchten.
-                  </p>
-                  <a class="serviceBtn secondary" id="serviceQuestionBtn" href="#" rel="noopener">
-                    <span data-i18n="service2_btn">Jetzt kurze Frage stellen</span>
-                    <span aria-hidden="true">›</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div style="height:18px"></div>
-
-          <div class="glassCard">
-            <div class="pad">
-              <div class="reviewTitle" data-i18n="review_title">Das sagen Kunden</div>
-              <div class="reviewSub" data-i18n="review_sub">Vertrauen durch verständliche Hilfe und schnelle Rückmeldung.</div>
-
-              <div class="reviewGrid">
-                <div class="reviewCard">
-                  <div class="reviewStars">★★★★★</div>
-                  <h3 data-i18n="review1_title">Sehr verständlich erklärt</h3>
-                  <p data-i18n="review1_text">
-                    Ich habe endlich verstanden, worum es in meinem Schreiben geht. Die Erklärung war klar und einfach.
-                  </p>
-                  <div class="reviewMeta" data-i18n="review_meta">– Verifizierte Rückmeldung</div>
-                </div>
-
-                <div class="reviewCard">
-                  <div class="reviewStars">★★★★★</div>
-                  <h3 data-i18n="review2_title">Hat mir sehr geholfen</h3>
-                  <p data-i18n="review2_text">
-                    Ich war erst unsicher, aber die Antwort war schnell und gut verständlich. Genau das habe ich gebraucht.
-                  </p>
-                  <div class="reviewMeta" data-i18n="review_meta">– Verifizierte Rückmeldung</div>
-                </div>
-
-                <div class="reviewCard">
-                  <div class="reviewStars">★★★★★</div>
-                  <h3 data-i18n="review3_title">Einfach und seriös</h3>
-                  <p data-i18n="review3_text">
-                    Gute Hilfe bei einem komplizierten Brief. Ohne Fachsprache und ohne dass es unnötig kompliziert gemacht wurde.
-                  </p>
-                  <div class="reviewMeta" data-i18n="review_meta">– Verifizierte Rückmeldung</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div style="height:18px"></div>
-
-          <div class="glassCard">
-            <div class="pad">
-              <div class="seoTitle" data-i18n="seo_title">Häufig gesuchte Briefe</div>
-              <div class="seoSub" data-i18n="seo_sub">Hier finden Sie direkte Hilfeseiten zu oft gesuchten Schreiben.</div>
-
-              <div class="seoGrid">
-                <a class="seoCard" href="alle-briefe-verstehen.html">
-                  <h3 data-i18n="seo0_title">Alle Briefe verstehen</h3>
-                  <p data-i18n="seo0_text">Übersicht über wichtige Briefe, Bescheide und Schreiben.</p>
-                </a>
-
-                <a class="seoCard" href="inkasso-brief-verstehen.html">
-                  <h3 data-i18n="seo1_title">Inkasso Brief verstehen</h3>
-                  <p data-i18n="seo1_text">Ein Inkasso Schreiben einfach und verständlich erklärt.</p>
-                </a>
-
-                <a class="seoCard" href="inkasso-forderung-pruefen.html">
-                  <h3 data-i18n="seo2_title">Inkasso Forderung prüfen</h3>
-                  <p data-i18n="seo2_text">Inkasso Forderung besser verstehen und einordnen.</p>
-                </a>
-
-                <a class="seoCard" href="mahnung-verstehen.html">
-                  <h3 data-i18n="seo3_title">Mahnung verstehen</h3>
-                  <p data-i18n="seo3_text">Mahnungen, Fristen und Forderungen besser verstehen.</p>
-                </a>
-
-                <a class="seoCard" href="mahnbescheid-verstehen.html">
-                  <h3 data-i18n="seo4_title">Mahnbescheid verstehen</h3>
-                  <p data-i18n="seo4_text">Gerichtlichen Mahnbescheid einfach und verständlich erklärt.</p>
-                </a>
-
-                <a class="seoCard" href="vollstreckungsbescheid-verstehen.html">
-                  <h3 data-i18n="seo5_title">Vollstreckungsbescheid verstehen</h3>
-                  <p data-i18n="seo5_text">Was ein Vollstreckungsbescheid bedeutet – einfach erklärt.</p>
-                </a>
-
-                <a class="seoCard" href="pfaendungsbescheid-verstehen.html">
-                  <h3 data-i18n="seo6_title">Pfändungsbescheid verstehen</h3>
-                  <p data-i18n="seo6_text">Pfändung, Konto und Forderungen verständlich erklärt.</p>
-                </a>
-
-                <a class="seoCard" href="zahlungsaufforderung-verstehen.html">
-                  <h3 data-i18n="seo7_title">Zahlungsaufforderung verstehen</h3>
-                  <p data-i18n="seo7_text">Schreiben mit Zahlungsaufforderung einfach erklärt.</p>
-                </a>
-
-                <a class="seoCard" href="zahlungserinnerung-verstehen.html">
-                  <h3 data-i18n="seo8_title">Zahlungserinnerung verstehen</h3>
-                  <p data-i18n="seo8_text">Zahlungserinnerung einfach und verständlich erklärt.</p>
-                </a>
-
-                <a class="seoCard" href="zahlungsfrist-verstehen.html">
-                  <h3 data-i18n="seo9_title">Zahlungsfrist verstehen</h3>
-                  <p data-i18n="seo9_text">Fristen und Zahlungsziele verständlich erklärt.</p>
-                </a>
-
-                <a class="seoCard" href="rechnung-verstehen.html">
-                  <h3 data-i18n="seo10_title">Rechnung verstehen</h3>
-                  <p data-i18n="seo10_text">Rechnungen und Beträge einfach erklärt.</p>
-                </a>
-
-                <a class="seoCard" href="jobcenter-brief-verstehen.html">
-                  <h3 data-i18n="seo11_title">Jobcenter Brief verstehen</h3>
-                  <p data-i18n="seo11_text">Schreiben vom Jobcenter in einfacher Sprache erklärt.</p>
-                </a>
-
-                <a class="seoCard" href="finanzamt-brief-verstehen.html">
-                  <h3 data-i18n="seo12_title">Finanzamt Brief verstehen</h3>
-                  <p data-i18n="seo12_text">Briefe vom Finanzamt einfach erklärt.</p>
-                </a>
-
-                <a class="seoCard" href="behoerdenbrief-verstehen.html">
-                  <h3 data-i18n="seo13_title">Behördenbrief verstehen</h3>
-                  <p data-i18n="seo13_text">Behördliche Schreiben einfach und verständlich erklärt.</p>
-                </a>
-
-                <a class="seoCard" href="kuendigung-verstehen.html">
-                  <h3 data-i18n="seo14_title">Kündigung verstehen</h3>
-                  <p data-i18n="seo14_text">Kündigungsschreiben verständlich erklärt.</p>
-                </a>
-
-                <a class="seoCard" href="formular-verstehen.html">
-                  <h3 data-i18n="seo15_title">Formular verstehen</h3>
-                  <p data-i18n="seo15_text">Formulare und Angaben einfach erklärt.</p>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div style="height:18px"></div>
-
-          <div class="glassCard">
-            <div class="pad">
-              <div class="typesTitle" data-i18n="types_title">Für welche Briefe und Dokumente eignet sich BriefHelden?</div>
-              <div class="typesSub" data-i18n="types_sub">Wir helfen bei komplizierten Schreiben wie:</div>
-
-              <div class="grid">
-                <div class="typeCard">
-                  <div class="icon">🏛️</div>
-                  <div>
-                    <h3 data-i18n="t1_title">Briefe vom Amt</h3>
-                    <p data-i18n="t1_text">(Jobcenter, Finanzamt, Behörden usw.)</p>
-                  </div>
-                </div>
-
-                <div class="typeCard">
-                  <div class="icon">📩</div>
-                  <div>
-                    <h3 data-i18n="t2_title">Inkasso</h3>
-                    <ul>
-                      <li data-i18n="t2_li1">Forderungen</li>
-                      <li data-i18n="t2_li2">Zahlungsaufforderungen</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="typeCard">
-                  <div class="icon">⚠️</div>
-                  <div>
-                    <h3 data-i18n="t3_title">Kündigungen</h3>
-                    <ul>
-                      <li data-i18n="t3_li1">Mietwohnung</li>
-                      <li data-i18n="t3_li2">Arbeitsvertrag, Handy usw.</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="typeCard">
-                  <div class="icon">⏳</div>
-                  <div>
-                    <h3 data-i18n="t4_title">Mahnungen</h3>
-                    <ul>
-                      <li data-i18n="t4_li1">Erklärung von Fristen und Angaben</li>
-                      <li data-i18n="t4_li2">Verständliche Einordnung des Inhalts</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <div class="typeCard">
-                  <div class="icon">📄</div>
-                  <div>
-                    <h3 data-i18n="t5_title">Verträge</h3>
-                    <p data-i18n="t5_text">Klauseln, Pflichten und Laufzeiten – verständlich erklärt.</p>
-                  </div>
-                </div>
-
-                <div class="typeCard">
-                  <div class="icon">🧾</div>
-                  <div>
-                    <h3 data-i18n="t6_title">Formulare</h3>
-                    <p data-i18n="t6_text">Verständliche Erklärung der Inhalte und Angaben.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="bottomNote" data-i18n="bottom_note">
-                Egal ob Fristen, Forderungen oder unklare Formulierungen – wir erklären verständlich, worum es in dem Schreiben geht.
-              </div>
-            </div>
-          </div>
-
-          <div style="height:18px"></div>
-
-          <div class="glassCard">
-            <div class="pad">
-              <div class="tipsTitle" data-i18n="tips_title">Was Sie schon selbst prüfen können</div>
-              <div class="tipsSub" data-i18n="tips_sub">
-                Diese Punkte helfen oft schon vorab, besser einzuschätzen, worum es im Schreiben geht:
-              </div>
-
-              <div class="tipsGrid">
-                <div class="tipItem">
-                  <h3 data-i18n="tip1_title">Fristen anschauen</h3>
-                  <p data-i18n="tip1_text">
-                    Prüfen Sie, ob im Schreiben ein Datum, eine Frist oder eine Reaktionszeit genannt wird. Diese Angaben sind oft besonders wichtig.
-                  </p>
-                </div>
-
-                <div class="tipItem">
-                  <h3 data-i18n="tip2_title">Absender prüfen</h3>
-                  <p data-i18n="tip2_text">
-                    Schauen Sie, von welcher Behörde, Firma oder Stelle das Schreiben kommt. Das hilft oft schon bei der ersten Einordnung.
-                  </p>
-                </div>
-
-                <div class="tipItem">
-                  <h3 data-i18n="tip3_title">Beträge markieren</h3>
-                  <p data-i18n="tip3_text">
-                    Bei Inkasso, Rechnungen oder Mahnungen sollten Sie genannte Beträge und Zahlungsfristen besonders beachten.
-                  </p>
-                </div>
-
-                <div class="tipItem">
-                  <h3 data-i18n="tip4_title">Ruhe bewahren</h3>
-                  <p data-i18n="tip4_text">
-                    Viele Briefe wirken kompliziert oder bedrohlich. Häufig hilft schon eine verständliche Erklärung, um den Inhalt besser einzuordnen.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div style="height:18px"></div>
-
-          <div class="glassCard">
-            <div class="pad">
-              <div class="faqTitle" data-i18n="faq_title">Häufige Fragen zu Briefen und Formularen</div>
-              <div class="faqSub" data-i18n="faq_sub">
-                Diese Fragen stellen sich viele Menschen vor dem Hochladen eines Dokuments:
-              </div>
-
-              <div class="faqGrid">
-                <div class="faqItem">
-                  <h3 data-i18n="faq1_q">Was bedeutet ein Inkasso Brief?</h3>
-                  <p data-i18n="faq1_a">
-                    Ein Inkasso Brief fordert meist Geld für eine offene Forderung. Oft sind solche Schreiben schwer verständlich. BriefHelden erklärt den Inhalt einfach und verständlich.
-                  </p>
-                </div>
-
-                <div class="faqItem">
-                  <h3 data-i18n="faq2_q">Was steht in einem Jobcenter Brief?</h3>
-                  <p data-i18n="faq2_a">
-                    Jobcenter Schreiben enthalten oft Fristen, Anforderungen oder Hinweise. Wir helfen dabei, den Brief in einfacher Sprache besser zu verstehen.
-                  </p>
-                </div>
-
-                <div class="faqItem">
-                  <h3 data-i18n="faq3_q">Kann ich auch einen Brief vom Amt hochladen?</h3>
-                  <p data-i18n="faq3_a">
-                    Ja. Viele Menschen laden Behördenbriefe, Schreiben vom Finanzamt oder andere offizielle Dokumente hoch, um den Inhalt verständlich erklärt zu bekommen.
-                  </p>
-                </div>
-
-                <div class="faqItem">
-                  <h3 data-i18n="faq4_q">Ist BriefHelden eine Rechtsberatung?</h3>
-                  <p data-i18n="faq4_a">
-                    Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Texterklärung des Inhalts Ihres Dokuments.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <div class="trustRow" aria-label="Vertrauensmerkmale">
+          <div class="trustChip">🔒 <span data-i18n="trust_chip_1">Datenschutz wichtig</span></div>
+          <div class="trustChip">⚖️ <span data-i18n="trust_chip_2">Keine Rechtsberatung</span></div>
+          <div class="trustChip">💳 <span data-i18n="trust_chip_3">Sichere Zahlung</span></div>
+          <div class="trustChip">🌍 <span data-i18n="trust_chip_4">DE / EN / TR / RU</span></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="glassCard">
+          <div class="pad">
+            <div class="headline" data-i18n="mid_title">Sie verstehen Ihren Brief nicht?</div>
+            <p class="lead" data-i18n="mid_text">
+              Viele Menschen verstehen komplizierte Briefe von Behörden, Inkasso oder Mahnungen nicht sofort. Besonders Schreiben vom Jobcenter, Finanzamt oder anderen Ämtern sind oft schwer verständlich. Mit BriefHelden können Sie Ihren Brief hochladen und erhalten eine einfache und verständliche Erklärung des Inhalts. So verstehen Sie besser, worum es in dem Schreiben geht und was die wichtigsten Punkte sind. Wir helfen Ihnen dabei, komplizierte Briefe verständlich zu erklären – einfach, diskret und schnell.
+            </p>
+
+            <div class="glassCard" style="border-radius:22px;">
+              <div class="pad" style="padding:18px 18px;">
+                <div class="howTitle" data-i18n="how_title">So funktioniert es:</div>
+
+                <div class="howRow" aria-label="Kurzablauf">
+                  <div class="mini">✅ <span data-i18n="how_a">Dokument hochladen</span></div>
+                  <div class="mini">✅ <span data-i18n="how_b">100% Vertraulichkeit</span></div>
+                </div>
+
+                <div class="pillRow" aria-label="Vorteile">
+                  <div class="pill">🔒 <span data-i18n="pill_pay">Sichere Zahlung (Stripe)</span></div>
+                  <div class="pill">⚡ <span data-i18n="pill_reply">Schnelle Rückmeldung</span></div>
+                  <div class="pill">🌍 <span data-i18n="pill_lang">Mehrsprachig</span></div>
+                </div>
+
+                <div class="flowBox" aria-label="Ablaufbeschreibung">
+                  <div class="flowLine"><span class="flowDot"></span> <span data-i18n="flow_1">Sie laden Ihren Brief oder Ihr Formular hoch.</span></div>
+                  <div class="flowLine"><span class="flowDot"></span> <span data-i18n="flow_2">Wir erklären Ihnen den Inhalt in einfacher, verständlicher Sprache.</span></div>
+                  <div class="flowLine"><span class="flowDot"></span> <span data-i18n="flow_3">Sie erhalten die Erklärung per E-Mail.</span></div>
+                </div>
+
+                <div class="disclaimer" data-i18n="disclaimer">
+                  Keine Rechtsberatung – nur verständliche Texterklärung.
+                </div>
+              </div>
+            </div>
+
+            <div style="height:18px"></div>
+
+            <div class="glassCard">
+              <div class="pad">
+                <div class="serviceTitle" data-i18n="service_title">Welcher Service passt zu Ihnen?</div>
+                <div class="serviceSub" data-i18n="service_sub">Wählen Sie je nach Situation die passende Option:</div>
+
+                <div class="serviceGrid">
+                  <div class="serviceCard">
+                    <div class="priceBadge" data-i18n="service1_price">6,90 € einmalig</div>
+                    <h3 data-i18n="service1_title">Kompletten Brief erklären lassen</h3>
+                    <p data-i18n="service1_text">
+                      Ideal, wenn Sie ein offizielles Schreiben, eine Mahnung, einen Inkasso-Brief oder ein Formular vollständig verständlich erklärt haben möchten.
+                    </p>
+                    <a class="serviceBtn primary" id="servicePrimaryBtn" href="#" rel="noopener">
+                      <span data-i18n="service1_btn">Jetzt Brief erklären lassen</span>
+                      <span aria-hidden="true">›</span>
+                    </a>
+                  </div>
+
+                  <div class="serviceCard">
+                    <div class="priceBadge" data-i18n="service2_price">1,49 € einmalig</div>
+                    <h3 data-i18n="service2_title">Kurze Frage stellen</h3>
+                    <p data-i18n="service2_text">
+                      Ideal, wenn Sie nur eine kurze Rückfrage zu einem Brief, Formular oder Schreiben haben und nicht das ganze Dokument hochladen möchten.
+                    </p>
+                    <a class="serviceBtn secondary" id="serviceQuestionBtn" href="#" rel="noopener">
+                      <span data-i18n="service2_btn">Jetzt kurze Frage stellen</span>
+                      <span aria-hidden="true">›</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="height:18px"></div>
+
+            <div class="glassCard">
+              <div class="pad">
+                <div class="trustTitle" data-i18n="trust_title">Warum BriefHelden Vertrauen schafft</div>
+                <div class="trustSub" data-i18n="trust_sub">Klare Kommunikation, diskreter Umgang und ein verständlicher Ablauf.</div>
+
+                <div class="trustGrid">
+                  <div class="trustCard">
+                    <h3 data-i18n="trust1_title">Klare Sprache</h3>
+                    <p data-i18n="trust1_text">Schwierige Inhalte werden einfach erklärt, ohne unnötige Fachsprache.</p>
+                  </div>
+                  <div class="trustCard">
+                    <h3 data-i18n="trust2_title">Diskret und vertraulich</h3>
+                    <p data-i18n="trust2_text">Ihre Angaben und Dokumente werden vertraulich behandelt.</p>
+                  </div>
+                  <div class="trustCard">
+                    <h3 data-i18n="trust3_title">Fester Preis</h3>
+                    <p data-i18n="trust3_text">Klare Kosten ohne Abo oder versteckte Zusatzgebühren.</p>
+                  </div>
+                  <div class="trustCard">
+                    <h3 data-i18n="trust4_title">Mehrsprachig</h3>
+                    <p data-i18n="trust4_text">Erklärungen sind in mehreren Sprachen möglich.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="height:18px"></div>
+
+            <div class="glassCard">
+              <div class="pad">
+                <div class="reviewTitle" data-i18n="review_title">Kundenfeedback</div>
+                <div class="reviewSub" data-i18n="review_sub">Beispiele, wie verständliche Hilfe wahrgenommen wird. Echte Kundenstimmen kannst du später einfach ersetzen.</div>
+
+                <div class="reviewGrid">
+                  <div class="reviewCard">
+                    <div class="reviewStars">★★★★★</div>
+                    <h3 data-i18n="review1_title">Sehr verständlich erklärt</h3>
+                    <p data-i18n="review1_text">
+                      Ich habe endlich verstanden, worum es in meinem Schreiben geht. Die Erklärung war klar und einfach.
+                    </p>
+                    <div class="reviewMeta" data-i18n="review_meta">– Beispiel-Kundenfeedback</div>
+                  </div>
+
+                  <div class="reviewCard">
+                    <div class="reviewStars">★★★★★</div>
+                    <h3 data-i18n="review2_title">Hat mir sehr geholfen</h3>
+                    <p data-i18n="review2_text">
+                      Ich war erst unsicher, aber die Antwort war schnell und gut verständlich. Genau das habe ich gebraucht.
+                    </p>
+                    <div class="reviewMeta" data-i18n="review_meta">– Beispiel-Kundenfeedback</div>
+                  </div>
+
+                  <div class="reviewCard">
+                    <div class="reviewStars">★★★★★</div>
+                    <h3 data-i18n="review3_title">Einfach und seriös</h3>
+                    <p data-i18n="review3_text">
+                      Gute Hilfe bei einem komplizierten Brief. Ohne Fachsprache und ohne dass es unnötig kompliziert gemacht wurde.
+                    </p>
+                    <div class="reviewMeta" data-i18n="review_meta">– Beispiel-Kundenfeedback</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="height:18px"></div>
+
+            <div class="glassCard">
+              <div class="pad">
+                <div class="seoTitle" data-i18n="seo_title">Häufig gesuchte Briefe</div>
+                <div class="seoSub" data-i18n="seo_sub">Hier finden Sie direkte Hilfeseiten zu oft gesuchten Schreiben.</div>
+
+                <div class="seoGrid">
+                  <a class="seoCard" href="alle-briefe-verstehen.html">
+                    <h3 data-i18n="seo0_title">Alle Briefe verstehen</h3>
+                    <p data-i18n="seo0_text">Übersicht über wichtige Briefe, Bescheide und Schreiben.</p>
+                  </a>
+
+                  <a class="seoCard" href="inkasso-brief-verstehen.html">
+                    <h3 data-i18n="seo1_title">Inkasso Brief verstehen</h3>
+                    <p data-i18n="seo1_text">Ein Inkasso Schreiben einfach und verständlich erklärt.</p>
+                  </a>
+
+                  <a class="seoCard" href="inkasso-forderung-pruefen.html">
+                    <h3 data-i18n="seo2_title">Inkasso Forderung prüfen</h3>
+                    <p data-i18n="seo2_text">Inkasso Forderung besser verstehen und einordnen.</p>
+                  </a>
+
+                  <a class="seoCard" href="mahnung-verstehen.html">
+                    <h3 data-i18n="seo3_title">Mahnung verstehen</h3>
+                    <p data-i18n="seo3_text">Mahnungen, Fristen und Forderungen besser verstehen.</p>
+                  </a>
+
+                  <a class="seoCard" href="mahnbescheid-verstehen.html">
+                    <h3 data-i18n="seo4_title">Mahnbescheid verstehen</h3>
+                    <p data-i18n="seo4_text">Gerichtlichen Mahnbescheid einfach und verständlich erklärt.</p>
+                  </a>
+
+                  <a class="seoCard" href="vollstreckungsbescheid-verstehen.html">
+                    <h3 data-i18n="seo5_title">Vollstreckungsbescheid verstehen</h3>
+                    <p data-i18n="seo5_text">Was ein Vollstreckungsbescheid bedeutet – einfach erklärt.</p>
+                  </a>
+
+                  <a class="seoCard" href="pfaendungsbescheid-verstehen.html">
+                    <h3 data-i18n="seo6_title">Pfändungsbescheid verstehen</h3>
+                    <p data-i18n="seo6_text">Pfändung, Konto und Forderungen verständlich erklärt.</p>
+                  </a>
+
+                  <a class="seoCard" href="zahlungsaufforderung-verstehen.html">
+                    <h3 data-i18n="seo7_title">Zahlungsaufforderung verstehen</h3>
+                    <p data-i18n="seo7_text">Schreiben mit Zahlungsaufforderung einfach erklärt.</p>
+                  </a>
+
+                  <a class="seoCard" href="zahlungserinnerung-verstehen.html">
+                    <h3 data-i18n="seo8_title">Zahlungserinnerung verstehen</h3>
+                    <p data-i18n="seo8_text">Zahlungserinnerung einfach und verständlich erklärt.</p>
+                  </a>
+
+                  <a class="seoCard" href="zahlungsfrist-verstehen.html">
+                    <h3 data-i18n="seo9_title">Zahlungsfrist verstehen</h3>
+                    <p data-i18n="seo9_text">Fristen und Zahlungsziele verständlich erklärt.</p>
+                  </a>
+
+                  <a class="seoCard" href="rechnung-verstehen.html">
+                    <h3 data-i18n="seo10_title">Rechnung verstehen</h3>
+                    <p data-i18n="seo10_text">Rechnungen und Beträge einfach erklärt.</p>
+                  </a>
+
+                  <a class="seoCard" href="jobcenter-brief-verstehen.html">
+                    <h3 data-i18n="seo11_title">Jobcenter Brief verstehen</h3>
+                    <p data-i18n="seo11_text">Schreiben vom Jobcenter in einfacher Sprache erklärt.</p>
+                  </a>
+
+                  <a class="seoCard" href="finanzamt-brief-verstehen.html">
+                    <h3 data-i18n="seo12_title">Finanzamt Brief verstehen</h3>
+                    <p data-i18n="seo12_text">Briefe vom Finanzamt einfach erklärt.</p>
+                  </a>
+
+                  <a class="seoCard" href="behoerdenbrief-verstehen.html">
+                    <h3 data-i18n="seo13_title">Behördenbrief verstehen</h3>
+                    <p data-i18n="seo13_text">Behördliche Schreiben einfach und verständlich erklärt.</p>
+                  </a>
+
+                  <a class="seoCard" href="kuendigung-verstehen.html">
+                    <h3 data-i18n="seo14_title">Kündigung verstehen</h3>
+                    <p data-i18n="seo14_text">Kündigungsschreiben verständlich erklärt.</p>
+                  </a>
+
+                  <a class="seoCard" href="formular-verstehen.html">
+                    <h3 data-i18n="seo15_title">Formular verstehen</h3>
+                    <p data-i18n="seo15_text">Formulare und Angaben einfach erklärt.</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div style="height:18px"></div>
+
+            <div class="glassCard">
+              <div class="pad">
+                <div class="typesTitle" data-i18n="types_title">Für welche Briefe und Dokumente eignet sich BriefHelden?</div>
+                <div class="typesSub" data-i18n="types_sub">Wir helfen bei komplizierten Schreiben wie:</div>
+
+                <div class="grid">
+                  <div class="typeCard">
+                    <div class="icon">🏛️</div>
+                    <div>
+                      <h3 data-i18n="t1_title">Briefe vom Amt</h3>
+                      <p data-i18n="t1_text">(Jobcenter, Finanzamt, Behörden usw.)</p>
+                    </div>
+                  </div>
+
+                  <div class="typeCard">
+                    <div class="icon">📩</div>
+                    <div>
+                      <h3 data-i18n="t2_title">Inkasso</h3>
+                      <ul>
+                        <li data-i18n="t2_li1">Forderungen</li>
+                        <li data-i18n="t2_li2">Zahlungsaufforderungen</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="typeCard">
+                    <div class="icon">⚠️</div>
+                    <div>
+                      <h3 data-i18n="t3_title">Kündigungen</h3>
+                      <ul>
+                        <li data-i18n="t3_li1">Mietwohnung</li>
+                        <li data-i18n="t3_li2">Arbeitsvertrag, Handy usw.</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="typeCard">
+                    <div class="icon">⏳</div>
+                    <div>
+                      <h3 data-i18n="t4_title">Mahnungen</h3>
+                      <ul>
+                        <li data-i18n="t4_li1">Erklärung von Fristen und Angaben</li>
+                        <li data-i18n="t4_li2">Verständliche Einordnung des Inhalts</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="typeCard">
+                    <div class="icon">📄</div>
+                    <div>
+                      <h3 data-i18n="t5_title">Verträge</h3>
+                      <p data-i18n="t5_text">Klauseln, Pflichten und Laufzeiten – verständlich erklärt.</p>
+                    </div>
+                  </div>
+
+                  <div class="typeCard">
+                    <div class="icon">🧾</div>
+                    <div>
+                      <h3 data-i18n="t6_title">Formulare</h3>
+                      <p data-i18n="t6_text">Verständliche Erklärung der Inhalte und Angaben.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="bottomNote" data-i18n="bottom_note">
+                  Egal ob Fristen, Forderungen oder unklare Formulierungen – wir erklären verständlich, worum es in dem Schreiben geht.
+                </div>
+              </div>
+            </div>
+
+            <div style="height:18px"></div>
+
+            <div class="glassCard">
+              <div class="pad">
+                <div class="tipsTitle" data-i18n="tips_title">Was Sie schon selbst prüfen können</div>
+                <div class="tipsSub" data-i18n="tips_sub">
+                  Diese Punkte helfen oft schon vorab, besser einzuschätzen, worum es im Schreiben geht:
+                </div>
+
+                <div class="tipsGrid">
+                  <div class="tipItem">
+                    <h3 data-i18n="tip1_title">Fristen anschauen</h3>
+                    <p data-i18n="tip1_text">
+                      Prüfen Sie, ob im Schreiben ein Datum, eine Frist oder eine Reaktionszeit genannt wird. Diese Angaben sind oft besonders wichtig.
+                    </p>
+                  </div>
+
+                  <div class="tipItem">
+                    <h3 data-i18n="tip2_title">Absender prüfen</h3>
+                    <p data-i18n="tip2_text">
+                      Schauen Sie, von welcher Behörde, Firma oder Stelle das Schreiben kommt. Das hilft oft schon bei der ersten Einordnung.
+                    </p>
+                  </div>
+
+                  <div class="tipItem">
+                    <h3 data-i18n="tip3_title">Beträge markieren</h3>
+                    <p data-i18n="tip3_text">
+                      Bei Inkasso, Rechnungen oder Mahnungen sollten Sie genannte Beträge und Zahlungsfristen besonders beachten.
+                    </p>
+                  </div>
+
+                  <div class="tipItem">
+                    <h3 data-i18n="tip4_title">Ruhe bewahren</h3>
+                    <p data-i18n="tip4_text">
+                      Viele Briefe wirken kompliziert oder bedrohlich. Häufig hilft schon eine verständliche Erklärung, um den Inhalt besser einzuordnen.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div style="height:18px"></div>
+
+            <div class="glassCard">
+              <div class="pad">
+                <div class="faqTitle" data-i18n="faq_title">Häufige Fragen zu Briefen und Formularen</div>
+                <div class="faqSub" data-i18n="faq_sub">
+                  Diese Fragen stellen sich viele Menschen vor dem Hochladen eines Dokuments:
+                </div>
+
+                <div class="faqGrid">
+                  <div class="faqItem">
+                    <h3 data-i18n="faq1_q">Was bedeutet ein Inkasso Brief?</h3>
+                    <p data-i18n="faq1_a">
+                      Ein Inkasso Brief fordert meist Geld für eine offene Forderung. Oft sind solche Schreiben schwer verständlich. BriefHelden erklärt den Inhalt einfach und verständlich.
+                    </p>
+                  </div>
+
+                  <div class="faqItem">
+                    <h3 data-i18n="faq2_q">Was steht in einem Jobcenter Brief?</h3>
+                    <p data-i18n="faq2_a">
+                      Jobcenter Schreiben enthalten oft Fristen, Anforderungen oder Hinweise. Wir helfen dabei, den Brief in einfacher Sprache besser zu verstehen.
+                    </p>
+                  </div>
+
+                  <div class="faqItem">
+                    <h3 data-i18n="faq3_q">Kann ich auch einen Brief vom Amt hochladen?</h3>
+                    <p data-i18n="faq3_a">
+                      Ja. Viele Menschen laden Behördenbriefe, Schreiben vom Finanzamt oder andere offizielle Dokumente hoch, um den Inhalt verständlich erklärt zu bekommen.
+                    </p>
+                  </div>
+
+                  <div class="faqItem">
+                    <h3 data-i18n="faq4_q">Ist BriefHelden eine Rechtsberatung?</h3>
+                    <p data-i18n="faq4_a">
+                      Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Texterklärung des Inhalts Ihres Dokuments.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <div class="footWrap">
@@ -1019,6 +1240,7 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_imprint: "Impressum",
         nav_terms: "AGB",
         nav_privacy: "Datenschutz",
+        menu_btn: "Menü",
 
         hero_title: "Komplizierte Briefe einfach verstehen",
         hero_sub: "Verständliche Texterklärung für offizielle Briefe und Formulare – in Ihrer Sprache.",
@@ -1028,6 +1250,10 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         meta_once: "Einmalig 6,90 €",
         meta_fast: "Antwort meist in kurzer Zeit",
         meta_private: "100% vertraulich",
+        trust_chip_1: "Datenschutz wichtig",
+        trust_chip_2: "Keine Rechtsberatung",
+        trust_chip_3: "Sichere Zahlung",
+        trust_chip_4: "DE / EN / TR / RU",
 
         visitor_loading: "👀 Besucher werden geladen ...",
         visitor_text: "👀 Bereits {count} Besucher bei BriefHelden",
@@ -1057,15 +1283,26 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         service2_text: "Ideal, wenn Sie nur eine kurze Rückfrage zu einem Brief, Formular oder Schreiben haben und nicht das ganze Dokument hochladen möchten.",
         service2_btn: "Jetzt kurze Frage stellen",
 
-        review_title: "Das sagen Kunden",
-        review_sub: "Vertrauen durch verständliche Hilfe und schnelle Rückmeldung.",
+        trust_title: "Warum BriefHelden Vertrauen schafft",
+        trust_sub: "Klare Kommunikation, diskreter Umgang und ein verständlicher Ablauf.",
+        trust1_title: "Klare Sprache",
+        trust1_text: "Schwierige Inhalte werden einfach erklärt, ohne unnötige Fachsprache.",
+        trust2_title: "Diskret und vertraulich",
+        trust2_text: "Ihre Angaben und Dokumente werden vertraulich behandelt.",
+        trust3_title: "Fester Preis",
+        trust3_text: "Klare Kosten ohne Abo oder versteckte Zusatzgebühren.",
+        trust4_title: "Mehrsprachig",
+        trust4_text: "Erklärungen sind in mehreren Sprachen möglich.",
+
+        review_title: "Kundenfeedback",
+        review_sub: "Beispiele, wie verständliche Hilfe wahrgenommen wird. Echte Kundenstimmen kannst du später einfach ersetzen.",
         review1_title: "Sehr verständlich erklärt",
         review1_text: "Ich habe endlich verstanden, worum es in meinem Schreiben geht. Die Erklärung war klar und einfach.",
         review2_title: "Hat mir sehr geholfen",
         review2_text: "Ich war erst unsicher, aber die Antwort war schnell und gut verständlich. Genau das habe ich gebraucht.",
         review3_title: "Einfach und seriös",
         review3_text: "Gute Hilfe bei einem komplizierten Brief. Ohne Fachsprache und ohne dass es unnötig kompliziert gemacht wurde.",
-        review_meta: "– Verifizierte Rückmeldung",
+        review_meta: "– Beispiel-Kundenfeedback",
 
         seo_title: "Häufig gesuchte Briefe",
         seo_sub: "Hier finden Sie direkte Hilfeseiten zu oft gesuchten Schreiben.",
@@ -1157,6 +1394,7 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_imprint: "Imprint",
         nav_terms: "Terms",
         nav_privacy: "Privacy",
+        menu_btn: "Menu",
 
         hero_title: "Understand complicated letters easily",
         hero_sub: "Plain-language text explanation for official letters and forms — in your language.",
@@ -1166,6 +1404,10 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         meta_once: "One-time €6.90",
         meta_fast: "Reply usually within a short time",
         meta_private: "100% confidential",
+        trust_chip_1: "Privacy matters",
+        trust_chip_2: "No legal advice",
+        trust_chip_3: "Secure payment",
+        trust_chip_4: "DE / EN / TR / RU",
 
         visitor_loading: "👀 Loading visitors ...",
         visitor_text: "👀 Already {count} visitors at BriefHelden",
@@ -1195,15 +1437,26 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         service2_text: "Ideal if you only have one short question about a letter, form or document and do not want to upload the full document.",
         service2_btn: "Ask a short question now",
 
-        review_title: "What customers say",
-        review_sub: "Build trust through clear help and fast responses.",
+        trust_title: "Why BriefHelden builds trust",
+        trust_sub: "Clear communication, discreet handling and an easy-to-understand process.",
+        trust1_title: "Clear language",
+        trust1_text: "Difficult content is explained simply, without unnecessary jargon.",
+        trust2_title: "Discreet and confidential",
+        trust2_text: "Your information and documents are handled confidentially.",
+        trust3_title: "Fixed price",
+        trust3_text: "Clear pricing without subscriptions or hidden extra fees.",
+        trust4_title: "Multilingual",
+        trust4_text: "Explanations are available in multiple languages.",
+
+        review_title: "Customer feedback",
+        review_sub: "Examples of how clear help may be perceived. You can later replace these with real customer feedback.",
         review1_title: "Very clearly explained",
         review1_text: "I finally understood what my document was about. The explanation was clear and simple.",
         review2_title: "Helped me a lot",
         review2_text: "I was unsure at first, but the reply was fast and easy to understand. Exactly what I needed.",
         review3_title: "Simple and professional",
         review3_text: "Good help with a complicated letter. No legal jargon and no unnecessary complexity.",
-        review_meta: "– Verified feedback",
+        review_meta: "– Sample customer feedback",
 
         seo_title: "Frequently searched letters",
         seo_sub: "Here you can find direct help pages for common types of letters.",
@@ -1295,6 +1548,7 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_imprint: "Künye",
         nav_terms: "Şartlar",
         nav_privacy: "Gizlilik",
+        menu_btn: "Menü",
 
         hero_title: "Karmaşık mektupları kolayca anlayın",
         hero_sub: "Resmi mektuplar ve formlar için anlaşılır metin açıklaması — sizin dilinizde.",
@@ -1304,6 +1558,10 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         meta_once: "Tek seferlik 6,90 €",
         meta_fast: "Genelde kısa sürede yanıt",
         meta_private: "%100 gizli",
+        trust_chip_1: "Gizlilik önemli",
+        trust_chip_2: "Hukuki danışmanlık yok",
+        trust_chip_3: "Güvenli ödeme",
+        trust_chip_4: "DE / EN / TR / RU",
 
         visitor_loading: "👀 Ziyaretçiler yükleniyor ...",
         visitor_text: "👀 BriefHelden'de şimdiden {count} ziyaretçi",
@@ -1333,15 +1591,26 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         service2_text: "Sadece kısa bir sorunuz varsa ve tüm belgeyi yüklemek istemiyorsanız bu seçenek sizin için uygundur.",
         service2_btn: "Şimdi kısa soru sor",
 
-        review_title: "Müşteriler ne diyor",
-        review_sub: "Açık yardım ve hızlı dönüşlerle güven oluşturun.",
+        trust_title: "BriefHelden neden güven verir",
+        trust_sub: "Açık iletişim, gizli kullanım ve anlaşılır bir süreç.",
+        trust1_title: "Açık dil",
+        trust1_text: "Zor içerikler gereksiz ağır dil olmadan basitçe açıklanır.",
+        trust2_title: "Gizli ve güvenli",
+        trust2_text: "Bilgileriniz ve belgeleriniz gizli şekilde ele alınır.",
+        trust3_title: "Sabit fiyat",
+        trust3_text: "Abonelik veya gizli ek ücret olmadan açık fiyatlandırma.",
+        trust4_title: "Çok dilli",
+        trust4_text: "Açıklamalar birden fazla dilde sunulabilir.",
+
+        review_title: "Müşteri geri bildirimi",
+        review_sub: "Bunlar örnek geri bildirimlerdir. Daha sonra gerçek müşteri yorumlarıyla değiştirebilirsiniz.",
         review1_title: "Çok anlaşılır açıklandı",
         review1_text: "Belgemde ne yazdığını sonunda anladım. Açıklama açık ve basitti.",
         review2_title: "Bana çok yardımcı oldu",
         review2_text: "Başta emin değildim ama cevap hızlı ve anlaşılırdı. Tam ihtiyacım olan buydu.",
         review3_title: "Basit ve güven verici",
         review3_text: "Karmaşık bir mektup için iyi bir yardımdı. Gereksiz karmaşıklık ve ağır dil yoktu.",
-        review_meta: "– Doğrulanmış geri bildirim",
+        review_meta: "– Örnek müşteri geri bildirimi",
 
         seo_title: "Sık aranan mektuplar",
         seo_sub: "Burada sık aranan yazılar için doğrudan yardım sayfaları bulabilirsiniz.",
@@ -1433,6 +1702,7 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_imprint: "Выходные данные",
         nav_terms: "Условия",
         nav_privacy: "Конфиденциальность",
+        menu_btn: "Меню",
 
         hero_title: "Легко понять сложные письма",
         hero_sub: "Понятное текстовое объяснение официальных писем и форм — на вашем языке.",
@@ -1442,6 +1712,10 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         meta_once: "Разово 6,90 €",
         meta_fast: "Обычно быстрый ответ",
         meta_private: "100% конфиденциально",
+        trust_chip_1: "Конфиденциальность важна",
+        trust_chip_2: "Без юридической консультации",
+        trust_chip_3: "Безопасная оплата",
+        trust_chip_4: "DE / EN / TR / RU",
 
         visitor_loading: "👀 Загрузка посетителей ...",
         visitor_text: "👀 Уже {count} посетителей у BriefHelden",
@@ -1471,15 +1745,26 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         service2_text: "Идеально, если у вас только один короткий вопрос по письму, форме или документу и вы не хотите загружать весь документ.",
         service2_btn: "Задать короткий вопрос",
 
-        review_title: "Что говорят клиенты",
-        review_sub: "Доверие благодаря понятной помощи и быстрому ответу.",
+        trust_title: "Почему BriefHelden вызывает доверие",
+        trust_sub: "Понятная коммуникация, конфиденциальность и простой процесс.",
+        trust1_title: "Понятный язык",
+        trust1_text: "Сложное содержание объясняется просто, без лишнего профессионального языка.",
+        trust2_title: "Конфиденциально и discreetно",
+        trust2_text: "Ваши данные и документы обрабатываются конфиденциально.",
+        trust3_title: "Фиксированная цена",
+        trust3_text: "Понятная стоимость без подписки и скрытых доплат.",
+        trust4_title: "Несколько языков",
+        trust4_text: "Объяснения доступны на нескольких языках.",
+
+        review_title: "Отзывы клиентов",
+        review_sub: "Это примеры отзывов. Позже вы можете заменить их на реальные отзывы клиентов.",
         review1_title: "Очень понятно объяснено",
         review1_text: "Я наконец понял, о чём идёт речь в моём письме. Объяснение было простым и понятным.",
         review2_title: "Очень помогло",
         review2_text: "Сначала я сомневался, но ответ пришёл быстро и был понятным. Именно то, что мне было нужно.",
         review3_title: "Просто и серьёзно",
         review3_text: "Хорошая помощь с трудным письмом. Без сложного языка и лишней путаницы.",
-        review_meta: "– Проверенный отзыв",
+        review_meta: "– Пример отзыва клиента",
 
         seo_title: "Часто ищут",
         seo_sub: "Здесь вы найдёте прямые страницы помощи по часто встречающимся письмам.",
@@ -1639,6 +1924,17 @@ visitorEl.textContent = dict.visitor_loading || i18n.de.visitor_loading;
       applyLang(lang);
       loadVisitorCount(lang);
     });
+
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    if(menuBtn && mobileMenu){
+      menuBtn.addEventListener("click", () => {
+        const isOpen = mobileMenu.style.display === "block";
+        mobileMenu.style.display = isOpen ? "none" : "block";
+        menuBtn.setAttribute("aria-expanded", String(!isOpen));
+      });
+    }
   </script>
 </body>
 </html>
