@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Gasrechnung verstehen – einfach erklärt | BriefHelden</title>
   <meta
     name="description"
     content="Gasrechnung einfach verstehen: BriefHelden erklärt Verbrauch, Abschlag, Kosten, Zählerstand und worauf Sie achten sollten – verständlich, klar und ohne komplizierte Fachsprache."
   />
   <meta name="robots" content="index, follow" />
-<link rel="canonical" href="https://www.briefhelden-service.de/gasrechnung-verstehen.html" />
+  <link rel="canonical" href="https://www.briefhelden-service.de/gasrechnung-verstehen.html" />
 
   <meta property="og:title" content="Gasrechnung verstehen – einfach erklärt | BriefHelden" />
   <meta
@@ -17,9 +18,10 @@
     content="Gasrechnung einfach erklärt. Verstehen Sie Verbrauch, Abschlag, Kosten und die wichtigsten Punkte schnell und verständlich."
   />
   <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.briefhelden-service.de/gasrechnung-verstehen.html" />
+  <meta property="og:url" content="https://www.briefhelden-service.de/gasrechnung-verstehen.html" />
+  <meta property="og:site_name" content="BriefHelden" />
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -171,7 +173,7 @@
       padding:68px 18px 40px;
       background:
         linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.58)),
-url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=2200&q=60");
+        url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=2200&q=60");
       background-size:cover;
       background-position:center;
     }
@@ -410,25 +412,40 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       padding:0 18px 30px;
     }
 
+    .moreLinksCard{
+      background:linear-gradient(180deg, rgba(255,255,255,.34), rgba(255,255,255,.18));
+      border:1px solid rgba(255,255,255,.50);
+      border-radius:24px;
+      box-shadow:0 18px 40px rgba(0,0,0,.12);
+      padding:22px;
+    }
+
     .moreLinks h2{
       margin:0 0 14px;
       font-size:26px;
       font-weight:950;
       color:#0b1220;
+      text-align:center;
     }
 
-    .moreLinks ul{
-      margin:0;
-      padding-left:20px;
+    .moreLinksGrid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
     }
 
-    .moreLinks li{
-      margin:8px 0;
-      font-weight:700;
+    .moreLinksItem{
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.55);
+      background:rgba(255,255,255,.22);
+      padding:14px 16px;
+      font-weight:800;
       color:rgba(11,18,32,.82);
+      display:block;
     }
 
-    .moreLinks a:hover{
+    .moreLinksItem:hover{
+      background:rgba(255,255,255,.32);
       text-decoration:underline;
     }
 
@@ -436,7 +453,8 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       nav.links{display:none}
       .grid2,
       .faqGrid,
-      .serviceMini{grid-template-columns:1fr}
+      .serviceMini,
+      .moreLinksGrid{grid-template-columns:1fr}
       .cta{min-width:92vw}
       .miniBtn{min-width:100%}
     }
@@ -641,6 +659,20 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
     </div>
   </section>
 
+  <section class="moreLinks">
+    <div class="moreLinksCard">
+      <h2 data-i18n="more_title">Weitere häufige Briefe verstehen</h2>
+      <div class="moreLinksGrid">
+        <a class="moreLinksItem" href="/stromrechnung-verstehen.html" data-i18n="more_1">Stromrechnung verstehen</a>
+        <a class="moreLinksItem" href="/nebenkostenabrechnung-verstehen.html" data-i18n="more_2">Nebenkostenabrechnung verstehen</a>
+        <a class="moreLinksItem" href="/krankenkasse-brief-verstehen.html" data-i18n="more_3">Krankenkasse Brief verstehen</a>
+        <a class="moreLinksItem" href="/versicherung-brief-verstehen.html" data-i18n="more_4">Versicherung Brief verstehen</a>
+        <a class="moreLinksItem" href="/bank-brief-verstehen.html" data-i18n="more_5">Bank Brief verstehen</a>
+        <a class="moreLinksItem" href="/bussgeldbescheid-verstehen.html" data-i18n="more_6">Bußgeldbescheid verstehen</a>
+      </div>
+    </div>
+  </section>
+
   <footer>
     <div class="footWrap">
       <div>© 2026 BriefHelden – Alle Rechte vorbehalten</div>
@@ -655,31 +687,19 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
     </div>
   </footer>
 
-  <div class="moreLinks">
-    <h2>Weitere häufige Briefe verstehen</h2>
-    <ul>
-      <li><a href="/stromrechnung-verstehen.html">Stromrechnung verstehen</a></li>
-      <li><a href="/nebenkostenabrechnung-verstehen.html">Nebenkostenabrechnung verstehen</a></li>
-      <li><a href="/krankenkasse-brief-verstehen.html">Krankenkasse Brief verstehen</a></li>
-      <li><a href="/versicherung-brief-verstehen.html">Versicherung Brief verstehen</a></li>
-      <li><a href="/bank-brief-verstehen.html">Bank Brief verstehen</a></li>
-      <li><a href="/bussgeldbescheid-verstehen.html">Bußgeldbescheid verstehen</a></li>
-    </ul>
-  </div>
-
   <script>
     const STRIPE_LINKS = {
-de: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
-en: "https://buy.stripe.com/fZubJ0dpXbMAbfpcIZ4sE01",
-tr: "https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
-ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
+      de: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
+      en: "https://buy.stripe.com/fZubJ0dpXbMAbfpcIZ4sE01",
+      tr: "https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
+      ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
     };
 
     const QUESTION_LINKS = {
-de: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
-en: "https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
-tr: "https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
-ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
+      de: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
+      en: "https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
+      tr: "https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
+      ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
     };
 
     const i18n = {
@@ -742,6 +762,14 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         tip3_text: "Achten Sie darauf, ob am Ende eine Nachzahlung verlangt wird oder ob ein Guthaben für Sie ausgewiesen ist.",
         tip4_title: "Inhalt verständlich machen",
         tip4_text: "Wenn das Schreiben schwer verständlich ist, hilft eine einfache Erklärung oft sofort weiter.",
+
+        more_title: "Weitere häufige Briefe verstehen",
+        more_1: "Stromrechnung verstehen",
+        more_2: "Nebenkostenabrechnung verstehen",
+        more_3: "Krankenkasse Brief verstehen",
+        more_4: "Versicherung Brief verstehen",
+        more_5: "Bank Brief verstehen",
+        more_6: "Bußgeldbescheid verstehen",
 
         foot_home: "Startseite",
         foot_question: "Frage stellen",
@@ -811,6 +839,14 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         tip4_title: "Make the content understandable",
         tip4_text: "If the document is difficult to understand, a simple explanation often helps immediately.",
 
+        more_title: "More common letters explained",
+        more_1: "Understand electricity bill",
+        more_2: "Understand utility cost statement",
+        more_3: "Understand health insurance letter",
+        more_4: "Understand insurance letter",
+        more_5: "Understand bank letter",
+        more_6: "Understand fine notice",
+
         foot_home: "Home",
         foot_question: "Ask a question",
         foot_refund: "Withdrawal",
@@ -878,6 +914,14 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         tip3_text: "Sonunda sizden ek ödeme istenip istenmediğine veya sizin için alacak gösterilip gösterilmediğine dikkat edin.",
         tip4_title: "İçeriği anlaşılır hale getirin",
         tip4_text: "Yazıyı anlamak zorsa, basit bir açıklama çoğu zaman hemen yardımcı olur.",
+
+        more_title: "Diğer sık görülen mektupları anlayın",
+        more_1: "Elektrik faturasını anla",
+        more_2: "Yan gider hesaplamasını anla",
+        more_3: "Sağlık sigortası mektubunu anla",
+        more_4: "Sigorta mektubunu anla",
+        more_5: "Banka mektubunu anla",
+        more_6: "Ceza kararını anla",
 
         foot_home: "Ana Sayfa",
         foot_question: "Soru sor",
@@ -947,6 +991,14 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         tip4_title: "Сделайте содержание понятным",
         tip4_text: "Если документ трудно понять, простое объяснение часто сразу помогает.",
 
+        more_title: "Другие частые письма",
+        more_1: "Понять счёт за электричество",
+        more_2: "Понять расчёт коммунальных расходов",
+        more_3: "Понять письмо от медстраховки",
+        more_4: "Понять письмо от страховой",
+        more_5: "Понять письмо из банка",
+        more_6: "Понять постановление о штрафе",
+
         foot_home: "Главная",
         foot_question: "Задать вопрос",
         foot_refund: "Отказ",
@@ -957,8 +1009,8 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
     };
 
     function updateLinks(lang){
-const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
-const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
+      const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
+      const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
 
       const stripeBtn = document.getElementById("stripeBtn");
       const servicePrimaryBtn = document.getElementById("servicePrimaryBtn");
@@ -972,7 +1024,7 @@ const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
     }
 
     function applyLang(lang){
-const dict = i18n[lang] || i18n.de;
+      const dict = i18n[lang] || i18n.de;
       document.documentElement.lang = lang;
 
       document.querySelectorAll("[data-i18n]").forEach((el) => {
