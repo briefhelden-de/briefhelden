@@ -9,7 +9,7 @@
     content="Finanzamt Brief einfach verstehen: BriefHelden erklärt Steuerbescheid, Fristen, Nachzahlung, Rückfragen und wichtige Angaben klar, einfach und ohne komplizierte Fachsprache."
   />
   <meta name="robots" content="index, follow" />
-<link rel="canonical" href="https://www.briefhelden-service.de/finanzamt-brief-verstehen.html" />
+  <link rel="canonical" href="https://www.briefhelden-service.de/finanzamt-brief-verstehen.html" />
 
   <meta property="og:title" content="Finanzamt Brief verstehen – einfach erklärt | BriefHelden" />
   <meta
@@ -17,9 +17,10 @@
     content="Finanzamt Brief einfach erklärt. Verstehen Sie Steuerbescheid, Fristen, Beträge und wichtige Angaben schnell und verständlich."
   />
   <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.briefhelden-service.de/finanzamt-brief-verstehen.html" />
+  <meta property="og:url" content="https://www.briefhelden-service.de/finanzamt-brief-verstehen.html" />
+  <meta property="og:site_name" content="BriefHelden" />
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -171,7 +172,7 @@
       padding:68px 18px 40px;
       background:
         linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.58)),
-url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=2200&q=60");
+        url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=2200&q=60");
       background-size:cover;
       background-position:center;
     }
@@ -404,6 +405,34 @@ url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=c
     .footLinks a{color:rgba(255,255,255,.80)}
     .footLinks a:hover{color:#fff}
 
+    .moreLinks{
+      max-width:var(--max);
+      margin:28px auto 0;
+      padding:0 18px 30px;
+    }
+
+    .moreLinks h2{
+      margin:0 0 14px;
+      font-size:26px;
+      font-weight:950;
+      color:#0b1220;
+    }
+
+    .moreLinks ul{
+      margin:0;
+      padding-left:20px;
+    }
+
+    .moreLinks li{
+      margin:8px 0;
+      font-weight:700;
+      color:rgba(11,18,32,.82);
+    }
+
+    .moreLinks a:hover{
+      text-decoration:underline;
+    }
+
     @media (max-width:900px){
       nav.links{display:none}
       .grid2,
@@ -613,6 +642,18 @@ url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=c
     </div>
   </section>
 
+  <div class="moreLinks">
+    <h2>Weitere häufige Briefe verstehen</h2>
+    <ul>
+      <li><a href="/inkasso-brief-verstehen.html">Inkasso Brief verstehen</a></li>
+      <li><a href="/mahnbescheid-verstehen.html">Mahnbescheid verstehen</a></li>
+      <li><a href="/jobcenter-brief-verstehen.html">Jobcenter Brief verstehen</a></li>
+      <li><a href="/pfaendungsbescheid-verstehen.html">Pfändungsbescheid verstehen</a></li>
+      <li><a href="/vollstreckungsbescheid-verstehen.html">Vollstreckungsbescheid verstehen</a></li>
+      <li><a href="/finanzamt-brief-verstehen.html">Finanzamt Brief verstehen</a></li>
+    </ul>
+  </div>
+
   <footer>
     <div class="footWrap">
       <div>© 2026 BriefHelden – Alle Rechte vorbehalten</div>
@@ -629,17 +670,17 @@ url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=c
 
   <script>
     const STRIPE_LINKS = {
-de: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
-en: "https://buy.stripe.com/fZubJ0dpXbMAbfpcIZ4sE01",
-tr: "https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
-ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
+      de: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
+      en: "https://buy.stripe.com/fZubJ0dpXbMAbfpcIZ4sE01",
+      tr: "https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
+      ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
     };
 
     const QUESTION_LINKS = {
-de: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
-en: "https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
-tr: "https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
-ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
+      de: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
+      en: "https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
+      tr: "https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
+      ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
     };
 
     const i18n = {
@@ -917,8 +958,8 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
     };
 
     function updateLinks(lang){
-const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
-const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
+      const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
+      const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
 
       const stripeBtn = document.getElementById("stripeBtn");
       const servicePrimaryBtn = document.getElementById("servicePrimaryBtn");
@@ -932,7 +973,7 @@ const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
     }
 
     function applyLang(lang){
-const dict = i18n[lang] || i18n.de;
+      const dict = i18n[lang] || i18n.de;
       document.documentElement.lang = lang;
 
       document.querySelectorAll("[data-i18n]").forEach((el) => {
@@ -956,17 +997,6 @@ const dict = i18n[lang] || i18n.de;
     select.addEventListener("change", () => {
       applyLang(select.value);
     });
-   
   </script>
-  <h2>Weitere häufige Briefe verstehen</h2>
-
-<ul>
-<li><a href="/inkasso-brief-verstehen.html">Inkasso Brief verstehen</a></li>
-<li><a href="/mahnbescheid-verstehen.html">Mahnbescheid verstehen</a></li>
-<li><a href="/jobcenter-brief-verstehen.html">Jobcenter Brief verstehen</a></li>
-<li><a href="/pfaendungsbescheid-verstehen.html">Pfändungsbescheid verstehen</a></li>
-<li><a href="/vollstreckungsbescheid-verstehen.html">Vollstreckungsbescheid verstehen</a></li>
-<li><a href="/finanzamt-brief-verstehen.html">Finanzamt Brief verstehen</a></li>
-</ul>
 </body>
 </html>
