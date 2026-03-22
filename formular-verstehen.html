@@ -1,403 +1,1010 @@
 <!doctype html>
 <html lang="de">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>Formular verstehen – einfach erklärt | BriefHelden</title>
+  <title>Formular verstehen – einfach erklärt | BriefHelden</title>
 
-<meta name="description"
-content="Formular einfach verstehen: BriefHelden erklärt Behördenformulare, Anträge und Dokumente verständlich, klar und ohne komplizierte Fachsprache."/>
+  <meta
+    name="description"
+    content="Formular einfach verstehen: BriefHelden erklärt Behördenformulare, Anträge und Dokumente verständlich, klar und ohne komplizierte Fachsprache."
+  />
+  <meta name="robots" content="index, follow" />
 
-<meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.briefhelden-service.de/formular-verstehen.html" />
 
-<link rel="canonical"
-href="https://www.briefhelden-service.de/formular-verstehen.html"/>
+  <meta property="og:title" content="Formular verstehen – einfach erklärt | BriefHelden" />
+  <meta
+    property="og:description"
+    content="Formulare von Behörden und Ämtern einfach erklärt. Verstehen Sie Angaben, Felder und wichtige Punkte schnell und verständlich."
+  />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.briefhelden-service.de/formular-verstehen.html" />
+  <meta property="og:site_name" content="BriefHelden" />
 
-<meta property="og:title"
-content="Formular verstehen – einfach erklärt | BriefHelden"/>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CVRQ9QBE94');
+  </script>
 
-<meta property="og:description"
-content="Formulare von Behörden und Ämtern einfach erklärt. Verstehen Sie Angaben, Felder und wichtige Punkte schnell und verständlich."/>
+  <style>
+    :root{
+      --nav-bg: rgba(9,24,33,.78);
+      --nav-border: rgba(255,255,255,.10);
+      --text: #0b1220;
+      --muted: rgba(11,18,32,.72);
+      --heroText: #fff;
+      --heroMuted: rgba(255,255,255,.84);
+      --glass: rgba(255,255,255,.28);
+      --glass2: rgba(255,255,255,.16);
+      --stroke: rgba(255,255,255,.36);
+      --shadow: 0 18px 40px rgba(0,0,0,.18);
+      --btn1: #2f6fff;
+      --btn2: #1f56b8;
+      --btnGreen1: #12b76a;
+      --btnGreen2: #079455;
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --radius-md: 14px;
+      --max: 1120px;
+    }
 
-<meta property="og:type" content="article"/>
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
 
-<meta property="og:url"
-content="https://www.briefhelden-service.de/formular-verstehen.html"/>
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 700px at 12% 24%, rgba(120,180,255,.32), rgba(255,255,255,0) 60%),
+        radial-gradient(1200px 800px at 88% 18%, rgba(120,140,255,.26), rgba(255,255,255,0) 62%),
+        radial-gradient(1000px 700px at 50% 92%, rgba(170,210,255,.28), rgba(255,255,255,0) 60%),
+        linear-gradient(180deg,#f8fbff 0%,#eef6ff 45%,#f8fbff 100%);
+      min-height:100vh;
+    }
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
+    a{color:inherit;text-decoration:none}
 
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-CVRQ9QBE94');
-</script>
+    header{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:var(--nav-bg);
+      backdrop-filter:blur(12px) saturate(140%);
+      border-bottom:1px solid var(--nav-border);
+    }
 
-<style>
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      color:#fff;
+    }
 
-:root{
---nav-bg: rgba(9,24,33,.78);
---nav-border: rgba(255,255,255,.10);
---text: #0b1220;
---muted: rgba(11,18,32,.72);
---heroText: #fff;
---heroMuted: rgba(255,255,255,.84);
---glass: rgba(255,255,255,.28);
---glass2: rgba(255,255,255,.16);
---stroke: rgba(255,255,255,.36);
---shadow: 0 18px 40px rgba(0,0,0,.18);
---btn1: #2f6fff;
---btn2: #1f56b8;
---btnGreen1: #12b76a;
---btnGreen2: #079455;
---radius-xl: 24px;
---radius-lg: 18px;
---radius-md: 14px;
---max: 1120px;
-}
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:900;
+      letter-spacing:.2px;
+      white-space:nowrap;
+    }
 
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
+    .brand .logo{
+      width:26px;
+      height:26px;
+      border-radius:10px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.85), rgba(255,255,255,.08)),
+        linear-gradient(180deg, rgba(55,120,255,.9), rgba(20,70,190,.9));
+      box-shadow:0 10px 18px rgba(0,0,0,.18);
+      position:relative;
+      flex:0 0 26px;
+    }
 
-body{
-margin:0;
-font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-color:var(--text);
+    .brand .logo:after{
+      content:"";
+      position:absolute;
+      inset:7px 6px 7px 10px;
+      border-radius:8px;
+      background:rgba(255,255,255,.85);
+      clip-path:polygon(0 0, 100% 0, 85% 100%, 0 100%);
+      opacity:.12;
+    }
 
-background:
-radial-gradient(1200px 700px at 12% 24%, rgba(120,180,255,.32), rgba(255,255,255,0) 60%),
-radial-gradient(1200px 800px at 88% 18%, rgba(120,140,255,.26), rgba(255,255,255,0) 62%),
-radial-gradient(1000px 700px at 50% 92%, rgba(170,210,255,.28), rgba(255,255,255,0) 60%),
-linear-gradient(180deg,#f8fbff 0%,#eef6ff 45%,#f8fbff 100%);
+    nav.links{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
 
-min-height:100vh;
-}
+    nav.links a{
+      color:rgba(255,255,255,.82);
+      font-weight:700;
+      font-size:14px;
+    }
 
-a{color:inherit;text-decoration:none}
+    nav.links a:hover{color:#fff}
 
-header{
-position:sticky;
-top:0;
-z-index:20;
-background:var(--nav-bg);
-backdrop-filter:blur(12px) saturate(140%);
-border-bottom:1px solid var(--nav-border);
-}
+    .langWrap{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      position:relative;
+    }
 
-.nav{
-max-width:var(--max);
-margin:0 auto;
-padding:14px 18px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:16px;
-color:#fff;
-}
+    .langSelect{
+      appearance:none;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(0,0,0,.18);
+      color:#fff;
+      padding:8px 36px 8px 12px;
+      border-radius:12px;
+      font-weight:800;
+      cursor:pointer;
+      outline:none;
+    }
 
-.brand{
-display:flex;
-align-items:center;
-gap:10px;
-font-weight:900;
-}
+    .langSelect:focus{
+      box-shadow:0 0 0 3px rgba(90,160,255,.25);
+    }
 
-.brand .logo{
-width:26px;
-height:26px;
-border-radius:10px;
-background:linear-gradient(180deg,#3778ff,#1446be);
-}
+    .langWrap:after{
+      content:"▾";
+      position:absolute;
+      right:12px;
+      top:50%;
+      transform:translateY(-50%);
+      color:rgba(255,255,255,.85);
+      pointer-events:none;
+      font-size:12px;
+    }
 
-nav.links{
-display:flex;
-gap:16px;
-flex-wrap:wrap;
-}
+    .hero{
+      color:var(--heroText);
+      padding:68px 18px 40px;
+      background:
+        linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.58)),
+        url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=2200&q=60");
+      background-size:cover;
+      background-position:center;
+    }
 
-nav.links a{
-color:rgba(255,255,255,.82);
-font-weight:700;
-font-size:14px;
-}
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+    }
 
-nav.links a:hover{color:#fff}
+    .hero .wrap{
+      text-align:center;
+    }
 
-.hero{
-color:var(--heroText);
-padding:68px 18px 40px;
+    .hero h1{
+      margin:0 0 10px;
+      font-weight:950;
+      font-size:clamp(30px,3.7vw,48px);
+      letter-spacing:.2px;
+      text-shadow:0 10px 24px rgba(0,0,0,.35);
+    }
 
-background:
-linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.58)),
-url("https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=2200&q=60");
+    .hero p{
+      margin:0 auto 18px;
+      max-width:860px;
+      color:var(--heroMuted);
+      font-size:clamp(15px,2vw,18px);
+      line-height:1.55;
+    }
 
-background-size:cover;
-background-position:center;
-}
+    .ctaGroup{
+      display:flex;
+      gap:14px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin-top:8px;
+    }
 
-.hero .wrap{
-max-width:var(--max);
-margin:0 auto;
-text-align:center;
-}
+    .cta{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:14px 20px;
+      border-radius:16px;
+      color:#fff;
+      font-weight:950;
+      box-shadow:0 18px 38px rgba(0,0,0,.28);
+      border:1px solid rgba(255,255,255,.20);
+      min-width:min(560px,92vw);
+      text-align:center;
+    }
 
-.hero h1{
-margin:0 0 10px;
-font-weight:950;
-font-size:clamp(30px,3.7vw,48px);
-}
+    .cta.primary{background:linear-gradient(180deg,var(--btn1),var(--btn2))}
+    .cta.secondary{background:linear-gradient(180deg,var(--btnGreen1),var(--btnGreen2))}
+    .cta:hover{filter:brightness(1.05)}
 
-.hero p{
-margin:0 auto 18px;
-max-width:860px;
-color:var(--heroMuted);
-}
+    .heroMeta{
+      margin-top:14px;
+      display:flex;
+      gap:14px;
+      justify-content:center;
+      flex-wrap:wrap;
+      color:rgba(255,255,255,.86);
+      font-weight:700;
+      font-size:13px;
+    }
 
-.ctaGroup{
-display:flex;
-gap:14px;
-justify-content:center;
-flex-wrap:wrap;
-}
+    .heroMeta span{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.12);
+      backdrop-filter:blur(10px);
+    }
 
-.cta{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-gap:10px;
-padding:14px 20px;
-border-radius:16px;
-color:#fff;
-font-weight:950;
-box-shadow:0 18px 38px rgba(0,0,0,.28);
-min-width:min(560px,92vw);
-}
+    .section{padding:26px 18px 10px}
 
-.cta.primary{background:linear-gradient(180deg,var(--btn1),var(--btn2))}
-.cta.secondary{background:linear-gradient(180deg,var(--btnGreen1),var(--btnGreen2))}
+    .glassCard{
+      background:linear-gradient(180deg,var(--glass),var(--glass2));
+      border:1px solid var(--stroke);
+      border-radius:var(--radius-xl);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(14px) saturate(140%);
+      -webkit-backdrop-filter:blur(14px) saturate(140%);
+      overflow:hidden;
+    }
 
-.section{padding:26px 18px 10px}
-.wrap{max-width:var(--max);margin:0 auto}
+    .pad{padding:22px}
 
-.glassCard{
-background:linear-gradient(180deg,var(--glass),var(--glass2));
-border:1px solid var(--stroke);
-border-radius:var(--radius-xl);
-box-shadow:var(--shadow);
-}
+    .headline,
+    .sectionTitle{
+      text-align:center;
+      margin:0 0 10px;
+      font-weight:950;
+      font-size:clamp(22px,2.6vw,34px);
+      letter-spacing:.2px;
+    }
 
-.pad{padding:22px}
+    .lead,
+    .sectionSub{
+      text-align:center;
+      margin:0 auto 16px;
+      max-width:920px;
+      color:rgba(11,18,32,.76);
+      line-height:1.7;
+      font-size:16px;
+    }
 
-.grid2{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:14px;
-}
+    .grid2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
 
-.infoCard{
-border-radius:var(--radius-lg);
-background:rgba(255,255,255,.2);
-padding:18px;
-}
+    .infoCard,
+    .faqItem{
+      border-radius:var(--radius-lg);
+      border:1px solid rgba(255,255,255,.55);
+      background:rgba(255,255,255,.20);
+      padding:18px;
+    }
 
-.faqGrid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:14px;
-}
+    .infoCard h3,
+    .faqItem h3{
+      margin:0 0 10px;
+      font-size:22px;
+      font-weight:950;
+    }
 
-.faqItem{
-border-radius:var(--radius-lg);
-background:rgba(255,255,255,.2);
-padding:18px;
-}
+    .faqItem h3{
+      font-size:18px;
+      margin-bottom:8px;
+    }
 
-footer{
-margin-top:18px;
-padding:18px;
-color:white;
-background:#091821;
-}
+    .infoCard p,
+    .infoCard li,
+    .faqItem p{
+      color:rgba(11,18,32,.76);
+      line-height:1.65;
+      font-weight:700;
+      margin:0;
+    }
 
-@media (max-width:900px){
-nav.links{display:none}
-.grid2,.faqGrid{grid-template-columns:1fr}
-}
+    .infoCard p + p{margin-top:12px;}
 
-</style>
+    .infoCard ul{
+      margin:0;
+      padding-left:18px;
+      color:rgba(11,18,32,.76);
+    }
+
+    .faqGrid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+
+    .serviceMini{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+      margin-top:16px;
+    }
+
+    .serviceMini .box{
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.55);
+      background:rgba(255,255,255,.20);
+      padding:18px;
+      text-align:center;
+    }
+
+    .serviceMini .box h3{
+      margin:0 0 8px;
+      font-size:20px;
+      font-weight:950;
+    }
+
+    .serviceMini .box p{
+      margin:0;
+      color:rgba(11,18,32,.74);
+      line-height:1.55;
+      font-weight:700;
+    }
+
+    .miniBtn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      margin-top:14px;
+      padding:12px 18px;
+      border-radius:14px;
+      color:#fff;
+      font-weight:900;
+      min-width:220px;
+      box-shadow:0 10px 24px rgba(0,0,0,.16);
+      text-align:center;
+    }
+
+    .miniBtn.primary{background:linear-gradient(180deg,var(--btn1),var(--btn2))}
+    .miniBtn.secondary{background:linear-gradient(180deg,var(--btnGreen1),var(--btnGreen2))}
+
+    .moreLinks{
+      max-width:var(--max);
+      margin:28px auto 0;
+      padding:0 18px 30px;
+    }
+
+    .moreLinks h2{
+      margin:0 0 14px;
+      font-size:26px;
+      font-weight:950;
+      color:#0b1220;
+    }
+
+    .moreLinks ul{
+      margin:0;
+      padding-left:20px;
+    }
+
+    .moreLinks li{
+      margin:8px 0;
+      font-weight:700;
+      color:rgba(11,18,32,.82);
+    }
+
+    .moreLinks a:hover{
+      text-decoration:underline;
+    }
+
+    footer{
+      margin-top:18px;
+      padding:18px 18px 28px;
+      color:rgba(255,255,255,.82);
+      background:rgba(9,24,33,.82);
+      border-top:1px solid rgba(255,255,255,.10);
+      backdrop-filter:blur(12px) saturate(140%);
+    }
+
+    .footWrap{
+      max-width:var(--max);
+      margin:0 auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .footLinks{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      font-weight:800;
+    }
+
+    .footLinks a{color:rgba(255,255,255,.80)}
+    .footLinks a:hover{color:#fff}
+
+    @media (max-width:900px){
+      nav.links{display:none}
+      .grid2,.faqGrid,.serviceMini{grid-template-columns:1fr}
+      .cta{min-width:92vw}
+      .miniBtn{min-width:100%}
+    }
+  </style>
 </head>
 
 <body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>BriefHelden</div>
+      </div>
 
-<header>
-<div class="nav">
+      <nav class="links" aria-label="Hauptnavigation">
+        <a href="index.html" data-i18n="nav_home">Startseite</a>
+        <a href="frage.html" data-i18n="nav_question">Frage stellen</a>
+        <a href="widerruf.html" data-i18n="nav_refund">Widerruf</a>
+        <a href="impressum.html" data-i18n="nav_imprint">Impressum</a>
+        <a href="agb.html" data-i18n="nav_terms">AGB</a>
+        <a href="datenschutz.html" data-i18n="nav_privacy">Datenschutz</a>
+      </nav>
 
-<div class="brand">
-<div class="logo"></div>
-<div>BriefHelden</div>
-</div>
+      <div class="langWrap">
+        <select class="langSelect" id="langSelect" aria-label="Sprache">
+          <option value="de">DE</option>
+          <option value="en">EN</option>
+          <option value="tr">TR</option>
+          <option value="ru">RU</option>
+        </select>
+      </div>
+    </div>
+  </header>
 
-<nav class="links">
-<a href="index.html">Startseite</a>
-<a href="frage.html">Frage stellen</a>
-<a href="widerruf.html">Widerruf</a>
-<a href="impressum.html">Impressum</a>
-<a href="agb.html">AGB</a>
-<a href="datenschutz.html">Datenschutz</a>
-</nav>
+  <section class="hero">
+    <div class="wrap">
+      <h1 data-i18n="hero_title">Formular verstehen</h1>
 
-</div>
-</header>
+      <p data-i18n="hero_sub">
+        Viele Formulare von Behörden oder Firmen sind kompliziert aufgebaut. BriefHelden erklärt Ihnen die Felder, Angaben und Inhalte einfach und verständlich.
+      </p>
 
-<section class="hero">
-<div class="wrap">
+      <div class="ctaGroup">
+        <a class="cta primary" id="stripeBtn" href="#" rel="noopener">
+          <span data-i18n="hero_cta">Jetzt Formular erklären lassen – 6,90 €</span>
+          <span aria-hidden="true">›</span>
+        </a>
 
-<h1>Formular verstehen</h1>
+        <a class="cta secondary" id="questionBtn" href="#" rel="noopener">
+          <span data-i18n="hero_question_cta">Kurze Frage stellen – 1,49 €</span>
+          <span aria-hidden="true">›</span>
+        </a>
+      </div>
 
-<p>
-Viele Formulare von Behörden oder Firmen sind kompliziert aufgebaut.
-BriefHelden erklärt Ihnen die Felder, Angaben und Inhalte einfach und verständlich.
-</p>
+      <div class="heroMeta" aria-label="Kurzvorteile">
+        <span>✅ <span data-i18n="meta_1">Einfach erklärt</span></span>
+        <span>⚡ <span data-i18n="meta_2">Schnelle Rückmeldung</span></span>
+        <span>🔒 <span data-i18n="meta_3">Vertraulich</span></span>
+      </div>
+    </div>
+  </section>
 
-<div class="ctaGroup">
+  <section class="section">
+    <div class="wrap">
+      <div class="glassCard">
+        <div class="pad">
+          <h2 class="headline" data-i18n="intro_title">Was ist ein Formular?</h2>
 
-<a class="cta primary" id="stripeBtn" href="#">
-Jetzt Formular erklären lassen – 6,90 €
-</a>
+          <p class="lead" data-i18n="intro_text">
+            Ein Formular ist ein Dokument mit verschiedenen Feldern, in das Informationen eingetragen werden müssen. Viele Formulare kommen von Behörden, Versicherungen, Banken oder Unternehmen. Häufig sind Bezeichnungen, Pflichtfelder oder Hinweise nicht sofort verständlich. Genau dabei hilft BriefHelden.
+          </p>
 
-<a class="cta secondary" id="questionBtn" href="#">
-Kurze Frage stellen – 1,49 €
-</a>
+          <div class="grid2">
+            <div class="infoCard">
+              <h3 data-i18n="left_title">Typische Formulare</h3>
+              <ul>
+                <li data-i18n="left_li_1">Anträge bei Behörden</li>
+                <li data-i18n="left_li_2">Versicherungsformulare</li>
+                <li data-i18n="left_li_3">Bankformulare</li>
+                <li data-i18n="left_li_4">Arbeitsamt Formulare</li>
+              </ul>
+            </div>
 
-</div>
+            <div class="infoCard">
+              <h3 data-i18n="right_title">So hilft BriefHelden</h3>
+              <ul>
+                <li data-i18n="right_li_1">Formular sicher hochladen</li>
+                <li data-i18n="right_li_2">Wir erklären die Felder und Angaben</li>
+                <li data-i18n="right_li_3">Wir erklären den Inhalt verständlich</li>
+                <li data-i18n="right_li_4">Sie erhalten eine einfache Erklärung per E-Mail</li>
+              </ul>
+            </div>
+          </div>
 
-</div>
-</section>
+          <div class="serviceMini">
+            <div class="box">
+              <h3 data-i18n="service1_title">Komplettes Formular erklären lassen</h3>
+              <p data-i18n="service1_text">
+                Ideal, wenn Sie ein ganzes Formular oder Dokument vollständig verstehen möchten.
+              </p>
+              <a class="miniBtn primary" id="servicePrimaryBtn" href="#" rel="noopener">
+                <span data-i18n="service1_btn">Jetzt für 6,90 € starten</span>
+                <span aria-hidden="true">›</span>
+              </a>
+            </div>
 
-<section class="section">
-<div class="wrap">
+            <div class="box">
+              <h3 data-i18n="service2_title">Kurze Rückfrage stellen</h3>
+              <p data-i18n="service2_text">
+                Ideal, wenn Sie nur eine kurze Frage zu einem Feld, einer Angabe oder einem Hinweis haben.
+              </p>
+              <a class="miniBtn secondary" id="serviceQuestionBtn" href="#" rel="noopener">
+                <span data-i18n="service2_btn">Jetzt für 1,49 € fragen</span>
+                <span aria-hidden="true">›</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<div class="glassCard">
-<div class="pad">
+      <div style="height:18px"></div>
 
-<h2>Was ist ein Formular?</h2>
+      <div class="glassCard">
+        <div class="pad">
+          <h2 class="sectionTitle" data-i18n="faq_title">Häufige Fragen zu Formularen</h2>
+          <p class="sectionSub" data-i18n="faq_sub">
+            Diese Fragen tauchen bei Formularen besonders oft auf:
+          </p>
 
-<p>
-Ein Formular ist ein Dokument mit verschiedenen Feldern, in das Informationen eingetragen werden müssen.
-Viele Formulare kommen von Behörden, Versicherungen oder Unternehmen.
-</p>
+          <div class="faqGrid">
+            <div class="faqItem">
+              <h3 data-i18n="faq1_q">Warum sind Formulare oft kompliziert?</h3>
+              <p data-i18n="faq1_a">
+                Viele Formulare enthalten Fachbegriffe, unklare Feldbezeichnungen oder spezielle Hinweise, die nicht sofort verständlich sind.
+              </p>
+            </div>
 
-<div class="grid2">
+            <div class="faqItem">
+              <h3 data-i18n="faq2_q">Was muss man in ein Formular eintragen?</h3>
+              <p data-i18n="faq2_a">
+                Das hängt vom Formular ab. Oft werden persönliche Daten, Nachweise, Angaben zu Ihrer Situation oder andere Informationen verlangt.
+              </p>
+            </div>
 
-<div class="infoCard">
+            <div class="faqItem">
+              <h3 data-i18n="faq3_q">Welche Angaben sind besonders wichtig?</h3>
+              <p data-i18n="faq3_a">
+                Besonders wichtig sind Pflichtfelder, Fristen, Unterschriften und Hinweise dazu, welche Unterlagen zusätzlich eingereicht werden sollen.
+              </p>
+            </div>
 
-<h3>Typische Formulare</h3>
+            <div class="faqItem">
+              <h3 data-i18n="faq4_q">Ist BriefHelden eine Rechtsberatung?</h3>
+              <p data-i18n="faq4_a">
+                Nein. BriefHelden bietet keine Rechtsberatung. Sie erhalten nur eine verständliche Erklärung des Formulars und seiner Inhalte.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<ul>
-<li>Anträge bei Behörden</li>
-<li>Versicherungsformulare</li>
-<li>Bankformulare</li>
-<li>Arbeitsamt Formulare</li>
-</ul>
+      <div style="height:18px"></div>
 
-</div>
+      <div class="glassCard">
+        <div class="pad">
+          <h2 class="sectionTitle" data-i18n="tip_title">Worauf sollten Sie bei einem Formular achten?</h2>
+          <p class="sectionSub" data-i18n="tip_sub">
+            Diese Punkte sind oft besonders wichtig:
+          </p>
 
-<div class="infoCard">
+          <div class="faqGrid">
+            <div class="faqItem">
+              <h3 data-i18n="tip1_title">Pflichtfelder prüfen</h3>
+              <p data-i18n="tip1_text">
+                Achten Sie darauf, welche Felder zwingend ausgefüllt werden müssen.
+              </p>
+            </div>
 
-<h3>So hilft BriefHelden</h3>
+            <div class="faqItem">
+              <h3 data-i18n="tip2_title">Hinweise lesen</h3>
+              <p data-i18n="tip2_text">
+                Prüfen Sie, ob es im Formular Erklärungen, Zusatzhinweise oder Ausfüllhinweise gibt.
+              </p>
+            </div>
 
-<ul>
-<li>Formular hochladen</li>
-<li>Wir erklären die Felder</li>
-<li>Wir erklären den Inhalt</li>
-<li>Sie erhalten eine einfache Erklärung</li>
-</ul>
+            <div class="faqItem">
+              <h3 data-i18n="tip3_title">Unterlagen beachten</h3>
+              <p data-i18n="tip3_text">
+                Schauen Sie, ob Nachweise, Belege oder weitere Dokumente verlangt werden.
+              </p>
+            </div>
 
-</div>
+            <div class="faqItem">
+              <h3 data-i18n="tip4_title">Inhalt verständlich machen</h3>
+              <p data-i18n="tip4_text">
+                Wenn Begriffe oder Felder unklar sind, hilft eine einfache Erklärung oft sofort weiter.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-</div>
+  <div class="moreLinks">
+    <h2>Weitere häufige Briefe verstehen</h2>
+    <ul>
+      <li><a href="/inkasso-brief-verstehen.html">Inkasso Brief verstehen</a></li>
+      <li><a href="/mahnbescheid-verstehen.html">Mahnbescheid verstehen</a></li>
+      <li><a href="/jobcenter-brief-verstehen.html">Jobcenter Brief verstehen</a></li>
+      <li><a href="/pfaendungsbescheid-verstehen.html">Pfändungsbescheid verstehen</a></li>
+      <li><a href="/vollstreckungsbescheid-verstehen.html">Vollstreckungsbescheid verstehen</a></li>
+      <li><a href="/finanzamt-brief-verstehen.html">Finanzamt Brief verstehen</a></li>
+    </ul>
+  </div>
 
-</div>
-</div>
+  <footer>
+    <div class="footWrap">
+      <div>© 2026 BriefHelden – Alle Rechte vorbehalten</div>
+      <div class="footLinks">
+        <a href="index.html" data-i18n="foot_home">Startseite</a>
+        <a href="frage.html" data-i18n="foot_question">Frage stellen</a>
+        <a href="widerruf.html" data-i18n="foot_refund">Widerruf</a>
+        <a href="impressum.html" data-i18n="foot_imprint">Impressum</a>
+        <a href="agb.html" data-i18n="foot_terms">AGB</a>
+        <a href="datenschutz.html" data-i18n="foot_privacy">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
 
-<div style="height:18px"></div>
+  <script>
+    const STRIPE_LINKS = {
+      de:"https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
+      en:"https://buy.stripe.com/fZubJ0dpXbMAbfpcIZ4sE01",
+      tr:"https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
+      ru:"https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
+    };
 
-<div class="glassCard">
-<div class="pad">
+    const QUESTION_LINKS = {
+      de:"https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
+      en:"https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
+      tr:"https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
+      ru:"https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
+    };
 
-<h2>Häufige Fragen zu Formularen</h2>
+    const i18n = {
+      de: {
+        nav_home: "Startseite",
+        nav_question: "Frage stellen",
+        nav_refund: "Widerruf",
+        nav_imprint: "Impressum",
+        nav_terms: "AGB",
+        nav_privacy: "Datenschutz",
 
-<div class="faqGrid">
+        hero_title: "Formular verstehen",
+        hero_sub: "Viele Formulare von Behörden oder Firmen sind kompliziert aufgebaut. BriefHelden erklärt Ihnen die Felder, Angaben und Inhalte einfach und verständlich.",
+        hero_cta: "Jetzt Formular erklären lassen – 6,90 €",
+        hero_question_cta: "Kurze Frage stellen – 1,49 €",
+        meta_1: "Einfach erklärt",
+        meta_2: "Schnelle Rückmeldung",
+        meta_3: "Vertraulich",
 
-<div class="faqItem">
-<h3>Warum sind Formulare oft kompliziert?</h3>
-<p>
-Viele Formulare enthalten Fachbegriffe oder spezielle Felder, die nicht sofort verständlich sind.
-</p>
-</div>
+        intro_title: "Was ist ein Formular?",
+        intro_text: "Ein Formular ist ein Dokument mit verschiedenen Feldern, in das Informationen eingetragen werden müssen. Viele Formulare kommen von Behörden, Versicherungen, Banken oder Unternehmen. Häufig sind Bezeichnungen, Pflichtfelder oder Hinweise nicht sofort verständlich. Genau dabei hilft BriefHelden.",
 
-<div class="faqItem">
-<h3>Was muss man in ein Formular eintragen?</h3>
-<p>
-Das hängt vom Formular ab. Oft werden persönliche Daten, Angaben oder Nachweise verlangt.
-</p>
-</div>
+        left_title: "Typische Formulare",
+        left_li_1: "Anträge bei Behörden",
+        left_li_2: "Versicherungsformulare",
+        left_li_3: "Bankformulare",
+        left_li_4: "Arbeitsamt Formulare",
 
-<div class="faqItem">
-<h3>Welche Angaben sind wichtig?</h3>
-<p>
-Besonders wichtig sind Pflichtfelder, Fristen und Hinweise zu Unterlagen.
-</p>
-</div>
+        right_title: "So hilft BriefHelden",
+        right_li_1: "Formular sicher hochladen",
+        right_li_2: "Wir erklären die Felder und Angaben",
+        right_li_3: "Wir erklären den Inhalt verständlich",
+        right_li_4: "Sie erhalten eine einfache Erklärung per E-Mail",
 
-<div class="faqItem">
-<h3>Ist BriefHelden eine Rechtsberatung?</h3>
-<p>
-Nein. BriefHelden bietet keine Rechtsberatung. Sie erhalten nur eine verständliche Erklärung des Formulars.
-</p>
-</div>
+        service1_title: "Komplettes Formular erklären lassen",
+        service1_text: "Ideal, wenn Sie ein ganzes Formular oder Dokument vollständig verstehen möchten.",
+        service1_btn: "Jetzt für 6,90 € starten",
 
-</div>
+        service2_title: "Kurze Rückfrage stellen",
+        service2_text: "Ideal, wenn Sie nur eine kurze Frage zu einem Feld, einer Angabe oder einem Hinweis haben.",
+        service2_btn: "Jetzt für 1,49 € fragen",
 
-</div>
-</div>
+        faq_title: "Häufige Fragen zu Formularen",
+        faq_sub: "Diese Fragen tauchen bei Formularen besonders oft auf:",
+        faq1_q: "Warum sind Formulare oft kompliziert?",
+        faq1_a: "Viele Formulare enthalten Fachbegriffe, unklare Feldbezeichnungen oder spezielle Hinweise, die nicht sofort verständlich sind.",
+        faq2_q: "Was muss man in ein Formular eintragen?",
+        faq2_a: "Das hängt vom Formular ab. Oft werden persönliche Daten, Nachweise, Angaben zu Ihrer Situation oder andere Informationen verlangt.",
+        faq3_q: "Welche Angaben sind besonders wichtig?",
+        faq3_a: "Besonders wichtig sind Pflichtfelder, Fristen, Unterschriften und Hinweise dazu, welche Unterlagen zusätzlich eingereicht werden sollen.",
+        faq4_q: "Ist BriefHelden eine Rechtsberatung?",
+        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung. Sie erhalten nur eine verständliche Erklärung des Formulars und seiner Inhalte.",
 
-</div>
-</section>
-  <h2>Weitere häufige Briefe verstehen</h2>
+        tip_title: "Worauf sollten Sie bei einem Formular achten?",
+        tip_sub: "Diese Punkte sind oft besonders wichtig:",
+        tip1_title: "Pflichtfelder prüfen",
+        tip1_text: "Achten Sie darauf, welche Felder zwingend ausgefüllt werden müssen.",
+        tip2_title: "Hinweise lesen",
+        tip2_text: "Prüfen Sie, ob es im Formular Erklärungen, Zusatzhinweise oder Ausfüllhinweise gibt.",
+        tip3_title: "Unterlagen beachten",
+        tip3_text: "Schauen Sie, ob Nachweise, Belege oder weitere Dokumente verlangt werden.",
+        tip4_title: "Inhalt verständlich machen",
+        tip4_text: "Wenn Begriffe oder Felder unklar sind, hilft eine einfache Erklärung oft sofort weiter.",
 
-<ul>
-<li><a href="/inkasso-brief-verstehen.html">Inkasso Brief verstehen</a></li>
-<li><a href="/mahnbescheid-verstehen.html">Mahnbescheid verstehen</a></li>
-<li><a href="/jobcenter-brief-verstehen.html">Jobcenter Brief verstehen</a></li>
-<li><a href="/pfaendungsbescheid-verstehen.html">Pfändungsbescheid verstehen</a></li>
-<li><a href="/vollstreckungsbescheid-verstehen.html">Vollstreckungsbescheid verstehen</a></li>
-<li><a href="/finanzamt-brief-verstehen.html">Finanzamt Brief verstehen</a></li>
-</ul>
+        foot_home: "Startseite",
+        foot_question: "Frage stellen",
+        foot_refund: "Widerruf",
+        foot_imprint: "Impressum",
+        foot_terms: "AGB",
+        foot_privacy: "Datenschutz"
+      },
 
-<footer>
+      en: {
+        nav_home: "Home",
+        nav_question: "Ask a question",
+        nav_refund: "Withdrawal",
+        nav_imprint: "Imprint",
+        nav_terms: "Terms",
+        nav_privacy: "Privacy",
 
-<div class="wrap">
-© 2026 BriefHelden
-</div>
+        hero_title: "Understand a form",
+        hero_sub: "Many forms from authorities or companies are complicated. BriefHelden explains the fields, entries and contents simply and clearly.",
+        hero_cta: "Get form explained now – €6.90",
+        hero_question_cta: "Ask a short question – €1.49",
+        meta_1: "Clearly explained",
+        meta_2: "Fast response",
+        meta_3: "Confidential",
 
-</footer>
+        intro_title: "What is a form?",
+        intro_text: "A form is a document with different fields that must be filled in. Many forms come from authorities, insurers, banks or companies. Labels, mandatory fields or instructions are often not immediately clear. That is exactly where BriefHelden helps.",
 
-<script>
+        left_title: "Typical forms",
+        left_li_1: "Applications for authorities",
+        left_li_2: "Insurance forms",
+        left_li_3: "Bank forms",
+        left_li_4: "Employment office forms",
 
-const STRIPE_LINKS={
-de:"https://buy.stripe.com/14A9ASbhP2c083deR74sE00"
-};
+        right_title: "How BriefHelden helps",
+        right_li_1: "Upload form securely",
+        right_li_2: "We explain the fields and entries",
+        right_li_3: "We explain the content clearly",
+        right_li_4: "You receive a simple explanation by email",
 
-const QUESTION_LINKS={
-de:"https://buy.stripe.com/8x228q71z5occjt4ct4sE04"
-};
+        service1_title: "Get the full form explained",
+        service1_text: "Ideal if you want to fully understand an entire form or document.",
+        service1_btn: "Start now for €6.90",
 
-document.getElementById("stripeBtn").href=STRIPE_LINKS.de;
-document.getElementById("questionBtn").href=QUESTION_LINKS.de;
+        service2_title: "Ask a short follow-up question",
+        service2_text: "Ideal if you only have a short question about a field, an entry or a note.",
+        service2_btn: "Ask now for €1.49",
 
-</script>
+        faq_title: "Frequently asked questions about forms",
+        faq_sub: "These questions often come up with forms:",
+        faq1_q: "Why are forms often complicated?",
+        faq1_a: "Many forms contain technical terms, unclear field labels or special instructions that are not immediately understandable.",
+        faq2_q: "What do you have to enter in a form?",
+        faq2_a: "That depends on the form. Personal data, supporting documents, information about your situation or other details are often required.",
+        faq3_q: "Which details are especially important?",
+        faq3_a: "Especially important are mandatory fields, deadlines, signatures and notes about which additional documents must be submitted.",
+        faq4_q: "Is BriefHelden legal advice?",
+        faq4_a: "No. BriefHelden does not provide legal advice. You only receive a clear explanation of the form and its contents.",
 
+        tip_title: "What should you look for in a form?",
+        tip_sub: "These points are often especially important:",
+        tip1_title: "Check mandatory fields",
+        tip1_text: "Pay attention to which fields must be completed.",
+        tip2_title: "Read instructions",
+        tip2_text: "Check whether the form contains explanations, additional notes or filling instructions.",
+        tip3_title: "Watch supporting documents",
+        tip3_text: "See whether proofs, records or other documents are required.",
+        tip4_title: "Make the content understandable",
+        tip4_text: "If terms or fields are unclear, a simple explanation often helps immediately.",
+
+        foot_home: "Home",
+        foot_question: "Ask a question",
+        foot_refund: "Withdrawal",
+        foot_imprint: "Imprint",
+        foot_terms: "Terms",
+        foot_privacy: "Privacy"
+      },
+
+      tr: {
+        nav_home: "Ana Sayfa",
+        nav_question: "Soru sor",
+        nav_refund: "Cayma",
+        nav_imprint: "Künye",
+        nav_terms: "Şartlar",
+        nav_privacy: "Gizlilik",
+
+        hero_title: "Formu anlayın",
+        hero_sub: "Resmi kurumlar veya şirketlerden gelen birçok form karmaşıktır. BriefHelden alanları, bilgileri ve içerikleri size basit ve açık şekilde açıklar.",
+        hero_cta: "Formu şimdi açıklat – 6,90 €",
+        hero_question_cta: "Kısa soru sor – 1,49 €",
+        meta_1: "Basit açıklandı",
+        meta_2: "Hızlı dönüş",
+        meta_3: "Gizli",
+
+        intro_title: "Form nedir?",
+        intro_text: "Form, içine bilgi girilmesi gereken farklı alanlardan oluşan bir belgedir. Birçok form resmi kurumlardan, sigortalardan, bankalardan veya şirketlerden gelir. Alan isimleri, zorunlu bölümler veya açıklamalar çoğu zaman hemen anlaşılmaz. BriefHelden tam bu konuda yardımcı olur.",
+
+        left_title: "Tipik formlar",
+        left_li_1: "Resmi başvuru formları",
+        left_li_2: "Sigorta formları",
+        left_li_3: "Banka formları",
+        left_li_4: "İş kurumu formları",
+
+        right_title: "BriefHelden nasıl yardımcı olur",
+        right_li_1: "Formu güvenli şekilde yükleyin",
+        right_li_2: "Alanları ve bilgileri açıklıyoruz",
+        right_li_3: "İçeriği anlaşılır şekilde açıklıyoruz",
+        right_li_4: "Size e-posta ile basit bir açıklama gönderiyoruz",
+
+        service1_title: "Formun tamamını açıklat",
+        service1_text: "Bir formu veya belgeyi tamamen anlamak istiyorsanız idealdir.",
+        service1_btn: "Şimdi 6,90 € ile başla",
+
+        service2_title: "Kısa bir soru sor",
+        service2_text: "Sadece bir alan, bilgi veya not hakkında kısa bir sorunuz varsa idealdir.",
+        service2_btn: "Şimdi 1,49 € ile sor",
+
+        faq_title: "Formlar hakkında sık sorulan sorular",
+        faq_sub: "Bu sorular formlarda sıkça ortaya çıkar:",
+        faq1_q: "Formlar neden çoğu zaman karmaşıktır?",
+        faq1_a: "Birçok form teknik terimler, belirsiz alan isimleri veya hemen anlaşılmayan özel açıklamalar içerir.",
+        faq2_q: "Bir forma ne yazmak gerekir?",
+        faq2_a: "Bu forma bağlıdır. Genelde kişisel bilgiler, belgeler, durumunuza ilişkin bilgiler veya başka veriler istenir.",
+        faq3_q: "Hangi bilgiler özellikle önemlidir?",
+        faq3_a: "Zorunlu alanlar, süreler, imzalar ve ayrıca hangi belgelerin eklenmesi gerektiğine dair notlar özellikle önemlidir.",
+        faq4_q: "BriefHelden hukuki danışmanlık mı veriyor?",
+        faq4_a: "Hayır. BriefHelden hukuki danışmanlık vermez. Sadece formun ve içeriğinin anlaşılır açıklamasını sunar.",
+
+        tip_title: "Bir formda nelere dikkat etmelisiniz?",
+        tip_sub: "Bu noktalar genelde özellikle önemlidir:",
+        tip1_title: "Zorunlu alanları kontrol edin",
+        tip1_text: "Hangi alanların mutlaka doldurulması gerektiğine dikkat edin.",
+        tip2_title: "Açıklamaları okuyun",
+        tip2_text: "Formda açıklama, ek not veya doldurma bilgileri olup olmadığını kontrol edin.",
+        tip3_title: "Belgeleri dikkate alın",
+        tip3_text: "Kanıt, belge veya başka evrakların istenip istenmediğine bakın.",
+        tip4_title: "İçeriği anlaşılır hale getirin",
+        tip4_text: "Terimler veya alanlar belirsizse, basit bir açıklama çoğu zaman hemen yardımcı olur.",
+
+        foot_home: "Ana Sayfa",
+        foot_question: "Soru sor",
+        foot_refund: "Cayma",
+        foot_imprint: "Künye",
+        foot_terms: "Şartlar",
+        foot_privacy: "Gizlilik"
+      },
+
+      ru: {
+        nav_home: "Главная",
+        nav_question: "Задать вопрос",
+        nav_refund: "Отказ",
+        nav_imprint: "Выходные данные",
+        nav_terms: "Условия",
+        nav_privacy: "Конфиденциальность",
+
+        hero_title: "Понять форму",
+        hero_sub: "Многие формы от ведомств или компаний бывают сложными. BriefHelden объяснит поля, данные и содержание просто и понятно.",
+        hero_cta: "Объяснить форму – 6,90 €",
+        hero_question_cta: "Задать короткий вопрос – 1,49 €",
+        meta_1: "Просто объяснено",
+        meta_2: "Быстрый ответ",
+        meta_3: "Конфиденциально",
+
+        intro_title: "Что такое форма?",
+        intro_text: "Форма — это документ с разными полями, в которые нужно вносить информацию. Многие формы приходят от ведомств, страховых компаний, банков или фирм. Названия полей, обязательные разделы или пояснения часто не сразу понятны. Именно здесь помогает BriefHelden.",
+
+        left_title: "Типичные формы",
+        left_li_1: "Заявления в ведомства",
+        left_li_2: "Страховые формы",
+        left_li_3: "Банковские формы",
+        left_li_4: "Формы службы занятости",
+
+        right_title: "Как помогает BriefHelden",
+        right_li_1: "Безопасно загрузите форму",
+        right_li_2: "Мы объясним поля и данные",
+        right_li_3: "Мы понятно объясним содержание",
+        right_li_4: "Вы получите простое объяснение по e-mail",
+
+        service1_title: "Получить полное объяснение формы",
+        service1_text: "Идеально, если вы хотите полностью понять всю форму или документ.",
+        service1_btn: "Начать за 6,90 €",
+
+        service2_title: "Задать короткий вопрос",
+        service2_text: "Идеально, если у вас только короткий вопрос по полю, данным или примечанию.",
+        service2_btn: "Спросить за 1,49 €",
+
+        faq_title: "Частые вопросы о формах",
+        faq_sub: "Эти вопросы часто возникают по формам:",
+        faq1_q: "Почему формы часто сложные?",
+        faq1_a: "Многие формы содержат специальные термины, неясные названия полей или особые указания, которые сразу непонятны.",
+        faq2_q: "Что нужно вписывать в форму?",
+        faq2_a: "Это зависит от формы. Часто требуются личные данные, подтверждающие документы, сведения о вашей ситуации или другая информация.",
+        faq3_q: "Какие данные особенно важны?",
+        faq3_a: "Особенно важны обязательные поля, сроки, подписи и указания о том, какие дополнительные документы нужно приложить.",
+        faq4_q: "BriefHelden — это юридическая консультация?",
+        faq4_a: "Нет. BriefHelden не предоставляет юридических консультаций. Вы получаете только понятное объяснение формы и её содержания.",
+
+        tip_title: "На что стоит обратить внимание в форме?",
+        tip_sub: "Эти пункты часто особенно важны:",
+        tip1_title: "Проверьте обязательные поля",
+        tip1_text: "Обратите внимание, какие поля обязательно нужно заполнить.",
+        tip2_title: "Читайте пояснения",
+        tip2_text: "Проверьте, есть ли в форме объяснения, дополнительные примечания или инструкции по заполнению.",
+        tip3_title: "Учитывайте документы",
+        tip3_text: "Посмотрите, требуются ли подтверждения, справки или другие документы.",
+        tip4_title: "Сделайте содержание понятным",
+        tip4_text: "Если термины или поля непонятны, простое объяснение часто сразу помогает.",
+
+        foot_home: "Главная",
+        foot_question: "Задать вопрос",
+        foot_refund: "Отказ",
+        foot_imprint: "Выходные данные",
+        foot_terms: "Условия",
+        foot_privacy: "Конфиденциальность"
+      }
+    };
+
+    function updateLinks(lang){
+      const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
+      const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
+
+      const stripeBtn = document.getElementById("stripeBtn");
+      const servicePrimaryBtn = document.getElementById("servicePrimaryBtn");
+      const questionBtn = document.getElementById("questionBtn");
+      const serviceQuestionBtn = document.getElementById("serviceQuestionBtn");
+
+      if(stripeBtn) stripeBtn.href = mainLink;
+      if(servicePrimaryBtn) servicePrimaryBtn.href = mainLink;
+      if(questionBtn) questionBtn.href = questionLink;
+      if(serviceQuestionBtn) serviceQuestionBtn.href = questionLink;
+    }
+
+    function applyLang(lang){
+      const dict = i18n[lang] || i18n.de;
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        if(key in dict){
+          el.textContent = dict[key];
+        }
+      });
+
+      updateLinks(lang);
+      localStorage.setItem("briefhelden_lang", lang);
+    }
+
+    const select = document.getElementById("langSelect");
+    const savedLang = localStorage.getItem("briefhelden_lang");
+    const initialLang = ["de","en","tr","ru"].includes(savedLang) ? savedLang : "de";
+
+    select.value = initialLang;
+    applyLang(initialLang);
+
+    select.addEventListener("change", () => {
+      applyLang(select.value);
+    });
+  </script>
 </body>
 </html>
