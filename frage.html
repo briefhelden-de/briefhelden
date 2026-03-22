@@ -3,12 +3,35 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>BriefHelden – Frage stellen</title>
-  <meta name="description" content="Stellen Sie Ihre Frage zu einem Brief, Formular oder Schreiben. BriefHelden hilft mit einer verständlichen Erklärung per E-Mail." />
+  <meta
+    name="description"
+    content="Stellen Sie Ihre Frage zu einem Brief, Formular oder Schreiben. BriefHelden hilft mit einer verständlichen Erklärung per E-Mail."
+  />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.briefhelden-service.de/frage.html" />
+
+  <meta property="og:title" content="BriefHelden – Frage stellen" />
+  <meta
+    property="og:description"
+    content="Stellen Sie Ihre Frage zu einem Brief, Formular oder Schreiben und erhalten Sie eine verständliche Antwort per E-Mail."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.briefhelden-service.de/frage.html" />
+  <meta property="og:site_name" content="BriefHelden" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CVRQ9QBE94');
+  </script>
 
   <style>
     :root{
-      --nav-bg: rgba(9,24,33,.78);
+      --nav-bg: rgba(9,24,33,.84);
       --nav-border: rgba(255,255,255,.10);
       --text: #0b1220;
       --muted: rgba(11,18,32,.72);
@@ -28,8 +51,8 @@
 
     body{
       margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color: var(--text);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
       background:
         radial-gradient(1200px 700px at 12% 24%, rgba(120,180,255,.32), rgba(255,255,255,0) 60%),
         radial-gradient(1200px 800px at 88% 18%, rgba(120,140,255,.26), rgba(255,255,255,0) 62%),
@@ -40,18 +63,40 @@
 
     a{color:inherit;text-decoration:none}
 
+    .skipLink{
+      position:absolute;
+      left:-9999px;
+      top:auto;
+      width:1px;
+      height:1px;
+      overflow:hidden;
+    }
+
+    .skipLink:focus{
+      left:16px;
+      top:16px;
+      width:auto;
+      height:auto;
+      z-index:999;
+      background:#fff;
+      color:#000;
+      padding:10px 14px;
+      border-radius:10px;
+      font-weight:800;
+    }
+
     header{
       position:sticky;
       top:0;
-      z-index:20;
-      background: var(--nav-bg);
-      backdrop-filter: blur(12px) saturate(140%);
-      border-bottom: 1px solid var(--nav-border);
+      z-index:30;
+      background:var(--nav-bg);
+      backdrop-filter:blur(12px) saturate(140%);
+      border-bottom:1px solid var(--nav-border);
       color:#fff;
     }
 
     .nav{
-      max-width: var(--max);
+      max-width:var(--max);
       margin:0 auto;
       padding:14px 18px;
       display:flex;
@@ -68,6 +113,7 @@
       font-weight:900;
       letter-spacing:.2px;
       white-space:nowrap;
+      flex-shrink:0;
     }
 
     .brand .logo{
@@ -77,7 +123,7 @@
       background:
         radial-gradient(circle at 30% 30%, rgba(255,255,255,.85), rgba(255,255,255,.08)),
         linear-gradient(180deg, rgba(55,120,255,.9), rgba(20,70,190,.9));
-      box-shadow: 0 10px 18px rgba(0,0,0,.18);
+      box-shadow:0 10px 18px rgba(0,0,0,.18);
       position:relative;
     }
 
@@ -86,9 +132,15 @@
       position:absolute;
       inset:7px 6px 7px 10px;
       border-radius:8px;
-      background: rgba(255,255,255,.85);
-      clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+      background:rgba(255,255,255,.85);
+      clip-path:polygon(0 0, 100% 0, 85% 100%, 0 100%);
       opacity:.12;
+    }
+
+    .navRight{
+      display:flex;
+      align-items:center;
+      gap:12px;
     }
 
     nav.links{
@@ -99,7 +151,7 @@
     }
 
     nav.links a{
-      color: rgba(255,255,255,.82);
+      color:rgba(255,255,255,.82);
       font-weight:700;
       font-size:14px;
     }
@@ -116,46 +168,82 @@
     .langSelect{
       appearance:none;
       border:1px solid rgba(255,255,255,.18);
-      background: rgba(0,0,0,.18);
+      background:rgba(0,0,0,.18);
       color:#fff;
-      padding: 8px 36px 8px 12px;
-      border-radius: 12px;
+      padding:8px 36px 8px 12px;
+      border-radius:12px;
       font-weight:800;
       cursor:pointer;
       outline:none;
     }
 
     .langSelect:focus{
-      box-shadow: 0 0 0 3px rgba(90,160,255,.25);
+      box-shadow:0 0 0 3px rgba(90,160,255,.25);
     }
 
     .langWrap:after{
       content:"▾";
       position:absolute;
-      right: 12px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: rgba(255,255,255,.85);
+      right:12px;
+      top:50%;
+      transform:translateY(-50%);
+      color:rgba(255,255,255,.85);
       pointer-events:none;
-      font-size: 12px;
+      font-size:12px;
     }
 
+    .menuBtn{
+      display:none;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(255,255,255,.08);
+      color:#fff;
+      padding:10px 12px;
+      border-radius:12px;
+      font-weight:900;
+      cursor:pointer;
+    }
+
+    .mobileMenu{
+      display:none;
+      padding:0 18px 18px;
+      max-width:var(--max);
+      margin:0 auto;
+    }
+
+    .mobileMenuInner{
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.06);
+      border-radius:18px;
+      overflow:hidden;
+      backdrop-filter:blur(10px);
+    }
+
+    .mobileMenu a{
+      display:block;
+      padding:14px 16px;
+      color:#fff;
+      font-weight:800;
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .mobileMenu a:last-child{border-bottom:none}
+
     .section{
-      padding: 26px 18px 30px;
+      padding:26px 18px 30px;
     }
 
     .wrap{
-      max-width: var(--max);
+      max-width:var(--max);
       margin:0 auto;
     }
 
     .glassCard{
-      background: linear-gradient(180deg, var(--glass), var(--glass2));
-      border: 1px solid var(--stroke);
-      border-radius: var(--radius-xl);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(14px) saturate(140%);
-      -webkit-backdrop-filter: blur(14px) saturate(140%);
+      background:linear-gradient(180deg, var(--glass), var(--glass2));
+      border:1px solid var(--stroke);
+      border-radius:var(--radius-xl);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(14px) saturate(140%);
+      -webkit-backdrop-filter:blur(14px) saturate(140%);
       overflow:hidden;
     }
 
@@ -167,15 +255,15 @@
       text-align:center;
       margin:0 0 10px;
       font-weight:950;
-      font-size: clamp(26px, 3vw, 40px);
+      font-size:clamp(26px, 3vw, 40px);
       letter-spacing:.2px;
     }
 
     .lead{
       text-align:center;
       margin:0 auto 18px;
-      max-width: 860px;
-      color: rgba(11,18,32,.76);
+      max-width:860px;
+      color:rgba(11,18,32,.76);
       line-height:1.65;
       font-size:16px;
     }
@@ -183,11 +271,11 @@
     .statusBox{
       border-radius:18px;
       border:1px solid rgba(255,255,255,.55);
-      background: rgba(255,255,255,.20);
+      background:rgba(255,255,255,.20);
       padding:16px;
       text-align:center;
       font-weight:800;
-      color: rgba(11,18,32,.82);
+      color:rgba(11,18,32,.82);
       margin-bottom:18px;
     }
 
@@ -201,7 +289,7 @@
     .infoItem{
       border-radius:18px;
       border:1px solid rgba(255,255,255,.55);
-      background: rgba(255,255,255,.20);
+      background:rgba(255,255,255,.20);
       padding:16px;
       text-align:center;
     }
@@ -214,7 +302,7 @@
 
     .infoItem p{
       margin:0;
-      color: rgba(11,18,32,.74);
+      color:rgba(11,18,32,.74);
       line-height:1.5;
       font-weight:700;
       font-size:14px;
@@ -223,7 +311,7 @@
     .tallyFrameWrap{
       border-radius:20px;
       border:1px solid rgba(255,255,255,.55);
-      background: rgba(255,255,255,.22);
+      background:rgba(255,255,255,.22);
       padding:10px;
       min-height:760px;
     }
@@ -249,26 +337,99 @@
       align-items:center;
       justify-content:center;
       gap:8px;
-      padding: 12px 18px;
-      border-radius: 14px;
+      padding:12px 18px;
+      border-radius:14px;
       color:#fff;
       font-weight:900;
       min-width:240px;
-      box-shadow: 0 10px 24px rgba(0,0,0,.16);
-      background: linear-gradient(180deg, var(--btn1), var(--btn2));
+      box-shadow:0 10px 24px rgba(0,0,0,.16);
+      background:linear-gradient(180deg, var(--btn1), var(--btn2));
+      text-align:center;
     }
 
     .hint{
       margin-top:16px;
       text-align:center;
-      color: rgba(11,18,32,.72);
+      color:rgba(11,18,32,.72);
       font-weight:700;
       line-height:1.6;
     }
 
-    @media (max-width: 900px){
+    .moreLinks{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 18px 24px;
+    }
+
+    .moreLinksCard{
+      background:linear-gradient(180deg, rgba(255,255,255,.34), rgba(255,255,255,.18));
+      border:1px solid rgba(255,255,255,.50);
+      border-radius:24px;
+      box-shadow:0 18px 40px rgba(0,0,0,.12);
+      padding:22px;
+    }
+
+    .moreLinksTitle{
+      margin:0 0 14px;
+      font-size:26px;
+      font-weight:950;
+      color:#0b1220;
+      text-align:center;
+    }
+
+    .moreLinksGrid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+
+    .moreLinkItem{
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,.55);
+      background:rgba(255,255,255,.22);
+      padding:14px 16px;
+      font-weight:800;
+      color:rgba(11,18,32,.82);
+    }
+
+    .moreLinkItem:hover{
+      background:rgba(255,255,255,.32);
+    }
+
+    footer{
+      margin-top:18px;
+      padding:18px 18px 28px;
+      color:rgba(255,255,255,.82);
+      background:rgba(9,24,33,.82);
+      border-top:1px solid rgba(255,255,255,.10);
+      backdrop-filter:blur(12px) saturate(140%);
+    }
+
+    .footWrap{
+      max-width:var(--max);
+      margin:0 auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .footLinks{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      font-weight:800;
+    }
+
+    .footLinks a{color:rgba(255,255,255,.80)}
+    .footLinks a:hover{color:#fff}
+
+    @media (max-width:900px){
       nav.links{display:none}
+      .menuBtn{display:inline-flex}
       .infoGrid{grid-template-columns:1fr}
+      .moreLinksGrid{grid-template-columns:1fr}
       .tallyFrame{height:880px}
       .tallyFrameWrap{min-height:880px}
       .btn{min-width:100%}
@@ -276,6 +437,8 @@
   </style>
 </head>
 <body>
+  <a class="skipLink" href="#mainContent">Zum Inhalt springen</a>
+
   <header>
     <div class="nav">
       <div class="brand">
@@ -283,68 +446,124 @@
         <div>BriefHelden</div>
       </div>
 
-      <nav class="links" aria-label="Hauptnavigation">
+      <div class="navRight">
+        <nav class="links" aria-label="Hauptnavigation">
+          <a href="index.html" data-i18n="nav_home">Startseite</a>
+          <a href="widerruf.html" data-i18n="nav_refund">Widerruf und Rückerstattung</a>
+          <a href="impressum.html" data-i18n="nav_imprint">Impressum</a>
+          <a href="agb.html" data-i18n="nav_terms">AGB</a>
+          <a href="datenschutz.html" data-i18n="nav_privacy">Datenschutz</a>
+        </nav>
+
+        <div class="langWrap">
+          <select class="langSelect" id="langSelect" aria-label="Sprache">
+            <option value="de">DE</option>
+            <option value="en">EN</option>
+            <option value="tr">TR</option>
+            <option value="ru">RU</option>
+          </select>
+        </div>
+
+        <button class="menuBtn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu">
+          Menü
+        </button>
+      </div>
+    </div>
+
+    <div class="mobileMenu" id="mobileMenu">
+      <div class="mobileMenuInner">
         <a href="index.html" data-i18n="nav_home">Startseite</a>
         <a href="widerruf.html" data-i18n="nav_refund">Widerruf und Rückerstattung</a>
         <a href="impressum.html" data-i18n="nav_imprint">Impressum</a>
         <a href="agb.html" data-i18n="nav_terms">AGB</a>
         <a href="datenschutz.html" data-i18n="nav_privacy">Datenschutz</a>
-      </nav>
-
-      <div class="langWrap">
-        <select class="langSelect" id="langSelect" aria-label="Sprache">
-          <option value="de">DE</option>
-          <option value="en">EN</option>
-          <option value="tr">TR</option>
-          <option value="ru">RU</option>
-        </select>
       </div>
     </div>
   </header>
 
-  <section class="section">
-    <div class="wrap">
-      <div class="glassCard">
-        <div class="pad">
-          <h1 class="title" data-i18n="title">Vielen Dank für Ihre Zahlung</h1>
-          <p class="lead" data-i18n="lead">
-            Bitte stellen Sie jetzt Ihre Frage zu Ihrem Brief, Formular oder Schreiben. Sie erhalten anschließend eine verständliche Antwort per E-Mail.
-          </p>
+  <main id="mainContent">
+    <section class="section">
+      <div class="wrap">
+        <div class="glassCard">
+          <div class="pad">
+            <h1 class="title" data-i18n="title">Vielen Dank für Ihre Zahlung</h1>
 
-          <div class="statusBox" data-i18n="status">
-            Sie sind jetzt im Frage-Service von BriefHelden.
-          </div>
+            <p class="lead" data-i18n="lead">
+              Bitte stellen Sie jetzt Ihre Frage zu Ihrem Brief, Formular oder Schreiben. Sie erhalten anschließend eine verständliche Antwort per E-Mail.
+            </p>
 
-          <div class="infoGrid">
-            <div class="infoItem">
-              <h3 data-i18n="box1_title">Kurze Frage</h3>
-              <p data-i18n="box1_text">Beschreiben Sie kurz Ihr Anliegen oder Ihre Unsicherheit zum Schreiben.</p>
+            <div class="statusBox" data-i18n="status">
+              Sie sind jetzt im Frage-Service von BriefHelden.
             </div>
-            <div class="infoItem">
-              <h3 data-i18n="box2_title">Schnelles Formular</h3>
-              <p data-i18n="box2_text">Füllen Sie nur wenige Felder aus und senden Sie Ihre kurze Frage direkt online.</p>
+
+            <div class="infoGrid">
+              <div class="infoItem">
+                <h3 data-i18n="box1_title">Kurze Frage</h3>
+                <p data-i18n="box1_text">Beschreiben Sie kurz Ihr Anliegen oder Ihre Unsicherheit zum Schreiben.</p>
+              </div>
+
+              <div class="infoItem">
+                <h3 data-i18n="box2_title">Schnelles Formular</h3>
+                <p data-i18n="box2_text">Füllen Sie nur wenige Felder aus und senden Sie Ihre kurze Frage direkt online.</p>
+              </div>
+
+              <div class="infoItem">
+                <h3 data-i18n="box3_title">Antwort per E-Mail</h3>
+                <p data-i18n="box3_text">Sie erhalten eine verständliche Antwort an die angegebene E-Mail-Adresse.</p>
+              </div>
             </div>
-            <div class="infoItem">
-              <h3 data-i18n="box3_title">Antwort per E-Mail</h3>
-              <p data-i18n="box3_text">Sie erhalten eine verständliche Antwort an die angegebene E-Mail-Adresse.</p>
+
+            <div class="tallyFrameWrap">
+              <iframe
+                id="tallyFrame"
+                class="tallyFrame"
+                src=""
+                loading="lazy"
+                title="BriefHelden Tally Formular"
+              ></iframe>
             </div>
-          </div>
 
-          <div class="tallyFrameWrap">
-            <iframe id="tallyFrame" class="tallyFrame" src="" loading="lazy" title="BriefHelden Tally Formular"></iframe>
-          </div>
+            <div class="actions">
+              <a href="index.html" class="btn" data-i18n="back_home">Zur Startseite</a>
+            </div>
 
-          <div class="actions">
-            <a href="index.html" class="btn" data-i18n="back_home">Zur Startseite</a>
-          </div>
-
-          <div class="hint" data-i18n="hint">
-            Kein Rechtsrat – nur verständliche Erklärung in einfacher Sprache.
+            <div class="hint" data-i18n="hint">
+              Kein Rechtsrat – nur verständliche Erklärung in einfacher Sprache.
+            </div>
           </div>
         </div>
       </div>
+    </section>
+
+    <section class="moreLinks">
+      <div class="moreLinksCard">
+        <h2 class="moreLinksTitle" data-i18n="more_title">Weitere häufige Briefe verstehen</h2>
+
+        <div class="moreLinksGrid">
+          <a class="moreLinkItem" href="/inkasso-brief-verstehen.html" data-i18n="more_1">Inkasso Brief verstehen</a>
+          <a class="moreLinkItem" href="/mahnbescheid-verstehen.html" data-i18n="more_2">Mahnbescheid verstehen</a>
+          <a class="moreLinkItem" href="/jobcenter-brief-verstehen.html" data-i18n="more_3">Jobcenter Brief verstehen</a>
+          <a class="moreLinkItem" href="/pfaendungsbescheid-verstehen.html" data-i18n="more_4">Pfändungsbescheid verstehen</a>
+          <a class="moreLinkItem" href="/vollstreckungsbescheid-verstehen.html" data-i18n="more_5">Vollstreckungsbescheid verstehen</a>
+          <a class="moreLinkItem" href="/finanzamt-brief-verstehen.html" data-i18n="more_6">Finanzamt Brief verstehen</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footWrap">
+      <div>© 2026 BriefHelden – Alle Rechte vorbehalten</div>
+      <div class="footLinks">
+        <a href="index.html" data-i18n="foot_home">Startseite</a>
+        <a href="alle-briefe-verstehen.html" data-i18n="foot_all_letters">Alle Briefe verstehen</a>
+        <a href="widerruf.html" data-i18n="foot_refund">Widerruf</a>
+        <a href="impressum.html" data-i18n="foot_imprint">Impressum</a>
+        <a href="agb.html" data-i18n="foot_terms">AGB</a>
+        <a href="datenschutz.html" data-i18n="foot_privacy">Datenschutz</a>
+      </div>
     </div>
-  </section>
+  </footer>
 
   <script>
     const TALLY_LINKS = {
@@ -371,8 +590,22 @@
         box3_title: "Antwort per E-Mail",
         box3_text: "Sie erhalten eine verständliche Antwort an die angegebene E-Mail-Adresse.",
         back_home: "Zur Startseite",
-        hint: "Kein Rechtsrat – nur verständliche Erklärung in einfacher Sprache."
+        hint: "Kein Rechtsrat – nur verständliche Erklärung in einfacher Sprache.",
+        more_title: "Weitere häufige Briefe verstehen",
+        more_1: "Inkasso Brief verstehen",
+        more_2: "Mahnbescheid verstehen",
+        more_3: "Jobcenter Brief verstehen",
+        more_4: "Pfändungsbescheid verstehen",
+        more_5: "Vollstreckungsbescheid verstehen",
+        more_6: "Finanzamt Brief verstehen",
+        foot_home: "Startseite",
+        foot_all_letters: "Alle Briefe verstehen",
+        foot_refund: "Widerruf",
+        foot_imprint: "Impressum",
+        foot_terms: "AGB",
+        foot_privacy: "Datenschutz"
       },
+
       en: {
         nav_home: "Home",
         nav_refund: "Withdrawal and Refunds",
@@ -389,8 +622,22 @@
         box3_title: "Reply by email",
         box3_text: "You will receive a clear answer at the email address you provide.",
         back_home: "Back to home",
-        hint: "No legal advice — only a clear explanation in simple language."
+        hint: "No legal advice — only a clear explanation in simple language.",
+        more_title: "More common letters explained",
+        more_1: "Understand debt collection letter",
+        more_2: "Understand payment order",
+        more_3: "Understand Jobcenter letter",
+        more_4: "Understand garnishment order",
+        more_5: "Understand enforcement order",
+        more_6: "Understand tax office letter",
+        foot_home: "Home",
+        foot_all_letters: "All letters",
+        foot_refund: "Withdrawal",
+        foot_imprint: "Imprint",
+        foot_terms: "Terms",
+        foot_privacy: "Privacy"
       },
+
       tr: {
         nav_home: "Ana Sayfa",
         nav_refund: "Cayma ve İade",
@@ -407,8 +654,22 @@
         box3_title: "E-posta ile yanıt",
         box3_text: "Girdiğiniz e-posta adresine anlaşılır bir yanıt gönderilir.",
         back_home: "Ana sayfaya dön",
-        hint: "Hukuki danışmanlık yok — sadece basit dille anlaşılır açıklama."
+        hint: "Hukuki danışmanlık yok — sadece basit dille anlaşılır açıklama.",
+        more_title: "Diğer sık görülen mektupları anlayın",
+        more_1: "İnkasso mektubunu anla",
+        more_2: "Mahkeme ödeme emrini anla",
+        more_3: "Jobcenter mektubunu anla",
+        more_4: "Haciz yazısını anla",
+        more_5: "İcra kararını anla",
+        more_6: "Vergi dairesi mektubunu anla",
+        foot_home: "Ana Sayfa",
+        foot_all_letters: "Tüm mektuplar",
+        foot_refund: "Cayma",
+        foot_imprint: "Künye",
+        foot_terms: "Şartlar",
+        foot_privacy: "Gizlilik"
       },
+
       ru: {
         nav_home: "Главная",
         nav_refund: "Отказ и возврат",
@@ -425,7 +686,20 @@
         box3_title: "Ответ по e-mail",
         box3_text: "Вы получите понятный ответ на указанный адрес электронной почты.",
         back_home: "На главную",
-        hint: "Не юридическая консультация — только понятное объяснение простым языком."
+        hint: "Не юридическая консультация — только понятное объяснение простым языком.",
+        more_title: "Другие частые письма",
+        more_1: "Понять письмо от инкассо",
+        more_2: "Понять платёжный приказ",
+        more_3: "Понять письмо Jobcenter",
+        more_4: "Понять письмо о взыскании",
+        more_5: "Понять исполнительный приказ",
+        more_6: "Понять письмо из налоговой",
+        foot_home: "Главная",
+        foot_all_letters: "Все письма",
+        foot_refund: "Отказ",
+        foot_imprint: "Выходные данные",
+        foot_terms: "Условия",
+        foot_privacy: "Конфиденциальность"
       }
     };
 
@@ -440,9 +714,11 @@
     }
 
     function applyLang(lang){
-const dict = i18n[lang] || i18n.de;
+      const dict = i18n[lang] || i18n.de;
       document.documentElement.lang = lang;
-      document.getElementById("langSelect").value = lang;
+
+      const select = document.getElementById("langSelect");
+      if(select) select.value = lang;
 
       document.querySelectorAll("[data-i18n]").forEach((el) => {
         const key = el.getAttribute("data-i18n");
@@ -455,7 +731,7 @@ const dict = i18n[lang] || i18n.de;
 
       const frame = document.getElementById("tallyFrame");
       if(frame){
-frame.src = TALLY_LINKS[lang] || TALLY_LINKS.de;
+        frame.src = TALLY_LINKS[lang] || TALLY_LINKS.de;
       }
     }
 
@@ -465,16 +741,17 @@ frame.src = TALLY_LINKS[lang] || TALLY_LINKS.de;
     document.getElementById("langSelect").addEventListener("change", (e) => {
       applyLang(e.target.value);
     });
-  </script>
-  <h2>Weitere häufige Briefe verstehen</h2>
 
-<ul>
-<li><a href="/inkasso-brief-verstehen.html">Inkasso Brief verstehen</a></li>
-<li><a href="/mahnbescheid-verstehen.html">Mahnbescheid verstehen</a></li>
-<li><a href="/jobcenter-brief-verstehen.html">Jobcenter Brief verstehen</a></li>
-<li><a href="/pfaendungsbescheid-verstehen.html">Pfändungsbescheid verstehen</a></li>
-<li><a href="/vollstreckungsbescheid-verstehen.html">Vollstreckungsbescheid verstehen</a></li>
-<li><a href="/finanzamt-brief-verstehen.html">Finanzamt Brief verstehen</a></li>
-</ul>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    if(menuBtn && mobileMenu){
+      menuBtn.addEventListener("click", () => {
+        const isOpen = mobileMenu.style.display === "block";
+        mobileMenu.style.display = isOpen ? "none" : "block";
+        menuBtn.setAttribute("aria-expanded", String(!isOpen));
+      });
+    }
+  </script>
 </body>
 </html>
