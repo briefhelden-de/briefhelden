@@ -9,7 +9,7 @@
     content="Jobcenter Brief einfach verstehen: BriefHelden erklärt Inhalt, Fristen, Aufforderungen und worauf Sie achten sollten – verständlich, klar und ohne komplizierte Fachsprache."
   />
   <meta name="robots" content="index, follow" />
-<link rel="canonical" href="https://www.briefhelden-service.de/jobcenter-brief-verstehen.html" />
+  <link rel="canonical" href="https://www.briefhelden-service.de/jobcenter-brief-verstehen.html" />
 
   <meta property="og:title" content="Jobcenter Brief verstehen – einfach erklärt | BriefHelden" />
   <meta
@@ -17,9 +17,9 @@
     content="Jobcenter Schreiben einfach erklärt. Verstehen Sie Fristen, Forderungen und die wichtigsten Punkte schnell und verständlich."
   />
   <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.briefhelden-service.de/jobcenter-brief-verstehen.html" />
+  <meta property="og:url" content="https://www.briefhelden-service.de/jobcenter-brief-verstehen.html" />
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -171,7 +171,7 @@
       padding:68px 18px 40px;
       background:
         linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.58)),
-url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=2200&q=60");
+        url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=2200&q=60");
       background-size:cover;
       background-position:center;
     }
@@ -263,7 +263,8 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
     .pad{padding:22px}
 
     .headline,
-    .sectionTitle{
+    .sectionTitle,
+    .moreLinks h2{
       text-align:center;
       margin:0 0 10px;
       font-weight:950;
@@ -288,7 +289,8 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
     }
 
     .infoCard,
-    .faqItem{
+    .faqItem,
+    .moreCard{
       border-radius:var(--radius-lg);
       border:1px solid rgba(255,255,255,.55);
       background:rgba(255,255,255,.20);
@@ -296,20 +298,23 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
     }
 
     .infoCard h3,
-    .faqItem h3{
+    .faqItem h3,
+    .moreCard h3{
       margin:0 0 10px;
       font-size:22px;
       font-weight:950;
     }
 
-    .faqItem h3{
+    .faqItem h3,
+    .moreCard h3{
       font-size:18px;
       margin-bottom:8px;
     }
 
     .infoCard p,
     .infoCard li,
-    .faqItem p{
+    .faqItem p,
+    .moreCard p{
       color:rgba(11,18,32,.76);
       line-height:1.65;
       font-weight:700;
@@ -323,7 +328,8 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       padding-left:18px;
     }
 
-    .faqGrid{
+    .faqGrid,
+    .moreGrid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:14px;
@@ -375,6 +381,22 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
     .miniBtn.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
     .miniBtn.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
 
+    .moreLinks{
+      max-width:var(--max);
+      margin:28px auto 0;
+      padding:0 18px 30px;
+    }
+
+    .moreCard{
+      display:block;
+      transition:transform .18s ease, background .18s ease;
+    }
+
+    .moreCard:hover{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,.30);
+    }
+
     footer{
       margin-top:18px;
       padding:18px 18px 28px;
@@ -408,6 +430,7 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       nav.links{display:none}
       .grid2,
       .faqGrid,
+      .moreGrid,
       .serviceMini{grid-template-columns:1fr}
       .cta{min-width:92vw}
       .miniBtn{min-width:100%}
@@ -610,6 +633,44 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
           </div>
         </div>
       </div>
+
+      <div style="height:18px"></div>
+
+      <div class="moreLinks">
+        <h2 data-i18n="more_title">Weitere häufige Briefe verstehen</h2>
+
+        <div class="moreGrid">
+          <a class="moreCard" href="/inkasso-brief-verstehen.html">
+            <h3 data-i18n="more_1_title">Inkasso Brief verstehen</h3>
+            <p data-i18n="more_1_text">Inkasso Schreiben einfach und verständlich erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/mahnbescheid-verstehen.html">
+            <h3 data-i18n="more_2_title">Mahnbescheid verstehen</h3>
+            <p data-i18n="more_2_text">Mahnbescheid und wichtige Fristen besser verstehen.</p>
+          </a>
+
+          <a class="moreCard" href="/jobcenter-brief-verstehen.html">
+            <h3 data-i18n="more_3_title">Jobcenter Brief verstehen</h3>
+            <p data-i18n="more_3_text">Jobcenter Schreiben in einfacher Sprache erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/pfaendungsbescheid-verstehen.html">
+            <h3 data-i18n="more_4_title">Pfändungsbescheid verstehen</h3>
+            <p data-i18n="more_4_text">Pfändungsbescheide klar und verständlich erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/vollstreckungsbescheid-verstehen.html">
+            <h3 data-i18n="more_5_title">Vollstreckungsbescheid verstehen</h3>
+            <p data-i18n="more_5_text">Vollstreckungsbescheid einfach erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/finanzamt-brief-verstehen.html">
+            <h3 data-i18n="more_6_title">Finanzamt Brief verstehen</h3>
+            <p data-i18n="more_6_text">Briefe vom Finanzamt einfach verstehen.</p>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -629,17 +690,17 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
 
   <script>
     const STRIPE_LINKS = {
-de: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
-en: "https://buy.stripe.com/fZubJ0dpXbMAbfpcIZ4sE01",
-tr: "https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
-ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
+      de: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
+      en: "https://buy.stripe.com/fZubJ0dpXbMAbfpcIZ4sE01",
+      tr: "https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
+      ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
     };
 
     const QUESTION_LINKS = {
-de: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
-en: "https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
-tr: "https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
-ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
+      de: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
+      en: "https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
+      tr: "https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
+      ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
     };
 
     const i18n = {
@@ -702,6 +763,20 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         tip3_text: "Schauen Sie, ob bestimmte Nachweise, Formulare oder Unterlagen vom Jobcenter angefordert werden.",
         tip4_title: "Inhalt verständlich machen",
         tip4_text: "Wenn das Schreiben schwer verständlich ist, hilft eine einfache Erklärung oft sofort weiter.",
+
+        more_title: "Weitere häufige Briefe verstehen",
+        more_1_title: "Inkasso Brief verstehen",
+        more_1_text: "Inkasso Schreiben einfach und verständlich erklärt.",
+        more_2_title: "Mahnbescheid verstehen",
+        more_2_text: "Mahnbescheid und wichtige Fristen besser verstehen.",
+        more_3_title: "Jobcenter Brief verstehen",
+        more_3_text: "Jobcenter Schreiben in einfacher Sprache erklärt.",
+        more_4_title: "Pfändungsbescheid verstehen",
+        more_4_text: "Pfändungsbescheide klar und verständlich erklärt.",
+        more_5_title: "Vollstreckungsbescheid verstehen",
+        more_5_text: "Vollstreckungsbescheid einfach erklärt.",
+        more_6_title: "Finanzamt Brief verstehen",
+        more_6_text: "Briefe vom Finanzamt einfach verstehen.",
 
         foot_home: "Startseite",
         foot_question: "Frage stellen",
@@ -771,6 +846,20 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         tip4_title: "Make the content understandable",
         tip4_text: "If the letter is difficult to understand, a simple explanation often helps immediately.",
 
+        more_title: "Understand more common letters",
+        more_1_title: "Understand a debt collection letter",
+        more_1_text: "Debt collection letters explained simply and clearly.",
+        more_2_title: "Understand a payment order",
+        more_2_text: "Understand payment orders and important deadlines better.",
+        more_3_title: "Understand a Jobcenter letter",
+        more_3_text: "Jobcenter letters explained in simple language.",
+        more_4_title: "Understand a garnishment notice",
+        more_4_text: "Garnishment notices explained clearly.",
+        more_5_title: "Understand an enforcement notice",
+        more_5_text: "Enforcement notices explained simply.",
+        more_6_title: "Understand a tax office letter",
+        more_6_text: "Understand tax office letters easily.",
+
         foot_home: "Home",
         foot_question: "Ask a question",
         foot_refund: "Withdrawal",
@@ -838,6 +927,20 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         tip3_text: "Jobcenter’ın belirli belgeler, formlar veya evrak isteyip istemediğine bakın.",
         tip4_title: "İçeriği anlaşılır hale getirin",
         tip4_text: "Mektubu anlamak zorsa, basit bir açıklama çoğu zaman hemen yardımcı olur.",
+
+        more_title: "Diğer sık görülen mektupları anlayın",
+        more_1_title: "İnkasso mektubunu anla",
+        more_1_text: "İnkasso yazıları basit ve anlaşılır şekilde açıklanır.",
+        more_2_title: "Ödeme emrini anla",
+        more_2_text: "Ödeme emri ve önemli süreleri daha iyi anlayın.",
+        more_3_title: "Jobcenter mektubunu anla",
+        more_3_text: "Jobcenter yazıları basit dille açıklanır.",
+        more_4_title: "Haciz kararını anla",
+        more_4_text: "Haciz kararları açık şekilde açıklanır.",
+        more_5_title: "İcra kararını anla",
+        more_5_text: "İcra kararları basit şekilde açıklanır.",
+        more_6_title: "Vergi dairesi mektubunu anla",
+        more_6_text: "Vergi dairesi yazılarını kolayca anlayın.",
 
         foot_home: "Ana Sayfa",
         foot_question: "Soru sor",
@@ -907,6 +1010,20 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         tip4_title: "Сделайте содержание понятным",
         tip4_text: "Если письмо трудно понять, простое объяснение часто сразу помогает.",
 
+        more_title: "Другие часто встречающиеся письма",
+        more_1_title: "Понять письмо от инкассо",
+        more_1_text: "Письма от инкассо объяснены просто и понятно.",
+        more_2_title: "Понять платёжный приказ",
+        more_2_text: "Лучше понять платёжный приказ и важные сроки.",
+        more_3_title: "Понять письмо Jobcenter",
+        more_3_text: "Письма Jobcenter объяснены простым языком.",
+        more_4_title: "Понять постановление о взыскании",
+        more_4_text: "Постановления о взыскании объяснены понятно.",
+        more_5_title: "Понять исполнительный приказ",
+        more_5_text: "Исполнительный приказ объяснён просто.",
+        more_6_title: "Понять письмо из налоговой",
+        more_6_text: "Легко понять письма из налоговой.",
+
         foot_home: "Главная",
         foot_question: "Задать вопрос",
         foot_refund: "Отказ",
@@ -917,8 +1034,8 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
     };
 
     function updateLinks(lang){
-const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
-const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
+      const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
+      const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
 
       const stripeBtn = document.getElementById("stripeBtn");
       const servicePrimaryBtn = document.getElementById("servicePrimaryBtn");
@@ -932,7 +1049,7 @@ const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
     }
 
     function applyLang(lang){
-const dict = i18n[lang] || i18n.de;
+      const dict = i18n[lang] || i18n.de;
       document.documentElement.lang = lang;
 
       document.querySelectorAll("[data-i18n]").forEach((el) => {
@@ -957,15 +1074,5 @@ const dict = i18n[lang] || i18n.de;
       applyLang(select.value);
     });
   </script>
-  <h2>Weitere häufige Briefe verstehen</h2>
-
-<ul>
-<li><a href="/inkasso-brief-verstehen.html">Inkasso Brief verstehen</a></li>
-<li><a href="/mahnbescheid-verstehen.html">Mahnbescheid verstehen</a></li>
-<li><a href="/jobcenter-brief-verstehen.html">Jobcenter Brief verstehen</a></li>
-<li><a href="/pfaendungsbescheid-verstehen.html">Pfändungsbescheid verstehen</a></li>
-<li><a href="/vollstreckungsbescheid-verstehen.html">Vollstreckungsbescheid verstehen</a></li>
-<li><a href="/finanzamt-brief-verstehen.html">Finanzamt Brief verstehen</a></li>
-</ul>
 </body>
 </html>
