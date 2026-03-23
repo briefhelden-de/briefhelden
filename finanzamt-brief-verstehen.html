@@ -380,14 +380,6 @@
     .miniBtn.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
     .miniBtn.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
 
-    .ctaPanel{
-      text-align:center;
-    }
-
-    .ctaPanel .sectionSub{
-      margin-bottom:18px;
-    }
-
     footer{
       margin-top:18px;
       padding:18px 18px 28px;
@@ -644,29 +636,6 @@
           </div>
         </div>
       </div>
-
-      <div style="height:18px"></div>
-
-      <div class="glassCard">
-        <div class="pad ctaPanel">
-          <h2 class="sectionTitle" data-i18n="bottom_title">Finanzamt Brief einfach verständlich erklären lassen</h2>
-          <p class="sectionSub" data-i18n="bottom_sub">
-            Laden Sie Ihr Schreiben hoch oder stellen Sie eine kurze Frage. BriefHelden erklärt sprachlich verständlich, welche Angaben im Dokument enthalten sind.
-          </p>
-
-          <div class="ctaGroup">
-            <a class="cta primary" id="bottomStripeBtn" href="#" rel="noopener">
-              <span data-i18n="bottom_cta">Jetzt Finanzamt Brief erklären lassen – 6,90 €</span>
-              <span aria-hidden="true">›</span>
-            </a>
-
-            <a class="cta secondary" id="bottomQuestionBtn" href="#" rel="noopener">
-              <span data-i18n="bottom_question_cta">Kurze Frage stellen – 1,49 €</span>
-              <span aria-hidden="true">›</span>
-            </a>
-          </div>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -777,11 +746,6 @@
         tip4_title: "Inhalt verständlich machen",
         tip4_text: "Wenn das Schreiben kompliziert oder unklar formuliert ist, hilft eine einfache Erklärung oft dabei, die enthaltenen Angaben besser zu erfassen.",
 
-        bottom_title: "Finanzamt Brief einfach verständlich erklären lassen",
-        bottom_sub: "Laden Sie Ihr Schreiben hoch oder stellen Sie eine kurze Frage. BriefHelden erklärt sprachlich verständlich, welche Angaben im Dokument enthalten sind.",
-        bottom_cta: "Jetzt Finanzamt Brief erklären lassen – 6,90 €",
-        bottom_question_cta: "Kurze Frage stellen – 1,49 €",
-
         more_title: "Weitere häufige Briefe verstehen",
         more_1: "Inkasso Brief verstehen",
         more_2: "Mahnbescheid verstehen",
@@ -863,11 +827,6 @@
         tip3_text: "Pay attention to which tax year or which type of tax the document refers to.",
         tip4_title: "Make the content understandable",
         tip4_text: "If the wording seems complicated or unclear, a simple explanation often helps you grasp the included details more easily.",
-
-        bottom_title: "Get your tax office letter explained in simple language",
-        bottom_sub: "Upload your document or ask a short question. BriefHelden explains in plain language which details are included in the document.",
-        bottom_cta: "Get tax office letter explained now – €6.90",
-        bottom_question_cta: "Ask a short question – €1.49",
 
         more_title: "Understand more common letters",
         more_1: "Understand a debt collection letter",
@@ -951,11 +910,6 @@
         tip4_title: "İçeriği anlaşılır hale getirin",
         tip4_text: "İfadeler karmaşık veya belirsiz görünüyorsa, basit bir açıklama yer alan bilgileri daha kolay kavramanıza yardımcı olur.",
 
-        bottom_title: "Vergi dairesi mektubunu anlaşılır şekilde açıklatın",
-        bottom_sub: "Belgenizi yükleyin veya kısa bir soru sorun. BriefHelden, belgede hangi bilgilerin yer aldığını anlaşılır dilde açıklar.",
-        bottom_cta: "Vergi dairesi mektubunu şimdi açıklat – 6,90 €",
-        bottom_question_cta: "Kısa soru sor – 1,49 €",
-
         more_title: "Diğer sık görülen mektupları anlayın",
         more_1: "İnkasso mektubunu anlayın",
         more_2: "Ödeme emrini anlayın",
@@ -1038,11 +992,6 @@
         tip4_title: "Сделайте содержание понятным",
         tip4_text: "Если формулировки кажутся сложными или неясными, простое объяснение часто помогает легче воспринять содержащиеся в нём сведения.",
 
-        bottom_title: "Получить понятное объяснение письма из налоговой",
-        bottom_sub: "Загрузите документ или задайте короткий вопрос. BriefHelden простым языком объяснит, какие сведения содержатся в документе.",
-        bottom_cta: "Объяснить письмо из налоговой – 6,90 €",
-        bottom_question_cta: "Задать короткий вопрос – 1,49 €",
-
         more_title: "Понять другие частые письма",
         more_1: "Понять письмо от инкассо",
         more_2: "Понять судебный приказ",
@@ -1069,15 +1018,11 @@
       const servicePrimaryBtn = document.getElementById("servicePrimaryBtn");
       const questionBtn = document.getElementById("questionBtn");
       const serviceQuestionBtn = document.getElementById("serviceQuestionBtn");
-      const bottomStripeBtn = document.getElementById("bottomStripeBtn");
-      const bottomQuestionBtn = document.getElementById("bottomQuestionBtn");
 
       if(stripeBtn) stripeBtn.href = mainLink;
       if(servicePrimaryBtn) servicePrimaryBtn.href = mainLink;
-      if(bottomStripeBtn) bottomStripeBtn.href = mainLink;
       if(questionBtn) questionBtn.href = questionLink;
       if(serviceQuestionBtn) serviceQuestionBtn.href = questionLink;
-      if(bottomQuestionBtn) bottomQuestionBtn.href = questionLink;
     }
 
     function updateMeta(lang){
