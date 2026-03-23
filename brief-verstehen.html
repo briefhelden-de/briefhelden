@@ -4,15 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Brief verstehen – komplizierte Schreiben einfach erklärt | BriefHelden</title>
-
-  <meta name="description" content="Komplizierten Brief erhalten? BriefHelden erklärt Briefe von Behörden, Inkasso, Mahnungen, Jobcenter und Formulare einfach und verständlich." />
+  <meta
+    name="description"
+    content="Komplizierten Brief erhalten? BriefHelden erklärt Schreiben von Behörden, Inkasso, Mahnungen, Jobcenter und Formularen einfach und verständlich."
+  />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.briefhelden-service.de/brief-verstehen.html" />
 
   <meta property="og:title" content="Brief verstehen – einfach erklärt | BriefHelden" />
-  <meta property="og:description" content="BriefHelden hilft dabei, komplizierte Briefe einfach und verständlich zu erklären." />
+  <meta
+    property="og:description"
+    content="BriefHelden hilft dabei, komplizierte Briefe sprachlich verständlich einzuordnen."
+  />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.briefhelden-service.de/brief-verstehen.html" />
+  <meta property="og:image" content="https://www.briefhelden-service.de/og-image.jpg" />
+
+  <meta name="theme-color" content="#0b1220" />
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
   <script>
@@ -24,34 +32,46 @@
 
   <style>
     :root{
-      --nav-bg: rgba(9,24,33,.78);
-      --nav-border: rgba(255,255,255,.10);
-      --text: #0b1220;
-      --glass: rgba(255,255,255,.28);
-      --glass2: rgba(255,255,255,.16);
-      --stroke: rgba(255,255,255,.36);
-      --shadow: 0 18px 40px rgba(0,0,0,.18);
-      --btn1: #2f6fff;
-      --btn2: #1f56b8;
-      --btnGreen1: #12b76a;
-      --btnGreen2: #079455;
-      --max: 1120px;
+      --bg:#f4f8ff;
+      --bg2:#eef5ff;
+      --text:#0b1220;
+      --muted:#4c5a73;
+      --white:#ffffff;
+      --line:rgba(11,18,32,.08);
+      --card:rgba(255,255,255,.84);
+      --shadow:0 20px 50px rgba(15,23,42,.10);
+      --primary:#2f6fff;
+      --primary2:#1f56b8;
+      --green:#12b76a;
+      --green2:#079455;
+      --dark:#091821;
+      --max:1140px;
+      --radius:22px;
     }
 
     *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{
       margin:0;
       font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
       color:var(--text);
-      background:#f5f9ff;
+      background:
+        radial-gradient(circle at top left, rgba(47,111,255,.14), transparent 30%),
+        radial-gradient(circle at top right, rgba(18,183,106,.10), transparent 26%),
+        linear-gradient(180deg,var(--bg),var(--bg2));
+      line-height:1.6;
     }
 
-    header{
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    .topbar{
       position:sticky;
       top:0;
-      z-index:20;
-      background:var(--nav-bg);
-      backdrop-filter:blur(10px);
+      z-index:50;
+      backdrop-filter:blur(14px);
+      background:rgba(9,24,33,.78);
+      border-bottom:1px solid rgba(255,255,255,.08);
     }
 
     .nav{
@@ -59,173 +79,977 @@
       margin:0 auto;
       padding:14px 18px;
       display:flex;
-      justify-content:space-between;
       align-items:center;
-      color:#fff;
-    }
-
-    .hero{
-      padding:80px 20px;
-      text-align:center;
-      color:#fff;
-      background:
-        linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.6)),
-        url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=2200&q=60");
-      background-size:cover;
-    }
-
-    .hero h1{
-      font-size:42px;
-      margin-bottom:10px;
-    }
-
-    .hero p{
-      max-width:800px;
-      margin:0 auto 20px;
-      opacity:.9;
-    }
-
-    .cta{
-      display:inline-block;
-      margin:8px;
-      padding:14px 20px;
-      border-radius:14px;
-      color:#fff;
-      font-weight:900;
-    }
-
-    .primary{background:linear-gradient(180deg,var(--btn1),var(--btn2))}
-    .secondary{background:linear-gradient(180deg,var(--btnGreen1),var(--btnGreen2))}
-
-    .section{
-      max-width:var(--max);
-      margin:30px auto;
-      padding:0 20px;
-    }
-
-    .card{
-      background:rgba(255,255,255,.7);
-      border-radius:20px;
-      padding:20px;
-      margin-bottom:18px;
-      box-shadow:var(--shadow);
-    }
-
-    h2{margin-top:0}
-
-    .grid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
+      justify-content:space-between;
       gap:14px;
     }
 
-    @media(max-width:900px){
-      .grid{grid-template-columns:1fr}
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      color:#fff;
+      font-weight:900;
+      letter-spacing:.2px;
     }
 
-    .disclaimer{
-      margin-top:14px;
+    .brand-badge{
+      width:42px;
+      height:42px;
+      border-radius:14px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(180deg,#ffffff,#dfeaff);
+      color:#1845a4;
+      box-shadow:0 10px 30px rgba(0,0,0,.18);
+      font-size:18px;
+      font-weight:900;
+    }
+
+    .nav-right{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .lang-switch{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+    }
+
+    .lang-btn{
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(255,255,255,.08);
+      color:#fff;
+      padding:9px 12px;
+      border-radius:12px;
+      font-weight:800;
+      cursor:pointer;
+      transition:.2s ease;
+      min-width:54px;
+    }
+
+    .lang-btn:hover,
+    .lang-btn.active{
+      background:#fff;
+      color:#091821;
+      border-color:#fff;
+    }
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      padding:72px 20px 46px;
+      color:#fff;
+      background:
+        linear-gradient(180deg, rgba(5,14,28,.62), rgba(5,14,28,.72)),
+        url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=2200&q=80") center/cover no-repeat;
+    }
+
+    .hero-wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:28px;
+      align-items:center;
+    }
+
+    .hero-copy{
+      max-width:720px;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:9px 14px;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.16);
+      border-radius:999px;
+      font-weight:800;
+      font-size:14px;
+      margin-bottom:18px;
+    }
+
+    .hero h1{
+      font-size:clamp(34px,5vw,58px);
+      line-height:1.08;
+      margin:0 0 16px;
+      letter-spacing:-.02em;
+    }
+
+    .hero p{
+      margin:0 0 24px;
+      max-width:760px;
+      font-size:18px;
+      color:rgba(255,255,255,.92);
+    }
+
+    .cta-row{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:18px;
+    }
+
+    .cta{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:15px 20px;
+      border-radius:16px;
+      color:#fff;
+      font-weight:900;
+      box-shadow:0 16px 30px rgba(0,0,0,.18);
+      transition:transform .18s ease, box-shadow .18s ease, opacity .18s ease;
+      text-align:center;
+    }
+
+    .cta:hover{
+      transform:translateY(-1px);
+      box-shadow:0 20px 36px rgba(0,0,0,.22);
+    }
+
+    .cta.primary{
+      background:linear-gradient(180deg,var(--primary),var(--primary2));
+    }
+
+    .cta.secondary{
+      background:linear-gradient(180deg,var(--green),var(--green2));
+    }
+
+    .hero-note{
+      font-size:14px;
+      color:rgba(255,255,255,.84);
+      max-width:760px;
+    }
+
+    .hero-card{
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.16);
+      border-radius:26px;
+      padding:22px;
+      backdrop-filter:blur(14px);
+      box-shadow:0 22px 40px rgba(0,0,0,.18);
+    }
+
+    .hero-card h3{
+      margin:0 0 12px;
+      font-size:22px;
+    }
+
+    .hero-list{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:grid;
+      gap:10px;
+    }
+
+    .hero-list li{
+      padding:12px 14px;
+      border-radius:14px;
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.10);
       font-weight:700;
-      color:#555;
+      color:#fff;
+    }
+
+    .section{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:28px 20px;
+    }
+
+    .grid-2,
+    .grid-3{
+      display:grid;
+      gap:18px;
+    }
+
+    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:26px;
+      box-shadow:var(--shadow);
+    }
+
+    .card h2,
+    .card h3{
+      margin:0 0 12px;
+      line-height:1.2;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    .icon-list,
+    .simple-list,
+    .link-list{
+      list-style:none;
+      padding:0;
+      margin:0;
+      display:grid;
+      gap:12px;
+    }
+
+    .icon-list li,
+    .simple-list li,
+    .link-list li a{
+      border-radius:16px;
+      padding:14px 16px;
+      background:#fff;
+      border:1px solid var(--line);
+      font-weight:700;
+      color:var(--text);
+    }
+
+    .link-list li a{
+      display:block;
+      transition:border-color .18s ease, transform .18s ease, box-shadow .18s ease;
+    }
+
+    .link-list li a:hover{
+      border-color:rgba(47,111,255,.28);
+      transform:translateY(-1px);
+      box-shadow:0 12px 24px rgba(47,111,255,.08);
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(3,minmax(0,1fr));
+      gap:18px;
+    }
+
+    .step{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:22px;
+      box-shadow:var(--shadow);
+    }
+
+    .step-num{
+      width:40px;
+      height:40px;
+      border-radius:12px;
+      display:grid;
+      place-items:center;
+      font-weight:900;
+      color:#fff;
+      background:linear-gradient(180deg,var(--primary),var(--primary2));
+      margin-bottom:14px;
+    }
+
+    .trust{
+      display:grid;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:14px;
+    }
+
+    .trust-item{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:18px;
+      font-weight:800;
+      text-align:center;
+      box-shadow:var(--shadow);
+    }
+
+    .faq-item{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:18px 18px 16px;
+      box-shadow:var(--shadow);
+    }
+
+    .faq-item + .faq-item{margin-top:12px}
+    .faq-item h3{margin-bottom:8px;font-size:18px}
+    .faq-item p{margin:0;color:var(--muted)}
+
+    .final-cta{
+      text-align:center;
+      padding:8px 0 18px;
+    }
+
+    .final-cta h2{
+      margin:0 0 10px;
+      font-size:clamp(28px,4vw,42px);
+    }
+
+    .final-cta p{
+      margin:0 auto 18px;
+      max-width:760px;
+      color:var(--muted);
+    }
+
+    .disclaimer-box{
+      margin-top:16px;
+      padding:16px 18px;
+      border-radius:18px;
+      background:#fff8e8;
+      border:1px solid rgba(171,132,31,.18);
+      color:#6a5412;
+      font-weight:700;
     }
 
     footer{
-      background:#091821;
+      margin-top:18px;
+      background:var(--dark);
       color:#fff;
-      padding:20px;
+    }
+
+    .footer-wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:28px 20px 34px;
+      display:grid;
+      gap:12px;
       text-align:center;
-      margin-top:30px;
     }
 
-    .moreLinks{
-      margin-top:30px;
+    .footer-links{
+      display:flex;
+      justify-content:center;
+      gap:16px;
+      flex-wrap:wrap;
+      color:rgba(255,255,255,.85);
+      font-weight:700;
     }
 
+    .footer-links a:hover{color:#fff}
+
+    @media (max-width: 980px){
+      .hero-wrap,
+      .grid-2,
+      .grid-3,
+      .steps,
+      .trust{
+        grid-template-columns:1fr;
+      }
+      .nav{
+        align-items:flex-start;
+        flex-direction:column;
+      }
+      .nav-right{
+        width:100%;
+        justify-content:flex-end;
+      }
+    }
+
+    @media (max-width: 640px){
+      .hero{
+        padding:56px 16px 34px;
+      }
+      .section{
+        padding:20px 16px;
+      }
+      .card,
+      .step,
+      .trust-item,
+      .faq-item{
+        padding:20px;
+      }
+      .cta{
+        width:100%;
+      }
+      .lang-switch{
+        width:100%;
+        justify-content:flex-start;
+      }
+    }
   </style>
 </head>
 <body>
+  <header class="topbar">
+    <div class="nav">
+      <a class="brand" href="/">
+        <span class="brand-badge">BH</span>
+        <span>BriefHelden</span>
+      </a>
 
-<header>
-  <div class="nav">
-    <strong>BriefHelden</strong>
-  </div>
-</header>
-
-<section class="hero">
-  <h1>Brief verstehen – einfach erklärt</h1>
-  <p>
-    Schwierige Briefe? Wir erklären Behörden, Inkasso, Mahnungen und Formulare einfach und verständlich.
-  </p>
-
-  <a class="cta primary" href="https://buy.stripe.com/14A9ASbhP2c083deR74sE00">Kompletten Brief erklären – 6,90 €</a>
-  <a class="cta secondary" href="https://buy.stripe.com/8x228q71z5occjt4ct4sE04">Kurze Frage – 1,49 €</a>
-</section>
-
-<div class="section">
-
-  <div class="card">
-    <h2>Warum viele Briefe schwer verständlich sind</h2>
-    <p>
-      Behörden und Unternehmen verwenden oft komplizierte Sprache, Fachbegriffe und lange Sätze.
-      Dadurch ist nicht sofort klar, was genau gemeint ist und ob Sie handeln müssen.
-    </p>
-  </div>
-
-  <div class="grid">
-    <div class="card">
-      <h2>Typische Probleme</h2>
-      <ul>
-        <li>Fachbegriffe</li>
-        <li>unklare Fristen</li>
-        <li>komplizierte Formulierungen</li>
-        <li>unsichere Bedeutung</li>
-      </ul>
+      <div class="nav-right">
+        <div class="lang-switch" aria-label="Language switcher">
+          <button class="lang-btn active" data-lang="de" type="button">DE</button>
+          <button class="lang-btn" data-lang="en" type="button">EN</button>
+          <button class="lang-btn" data-lang="tr" type="button">TR</button>
+          <button class="lang-btn" data-lang="ru" type="button">RU</button>
+        </div>
+      </div>
     </div>
+  </header>
 
-    <div class="card">
-      <h2>Unsere Lösung</h2>
-      <ul>
-        <li>klare Erklärung</li>
-        <li>einfach verständlich</li>
-        <li>schnelle Antwort</li>
-        <li>diskret per E-Mail</li>
-      </ul>
+  <main>
+    <section class="hero">
+      <div class="hero-wrap">
+        <div class="hero-copy">
+          <div class="eyebrow" data-i18n="heroEyebrow">Einfacher verstehen statt lange rätseln</div>
+          <h1 data-i18n="heroTitle">Brief verstehen – einfach erklärt</h1>
+          <p data-i18n="heroText">
+            Schwierige Briefe von Behörden, Inkasso, Jobcenter, Mahnungen oder Formularen
+            sprachlich verständlich erklärt – klar, diskret und in einfacher Sprache.
+          </p>
+
+          <div class="cta-row">
+            <a
+              id="ctaPremium"
+              class="cta primary"
+              href="https://buy.stripe.com/14A9ASbhP2c083deR74sE00"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="ctaPremium"
+            >
+              Komplette Brief-Erklärung – 6,90 €
+            </a>
+
+            <a
+              id="ctaQuestion"
+              class="cta secondary"
+              href="https://buy.stripe.com/8x228q71z5occjt4ct4sE04"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-i18n="ctaQuestion"
+            >
+              Kurze Frage – 1,49 €
+            </a>
+          </div>
+
+          <div class="hero-note" data-i18n="heroNote">
+            Keine Rechtsberatung, keine rechtliche Bewertung und keine Handlungsempfehlung.
+            Es geht um eine sprachlich verständliche Einordnung des Schreibens und der enthaltenen Angaben.
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <h3 data-i18n="heroCardTitle">Was BriefHelden für Sie verständlich macht</h3>
+          <ul class="hero-list">
+            <li data-i18n="heroCard1">Behördenbriefe</li>
+            <li data-i18n="heroCard2">Inkasso-Schreiben</li>
+            <li data-i18n="heroCard3">Mahnungen und Bescheide</li>
+            <li data-i18n="heroCard4">Jobcenter- und Formulartexte</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid-2">
+        <div class="card">
+          <h2 data-i18n="whyTitle">Warum viele Briefe schwer verständlich wirken</h2>
+          <p data-i18n="whyText">
+            Viele Schreiben enthalten Fachbegriffe, lange Sätze und formelle Sprache.
+            Dadurch ist oft unklar, welche Angaben genau im Schreiben stehen und wie der Inhalt sprachlich einzuordnen ist.
+          </p>
+        </div>
+
+        <div class="card">
+          <h2 data-i18n="solutionTitle">Wie BriefHelden hilft</h2>
+          <p data-i18n="solutionText">
+            BriefHelden übersetzt komplizierte Inhalte in einfache, gut lesbare Sprache.
+            So wird verständlicher, was im Brief steht und welche Informationen darin genannt werden.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid-2">
+        <div class="card">
+          <h2 data-i18n="problemsTitle">Typische Probleme bei schwierigen Schreiben</h2>
+          <ul class="icon-list">
+            <li data-i18n="problem1">Fachbegriffe und formelle Sprache</li>
+            <li data-i18n="problem2">Unklare Bedeutung einzelner Abschnitte</li>
+            <li data-i18n="problem3">Lange und komplizierte Formulierungen</li>
+            <li data-i18n="problem4">Viele Informationen auf engem Raum</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2 data-i18n="benefitsTitle">Darauf ist BriefHelden ausgelegt</h2>
+          <ul class="icon-list">
+            <li data-i18n="benefit1">Verständliche Sprache statt Fachdeutsch</li>
+            <li data-i18n="benefit2">Klare Einordnung des Inhalts</li>
+            <li data-i18n="benefit3">Diskrete Zustellung per E-Mail</li>
+            <li data-i18n="benefit4">Schnell, klar und nutzerfreundlich</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h2 data-i18n="lettersTitle">Welche Briefe häufig erklärt werden</h2>
+        <div class="trust">
+          <div class="trust-item" data-i18n="letter1">Behördenbriefe</div>
+          <div class="trust-item" data-i18n="letter2">Jobcenter-Schreiben</div>
+          <div class="trust-item" data-i18n="letter3">Inkasso-Briefe</div>
+          <div class="trust-item" data-i18n="letter4">Mahnungen</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h2 data-i18n="stepsTitle">So einfach funktioniert es</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <h3 data-i18n="step1Title">Passende Option wählen</h3>
+            <p data-i18n="step1Text">
+              Wählen Sie entweder die komplette Brief-Erklärung für 6,90 € oder die kurze Frage für 1,49 €.
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="step-num">2</div>
+            <h3 data-i18n="step2Title">Schreiben oder Frage senden</h3>
+            <p data-i18n="step2Text">
+              Der Inhalt wird über das jeweilige Formular übermittelt und anschließend sprachlich verständlich aufbereitet.
+            </p>
+          </div>
+
+          <div class="step">
+            <div class="step-num">3</div>
+            <h3 data-i18n="step3Title">Verständliche Erklärung erhalten</h3>
+            <p data-i18n="step3Text">
+              Die Rückmeldung erfolgt klar formuliert per E-Mail, damit der Inhalt des Schreibens leichter nachvollziehbar wird.
+            </p>
+          </div>
+        </div>
+
+        <div class="disclaimer-box" data-i18n="rdgBox">
+          Wichtiger Hinweis: BriefHelden bietet keine Rechtsberatung. Es erfolgt keine rechtliche Prüfung,
+          keine rechtliche Bewertung und keine Empfehlung zum weiteren Vorgehen.
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h2 data-i18n="faqTitle">Häufige Fragen</h2>
+
+        <div class="faq-item">
+          <h3 data-i18n="faq1Q">Ist BriefHelden eine Rechtsberatung?</h3>
+          <p data-i18n="faq1A">
+            Nein. BriefHelden bietet keine Rechtsberatung und keine rechtliche Bewertung.
+            Der Service dient dazu, den Inhalt eines Schreibens sprachlich verständlich einzuordnen.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 data-i18n="faq2Q">Welche Schreiben passen zu diesem Service?</h3>
+          <p data-i18n="faq2A">
+            Häufig sind es Behördenbriefe, Inkasso-Schreiben, Mahnungen, Jobcenter-Texte, Formulare
+            oder allgemein schwer verständliche Schreiben.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 data-i18n="faq3Q">Was wird genau erklärt?</h3>
+          <p data-i18n="faq3A">
+            Erklärt wird, welche Angaben im Schreiben enthalten sind und wie diese sprachlich leichter verständlich werden.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <h3 data-i18n="faq4Q">Wie erfolgt die Rückmeldung?</h3>
+          <p data-i18n="faq4A">
+            Die Erklärung wird diskret und verständlich per E-Mail übermittelt.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card">
+        <h2 data-i18n="linksTitle">Weitere häufig gesuchte Seiten</h2>
+        <ul class="link-list">
+          <li><a href="/inkasso-brief-verstehen.html" data-i18n="link1">Inkasso Brief verstehen</a></li>
+          <li><a href="/mahnbescheid-verstehen.html" data-i18n="link2">Mahnbescheid verstehen</a></li>
+          <li><a href="/jobcenter-brief-verstehen.html" data-i18n="link3">Jobcenter Brief verstehen</a></li>
+          <li><a href="/pfaendungsbescheid-verstehen.html" data-i18n="link4">Pfändungsbescheid verstehen</a></li>
+          <li><a href="/vollstreckungsbescheid-verstehen.html" data-i18n="link5">Vollstreckungsbescheid verstehen</a></li>
+          <li><a href="/finanzamt-brief-verstehen.html" data-i18n="link6">Finanzamt Brief verstehen</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section final-cta">
+      <h2 data-i18n="finalTitle">Komplizierten Brief einfacher verstehen</h2>
+      <p data-i18n="finalText">
+        Wählen Sie die passende Option und erhalten Sie eine klare, leicht verständliche Erklärung des Inhalts.
+      </p>
+
+      <div class="cta-row" style="justify-content:center;">
+        <a
+          id="ctaPremiumBottom"
+          class="cta primary"
+          href="https://buy.stripe.com/14A9ASbhP2c083deR74sE00"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-i18n="ctaPremium"
+        >
+          Komplette Brief-Erklärung – 6,90 €
+        </a>
+
+        <a
+          id="ctaQuestionBottom"
+          class="cta secondary"
+          href="https://buy.stripe.com/8x228q71z5occjt4ct4sE04"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-i18n="ctaQuestion"
+        >
+          Kurze Frage – 1,49 €
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-wrap">
+      <strong>© 2026 BriefHelden</strong>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/impressum.html">Impressum</a>
+        <a href="/datenschutz.html">Datenschutz</a>
+      </div>
+      <div data-i18n="footerNote">
+        BriefHelden erklärt Inhalte in verständlicher Sprache. Keine Rechtsberatung.
+      </div>
     </div>
-  </div>
+  </footer>
 
-  <div class="card">
-    <h2>Welche Briefe wir erklären</h2>
-    <div class="grid">
-      <div>Behördenbriefe</div>
-      <div>Jobcenter Schreiben</div>
-      <div>Inkasso Briefe</div>
-      <div>Mahnungen</div>
-    </div>
-  </div>
+  <script>
+    const STRIPE_LINKS = {
+      de: {
+        premium: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
+        question: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04"
+      },
+      en: {
+        premium: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
+        question: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04"
+      },
+      tr: {
+        premium: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
+        question: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04"
+      },
+      ru: {
+        premium: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
+        question: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04"
+      }
+    };
 
-  <div class="card">
-    <h2>Häufige Fragen</h2>
-    <p><strong>Ist das Rechtsberatung?</strong><br>
-    Nein. Keine Rechtsberatung im Sinne des RDG – nur verständliche Erklärung.</p>
-  </div>
+    const translations = {
+      de: {
+        pageTitle: "Brief verstehen – komplizierte Schreiben einfach erklärt | BriefHelden",
+        metaDescription: "Komplizierten Brief erhalten? BriefHelden erklärt Schreiben von Behörden, Inkasso, Mahnungen, Jobcenter und Formularen einfach und verständlich.",
+        ogTitle: "Brief verstehen – einfach erklärt | BriefHelden",
+        ogDescription: "BriefHelden hilft dabei, komplizierte Briefe sprachlich verständlich einzuordnen.",
+        heroEyebrow: "Einfacher verstehen statt lange rätseln",
+        heroTitle: "Brief verstehen – einfach erklärt",
+        heroText: "Schwierige Briefe von Behörden, Inkasso, Jobcenter, Mahnungen oder Formularen sprachlich verständlich erklärt – klar, diskret und in einfacher Sprache.",
+        ctaPremium: "Komplette Brief-Erklärung – 6,90 €",
+        ctaQuestion: "Kurze Frage – 1,49 €",
+        heroNote: "Keine Rechtsberatung, keine rechtliche Bewertung und keine Handlungsempfehlung. Es geht um eine sprachlich verständliche Einordnung des Schreibens und der enthaltenen Angaben.",
+        heroCardTitle: "Was BriefHelden für Sie verständlich macht",
+        heroCard1: "Behördenbriefe",
+        heroCard2: "Inkasso-Schreiben",
+        heroCard3: "Mahnungen und Bescheide",
+        heroCard4: "Jobcenter- und Formulartexte",
+        whyTitle: "Warum viele Briefe schwer verständlich wirken",
+        whyText: "Viele Schreiben enthalten Fachbegriffe, lange Sätze und formelle Sprache. Dadurch ist oft unklar, welche Angaben genau im Schreiben stehen und wie der Inhalt sprachlich einzuordnen ist.",
+        solutionTitle: "Wie BriefHelden hilft",
+        solutionText: "BriefHelden übersetzt komplizierte Inhalte in einfache, gut lesbare Sprache. So wird verständlicher, was im Brief steht und welche Informationen darin genannt werden.",
+        problemsTitle: "Typische Probleme bei schwierigen Schreiben",
+        problem1: "Fachbegriffe und formelle Sprache",
+        problem2: "Unklare Bedeutung einzelner Abschnitte",
+        problem3: "Lange und komplizierte Formulierungen",
+        problem4: "Viele Informationen auf engem Raum",
+        benefitsTitle: "Darauf ist BriefHelden ausgelegt",
+        benefit1: "Verständliche Sprache statt Fachdeutsch",
+        benefit2: "Klare Einordnung des Inhalts",
+        benefit3: "Diskrete Zustellung per E-Mail",
+        benefit4: "Schnell, klar und nutzerfreundlich",
+        lettersTitle: "Welche Briefe häufig erklärt werden",
+        letter1: "Behördenbriefe",
+        letter2: "Jobcenter-Schreiben",
+        letter3: "Inkasso-Briefe",
+        letter4: "Mahnungen",
+        stepsTitle: "So einfach funktioniert es",
+        step1Title: "Passende Option wählen",
+        step1Text: "Wählen Sie entweder die komplette Brief-Erklärung für 6,90 € oder die kurze Frage für 1,49 €.",
+        step2Title: "Schreiben oder Frage senden",
+        step2Text: "Der Inhalt wird über das jeweilige Formular übermittelt und anschließend sprachlich verständlich aufbereitet.",
+        step3Title: "Verständliche Erklärung erhalten",
+        step3Text: "Die Rückmeldung erfolgt klar formuliert per E-Mail, damit der Inhalt des Schreibens leichter nachvollziehbar wird.",
+        rdgBox: "Wichtiger Hinweis: BriefHelden bietet keine Rechtsberatung. Es erfolgt keine rechtliche Prüfung, keine rechtliche Bewertung und keine Empfehlung zum weiteren Vorgehen.",
+        faqTitle: "Häufige Fragen",
+        faq1Q: "Ist BriefHelden eine Rechtsberatung?",
+        faq1A: "Nein. BriefHelden bietet keine Rechtsberatung und keine rechtliche Bewertung. Der Service dient dazu, den Inhalt eines Schreibens sprachlich verständlich einzuordnen.",
+        faq2Q: "Welche Schreiben passen zu diesem Service?",
+        faq2A: "Häufig sind es Behördenbriefe, Inkasso-Schreiben, Mahnungen, Jobcenter-Texte, Formulare oder allgemein schwer verständliche Schreiben.",
+        faq3Q: "Was wird genau erklärt?",
+        faq3A: "Erklärt wird, welche Angaben im Schreiben enthalten sind und wie diese sprachlich leichter verständlich werden.",
+        faq4Q: "Wie erfolgt die Rückmeldung?",
+        faq4A: "Die Erklärung wird diskret und verständlich per E-Mail übermittelt.",
+        linksTitle: "Weitere häufig gesuchte Seiten",
+        link1: "Inkasso Brief verstehen",
+        link2: "Mahnbescheid verstehen",
+        link3: "Jobcenter Brief verstehen",
+        link4: "Pfändungsbescheid verstehen",
+        link5: "Vollstreckungsbescheid verstehen",
+        link6: "Finanzamt Brief verstehen",
+        finalTitle: "Komplizierten Brief einfacher verstehen",
+        finalText: "Wählen Sie die passende Option und erhalten Sie eine klare, leicht verständliche Erklärung des Inhalts.",
+        footerNote: "BriefHelden erklärt Inhalte in verständlicher Sprache. Keine Rechtsberatung."
+      },
 
-  <div class="card moreLinks">
-    <h2>Weitere häufige Briefe verstehen</h2>
-    <ul>
-      <li><a href="/inkasso-brief-verstehen.html">Inkasso Brief verstehen</a></li>
-      <li><a href="/mahnbescheid-verstehen.html">Mahnbescheid verstehen</a></li>
-      <li><a href="/jobcenter-brief-verstehen.html">Jobcenter Brief verstehen</a></li>
-      <li><a href="/pfaendungsbescheid-verstehen.html">Pfändungsbescheid verstehen</a></li>
-      <li><a href="/vollstreckungsbescheid-verstehen.html">Vollstreckungsbescheid verstehen</a></li>
-      <li><a href="/finanzamt-brief-verstehen.html">Finanzamt Brief verstehen</a></li>
-    </ul>
-  </div>
+      en: {
+        pageTitle: "Understand letters – complicated documents explained clearly | BriefHelden",
+        metaDescription: "Received a complicated letter? BriefHelden explains letters from authorities, debt collection, reminders, job center documents and forms in simple language.",
+        ogTitle: "Understand letters clearly | BriefHelden",
+        ogDescription: "BriefHelden helps explain complicated letters in clear and easy language.",
+        heroEyebrow: "Understand clearly instead of guessing",
+        heroTitle: "Understand letters – explained clearly",
+        heroText: "Difficult letters from authorities, debt collection, job center, reminders or forms explained in simple language – clear, discreet and easy to follow.",
+        ctaPremium: "Full letter explanation – €6.90",
+        ctaQuestion: "Short question – €1.49",
+        heroNote: "No legal advice, no legal assessment and no recommendation for action. The service is limited to a clear language-based explanation of the document and the information it contains.",
+        heroCardTitle: "What BriefHelden explains clearly",
+        heroCard1: "Authority letters",
+        heroCard2: "Debt collection letters",
+        heroCard3: "Reminders and notices",
+        heroCard4: "Job center and form texts",
+        whyTitle: "Why many letters feel difficult to understand",
+        whyText: "Many documents contain technical terms, long sentences and formal wording. This often makes it unclear what information is included and how the content should be understood in plain language.",
+        solutionTitle: "How BriefHelden helps",
+        solutionText: "BriefHelden translates complicated content into clear, readable language. This makes it easier to understand what the letter says and which details are included.",
+        problemsTitle: "Typical issues with difficult documents",
+        problem1: "Technical terms and formal language",
+        problem2: "Unclear meaning of individual sections",
+        problem3: "Long and complicated wording",
+        problem4: "A lot of information in a small space",
+        benefitsTitle: "What BriefHelden is built for",
+        benefit1: "Simple language instead of technical jargon",
+        benefit2: "Clear explanation of the content",
+        benefit3: "Discreet delivery by email",
+        benefit4: "Fast, clear and user-friendly",
+        lettersTitle: "Common types of letters explained",
+        letter1: "Authority letters",
+        letter2: "Job center letters",
+        letter3: "Debt collection letters",
+        letter4: "Payment reminders",
+        stepsTitle: "How it works",
+        step1Title: "Choose the right option",
+        step1Text: "Choose either the full letter explanation for €6.90 or the short question option for €1.49.",
+        step2Title: "Send the document or your question",
+        step2Text: "The content is submitted through the relevant form and then rewritten into clear, understandable language.",
+        step3Title: "Receive a clear explanation",
+        step3Text: "You receive an easy-to-read explanation by email so the content of the document becomes easier to follow.",
+        rdgBox: "Important note: BriefHelden does not provide legal advice. There is no legal review, no legal assessment and no recommendation regarding further action.",
+        faqTitle: "Frequently asked questions",
+        faq1Q: "Is BriefHelden a legal service?",
+        faq1A: "No. BriefHelden does not provide legal advice or legal assessment. The service is designed to explain the content of a document in clear language.",
+        faq2Q: "Which documents fit this service?",
+        faq2A: "Typical examples include authority letters, debt collection letters, reminders, job center documents, forms and other hard-to-understand texts.",
+        faq3Q: "What exactly is explained?",
+        faq3A: "The explanation focuses on which details are contained in the document and how the wording can be understood more easily.",
+        faq4Q: "How do I receive the explanation?",
+        faq4A: "The explanation is sent discreetly and clearly by email.",
+        linksTitle: "More frequently searched pages",
+        link1: "Understand debt collection letter",
+        link2: "Understand court payment order",
+        link3: "Understand job center letter",
+        link4: "Understand seizure notice",
+        link5: "Understand enforcement order",
+        link6: "Understand tax office letter",
+        finalTitle: "Make a complicated letter easier to understand",
+        finalText: "Choose the option that fits best and receive a clear explanation of the content in simple language.",
+        footerNote: "BriefHelden explains content in clear language. No legal advice."
+      },
 
-</div>
+      tr: {
+        pageTitle: "Mektubu anla – karmaşık yazılar kolay açıklanır | BriefHelden",
+        metaDescription: "Karmaşık bir mektup mu aldınız? BriefHelden resmi kurum, tahsilat, hatırlatma, Jobcenter ve form yazılarını anlaşılır şekilde açıklar.",
+        ogTitle: "Mektupları kolay anlayın | BriefHelden",
+        ogDescription: "BriefHelden karmaşık mektupları açık ve anlaşılır şekilde açıklar.",
+        heroEyebrow: "Tahmin etmek yerine net anlayın",
+        heroTitle: "Mektubu anla – kolay açıklama",
+        heroText: "Resmi kurumlar, tahsilat şirketleri, Jobcenter, hatırlatma yazıları veya formlardan gelen zor mektuplar sade ve anlaşılır dilde açıklanır.",
+        ctaPremium: "Tam mektup açıklaması – 6,90 €",
+        ctaQuestion: "Kısa soru – 1,49 €",
+        heroNote: "Hukuki danışmanlık yoktur, hukuki değerlendirme yapılmaz ve herhangi bir hareket önerisi verilmez. Hizmet sadece yazının içeriğini anlaşılır dilde açıklamaya yöneliktir.",
+        heroCardTitle: "BriefHelden hangi yazıları anlaşılır hale getirir",
+        heroCard1: "Resmi kurum mektupları",
+        heroCard2: "Tahsilat yazıları",
+        heroCard3: "Hatırlatmalar ve bildirimler",
+        heroCard4: "Jobcenter ve form metinleri",
+        whyTitle: "Neden birçok mektup zor anlaşılır",
+        whyText: "Birçok yazıda teknik terimler, uzun cümleler ve resmi dil bulunur. Bu nedenle yazıda hangi bilgilerin yer aldığı ve içeriğin sade dilde nasıl anlaşılacağı net olmayabilir.",
+        solutionTitle: "BriefHelden nasıl yardımcı olur",
+        solutionText: "BriefHelden karmaşık içerikleri sade ve okunabilir dile çevirir. Böylece mektupta ne yazdığı ve hangi bilgilerin bulunduğu daha kolay anlaşılır.",
+        problemsTitle: "Zor yazılardaki tipik sorunlar",
+        problem1: "Teknik terimler ve resmi dil",
+        problem2: "Bölümlerin anlamının belirsiz olması",
+        problem3: "Uzun ve karmaşık ifadeler",
+        problem4: "Kısa alana çok fazla bilgi sığdırılması",
+        benefitsTitle: "BriefHelden bunun için tasarlandı",
+        benefit1: "Teknik dil yerine anlaşılır açıklama",
+        benefit2: "İçeriğin net şekilde açıklanması",
+        benefit3: "E-posta ile gizli gönderim",
+        benefit4: "Hızlı, net ve kullanıcı dostu",
+        lettersTitle: "Sık açıklanan mektup türleri",
+        letter1: "Resmi kurum mektupları",
+        letter2: "Jobcenter yazıları",
+        letter3: "Tahsilat mektupları",
+        letter4: "Hatırlatma yazıları",
+        stepsTitle: "Nasıl çalışır",
+        step1Title: "Uygun seçeneği seçin",
+        step1Text: "6,90 € tutarındaki tam mektup açıklamasını veya 1,49 € tutarındaki kısa soru seçeneğini seçin.",
+        step2Title: "Yazıyı veya sorunuzu gönderin",
+        step2Text: "İçerik ilgili form üzerinden gönderilir ve ardından anlaşılır dile çevrilir.",
+        step3Title: "Anlaşılır açıklamayı alın",
+        step3Text: "Açıklama e-posta ile sade ve net şekilde gönderilir, böylece yazının içeriği daha kolay takip edilir.",
+        rdgBox: "Önemli not: BriefHelden hukuki danışmanlık vermez. Hukuki inceleme, hukuki değerlendirme veya sonraki adımlara dair öneri sunulmaz.",
+        faqTitle: "Sık sorulan sorular",
+        faq1Q: "BriefHelden hukuki danışmanlık mı sunuyor?",
+        faq1A: "Hayır. BriefHelden hukuki danışmanlık veya hukuki değerlendirme sunmaz. Hizmet, yazının içeriğini anlaşılır dilde açıklamaya yöneliktir.",
+        faq2Q: "Hangi yazılar bu hizmete uygundur?",
+        faq2A: "Genellikle resmi kurum mektupları, tahsilat yazıları, hatırlatmalar, Jobcenter metinleri, formlar ve anlaşılması zor diğer yazılar uygundur.",
+        faq3Q: "Tam olarak ne açıklanır?",
+        faq3A: "Yazının içinde hangi bilgilerin yer aldığı ve metnin daha kolay nasıl anlaşılabileceği açıklanır.",
+        faq4Q: "Açıklama nasıl gönderilir?",
+        faq4A: "Açıklama gizli ve anlaşılır şekilde e-posta ile gönderilir.",
+        linksTitle: "Sık aranan diğer sayfalar",
+        link1: "Tahsilat mektubunu anla",
+        link2: "Mahkeme ödeme emrini anla",
+        link3: "Jobcenter mektubunu anla",
+        link4: "Haciz bildirimini anla",
+        link5: "İcra kararını anla",
+        link6: "Vergi dairesi mektubunu anla",
+        finalTitle: "Karmaşık mektubu daha kolay anlayın",
+        finalText: "Size uygun seçeneği seçin ve içeriğin sade, anlaşılır açıklamasını alın.",
+        footerNote: "BriefHelden içerikleri anlaşılır dilde açıklar. Hukuki danışmanlık yoktur."
+      },
 
-<footer>
-  © 2026 BriefHelden
-</footer>
+      ru: {
+        pageTitle: "Понять письмо – сложные документы простым языком | BriefHelden",
+        metaDescription: "Получили сложное письмо? BriefHelden понятно объясняет письма от ведомств, инкассо, напоминания, Jobcenter и формы.",
+        ogTitle: "Понять письмо просто | BriefHelden",
+        ogDescription: "BriefHelden помогает объяснять сложные письма понятным языком.",
+        heroEyebrow: "Понимать ясно вместо догадок",
+        heroTitle: "Понять письмо – простое объяснение",
+        heroText: "Сложные письма от ведомств, инкассо, Jobcenter, напоминания или формы объясняются простым и понятным языком.",
+        ctaPremium: "Полное объяснение письма – 6,90 €",
+        ctaQuestion: "Короткий вопрос – 1,49 €",
+        heroNote: "Это не юридическая консультация, не юридическая оценка и не рекомендация к действиям. Сервис ограничивается понятным языковым объяснением содержания письма и содержащихся в нем данных.",
+        heroCardTitle: "Какие тексты BriefHelden делает понятнее",
+        heroCard1: "Письма от ведомств",
+        heroCard2: "Письма от инкассо",
+        heroCard3: "Напоминания и уведомления",
+        heroCard4: "Тексты Jobcenter и формы",
+        whyTitle: "Почему многие письма трудно понять",
+        whyText: "Во многих документах используются специальные термины, длинные предложения и официальный стиль. Поэтому бывает неясно, какие именно сведения содержатся в письме и как понять его содержание простым языком.",
+        solutionTitle: "Как помогает BriefHelden",
+        solutionText: "BriefHelden переводит сложное содержание на простой и удобочитаемый язык. Так становится легче понять, что написано в письме и какие сведения в нем указаны.",
+        problemsTitle: "Типичные проблемы сложных документов",
+        problem1: "Специальные термины и официальный язык",
+        problem2: "Неясный смысл отдельных разделов",
+        problem3: "Длинные и сложные формулировки",
+        problem4: "Слишком много информации в небольшом тексте",
+        benefitsTitle: "Для этого создан BriefHelden",
+        benefit1: "Понятный язык вместо сложных терминов",
+        benefit2: "Ясное объяснение содержания",
+        benefit3: "Конфиденциальная отправка по e-mail",
+        benefit4: "Быстро, понятно и удобно",
+        lettersTitle: "Какие письма объясняют чаще всего",
+        letter1: "Письма от ведомств",
+        letter2: "Письма Jobcenter",
+        letter3: "Письма инкассо",
+        letter4: "Напоминания об оплате",
+        stepsTitle: "Как это работает",
+        step1Title: "Выберите подходящий вариант",
+        step1Text: "Выберите полное объяснение письма за 6,90 € или короткий вопрос за 1,49 €.",
+        step2Title: "Отправьте письмо или вопрос",
+        step2Text: "Содержание отправляется через соответствующую форму и затем излагается понятным языком.",
+        step3Title: "Получите понятное объяснение",
+        step3Text: "Ответ приходит по e-mail в ясной и простой форме, чтобы содержание письма было легче понять.",
+        rdgBox: "Важно: BriefHelden не оказывает юридических консультаций. Не проводится юридическая проверка, юридическая оценка и не даются рекомендации по дальнейшим действиям.",
+        faqTitle: "Часто задаваемые вопросы",
+        faq1Q: "BriefHelden — это юридическая консультация?",
+        faq1A: "Нет. BriefHelden не предоставляет юридических консультаций и юридической оценки. Сервис предназначен для понятного языкового объяснения содержания письма.",
+        faq2Q: "Какие документы подходят для этого сервиса?",
+        faq2A: "Чаще всего это письма от ведомств, инкассо, напоминания, документы Jobcenter, формы и другие сложные для понимания тексты.",
+        faq3Q: "Что именно объясняется?",
+        faq3A: "Объясняется, какие сведения содержатся в письме и как формулировки можно понять проще.",
+        faq4Q: "Как приходит ответ?",
+        faq4A: "Объяснение отправляется конфиденциально и понятным языком по e-mail.",
+        linksTitle: "Другие часто ищут",
+        link1: "Понять письмо от инкассо",
+        link2: "Понять судебный платёжный приказ",
+        link3: "Понять письмо Jobcenter",
+        link4: "Понять уведомление об аресте",
+        link5: "Понять исполнительный приказ",
+        link6: "Понять письмо из налоговой",
+        finalTitle: "Сделайте сложное письмо понятнее",
+        finalText: "Выберите подходящий вариант и получите ясное объяснение содержания простым языком.",
+        footerNote: "BriefHelden объясняет содержание простым языком. Не является юридической консультацией."
+      }
+    };
 
+    function setLanguage(lang) {
+      const current = translations[lang] ? lang : "de";
+      localStorage.setItem("briefhelden_language", current);
+      document.documentElement.lang = current;
+
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if (translations[current][key]) {
+          el.textContent = translations[current][key];
+        }
+      });
+
+      document.title = translations[current].pageTitle;
+
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) metaDescription.setAttribute("content", translations[current].metaDescription);
+
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) ogTitle.setAttribute("content", translations[current].ogTitle);
+
+      const ogDescription = document.querySelector('meta[property="og:description"]');
+      if (ogDescription) ogDescription.setAttribute("content", translations[current].ogDescription);
+
+      const premiumLinks = document.querySelectorAll("#ctaPremium, #ctaPremiumBottom");
+      premiumLinks.forEach(link => link.href = STRIPE_LINKS[current].premium);
+
+      const questionLinks = document.querySelectorAll("#ctaQuestion, #ctaQuestionBottom");
+      questionLinks.forEach(link => link.href = STRIPE_LINKS[current].question);
+
+      document.querySelectorAll(".lang-btn").forEach(btn => {
+        btn.classList.toggle("active", btn.dataset.lang === current);
+      });
+    }
+
+    const savedLanguage = localStorage.getItem("briefhelden_language") || "de";
+    setLanguage(savedLanguage);
+
+    document.querySelectorAll(".lang-btn").forEach(btn => {
+      btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
+    });
+  </script>
 </body>
 </html>
