@@ -31,22 +31,22 @@
 
   <style>
     :root{
-      --nav-bg: rgba(9,24,33,.78);
+      --nav-bg: rgba(9,24,33,.82);
       --nav-border: rgba(255,255,255,.10);
       --text: #0b1220;
       --muted: rgba(11,18,32,.74);
       --heroText: #fff;
-      --heroMuted: rgba(255,255,255,.84);
-      --glass: rgba(255,255,255,.28);
-      --glass2: rgba(255,255,255,.16);
-      --stroke: rgba(255,255,255,.36);
-      --shadow: 0 18px 40px rgba(0,0,0,.18);
+      --heroMuted: rgba(255,255,255,.86);
+      --glass: rgba(255,255,255,.30);
+      --glass2: rgba(255,255,255,.18);
+      --stroke: rgba(255,255,255,.38);
+      --shadow: 0 18px 40px rgba(0,0,0,.16);
       --btn1: #2f6fff;
       --btn2: #1f56b8;
       --btnGreen1: #12b76a;
       --btnGreen2: #079455;
-      --radius-xl: 24px;
-      --radius-lg: 18px;
+      --radius-xl: 28px;
+      --radius-lg: 20px;
       --radius-md: 14px;
       --max: 1120px;
     }
@@ -60,8 +60,8 @@
       color:var(--text);
       background:
         radial-gradient(1200px 700px at 12% 24%, rgba(120,180,255,.32), rgba(255,255,255,0) 60%),
-        radial-gradient(1200px 800px at 88% 18%, rgba(120,140,255,.26), rgba(255,255,255,0) 62%),
-        radial-gradient(1000px 700px at 50% 92%, rgba(170,210,255,.28), rgba(255,255,255,0) 60%),
+        radial-gradient(1200px 800px at 88% 18%, rgba(120,140,255,.24), rgba(255,255,255,0) 62%),
+        radial-gradient(1000px 700px at 50% 92%, rgba(170,210,255,.26), rgba(255,255,255,0) 60%),
         linear-gradient(180deg, #f8fbff 0%, #eef6ff 45%, #f8fbff 100%);
       min-height:100vh;
     }
@@ -106,6 +106,7 @@
         linear-gradient(180deg, rgba(55,120,255,.9), rgba(20,70,190,.9));
       box-shadow:0 10px 18px rgba(0,0,0,.18);
       position:relative;
+      flex:0 0 auto;
     }
 
     .brand .logo:after{
@@ -126,7 +127,7 @@
     }
 
     nav.links a{
-      color:rgba(255,255,255,.82);
+      color:rgba(255,255,255,.84);
       font-weight:700;
       font-size:14px;
     }
@@ -145,7 +146,7 @@
       border:1px solid rgba(255,255,255,.18);
       background:rgba(0,0,0,.18);
       color:#fff;
-      padding:8px 36px 8px 12px;
+      padding:8px 34px 8px 12px;
       border-radius:12px;
       font-weight:800;
       cursor:pointer;
@@ -170,9 +171,9 @@
     .hero{
       position:relative;
       color:var(--heroText);
-      padding:68px 18px 40px;
+      padding:72px 18px 42px;
       background:
-        linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.58)),
+        linear-gradient(180deg, rgba(0,0,0,.56), rgba(0,0,0,.60)),
         url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=2200&q=60");
       background-size:cover;
       background-position:center;
@@ -249,8 +250,14 @@
       backdrop-filter:blur(10px);
     }
 
-    .section{padding:26px 18px 10px}
-    .wrap{max-width:var(--max); margin:0 auto;}
+    .section{
+      padding:26px 18px 0;
+    }
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+    }
 
     .glassCard{
       background:linear-gradient(180deg, var(--glass), var(--glass2));
@@ -262,7 +269,9 @@
       overflow:hidden;
     }
 
-    .pad{padding:22px}
+    .pad{
+      padding:24px 22px;
+    }
 
     .headline,
     .sectionTitle{
@@ -277,7 +286,7 @@
     .sectionSub{
       text-align:center;
       margin:0 auto 16px;
-      max-width:920px;
+      max-width:930px;
       color:rgba(11,18,32,.76);
       line-height:1.7;
       font-size:16px;
@@ -286,14 +295,14 @@
     .grid2{
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:14px;
+      gap:16px;
     }
 
     .infoCard,
     .faqItem{
       border-radius:var(--radius-lg);
-      border:1px solid rgba(255,255,255,.55);
-      background:rgba(255,255,255,.20);
+      border:1px solid rgba(255,255,255,.54);
+      background:rgba(255,255,255,.18);
       padding:18px;
     }
 
@@ -302,6 +311,7 @@
       margin:0 0 10px;
       font-size:22px;
       font-weight:950;
+      line-height:1.25;
     }
 
     .faqItem h3{
@@ -318,30 +328,32 @@
       margin:0;
     }
 
-    .infoCard p + p{margin-top:12px;}
+    .infoCard p + p{
+      margin-top:12px;
+    }
 
     .infoCard ul{
       margin:0;
-      padding-left:18px;
+      padding-left:22px;
     }
 
     .faqGrid{
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:14px;
+      gap:16px;
     }
 
     .serviceMini{
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:14px;
-      margin-top:16px;
+      gap:16px;
+      margin-top:18px;
     }
 
     .serviceMini .box{
       border-radius:18px;
-      border:1px solid rgba(255,255,255,.55);
-      background:rgba(255,255,255,.20);
+      border:1px solid rgba(255,255,255,.54);
+      background:rgba(255,255,255,.18);
       padding:18px;
       text-align:center;
     }
@@ -350,6 +362,7 @@
       margin:0 0 8px;
       font-size:20px;
       font-weight:950;
+      line-height:1.3;
     }
 
     .serviceMini .box p{
@@ -376,17 +389,6 @@
 
     .miniBtn.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
     .miniBtn.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
-
-    .notice{
-      margin-top:16px;
-      padding:14px 16px;
-      border-radius:16px;
-      background:rgba(255,248,230,.78);
-      border:1px solid rgba(194,153,52,.28);
-      color:#6c5310;
-      font-weight:800;
-      line-height:1.55;
-    }
 
     .moreLinks{
       max-width:var(--max);
@@ -516,20 +518,20 @@
         <div class="pad">
           <h2 class="headline" data-i18n="intro_title">Was ist ein Bußgeldbescheid?</h2>
           <p class="lead" data-i18n="intro_text">
-            Ein Bußgeldbescheid ist ein offizielles Schreiben, in dem ein Verkehrsverstoß oder eine Ordnungswidrigkeit genannt wird. Oft stehen darin ein Vorwurf, ein Betrag, mögliche Gebühren, Punkte, Fristen oder weitere Hinweise. Viele Menschen wissen nicht genau, was die Angaben bedeuten und wie der Inhalt sprachlich verständlich einzuordnen ist. Genau dabei hilft BriefHelden.
+            Ein Bußgeldbescheid ist ein offizielles Schreiben, in dem ein Verkehrsverstoß oder eine Ordnungswidrigkeit genannt wird. Oft stehen darin ein Vorwurf, ein Betrag, mögliche Gebühren, Punkte, Fristen oder weitere Hinweise. Viele Menschen möchten verstehen, was die Angaben bedeuten und welche Informationen im Schreiben enthalten sind. Genau dabei hilft BriefHelden.
           </p>
 
           <div class="grid2">
             <div class="infoCard">
               <h3 data-i18n="left_title">Einfach erklärt</h3>
               <p data-i18n="left_text_1">
-                In einem Bußgeldbescheid geht es meist um einen konkreten Vorwurf, zum Beispiel zu schnelles Fahren, falsches Parken oder einen anderen Verstoß im Straßenverkehr.
+                In einem Bußgeldbescheid geht es oft um einen konkreten Vorwurf, zum Beispiel zu schnelles Fahren, falsches Parken oder einen anderen Verstoß im Straßenverkehr.
               </p>
               <p data-i18n="left_text_2">
-                Häufig enthalten sind unter anderem: der genannte Vorwurf, ein Betrag, mögliche Punkte, Fristen sowie zusätzliche Hinweise im Schreiben.
+                Wichtig sind dabei vor allem: Welcher Vorwurf wird genannt? Gibt es Fristen? Werden Punkte, Gebühren oder weitere Angaben erwähnt?
               </p>
               <p data-i18n="left_text_3">
-                BriefHelden erklärt den Inhalt in einfacher Sprache, damit das Schreiben leichter verständlich wird.
+                BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie das Schreiben besser sprachlich einordnen können.
               </p>
             </div>
 
@@ -537,8 +539,8 @@
               <h3 data-i18n="right_title">So funktioniert es</h3>
               <ul>
                 <li data-i18n="right_li_1">Bußgeldbescheid sicher hochladen</li>
-                <li data-i18n="right_li_2">Der Inhalt wird verständlich erklärt</li>
-                <li data-i18n="right_li_3">Die Erklärung kommt per E-Mail</li>
+                <li data-i18n="right_li_2">Wir lesen den Inhalt und erklären ihn verständlich</li>
+                <li data-i18n="right_li_3">Sie erhalten die Erklärung per E-Mail</li>
                 <li data-i18n="right_li_4">Keine Rechtsberatung – nur verständliche Texterklärung</li>
               </ul>
             </div>
@@ -548,7 +550,7 @@
             <div class="box">
               <h3 data-i18n="service1_title">Komplettes Schreiben erklären lassen</h3>
               <p data-i18n="service1_text">
-                Ideal, wenn der ganze Bußgeldbescheid vollständig und verständlich erklärt werden soll.
+                Ideal, wenn Sie den ganzen Bußgeldbescheid vollständig verstehen möchten.
               </p>
               <a class="miniBtn primary" id="servicePrimaryBtn" href="#" target="_blank" rel="noopener noreferrer">
                 <span data-i18n="service1_btn">Jetzt für 6,90 € starten</span>
@@ -559,17 +561,13 @@
             <div class="box">
               <h3 data-i18n="service2_title">Kurze Rückfrage stellen</h3>
               <p data-i18n="service2_text">
-                Ideal, wenn nur eine kurze Frage zu Betrag, Frist, Punkten oder Inhalt geklärt werden soll.
+                Ideal, wenn Sie nur eine kurze Frage zu Betrag, Frist, Punkten oder Inhalt haben.
               </p>
               <a class="miniBtn secondary" id="serviceQuestionBtn" href="#" target="_blank" rel="noopener noreferrer">
                 <span data-i18n="service2_btn">Jetzt für 1,49 € fragen</span>
                 <span aria-hidden="true">›</span>
               </a>
             </div>
-          </div>
-
-          <div class="notice" data-i18n="notice_text">
-            Wichtiger Hinweis: BriefHelden bietet keine Rechtsberatung, keine rechtliche Bewertung und keine Handlungsempfehlung. Erklärt wird ausschließlich, welche Angaben im Schreiben enthalten sind und wie diese sprachlich verständlich eingeordnet werden können.
           </div>
         </div>
       </div>
@@ -592,16 +590,16 @@
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="faq2_q">Sind Fristen in einem Bußgeldbescheid enthalten?</h3>
+              <h3 data-i18n="faq2_q">Sind Fristen in einem Bußgeldbescheid wichtig?</h3>
               <p data-i18n="faq2_a">
-                In vielen Bußgeldbescheiden sind Fristen, Termine oder Datumsangaben enthalten. BriefHelden hilft dabei, diese Angaben sprachlich verständlich zu erkennen.
+                Ja, Fristen sind oft besonders wichtig. BriefHelden hilft Ihnen, diese Angaben klar und verständlich zu erkennen.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="faq3_q">Was ist in einem Bußgeldbescheid oft besonders auffällig?</h3>
+              <h3 data-i18n="faq3_q">Was ist bei einem Bußgeldbescheid besonders wichtig?</h3>
               <p data-i18n="faq3_a">
-                Oft fallen vor allem der genannte Vorwurf, der Betrag, mögliche Punkte und weitere Hinweise im Schreiben auf.
+                Besonders wichtig sind der genannte Vorwurf, der Betrag, mögliche Punkte, Fristen und weitere Hinweise im Schreiben.
               </p>
             </div>
 
@@ -619,37 +617,37 @@
 
       <div class="glassCard">
         <div class="pad">
-          <h2 class="sectionTitle" data-i18n="tip_title">Was häufig in einem Bußgeldbescheid genannt wird</h2>
+          <h2 class="sectionTitle" data-i18n="tip_title">Worauf sollten Sie bei einem Bußgeldbescheid achten?</h2>
           <p class="sectionSub" data-i18n="tip_sub">
-            Diese Punkte sind in solchen Schreiben oft enthalten:
+            Diese Punkte sind oft besonders wichtig:
           </p>
 
           <div class="faqGrid">
             <div class="faqItem">
-              <h3 data-i18n="tip1_title">Genannter Vorwurf</h3>
+              <h3 data-i18n="tip1_title">Vorwurf ansehen</h3>
               <p data-i18n="tip1_text">
-                Im Schreiben steht oft, welcher Verstoß genannt wird und wie dieser beschrieben ist.
+                Schauen Sie, welcher Verstoß im Schreiben genannt wird und wie dieser beschrieben ist.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="tip2_title">Fristen und Termine</h3>
+              <h3 data-i18n="tip2_title">Fristen beachten</h3>
               <p data-i18n="tip2_text">
-                Viele Schreiben enthalten Fristen, Termine oder Datumsangaben, die im Text genannt werden.
+                Prüfen Sie, ob im Schreiben Fristen, Termine oder Datumsangaben genannt werden.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="tip3_title">Betrag und Punkte</h3>
+              <h3 data-i18n="tip3_title">Betrag und Punkte ansehen</h3>
               <p data-i18n="tip3_text">
-                Häufig sind ein genannter Betrag sowie mögliche Punkte oder weitere Folgen aufgeführt.
+                Achten Sie darauf, welcher Betrag genannt wird und ob Punkte oder weitere Hinweise enthalten sind.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="tip4_title">Weitere Hinweise</h3>
+              <h3 data-i18n="tip4_title">Inhalt verständlich einordnen</h3>
               <p data-i18n="tip4_text">
-                Je nach Schreiben können zusätzliche Hinweise, Gebühren oder ergänzende Angaben enthalten sein.
+                Wenn das Schreiben schwer verständlich ist, hilft eine einfache Erklärung dabei, die enthaltenen Angaben besser zu erfassen.
               </p>
             </div>
           </div>
@@ -722,50 +720,48 @@
         meta_3: "Vertraulich",
 
         intro_title: "Was ist ein Bußgeldbescheid?",
-        intro_text: "Ein Bußgeldbescheid ist ein offizielles Schreiben, in dem ein Verkehrsverstoß oder eine Ordnungswidrigkeit genannt wird. Oft stehen darin ein Vorwurf, ein Betrag, mögliche Gebühren, Punkte, Fristen oder weitere Hinweise. Viele Menschen wissen nicht genau, was die Angaben bedeuten und wie der Inhalt sprachlich verständlich einzuordnen ist. Genau dabei hilft BriefHelden.",
+        intro_text: "Ein Bußgeldbescheid ist ein offizielles Schreiben, in dem ein Verkehrsverstoß oder eine Ordnungswidrigkeit genannt wird. Oft stehen darin ein Vorwurf, ein Betrag, mögliche Gebühren, Punkte, Fristen oder weitere Hinweise. Viele Menschen möchten verstehen, was die Angaben bedeuten und welche Informationen im Schreiben enthalten sind. Genau dabei hilft BriefHelden.",
 
         left_title: "Einfach erklärt",
-        left_text_1: "In einem Bußgeldbescheid geht es meist um einen konkreten Vorwurf, zum Beispiel zu schnelles Fahren, falsches Parken oder einen anderen Verstoß im Straßenverkehr.",
-        left_text_2: "Häufig enthalten sind unter anderem: der genannte Vorwurf, ein Betrag, mögliche Punkte, Fristen sowie zusätzliche Hinweise im Schreiben.",
-        left_text_3: "BriefHelden erklärt den Inhalt in einfacher Sprache, damit das Schreiben leichter verständlich wird.",
+        left_text_1: "In einem Bußgeldbescheid geht es oft um einen konkreten Vorwurf, zum Beispiel zu schnelles Fahren, falsches Parken oder einen anderen Verstoß im Straßenverkehr.",
+        left_text_2: "Wichtig sind dabei vor allem: Welcher Vorwurf wird genannt? Gibt es Fristen? Werden Punkte, Gebühren oder weitere Angaben erwähnt?",
+        left_text_3: "BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie das Schreiben besser sprachlich einordnen können.",
 
         right_title: "So funktioniert es",
         right_li_1: "Bußgeldbescheid sicher hochladen",
-        right_li_2: "Der Inhalt wird verständlich erklärt",
-        right_li_3: "Die Erklärung kommt per E-Mail",
+        right_li_2: "Wir lesen den Inhalt und erklären ihn verständlich",
+        right_li_3: "Sie erhalten die Erklärung per E-Mail",
         right_li_4: "Keine Rechtsberatung – nur verständliche Texterklärung",
 
         service1_title: "Komplettes Schreiben erklären lassen",
-        service1_text: "Ideal, wenn der ganze Bußgeldbescheid vollständig und verständlich erklärt werden soll.",
+        service1_text: "Ideal, wenn Sie den ganzen Bußgeldbescheid vollständig verstehen möchten.",
         service1_btn: "Jetzt für 6,90 € starten",
 
         service2_title: "Kurze Rückfrage stellen",
-        service2_text: "Ideal, wenn nur eine kurze Frage zu Betrag, Frist, Punkten oder Inhalt geklärt werden soll.",
+        service2_text: "Ideal, wenn Sie nur eine kurze Frage zu Betrag, Frist, Punkten oder Inhalt haben.",
         service2_btn: "Jetzt für 1,49 € fragen",
-
-        notice_text: "Wichtiger Hinweis: BriefHelden bietet keine Rechtsberatung, keine rechtliche Bewertung und keine Handlungsempfehlung. Erklärt wird ausschließlich, welche Angaben im Schreiben enthalten sind und wie diese sprachlich verständlich eingeordnet werden können.",
 
         faq_title: "Häufige Fragen zu Bußgeldbescheiden",
         faq_sub: "Diese Fragen tauchen bei solchen Schreiben besonders oft auf:",
         faq1_q: "Welche Angaben stehen oft in einem Bußgeldbescheid?",
         faq1_a: "Häufig genannt werden der Vorwurf, ein Betrag, mögliche Gebühren, Punkte, Fristen und weitere Hinweise im Schreiben.",
-        faq2_q: "Sind Fristen in einem Bußgeldbescheid enthalten?",
-        faq2_a: "In vielen Bußgeldbescheiden sind Fristen, Termine oder Datumsangaben enthalten. BriefHelden hilft dabei, diese Angaben sprachlich verständlich zu erkennen.",
-        faq3_q: "Was ist in einem Bußgeldbescheid oft besonders auffällig?",
-        faq3_a: "Oft fallen vor allem der genannte Vorwurf, der Betrag, mögliche Punkte und weitere Hinweise im Schreiben auf.",
+        faq2_q: "Sind Fristen in einem Bußgeldbescheid wichtig?",
+        faq2_a: "Ja, Fristen sind oft besonders wichtig. BriefHelden hilft Ihnen, diese Angaben klar und verständlich zu erkennen.",
+        faq3_q: "Was ist bei einem Bußgeldbescheid besonders wichtig?",
+        faq3_a: "Besonders wichtig sind der genannte Vorwurf, der Betrag, mögliche Punkte, Fristen und weitere Hinweise im Schreiben.",
         faq4_q: "Ist BriefHelden eine Rechtsberatung?",
         faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.",
 
-        tip_title: "Was häufig in einem Bußgeldbescheid genannt wird",
-        tip_sub: "Diese Punkte sind in solchen Schreiben oft enthalten:",
-        tip1_title: "Genannter Vorwurf",
-        tip1_text: "Im Schreiben steht oft, welcher Verstoß genannt wird und wie dieser beschrieben ist.",
-        tip2_title: "Fristen und Termine",
-        tip2_text: "Viele Schreiben enthalten Fristen, Termine oder Datumsangaben, die im Text genannt werden.",
-        tip3_title: "Betrag und Punkte",
-        tip3_text: "Häufig sind ein genannter Betrag sowie mögliche Punkte oder weitere Folgen aufgeführt.",
-        tip4_title: "Weitere Hinweise",
-        tip4_text: "Je nach Schreiben können zusätzliche Hinweise, Gebühren oder ergänzende Angaben enthalten sein.",
+        tip_title: "Worauf sollten Sie bei einem Bußgeldbescheid achten?",
+        tip_sub: "Diese Punkte sind oft besonders wichtig:",
+        tip1_title: "Vorwurf ansehen",
+        tip1_text: "Schauen Sie, welcher Verstoß im Schreiben genannt wird und wie dieser beschrieben ist.",
+        tip2_title: "Fristen beachten",
+        tip2_text: "Prüfen Sie, ob im Schreiben Fristen, Termine oder Datumsangaben genannt werden.",
+        tip3_title: "Betrag und Punkte ansehen",
+        tip3_text: "Achten Sie darauf, welcher Betrag genannt wird und ob Punkte oder weitere Hinweise enthalten sind.",
+        tip4_title: "Inhalt verständlich einordnen",
+        tip4_text: "Wenn das Schreiben schwer verständlich ist, hilft eine einfache Erklärung dabei, die enthaltenen Angaben besser zu erfassen.",
 
         more_title: "Weitere häufige Briefe verstehen",
         more_1: "Krankenkasse Brief verstehen",
@@ -806,50 +802,48 @@
         meta_3: "Confidential",
 
         intro_title: "What is a fine notice?",
-        intro_text: "A fine notice is an official document describing a traffic offense or administrative violation. It often mentions an allegation, an amount, possible fees, points, deadlines or further notes. Many people are unsure what these details mean and how the content can be understood in plain language. That is exactly where BriefHelden helps.",
+        intro_text: "A fine notice is an official document describing a traffic offense or administrative violation. It often mentions an allegation, an amount, possible fees, points, deadlines or further notes. Many people want to understand what these details mean and which information is included in the document. That is exactly where BriefHelden helps.",
 
         left_title: "Simply explained",
-        left_text_1: "A fine notice usually concerns a specific allegation, for example speeding, illegal parking or another traffic-related violation.",
-        left_text_2: "It often includes the stated allegation, an amount, possible points, deadlines and additional notes in the document.",
-        left_text_3: "BriefHelden explains the content in simple language so the document becomes easier to understand.",
+        left_text_1: "A fine notice often concerns a specific allegation, for example speeding, illegal parking or another traffic-related violation.",
+        left_text_2: "The key points often are: Which allegation is mentioned? Are there deadlines? Are points, fees or additional details included?",
+        left_text_3: "BriefHelden explains the content in simple language so you can understand the document more easily.",
 
         right_title: "How it works",
         right_li_1: "Upload the fine notice securely",
-        right_li_2: "The content is explained clearly",
-        right_li_3: "The explanation is sent by email",
+        right_li_2: "We read the content and explain it clearly",
+        right_li_3: "You receive the explanation by email",
         right_li_4: "No legal advice – plain-language explanation only",
 
         service1_title: "Get the full document explained",
-        service1_text: "Ideal if the entire fine notice should be explained fully and clearly.",
+        service1_text: "Ideal if you want to fully understand the entire fine notice.",
         service1_btn: "Start now for €6.90",
 
         service2_title: "Ask a short follow-up question",
-        service2_text: "Ideal if only a short question about amount, deadline, points or content should be clarified.",
+        service2_text: "Ideal if you only have a short question about amount, deadline, points or content.",
         service2_btn: "Ask now for €1.49",
-
-        notice_text: "Important note: BriefHelden does not provide legal advice, legal assessment or recommendations for action. The service only explains which details are contained in the document and how they can be understood in clear language.",
 
         faq_title: "Frequently asked questions about fine notices",
         faq_sub: "These questions often come up with this kind of document:",
         faq1_q: "Which details are often included in a fine notice?",
         faq1_a: "A fine notice often includes the allegation, an amount, possible fees, points, deadlines and further notes in the document.",
-        faq2_q: "Can a fine notice contain deadlines?",
-        faq2_a: "Many fine notices contain deadlines, appointments or dates. BriefHelden helps make these details easier to understand in plain language.",
-        faq3_q: "What often stands out in a fine notice?",
-        faq3_a: "The stated allegation, the amount, possible points and additional notes in the document often stand out most.",
+        faq2_q: "Are deadlines in a fine notice important?",
+        faq2_a: "Yes, deadlines are often especially important. BriefHelden helps you identify these details clearly and understandably.",
+        faq3_q: "What is especially important in a fine notice?",
+        faq3_a: "Especially important are the stated allegation, the amount, possible points, deadlines and further notes in the document.",
         faq4_q: "Is BriefHelden legal advice?",
         faq4_a: "No. BriefHelden does not provide legal advice. You only receive a clear explanation of the content.",
 
-        tip_title: "What is often mentioned in a fine notice",
-        tip_sub: "These points are often included in such documents:",
-        tip1_title: "Stated allegation",
-        tip1_text: "The document often states which violation is mentioned and how it is described.",
-        tip2_title: "Deadlines and dates",
-        tip2_text: "Many documents include deadlines, appointments or dates mentioned in the text.",
-        tip3_title: "Amount and points",
-        tip3_text: "A stated amount as well as possible points or further consequences are often listed.",
-        tip4_title: "Additional notes",
-        tip4_text: "Depending on the document, further notes, fees or additional details may be included.",
+        tip_title: "What should you pay attention to in a fine notice?",
+        tip_sub: "These points are often especially important:",
+        tip1_title: "Look at the allegation",
+        tip1_text: "See which violation is mentioned in the document and how it is described.",
+        tip2_title: "Pay attention to deadlines",
+        tip2_text: "Check whether deadlines, appointments or dates are mentioned in the document.",
+        tip3_title: "Look at amount and points",
+        tip3_text: "Pay attention to the amount mentioned and whether points or further notes are included.",
+        tip4_title: "Understand the content clearly",
+        tip4_text: "If the document is difficult to understand, a simple explanation helps you grasp the included details more easily.",
 
         more_title: "Understand more common letters",
         more_1: "Understand health insurance letter",
@@ -890,50 +884,48 @@
         meta_3: "Gizli",
 
         intro_title: "Ceza kararı nedir?",
-        intro_text: "Ceza kararı, bir trafik ihlali veya idari kabahatin belirtildiği resmî bir yazıdır. İçinde çoğu zaman bir suçlama, bir tutar, olası ücretler, puanlar, süreler veya başka bilgiler yer alır. Birçok kişi bu bilgilerin ne anlama geldiğini ve metnin sade dille nasıl anlaşılacağını tam bilmez. BriefHelden tam bu konuda yardımcı olur.",
+        intro_text: "Ceza kararı, bir trafik ihlali veya idari kabahatin belirtildiği resmî bir yazıdır. İçinde çoğu zaman bir suçlama, bir tutar, olası ücretler, puanlar, süreler veya başka bilgiler yer alır. Birçok kişi bu bilgilerin ne anlama geldiğini ve belgede hangi bilgilerin yer aldığını anlamak ister. BriefHelden tam bu konuda yardımcı olur.",
 
         left_title: "Basit açıklama",
         left_text_1: "Bir ceza kararında çoğu zaman belirli bir suçlama yer alır; örneğin hız sınırını aşma, yanlış park etme veya trafikte başka bir ihlal.",
-        left_text_2: "Belgede çoğunlukla suçlama, bir tutar, olası puanlar, süreler ve ek bilgiler yer alır.",
-        left_text_3: "BriefHelden içeriği basit dille açıklar, böylece belge daha kolay anlaşılır.",
+        left_text_2: "Özellikle şu noktalar önemlidir: Hangi suçlama belirtiliyor? Süre var mı? Puan, ücret veya başka bilgiler yer alıyor mu?",
+        left_text_3: "BriefHelden içeriği basit dille açıklar, böylece belgeyi daha kolay anlayabilirsiniz.",
 
         right_title: "Nasıl çalışır",
         right_li_1: "Ceza kararını güvenli şekilde yükleyin",
-        right_li_2: "İçerik anlaşılır şekilde açıklanır",
-        right_li_3: "Açıklama e-posta ile gelir",
+        right_li_2: "İçeriği okuyup anlaşılır şekilde açıklıyoruz",
+        right_li_3: "Açıklamayı e-posta ile alırsınız",
         right_li_4: "Hukuki danışmanlık değil – sadece anlaşılır açıklama",
 
         service1_title: "Belgenin tamamını açıklat",
-        service1_text: "Ceza kararının tamamı açık ve anlaşılır şekilde açıklansın isteniyorsa idealdir.",
+        service1_text: "Ceza kararının tamamını anlamak istiyorsanız idealdir.",
         service1_btn: "Şimdi 6,90 € ile başla",
 
         service2_title: "Kısa bir soru sor",
-        service2_text: "Sadece tutar, süre, puan veya içerikle ilgili kısa bir konu açıklansın isteniyorsa idealdir.",
+        service2_text: "Sadece tutar, süre, puan veya içerikle ilgili kısa bir sorunuz varsa idealdir.",
         service2_btn: "Şimdi 1,49 € ile sor",
-
-        notice_text: "Önemli not: BriefHelden hukuki danışmanlık, hukuki değerlendirme veya hareket önerisi sunmaz. Sadece belgede hangi bilgilerin yer aldığı ve bunların sade dille nasıl anlaşılabileceği açıklanır.",
 
         faq_title: "Ceza kararları hakkında sık sorulan sorular",
         faq_sub: "Bu tür yazılarda şu sorular sıkça ortaya çıkar:",
         faq1_q: "Ceza kararında hangi bilgiler sıkça yer alır?",
-        faq1_a: "Bir ceza kararında çoğu zaman suçlama, tutar, olası ücretler, puanlar, süreler ve başka bilgiler yer alır.",
-        faq2_q: "Ceza kararında süreler bulunabilir mi?",
-        faq2_a: "Birçok ceza kararında süreler, tarihler veya randevu bilgileri bulunur. BriefHelden bu bilgilerin sade dille anlaşılmasına yardımcı olur.",
-        faq3_q: "Ceza kararında en çok hangi bilgiler dikkat çeker?",
-        faq3_a: "Genellikle belirtilen suçlama, tutar, olası puanlar ve ek bilgiler en çok dikkat çeker.",
+        faq1_a: "Çoğu zaman suçlama, tutar, olası ücretler, puanlar, süreler ve ek bilgiler belgede yer alır.",
+        faq2_q: "Ceza kararındaki süreler önemli midir?",
+        faq2_a: "Evet, süreler çoğu zaman özellikle önemlidir. BriefHelden bu bilgileri açık ve anlaşılır şekilde görmenize yardımcı olur.",
+        faq3_q: "Ceza kararında özellikle önemli olan nedir?",
+        faq3_a: "Özellikle belirtilen suçlama, tutar, olası puanlar, süreler ve belgede yer alan başka bilgiler önemlidir.",
         faq4_q: "BriefHelden hukuki danışmanlık mı veriyor?",
         faq4_a: "Hayır. BriefHelden hukuki danışmanlık vermez. Sadece içeriğin anlaşılır açıklamasını sunar.",
 
-        tip_title: "Ceza kararında sıkça yer alan bilgiler",
-        tip_sub: "Bu noktalar bu tür belgelerde sıkça bulunur:",
-        tip1_title: "Belirtilen suçlama",
-        tip1_text: "Belgede hangi ihlalin yazıldığı ve bunun nasıl açıklandığı çoğu zaman yer alır.",
-        tip2_title: "Süreler ve tarihler",
-        tip2_text: "Birçok belgede süreler, tarihler veya ödeme ile ilgili bilgiler metinde yer alır.",
-        tip3_title: "Tutar ve puanlar",
-        tip3_text: "Çoğu zaman belirtilen bir tutar ile olası puanlar veya başka sonuçlar yazılır.",
-        tip4_title: "Ek bilgiler",
-        tip4_text: "Belgeye göre ek notlar, ücretler veya başka ayrıntılar da bulunabilir.",
+        tip_title: "Ceza kararında nelere dikkat etmelisiniz?",
+        tip_sub: "Bu noktalar genelde özellikle önemlidir:",
+        tip1_title: "Suçlamaya bakın",
+        tip1_text: "Belgede hangi ihlalin belirtildiğine ve bunun nasıl açıklandığına bakın.",
+        tip2_title: "Süreleri dikkate alın",
+        tip2_text: "Belgede süre, tarih veya randevu bilgisi yer alıp almadığını kontrol edin.",
+        tip3_title: "Tutarı ve puanları inceleyin",
+        tip3_text: "Belirtilen tutara ve puan ya da başka bilgilerin yer alıp almadığına dikkat edin.",
+        tip4_title: "İçeriği net anlayın",
+        tip4_text: "Belgeyi anlamak zorsa, basit bir açıklama yer alan bilgileri daha kolay kavramanıza yardımcı olur.",
 
         more_title: "Diğer sık görülen mektupları anlayın",
         more_1: "Sağlık sigortası mektubunu anlayın",
@@ -974,50 +966,48 @@
         meta_3: "Конфиденциально",
 
         intro_title: "Что такое постановление о штрафе?",
-        intro_text: "Постановление о штрафе — это официальный документ, в котором указывается нарушение правил дорожного движения или административное нарушение. В нём часто указываются обвинение, сумма, возможные сборы, баллы, сроки или другие сведения. Многие люди не понимают, что означают эти данные и как понять содержание простым языком. Именно здесь помогает BriefHelden.",
+        intro_text: "Постановление о штрафе — это официальный документ, в котором указывается нарушение правил дорожного движения или административное нарушение. В нём часто указываются обвинение, сумма, возможные сборы, баллы, сроки или другие сведения. Многие люди хотят понять, что означают эти данные и какая информация содержится в документе. Именно здесь помогает BriefHelden.",
 
         left_title: "Просто объясняем",
-        left_text_1: "В постановлении о штрафе обычно речь идёт о конкретном обвинении, например о превышении скорости, неправильной парковке или другом нарушении на дороге.",
-        left_text_2: "Часто в документе указываются обвинение, сумма, возможные баллы, сроки и дополнительные сведения.",
-        left_text_3: "BriefHelden объясняет содержание простым языком, чтобы документ было легче понять.",
+        left_text_1: "В постановлении о штрафе часто речь идёт о конкретном обвинении, например о превышении скорости, неправильной парковке или другом нарушении на дороге.",
+        left_text_2: "Особенно важны следующие моменты: Какое обвинение указано? Есть ли сроки? Упомянуты ли баллы, сборы или другие сведения?",
+        left_text_3: "BriefHelden объясняет содержание простым языком, чтобы вам было легче понять документ.",
 
         right_title: "Как это работает",
         right_li_1: "Безопасно загрузите постановление о штрафе",
-        right_li_2: "Содержание объясняется понятным языком",
-        right_li_3: "Объяснение приходит по e-mail",
+        right_li_2: "Мы читаем содержание и понятно объясняем его",
+        right_li_3: "Вы получаете объяснение по e-mail",
         right_li_4: "Не юридическая консультация – только понятное объяснение",
 
         service1_title: "Получить полное объяснение документа",
-        service1_text: "Идеально, если всё постановление о штрафе нужно объяснить полностью и понятно.",
+        service1_text: "Идеально, если вы хотите полностью понять всё постановление о штрафе.",
         service1_btn: "Начать за 6,90 €",
 
         service2_title: "Задать короткий вопрос",
-        service2_text: "Идеально, если нужно прояснить только короткий вопрос о сумме, сроке, баллах или содержании.",
+        service2_text: "Идеально, если у вас только короткий вопрос о сумме, сроке, баллах или содержании.",
         service2_btn: "Спросить за 1,49 €",
-
-        notice_text: "Важно: BriefHelden не оказывает юридических консультаций, не даёт юридической оценки и не рекомендует дальнейшие действия. Объясняется только то, какие сведения содержатся в документе и как их можно понять простым языком.",
 
         faq_title: "Частые вопросы о постановлениях о штрафе",
         faq_sub: "Эти вопросы особенно часто возникают по таким документам:",
         faq1_q: "Какие сведения часто указаны в постановлении о штрафе?",
         faq1_a: "Часто указываются обвинение, сумма, возможные сборы, баллы, сроки и другие сведения в документе.",
-        faq2_q: "Могут ли в постановлении о штрафе быть сроки?",
-        faq2_a: "Во многих постановлениях о штрафе есть сроки, даты или другие временные указания. BriefHelden помогает понять эти данные простым языком.",
-        faq3_q: "Что часто особенно заметно в постановлении о штрафе?",
-        faq3_a: "Чаще всего заметны указанное обвинение, сумма, возможные баллы и дополнительные сведения в документе.",
+        faq2_q: "Важны ли сроки в постановлении о штрафе?",
+        faq2_a: "Да, сроки часто особенно важны. BriefHelden помогает увидеть эти данные ясно и понятно.",
+        faq3_q: "Что особенно важно в постановлении о штрафе?",
+        faq3_a: "Особенно важны указанное обвинение, сумма, возможные баллы, сроки и другие сведения в документе.",
         faq4_q: "BriefHelden — это юридическая консультация?",
         faq4_a: "Нет. BriefHelden не даёт юридических консультаций. Вы получаете только понятное объяснение содержания.",
 
-        tip_title: "Что часто указывается в постановлении о штрафе",
-        tip_sub: "Эти пункты часто встречаются в таких документах:",
-        tip1_title: "Указанное обвинение",
-        tip1_text: "В документе часто указано, какое нарушение названо и как оно описано.",
-        tip2_title: "Сроки и даты",
-        tip2_text: "Во многих документах указываются сроки, даты или сведения, связанные с оплатой.",
-        tip3_title: "Сумма и баллы",
-        tip3_text: "Часто указываются сумма, а также возможные баллы или другие последствия.",
-        tip4_title: "Дополнительные сведения",
-        tip4_text: "В зависимости от документа могут быть включены дополнительные примечания, сборы или другие детали.",
+        tip_title: "На что стоит обратить внимание в постановлении о штрафе?",
+        tip_sub: "Эти пункты часто особенно важны:",
+        tip1_title: "Посмотрите на обвинение",
+        tip1_text: "Посмотрите, какое нарушение указано в документе и как оно описано.",
+        tip2_title: "Обратите внимание на сроки",
+        tip2_text: "Проверьте, указаны ли в документе сроки, даты или другие временные данные.",
+        tip3_title: "Посмотрите сумму и баллы",
+        tip3_text: "Обратите внимание на указанную сумму и на то, упомянуты ли баллы или другие сведения.",
+        tip4_title: "Понять содержание ясно",
+        tip4_text: "Если документ трудно понять, простое объяснение помогает легче воспринять содержащиеся в нём сведения.",
 
         more_title: "Понять другие частые письма",
         more_1: "Понять письмо от медицинской страховки",
