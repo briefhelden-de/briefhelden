@@ -31,22 +31,22 @@
 
   <style>
     :root{
-      --nav-bg: rgba(9,24,33,.82);
+      --nav-bg: rgba(9,24,33,.78);
       --nav-border: rgba(255,255,255,.10);
       --text: #0b1220;
-      --muted: rgba(11,18,32,.74);
+      --muted: rgba(11,18,32,.72);
       --heroText: #fff;
-      --heroMuted: rgba(255,255,255,.86);
-      --glass: rgba(255,255,255,.30);
-      --glass2: rgba(255,255,255,.18);
-      --stroke: rgba(255,255,255,.38);
-      --shadow: 0 18px 40px rgba(0,0,0,.16);
+      --heroMuted: rgba(255,255,255,.84);
+      --glass: rgba(255,255,255,.28);
+      --glass2: rgba(255,255,255,.16);
+      --stroke: rgba(255,255,255,.36);
+      --shadow: 0 18px 40px rgba(0,0,0,.18);
       --btn1: #2f6fff;
       --btn2: #1f56b8;
       --btnGreen1: #12b76a;
       --btnGreen2: #079455;
-      --radius-xl: 28px;
-      --radius-lg: 20px;
+      --radius-xl: 24px;
+      --radius-lg: 18px;
       --radius-md: 14px;
       --max: 1120px;
     }
@@ -60,8 +60,8 @@
       color:var(--text);
       background:
         radial-gradient(1200px 700px at 12% 24%, rgba(120,180,255,.32), rgba(255,255,255,0) 60%),
-        radial-gradient(1200px 800px at 88% 18%, rgba(120,140,255,.24), rgba(255,255,255,0) 62%),
-        radial-gradient(1000px 700px at 50% 92%, rgba(170,210,255,.26), rgba(255,255,255,0) 60%),
+        radial-gradient(1200px 800px at 88% 18%, rgba(120,140,255,.26), rgba(255,255,255,0) 62%),
+        radial-gradient(1000px 700px at 50% 92%, rgba(170,210,255,.28), rgba(255,255,255,0) 60%),
         linear-gradient(180deg, #f8fbff 0%, #eef6ff 45%, #f8fbff 100%);
       min-height:100vh;
     }
@@ -127,7 +127,7 @@
     }
 
     nav.links a{
-      color:rgba(255,255,255,.84);
+      color:rgba(255,255,255,.82);
       font-weight:700;
       font-size:14px;
     }
@@ -146,7 +146,7 @@
       border:1px solid rgba(255,255,255,.18);
       background:rgba(0,0,0,.18);
       color:#fff;
-      padding:8px 34px 8px 12px;
+      padding:8px 36px 8px 12px;
       border-radius:12px;
       font-weight:800;
       cursor:pointer;
@@ -171,9 +171,9 @@
     .hero{
       position:relative;
       color:var(--heroText);
-      padding:72px 18px 42px;
+      padding:68px 18px 40px;
       background:
-        linear-gradient(180deg, rgba(0,0,0,.56), rgba(0,0,0,.60)),
+        linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.58)),
         url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=2200&q=60");
       background-size:cover;
       background-position:center;
@@ -250,14 +250,8 @@
       backdrop-filter:blur(10px);
     }
 
-    .section{
-      padding:26px 18px 0;
-    }
-
-    .wrap{
-      max-width:var(--max);
-      margin:0 auto;
-    }
+    .section{padding:26px 18px 10px}
+    .wrap{max-width:var(--max); margin:0 auto;}
 
     .glassCard{
       background:linear-gradient(180deg, var(--glass), var(--glass2));
@@ -269,9 +263,7 @@
       overflow:hidden;
     }
 
-    .pad{
-      padding:24px 22px;
-    }
+    .pad{padding:22px}
 
     .headline,
     .sectionTitle{
@@ -286,7 +278,7 @@
     .sectionSub{
       text-align:center;
       margin:0 auto 16px;
-      max-width:930px;
+      max-width:920px;
       color:rgba(11,18,32,.76);
       line-height:1.7;
       font-size:16px;
@@ -295,14 +287,14 @@
     .grid2{
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:16px;
+      gap:14px;
     }
 
     .infoCard,
     .faqItem{
       border-radius:var(--radius-lg);
-      border:1px solid rgba(255,255,255,.54);
-      background:rgba(255,255,255,.18);
+      border:1px solid rgba(255,255,255,.55);
+      background:rgba(255,255,255,.20);
       padding:18px;
     }
 
@@ -328,32 +320,30 @@
       margin:0;
     }
 
-    .infoCard p + p{
-      margin-top:12px;
-    }
+    .infoCard p + p{margin-top:12px;}
 
     .infoCard ul{
       margin:0;
-      padding-left:22px;
+      padding-left:18px;
     }
 
     .faqGrid{
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:16px;
+      gap:14px;
     }
 
     .serviceMini{
       display:grid;
       grid-template-columns:1fr 1fr;
-      gap:16px;
-      margin-top:18px;
+      gap:14px;
+      margin-top:16px;
     }
 
     .serviceMini .box{
       border-radius:18px;
-      border:1px solid rgba(255,255,255,.54);
-      background:rgba(255,255,255,.18);
+      border:1px solid rgba(255,255,255,.55);
+      background:rgba(255,255,255,.20);
       padding:18px;
       text-align:center;
     }
@@ -390,32 +380,12 @@
     .miniBtn.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
     .miniBtn.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
 
-    .moreLinks{
-      max-width:var(--max);
-      margin:28px auto 0;
-      padding:0 18px 30px;
+    .ctaPanel{
+      text-align:center;
     }
 
-    .moreLinks h2{
-      margin:0 0 14px;
-      font-size:26px;
-      font-weight:950;
-      color:#0b1220;
-    }
-
-    .moreLinks ul{
-      margin:0;
-      padding-left:20px;
-    }
-
-    .moreLinks li{
-      margin:8px 0;
-      font-weight:700;
-      color:rgba(11,18,32,.82);
-    }
-
-    .moreLinks a:hover{
-      text-decoration:underline;
+    .ctaPanel .sectionSub{
+      margin-bottom:18px;
     }
 
     footer{
@@ -446,6 +416,27 @@
 
     .footLinks a{color:rgba(255,255,255,.80)}
     .footLinks a:hover{color:#fff}
+
+    .moreLinks{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:0 18px 28px;
+    }
+
+    .moreLinks h2{
+      font-size:24px;
+      margin:0 0 12px;
+      font-weight:950;
+      color:#0b1220;
+    }
+
+    .moreLinks ul{
+      margin:0;
+      padding-left:18px;
+      color:rgba(11,18,32,.82);
+      font-weight:700;
+      line-height:1.8;
+    }
 
     @media (max-width:900px){
       nav.links{display:none}
@@ -493,12 +484,12 @@
       </p>
 
       <div class="ctaGroup">
-        <a class="cta primary" id="stripeBtn" href="#" target="_blank" rel="noopener noreferrer">
+        <a class="cta primary" id="stripeBtn" href="#" rel="noopener">
           <span data-i18n="hero_cta">Jetzt Bußgeldbescheid erklären lassen – 6,90 €</span>
           <span aria-hidden="true">›</span>
         </a>
 
-        <a class="cta secondary" id="questionBtn" href="#" target="_blank" rel="noopener noreferrer">
+        <a class="cta secondary" id="questionBtn" href="#" rel="noopener">
           <span data-i18n="hero_question_cta">Kurze Frage stellen – 1,49 €</span>
           <span aria-hidden="true">›</span>
         </a>
@@ -531,7 +522,7 @@
                 Wichtig sind dabei vor allem: Welcher Vorwurf wird genannt? Gibt es Fristen? Werden Punkte, Gebühren oder weitere Angaben erwähnt?
               </p>
               <p data-i18n="left_text_3">
-                BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie das Schreiben besser sprachlich einordnen können.
+                BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie das Schreiben besser sprachlich verständlich einordnen können.
               </p>
             </div>
 
@@ -541,7 +532,7 @@
                 <li data-i18n="right_li_1">Bußgeldbescheid sicher hochladen</li>
                 <li data-i18n="right_li_2">Wir lesen den Inhalt und erklären ihn verständlich</li>
                 <li data-i18n="right_li_3">Sie erhalten die Erklärung per E-Mail</li>
-                <li data-i18n="right_li_4">Keine Rechtsberatung – nur verständliche Texterklärung</li>
+                <li data-i18n="right_li_4">Keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) – nur sprachliche Vereinfachung und verständliche Texterklärung ohne rechtliche Bewertung oder Handlungsempfehlung</li>
               </ul>
             </div>
           </div>
@@ -552,7 +543,7 @@
               <p data-i18n="service1_text">
                 Ideal, wenn Sie den ganzen Bußgeldbescheid vollständig verstehen möchten.
               </p>
-              <a class="miniBtn primary" id="servicePrimaryBtn" href="#" target="_blank" rel="noopener noreferrer">
+              <a class="miniBtn primary" id="servicePrimaryBtn" href="#" rel="noopener">
                 <span data-i18n="service1_btn">Jetzt für 6,90 € starten</span>
                 <span aria-hidden="true">›</span>
               </a>
@@ -563,7 +554,7 @@
               <p data-i18n="service2_text">
                 Ideal, wenn Sie nur eine kurze Frage zu Betrag, Frist, Punkten oder Inhalt haben.
               </p>
-              <a class="miniBtn secondary" id="serviceQuestionBtn" href="#" target="_blank" rel="noopener noreferrer">
+              <a class="miniBtn secondary" id="serviceQuestionBtn" href="#" rel="noopener">
                 <span data-i18n="service2_btn">Jetzt für 1,49 € fragen</span>
                 <span aria-hidden="true">›</span>
               </a>
@@ -606,7 +597,7 @@
             <div class="faqItem">
               <h3 data-i18n="faq4_q">Ist BriefHelden eine Rechtsberatung?</h3>
               <p data-i18n="faq4_a">
-                Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.
+                Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Erklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Rechtsprüfung und keine verbindliche Handlungsempfehlung.
               </p>
             </div>
           </div>
@@ -631,39 +622,50 @@
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="tip2_title">Fristen beachten</h3>
+              <h3 data-i18n="tip2_title">Frist beachten</h3>
               <p data-i18n="tip2_text">
-                Prüfen Sie, ob im Schreiben Fristen, Termine oder Datumsangaben genannt werden.
+                Schauen Sie, ob im Schreiben Fristen, Termine oder Datumsangaben genannt werden.
               </p>
             </div>
 
             <div class="faqItem">
               <h3 data-i18n="tip3_title">Betrag und Punkte ansehen</h3>
               <p data-i18n="tip3_text">
-                Achten Sie darauf, welcher Betrag genannt wird und ob Punkte oder weitere Hinweise enthalten sind.
+                Achten Sie darauf, welcher Betrag genannt wird und ob Punkte oder weitere Angaben enthalten sind.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="tip4_title">Inhalt verständlich einordnen</h3>
+              <h3 data-i18n="tip4_title">Inhalt verständlich machen</h3>
               <p data-i18n="tip4_text">
-                Wenn das Schreiben schwer verständlich ist, hilft eine einfache Erklärung dabei, die enthaltenen Angaben besser zu erfassen.
+                Wenn das Schreiben schwer verständlich ist, hilft eine einfache Erklärung oft dabei, die enthaltenen Angaben besser zu erfassen.
               </p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="moreLinks">
-        <h2 data-i18n="more_title">Weitere häufige Briefe verstehen</h2>
-        <ul>
-          <li><a href="/krankenkasse-brief-verstehen.html" data-i18n="more_1">Krankenkasse Brief verstehen</a></li>
-          <li><a href="/versicherung-brief-verstehen.html" data-i18n="more_2">Versicherung Brief verstehen</a></li>
-          <li><a href="/nebenkostenabrechnung-verstehen.html" data-i18n="more_3">Nebenkostenabrechnung verstehen</a></li>
-          <li><a href="/stromrechnung-verstehen.html" data-i18n="more_4">Stromrechnung verstehen</a></li>
-          <li><a href="/gasrechnung-verstehen.html" data-i18n="more_5">Gasrechnung verstehen</a></li>
-          <li><a href="/bank-brief-verstehen.html" data-i18n="more_6">Bank Brief verstehen</a></li>
-        </ul>
+      <div style="height:18px"></div>
+
+      <div class="glassCard">
+        <div class="pad ctaPanel">
+          <h2 class="sectionTitle" data-i18n="bottom_title">Bußgeldbescheid einfach verständlich erklären lassen</h2>
+          <p class="sectionSub" data-i18n="bottom_sub">
+            Laden Sie Ihr Schreiben hoch oder stellen Sie eine kurze Frage. BriefHelden erklärt sprachlich verständlich, welche Angaben im Dokument enthalten sind.
+          </p>
+
+          <div class="ctaGroup">
+            <a class="cta primary" id="bottomStripeBtn" href="#" rel="noopener">
+              <span data-i18n="bottom_cta">Jetzt Bußgeldbescheid erklären lassen – 6,90 €</span>
+              <span aria-hidden="true">›</span>
+            </a>
+
+            <a class="cta secondary" id="bottomQuestionBtn" href="#" rel="noopener">
+              <span data-i18n="bottom_question_cta">Kurze Frage stellen – 1,49 €</span>
+              <span aria-hidden="true">›</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -681,6 +683,18 @@
       </div>
     </div>
   </footer>
+
+  <div class="moreLinks">
+    <h2 data-i18n="more_title">Weitere häufige Briefe verstehen</h2>
+    <ul>
+      <li><a href="/inkasso-brief-verstehen.html" data-i18n="more_1">Inkasso Brief verstehen</a></li>
+      <li><a href="/mahnbescheid-verstehen.html" data-i18n="more_2">Mahnbescheid verstehen</a></li>
+      <li><a href="/jobcenter-brief-verstehen.html" data-i18n="more_3">Jobcenter Brief verstehen</a></li>
+      <li><a href="/pfaendungsbescheid-verstehen.html" data-i18n="more_4">Pfändungsbescheid verstehen</a></li>
+      <li><a href="/vollstreckungsbescheid-verstehen.html" data-i18n="more_5">Vollstreckungsbescheid verstehen</a></li>
+      <li><a href="/finanzamt-brief-verstehen.html" data-i18n="more_6">Finanzamt Brief verstehen</a></li>
+    </ul>
+  </div>
 
   <script>
     const STRIPE_LINKS = {
@@ -725,13 +739,13 @@
         left_title: "Einfach erklärt",
         left_text_1: "In einem Bußgeldbescheid geht es oft um einen konkreten Vorwurf, zum Beispiel zu schnelles Fahren, falsches Parken oder einen anderen Verstoß im Straßenverkehr.",
         left_text_2: "Wichtig sind dabei vor allem: Welcher Vorwurf wird genannt? Gibt es Fristen? Werden Punkte, Gebühren oder weitere Angaben erwähnt?",
-        left_text_3: "BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie das Schreiben besser sprachlich einordnen können.",
+        left_text_3: "BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie das Schreiben besser sprachlich verständlich einordnen können.",
 
         right_title: "So funktioniert es",
         right_li_1: "Bußgeldbescheid sicher hochladen",
         right_li_2: "Wir lesen den Inhalt und erklären ihn verständlich",
         right_li_3: "Sie erhalten die Erklärung per E-Mail",
-        right_li_4: "Keine Rechtsberatung – nur verständliche Texterklärung",
+        right_li_4: "Keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) – nur sprachliche Vereinfachung und verständliche Texterklärung ohne rechtliche Bewertung oder Handlungsempfehlung",
 
         service1_title: "Komplettes Schreiben erklären lassen",
         service1_text: "Ideal, wenn Sie den ganzen Bußgeldbescheid vollständig verstehen möchten.",
@@ -750,26 +764,31 @@
         faq3_q: "Was ist bei einem Bußgeldbescheid besonders wichtig?",
         faq3_a: "Besonders wichtig sind der genannte Vorwurf, der Betrag, mögliche Punkte, Fristen und weitere Hinweise im Schreiben.",
         faq4_q: "Ist BriefHelden eine Rechtsberatung?",
-        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.",
+        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Erklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Rechtsprüfung und keine verbindliche Handlungsempfehlung.",
 
         tip_title: "Worauf sollten Sie bei einem Bußgeldbescheid achten?",
         tip_sub: "Diese Punkte sind oft besonders wichtig:",
         tip1_title: "Vorwurf ansehen",
         tip1_text: "Schauen Sie, welcher Verstoß im Schreiben genannt wird und wie dieser beschrieben ist.",
-        tip2_title: "Fristen beachten",
-        tip2_text: "Prüfen Sie, ob im Schreiben Fristen, Termine oder Datumsangaben genannt werden.",
+        tip2_title: "Frist beachten",
+        tip2_text: "Schauen Sie, ob im Schreiben Fristen, Termine oder Datumsangaben genannt werden.",
         tip3_title: "Betrag und Punkte ansehen",
-        tip3_text: "Achten Sie darauf, welcher Betrag genannt wird und ob Punkte oder weitere Hinweise enthalten sind.",
-        tip4_title: "Inhalt verständlich einordnen",
-        tip4_text: "Wenn das Schreiben schwer verständlich ist, hilft eine einfache Erklärung dabei, die enthaltenen Angaben besser zu erfassen.",
+        tip3_text: "Achten Sie darauf, welcher Betrag genannt wird und ob Punkte oder weitere Angaben enthalten sind.",
+        tip4_title: "Inhalt verständlich machen",
+        tip4_text: "Wenn das Schreiben schwer verständlich ist, hilft eine einfache Erklärung oft dabei, die enthaltenen Angaben besser zu erfassen.",
+
+        bottom_title: "Bußgeldbescheid einfach verständlich erklären lassen",
+        bottom_sub: "Laden Sie Ihr Schreiben hoch oder stellen Sie eine kurze Frage. BriefHelden erklärt sprachlich verständlich, welche Angaben im Dokument enthalten sind.",
+        bottom_cta: "Jetzt Bußgeldbescheid erklären lassen – 6,90 €",
+        bottom_question_cta: "Kurze Frage stellen – 1,49 €",
 
         more_title: "Weitere häufige Briefe verstehen",
-        more_1: "Krankenkasse Brief verstehen",
-        more_2: "Versicherung Brief verstehen",
-        more_3: "Nebenkostenabrechnung verstehen",
-        more_4: "Stromrechnung verstehen",
-        more_5: "Gasrechnung verstehen",
-        more_6: "Bank Brief verstehen",
+        more_1: "Inkasso Brief verstehen",
+        more_2: "Mahnbescheid verstehen",
+        more_3: "Jobcenter Brief verstehen",
+        more_4: "Pfändungsbescheid verstehen",
+        more_5: "Vollstreckungsbescheid verstehen",
+        more_6: "Finanzamt Brief verstehen",
 
         foot_copy: "© 2026 BriefHelden – Alle Rechte vorbehalten",
         foot_home: "Startseite",
@@ -813,7 +832,7 @@
         right_li_1: "Upload the fine notice securely",
         right_li_2: "We read the content and explain it clearly",
         right_li_3: "You receive the explanation by email",
-        right_li_4: "No legal advice – plain-language explanation only",
+        right_li_4: "No legal advice within the meaning of the German Legal Services Act (RDG) — only linguistic simplification and a clear text explanation without legal assessment or recommendation for action",
 
         service1_title: "Get the full document explained",
         service1_text: "Ideal if you want to fully understand the entire fine notice.",
@@ -832,26 +851,31 @@
         faq3_q: "What is especially important in a fine notice?",
         faq3_a: "Especially important are the stated allegation, the amount, possible points, deadlines and further notes in the document.",
         faq4_q: "Is BriefHelden legal advice?",
-        faq4_a: "No. BriefHelden does not provide legal advice. You only receive a clear explanation of the content.",
+        faq4_a: "No. BriefHelden does not provide legal advice within the meaning of the German Legal Services Act (RDG). You receive only a clear explanation and linguistic simplification of your document’s content. There is no legal assessment, no individual legal review, and no binding recommendation for action.",
 
         tip_title: "What should you pay attention to in a fine notice?",
         tip_sub: "These points are often especially important:",
         tip1_title: "Look at the allegation",
         tip1_text: "See which violation is mentioned in the document and how it is described.",
-        tip2_title: "Pay attention to deadlines",
-        tip2_text: "Check whether deadlines, appointments or dates are mentioned in the document.",
+        tip2_title: "Watch the deadline",
+        tip2_text: "See whether deadlines, appointments or dates are mentioned in the document.",
         tip3_title: "Look at amount and points",
         tip3_text: "Pay attention to the amount mentioned and whether points or further notes are included.",
-        tip4_title: "Understand the content clearly",
-        tip4_text: "If the document is difficult to understand, a simple explanation helps you grasp the included details more easily.",
+        tip4_title: "Make the content understandable",
+        tip4_text: "If the document is difficult to understand, a simple explanation often helps you grasp the included details more easily.",
+
+        bottom_title: "Get your fine notice explained in simple language",
+        bottom_sub: "Upload your document or ask a short question. BriefHelden explains in plain language which details are included in the document.",
+        bottom_cta: "Get fine notice explained now – €6.90",
+        bottom_question_cta: "Ask a short question – €1.49",
 
         more_title: "Understand more common letters",
-        more_1: "Understand health insurance letter",
-        more_2: "Understand insurance letter",
-        more_3: "Understand utility statement",
-        more_4: "Understand electricity bill",
-        more_5: "Understand gas bill",
-        more_6: "Understand bank letter",
+        more_1: "Understand a debt collection letter",
+        more_2: "Understand a payment order",
+        more_3: "Understand a Jobcenter letter",
+        more_4: "Understand a garnishment notice",
+        more_5: "Understand an enforcement order",
+        more_6: "Understand a tax office letter",
 
         foot_copy: "© 2026 BriefHelden – All rights reserved",
         foot_home: "Home",
@@ -863,10 +887,10 @@
       },
 
       tr: {
-        pageTitle: "Ceza kararını anlayın – kolay açıklama | BriefHelden",
-        metaDescription: "Ceza kararını kolay anlayın: BriefHelden içerik, tutar, puanlar, süreler ve belgede yer alan bilgileri sade ve anlaşılır şekilde açıklar.",
-        ogTitle: "Ceza kararını anlayın – kolay açıklama | BriefHelden",
-        ogDescription: "Ceza kararı basitçe açıklanır. Suçlama, tutar, puanlar, süreler ve belgede yer alan bilgiler açık şekilde anlaşılır.",
+        pageTitle: "Para cezası kararını anlayın – kolay açıklama | BriefHelden",
+        metaDescription: "Para cezası kararını kolay anlayın: BriefHelden içerik, tutar, puanlar, süreler ve belgede yer alan bilgileri sade ve anlaşılır şekilde açıklar.",
+        ogTitle: "Para cezası kararını anlayın – kolay açıklama | BriefHelden",
+        ogDescription: "Para cezası kararı basitçe açıklanır. Suçlama, tutar, puanlar, süreler ve belgede yer alan bilgiler açık şekilde anlaşılır.",
 
         nav_home: "Ana Sayfa",
         nav_question: "Soru sor",
@@ -875,65 +899,70 @@
         nav_terms: "Şartlar",
         nav_privacy: "Gizlilik",
 
-        hero_title: "Ceza kararını anlayın",
-        hero_sub: "Bir ceza kararı çoğu zaman sert ve endişe verici görünür. BriefHelden içeriği basit, açık ve anlaşılır şekilde açıklar.",
-        hero_cta: "Ceza kararını şimdi açıklat – 6,90 €",
+        hero_title: "Para cezası kararını anlayın",
+        hero_sub: "Bir para cezası kararı çoğu zaman sert ve endişe verici görünür. BriefHelden içeriği basit, açık ve anlaşılır şekilde açıklar.",
+        hero_cta: "Para cezası kararını şimdi açıklat – 6,90 €",
         hero_question_cta: "Kısa soru sor – 1,49 €",
         meta_1: "Basit açıklandı",
         meta_2: "Hızlı dönüş",
         meta_3: "Gizli",
 
-        intro_title: "Ceza kararı nedir?",
-        intro_text: "Ceza kararı, bir trafik ihlali veya idari kabahatin belirtildiği resmî bir yazıdır. İçinde çoğu zaman bir suçlama, bir tutar, olası ücretler, puanlar, süreler veya başka bilgiler yer alır. Birçok kişi bu bilgilerin ne anlama geldiğini ve belgede hangi bilgilerin yer aldığını anlamak ister. BriefHelden tam bu konuda yardımcı olur.",
+        intro_title: "Para cezası kararı nedir?",
+        intro_text: "Para cezası kararı, bir trafik ihlali veya idari kabahatin belirtildiği resmî bir yazıdır. İçinde çoğu zaman bir suçlama, bir tutar, olası ücretler, puanlar, süreler veya başka bilgiler yer alır. Birçok kişi bu bilgilerin ne anlama geldiğini ve belgede hangi bilgilerin yer aldığını anlamak ister. BriefHelden tam bu konuda yardımcı olur.",
 
         left_title: "Basit açıklama",
-        left_text_1: "Bir ceza kararında çoğu zaman belirli bir suçlama yer alır; örneğin hız sınırını aşma, yanlış park etme veya trafikte başka bir ihlal.",
+        left_text_1: "Bir para cezası kararında çoğu zaman belirli bir suçlama yer alır; örneğin hız sınırını aşma, yanlış park etme veya trafikte başka bir ihlal.",
         left_text_2: "Özellikle şu noktalar önemlidir: Hangi suçlama belirtiliyor? Süre var mı? Puan, ücret veya başka bilgiler yer alıyor mu?",
-        left_text_3: "BriefHelden içeriği basit dille açıklar, böylece belgeyi daha kolay anlayabilirsiniz.",
+        left_text_3: "BriefHelden içeriği basit dille açıklar, böylece belgeyi daha anlaşılır şekilde değerlendirebilirsiniz.",
 
         right_title: "Nasıl çalışır",
-        right_li_1: "Ceza kararını güvenli şekilde yükleyin",
+        right_li_1: "Para cezası kararını güvenli şekilde yükleyin",
         right_li_2: "İçeriği okuyup anlaşılır şekilde açıklıyoruz",
         right_li_3: "Açıklamayı e-posta ile alırsınız",
-        right_li_4: "Hukuki danışmanlık değil – sadece anlaşılır açıklama",
+        right_li_4: "Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık verilmez — yalnızca dilsel sadeleştirme ve hukuki değerlendirme ya da eylem tavsiyesi olmadan anlaşılır metin açıklaması sunulur",
 
         service1_title: "Belgenin tamamını açıklat",
-        service1_text: "Ceza kararının tamamını anlamak istiyorsanız idealdir.",
+        service1_text: "Para cezası kararının tamamını anlamak istiyorsanız idealdir.",
         service1_btn: "Şimdi 6,90 € ile başla",
 
         service2_title: "Kısa bir soru sor",
         service2_text: "Sadece tutar, süre, puan veya içerikle ilgili kısa bir sorunuz varsa idealdir.",
         service2_btn: "Şimdi 1,49 € ile sor",
 
-        faq_title: "Ceza kararları hakkında sık sorulan sorular",
+        faq_title: "Para cezası kararları hakkında sık sorulan sorular",
         faq_sub: "Bu tür yazılarda şu sorular sıkça ortaya çıkar:",
-        faq1_q: "Ceza kararında hangi bilgiler sıkça yer alır?",
+        faq1_q: "Para cezası kararında hangi bilgiler sıkça yer alır?",
         faq1_a: "Çoğu zaman suçlama, tutar, olası ücretler, puanlar, süreler ve ek bilgiler belgede yer alır.",
-        faq2_q: "Ceza kararındaki süreler önemli midir?",
+        faq2_q: "Para cezası kararındaki süreler önemli midir?",
         faq2_a: "Evet, süreler çoğu zaman özellikle önemlidir. BriefHelden bu bilgileri açık ve anlaşılır şekilde görmenize yardımcı olur.",
-        faq3_q: "Ceza kararında özellikle önemli olan nedir?",
+        faq3_q: "Para cezası kararında özellikle önemli olan nedir?",
         faq3_a: "Özellikle belirtilen suçlama, tutar, olası puanlar, süreler ve belgede yer alan başka bilgiler önemlidir.",
         faq4_q: "BriefHelden hukuki danışmanlık mı veriyor?",
-        faq4_a: "Hayır. BriefHelden hukuki danışmanlık vermez. Sadece içeriğin anlaşılır açıklamasını sunar.",
+        faq4_a: "Hayır. BriefHelden, Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık vermez. Yalnızca belgenizin içeriğinin anlaşılır açıklamasını ve dilsel sadeleştirmesini alırsınız. Hukuki değerlendirme, bireysel hukuki inceleme veya bağlayıcı bir hareket tavsiyesi yapılmaz.",
 
-        tip_title: "Ceza kararında nelere dikkat etmelisiniz?",
+        tip_title: "Para cezası kararında nelere dikkat etmelisiniz?",
         tip_sub: "Bu noktalar genelde özellikle önemlidir:",
         tip1_title: "Suçlamaya bakın",
         tip1_text: "Belgede hangi ihlalin belirtildiğine ve bunun nasıl açıklandığına bakın.",
-        tip2_title: "Süreleri dikkate alın",
-        tip2_text: "Belgede süre, tarih veya randevu bilgisi yer alıp almadığını kontrol edin.",
+        tip2_title: "Süreye bakın",
+        tip2_text: "Belgede süre, tarih veya zaman bilgisi yer alıp almadığına bakın.",
         tip3_title: "Tutarı ve puanları inceleyin",
         tip3_text: "Belirtilen tutara ve puan ya da başka bilgilerin yer alıp almadığına dikkat edin.",
-        tip4_title: "İçeriği net anlayın",
+        tip4_title: "İçeriği anlaşılır hale getirin",
         tip4_text: "Belgeyi anlamak zorsa, basit bir açıklama yer alan bilgileri daha kolay kavramanıza yardımcı olur.",
 
+        bottom_title: "Para cezası kararını anlaşılır şekilde açıklatın",
+        bottom_sub: "Belgenizi yükleyin veya kısa bir soru sorun. BriefHelden, belgede hangi bilgilerin yer aldığını anlaşılır dilde açıklar.",
+        bottom_cta: "Para cezası kararını şimdi açıklat – 6,90 €",
+        bottom_question_cta: "Kısa soru sor – 1,49 €",
+
         more_title: "Diğer sık görülen mektupları anlayın",
-        more_1: "Sağlık sigortası mektubunu anlayın",
-        more_2: "Sigorta mektubunu anlayın",
-        more_3: "Yan gider hesaplamasını anlayın",
-        more_4: "Elektrik faturasını anlayın",
-        more_5: "Gaz faturasını anlayın",
-        more_6: "Banka mektubunu anlayın",
+        more_1: "İnkasso mektubunu anlayın",
+        more_2: "Ödeme emrini anlayın",
+        more_3: "Jobcenter mektubunu anlayın",
+        more_4: "Haciz bildirimini anlayın",
+        more_5: "İcra kararını anlayın",
+        more_6: "Vergi dairesi mektubunu anlayın",
 
         foot_copy: "© 2026 BriefHelden – Tüm hakları saklıdır",
         foot_home: "Ana Sayfa",
@@ -977,7 +1006,7 @@
         right_li_1: "Безопасно загрузите постановление о штрафе",
         right_li_2: "Мы читаем содержание и понятно объясняем его",
         right_li_3: "Вы получаете объяснение по e-mail",
-        right_li_4: "Не юридическая консультация – только понятное объяснение",
+        right_li_4: "Это не юридическая консультация в смысле немецкого Закона о юридических услугах (RDG) — только языковое упрощение и понятное текстовое объяснение без правовой оценки и без рекомендаций к действиям",
 
         service1_title: "Получить полное объяснение документа",
         service1_text: "Идеально, если вы хотите полностью понять всё постановление о штрафе.",
@@ -996,26 +1025,31 @@
         faq3_q: "Что особенно важно в постановлении о штрафе?",
         faq3_a: "Особенно важны указанное обвинение, сумма, возможные баллы, сроки и другие сведения в документе.",
         faq4_q: "BriefHelden — это юридическая консультация?",
-        faq4_a: "Нет. BriefHelden не даёт юридических консультаций. Вы получаете только понятное объяснение содержания.",
+        faq4_a: "Нет. BriefHelden не оказывает юридических консультаций в смысле немецкого Закона о юридических услугах (RDG). Вы получаете только понятное объяснение и языковое упрощение содержания вашего документа. Юридическая оценка, индивидуальная правовая проверка и обязательные рекомендации к действиям не предоставляются.",
 
         tip_title: "На что стоит обратить внимание в постановлении о штрафе?",
         tip_sub: "Эти пункты часто особенно важны:",
         tip1_title: "Посмотрите на обвинение",
         tip1_text: "Посмотрите, какое нарушение указано в документе и как оно описано.",
-        tip2_title: "Обратите внимание на сроки",
-        tip2_text: "Проверьте, указаны ли в документе сроки, даты или другие временные данные.",
+        tip2_title: "Обратите внимание на срок",
+        tip2_text: "Посмотрите, указаны ли в документе сроки, даты или другие временные данные.",
         tip3_title: "Посмотрите сумму и баллы",
         tip3_text: "Обратите внимание на указанную сумму и на то, упомянуты ли баллы или другие сведения.",
-        tip4_title: "Понять содержание ясно",
-        tip4_text: "Если документ трудно понять, простое объяснение помогает легче воспринять содержащиеся в нём сведения.",
+        tip4_title: "Сделайте содержание понятным",
+        tip4_text: "Если документ трудно понять, простое объяснение часто помогает легче воспринять содержащиеся в нём сведения.",
+
+        bottom_title: "Получить понятное объяснение постановления о штрафе",
+        bottom_sub: "Загрузите документ или задайте короткий вопрос. BriefHelden простым языком объяснит, какие сведения содержатся в документе.",
+        bottom_cta: "Объяснить постановление о штрафе – 6,90 €",
+        bottom_question_cta: "Задать короткий вопрос – 1,49 €",
 
         more_title: "Понять другие частые письма",
-        more_1: "Понять письмо от медицинской страховки",
-        more_2: "Понять письмо от страховой",
-        more_3: "Понять расчёт коммунальных расходов",
-        more_4: "Понять счёт за электричество",
-        more_5: "Понять счёт за газ",
-        more_6: "Понять письмо из банка",
+        more_1: "Понять письмо от инкассо",
+        more_2: "Понять судебный приказ",
+        more_3: "Понять письмо от Jobcenter",
+        more_4: "Понять уведомление об аресте",
+        more_5: "Понять исполнительный документ",
+        more_6: "Понять письмо из налоговой",
 
         foot_copy: "© 2026 BriefHelden – Все права защищены",
         foot_home: "Главная",
@@ -1035,11 +1069,15 @@
       const servicePrimaryBtn = document.getElementById("servicePrimaryBtn");
       const questionBtn = document.getElementById("questionBtn");
       const serviceQuestionBtn = document.getElementById("serviceQuestionBtn");
+      const bottomStripeBtn = document.getElementById("bottomStripeBtn");
+      const bottomQuestionBtn = document.getElementById("bottomQuestionBtn");
 
       if(stripeBtn) stripeBtn.href = mainLink;
       if(servicePrimaryBtn) servicePrimaryBtn.href = mainLink;
+      if(bottomStripeBtn) bottomStripeBtn.href = mainLink;
       if(questionBtn) questionBtn.href = questionLink;
       if(serviceQuestionBtn) serviceQuestionBtn.href = questionLink;
+      if(bottomQuestionBtn) bottomQuestionBtn.href = questionLink;
     }
 
     function updateMeta(lang){
@@ -1070,11 +1108,11 @@
 
       updateMeta(currentLang);
       updateLinks(currentLang);
-      localStorage.setItem("briefhelden_language", currentLang);
+      localStorage.setItem("briefhelden_lang", currentLang);
     }
 
     const select = document.getElementById("langSelect");
-    const savedLang = localStorage.getItem("briefhelden_language");
+    const savedLang = localStorage.getItem("briefhelden_lang");
     const initialLang = ["de","en","tr","ru"].includes(savedLang) ? savedLang : "de";
 
     select.value = initialLang;
