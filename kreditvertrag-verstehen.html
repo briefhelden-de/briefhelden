@@ -6,7 +6,7 @@
   <title>Kreditvertrag verstehen – einfach erklärt | BriefHelden</title>
   <meta
     name="description"
-    content="Kreditvertrag einfach verstehen: BriefHelden erklärt Raten, Laufzeit, Zinsen, Kosten und worauf Sie achten sollten – verständlich, klar und ohne komplizierte Fachsprache."
+    content="Kreditvertrag verständlich erklärt: BriefHelden erklärt Laufzeit, Raten, Zinsen, Kosten und enthaltene Angaben klar, einfach und ohne komplizierte Fachsprache."
   />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.briefhelden-service.de/kreditvertrag-verstehen.html" />
@@ -14,10 +14,13 @@
   <meta property="og:title" content="Kreditvertrag verstehen – einfach erklärt | BriefHelden" />
   <meta
     property="og:description"
-    content="Kreditvertrag einfach erklärt. Verstehen Sie Raten, Laufzeit, Zinsen, Kosten und die wichtigsten Punkte schnell und verständlich."
+    content="Kreditvertrag einfach erklärt. Verstehen Sie Laufzeit, Raten, Zinsen und wichtige Angaben schnell und verständlich."
   />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://www.briefhelden-service.de/kreditvertrag-verstehen.html" />
+  <meta property="og:image" content="https://www.briefhelden-service.de/og-image.jpg" />
+  <meta property="og:site_name" content="BriefHelden" />
+  <meta name="theme-color" content="#0b1220" />
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
   <script>
@@ -104,6 +107,7 @@
         linear-gradient(180deg, rgba(55,120,255,.9), rgba(20,70,190,.9));
       box-shadow:0 10px 18px rgba(0,0,0,.18);
       position:relative;
+      flex:0 0 auto;
     }
 
     .brand .logo:after{
@@ -263,7 +267,8 @@
     .pad{padding:22px}
 
     .headline,
-    .sectionTitle{
+    .sectionTitle,
+    .moreLinks h2{
       text-align:center;
       margin:0 0 10px;
       font-weight:950;
@@ -288,7 +293,8 @@
     }
 
     .infoCard,
-    .faqItem{
+    .faqItem,
+    .moreCard{
       border-radius:var(--radius-lg);
       border:1px solid rgba(255,255,255,.55);
       background:rgba(255,255,255,.20);
@@ -296,20 +302,24 @@
     }
 
     .infoCard h3,
-    .faqItem h3{
+    .faqItem h3,
+    .moreCard h3{
       margin:0 0 10px;
       font-size:22px;
       font-weight:950;
+      line-height:1.25;
     }
 
-    .faqItem h3{
+    .faqItem h3,
+    .moreCard h3{
       font-size:18px;
       margin-bottom:8px;
     }
 
     .infoCard p,
     .infoCard li,
-    .faqItem p{
+    .faqItem p,
+    .moreCard p{
       color:rgba(11,18,32,.76);
       line-height:1.65;
       font-weight:700;
@@ -323,7 +333,8 @@
       padding-left:18px;
     }
 
-    .faqGrid{
+    .faqGrid,
+    .moreGrid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:14px;
@@ -348,6 +359,7 @@
       margin:0 0 8px;
       font-size:20px;
       font-weight:950;
+      line-height:1.3;
     }
 
     .serviceMini .box p{
@@ -381,26 +393,14 @@
       padding:0 18px 30px;
     }
 
-    .moreLinks h2{
-      margin:0 0 14px;
-      font-size:26px;
-      font-weight:950;
-      color:#0b1220;
+    .moreCard{
+      display:block;
+      transition:transform .18s ease, background .18s ease;
     }
 
-    .moreLinks ul{
-      margin:0;
-      padding-left:20px;
-    }
-
-    .moreLinks li{
-      margin:8px 0;
-      font-weight:700;
-      color:rgba(11,18,32,.82);
-    }
-
-    .moreLinks a:hover{
-      text-decoration:underline;
+    .moreCard:hover{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,.30);
     }
 
     footer{
@@ -436,6 +436,7 @@
       nav.links{display:none}
       .grid2,
       .faqGrid,
+      .moreGrid,
       .serviceMini{grid-template-columns:1fr}
       .cta{min-width:92vw}
       .miniBtn{min-width:100%}
@@ -474,7 +475,7 @@
     <div class="wrap">
       <h1 data-i18n="hero_title">Kreditvertrag verstehen</h1>
       <p data-i18n="hero_sub">
-        Ein Kreditvertrag wirkt oft kompliziert und verunsichernd. BriefHelden erklärt Ihnen den Inhalt einfach, klar und verständlich.
+        Ein Kreditvertrag wirkt oft kompliziert und verunsichernd. BriefHelden erklärt den Inhalt einfach, klar und verständlich.
       </p>
 
       <div class="ctaGroup">
@@ -501,22 +502,22 @@
     <div class="wrap">
       <div class="glassCard">
         <div class="pad">
-          <h2 class="headline" data-i18n="intro_title">Was ist ein Kreditvertrag?</h2>
+          <h2 class="headline" data-i18n="intro_title">Was bedeutet ein Kreditvertrag?</h2>
           <p class="lead" data-i18n="intro_text">
-            Ein Kreditvertrag ist ein Schreiben oder Dokument, in dem die Bedingungen eines Kredits festgelegt werden. Oft geht es um Kreditsumme, Laufzeit, Raten, Zinsen, Kosten oder besondere Vereinbarungen. Viele Menschen wissen nicht genau, was die einzelnen Angaben bedeuten und worauf sie achten sollten. Genau dabei hilft BriefHelden.
+            Ein Kreditvertrag enthält oft Angaben zu Kreditsumme, Laufzeit, Raten, Zinsen, Kosten oder weiteren Vereinbarungen. Viele Menschen wissen nicht genau, worauf sie achten sollen. Genau dabei hilft BriefHelden.
           </p>
 
           <div class="grid2">
             <div class="infoCard">
               <h3 data-i18n="left_title">Einfach erklärt</h3>
               <p data-i18n="left_text_1">
-                In einem Kreditvertrag geht es häufig darum, wie hoch der Kredit ist, wie lange er läuft, welche Monatsrate gezahlt werden muss und welche Zinsen oder weiteren Kosten anfallen.
+                In einem Kreditvertrag geht es häufig darum, wie hoch der Kredit ist, wie lange er läuft, welche Monatsrate genannt wird und welche Zinsen oder weiteren Kosten aufgeführt sind.
               </p>
               <p data-i18n="left_text_2">
-                Wichtig sind dabei vor allem: Wie hoch ist die Kreditsumme? Wie lang ist die Laufzeit? Wie hoch sind Rate, Zinsen und mögliche Zusatzkosten?
+                Wichtig sind dabei vor allem: Wie hoch ist die Kreditsumme? Wie lang ist die Laufzeit? Wie hoch sind Rate, Zinsen und mögliche Zusatzkosten? Welche Angaben stehen im Dokument?
               </p>
               <p data-i18n="left_text_3">
-                BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie das Dokument besser einordnen können.
+                BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie das Dokument besser sprachlich verständlich einordnen können.
               </p>
             </div>
 
@@ -526,7 +527,7 @@
                 <li data-i18n="right_li_1">Kreditvertrag sicher hochladen</li>
                 <li data-i18n="right_li_2">Wir lesen den Inhalt und erklären ihn verständlich</li>
                 <li data-i18n="right_li_3">Sie erhalten die Erklärung per E-Mail</li>
-                <li data-i18n="right_li_4">Keine Rechtsberatung – nur verständliche Texterklärung</li>
+                <li data-i18n="right_li_4">Keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) – nur sprachliche Vereinfachung und verständliche Texterklärung ohne rechtliche Bewertung oder Handlungsempfehlung</li>
               </ul>
             </div>
           </div>
@@ -561,7 +562,7 @@
 
       <div class="glassCard">
         <div class="pad">
-          <h2 class="sectionTitle" data-i18n="faq_title">Häufige Fragen zu Kreditverträgen</h2>
+          <h2 class="sectionTitle" data-i18n="faq_title">Häufige Fragen zum Kreditvertrag</h2>
           <p class="sectionSub" data-i18n="faq_sub">
             Diese Fragen tauchen bei solchen Schreiben besonders oft auf:
           </p>
@@ -570,28 +571,28 @@
             <div class="faqItem">
               <h3 data-i18n="faq1_q">Ist ein Kreditvertrag wichtig?</h3>
               <p data-i18n="faq1_a">
-                Ein Kreditvertrag sollte sehr genau gelesen werden. Viele Menschen sind unsicher, weil Raten, Laufzeit, Zinsen und weitere Bedingungen oft kompliziert formuliert sind.
+                Ja, ein Kreditvertrag sollte aufmerksam gelesen werden. Viele Menschen sind unsicher, weil Raten, Laufzeit, Zinsen und weitere Bedingungen oft kompliziert dargestellt werden.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="faq2_q">Sind Fristen in einem Kreditvertrag wichtig?</h3>
+              <h3 data-i18n="faq2_q">Welche Punkte sind besonders wichtig?</h3>
               <p data-i18n="faq2_a">
-                Ja, Fristen und Laufzeiten sind oft besonders wichtig. BriefHelden hilft Ihnen, diese Angaben verständlich zu erkennen.
+                Besonders wichtig sind Kreditsumme, Laufzeit, Monatsrate, Zinsen, Zusatzkosten und weitere enthaltene Angaben.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="faq3_q">Was ist bei einem Kreditvertrag besonders wichtig?</h3>
+              <h3 data-i18n="faq3_q">Woran erkenne ich, worum es geht?</h3>
               <p data-i18n="faq3_a">
-                Besonders wichtig sind Kreditsumme, Laufzeit, Monatsrate, Zinsen, Zusatzkosten und alle Hinweise zu Zahlungen oder Änderungen.
+                Im Dokument stehen meist Angaben zu Kreditsumme, Laufzeit, Raten, Zinsen, Kosten oder weiteren Vereinbarungen. BriefHelden hilft Ihnen, diese Punkte verständlich zu erkennen.
               </p>
             </div>
 
             <div class="faqItem">
               <h3 data-i18n="faq4_q">Ist BriefHelden eine Rechtsberatung?</h3>
               <p data-i18n="faq4_a">
-                Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.
+                Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Erklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.
               </p>
             </div>
           </div>
@@ -609,21 +610,21 @@
 
           <div class="faqGrid">
             <div class="faqItem">
-              <h3 data-i18n="tip1_title">Laufzeit prüfen</h3>
+              <h3 data-i18n="tip1_title">Laufzeit ansehen</h3>
               <p data-i18n="tip1_text">
-                Schauen Sie, wie lange der Kredit läuft und über welchen Zeitraum die Raten gezahlt werden müssen.
+                Schauen Sie, wie lange der Kredit läuft und über welchen Zeitraum die Raten genannt werden.
               </p>
             </div>
 
             <div class="faqItem">
               <h3 data-i18n="tip2_title">Rate ansehen</h3>
               <p data-i18n="tip2_text">
-                Prüfen Sie, wie hoch die monatliche Rate ist und ob zusätzliche Zahlungen oder Bedingungen genannt werden.
+                Prüfen Sie, wie hoch die monatliche Rate ist und ob zusätzliche Zahlungen oder Bedingungen erwähnt werden.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="tip3_title">Zinsen und Kosten beachten</h3>
+              <h3 data-i18n="tip3_title">Zinsen und Kosten ansehen</h3>
               <p data-i18n="tip3_text">
                 Achten Sie darauf, welche Zinsen, Gebühren oder sonstigen Kosten im Vertrag aufgeführt sind.
               </p>
@@ -632,30 +633,56 @@
             <div class="faqItem">
               <h3 data-i18n="tip4_title">Inhalt verständlich machen</h3>
               <p data-i18n="tip4_text">
-                Wenn das Dokument schwer verständlich ist, hilft eine einfache Erklärung oft sofort weiter.
+                Wenn das Dokument schwer verständlich ist, hilft eine einfache Erklärung oft dabei, die enthaltenen Angaben besser zu erfassen.
               </p>
             </div>
           </div>
         </div>
       </div>
+
+      <div style="height:18px"></div>
+
+      <div class="moreLinks">
+        <h2 data-i18n="more_title">Weitere häufige Briefe verstehen</h2>
+
+        <div class="moreGrid">
+          <a class="moreCard" href="/bank-brief-verstehen.html">
+            <h3 data-i18n="more_1_title">Bank Brief verstehen</h3>
+            <p data-i18n="more_1_text">Briefe von der Bank einfach verstehen.</p>
+          </a>
+
+          <a class="moreCard" href="/vertragsbrief-verstehen.html">
+            <h3 data-i18n="more_2_title">Vertragsbrief verstehen</h3>
+            <p data-i18n="more_2_text">Vertragsdokumente klar und verständlich erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/versicherung-brief-verstehen.html">
+            <h3 data-i18n="more_3_title">Versicherung Brief verstehen</h3>
+            <p data-i18n="more_3_text">Versicherungsschreiben einfach erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/krankenkasse-brief-verstehen.html">
+            <h3 data-i18n="more_4_title">Krankenkasse Brief verstehen</h3>
+            <p data-i18n="more_4_text">Krankenkasse Schreiben in einfacher Sprache erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/stromrechnung-verstehen.html">
+            <h3 data-i18n="more_5_title">Stromrechnung verstehen</h3>
+            <p data-i18n="more_5_text">Stromrechnungen in einfacher Sprache erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/gasrechnung-verstehen.html">
+            <h3 data-i18n="more_6_title">Gasrechnung verstehen</h3>
+            <p data-i18n="more_6_text">Gasrechnungen klar und verständlich erklärt.</p>
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <div class="moreLinks">
-    <h2>Weitere häufige Briefe verstehen</h2>
-    <ul>
-      <li><a href="/bank-brief-verstehen.html">Bank Brief verstehen</a></li>
-      <li><a href="/vertragsbrief-verstehen.html">Vertragsbrief verstehen</a></li>
-      <li><a href="/versicherung-brief-verstehen.html">Versicherung Brief verstehen</a></li>
-      <li><a href="/krankenkasse-brief-verstehen.html">Krankenkasse Brief verstehen</a></li>
-      <li><a href="/stromrechnung-verstehen.html">Stromrechnung verstehen</a></li>
-      <li><a href="/gasrechnung-verstehen.html">Gasrechnung verstehen</a></li>
-    </ul>
-  </div>
-
   <footer>
     <div class="footWrap">
-      <div>© 2026 BriefHelden – Alle Rechte vorbehalten</div>
+      <div data-i18n="foot_copy">© 2026 BriefHelden – Alle Rechte vorbehalten</div>
       <div class="footLinks">
         <a href="index.html" data-i18n="foot_home">Startseite</a>
         <a href="frage.html" data-i18n="foot_question">Frage stellen</a>
@@ -684,6 +711,11 @@
 
     const i18n = {
       de: {
+        pageTitle: "Kreditvertrag verstehen – einfach erklärt | BriefHelden",
+        metaDescription: "Kreditvertrag verständlich erklärt: BriefHelden erklärt Laufzeit, Raten, Zinsen, Kosten und enthaltene Angaben klar, einfach und ohne komplizierte Fachsprache.",
+        ogTitle: "Kreditvertrag verstehen – einfach erklärt | BriefHelden",
+        ogDescription: "Kreditvertrag einfach erklärt. Verstehen Sie Laufzeit, Raten, Zinsen und wichtige Angaben schnell und verständlich.",
+
         nav_home: "Startseite",
         nav_question: "Frage stellen",
         nav_refund: "Widerruf",
@@ -692,26 +724,26 @@
         nav_privacy: "Datenschutz",
 
         hero_title: "Kreditvertrag verstehen",
-        hero_sub: "Ein Kreditvertrag wirkt oft kompliziert und verunsichernd. BriefHelden erklärt Ihnen den Inhalt einfach, klar und verständlich.",
+        hero_sub: "Ein Kreditvertrag wirkt oft kompliziert und verunsichernd. BriefHelden erklärt den Inhalt einfach, klar und verständlich.",
         hero_cta: "Jetzt Kreditvertrag erklären lassen – 6,90 €",
         hero_question_cta: "Kurze Frage stellen – 1,49 €",
         meta_1: "Einfach erklärt",
         meta_2: "Schnelle Rückmeldung",
         meta_3: "Vertraulich",
 
-        intro_title: "Was ist ein Kreditvertrag?",
-        intro_text: "Ein Kreditvertrag ist ein Schreiben oder Dokument, in dem die Bedingungen eines Kredits festgelegt werden. Oft geht es um Kreditsumme, Laufzeit, Raten, Zinsen, Kosten oder besondere Vereinbarungen. Viele Menschen wissen nicht genau, was die einzelnen Angaben bedeuten und worauf sie achten sollten. Genau dabei hilft BriefHelden.",
+        intro_title: "Was bedeutet ein Kreditvertrag?",
+        intro_text: "Ein Kreditvertrag enthält oft Angaben zu Kreditsumme, Laufzeit, Raten, Zinsen, Kosten oder weiteren Vereinbarungen. Viele Menschen wissen nicht genau, worauf sie achten sollen. Genau dabei hilft BriefHelden.",
 
         left_title: "Einfach erklärt",
-        left_text_1: "In einem Kreditvertrag geht es häufig darum, wie hoch der Kredit ist, wie lange er läuft, welche Monatsrate gezahlt werden muss und welche Zinsen oder weiteren Kosten anfallen.",
-        left_text_2: "Wichtig sind dabei vor allem: Wie hoch ist die Kreditsumme? Wie lang ist die Laufzeit? Wie hoch sind Rate, Zinsen und mögliche Zusatzkosten?",
-        left_text_3: "BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie das Dokument besser einordnen können.",
+        left_text_1: "In einem Kreditvertrag geht es häufig darum, wie hoch der Kredit ist, wie lange er läuft, welche Monatsrate genannt wird und welche Zinsen oder weiteren Kosten aufgeführt sind.",
+        left_text_2: "Wichtig sind dabei vor allem: Wie hoch ist die Kreditsumme? Wie lang ist die Laufzeit? Wie hoch sind Rate, Zinsen und mögliche Zusatzkosten? Welche Angaben stehen im Dokument?",
+        left_text_3: "BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie das Dokument besser sprachlich verständlich einordnen können.",
 
         right_title: "So funktioniert es",
         right_li_1: "Kreditvertrag sicher hochladen",
         right_li_2: "Wir lesen den Inhalt und erklären ihn verständlich",
         right_li_3: "Sie erhalten die Erklärung per E-Mail",
-        right_li_4: "Keine Rechtsberatung – nur verständliche Texterklärung",
+        right_li_4: "Keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) – nur sprachliche Vereinfachung und verständliche Texterklärung ohne rechtliche Bewertung oder Handlungsempfehlung",
 
         service1_title: "Komplettes Schreiben erklären lassen",
         service1_text: "Ideal, wenn Sie den ganzen Kreditvertrag vollständig verstehen möchten.",
@@ -721,28 +753,43 @@
         service2_text: "Ideal, wenn Sie nur eine kurze Frage zu Rate, Laufzeit, Zinsen oder Inhalt haben.",
         service2_btn: "Jetzt für 1,49 € fragen",
 
-        faq_title: "Häufige Fragen zu Kreditverträgen",
+        faq_title: "Häufige Fragen zum Kreditvertrag",
         faq_sub: "Diese Fragen tauchen bei solchen Schreiben besonders oft auf:",
         faq1_q: "Ist ein Kreditvertrag wichtig?",
-        faq1_a: "Ein Kreditvertrag sollte sehr genau gelesen werden. Viele Menschen sind unsicher, weil Raten, Laufzeit, Zinsen und weitere Bedingungen oft kompliziert formuliert sind.",
-        faq2_q: "Sind Fristen in einem Kreditvertrag wichtig?",
-        faq2_a: "Ja, Fristen und Laufzeiten sind oft besonders wichtig. BriefHelden hilft Ihnen, diese Angaben verständlich zu erkennen.",
-        faq3_q: "Was ist bei einem Kreditvertrag besonders wichtig?",
-        faq3_a: "Besonders wichtig sind Kreditsumme, Laufzeit, Monatsrate, Zinsen, Zusatzkosten und alle Hinweise zu Zahlungen oder Änderungen.",
+        faq1_a: "Ja, ein Kreditvertrag sollte aufmerksam gelesen werden. Viele Menschen sind unsicher, weil Raten, Laufzeit, Zinsen und weitere Bedingungen oft kompliziert dargestellt werden.",
+        faq2_q: "Welche Punkte sind besonders wichtig?",
+        faq2_a: "Besonders wichtig sind Kreditsumme, Laufzeit, Monatsrate, Zinsen, Zusatzkosten und weitere enthaltene Angaben.",
+        faq3_q: "Woran erkenne ich, worum es geht?",
+        faq3_a: "Im Dokument stehen meist Angaben zu Kreditsumme, Laufzeit, Raten, Zinsen, Kosten oder weiteren Vereinbarungen. BriefHelden hilft Ihnen, diese Punkte verständlich zu erkennen.",
         faq4_q: "Ist BriefHelden eine Rechtsberatung?",
-        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.",
+        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Erklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.",
 
         tip_title: "Worauf sollten Sie bei einem Kreditvertrag achten?",
         tip_sub: "Diese Punkte sind oft besonders wichtig:",
-        tip1_title: "Laufzeit prüfen",
-        tip1_text: "Schauen Sie, wie lange der Kredit läuft und über welchen Zeitraum die Raten gezahlt werden müssen.",
+        tip1_title: "Laufzeit ansehen",
+        tip1_text: "Schauen Sie, wie lange der Kredit läuft und über welchen Zeitraum die Raten genannt werden.",
         tip2_title: "Rate ansehen",
-        tip2_text: "Prüfen Sie, wie hoch die monatliche Rate ist und ob zusätzliche Zahlungen oder Bedingungen genannt werden.",
-        tip3_title: "Zinsen und Kosten beachten",
+        tip2_text: "Prüfen Sie, wie hoch die monatliche Rate ist und ob zusätzliche Zahlungen oder Bedingungen erwähnt werden.",
+        tip3_title: "Zinsen und Kosten ansehen",
         tip3_text: "Achten Sie darauf, welche Zinsen, Gebühren oder sonstigen Kosten im Vertrag aufgeführt sind.",
         tip4_title: "Inhalt verständlich machen",
-        tip4_text: "Wenn das Dokument schwer verständlich ist, hilft eine einfache Erklärung oft sofort weiter.",
+        tip4_text: "Wenn das Dokument schwer verständlich ist, hilft eine einfache Erklärung oft dabei, die enthaltenen Angaben besser zu erfassen.",
 
+        more_title: "Weitere häufige Briefe verstehen",
+        more_1_title: "Bank Brief verstehen",
+        more_1_text: "Briefe von der Bank einfach verstehen.",
+        more_2_title: "Vertragsbrief verstehen",
+        more_2_text: "Vertragsdokumente klar und verständlich erklärt.",
+        more_3_title: "Versicherung Brief verstehen",
+        more_3_text: "Versicherungsschreiben einfach erklärt.",
+        more_4_title: "Krankenkasse Brief verstehen",
+        more_4_text: "Krankenkasse Schreiben in einfacher Sprache erklärt.",
+        more_5_title: "Stromrechnung verstehen",
+        more_5_text: "Stromrechnungen in einfacher Sprache erklärt.",
+        more_6_title: "Gasrechnung verstehen",
+        more_6_text: "Gasrechnungen klar und verständlich erklärt.",
+
+        foot_copy: "© 2026 BriefHelden – Alle Rechte vorbehalten",
         foot_home: "Startseite",
         foot_question: "Frage stellen",
         foot_refund: "Widerruf",
@@ -752,6 +799,11 @@
       },
 
       en: {
+        pageTitle: "Understand a credit agreement – explained clearly | BriefHelden",
+        metaDescription: "Understand a credit agreement easily: BriefHelden explains term, installments, interest, costs and included details clearly and in simple language.",
+        ogTitle: "Understand a credit agreement – explained clearly | BriefHelden",
+        ogDescription: "Credit agreement explained simply. Understand term, installments, interest and important details quickly and clearly.",
+
         nav_home: "Home",
         nav_question: "Ask a question",
         nav_refund: "Withdrawal",
@@ -767,19 +819,19 @@
         meta_2: "Fast response",
         meta_3: "Confidential",
 
-        intro_title: "What is a credit agreement?",
-        intro_text: "A credit agreement is a document in which the terms of a loan are defined. It often concerns the loan amount, term, installments, interest, costs or special arrangements. Many people do not know exactly what the individual details mean and what they should pay attention to. That is exactly where BriefHelden helps.",
+        intro_title: "What does a credit agreement mean?",
+        intro_text: "A credit agreement often contains details about the loan amount, term, installments, interest, costs or additional arrangements. Many people are unsure what they should pay attention to. That is exactly where BriefHelden helps.",
 
         left_title: "Simply explained",
-        left_text_1: "A credit agreement often states how high the loan is, how long it runs, what monthly installment must be paid and which interest or other costs apply.",
-        left_text_2: "Important points are: How high is the loan amount? How long is the term? How high are the installment, interest and possible additional costs?",
+        left_text_1: "A credit agreement often states how high the loan is, how long it runs, what monthly installment is mentioned and which interest or further costs are listed.",
+        left_text_2: "Important points are: How high is the loan amount? How long is the term? How high are the installment, interest and possible additional costs? Which details appear in the document?",
         left_text_3: "BriefHelden explains the content in simple language so you can better understand the document.",
 
         right_title: "How it works",
         right_li_1: "Upload credit agreement securely",
         right_li_2: "We read the content and explain it clearly",
         right_li_3: "You receive the explanation by email",
-        right_li_4: "No legal advice – plain-language explanation only",
+        right_li_4: "No legal advice within the meaning of the German Legal Services Act (RDG) — only linguistic simplification and a clear text explanation without legal assessment or recommendation for action",
 
         service1_title: "Get the full document explained",
         service1_text: "Ideal if you want to fully understand the entire credit agreement.",
@@ -789,28 +841,43 @@
         service2_text: "Ideal if you only have a short question about installment, term, interest or content.",
         service2_btn: "Ask now for €1.49",
 
-        faq_title: "Frequently asked questions about credit agreements",
+        faq_title: "Frequently asked questions about a credit agreement",
         faq_sub: "These questions often come up with this kind of document:",
         faq1_q: "Is a credit agreement important?",
-        faq1_a: "A credit agreement should be read very carefully. Many people are unsure because installments, term, interest and further conditions are often written in a complicated way.",
-        faq2_q: "Are deadlines in a credit agreement important?",
-        faq2_a: "Yes, deadlines and terms are often especially important. BriefHelden helps you identify these details clearly.",
-        faq3_q: "What is especially important in a credit agreement?",
-        faq3_a: "Especially important are the loan amount, term, monthly installment, interest, additional costs and all notes about payments or changes.",
+        faq1_a: "Yes, a credit agreement should be read carefully. Many people are unsure because installments, term, interest and other conditions are often presented in a complicated way.",
+        faq2_q: "Which points are especially important?",
+        faq2_a: "Especially important are the loan amount, term, monthly installment, interest, additional costs and other included details.",
+        faq3_q: "How can I tell what it is about?",
+        faq3_a: "The document usually contains details about the loan amount, term, installments, interest, costs or additional arrangements. BriefHelden helps you identify these points clearly.",
         faq4_q: "Is BriefHelden legal advice?",
-        faq4_a: "No. BriefHelden does not provide legal advice. You only receive a clear explanation of the content.",
+        faq4_a: "No. BriefHelden does not provide legal advice within the meaning of the German Legal Services Act (RDG). You receive only a clear explanation and linguistic simplification of your document’s content. There is no legal assessment, no individual review, and no binding recommendation for action.",
 
         tip_title: "What should you look for in a credit agreement?",
         tip_sub: "These points are often especially important:",
-        tip1_title: "Check the term",
-        tip1_text: "Look at how long the loan runs and over which period the installments must be paid.",
-        tip2_title: "Review the installment",
-        tip2_text: "Check how high the monthly installment is and whether additional payments or conditions are mentioned.",
-        tip3_title: "Watch interest and costs",
+        tip1_title: "Look at the term",
+        tip1_text: "Check how long the loan runs and over which period the installments are mentioned.",
+        tip2_title: "Look at the installment",
+        tip2_text: "Review how high the monthly installment is and whether additional payments or conditions are mentioned.",
+        tip3_title: "Look at interest and costs",
         tip3_text: "Pay attention to which interest, fees or other costs are listed in the agreement.",
         tip4_title: "Make the content understandable",
-        tip4_text: "If the document is difficult to understand, a simple explanation often helps immediately.",
+        tip4_text: "If the document is difficult to understand, a simple explanation often helps you grasp the included details more easily.",
 
+        more_title: "Understand more common letters",
+        more_1_title: "Understand a bank letter",
+        more_1_text: "Understand letters from the bank easily.",
+        more_2_title: "Understand a contract letter",
+        more_2_text: "Contract documents explained clearly.",
+        more_3_title: "Understand an insurance letter",
+        more_3_text: "Insurance letters explained simply.",
+        more_4_title: "Understand a health insurance letter",
+        more_4_text: "Health insurance letters explained in simple language.",
+        more_5_title: "Understand an electricity bill",
+        more_5_text: "Electricity bills explained in simple language.",
+        more_6_title: "Understand a gas bill",
+        more_6_text: "Gas bills explained clearly.",
+
+        foot_copy: "© 2026 BriefHelden – All rights reserved",
         foot_home: "Home",
         foot_question: "Ask a question",
         foot_refund: "Withdrawal",
@@ -820,6 +887,11 @@
       },
 
       tr: {
+        pageTitle: "Kredi sözleşmesini anlayın – kolay açıklama | BriefHelden",
+        metaDescription: "Kredi sözleşmesini kolay anlayın: BriefHelden vade, taksitler, faizler, masraflar ve belgede yer alan bilgileri sade ve anlaşılır şekilde açıklar.",
+        ogTitle: "Kredi sözleşmesini anlayın – kolay açıklama | BriefHelden",
+        ogDescription: "Kredi sözleşmesi basitçe açıklanır. Vadeyi, taksitleri, faizleri ve önemli bilgileri hızlı ve açık şekilde anlayın.",
+
         nav_home: "Ana Sayfa",
         nav_question: "Soru sor",
         nav_refund: "Cayma",
@@ -835,19 +907,19 @@
         meta_2: "Hızlı dönüş",
         meta_3: "Gizli",
 
-        intro_title: "Kredi sözleşmesi nedir?",
-        intro_text: "Kredi sözleşmesi, bir kredinin koşullarının belirlendiği bir yazı veya belgedir. Çoğu zaman kredi tutarı, vade, taksitler, faizler, masraflar veya özel anlaşmalar söz konusu olur. Birçok kişi bu bilgilerin ne anlama geldiğini ve nelere dikkat etmesi gerektiğini tam bilmez. BriefHelden tam bu konuda yardımcı olur.",
+        intro_title: "Bir kredi sözleşmesi ne anlama gelir?",
+        intro_text: "Bir kredi sözleşmesi çoğu zaman kredi tutarı, vade, taksitler, faizler, masraflar veya ek anlaşmalarla ilgili bilgiler içerir. Birçok kişi nelere dikkat etmesi gerektiğini tam bilmez. BriefHelden tam bu konuda yardımcı olur.",
 
         left_title: "Basit açıklama",
-        left_text_1: "Bir kredi sözleşmesinde sıkça kredinin ne kadar olduğu, ne kadar süre devam edeceği, aylık taksidin ne olacağı ve hangi faiz veya ek masrafların olacağı yer alır.",
-        left_text_2: "Önemli noktalar şunlardır: Kredi tutarı ne kadar? Vade ne kadar uzun? Taksit, faiz ve olası ek masraflar ne kadar?",
+        left_text_1: "Bir kredi sözleşmesinde sıkça kredinin ne kadar olduğu, ne kadar süreceği, aylık taksidin ne olduğu ve hangi faiz veya ek masrafların yer aldığı yazılır.",
+        left_text_2: "Önemli noktalar şunlardır: Kredi tutarı ne kadar? Vade ne kadar uzun? Taksit, faiz ve olası ek masraflar ne kadar? Belgede hangi bilgiler bulunuyor?",
         left_text_3: "BriefHelden içeriği basit dille açıklar, böylece belgeyi daha iyi anlayabilirsiniz.",
 
         right_title: "Nasıl çalışır",
         right_li_1: "Kredi sözleşmesini güvenli şekilde yükleyin",
         right_li_2: "İçeriği okuyup açık şekilde açıklıyoruz",
         right_li_3: "Açıklamayı e-posta ile alırsınız",
-        right_li_4: "Hukuki danışmanlık değil – sadece anlaşılır açıklama",
+        right_li_4: "Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık verilmez — yalnızca dilsel sadeleştirme ve hukuki değerlendirme ya da eylem tavsiyesi olmadan anlaşılır metin açıklaması sunulur",
 
         service1_title: "Belgenin tamamını açıklat",
         service1_text: "Kredi sözleşmesinin tamamını anlamak istiyorsanız idealdir.",
@@ -857,28 +929,43 @@
         service2_text: "Sadece taksit, vade, faiz veya içerikle ilgili kısa bir sorunuz varsa idealdir.",
         service2_btn: "Şimdi 1,49 € ile sor",
 
-        faq_title: "Kredi sözleşmeleri hakkında sık sorulan sorular",
+        faq_title: "Kredi sözleşmesi hakkında sık sorulan sorular",
         faq_sub: "Bu tür yazılarda şu sorular sıkça ortaya çıkar:",
         faq1_q: "Bir kredi sözleşmesi önemli midir?",
-        faq1_a: "Bir kredi sözleşmesi çok dikkatli okunmalıdır. Birçok kişi taksitler, vade, faizler ve diğer şartlar karmaşık yazıldığı için emin olamaz.",
-        faq2_q: "Kredi sözleşmesindeki süreler önemli midir?",
-        faq2_a: "Evet, süreler ve vadeler çoğu zaman özellikle önemlidir. BriefHelden bu bilgileri açık şekilde görmenize yardım eder.",
-        faq3_q: "Bir kredi sözleşmesinde en önemli olan nedir?",
-        faq3_a: "Kredi tutarı, vade, aylık taksit, faizler, ek masraflar ve ödemeler veya değişikliklerle ilgili tüm bilgiler özellikle önemlidir.",
+        faq1_a: "Evet, bir kredi sözleşmesi dikkatle okunmalıdır. Birçok kişi taksitler, vade, faiz ve diğer şartlar karmaşık verildiği için emin olamaz.",
+        faq2_q: "Hangi noktalar özellikle önemlidir?",
+        faq2_a: "Kredi tutarı, vade, aylık taksit, faizler, ek masraflar ve diğer içerilen bilgiler özellikle önemlidir.",
+        faq3_q: "Konunun ne olduğunu nasıl anlarım?",
+        faq3_a: "Belgelerde genelde kredi tutarı, vade, taksitler, faizler, masraflar veya ek anlaşmalarla ilgili bilgiler yer alır. BriefHelden bu noktaları açık şekilde görmenize yardım eder.",
         faq4_q: "BriefHelden hukuki danışmanlık mı veriyor?",
-        faq4_a: "Hayır. BriefHelden hukuki danışmanlık vermez. Sadece içeriğin anlaşılır açıklamasını sunar.",
+        faq4_a: "Hayır. BriefHelden, Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık vermez. Yalnızca belgenizin içeriğinin anlaşılır açıklamasını ve dilsel sadeleştirmesini alırsınız. Hukuki değerlendirme, bireysel inceleme veya bağlayıcı bir hareket tavsiyesi yapılmaz.",
 
         tip_title: "Bir kredi sözleşmesinde nelere dikkat etmelisiniz?",
         tip_sub: "Bu noktalar genelde özellikle önemlidir:",
-        tip1_title: "Vadeyi kontrol edin",
-        tip1_text: "Kredinin ne kadar sürdüğüne ve taksitlerin hangi süre boyunca ödenmesi gerektiğine bakın.",
-        tip2_title: "Taksidi inceleyin",
-        tip2_text: "Aylık taksidin ne kadar olduğunu ve ek ödemeler veya şartlar belirtilip belirtilmediğini kontrol edin.",
-        tip3_title: "Faizleri ve masrafları dikkate alın",
+        tip1_title: "Vadeye bakın",
+        tip1_text: "Kredinin ne kadar sürdüğüne ve taksitlerin hangi dönem boyunca geçtiğine bakın.",
+        tip2_title: "Takside bakın",
+        tip2_text: "Aylık taksidin ne kadar olduğunu ve ek ödemeler veya şartların belirtilip belirtilmediğini inceleyin.",
+        tip3_title: "Faizleri ve masrafları görün",
         tip3_text: "Sözleşmede hangi faiz, ücret veya başka masrafların yer aldığına dikkat edin.",
         tip4_title: "İçeriği anlaşılır hale getirin",
-        tip4_text: "Belgeyi anlamak zorsa, basit bir açıklama çoğu zaman hemen yardımcı olur.",
+        tip4_text: "Belgeyi anlamak zorsa, basit bir açıklama çoğu zaman yer alan bilgileri daha iyi kavramanıza yardımcı olur.",
 
+        more_title: "Diğer sık görülen mektupları anlayın",
+        more_1_title: "Banka mektubunu anlayın",
+        more_1_text: "Bankadan gelen mektupları kolayca anlayın.",
+        more_2_title: "Sözleşme mektubunu anlayın",
+        more_2_text: "Sözleşme belgeleri açık şekilde açıklanır.",
+        more_3_title: "Sigorta mektubunu anlayın",
+        more_3_text: "Sigorta yazıları basitçe açıklanır.",
+        more_4_title: "Sağlık sigortası mektubunu anlayın",
+        more_4_text: "Sağlık sigortası yazıları basit dille açıklanır.",
+        more_5_title: "Elektrik faturasını anlayın",
+        more_5_text: "Elektrik faturaları basit dille açıklanır.",
+        more_6_title: "Gaz faturasını anlayın",
+        more_6_text: "Gaz faturaları açık şekilde açıklanır.",
+
+        foot_copy: "© 2026 BriefHelden – Tüm hakları saklıdır",
         foot_home: "Ana Sayfa",
         foot_question: "Soru sor",
         foot_refund: "Cayma",
@@ -888,6 +975,11 @@
       },
 
       ru: {
+        pageTitle: "Понять кредитный договор – простое объяснение | BriefHelden",
+        metaDescription: "Легко понять кредитный договор: BriefHelden просто и понятно объясняет срок, платежи, проценты, расходы и указанные в документе сведения.",
+        ogTitle: "Понять кредитный договор – простое объяснение | BriefHelden",
+        ogDescription: "Кредитный договор объясняется простым языком. Понятно разберитесь в сроке, платежах, процентах и важных сведениях.",
+
         nav_home: "Главная",
         nav_question: "Задать вопрос",
         nav_refund: "Отказ",
@@ -903,19 +995,19 @@
         meta_2: "Быстрый ответ",
         meta_3: "Конфиденциально",
 
-        intro_title: "Что такое кредитный договор?",
-        intro_text: "Кредитный договор — это документ, в котором определяются условия кредита. Часто речь идёт о сумме кредита, сроке, взносах, процентах, расходах или особых договорённостях. Многие люди не понимают, что означают отдельные данные и на что следует обратить внимание. Именно здесь помогает BriefHelden.",
+        intro_title: "Что означает кредитный договор?",
+        intro_text: "Кредитный договор часто содержит сведения о сумме кредита, сроке, платежах, процентах, расходах или дополнительных договорённостях. Многие люди не понимают, на что нужно обращать внимание. Именно здесь помогает BriefHelden.",
 
         left_title: "Просто объясняем",
-        left_text_1: "В кредитном договоре часто указывается, какова сумма кредита, как долго он действует, каким будет ежемесячный платёж и какие проценты или дополнительные расходы возникают.",
-        left_text_2: "Особенно важно следующее: Какова сумма кредита? Каков срок? Каковы платёж, проценты и возможные дополнительные расходы?",
+        left_text_1: "В кредитном договоре часто указывается, какова сумма кредита, как долго он действует, какой ежемесячный платёж указан и какие проценты или дополнительные расходы перечислены.",
+        left_text_2: "Особенно важно следующее: Какова сумма кредита? Каков срок? Каковы платёж, проценты и возможные дополнительные расходы? Какие сведения содержатся в документе?",
         left_text_3: "BriefHelden объясняет содержание простым языком, чтобы вам было легче понять документ.",
 
         right_title: "Как это работает",
         right_li_1: "Безопасно загрузите кредитный договор",
         right_li_2: "Мы читаем содержание и понятно объясняем его",
         right_li_3: "Вы получаете объяснение по e-mail",
-        right_li_4: "Не юридическая консультация – только понятное объяснение",
+        right_li_4: "Это не юридическая консультация в смысле немецкого Закона о юридических услугах (RDG) — только языковое упрощение и понятное текстовое объяснение без правовой оценки и без рекомендаций к действиям",
 
         service1_title: "Получить полное объяснение документа",
         service1_text: "Идеально, если вы хотите полностью понять весь кредитный договор.",
@@ -925,28 +1017,43 @@
         service2_text: "Идеально, если у вас только короткий вопрос о платеже, сроке, процентах или содержании.",
         service2_btn: "Спросить за 1,49 €",
 
-        faq_title: "Частые вопросы о кредитных договорах",
+        faq_title: "Частые вопросы о кредитном договоре",
         faq_sub: "Эти вопросы особенно часто возникают по таким документам:",
         faq1_q: "Кредитный договор важен?",
-        faq1_a: "Кредитный договор следует читать очень внимательно. Многие люди не уверены, потому что взносы, срок, проценты и другие условия часто изложены сложно.",
-        faq2_q: "Важны ли сроки в кредитном договоре?",
-        faq2_a: "Да, сроки и период действия часто особенно важны. BriefHelden помогает вам увидеть эти данные понятнее.",
-        faq3_q: "Что особенно важно в кредитном договоре?",
-        faq3_a: "Особенно важны сумма кредита, срок, ежемесячный платёж, проценты, дополнительные расходы и все указания о платежах или изменениях.",
+        faq1_a: "Да, кредитный договор следует читать внимательно. Многие люди не уверены, потому что платежи, срок, проценты и другие условия часто изложены сложно.",
+        faq2_q: "Какие пункты особенно важны?",
+        faq2_a: "Особенно важны сумма кредита, срок, ежемесячный платёж, проценты, дополнительные расходы и другие содержащиеся сведения.",
+        faq3_q: "Как понять, о чём идёт речь?",
+        faq3_a: "В документе обычно указываются сведения о сумме кредита, сроке, платежах, процентах, расходах или дополнительных договорённостях. BriefHelden помогает вам увидеть эти пункты понятнее.",
         faq4_q: "BriefHelden — это юридическая консультация?",
-        faq4_a: "Нет. BriefHelden не даёт юридических консультаций. Вы получаете только понятное объяснение содержания.",
+        faq4_a: "Нет. BriefHelden не оказывает юридических консультаций в смысле немецкого Закона о юридических услугах (RDG). Вы получаете только понятное объяснение и языковое упрощение содержания вашего документа. Юридическая оценка, индивидуальная проверка и обязательные рекомендации к действиям не предоставляются.",
 
         tip_title: "На что стоит обратить внимание в кредитном договоре?",
         tip_sub: "Эти пункты часто особенно важны:",
-        tip1_title: "Проверьте срок",
-        tip1_text: "Посмотрите, как долго действует кредит и за какой период должны выплачиваться взносы.",
-        tip2_title: "Изучите ежемесячный платёж",
+        tip1_title: "Посмотрите на срок",
+        tip1_text: "Посмотрите, как долго действует кредит и за какой период упоминаются платежи.",
+        tip2_title: "Посмотрите на платёж",
         tip2_text: "Проверьте, каков ежемесячный платёж и указаны ли дополнительные платежи или условия.",
-        tip3_title: "Обратите внимание на проценты и расходы",
-        tip3_text: "Посмотрите, какие проценты, комиссии или другие расходы указаны в договоре.",
+        tip3_title: "Посмотрите на проценты и расходы",
+        tip3_text: "Обратите внимание, какие проценты, комиссии или другие расходы указаны в договоре.",
         tip4_title: "Сделайте содержание понятным",
-        tip4_text: "Если документ трудно понять, простое объяснение часто сразу помогает.",
+        tip4_text: "Если документ трудно понять, простое объяснение часто помогает легче воспринять содержащиеся в нём сведения.",
 
+        more_title: "Другие часто встречающиеся письма",
+        more_1_title: "Понять письмо из банка",
+        more_1_text: "Легко понять письма из банка.",
+        more_2_title: "Понять письмо по договору",
+        more_2_text: "Договорные документы объяснены понятно.",
+        more_3_title: "Понять письмо от страховой",
+        more_3_text: "Письма от страховой объяснены просто.",
+        more_4_title: "Понять письмо от больничной кассы",
+        more_4_text: "Письма от больничной кассы объяснены простым языком.",
+        more_5_title: "Понять счёт за электричество",
+        more_5_text: "Счета за электричество объяснены простым языком.",
+        more_6_title: "Понять счёт за газ",
+        more_6_text: "Счета за газ объяснены понятно.",
+
+        foot_copy: "© 2026 BriefHelden – Все права защищены",
         foot_home: "Главная",
         foot_question: "Задать вопрос",
         foot_refund: "Отказ",
@@ -965,25 +1072,41 @@
       const questionBtn = document.getElementById("questionBtn");
       const serviceQuestionBtn = document.getElementById("serviceQuestionBtn");
 
-      if (stripeBtn) stripeBtn.href = mainLink;
-      if (servicePrimaryBtn) servicePrimaryBtn.href = mainLink;
-      if (questionBtn) questionBtn.href = questionLink;
-      if (serviceQuestionBtn) serviceQuestionBtn.href = questionLink;
+      if(stripeBtn) stripeBtn.href = mainLink;
+      if(servicePrimaryBtn) servicePrimaryBtn.href = mainLink;
+      if(questionBtn) questionBtn.href = questionLink;
+      if(serviceQuestionBtn) serviceQuestionBtn.href = questionLink;
+    }
+
+    function updateMeta(lang){
+      const dict = i18n[lang] || i18n.de;
+      document.title = dict.pageTitle;
+
+      const description = document.querySelector('meta[name="description"]');
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      const ogDescription = document.querySelector('meta[property="og:description"]');
+
+      if(description) description.setAttribute("content", dict.metaDescription);
+      if(ogTitle) ogTitle.setAttribute("content", dict.ogTitle);
+      if(ogDescription) ogDescription.setAttribute("content", dict.ogDescription);
     }
 
     function applyLang(lang){
-      const dict = i18n[lang] || i18n.de;
-      document.documentElement.lang = lang;
+      const currentLang = i18n[lang] ? lang : "de";
+      const dict = i18n[currentLang];
+
+      document.documentElement.lang = currentLang;
 
       document.querySelectorAll("[data-i18n]").forEach((el) => {
         const key = el.getAttribute("data-i18n");
-        if (key in dict){
+        if(key in dict){
           el.textContent = dict[key];
         }
       });
 
-      updateLinks(lang);
-      localStorage.setItem("briefhelden_lang", lang);
+      updateMeta(currentLang);
+      updateLinks(currentLang);
+      localStorage.setItem("briefhelden_lang", currentLang);
     }
 
     const select = document.getElementById("langSelect");
