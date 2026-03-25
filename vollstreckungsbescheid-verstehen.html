@@ -6,20 +6,23 @@
   <title>Vollstreckungsbescheid verstehen – einfach erklärt | BriefHelden</title>
   <meta
     name="description"
-    content="Vollstreckungsbescheid einfach verstehen: BriefHelden erklärt Inhalt, Fristen, Forderungen und worauf Sie achten sollten – verständlich, klar und ohne komplizierte Fachsprache."
+    content="Vollstreckungsbescheid verständlich erklärt: BriefHelden erklärt Forderung, Fristen, Beträge und enthaltene Angaben klar, einfach und ohne komplizierte Fachsprache."
   />
   <meta name="robots" content="index, follow" />
-<link rel="canonical" href="https://www.briefhelden-service.de/vollstreckungsbescheid-verstehen.html" />
+  <link rel="canonical" href="https://www.briefhelden-service.de/vollstreckungsbescheid-verstehen.html" />
 
   <meta property="og:title" content="Vollstreckungsbescheid verstehen – einfach erklärt | BriefHelden" />
   <meta
     property="og:description"
-    content="Vollstreckungsbescheid einfach erklärt. Verstehen Sie Forderung, Fristen und die wichtigsten Punkte schnell und verständlich."
+    content="Vollstreckungsbescheid einfach erklärt. Verstehen Sie Forderung, Fristen und wichtige Angaben schnell und verständlich."
   />
   <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.briefhelden-service.de/vollstreckungsbescheid-verstehen.html" />
+  <meta property="og:url" content="https://www.briefhelden-service.de/vollstreckungsbescheid-verstehen.html" />
+  <meta property="og:image" content="https://www.briefhelden-service.de/og-image.jpg" />
+  <meta property="og:site_name" content="BriefHelden" />
+  <meta name="theme-color" content="#0b1220" />
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -104,6 +107,7 @@
         linear-gradient(180deg, rgba(55,120,255,.9), rgba(20,70,190,.9));
       box-shadow:0 10px 18px rgba(0,0,0,.18);
       position:relative;
+      flex:0 0 auto;
     }
 
     .brand .logo:after{
@@ -171,7 +175,7 @@
       padding:68px 18px 40px;
       background:
         linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.58)),
-url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=2200&q=60");
+        url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=2200&q=60");
       background-size:cover;
       background-position:center;
     }
@@ -263,7 +267,8 @@ url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=c
     .pad{padding:22px}
 
     .headline,
-    .sectionTitle{
+    .sectionTitle,
+    .moreLinks h2{
       text-align:center;
       margin:0 0 10px;
       font-weight:950;
@@ -288,7 +293,8 @@ url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=c
     }
 
     .infoCard,
-    .faqItem{
+    .faqItem,
+    .moreCard{
       border-radius:var(--radius-lg);
       border:1px solid rgba(255,255,255,.55);
       background:rgba(255,255,255,.20);
@@ -296,20 +302,24 @@ url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=c
     }
 
     .infoCard h3,
-    .faqItem h3{
+    .faqItem h3,
+    .moreCard h3{
       margin:0 0 10px;
       font-size:22px;
       font-weight:950;
+      line-height:1.25;
     }
 
-    .faqItem h3{
+    .faqItem h3,
+    .moreCard h3{
       font-size:18px;
       margin-bottom:8px;
     }
 
     .infoCard p,
     .infoCard li,
-    .faqItem p{
+    .faqItem p,
+    .moreCard p{
       color:rgba(11,18,32,.76);
       line-height:1.65;
       font-weight:700;
@@ -323,7 +333,8 @@ url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=c
       padding-left:18px;
     }
 
-    .faqGrid{
+    .faqGrid,
+    .moreGrid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:14px;
@@ -348,6 +359,7 @@ url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=c
       margin:0 0 8px;
       font-size:20px;
       font-weight:950;
+      line-height:1.3;
     }
 
     .serviceMini .box p{
@@ -374,6 +386,22 @@ url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=c
 
     .miniBtn.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
     .miniBtn.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
+
+    .moreLinks{
+      max-width:var(--max);
+      margin:28px auto 0;
+      padding:0 18px 30px;
+    }
+
+    .moreCard{
+      display:block;
+      transition:transform .18s ease, background .18s ease;
+    }
+
+    .moreCard:hover{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,.30);
+    }
 
     footer{
       margin-top:18px;
@@ -408,6 +436,7 @@ url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=c
       nav.links{display:none}
       .grid2,
       .faqGrid,
+      .moreGrid,
       .serviceMini{grid-template-columns:1fr}
       .cta{min-width:92vw}
       .miniBtn{min-width:100%}
@@ -446,7 +475,7 @@ url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=c
     <div class="wrap">
       <h1 data-i18n="hero_title">Vollstreckungsbescheid verstehen</h1>
       <p data-i18n="hero_sub">
-        Ein Vollstreckungsbescheid wirkt oft ernst und beunruhigend. BriefHelden erklärt Ihnen den Inhalt einfach, klar und verständlich.
+        Ein Vollstreckungsbescheid enthält oft wichtige Hinweise und Angaben. BriefHelden erklärt Inhalt, Fristen, Forderung und enthaltene Angaben einfach und verständlich.
       </p>
 
       <div class="ctaGroup">
@@ -473,22 +502,22 @@ url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=c
     <div class="wrap">
       <div class="glassCard">
         <div class="pad">
-          <h2 class="headline" data-i18n="intro_title">Was ist ein Vollstreckungsbescheid?</h2>
+          <h2 class="headline" data-i18n="intro_title">Was bedeutet ein Vollstreckungsbescheid?</h2>
           <p class="lead" data-i18n="intro_text">
-            Ein Vollstreckungsbescheid ist meist der nächste Schritt nach einem Mahnbescheid. Er bedeutet oft, dass eine Forderung weiterverfolgt wird. Viele Menschen wissen nicht genau, was das Schreiben bedeutet, ob eine Frist läuft und was jetzt wichtig ist. Genau dabei hilft BriefHelden.
+            Ein Vollstreckungsbescheid ist meist der nächste Schritt nach einem Mahnbescheid. Darin stehen häufig Angaben zur Forderung, zum Betrag, zu Fristen und zum weiteren Verfahren. Viele Menschen möchten zuerst verstehen, welche Inhalte und Hinweise im Schreiben stehen. Genau dabei hilft BriefHelden.
           </p>
 
           <div class="grid2">
             <div class="infoCard">
               <h3 data-i18n="left_title">Einfach erklärt</h3>
               <p data-i18n="left_text_1">
-                In einem Vollstreckungsbescheid geht es oft um eine Geldforderung, die nach einem gerichtlichen Mahnverfahren weiter verfolgt wird.
+                In einem Vollstreckungsbescheid geht es meist um eine Geldforderung, die nach einem gerichtlichen Mahnverfahren weiterverfolgt wird.
               </p>
               <p data-i18n="left_text_2">
-                Wichtig sind dabei vor allem: Wer fordert Geld? Welcher Betrag ist genannt? Gibt es Fristen? Und was passiert, wenn nichts unternommen wird?
+                Wichtig sind dabei vor allem: Wer fordert Geld? Welcher Betrag ist genannt? Welche Fristen stehen im Schreiben? Und welche Angaben zum Verfahren sind enthalten?
               </p>
               <p data-i18n="left_text_3">
-                BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie das Schreiben besser einordnen können.
+                BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie den Vollstreckungsbescheid besser sprachlich verständlich einordnen können.
               </p>
             </div>
 
@@ -498,14 +527,14 @@ url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=c
                 <li data-i18n="right_li_1">Vollstreckungsbescheid sicher hochladen</li>
                 <li data-i18n="right_li_2">Wir lesen den Inhalt und erklären ihn verständlich</li>
                 <li data-i18n="right_li_3">Sie erhalten die Erklärung per E-Mail</li>
-                <li data-i18n="right_li_4">Keine Rechtsberatung – nur verständliche Texterklärung</li>
+                <li data-i18n="right_li_4">Keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) – nur sprachliche Vereinfachung und verständliche Texterklärung ohne rechtliche Bewertung oder Handlungsempfehlung</li>
               </ul>
             </div>
           </div>
 
           <div class="serviceMini">
             <div class="box">
-              <h3 data-i18n="service1_title">Komplettes Schreiben erklären lassen</h3>
+              <h3 data-i18n="service1_title">Kompletten Vollstreckungsbescheid erklären lassen</h3>
               <p data-i18n="service1_text">
                 Ideal, wenn Sie den ganzen Vollstreckungsbescheid vollständig verstehen möchten.
               </p>
@@ -533,37 +562,37 @@ url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=c
 
       <div class="glassCard">
         <div class="pad">
-          <h2 class="sectionTitle" data-i18n="faq_title">Häufige Fragen zum Vollstreckungsbescheid</h2>
+          <h2 class="sectionTitle" data-i18n="faq_title">Häufige Fragen zu Vollstreckungsbescheiden</h2>
           <p class="sectionSub" data-i18n="faq_sub">
-            Diese Fragen tauchen bei solchen Schreiben besonders oft auf:
+            Diese Fragen tauchen bei Vollstreckungsbescheiden besonders oft auf:
           </p>
 
           <div class="faqGrid">
             <div class="faqItem">
-              <h3 data-i18n="faq1_q">Ist ein Vollstreckungsbescheid ernst?</h3>
+              <h3 data-i18n="faq1_q">Welche Angaben stehen in einem Vollstreckungsbescheid?</h3>
               <p data-i18n="faq1_a">
-                Ja, ein Vollstreckungsbescheid ist in der Regel ein wichtiges Schreiben. Viele Menschen empfinden ihn als belastend, weil er meist mit einer Geldforderung zusammenhängt.
+                Ein Vollstreckungsbescheid enthält häufig Angaben zu Forderung, Betrag, Datum, Fristen, Beteiligten und weiteren Hinweisen zum Verfahren.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="faq2_q">Gibt es dabei oft eine Frist?</h3>
+              <h3 data-i18n="faq2_q">Was bedeuten Forderung oder Frist?</h3>
               <p data-i18n="faq2_a">
-                Häufig sind in solchen Schreiben Fristen oder Zeiträume wichtig. BriefHelden hilft Ihnen, diese Angaben verständlich zu erkennen.
+                Im Schreiben steht oft, welcher Betrag verlangt wird und welche Fristen oder Zeiträume genannt sind. Viele Menschen möchten diese Angaben zuerst verständlich erklärt bekommen.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="faq3_q">Was ist besonders wichtig?</h3>
+              <h3 data-i18n="faq3_q">Welche Punkte sind besonders wichtig?</h3>
               <p data-i18n="faq3_a">
-                Besonders wichtig sind Absender, Forderung, genannter Betrag, Datum, Fristen und mögliche nächste Schritte.
+                Besonders wichtig sind Absender, Forderung, genannter Betrag, Datum, Fristen und alle Hinweise dazu, worum es im Schreiben geht.
               </p>
             </div>
 
             <div class="faqItem">
               <h3 data-i18n="faq4_q">Ist BriefHelden eine Rechtsberatung?</h3>
               <p data-i18n="faq4_a">
-                Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.
+                Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Erklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.
               </p>
             </div>
           </div>
@@ -581,33 +610,71 @@ url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=c
 
           <div class="faqGrid">
             <div class="faqItem">
-              <h3 data-i18n="tip1_title">Betrag prüfen</h3>
+              <h3 data-i18n="tip1_title">Betrag ansehen</h3>
               <p data-i18n="tip1_text">
-                Schauen Sie, welcher Betrag verlangt wird und ob zusätzliche Kosten, Zinsen oder Gebühren genannt werden.
+                Schauen Sie, welcher Betrag genannt wird und ob zusätzliche Kosten, Zinsen oder Gebühren aufgeführt sind.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="tip2_title">Frist beachten</h3>
+              <h3 data-i18n="tip2_title">Fristen ansehen</h3>
               <p data-i18n="tip2_text">
-                Achten Sie darauf, ob ein Datum oder eine Frist im Schreiben genannt wird.
+                Achten Sie darauf, ob ein Datum, eine Frist oder ein Zeitraum im Schreiben genannt wird.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="tip3_title">Absender ansehen</h3>
+              <h3 data-i18n="tip3_title">Absender und Angaben prüfen</h3>
               <p data-i18n="tip3_text">
-                Prüfen Sie, von welchem Gericht, Unternehmen oder Vertreter das Schreiben kommt.
+                Prüfen Sie, von welchem Gericht, Unternehmen oder Vertreter das Schreiben kommt und welche Angaben zum Verfahren enthalten sind.
               </p>
             </div>
 
             <div class="faqItem">
               <h3 data-i18n="tip4_title">Inhalt verständlich machen</h3>
               <p data-i18n="tip4_text">
-                Wenn das Schreiben schwer verständlich ist, hilft eine einfache Erklärung oft sofort weiter.
+                Wenn Begriffe, Hinweise oder Angaben unklar wirken, hilft eine einfache Erklärung oft dabei, die enthaltenen Angaben besser zu erfassen.
               </p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div style="height:18px"></div>
+
+      <div class="moreLinks">
+        <h2 data-i18n="more_title">Weitere häufige Briefe verstehen</h2>
+
+        <div class="moreGrid">
+          <a class="moreCard" href="/inkasso-brief-verstehen.html">
+            <h3 data-i18n="more_1_title">Inkasso Brief verstehen</h3>
+            <p data-i18n="more_1_text">Inkasso Schreiben klar und verständlich erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/mahnbescheid-verstehen.html">
+            <h3 data-i18n="more_2_title">Mahnbescheid verstehen</h3>
+            <p data-i18n="more_2_text">Mahnbescheide einfach erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/jobcenter-brief-verstehen.html">
+            <h3 data-i18n="more_3_title">Jobcenter Brief verstehen</h3>
+            <p data-i18n="more_3_text">Jobcenter Schreiben in einfacher Sprache erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/pfaendungsbescheid-verstehen.html">
+            <h3 data-i18n="more_4_title">Pfändungsbescheid verstehen</h3>
+            <p data-i18n="more_4_text">Pfändungsbescheide klar und verständlich erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/vollstreckungsbescheid-verstehen.html">
+            <h3 data-i18n="more_5_title">Vollstreckungsbescheid verstehen</h3>
+            <p data-i18n="more_5_text">Vollstreckungsbescheide einfach erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/finanzamt-brief-verstehen.html">
+            <h3 data-i18n="more_6_title">Finanzamt Brief verstehen</h3>
+            <p data-i18n="more_6_text">Schreiben vom Finanzamt klar und verständlich erklärt.</p>
+          </a>
         </div>
       </div>
     </div>
@@ -615,7 +682,7 @@ url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=c
 
   <footer>
     <div class="footWrap">
-      <div>© 2026 BriefHelden – Alle Rechte vorbehalten</div>
+      <div data-i18n="foot_copy">© 2026 BriefHelden – Alle Rechte vorbehalten</div>
       <div class="footLinks">
         <a href="index.html" data-i18n="foot_home">Startseite</a>
         <a href="frage.html" data-i18n="foot_question">Frage stellen</a>
@@ -629,21 +696,26 @@ url("https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=c
 
   <script>
     const STRIPE_LINKS = {
-de: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
-en: "https://buy.stripe.com/fZubJ0dpXbMAbfpcIZ4sE01",
-tr: "https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
-ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
+      de: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
+      en: "https://buy.stripe.com/fZubJ0dpXbMAbfpcIZ4sE01",
+      tr: "https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
+      ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
     };
 
     const QUESTION_LINKS = {
-de: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
-en: "https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
-tr: "https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
-ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
+      de: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
+      en: "https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
+      tr: "https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
+      ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
     };
 
     const i18n = {
       de: {
+        pageTitle: "Vollstreckungsbescheid verstehen – einfach erklärt | BriefHelden",
+        metaDescription: "Vollstreckungsbescheid verständlich erklärt: BriefHelden erklärt Forderung, Fristen, Beträge und enthaltene Angaben klar, einfach und ohne komplizierte Fachsprache.",
+        ogTitle: "Vollstreckungsbescheid verstehen – einfach erklärt | BriefHelden",
+        ogDescription: "Vollstreckungsbescheid einfach erklärt. Verstehen Sie Forderung, Fristen und wichtige Angaben schnell und verständlich.",
+
         nav_home: "Startseite",
         nav_question: "Frage stellen",
         nav_refund: "Widerruf",
@@ -652,28 +724,28 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_privacy: "Datenschutz",
 
         hero_title: "Vollstreckungsbescheid verstehen",
-        hero_sub: "Ein Vollstreckungsbescheid wirkt oft ernst und beunruhigend. BriefHelden erklärt Ihnen den Inhalt einfach, klar und verständlich.",
+        hero_sub: "Ein Vollstreckungsbescheid enthält oft wichtige Hinweise und Angaben. BriefHelden erklärt Inhalt, Fristen, Forderung und enthaltene Angaben einfach und verständlich.",
         hero_cta: "Jetzt Vollstreckungsbescheid erklären lassen – 6,90 €",
         hero_question_cta: "Kurze Frage stellen – 1,49 €",
         meta_1: "Einfach erklärt",
         meta_2: "Schnelle Rückmeldung",
         meta_3: "Vertraulich",
 
-        intro_title: "Was ist ein Vollstreckungsbescheid?",
-        intro_text: "Ein Vollstreckungsbescheid ist meist der nächste Schritt nach einem Mahnbescheid. Er bedeutet oft, dass eine Forderung weiterverfolgt wird. Viele Menschen wissen nicht genau, was das Schreiben bedeutet, ob eine Frist läuft und was jetzt wichtig ist. Genau dabei hilft BriefHelden.",
+        intro_title: "Was bedeutet ein Vollstreckungsbescheid?",
+        intro_text: "Ein Vollstreckungsbescheid ist meist der nächste Schritt nach einem Mahnbescheid. Darin stehen häufig Angaben zur Forderung, zum Betrag, zu Fristen und zum weiteren Verfahren. Viele Menschen möchten zuerst verstehen, welche Inhalte und Hinweise im Schreiben stehen. Genau dabei hilft BriefHelden.",
 
         left_title: "Einfach erklärt",
-        left_text_1: "In einem Vollstreckungsbescheid geht es oft um eine Geldforderung, die nach einem gerichtlichen Mahnverfahren weiter verfolgt wird.",
-        left_text_2: "Wichtig sind dabei vor allem: Wer fordert Geld? Welcher Betrag ist genannt? Gibt es Fristen? Und was passiert, wenn nichts unternommen wird?",
-        left_text_3: "BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie das Schreiben besser einordnen können.",
+        left_text_1: "In einem Vollstreckungsbescheid geht es meist um eine Geldforderung, die nach einem gerichtlichen Mahnverfahren weiterverfolgt wird.",
+        left_text_2: "Wichtig sind dabei vor allem: Wer fordert Geld? Welcher Betrag ist genannt? Welche Fristen stehen im Schreiben? Und welche Angaben zum Verfahren sind enthalten?",
+        left_text_3: "BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie den Vollstreckungsbescheid besser sprachlich verständlich einordnen können.",
 
         right_title: "So funktioniert es",
         right_li_1: "Vollstreckungsbescheid sicher hochladen",
         right_li_2: "Wir lesen den Inhalt und erklären ihn verständlich",
         right_li_3: "Sie erhalten die Erklärung per E-Mail",
-        right_li_4: "Keine Rechtsberatung – nur verständliche Texterklärung",
+        right_li_4: "Keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) – nur sprachliche Vereinfachung und verständliche Texterklärung ohne rechtliche Bewertung oder Handlungsempfehlung",
 
-        service1_title: "Komplettes Schreiben erklären lassen",
+        service1_title: "Kompletten Vollstreckungsbescheid erklären lassen",
         service1_text: "Ideal, wenn Sie den ganzen Vollstreckungsbescheid vollständig verstehen möchten.",
         service1_btn: "Jetzt für 6,90 € starten",
 
@@ -681,28 +753,43 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         service2_text: "Ideal, wenn Sie nur eine kurze Frage zu Frist, Betrag oder Inhalt haben.",
         service2_btn: "Jetzt für 1,49 € fragen",
 
-        faq_title: "Häufige Fragen zum Vollstreckungsbescheid",
-        faq_sub: "Diese Fragen tauchen bei solchen Schreiben besonders oft auf:",
-        faq1_q: "Ist ein Vollstreckungsbescheid ernst?",
-        faq1_a: "Ja, ein Vollstreckungsbescheid ist in der Regel ein wichtiges Schreiben. Viele Menschen empfinden ihn als belastend, weil er meist mit einer Geldforderung zusammenhängt.",
-        faq2_q: "Gibt es dabei oft eine Frist?",
-        faq2_a: "Häufig sind in solchen Schreiben Fristen oder Zeiträume wichtig. BriefHelden hilft Ihnen, diese Angaben verständlich zu erkennen.",
-        faq3_q: "Was ist besonders wichtig?",
-        faq3_a: "Besonders wichtig sind Absender, Forderung, genannter Betrag, Datum, Fristen und mögliche nächste Schritte.",
+        faq_title: "Häufige Fragen zu Vollstreckungsbescheiden",
+        faq_sub: "Diese Fragen tauchen bei Vollstreckungsbescheiden besonders oft auf:",
+        faq1_q: "Welche Angaben stehen in einem Vollstreckungsbescheid?",
+        faq1_a: "Ein Vollstreckungsbescheid enthält häufig Angaben zu Forderung, Betrag, Datum, Fristen, Beteiligten und weiteren Hinweisen zum Verfahren.",
+        faq2_q: "Was bedeuten Forderung oder Frist?",
+        faq2_a: "Im Schreiben steht oft, welcher Betrag verlangt wird und welche Fristen oder Zeiträume genannt sind. Viele Menschen möchten diese Angaben zuerst verständlich erklärt bekommen.",
+        faq3_q: "Welche Punkte sind besonders wichtig?",
+        faq3_a: "Besonders wichtig sind Absender, Forderung, genannter Betrag, Datum, Fristen und alle Hinweise dazu, worum es im Schreiben geht.",
         faq4_q: "Ist BriefHelden eine Rechtsberatung?",
-        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.",
+        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Erklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.",
 
         tip_title: "Worauf sollten Sie bei einem Vollstreckungsbescheid achten?",
         tip_sub: "Diese Punkte sind oft besonders wichtig:",
-        tip1_title: "Betrag prüfen",
-        tip1_text: "Schauen Sie, welcher Betrag verlangt wird und ob zusätzliche Kosten, Zinsen oder Gebühren genannt werden.",
-        tip2_title: "Frist beachten",
-        tip2_text: "Achten Sie darauf, ob ein Datum oder eine Frist im Schreiben genannt wird.",
-        tip3_title: "Absender ansehen",
-        tip3_text: "Prüfen Sie, von welchem Gericht, Unternehmen oder Vertreter das Schreiben kommt.",
+        tip1_title: "Betrag ansehen",
+        tip1_text: "Schauen Sie, welcher Betrag genannt wird und ob zusätzliche Kosten, Zinsen oder Gebühren aufgeführt sind.",
+        tip2_title: "Fristen ansehen",
+        tip2_text: "Achten Sie darauf, ob ein Datum, eine Frist oder ein Zeitraum im Schreiben genannt wird.",
+        tip3_title: "Absender und Angaben prüfen",
+        tip3_text: "Prüfen Sie, von welchem Gericht, Unternehmen oder Vertreter das Schreiben kommt und welche Angaben zum Verfahren enthalten sind.",
         tip4_title: "Inhalt verständlich machen",
-        tip4_text: "Wenn das Schreiben schwer verständlich ist, hilft eine einfache Erklärung oft sofort weiter.",
+        tip4_text: "Wenn Begriffe, Hinweise oder Angaben unklar wirken, hilft eine einfache Erklärung oft dabei, die enthaltenen Angaben besser zu erfassen.",
 
+        more_title: "Weitere häufige Briefe verstehen",
+        more_1_title: "Inkasso Brief verstehen",
+        more_1_text: "Inkasso Schreiben klar und verständlich erklärt.",
+        more_2_title: "Mahnbescheid verstehen",
+        more_2_text: "Mahnbescheide einfach erklärt.",
+        more_3_title: "Jobcenter Brief verstehen",
+        more_3_text: "Jobcenter Schreiben in einfacher Sprache erklärt.",
+        more_4_title: "Pfändungsbescheid verstehen",
+        more_4_text: "Pfändungsbescheide klar und verständlich erklärt.",
+        more_5_title: "Vollstreckungsbescheid verstehen",
+        more_5_text: "Vollstreckungsbescheide einfach erklärt.",
+        more_6_title: "Finanzamt Brief verstehen",
+        more_6_text: "Schreiben vom Finanzamt klar und verständlich erklärt.",
+
+        foot_copy: "© 2026 BriefHelden – Alle Rechte vorbehalten",
         foot_home: "Startseite",
         foot_question: "Frage stellen",
         foot_refund: "Widerruf",
@@ -712,6 +799,11 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
       },
 
       en: {
+        pageTitle: "Understand an enforcement order – explained clearly | BriefHelden",
+        metaDescription: "Understand an enforcement order easily: BriefHelden explains the claim, deadlines, amounts and included details clearly and in simple language.",
+        ogTitle: "Understand an enforcement order – explained clearly | BriefHelden",
+        ogDescription: "Enforcement order explained simply. Understand the claim, deadlines and important details quickly and clearly.",
+
         nav_home: "Home",
         nav_question: "Ask a question",
         nav_refund: "Withdrawal",
@@ -719,29 +811,29 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_terms: "Terms",
         nav_privacy: "Privacy",
 
-        hero_title: "Understand a enforcement order",
-        hero_sub: "An enforcement order can seem serious and worrying. BriefHelden explains the content simply, clearly and understandably.",
+        hero_title: "Understand an enforcement order",
+        hero_sub: "An enforcement order often contains important notices and details. BriefHelden explains the content, deadlines, claim and included details simply and clearly.",
         hero_cta: "Get enforcement order explained now – €6.90",
         hero_question_cta: "Ask a short question – €1.49",
         meta_1: "Clearly explained",
         meta_2: "Fast response",
         meta_3: "Confidential",
 
-        intro_title: "What is an enforcement order?",
-        intro_text: "An enforcement order is usually the next step after a payment order. It often means that a claim is being pursued further. Many people are unsure what the letter means, whether a deadline is running and what matters now. That is exactly where BriefHelden helps.",
+        intro_title: "What does an enforcement order mean?",
+        intro_text: "An enforcement order is usually the next step after a payment order. It often contains details about the claim, the amount, deadlines and the further procedure. Many people first want to understand which contents and notices are written in the document. That is exactly where BriefHelden helps.",
 
         left_title: "Simply explained",
-        left_text_1: "An enforcement order usually concerns a money claim that is being pursued further after a court dunning procedure.",
-        left_text_2: "Important points are: Who is demanding money? What amount is mentioned? Are there deadlines? And what may happen if nothing is done?",
-        left_text_3: "BriefHelden explains the content in simple language so you can better understand the letter.",
+        left_text_1: "An enforcement order usually concerns a money claim that is pursued further after a court dunning procedure.",
+        left_text_2: "Important points are: Who is demanding money? What amount is stated? Which deadlines are written in the document? And which details about the procedure are included?",
+        left_text_3: "BriefHelden explains the content in simple language so you can better understand the enforcement order.",
 
         right_title: "How it works",
         right_li_1: "Upload enforcement order securely",
         right_li_2: "We read the content and explain it clearly",
         right_li_3: "You receive the explanation by email",
-        right_li_4: "No legal advice – plain-language explanation only",
+        right_li_4: "No legal advice within the meaning of the German Legal Services Act (RDG) — only linguistic simplification and a clear text explanation without legal assessment or recommendation for action",
 
-        service1_title: "Get the full document explained",
+        service1_title: "Get the full enforcement order explained",
         service1_text: "Ideal if you want to fully understand the entire enforcement order.",
         service1_btn: "Start now for €6.90",
 
@@ -750,27 +842,42 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         service2_btn: "Ask now for €1.49",
 
         faq_title: "Frequently asked questions about enforcement orders",
-        faq_sub: "These questions often come up with this kind of document:",
-        faq1_q: "Is an enforcement order serious?",
-        faq1_a: "Yes, an enforcement order is usually an important document. Many people find it stressful because it is generally connected to a money claim.",
-        faq2_q: "Is there usually a deadline?",
-        faq2_a: "Deadlines or time periods are often important in such documents. BriefHelden helps you identify these details clearly.",
-        faq3_q: "What is especially important?",
-        faq3_a: "Especially important are sender, claim, stated amount, date, deadlines and possible next steps.",
+        faq_sub: "These questions often come up with enforcement orders:",
+        faq1_q: "Which details are written in an enforcement order?",
+        faq1_a: "An enforcement order often contains details about the claim, amount, date, deadlines, involved parties and further notes about the procedure.",
+        faq2_q: "What do the claim or deadline mean?",
+        faq2_a: "The document often states which amount is being claimed and which deadlines or time periods are mentioned. Many people want these details explained clearly first.",
+        faq3_q: "Which points are especially important?",
+        faq3_a: "Especially important are the sender, claim, stated amount, date, deadlines and all notes about what the document is about.",
         faq4_q: "Is BriefHelden legal advice?",
-        faq4_a: "No. BriefHelden does not provide legal advice. You only receive a clear explanation of the content.",
+        faq4_a: "No. BriefHelden does not provide legal advice within the meaning of the German Legal Services Act (RDG). You receive only a clear explanation and linguistic simplification of your document’s content. There is no legal assessment, no individual review, and no binding recommendation for action.",
 
         tip_title: "What should you look for in an enforcement order?",
         tip_sub: "These points are often especially important:",
-        tip1_title: "Check the amount",
-        tip1_text: "See what amount is being claimed and whether extra costs, interest or fees are listed.",
-        tip2_title: "Watch the deadline",
-        tip2_text: "Pay attention to whether a date or deadline is mentioned in the document.",
-        tip3_title: "Check the sender",
-        tip3_text: "See which court, company or representative sent the document.",
+        tip1_title: "Look at the amount",
+        tip1_text: "Check which amount is stated and whether extra costs, interest or fees are listed.",
+        tip2_title: "Look at deadlines",
+        tip2_text: "Pay attention to whether a date, a deadline or a time period is mentioned in the document.",
+        tip3_title: "Check sender and details",
+        tip3_text: "Check which court, company or representative sent the document and which details about the procedure are included.",
         tip4_title: "Make the content understandable",
-        tip4_text: "If the document is difficult to understand, a simple explanation often helps immediately.",
+        tip4_text: "If terms, notices or details seem unclear, a simple explanation often helps you grasp the included details more easily.",
 
+        more_title: "Understand more common letters",
+        more_1_title: "Understand a debt collection letter",
+        more_1_text: "Debt collection letters explained clearly.",
+        more_2_title: "Understand a payment order",
+        more_2_text: "Payment orders explained simply.",
+        more_3_title: "Understand a Jobcenter letter",
+        more_3_text: "Jobcenter letters explained in simple language.",
+        more_4_title: "Understand a seizure order",
+        more_4_text: "Seizure orders explained clearly.",
+        more_5_title: "Understand an enforcement order",
+        more_5_text: "Enforcement orders explained simply.",
+        more_6_title: "Understand a tax office letter",
+        more_6_text: "Tax office letters explained clearly.",
+
+        foot_copy: "© 2026 BriefHelden – All rights reserved",
         foot_home: "Home",
         foot_question: "Ask a question",
         foot_refund: "Withdrawal",
@@ -780,6 +887,11 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
       },
 
       tr: {
+        pageTitle: "İcra emrini anlayın – kolay açıklama | BriefHelden",
+        metaDescription: "İcra emrini kolay anlayın: BriefHelden talep, süreler, tutarlar ve belgede yer alan bilgileri sade ve anlaşılır şekilde açıklar.",
+        ogTitle: "İcra emrini anlayın – kolay açıklama | BriefHelden",
+        ogDescription: "İcra emri basitçe açıklanır. Talebi, süreleri ve önemli bilgileri hızlı ve açık şekilde anlayın.",
+
         nav_home: "Ana Sayfa",
         nav_question: "Soru sor",
         nav_refund: "Cayma",
@@ -788,28 +900,28 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_privacy: "Gizlilik",
 
         hero_title: "İcra emrini anlayın",
-        hero_sub: "Bir icra emri ciddi ve endişe verici görünebilir. BriefHelden içeriği size basit, açık ve anlaşılır şekilde açıklar.",
+        hero_sub: "Bir icra emri çoğu zaman önemli uyarılar ve bilgiler içerir. BriefHelden içeriği, süreleri, talebi ve yer alan bilgileri size basit ve açık şekilde açıklar.",
         hero_cta: "İcra emrini şimdi açıklat – 6,90 €",
         hero_question_cta: "Kısa soru sor – 1,49 €",
         meta_1: "Basit açıklandı",
         meta_2: "Hızlı dönüş",
         meta_3: "Gizli",
 
-        intro_title: "İcra emri nedir?",
-        intro_text: "İcra emri genelde bir ödeme emrinden sonraki adımdır. Bu, bir alacağın daha ileri götürüldüğü anlamına gelebilir. Birçok kişi bu belgenin ne anlama geldiğini, süre olup olmadığını ve şimdi neyin önemli olduğunu tam bilmez. BriefHelden tam bu konuda yardımcı olur.",
+        intro_title: "Bir icra emri ne anlama gelir?",
+        intro_text: "Bir icra emri genelde ödeme emrinden sonraki adımdır. Bu belgede çoğu zaman talep, tutar, süreler ve sürecin devamı ile ilgili bilgiler yer alır. Birçok kişi önce yazıda hangi içeriklerin ve uyarıların yer aldığını anlamak ister. BriefHelden tam bu konuda yardımcı olur.",
 
         left_title: "Basit açıklama",
         left_text_1: "Bir icra emri genelde mahkeme ödeme sürecinden sonra takip edilen bir para alacağı ile ilgilidir.",
-        left_text_2: "Önemli noktalar şunlardır: Parayı kim istiyor? Hangi tutar yazıyor? Süre var mı? Hiçbir şey yapılmazsa ne olabilir?",
-        left_text_3: "BriefHelden içeriği basit dille açıklar, böylece belgeyi daha iyi anlayabilirsiniz.",
+        left_text_2: "Önemli noktalar şunlardır: Parayı kim istiyor? Hangi tutar yazıyor? Belgede hangi süreler yer alıyor? Ve süreçle ilgili hangi bilgiler bulunuyor?",
+        left_text_3: "BriefHelden içeriği basit dille açıklar, böylece icra emrini daha iyi anlayabilirsiniz.",
 
         right_title: "Nasıl çalışır",
         right_li_1: "İcra emrini güvenli şekilde yükleyin",
         right_li_2: "İçeriği okuyup açık şekilde açıklıyoruz",
         right_li_3: "Açıklamayı e-posta ile alırsınız",
-        right_li_4: "Hukuki danışmanlık değil – sadece anlaşılır açıklama",
+        right_li_4: "Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık verilmez — yalnızca dilsel sadeleştirme ve hukuki değerlendirme ya da eylem tavsiyesi olmadan anlaşılır metin açıklaması sunulur",
 
-        service1_title: "Belgenin tamamını açıklat",
+        service1_title: "İcra emrinin tamamını açıklat",
         service1_text: "İcra emrinin tamamını anlamak istiyorsanız idealdir.",
         service1_btn: "Şimdi 6,90 € ile başla",
 
@@ -817,28 +929,43 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         service2_text: "Sadece süre, tutar veya içerikle ilgili kısa bir sorunuz varsa idealdir.",
         service2_btn: "Şimdi 1,49 € ile sor",
 
-        faq_title: "İcra emri hakkında sık sorulan sorular",
-        faq_sub: "Bu tür belgelerde şu sorular sıkça ortaya çıkar:",
-        faq1_q: "İcra emri ciddi midir?",
-        faq1_a: "Evet, icra emri genelde önemli bir belgedir. Birçok kişi bunu para talebiyle bağlantılı olduğu için stresli bulur.",
-        faq2_q: "Genelde süre var mıdır?",
-        faq2_a: "Bu tür belgelerde süreler veya zaman sınırları sık önemlidir. BriefHelden bu bilgileri açık şekilde görmenize yardım eder.",
-        faq3_q: "En önemli olan nedir?",
-        faq3_a: "Gönderen, talep, belirtilen tutar, tarih, süreler ve olası sonraki adımlar özellikle önemlidir.",
+        faq_title: "İcra emirleri hakkında sık sorulan sorular",
+        faq_sub: "Bu sorular icra emirlerinde özellikle sık ortaya çıkar:",
+        faq1_q: "Bir icra emrinde hangi bilgiler yer alır?",
+        faq1_a: "Bir icra emri çoğu zaman talep, tutar, tarih, süreler, ilgili taraflar ve süreçle ilgili ek bilgiler içerir.",
+        faq2_q: "Talep veya süre ne anlama gelir?",
+        faq2_a: "Belgede çoğu zaman hangi tutarın istendiği ve hangi sürelerin veya zaman aralıklarının belirtildiği yazılır. Birçok kişi bu bilgilerin önce açık şekilde açıklanmasını ister.",
+        faq3_q: "Hangi noktalar özellikle önemlidir?",
+        faq3_a: "Özellikle gönderen, talep, belirtilen tutar, tarih, süreler ve belgenin neyle ilgili olduğuna dair tüm bilgiler önemlidir.",
         faq4_q: "BriefHelden hukuki danışmanlık mı veriyor?",
-        faq4_a: "Hayır. BriefHelden hukuki danışmanlık vermez. Sadece içeriğin anlaşılır açıklamasını sunar.",
+        faq4_a: "Hayır. BriefHelden, Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık vermez. Yalnızca belgenizin içeriğinin anlaşılır açıklamasını ve dilsel sadeleştirmesini alırsınız. Hukuki değerlendirme, bireysel inceleme veya bağlayıcı bir hareket tavsiyesi yapılmaz.",
 
         tip_title: "Bir icra emrinde nelere dikkat etmelisiniz?",
         tip_sub: "Bu noktalar genelde özellikle önemlidir:",
-        tip1_title: "Tutarı kontrol edin",
-        tip1_text: "Hangi tutarın istendiğine ve ek masraf, faiz veya ücret olup olmadığına bakın.",
-        tip2_title: "Süreyi takip edin",
-        tip2_text: "Belgede bir tarih veya süre yazılı olup olmadığına dikkat edin.",
-        tip3_title: "Göndereni inceleyin",
-        tip3_text: "Belgenin hangi mahkeme, şirket veya temsilciden geldiğine bakın.",
+        tip1_title: "Tutara bakın",
+        tip1_text: "Hangi tutarın yazdığına ve ek masraf, faiz veya ücret olup olmadığına bakın.",
+        tip2_title: "Sürelere bakın",
+        tip2_text: "Belgede bir tarih, bir süre veya bir zaman aralığı yazılı olup olmadığına dikkat edin.",
+        tip3_title: "Göndereni ve bilgileri kontrol edin",
+        tip3_text: "Belgenin hangi mahkeme, şirket veya temsilciden geldiğini ve süreçle ilgili hangi bilgilerin yer aldığını kontrol edin.",
         tip4_title: "İçeriği anlaşılır hale getirin",
-        tip4_text: "Belgeyi anlamak zorsa, basit bir açıklama çoğu zaman hemen yardımcı olur.",
+        tip4_text: "Terimler, uyarılar veya bilgiler belirsiz görünüyorsa, basit bir açıklama çoğu zaman yer alan bilgileri daha iyi kavramanıza yardımcı olur.",
 
+        more_title: "Diğer sık görülen mektupları anlayın",
+        more_1_title: "Inkasso mektubunu anla",
+        more_1_text: "Inkasso yazıları açık şekilde açıklanır.",
+        more_2_title: "Mahnbescheid anla",
+        more_2_text: "Mahn yazıları basit şekilde açıklanır.",
+        more_3_title: "Jobcenter mektubunu anla",
+        more_3_text: "Jobcenter yazıları basit dille açıklanır.",
+        more_4_title: "Haciz kararını anla",
+        more_4_text: "Haciz kararları açık şekilde açıklanır.",
+        more_5_title: "İcra emrini anla",
+        more_5_text: "İcra emirleri basit şekilde açıklanır.",
+        more_6_title: "Vergi dairesi mektubunu anla",
+        more_6_text: "Vergi dairesi yazıları açık şekilde açıklanır.",
+
+        foot_copy: "© 2026 BriefHelden – Tüm hakları saklıdır",
         foot_home: "Ana Sayfa",
         foot_question: "Soru sor",
         foot_refund: "Cayma",
@@ -848,6 +975,11 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
       },
 
       ru: {
+        pageTitle: "Понять исполнительный приказ – простое объяснение | BriefHelden",
+        metaDescription: "Легко понять исполнительный приказ: BriefHelden просто и понятно объясняет требование, сроки, суммы и указанные в документе сведения.",
+        ogTitle: "Понять исполнительный приказ – простое объяснение | BriefHelden",
+        ogDescription: "Исполнительный приказ объясняется простым языком. Понятно разберитесь в требовании, сроках и важных сведениях.",
+
         nav_home: "Главная",
         nav_question: "Задать вопрос",
         nav_refund: "Отказ",
@@ -856,28 +988,28 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_privacy: "Конфиденциальность",
 
         hero_title: "Понять исполнительный приказ",
-        hero_sub: "Исполнительный приказ часто кажется серьёзным и тревожным. BriefHelden объяснит содержание просто, ясно и понятно.",
+        hero_sub: "Исполнительный приказ часто содержит важные указания и сведения. BriefHelden объяснит содержание, сроки, требование и указанные данные просто и ясно.",
         hero_cta: "Объяснить исполнительный приказ – 6,90 €",
         hero_question_cta: "Задать короткий вопрос – 1,49 €",
         meta_1: "Просто объяснено",
         meta_2: "Быстрый ответ",
         meta_3: "Конфиденциально",
 
-        intro_title: "Что такое исполнительный приказ?",
-        intro_text: "Исполнительный приказ обычно является следующим шагом после судебного приказа о взыскании. Это часто означает, что требование продолжают взыскивать дальше. Многие люди не понимают, что означает этот документ, есть ли срок и что теперь важно. Именно здесь помогает BriefHelden.",
+        intro_title: "Что означает исполнительный приказ?",
+        intro_text: "Исполнительный приказ обычно является следующим шагом после судебного приказа о взыскании. В таком документе часто содержатся сведения о требовании, сумме, сроках и дальнейшем ходе процедуры. Многие люди сначала хотят понять, какие именно сведения и указания указаны в документе. Именно здесь помогает BriefHelden.",
 
         left_title: "Просто объясняем",
         left_text_1: "Исполнительный приказ обычно касается денежного требования, которое продолжают взыскивать после судебной процедуры взыскания.",
-        left_text_2: "Особенно важно следующее: Кто требует деньги? Какая сумма указана? Есть ли сроки? И что может случиться, если ничего не делать?",
-        left_text_3: "BriefHelden объясняет содержание простым языком, чтобы вам было легче понять документ.",
+        left_text_2: "Особенно важно следующее: Кто требует деньги? Какая сумма указана? Какие сроки указаны в документе? И какие сведения о процедуре включены?",
+        left_text_3: "BriefHelden объясняет содержание простым языком, чтобы вам было легче понять исполнительный приказ.",
 
         right_title: "Как это работает",
         right_li_1: "Безопасно загрузите исполнительный приказ",
         right_li_2: "Мы читаем содержание и понятно объясняем его",
         right_li_3: "Вы получаете объяснение по e-mail",
-        right_li_4: "Не юридическая консультация – только понятное объяснение",
+        right_li_4: "Это не юридическая консультация в смысле немецкого Закона о юридических услугах (RDG) — только языковое упрощение и понятное текстовое объяснение без правовой оценки и без рекомендаций к действиям",
 
-        service1_title: "Получить полное объяснение документа",
+        service1_title: "Получить полное объяснение исполнительного приказа",
         service1_text: "Идеально, если вы хотите полностью понять весь исполнительный приказ.",
         service1_btn: "Начать за 6,90 €",
 
@@ -885,28 +1017,43 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         service2_text: "Идеально, если у вас только короткий вопрос о сроке, сумме или содержании.",
         service2_btn: "Спросить за 1,49 €",
 
-        faq_title: "Частые вопросы об исполнительном приказе",
-        faq_sub: "Эти вопросы особенно часто возникают по таким документам:",
-        faq1_q: "Исполнительный приказ — это серьёзно?",
-        faq1_a: "Да, исполнительный приказ обычно является важным документом. Многие воспринимают его как тревожный, потому что он связан с денежным требованием.",
-        faq2_q: "Есть ли там обычно срок?",
-        faq2_a: "В таких документах сроки или периоды времени часто очень важны. BriefHelden помогает вам увидеть эти данные понятнее.",
-        faq3_q: "Что особенно важно?",
-        faq3_a: "Особенно важны отправитель, требование, указанная сумма, дата, сроки и возможные дальнейшие шаги.",
+        faq_title: "Частые вопросы об исполнительных приказах",
+        faq_sub: "Эти вопросы особенно часто возникают по исполнительным приказам:",
+        faq1_q: "Какие сведения содержатся в исполнительном приказе?",
+        faq1_a: "Исполнительный приказ часто содержит сведения о требовании, сумме, дате, сроках, участниках и дополнительных указаниях по процедуре.",
+        faq2_q: "Что означают требование или срок?",
+        faq2_a: "В документе часто указано, какая сумма требуется и какие сроки или периоды времени названы. Многие люди хотят сначала получить понятное объяснение этих сведений.",
+        faq3_q: "Какие пункты особенно важны?",
+        faq3_a: "Особенно важны отправитель, требование, указанная сумма, дата, сроки и все указания о том, о чём идёт речь в документе.",
         faq4_q: "BriefHelden — это юридическая консультация?",
-        faq4_a: "Нет. BriefHelden не даёт юридических консультаций. Вы получаете только понятное объяснение содержания.",
+        faq4_a: "Нет. BriefHelden не оказывает юридических консультаций в смысле немецкого Закона о юридических услугах (RDG). Вы получаете только понятное объяснение и языковое упрощение содержания вашего документа. Юридическая оценка, индивидуальная проверка и обязательные рекомендации к действиям не предоставляются.",
 
         tip_title: "На что стоит обратить внимание в исполнительном приказе?",
         tip_sub: "Эти пункты часто особенно важны:",
-        tip1_title: "Проверьте сумму",
+        tip1_title: "Посмотрите на сумму",
         tip1_text: "Посмотрите, какая сумма указана и есть ли дополнительные расходы, проценты или сборы.",
-        tip2_title: "Обратите внимание на срок",
-        tip2_text: "Проверьте, указана ли в документе дата или срок.",
-        tip3_title: "Посмотрите на отправителя",
-        tip3_text: "Проверьте, от какого суда, компании или представителя пришёл документ.",
+        tip2_title: "Посмотрите на сроки",
+        tip2_text: "Проверьте, указана ли в документе дата, срок или период времени.",
+        tip3_title: "Проверьте отправителя и сведения",
+        tip3_text: "Проверьте, от какого суда, компании или представителя пришёл документ и какие сведения о процедуре указаны.",
         tip4_title: "Сделайте содержание понятным",
-        tip4_text: "Если документ трудно понять, простое объяснение часто сразу помогает.",
+        tip4_text: "Если термины, указания или сведения кажутся неясными, простое объяснение часто помогает легче воспринять содержащиеся в нём данные.",
 
+        more_title: "Другие часто встречающиеся письма",
+        more_1_title: "Понять письмо от коллекторов",
+        more_1_text: "Письма от коллекторов объяснены понятно.",
+        more_2_title: "Понять судебный приказ",
+        more_2_text: "Судебные приказы объяснены просто.",
+        more_3_title: "Понять письмо Jobcenter",
+        more_3_text: "Письма Jobcenter объяснены простым языком.",
+        more_4_title: "Понять постановление о взыскании",
+        more_4_text: "Постановления о взыскании объяснены понятно.",
+        more_5_title: "Понять исполнительный приказ",
+        more_5_text: "Исполнительные приказы объяснены просто.",
+        more_6_title: "Понять письмо из налоговой",
+        more_6_text: "Письма из налоговой объяснены понятно.",
+
+        foot_copy: "© 2026 BriefHelden – Все права защищены",
         foot_home: "Главная",
         foot_question: "Задать вопрос",
         foot_refund: "Отказ",
@@ -917,8 +1064,8 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
     };
 
     function updateLinks(lang){
-const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
-const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
+      const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
+      const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
 
       const stripeBtn = document.getElementById("stripeBtn");
       const servicePrimaryBtn = document.getElementById("servicePrimaryBtn");
@@ -931,9 +1078,24 @@ const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
       if(serviceQuestionBtn) serviceQuestionBtn.href = questionLink;
     }
 
+    function updateMeta(lang){
+      const dict = i18n[lang] || i18n.de;
+      document.title = dict.pageTitle;
+
+      const description = document.querySelector('meta[name="description"]');
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      const ogDescription = document.querySelector('meta[property="og:description"]');
+
+      if(description) description.setAttribute("content", dict.metaDescription);
+      if(ogTitle) ogTitle.setAttribute("content", dict.ogTitle);
+      if(ogDescription) ogDescription.setAttribute("content", dict.ogDescription);
+    }
+
     function applyLang(lang){
-const dict = i18n[lang] || i18n.de;
-      document.documentElement.lang = lang;
+      const currentLang = i18n[lang] ? lang : "de";
+      const dict = i18n[currentLang];
+
+      document.documentElement.lang = currentLang;
 
       document.querySelectorAll("[data-i18n]").forEach((el) => {
         const key = el.getAttribute("data-i18n");
@@ -942,8 +1104,9 @@ const dict = i18n[lang] || i18n.de;
         }
       });
 
-      updateLinks(lang);
-      localStorage.setItem("briefhelden_lang", lang);
+      updateMeta(currentLang);
+      updateLinks(currentLang);
+      localStorage.setItem("briefhelden_lang", currentLang);
     }
 
     const select = document.getElementById("langSelect");
@@ -957,15 +1120,5 @@ const dict = i18n[lang] || i18n.de;
       applyLang(select.value);
     });
   </script>
-  <h2>Weitere häufige Briefe verstehen</h2>
-
-<ul>
-<li><a href="/inkasso-brief-verstehen.html">Inkasso Brief verstehen</a></li>
-<li><a href="/mahnbescheid-verstehen.html">Mahnbescheid verstehen</a></li>
-<li><a href="/jobcenter-brief-verstehen.html">Jobcenter Brief verstehen</a></li>
-<li><a href="/pfaendungsbescheid-verstehen.html">Pfändungsbescheid verstehen</a></li>
-<li><a href="/vollstreckungsbescheid-verstehen.html">Vollstreckungsbescheid verstehen</a></li>
-<li><a href="/finanzamt-brief-verstehen.html">Finanzamt Brief verstehen</a></li>
-</ul>
 </body>
 </html>
