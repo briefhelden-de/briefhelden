@@ -6,20 +6,23 @@
   <title>Vertragsbrief verstehen – einfach erklärt | BriefHelden</title>
   <meta
     name="description"
-    content="Vertragsbrief einfach verstehen: BriefHelden erklärt Inhalt, Fristen, Änderungen, Kündigung und worauf Sie achten sollten – verständlich, klar und ohne komplizierte Fachsprache."
+    content="Vertragsbrief verständlich erklärt: BriefHelden erklärt Inhalt, Fristen, Änderungen, Kündigung und enthaltene Angaben klar, einfach und ohne komplizierte Fachsprache."
   />
   <meta name="robots" content="index, follow" />
-<link rel="canonical" href="https://www.briefhelden-service.de/vertragsbrief-verstehen.html" />
+  <link rel="canonical" href="https://www.briefhelden-service.de/vertragsbrief-verstehen.html" />
 
   <meta property="og:title" content="Vertragsbrief verstehen – einfach erklärt | BriefHelden" />
   <meta
     property="og:description"
-    content="Vertragsbrief einfach erklärt. Verstehen Sie Fristen, Änderungen, Kündigung und die wichtigsten Punkte schnell und verständlich."
+    content="Vertragsbrief einfach erklärt. Verstehen Sie Fristen, Änderungen, Kündigung und wichtige Angaben schnell und verständlich."
   />
   <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.briefhelden-service.de/vertragsbrief-verstehen.html" />
+  <meta property="og:url" content="https://www.briefhelden-service.de/vertragsbrief-verstehen.html" />
+  <meta property="og:image" content="https://www.briefhelden-service.de/og-image.jpg" />
+  <meta property="og:site_name" content="BriefHelden" />
+  <meta name="theme-color" content="#0b1220" />
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -104,6 +107,7 @@
         linear-gradient(180deg, rgba(55,120,255,.9), rgba(20,70,190,.9));
       box-shadow:0 10px 18px rgba(0,0,0,.18);
       position:relative;
+      flex:0 0 auto;
     }
 
     .brand .logo:after{
@@ -171,7 +175,7 @@
       padding:68px 18px 40px;
       background:
         linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.58)),
-url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=2200&q=60");
+        url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=2200&q=60");
       background-size:cover;
       background-position:center;
     }
@@ -263,7 +267,8 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
     .pad{padding:22px}
 
     .headline,
-    .sectionTitle{
+    .sectionTitle,
+    .moreLinks h2{
       text-align:center;
       margin:0 0 10px;
       font-weight:950;
@@ -288,7 +293,8 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
     }
 
     .infoCard,
-    .faqItem{
+    .faqItem,
+    .moreCard{
       border-radius:var(--radius-lg);
       border:1px solid rgba(255,255,255,.55);
       background:rgba(255,255,255,.20);
@@ -296,20 +302,24 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
     }
 
     .infoCard h3,
-    .faqItem h3{
+    .faqItem h3,
+    .moreCard h3{
       margin:0 0 10px;
       font-size:22px;
       font-weight:950;
+      line-height:1.25;
     }
 
-    .faqItem h3{
+    .faqItem h3,
+    .moreCard h3{
       font-size:18px;
       margin-bottom:8px;
     }
 
     .infoCard p,
     .infoCard li,
-    .faqItem p{
+    .faqItem p,
+    .moreCard p{
       color:rgba(11,18,32,.76);
       line-height:1.65;
       font-weight:700;
@@ -323,7 +333,8 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       padding-left:18px;
     }
 
-    .faqGrid{
+    .faqGrid,
+    .moreGrid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:14px;
@@ -348,6 +359,7 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       margin:0 0 8px;
       font-size:20px;
       font-weight:950;
+      line-height:1.3;
     }
 
     .serviceMini .box p{
@@ -374,6 +386,22 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
 
     .miniBtn.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
     .miniBtn.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
+
+    .moreLinks{
+      max-width:var(--max);
+      margin:28px auto 0;
+      padding:0 18px 30px;
+    }
+
+    .moreCard{
+      display:block;
+      transition:transform .18s ease, background .18s ease;
+    }
+
+    .moreCard:hover{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,.30);
+    }
 
     footer{
       margin-top:18px;
@@ -404,38 +432,11 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
     .footLinks a{color:rgba(255,255,255,.80)}
     .footLinks a:hover{color:#fff}
 
-    .moreLinks{
-      max-width:var(--max);
-      margin:28px auto 0;
-      padding:0 18px 30px;
-    }
-
-    .moreLinks h2{
-      margin:0 0 14px;
-      font-size:26px;
-      font-weight:950;
-      color:#0b1220;
-    }
-
-    .moreLinks ul{
-      margin:0;
-      padding-left:20px;
-    }
-
-    .moreLinks li{
-      margin:8px 0;
-      font-weight:700;
-      color:rgba(11,18,32,.82);
-    }
-
-    .moreLinks a:hover{
-      text-decoration:underline;
-    }
-
     @media (max-width:900px){
       nav.links{display:none}
       .grid2,
       .faqGrid,
+      .moreGrid,
       .serviceMini{grid-template-columns:1fr}
       .cta{min-width:92vw}
       .miniBtn{min-width:100%}
@@ -474,7 +475,7 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
     <div class="wrap">
       <h1 data-i18n="hero_title">Vertragsbrief verstehen</h1>
       <p data-i18n="hero_sub">
-        Ein Vertragsbrief wirkt oft kompliziert und verunsichernd. BriefHelden erklärt Ihnen den Inhalt einfach, klar und verständlich.
+        Ein Vertragsbrief enthält oft wichtige Hinweise und Angaben. BriefHelden erklärt Inhalt, Fristen, Änderungen, Kündigung und enthaltene Angaben einfach und verständlich.
       </p>
 
       <div class="ctaGroup">
@@ -503,7 +504,7 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
         <div class="pad">
           <h2 class="headline" data-i18n="intro_title">Was ist ein Vertragsbrief?</h2>
           <p class="lead" data-i18n="intro_text">
-            Ein Vertragsbrief ist ein Schreiben zu einem bestehenden oder neuen Vertrag. Oft geht es um Vertragsbedingungen, Änderungen, Fristen, Kündigung, Verlängerung oder eine Rückmeldung, die von Ihnen verlangt wird. Viele Menschen wissen nicht genau, was das Schreiben bedeutet und worauf sie achten sollten. Genau dabei hilft BriefHelden.
+            Ein Vertragsbrief ist ein Schreiben zu einem bestehenden oder neuen Vertrag. Oft geht es um Vertragsbedingungen, Änderungen, Fristen, Kündigung, Verlängerung oder eine Rückmeldung, die von Ihnen verlangt wird. Darin kann auch stehen, ob sich Laufzeiten, Preise oder Bedingungen ändern. Viele Menschen möchten zuerst verstehen, welche Inhalte und Angaben im Schreiben stehen. Genau dabei hilft BriefHelden.
           </p>
 
           <div class="grid2">
@@ -516,7 +517,7 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
                 Wichtig sind dabei vor allem: Um welchen Vertrag geht es? Welche Frist wird genannt? Was genau ändert sich? Müssen Sie etwas bestätigen oder beachten?
               </p>
               <p data-i18n="left_text_3">
-                BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie das Schreiben besser einordnen können.
+                BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie den Vertragsbrief besser sprachlich verständlich einordnen können.
               </p>
             </div>
 
@@ -526,14 +527,14 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
                 <li data-i18n="right_li_1">Vertragsbrief sicher hochladen</li>
                 <li data-i18n="right_li_2">Wir lesen den Inhalt und erklären ihn verständlich</li>
                 <li data-i18n="right_li_3">Sie erhalten die Erklärung per E-Mail</li>
-                <li data-i18n="right_li_4">Keine Rechtsberatung – nur verständliche Texterklärung</li>
+                <li data-i18n="right_li_4">Keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) – nur sprachliche Vereinfachung und verständliche Texterklärung ohne rechtliche Bewertung oder Handlungsempfehlung</li>
               </ul>
             </div>
           </div>
 
           <div class="serviceMini">
             <div class="box">
-              <h3 data-i18n="service1_title">Komplettes Schreiben erklären lassen</h3>
+              <h3 data-i18n="service1_title">Kompletten Vertragsbrief erklären lassen</h3>
               <p data-i18n="service1_text">
                 Ideal, wenn Sie den ganzen Vertragsbrief vollständig verstehen möchten.
               </p>
@@ -563,35 +564,35 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
         <div class="pad">
           <h2 class="sectionTitle" data-i18n="faq_title">Häufige Fragen zu Vertragsbriefen</h2>
           <p class="sectionSub" data-i18n="faq_sub">
-            Diese Fragen tauchen bei solchen Schreiben besonders oft auf:
+            Diese Fragen tauchen bei Vertragsbriefen besonders oft auf:
           </p>
 
           <div class="faqGrid">
             <div class="faqItem">
-              <h3 data-i18n="faq1_q">Ist ein Vertragsbrief wichtig?</h3>
+              <h3 data-i18n="faq1_q">Welche Angaben stehen in einem Vertragsbrief?</h3>
               <p data-i18n="faq1_a">
-                Ein Vertragsbrief sollte ernst genommen werden. Viele Menschen sind unsicher, weil Fristen, Änderungen oder Formulierungen oft kompliziert dargestellt werden.
+                Ein Vertragsbrief enthält häufig Angaben zu Vertragsart, Fristen, Änderungen, Kündigung, Verlängerung und geforderten Rückmeldungen.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="faq2_q">Sind Fristen in einem Vertragsbrief wichtig?</h3>
+              <h3 data-i18n="faq2_q">Was bedeuten Änderungen oder Kündigung?</h3>
               <p data-i18n="faq2_a">
-                Ja, Fristen sind oft besonders wichtig. BriefHelden hilft Ihnen, diese Angaben verständlich zu erkennen.
+                Im Schreiben steht oft, ob sich Bedingungen ändern, eine Kündigung ausgesprochen wird oder eine Verlängerung vorgesehen ist. Viele Menschen möchten diese Angaben zuerst verständlich erklärt bekommen.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="faq3_q">Was ist bei einem Vertragsbrief besonders wichtig?</h3>
+              <h3 data-i18n="faq3_q">Welche Punkte sind besonders wichtig?</h3>
               <p data-i18n="faq3_a">
-                Besonders wichtig sind Vertragsart, Fristen, Änderungen, Kündigungsmöglichkeiten, Verlängerungen und alle Hinweise dazu, was Sie tun sollen.
+                Besonders wichtig sind Vertragsart, Fristen, Änderungen, Kündigungsmöglichkeiten, Verlängerungen und alle Hinweise dazu, worum es im Schreiben geht.
               </p>
             </div>
 
             <div class="faqItem">
               <h3 data-i18n="faq4_q">Ist BriefHelden eine Rechtsberatung?</h3>
               <p data-i18n="faq4_a">
-                Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.
+                Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Erklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.
               </p>
             </div>
           </div>
@@ -609,7 +610,7 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
 
           <div class="faqGrid">
             <div class="faqItem">
-              <h3 data-i18n="tip1_title">Frist prüfen</h3>
+              <h3 data-i18n="tip1_title">Fristen ansehen</h3>
               <p data-i18n="tip1_text">
                 Schauen Sie, ob im Schreiben eine Frist, ein Termin oder eine Rückmeldung verlangt wird.
               </p>
@@ -632,10 +633,48 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
             <div class="faqItem">
               <h3 data-i18n="tip4_title">Inhalt verständlich machen</h3>
               <p data-i18n="tip4_text">
-                Wenn das Schreiben schwer verständlich ist, hilft eine einfache Erklärung oft sofort weiter.
+                Wenn Begriffe, Hinweise oder Angaben unklar wirken, hilft eine einfache Erklärung oft dabei, die enthaltenen Angaben besser zu erfassen.
               </p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div style="height:18px"></div>
+
+      <div class="moreLinks">
+        <h2 data-i18n="more_title">Weitere häufige Briefe verstehen</h2>
+
+        <div class="moreGrid">
+          <a class="moreCard" href="/kreditvertrag-verstehen.html">
+            <h3 data-i18n="more_1_title">Kreditvertrag verstehen</h3>
+            <p data-i18n="more_1_text">Kreditverträge klar und verständlich erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/bank-brief-verstehen.html">
+            <h3 data-i18n="more_2_title">Bank Brief verstehen</h3>
+            <p data-i18n="more_2_text">Bankschreiben einfach erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/versicherung-brief-verstehen.html">
+            <h3 data-i18n="more_3_title">Versicherung Brief verstehen</h3>
+            <p data-i18n="more_3_text">Versicherungsschreiben in einfacher Sprache erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/krankenkasse-brief-verstehen.html">
+            <h3 data-i18n="more_4_title">Krankenkasse Brief verstehen</h3>
+            <p data-i18n="more_4_text">Schreiben der Krankenkasse klar und verständlich erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/stromrechnung-verstehen.html">
+            <h3 data-i18n="more_5_title">Stromrechnung verstehen</h3>
+            <p data-i18n="more_5_text">Stromrechnungen einfach erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/gasrechnung-verstehen.html">
+            <h3 data-i18n="more_6_title">Gasrechnung verstehen</h3>
+            <p data-i18n="more_6_text">Gasrechnungen klar und verständlich erklärt.</p>
+          </a>
         </div>
       </div>
     </div>
@@ -643,7 +682,7 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
 
   <footer>
     <div class="footWrap">
-      <div>© 2026 BriefHelden – Alle Rechte vorbehalten</div>
+      <div data-i18n="foot_copy">© 2026 BriefHelden – Alle Rechte vorbehalten</div>
       <div class="footLinks">
         <a href="index.html" data-i18n="foot_home">Startseite</a>
         <a href="frage.html" data-i18n="foot_question">Frage stellen</a>
@@ -655,35 +694,28 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
     </div>
   </footer>
 
-  <div class="moreLinks">
-    <h2>Weitere häufige Briefe verstehen</h2>
-    <ul>
-      <li><a href="/kreditvertrag-verstehen.html">Kreditvertrag verstehen</a></li>
-      <li><a href="/bank-brief-verstehen.html">Bank Brief verstehen</a></li>
-      <li><a href="/versicherung-brief-verstehen.html">Versicherung Brief verstehen</a></li>
-      <li><a href="/krankenkasse-brief-verstehen.html">Krankenkasse Brief verstehen</a></li>
-      <li><a href="/stromrechnung-verstehen.html">Stromrechnung verstehen</a></li>
-      <li><a href="/gasrechnung-verstehen.html">Gasrechnung verstehen</a></li>
-    </ul>
-  </div>
-
   <script>
     const STRIPE_LINKS = {
-de: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
-en: "https://buy.stripe.com/fZubJ0dpXbMAbfpcIZ4sE01",
-tr: "https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
-ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
+      de: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
+      en: "https://buy.stripe.com/fZubJ0dpXbMAbfpcIZ4sE01",
+      tr: "https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
+      ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
     };
 
     const QUESTION_LINKS = {
-de: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
-en: "https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
-tr: "https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
-ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
+      de: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
+      en: "https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
+      tr: "https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
+      ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
     };
 
     const i18n = {
       de: {
+        pageTitle: "Vertragsbrief verstehen – einfach erklärt | BriefHelden",
+        metaDescription: "Vertragsbrief verständlich erklärt: BriefHelden erklärt Inhalt, Fristen, Änderungen, Kündigung und enthaltene Angaben klar, einfach und ohne komplizierte Fachsprache.",
+        ogTitle: "Vertragsbrief verstehen – einfach erklärt | BriefHelden",
+        ogDescription: "Vertragsbrief einfach erklärt. Verstehen Sie Fristen, Änderungen, Kündigung und wichtige Angaben schnell und verständlich.",
+
         nav_home: "Startseite",
         nav_question: "Frage stellen",
         nav_refund: "Widerruf",
@@ -692,7 +724,7 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_privacy: "Datenschutz",
 
         hero_title: "Vertragsbrief verstehen",
-        hero_sub: "Ein Vertragsbrief wirkt oft kompliziert und verunsichernd. BriefHelden erklärt Ihnen den Inhalt einfach, klar und verständlich.",
+        hero_sub: "Ein Vertragsbrief enthält oft wichtige Hinweise und Angaben. BriefHelden erklärt Inhalt, Fristen, Änderungen, Kündigung und enthaltene Angaben einfach und verständlich.",
         hero_cta: "Jetzt Vertragsbrief erklären lassen – 6,90 €",
         hero_question_cta: "Kurze Frage stellen – 1,49 €",
         meta_1: "Einfach erklärt",
@@ -700,20 +732,20 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         meta_3: "Vertraulich",
 
         intro_title: "Was ist ein Vertragsbrief?",
-        intro_text: "Ein Vertragsbrief ist ein Schreiben zu einem bestehenden oder neuen Vertrag. Oft geht es um Vertragsbedingungen, Änderungen, Fristen, Kündigung, Verlängerung oder eine Rückmeldung, die von Ihnen verlangt wird. Viele Menschen wissen nicht genau, was das Schreiben bedeutet und worauf sie achten sollten. Genau dabei hilft BriefHelden.",
+        intro_text: "Ein Vertragsbrief ist ein Schreiben zu einem bestehenden oder neuen Vertrag. Oft geht es um Vertragsbedingungen, Änderungen, Fristen, Kündigung, Verlängerung oder eine Rückmeldung, die von Ihnen verlangt wird. Darin kann auch stehen, ob sich Laufzeiten, Preise oder Bedingungen ändern. Viele Menschen möchten zuerst verstehen, welche Inhalte und Angaben im Schreiben stehen. Genau dabei hilft BriefHelden.",
 
         left_title: "Einfach erklärt",
         left_text_1: "In einem Vertragsbrief geht es häufig um Informationen zu einem Vertrag, um neue Bedingungen, eine Änderung, eine Bestätigung, eine Kündigung oder eine Verlängerung.",
         left_text_2: "Wichtig sind dabei vor allem: Um welchen Vertrag geht es? Welche Frist wird genannt? Was genau ändert sich? Müssen Sie etwas bestätigen oder beachten?",
-        left_text_3: "BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie das Schreiben besser einordnen können.",
+        left_text_3: "BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie den Vertragsbrief besser sprachlich verständlich einordnen können.",
 
         right_title: "So funktioniert es",
         right_li_1: "Vertragsbrief sicher hochladen",
         right_li_2: "Wir lesen den Inhalt und erklären ihn verständlich",
         right_li_3: "Sie erhalten die Erklärung per E-Mail",
-        right_li_4: "Keine Rechtsberatung – nur verständliche Texterklärung",
+        right_li_4: "Keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) – nur sprachliche Vereinfachung und verständliche Texterklärung ohne rechtliche Bewertung oder Handlungsempfehlung",
 
-        service1_title: "Komplettes Schreiben erklären lassen",
+        service1_title: "Kompletten Vertragsbrief erklären lassen",
         service1_text: "Ideal, wenn Sie den ganzen Vertragsbrief vollständig verstehen möchten.",
         service1_btn: "Jetzt für 6,90 € starten",
 
@@ -722,27 +754,42 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         service2_btn: "Jetzt für 1,49 € fragen",
 
         faq_title: "Häufige Fragen zu Vertragsbriefen",
-        faq_sub: "Diese Fragen tauchen bei solchen Schreiben besonders oft auf:",
-        faq1_q: "Ist ein Vertragsbrief wichtig?",
-        faq1_a: "Ein Vertragsbrief sollte ernst genommen werden. Viele Menschen sind unsicher, weil Fristen, Änderungen oder Formulierungen oft kompliziert dargestellt werden.",
-        faq2_q: "Sind Fristen in einem Vertragsbrief wichtig?",
-        faq2_a: "Ja, Fristen sind oft besonders wichtig. BriefHelden hilft Ihnen, diese Angaben verständlich zu erkennen.",
-        faq3_q: "Was ist bei einem Vertragsbrief besonders wichtig?",
-        faq3_a: "Besonders wichtig sind Vertragsart, Fristen, Änderungen, Kündigungsmöglichkeiten, Verlängerungen und alle Hinweise dazu, was Sie tun sollen.",
+        faq_sub: "Diese Fragen tauchen bei Vertragsbriefen besonders oft auf:",
+        faq1_q: "Welche Angaben stehen in einem Vertragsbrief?",
+        faq1_a: "Ein Vertragsbrief enthält häufig Angaben zu Vertragsart, Fristen, Änderungen, Kündigung, Verlängerung und geforderten Rückmeldungen.",
+        faq2_q: "Was bedeuten Änderungen oder Kündigung?",
+        faq2_a: "Im Schreiben steht oft, ob sich Bedingungen ändern, eine Kündigung ausgesprochen wird oder eine Verlängerung vorgesehen ist. Viele Menschen möchten diese Angaben zuerst verständlich erklärt bekommen.",
+        faq3_q: "Welche Punkte sind besonders wichtig?",
+        faq3_a: "Besonders wichtig sind Vertragsart, Fristen, Änderungen, Kündigungsmöglichkeiten, Verlängerungen und alle Hinweise dazu, worum es im Schreiben geht.",
         faq4_q: "Ist BriefHelden eine Rechtsberatung?",
-        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.",
+        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Erklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.",
 
         tip_title: "Worauf sollten Sie bei einem Vertragsbrief achten?",
         tip_sub: "Diese Punkte sind oft besonders wichtig:",
-        tip1_title: "Frist prüfen",
+        tip1_title: "Fristen ansehen",
         tip1_text: "Schauen Sie, ob im Schreiben eine Frist, ein Termin oder eine Rückmeldung verlangt wird.",
         tip2_title: "Änderungen ansehen",
         tip2_text: "Prüfen Sie, ob sich Bedingungen, Laufzeiten, Preise oder andere Punkte im Vertrag ändern sollen.",
         tip3_title: "Kündigung oder Verlängerung beachten",
         tip3_text: "Achten Sie darauf, ob es um Kündigung, automatische Verlängerung oder neue Vertragsbedingungen geht.",
         tip4_title: "Inhalt verständlich machen",
-        tip4_text: "Wenn das Schreiben schwer verständlich ist, hilft eine einfache Erklärung oft sofort weiter.",
+        tip4_text: "Wenn Begriffe, Hinweise oder Angaben unklar wirken, hilft eine einfache Erklärung oft dabei, die enthaltenen Angaben besser zu erfassen.",
 
+        more_title: "Weitere häufige Briefe verstehen",
+        more_1_title: "Kreditvertrag verstehen",
+        more_1_text: "Kreditverträge klar und verständlich erklärt.",
+        more_2_title: "Bank Brief verstehen",
+        more_2_text: "Bankschreiben einfach erklärt.",
+        more_3_title: "Versicherung Brief verstehen",
+        more_3_text: "Versicherungsschreiben in einfacher Sprache erklärt.",
+        more_4_title: "Krankenkasse Brief verstehen",
+        more_4_text: "Schreiben der Krankenkasse klar und verständlich erklärt.",
+        more_5_title: "Stromrechnung verstehen",
+        more_5_text: "Stromrechnungen einfach erklärt.",
+        more_6_title: "Gasrechnung verstehen",
+        more_6_text: "Gasrechnungen klar und verständlich erklärt.",
+
+        foot_copy: "© 2026 BriefHelden – Alle Rechte vorbehalten",
         foot_home: "Startseite",
         foot_question: "Frage stellen",
         foot_refund: "Widerruf",
@@ -752,6 +799,11 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
       },
 
       en: {
+        pageTitle: "Understand a contract letter – explained clearly | BriefHelden",
+        metaDescription: "Understand a contract letter easily: BriefHelden explains content, deadlines, changes, cancellation and included details clearly and in simple language.",
+        ogTitle: "Understand a contract letter – explained clearly | BriefHelden",
+        ogDescription: "Contract letter explained simply. Understand deadlines, changes, cancellation and important details quickly and clearly.",
+
         nav_home: "Home",
         nav_question: "Ask a question",
         nav_refund: "Withdrawal",
@@ -760,7 +812,7 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_privacy: "Privacy",
 
         hero_title: "Understand a contract letter",
-        hero_sub: "A contract letter often seems complicated and unsettling. BriefHelden explains the content simply, clearly and understandably.",
+        hero_sub: "A contract letter often contains important notices and details. BriefHelden explains content, deadlines, changes, cancellation and included details simply and clearly.",
         hero_cta: "Get contract letter explained now – €6.90",
         hero_question_cta: "Ask a short question – €1.49",
         meta_1: "Clearly explained",
@@ -768,20 +820,20 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         meta_3: "Confidential",
 
         intro_title: "What is a contract letter?",
-        intro_text: "A contract letter is a document relating to an existing or a new contract. It often concerns contract terms, changes, deadlines, cancellation, extension or a response required from you. Many people do not know exactly what the letter means and what they should pay attention to. That is exactly where BriefHelden helps.",
+        intro_text: "A contract letter is a document relating to an existing or a new contract. It often concerns contract terms, changes, deadlines, cancellation, extension or a response required from you. It may also state whether contract terms, durations, prices or conditions are changing. Many people first want to understand which contents and details are written in the document. That is exactly where BriefHelden helps.",
 
         left_title: "Simply explained",
         left_text_1: "A contract letter often contains information about a contract, new conditions, a change, a confirmation, a cancellation or an extension.",
         left_text_2: "Important points are: Which contract is it about? Which deadline is mentioned? What exactly changes? Do you have to confirm or pay attention to something?",
-        left_text_3: "BriefHelden explains the content in simple language so you can better understand the letter.",
+        left_text_3: "BriefHelden explains the content in simple language so you can better understand the contract letter.",
 
         right_title: "How it works",
         right_li_1: "Upload contract letter securely",
         right_li_2: "We read the content and explain it clearly",
         right_li_3: "You receive the explanation by email",
-        right_li_4: "No legal advice – plain-language explanation only",
+        right_li_4: "No legal advice within the meaning of the German Legal Services Act (RDG) — only linguistic simplification and a clear text explanation without legal assessment or recommendation for action",
 
-        service1_title: "Get the full document explained",
+        service1_title: "Get the full contract letter explained",
         service1_text: "Ideal if you want to fully understand the entire contract letter.",
         service1_btn: "Start now for €6.90",
 
@@ -790,27 +842,42 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         service2_btn: "Ask now for €1.49",
 
         faq_title: "Frequently asked questions about contract letters",
-        faq_sub: "These questions often come up with this kind of document:",
-        faq1_q: "Is a contract letter important?",
-        faq1_a: "A contract letter should be taken seriously. Many people are unsure because deadlines, changes or wording are often presented in a complicated way.",
-        faq2_q: "Are deadlines in a contract letter important?",
-        faq2_a: "Yes, deadlines are often especially important. BriefHelden helps you identify these details clearly.",
-        faq3_q: "What is especially important in a contract letter?",
-        faq3_a: "Especially important are the type of contract, deadlines, changes, cancellation options, extensions and all notes about what you are supposed to do.",
+        faq_sub: "These questions often come up with contract letters:",
+        faq1_q: "Which details are written in a contract letter?",
+        faq1_a: "A contract letter often contains details about the type of contract, deadlines, changes, cancellation, extension and requested responses.",
+        faq2_q: "What do changes or cancellation mean?",
+        faq2_a: "The document often states whether conditions are changing, a cancellation has been issued or an extension is planned. Many people want these details explained clearly first.",
+        faq3_q: "Which points are especially important?",
+        faq3_a: "Especially important are the type of contract, deadlines, changes, cancellation options, extensions and all notes about what the document is about.",
         faq4_q: "Is BriefHelden legal advice?",
-        faq4_a: "No. BriefHelden does not provide legal advice. You only receive a clear explanation of the content.",
+        faq4_a: "No. BriefHelden does not provide legal advice within the meaning of the German Legal Services Act (RDG). You receive only a clear explanation and linguistic simplification of your document’s content. There is no legal assessment, no individual review, and no binding recommendation for action.",
 
         tip_title: "What should you look for in a contract letter?",
         tip_sub: "These points are often especially important:",
-        tip1_title: "Check the deadline",
-        tip1_text: "Look whether the letter asks for a deadline, an appointment or a response.",
-        tip2_title: "Review the changes",
-        tip2_text: "Check whether conditions, terms, prices or other points in the contract are supposed to change.",
+        tip1_title: "Look at deadlines",
+        tip1_text: "Check whether the letter asks for a deadline, an appointment or a response.",
+        tip2_title: "Look at the changes",
+        tip2_text: "Check whether contract terms, durations, prices or other points are supposed to change.",
         tip3_title: "Watch cancellation or extension",
         tip3_text: "Pay attention to whether it concerns cancellation, automatic extension or new contract conditions.",
         tip4_title: "Make the content understandable",
-        tip4_text: "If the letter is difficult to understand, a simple explanation often helps immediately.",
+        tip4_text: "If terms, notices or details seem unclear, a simple explanation often helps you grasp the included details more easily.",
 
+        more_title: "Understand more common letters",
+        more_1_title: "Understand a loan agreement",
+        more_1_text: "Loan agreements explained clearly.",
+        more_2_title: "Understand a bank letter",
+        more_2_text: "Bank letters explained simply.",
+        more_3_title: "Understand an insurance letter",
+        more_3_text: "Insurance letters explained in simple language.",
+        more_4_title: "Understand a health insurance letter",
+        more_4_text: "Health insurance letters explained clearly.",
+        more_5_title: "Understand an electricity bill",
+        more_5_text: "Electricity bills explained simply.",
+        more_6_title: "Understand a gas bill",
+        more_6_text: "Gas bills explained clearly.",
+
+        foot_copy: "© 2026 BriefHelden – All rights reserved",
         foot_home: "Home",
         foot_question: "Ask a question",
         foot_refund: "Withdrawal",
@@ -820,6 +887,11 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
       },
 
       tr: {
+        pageTitle: "Sözleşme mektubunu anlayın – kolay açıklama | BriefHelden",
+        metaDescription: "Sözleşme mektubunu kolay anlayın: BriefHelden içerik, süreler, değişiklikler, iptal ve belgede yer alan bilgileri sade ve anlaşılır şekilde açıklar.",
+        ogTitle: "Sözleşme mektubunu anlayın – kolay açıklama | BriefHelden",
+        ogDescription: "Sözleşme mektubu basitçe açıklanır. Süreleri, değişiklikleri, iptali ve önemli bilgileri hızlı ve açık şekilde anlayın.",
+
         nav_home: "Ana Sayfa",
         nav_question: "Soru sor",
         nav_refund: "Cayma",
@@ -828,7 +900,7 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_privacy: "Gizlilik",
 
         hero_title: "Sözleşme mektubunu anlayın",
-        hero_sub: "Bir sözleşme mektubu çoğu zaman karmaşık ve endişe verici görünür. BriefHelden içeriği size basit, açık ve anlaşılır şekilde açıklar.",
+        hero_sub: "Bir sözleşme mektubu çoğu zaman önemli uyarılar ve bilgiler içerir. BriefHelden içeriği, süreleri, değişiklikleri, iptali ve yer alan bilgileri size basit ve açık şekilde açıklar.",
         hero_cta: "Sözleşme mektubunu şimdi açıklat – 6,90 €",
         hero_question_cta: "Kısa soru sor – 1,49 €",
         meta_1: "Basit açıklandı",
@@ -836,20 +908,20 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         meta_3: "Gizli",
 
         intro_title: "Sözleşme mektubu nedir?",
-        intro_text: "Sözleşme mektubu, mevcut veya yeni bir sözleşmeyle ilgili bir yazıdır. Çoğu zaman sözleşme şartları, değişiklikler, süreler, iptal, uzatma veya sizden istenen bir geri dönüş söz konusu olur. Birçok kişi bu yazının ne anlama geldiğini ve nelere dikkat etmesi gerektiğini tam bilmez. BriefHelden tam bu konuda yardımcı olur.",
+        intro_text: "Sözleşme mektubu, mevcut veya yeni bir sözleşmeyle ilgili bir yazıdır. Çoğu zaman sözleşme şartları, değişiklikler, süreler, iptal, uzatma veya sizden istenen bir geri dönüş söz konusu olur. Ayrıca sürelerin, fiyatların veya koşulların değişip değişmediği de yazabilir. Birçok kişi önce belgede hangi içeriklerin ve bilgilerin yer aldığını anlamak ister. BriefHelden tam bu konuda yardımcı olur.",
 
         left_title: "Basit açıklama",
         left_text_1: "Bir sözleşme mektubunda sıkça bir sözleşmeyle ilgili bilgiler, yeni şartlar, bir değişiklik, bir onay, iptal veya uzatma yer alır.",
         left_text_2: "Önemli noktalar şunlardır: Hangi sözleşme söz konusu? Hangi süre belirtilmiş? Tam olarak ne değişiyor? Bir şeyi onaylamanız veya dikkate almanız gerekiyor mu?",
-        left_text_3: "BriefHelden içeriği basit dille açıklar, böylece yazıyı daha iyi anlayabilirsiniz.",
+        left_text_3: "BriefHelden içeriği basit dille açıklar, böylece sözleşme mektubunu daha iyi anlayabilirsiniz.",
 
         right_title: "Nasıl çalışır",
         right_li_1: "Sözleşme mektubunu güvenli şekilde yükleyin",
         right_li_2: "İçeriği okuyup açık şekilde açıklıyoruz",
         right_li_3: "Açıklamayı e-posta ile alırsınız",
-        right_li_4: "Hukuki danışmanlık değil – sadece anlaşılır açıklama",
+        right_li_4: "Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık verilmez — yalnızca dilsel sadeleştirme ve hukuki değerlendirme ya da eylem tavsiyesi olmadan anlaşılır metin açıklaması sunulur",
 
-        service1_title: "Belgenin tamamını açıklat",
+        service1_title: "Sözleşme mektubunun tamamını açıklat",
         service1_text: "Sözleşme mektubunun tamamını anlamak istiyorsanız idealdir.",
         service1_btn: "Şimdi 6,90 € ile başla",
 
@@ -858,27 +930,42 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         service2_btn: "Şimdi 1,49 € ile sor",
 
         faq_title: "Sözleşme mektupları hakkında sık sorulan sorular",
-        faq_sub: "Bu tür yazılarda şu sorular sıkça ortaya çıkar:",
-        faq1_q: "Bir sözleşme mektubu önemli midir?",
-        faq1_a: "Bir sözleşme mektubu ciddiye alınmalıdır. Birçok kişi süreler, değişiklikler veya ifadeler karmaşık sunulduğu için emin olamaz.",
-        faq2_q: "Sözleşme mektubundaki süreler önemli midir?",
-        faq2_a: "Evet, süreler çoğu zaman özellikle önemlidir. BriefHelden bu bilgileri açık şekilde görmenize yardım eder.",
-        faq3_q: "Bir sözleşme mektubunda en önemli olan nedir?",
-        faq3_a: "Sözleşme türü, süreler, değişiklikler, iptal imkânları, uzatmalar ve ne yapmanız gerektiğine dair tüm bilgiler özellikle önemlidir.",
+        faq_sub: "Sözleşme mektuplarında şu sorular sıkça ortaya çıkar:",
+        faq1_q: "Bir sözleşme mektubunda hangi bilgiler yer alır?",
+        faq1_a: "Bir sözleşme mektubu çoğu zaman sözleşme türü, süreler, değişiklikler, iptal, uzatma ve istenen geri dönüşlerle ilgili bilgiler içerir.",
+        faq2_q: "Değişiklikler veya iptal ne anlama gelir?",
+        faq2_a: "Belgede çoğu zaman koşulların değişip değişmediği, bir iptal yapılıp yapılmadığı veya uzatma planlanıp planlanmadığı yazılır. Birçok kişi bu bilgilerin önce açık şekilde açıklanmasını ister.",
+        faq3_q: "Hangi noktalar özellikle önemlidir?",
+        faq3_a: "Özellikle sözleşme türü, süreler, değişiklikler, iptal imkânları, uzatmalar ve belgenin neyle ilgili olduğuna dair tüm bilgiler önemlidir.",
         faq4_q: "BriefHelden hukuki danışmanlık mı veriyor?",
-        faq4_a: "Hayır. BriefHelden hukuki danışmanlık vermez. Sadece içeriğin anlaşılır açıklamasını sunar.",
+        faq4_a: "Hayır. BriefHelden, Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık vermez. Yalnızca belgenizin içeriğinin anlaşılır açıklamasını ve dilsel sadeleştirmesini alırsınız. Hukuki değerlendirme, bireysel inceleme veya bağlayıcı bir hareket tavsiyesi yapılmaz.",
 
         tip_title: "Bir sözleşme mektubunda nelere dikkat etmelisiniz?",
         tip_sub: "Bu noktalar genelde özellikle önemlidir:",
-        tip1_title: "Süreyi kontrol edin",
+        tip1_title: "Sürelere bakın",
         tip1_text: "Yazıda bir süre, randevu veya geri dönüş istenip istenmediğine bakın.",
-        tip2_title: "Değişiklikleri inceleyin",
-        tip2_text: "Sözleşmede şartların, sürelerin, fiyatların veya başka noktaların değişip değişmeyeceğini kontrol edin.",
+        tip2_title: "Değişikliklere bakın",
+        tip2_text: "Koşulların, sürelerin, fiyatların veya başka noktaların değişip değişmeyeceğini kontrol edin.",
         tip3_title: "İptal veya uzatmayı dikkate alın",
         tip3_text: "İptal, otomatik uzatma veya yeni sözleşme şartlarının söz konusu olup olmadığına dikkat edin.",
         tip4_title: "İçeriği anlaşılır hale getirin",
-        tip4_text: "Yazıyı anlamak zorsa, basit bir açıklama çoğu zaman hemen yardımcı olur.",
+        tip4_text: "Terimler, uyarılar veya bilgiler belirsiz görünüyorsa, basit bir açıklama çoğu zaman yer alan bilgileri daha iyi kavramanıza yardımcı olur.",
 
+        more_title: "Diğer sık görülen mektupları anlayın",
+        more_1_title: "Kredi sözleşmesini anla",
+        more_1_text: "Kredi sözleşmeleri açık şekilde açıklanır.",
+        more_2_title: "Banka mektubunu anla",
+        more_2_text: "Banka yazıları basit şekilde açıklanır.",
+        more_3_title: "Sigorta mektubunu anla",
+        more_3_text: "Sigorta yazıları basit dille açıklanır.",
+        more_4_title: "Sağlık sigortası mektubunu anla",
+        more_4_text: "Sağlık sigortası yazıları açık şekilde açıklanır.",
+        more_5_title: "Elektrik faturasını anla",
+        more_5_text: "Elektrik faturaları basit şekilde açıklanır.",
+        more_6_title: "Gaz faturasını anla",
+        more_6_text: "Gaz faturaları açık şekilde açıklanır.",
+
+        foot_copy: "© 2026 BriefHelden – Tüm hakları saklıdır",
         foot_home: "Ana Sayfa",
         foot_question: "Soru sor",
         foot_refund: "Cayma",
@@ -888,6 +975,11 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
       },
 
       ru: {
+        pageTitle: "Понять письмо по договору – простое объяснение | BriefHelden",
+        metaDescription: "Легко понять письмо по договору: BriefHelden просто и понятно объясняет содержание, сроки, изменения, расторжение и указанные в документе сведения.",
+        ogTitle: "Понять письмо по договору – простое объяснение | BriefHelden",
+        ogDescription: "Письмо по договору объясняется простым языком. Понятно разберитесь в сроках, изменениях, расторжении и важных сведениях.",
+
         nav_home: "Главная",
         nav_question: "Задать вопрос",
         nav_refund: "Отказ",
@@ -896,7 +988,7 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_privacy: "Конфиденциальность",
 
         hero_title: "Понять письмо по договору",
-        hero_sub: "Письмо по договору часто кажется сложным и тревожным. BriefHelden объяснит содержание просто, ясно и понятно.",
+        hero_sub: "Письмо по договору часто содержит важные указания и сведения. BriefHelden объяснит содержание, сроки, изменения, расторжение и указанные данные просто и ясно.",
         hero_cta: "Объяснить письмо по договору – 6,90 €",
         hero_question_cta: "Задать короткий вопрос – 1,49 €",
         meta_1: "Просто объяснено",
@@ -904,20 +996,20 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         meta_3: "Конфиденциально",
 
         intro_title: "Что такое письмо по договору?",
-        intro_text: "Письмо по договору — это документ, связанный с действующим или новым договором. Часто речь идёт об условиях договора, изменениях, сроках, расторжении, продлении или ответе, который требуется от вас. Многие люди не понимают, что означает это письмо и на что следует обратить внимание. Именно здесь помогает BriefHelden.",
+        intro_text: "Письмо по договору — это документ, связанный с действующим или новым договором. Часто речь идёт об условиях договора, изменениях, сроках, расторжении, продлении или ответе, который требуется от вас. В нём также может быть указано, меняются ли сроки, цены или условия. Многие люди сначала хотят понять, какие именно сведения и данные указаны в документе. Именно здесь помогает BriefHelden.",
 
         left_title: "Просто объясняем",
         left_text_1: "В письме по договору часто содержится информация о договоре, новых условиях, изменении, подтверждении, расторжении или продлении.",
         left_text_2: "Особенно важно следующее: О каком договоре идёт речь? Какой срок указан? Что именно меняется? Нужно ли вам что-то подтвердить или учесть?",
-        left_text_3: "BriefHelden объясняет содержание простым языком, чтобы вам было легче понять письмо.",
+        left_text_3: "BriefHelden объясняет содержание простым языком, чтобы вам было легче понять письмо по договору.",
 
         right_title: "Как это работает",
         right_li_1: "Безопасно загрузите письмо по договору",
         right_li_2: "Мы читаем содержание и понятно объясняем его",
         right_li_3: "Вы получаете объяснение по e-mail",
-        right_li_4: "Не юридическая консультация – только понятное объяснение",
+        right_li_4: "Это не юридическая консультация в смысле немецкого Закона о юридических услугах (RDG) — только языковое упрощение и понятное текстовое объяснение без правовой оценки и без рекомендаций к действиям",
 
-        service1_title: "Получить полное объяснение документа",
+        service1_title: "Получить полное объяснение письма по договору",
         service1_text: "Идеально, если вы хотите полностью понять всё письмо по договору.",
         service1_btn: "Начать за 6,90 €",
 
@@ -926,27 +1018,42 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         service2_btn: "Спросить за 1,49 €",
 
         faq_title: "Частые вопросы о письмах по договору",
-        faq_sub: "Эти вопросы особенно часто возникают по таким документам:",
-        faq1_q: "Письмо по договору важно?",
-        faq1_a: "Письмо по договору следует воспринимать серьёзно. Многие люди не уверены, потому что сроки, изменения или формулировки часто изложены сложно.",
-        faq2_q: "Важны ли сроки в письме по договору?",
-        faq2_a: "Да, сроки часто особенно важны. BriefHelden помогает вам увидеть эти данные понятнее.",
-        faq3_q: "Что особенно важно в письме по договору?",
-        faq3_a: "Особенно важны вид договора, сроки, изменения, возможности расторжения, продления и все указания о том, что вам нужно сделать.",
+        faq_sub: "Эти вопросы часто возникают по письмам по договору:",
+        faq1_q: "Какие сведения содержатся в письме по договору?",
+        faq1_a: "Письмо по договору часто содержит сведения о виде договора, сроках, изменениях, расторжении, продлении и требуемых ответах.",
+        faq2_q: "Что означают изменения или расторжение?",
+        faq2_a: "В документе часто указано, меняются ли условия, произведено ли расторжение или планируется ли продление. Многие люди хотят сначала получить понятное объяснение этих сведений.",
+        faq3_q: "Какие пункты особенно важны?",
+        faq3_a: "Особенно важны вид договора, сроки, изменения, возможности расторжения, продления и все указания о том, о чём идёт речь в документе.",
         faq4_q: "BriefHelden — это юридическая консультация?",
-        faq4_a: "Нет. BriefHelden не даёт юридических консультаций. Вы получаете только понятное объяснение содержания.",
+        faq4_a: "Нет. BriefHelden не оказывает юридических консультаций в смысле немецкого Закона о юридических услугах (RDG). Вы получаете только понятное объяснение и языковое упрощение содержания вашего документа. Юридическая оценка, индивидуальная проверка и обязательные рекомендации к действиям не предоставляются.",
 
         tip_title: "На что стоит обратить внимание в письме по договору?",
         tip_sub: "Эти пункты часто особенно важны:",
-        tip1_title: "Проверьте срок",
+        tip1_title: "Посмотрите на сроки",
         tip1_text: "Посмотрите, требует ли письмо соблюдения срока, даты или обратной связи.",
         tip2_title: "Изучите изменения",
-        tip2_text: "Проверьте, должны ли измениться условия, сроки, цены или другие пункты договора.",
+        tip2_text: "Проверьте, должны ли измениться условия, сроки, цены или другие пункты.",
         tip3_title: "Обратите внимание на расторжение или продление",
         tip3_text: "Посмотрите, касается ли письмо расторжения, автоматического продления или новых условий договора.",
         tip4_title: "Сделайте содержание понятным",
-        tip4_text: "Если письмо трудно понять, простое объяснение часто сразу помогает.",
+        tip4_text: "Если термины, указания или сведения кажутся неясными, простое объяснение часто помогает легче воспринять содержащиеся в нём данные.",
 
+        more_title: "Другие часто встречающиеся письма",
+        more_1_title: "Понять кредитный договор",
+        more_1_text: "Кредитные договоры объяснены понятно.",
+        more_2_title: "Понять письмо из банка",
+        more_2_text: "Письма из банка объяснены просто.",
+        more_3_title: "Понять письмо от страховой компании",
+        more_3_text: "Письма от страховой компании объяснены простым языком.",
+        more_4_title: "Понять письмо от больничной кассы",
+        more_4_text: "Письма от больничной кассы объяснены понятно.",
+        more_5_title: "Понять счёт за электричество",
+        more_5_text: "Счета за электричество объяснены просто.",
+        more_6_title: "Понять счёт за газ",
+        more_6_text: "Счета за газ объяснены понятно.",
+
+        foot_copy: "© 2026 BriefHelden – Все права защищены",
         foot_home: "Главная",
         foot_question: "Задать вопрос",
         foot_refund: "Отказ",
@@ -957,8 +1064,8 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
     };
 
     function updateLinks(lang){
-const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
-const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
+      const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
+      const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
 
       const stripeBtn = document.getElementById("stripeBtn");
       const servicePrimaryBtn = document.getElementById("servicePrimaryBtn");
@@ -971,9 +1078,24 @@ const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
       if(serviceQuestionBtn) serviceQuestionBtn.href = questionLink;
     }
 
+    function updateMeta(lang){
+      const dict = i18n[lang] || i18n.de;
+      document.title = dict.pageTitle;
+
+      const description = document.querySelector('meta[name="description"]');
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      const ogDescription = document.querySelector('meta[property="og:description"]');
+
+      if(description) description.setAttribute("content", dict.metaDescription);
+      if(ogTitle) ogTitle.setAttribute("content", dict.ogTitle);
+      if(ogDescription) ogDescription.setAttribute("content", dict.ogDescription);
+    }
+
     function applyLang(lang){
-const dict = i18n[lang] || i18n.de;
-      document.documentElement.lang = lang;
+      const currentLang = i18n[lang] ? lang : "de";
+      const dict = i18n[currentLang];
+
+      document.documentElement.lang = currentLang;
 
       document.querySelectorAll("[data-i18n]").forEach((el) => {
         const key = el.getAttribute("data-i18n");
@@ -982,8 +1104,9 @@ const dict = i18n[lang] || i18n.de;
         }
       });
 
-      updateLinks(lang);
-      localStorage.setItem("briefhelden_lang", lang);
+      updateMeta(currentLang);
+      updateLinks(currentLang);
+      localStorage.setItem("briefhelden_lang", currentLang);
     }
 
     const select = document.getElementById("langSelect");
