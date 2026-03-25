@@ -6,20 +6,23 @@
   <title>Versicherung Brief verstehen – einfach erklärt | BriefHelden</title>
   <meta
     name="description"
-    content="Versicherung Brief einfach verstehen: BriefHelden erklärt Inhalt, Fristen, Beiträge, Leistungen und worauf Sie achten sollten – verständlich, klar und ohne komplizierte Fachsprache."
+    content="Versicherung Brief verständlich erklärt: BriefHelden erklärt Inhalt, Fristen, Beiträge, Leistungen und enthaltene Angaben klar, einfach und ohne komplizierte Fachsprache."
   />
   <meta name="robots" content="index, follow" />
-<link rel="canonical" href="https://www.briefhelden-service.de/versicherung-brief-verstehen.html" />
+  <link rel="canonical" href="https://www.briefhelden-service.de/versicherung-brief-verstehen.html" />
 
   <meta property="og:title" content="Versicherung Brief verstehen – einfach erklärt | BriefHelden" />
   <meta
     property="og:description"
-    content="Versicherung Brief einfach erklärt. Verstehen Sie Inhalt, Fristen, Beiträge und die wichtigsten Punkte schnell und verständlich."
+    content="Versicherung Brief einfach erklärt. Verstehen Sie Inhalt, Fristen, Beiträge und wichtige Angaben schnell und verständlich."
   />
   <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.briefhelden-service.de/versicherung-brief-verstehen.html" />
+  <meta property="og:url" content="https://www.briefhelden-service.de/versicherung-brief-verstehen.html" />
+  <meta property="og:image" content="https://www.briefhelden-service.de/og-image.jpg" />
+  <meta property="og:site_name" content="BriefHelden" />
+  <meta name="theme-color" content="#0b1220" />
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -104,6 +107,7 @@
         linear-gradient(180deg, rgba(55,120,255,.9), rgba(20,70,190,.9));
       box-shadow:0 10px 18px rgba(0,0,0,.18);
       position:relative;
+      flex:0 0 auto;
     }
 
     .brand .logo:after{
@@ -171,7 +175,7 @@
       padding:68px 18px 40px;
       background:
         linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.58)),
-url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=2200&q=60");
+        url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=2200&q=60");
       background-size:cover;
       background-position:center;
     }
@@ -263,7 +267,8 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
     .pad{padding:22px}
 
     .headline,
-    .sectionTitle{
+    .sectionTitle,
+    .moreLinks h2{
       text-align:center;
       margin:0 0 10px;
       font-weight:950;
@@ -288,7 +293,8 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
     }
 
     .infoCard,
-    .faqItem{
+    .faqItem,
+    .moreCard{
       border-radius:var(--radius-lg);
       border:1px solid rgba(255,255,255,.55);
       background:rgba(255,255,255,.20);
@@ -296,20 +302,24 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
     }
 
     .infoCard h3,
-    .faqItem h3{
+    .faqItem h3,
+    .moreCard h3{
       margin:0 0 10px;
       font-size:22px;
       font-weight:950;
+      line-height:1.25;
     }
 
-    .faqItem h3{
+    .faqItem h3,
+    .moreCard h3{
       font-size:18px;
       margin-bottom:8px;
     }
 
     .infoCard p,
     .infoCard li,
-    .faqItem p{
+    .faqItem p,
+    .moreCard p{
       color:rgba(11,18,32,.76);
       line-height:1.65;
       font-weight:700;
@@ -323,7 +333,8 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       padding-left:18px;
     }
 
-    .faqGrid{
+    .faqGrid,
+    .moreGrid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:14px;
@@ -348,6 +359,7 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
       margin:0 0 8px;
       font-size:20px;
       font-weight:950;
+      line-height:1.3;
     }
 
     .serviceMini .box p{
@@ -374,6 +386,22 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
 
     .miniBtn.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
     .miniBtn.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
+
+    .moreLinks{
+      max-width:var(--max);
+      margin:28px auto 0;
+      padding:0 18px 30px;
+    }
+
+    .moreCard{
+      display:block;
+      transition:transform .18s ease, background .18s ease;
+    }
+
+    .moreCard:hover{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,.30);
+    }
 
     footer{
       margin-top:18px;
@@ -404,38 +432,11 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
     .footLinks a{color:rgba(255,255,255,.80)}
     .footLinks a:hover{color:#fff}
 
-    .moreLinks{
-      max-width:var(--max);
-      margin:28px auto 0;
-      padding:0 18px 30px;
-    }
-
-    .moreLinks h2{
-      margin:0 0 14px;
-      font-size:26px;
-      font-weight:950;
-      color:#0b1220;
-    }
-
-    .moreLinks ul{
-      margin:0;
-      padding-left:20px;
-    }
-
-    .moreLinks li{
-      margin:8px 0;
-      font-weight:700;
-      color:rgba(11,18,32,.82);
-    }
-
-    .moreLinks a:hover{
-      text-decoration:underline;
-    }
-
     @media (max-width:900px){
       nav.links{display:none}
       .grid2,
       .faqGrid,
+      .moreGrid,
       .serviceMini{grid-template-columns:1fr}
       .cta{min-width:92vw}
       .miniBtn{min-width:100%}
@@ -474,7 +475,7 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
     <div class="wrap">
       <h1 data-i18n="hero_title">Versicherung Brief verstehen</h1>
       <p data-i18n="hero_sub">
-        Ein Versicherung Brief wirkt oft kompliziert und verunsichernd. BriefHelden erklärt Ihnen den Inhalt einfach, klar und verständlich.
+        Ein Versicherung Brief enthält oft wichtige Hinweise und Angaben. BriefHelden erklärt Inhalt, Fristen, Beiträge, Leistungen und enthaltene Angaben einfach und verständlich.
       </p>
 
       <div class="ctaGroup">
@@ -503,7 +504,7 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
         <div class="pad">
           <h2 class="headline" data-i18n="intro_title">Was ist ein Versicherung Brief?</h2>
           <p class="lead" data-i18n="intro_text">
-            Ein Versicherung Brief ist ein Schreiben Ihrer Versicherung, in dem es oft um Beiträge, Verträge, Leistungen, Änderungen, Fristen oder Rückfragen geht. Viele Menschen wissen nicht genau, was das Schreiben bedeutet, ob sie reagieren müssen und worauf sie achten sollten. Genau dabei hilft BriefHelden.
+            Ein Versicherung Brief ist ein Schreiben Ihrer Versicherung, in dem es oft um Beiträge, Verträge, Leistungen, Änderungen, Fristen oder Rückfragen geht. Darin kann auch stehen, ob Unterlagen angefordert werden, sich Beiträge ändern oder Leistungen geprüft werden. Viele Menschen möchten zuerst verstehen, welche Inhalte und Angaben im Schreiben stehen. Genau dabei hilft BriefHelden.
           </p>
 
           <div class="grid2">
@@ -516,7 +517,7 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
                 Wichtig sind dabei vor allem: Was genau möchte die Versicherung? Welche Frist wird genannt? Geht es um Geld, Unterlagen, eine Leistung oder eine Vertragsänderung?
               </p>
               <p data-i18n="left_text_3">
-                BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie das Schreiben besser einordnen können.
+                BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie den Versicherung Brief besser sprachlich verständlich einordnen können.
               </p>
             </div>
 
@@ -526,14 +527,14 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
                 <li data-i18n="right_li_1">Versicherung Brief sicher hochladen</li>
                 <li data-i18n="right_li_2">Wir lesen den Inhalt und erklären ihn verständlich</li>
                 <li data-i18n="right_li_3">Sie erhalten die Erklärung per E-Mail</li>
-                <li data-i18n="right_li_4">Keine Rechtsberatung – nur verständliche Texterklärung</li>
+                <li data-i18n="right_li_4">Keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) – nur sprachliche Vereinfachung und verständliche Texterklärung ohne rechtliche Bewertung oder Handlungsempfehlung</li>
               </ul>
             </div>
           </div>
 
           <div class="serviceMini">
             <div class="box">
-              <h3 data-i18n="service1_title">Komplettes Schreiben erklären lassen</h3>
+              <h3 data-i18n="service1_title">Kompletten Versicherung Brief erklären lassen</h3>
               <p data-i18n="service1_text">
                 Ideal, wenn Sie den ganzen Versicherung Brief vollständig verstehen möchten.
               </p>
@@ -563,35 +564,35 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
         <div class="pad">
           <h2 class="sectionTitle" data-i18n="faq_title">Häufige Fragen zu Versicherung Briefen</h2>
           <p class="sectionSub" data-i18n="faq_sub">
-            Diese Fragen tauchen bei solchen Schreiben besonders oft auf:
+            Diese Fragen tauchen bei Versicherung Briefen besonders oft auf:
           </p>
 
           <div class="faqGrid">
             <div class="faqItem">
-              <h3 data-i18n="faq1_q">Ist ein Versicherung Brief wichtig?</h3>
+              <h3 data-i18n="faq1_q">Welche Angaben stehen in einem Versicherung Brief?</h3>
               <p data-i18n="faq1_a">
-                Ein Versicherung Brief sollte ernst genommen werden. Viele Menschen sind unsicher, weil Fristen, Leistungen, Beiträge oder Hinweise oft kompliziert formuliert sind.
+                Ein Versicherung Brief enthält häufig Angaben zu Beiträgen, Leistungen, Fristen, Verträgen, Änderungen und angeforderten Unterlagen.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="faq2_q">Sind Fristen in einem Versicherung Brief wichtig?</h3>
+              <h3 data-i18n="faq2_q">Was bedeuten Beiträge oder Leistungen?</h3>
               <p data-i18n="faq2_a">
-                Ja, Fristen sind oft besonders wichtig. BriefHelden hilft Ihnen, diese Angaben verständlich zu erkennen.
+                Im Schreiben steht oft, ob es um Ihren Beitrag, eine Leistung, eine Rückfrage oder eine Änderung geht. Viele Menschen möchten diese Angaben zuerst verständlich erklärt bekommen.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="faq3_q">Was ist bei einem Versicherung Brief besonders wichtig?</h3>
+              <h3 data-i18n="faq3_q">Welche Punkte sind besonders wichtig?</h3>
               <p data-i18n="faq3_a">
-                Besonders wichtig sind Fristen, Beiträge, Leistungen, angeforderte Unterlagen und alle Hinweise dazu, was Sie tun sollen.
+                Besonders wichtig sind Fristen, Beiträge, Leistungen, angeforderte Unterlagen und alle Hinweise dazu, worum es im Schreiben geht.
               </p>
             </div>
 
             <div class="faqItem">
               <h3 data-i18n="faq4_q">Ist BriefHelden eine Rechtsberatung?</h3>
               <p data-i18n="faq4_a">
-                Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.
+                Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Erklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.
               </p>
             </div>
           </div>
@@ -609,7 +610,7 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
 
           <div class="faqGrid">
             <div class="faqItem">
-              <h3 data-i18n="tip1_title">Frist prüfen</h3>
+              <h3 data-i18n="tip1_title">Fristen ansehen</h3>
               <p data-i18n="tip1_text">
                 Schauen Sie, ob im Schreiben eine Frist, ein Termin oder eine Rückmeldung verlangt wird.
               </p>
@@ -632,10 +633,48 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
             <div class="faqItem">
               <h3 data-i18n="tip4_title">Inhalt verständlich machen</h3>
               <p data-i18n="tip4_text">
-                Wenn das Schreiben schwer verständlich ist, hilft eine einfache Erklärung oft sofort weiter.
+                Wenn Begriffe, Hinweise oder Angaben unklar wirken, hilft eine einfache Erklärung oft dabei, die enthaltenen Angaben besser zu erfassen.
               </p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div style="height:18px"></div>
+
+      <div class="moreLinks">
+        <h2 data-i18n="more_title">Weitere häufige Briefe verstehen</h2>
+
+        <div class="moreGrid">
+          <a class="moreCard" href="/krankenkasse-brief-verstehen.html">
+            <h3 data-i18n="more_1_title">Krankenkasse Brief verstehen</h3>
+            <p data-i18n="more_1_text">Schreiben der Krankenkasse klar und verständlich erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/bussgeldbescheid-verstehen.html">
+            <h3 data-i18n="more_2_title">Bußgeldbescheid verstehen</h3>
+            <p data-i18n="more_2_text">Bußgeldbescheide einfach erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/nebenkostenabrechnung-verstehen.html">
+            <h3 data-i18n="more_3_title">Nebenkostenabrechnung verstehen</h3>
+            <p data-i18n="more_3_text">Nebenkostenabrechnungen in einfacher Sprache erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/stromrechnung-verstehen.html">
+            <h3 data-i18n="more_4_title">Stromrechnung verstehen</h3>
+            <p data-i18n="more_4_text">Stromrechnungen klar und verständlich erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/gasrechnung-verstehen.html">
+            <h3 data-i18n="more_5_title">Gasrechnung verstehen</h3>
+            <p data-i18n="more_5_text">Gasrechnungen einfach erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/bank-brief-verstehen.html">
+            <h3 data-i18n="more_6_title">Bank Brief verstehen</h3>
+            <p data-i18n="more_6_text">Bankschreiben klar und verständlich erklärt.</p>
+          </a>
         </div>
       </div>
     </div>
@@ -643,7 +682,7 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
 
   <footer>
     <div class="footWrap">
-      <div>© 2026 BriefHelden – Alle Rechte vorbehalten</div>
+      <div data-i18n="foot_copy">© 2026 BriefHelden – Alle Rechte vorbehalten</div>
       <div class="footLinks">
         <a href="index.html" data-i18n="foot_home">Startseite</a>
         <a href="frage.html" data-i18n="foot_question">Frage stellen</a>
@@ -655,35 +694,28 @@ url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fi
     </div>
   </footer>
 
-  <div class="moreLinks">
-    <h2>Weitere häufige Briefe verstehen</h2>
-    <ul>
-      <li><a href="/krankenkasse-brief-verstehen.html">Krankenkasse Brief verstehen</a></li>
-      <li><a href="/bussgeldbescheid-verstehen.html">Bußgeldbescheid verstehen</a></li>
-      <li><a href="/nebenkostenabrechnung-verstehen.html">Nebenkostenabrechnung verstehen</a></li>
-      <li><a href="/stromrechnung-verstehen.html">Stromrechnung verstehen</a></li>
-      <li><a href="/gasrechnung-verstehen.html">Gasrechnung verstehen</a></li>
-      <li><a href="/bank-brief-verstehen.html">Bank Brief verstehen</a></li>
-    </ul>
-  </div>
-
   <script>
     const STRIPE_LINKS = {
-de: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
-en: "https://buy.stripe.com/fZubJ0dpXbMAbfpcIZ4sE01",
-tr: "https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
-ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
+      de: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
+      en: "https://buy.stripe.com/fZubJ0dpXbMAbfpcIZ4sE01",
+      tr: "https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
+      ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
     };
 
     const QUESTION_LINKS = {
-de: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
-en: "https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
-tr: "https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
-ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
+      de: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
+      en: "https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
+      tr: "https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
+      ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
     };
 
     const i18n = {
       de: {
+        pageTitle: "Versicherung Brief verstehen – einfach erklärt | BriefHelden",
+        metaDescription: "Versicherung Brief verständlich erklärt: BriefHelden erklärt Inhalt, Fristen, Beiträge, Leistungen und enthaltene Angaben klar, einfach und ohne komplizierte Fachsprache.",
+        ogTitle: "Versicherung Brief verstehen – einfach erklärt | BriefHelden",
+        ogDescription: "Versicherung Brief einfach erklärt. Verstehen Sie Inhalt, Fristen, Beiträge und wichtige Angaben schnell und verständlich.",
+
         nav_home: "Startseite",
         nav_question: "Frage stellen",
         nav_refund: "Widerruf",
@@ -692,7 +724,7 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_privacy: "Datenschutz",
 
         hero_title: "Versicherung Brief verstehen",
-        hero_sub: "Ein Versicherung Brief wirkt oft kompliziert und verunsichernd. BriefHelden erklärt Ihnen den Inhalt einfach, klar und verständlich.",
+        hero_sub: "Ein Versicherung Brief enthält oft wichtige Hinweise und Angaben. BriefHelden erklärt Inhalt, Fristen, Beiträge, Leistungen und enthaltene Angaben einfach und verständlich.",
         hero_cta: "Jetzt Versicherung Brief erklären lassen – 6,90 €",
         hero_question_cta: "Kurze Frage stellen – 1,49 €",
         meta_1: "Einfach erklärt",
@@ -700,20 +732,20 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         meta_3: "Vertraulich",
 
         intro_title: "Was ist ein Versicherung Brief?",
-        intro_text: "Ein Versicherung Brief ist ein Schreiben Ihrer Versicherung, in dem es oft um Beiträge, Verträge, Leistungen, Änderungen, Fristen oder Rückfragen geht. Viele Menschen wissen nicht genau, was das Schreiben bedeutet, ob sie reagieren müssen und worauf sie achten sollten. Genau dabei hilft BriefHelden.",
+        intro_text: "Ein Versicherung Brief ist ein Schreiben Ihrer Versicherung, in dem es oft um Beiträge, Verträge, Leistungen, Änderungen, Fristen oder Rückfragen geht. Darin kann auch stehen, ob Unterlagen angefordert werden, sich Beiträge ändern oder Leistungen geprüft werden. Viele Menschen möchten zuerst verstehen, welche Inhalte und Angaben im Schreiben stehen. Genau dabei hilft BriefHelden.",
 
         left_title: "Einfach erklärt",
         left_text_1: "In einem Versicherung Brief geht es häufig um eine Information zu Ihrem Vertrag, um Beiträge, eine Leistung, eine Schadenssache oder um eine Rückfrage der Versicherung.",
         left_text_2: "Wichtig sind dabei vor allem: Was genau möchte die Versicherung? Welche Frist wird genannt? Geht es um Geld, Unterlagen, eine Leistung oder eine Vertragsänderung?",
-        left_text_3: "BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie das Schreiben besser einordnen können.",
+        left_text_3: "BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie den Versicherung Brief besser sprachlich verständlich einordnen können.",
 
         right_title: "So funktioniert es",
         right_li_1: "Versicherung Brief sicher hochladen",
         right_li_2: "Wir lesen den Inhalt und erklären ihn verständlich",
         right_li_3: "Sie erhalten die Erklärung per E-Mail",
-        right_li_4: "Keine Rechtsberatung – nur verständliche Texterklärung",
+        right_li_4: "Keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) – nur sprachliche Vereinfachung und verständliche Texterklärung ohne rechtliche Bewertung oder Handlungsempfehlung",
 
-        service1_title: "Komplettes Schreiben erklären lassen",
+        service1_title: "Kompletten Versicherung Brief erklären lassen",
         service1_text: "Ideal, wenn Sie den ganzen Versicherung Brief vollständig verstehen möchten.",
         service1_btn: "Jetzt für 6,90 € starten",
 
@@ -722,27 +754,42 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         service2_btn: "Jetzt für 1,49 € fragen",
 
         faq_title: "Häufige Fragen zu Versicherung Briefen",
-        faq_sub: "Diese Fragen tauchen bei solchen Schreiben besonders oft auf:",
-        faq1_q: "Ist ein Versicherung Brief wichtig?",
-        faq1_a: "Ein Versicherung Brief sollte ernst genommen werden. Viele Menschen sind unsicher, weil Fristen, Leistungen, Beiträge oder Hinweise oft kompliziert formuliert sind.",
-        faq2_q: "Sind Fristen in einem Versicherung Brief wichtig?",
-        faq2_a: "Ja, Fristen sind oft besonders wichtig. BriefHelden hilft Ihnen, diese Angaben verständlich zu erkennen.",
-        faq3_q: "Was ist bei einem Versicherung Brief besonders wichtig?",
-        faq3_a: "Besonders wichtig sind Fristen, Beiträge, Leistungen, angeforderte Unterlagen und alle Hinweise dazu, was Sie tun sollen.",
+        faq_sub: "Diese Fragen tauchen bei Versicherung Briefen besonders oft auf:",
+        faq1_q: "Welche Angaben stehen in einem Versicherung Brief?",
+        faq1_a: "Ein Versicherung Brief enthält häufig Angaben zu Beiträgen, Leistungen, Fristen, Verträgen, Änderungen und angeforderten Unterlagen.",
+        faq2_q: "Was bedeuten Beiträge oder Leistungen?",
+        faq2_a: "Im Schreiben steht oft, ob es um Ihren Beitrag, eine Leistung, eine Rückfrage oder eine Änderung geht. Viele Menschen möchten diese Angaben zuerst verständlich erklärt bekommen.",
+        faq3_q: "Welche Punkte sind besonders wichtig?",
+        faq3_a: "Besonders wichtig sind Fristen, Beiträge, Leistungen, angeforderte Unterlagen und alle Hinweise dazu, worum es im Schreiben geht.",
         faq4_q: "Ist BriefHelden eine Rechtsberatung?",
-        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.",
+        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Erklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.",
 
         tip_title: "Worauf sollten Sie bei einem Versicherung Brief achten?",
         tip_sub: "Diese Punkte sind oft besonders wichtig:",
-        tip1_title: "Frist prüfen",
+        tip1_title: "Fristen ansehen",
         tip1_text: "Schauen Sie, ob im Schreiben eine Frist, ein Termin oder eine Rückmeldung verlangt wird.",
         tip2_title: "Leistung oder Vertrag ansehen",
         tip2_text: "Prüfen Sie, ob es im Schreiben um eine Leistung, eine Änderung, einen Schaden oder Ihren Vertrag geht.",
         tip3_title: "Beiträge oder Kosten beachten",
         tip3_text: "Achten Sie darauf, ob Beiträge, Kosten, Erstattungen oder Zahlungen genannt werden.",
         tip4_title: "Inhalt verständlich machen",
-        tip4_text: "Wenn das Schreiben schwer verständlich ist, hilft eine einfache Erklärung oft sofort weiter.",
+        tip4_text: "Wenn Begriffe, Hinweise oder Angaben unklar wirken, hilft eine einfache Erklärung oft dabei, die enthaltenen Angaben besser zu erfassen.",
 
+        more_title: "Weitere häufige Briefe verstehen",
+        more_1_title: "Krankenkasse Brief verstehen",
+        more_1_text: "Schreiben der Krankenkasse klar und verständlich erklärt.",
+        more_2_title: "Bußgeldbescheid verstehen",
+        more_2_text: "Bußgeldbescheide einfach erklärt.",
+        more_3_title: "Nebenkostenabrechnung verstehen",
+        more_3_text: "Nebenkostenabrechnungen in einfacher Sprache erklärt.",
+        more_4_title: "Stromrechnung verstehen",
+        more_4_text: "Stromrechnungen klar und verständlich erklärt.",
+        more_5_title: "Gasrechnung verstehen",
+        more_5_text: "Gasrechnungen einfach erklärt.",
+        more_6_title: "Bank Brief verstehen",
+        more_6_text: "Bankschreiben klar und verständlich erklärt.",
+
+        foot_copy: "© 2026 BriefHelden – Alle Rechte vorbehalten",
         foot_home: "Startseite",
         foot_question: "Frage stellen",
         foot_refund: "Widerruf",
@@ -752,6 +799,11 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
       },
 
       en: {
+        pageTitle: "Understand an insurance letter – explained clearly | BriefHelden",
+        metaDescription: "Understand an insurance letter easily: BriefHelden explains content, deadlines, premiums, benefits and included details clearly and in simple language.",
+        ogTitle: "Understand an insurance letter – explained clearly | BriefHelden",
+        ogDescription: "Insurance letter explained simply. Understand content, deadlines, premiums and important details quickly and clearly.",
+
         nav_home: "Home",
         nav_question: "Ask a question",
         nav_refund: "Withdrawal",
@@ -760,7 +812,7 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_privacy: "Privacy",
 
         hero_title: "Understand an insurance letter",
-        hero_sub: "An insurance letter often seems complicated and unsettling. BriefHelden explains the content simply, clearly and understandably.",
+        hero_sub: "An insurance letter often contains important notices and details. BriefHelden explains content, deadlines, premiums, benefits and included details simply and clearly.",
         hero_cta: "Get insurance letter explained now – €6.90",
         hero_question_cta: "Ask a short question – €1.49",
         meta_1: "Clearly explained",
@@ -768,20 +820,20 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         meta_3: "Confidential",
 
         intro_title: "What is an insurance letter?",
-        intro_text: "An insurance letter is a document from your insurer that often deals with premiums, contracts, benefits, changes, deadlines or questions. Many people do not know exactly what the letter means, whether they need to respond and what they should pay attention to. That is exactly where BriefHelden helps.",
+        intro_text: "An insurance letter is a document from your insurer that often deals with premiums, contracts, benefits, changes, deadlines or questions. It may also state whether documents are requested, premiums change or benefits are being reviewed. Many people first want to understand which contents and details are written in the document. That is exactly where BriefHelden helps.",
 
         left_title: "Simply explained",
         left_text_1: "An insurance letter often contains information about your contract, premiums, a benefit, a claim matter or a question from the insurer.",
         left_text_2: "Important points are: What exactly does the insurer want? Which deadline is mentioned? Is it about money, documents, a benefit or a contract change?",
-        left_text_3: "BriefHelden explains the content in simple language so you can better understand the letter.",
+        left_text_3: "BriefHelden explains the content in simple language so you can better understand the insurance letter.",
 
         right_title: "How it works",
         right_li_1: "Upload insurance letter securely",
         right_li_2: "We read the content and explain it clearly",
         right_li_3: "You receive the explanation by email",
-        right_li_4: "No legal advice – plain-language explanation only",
+        right_li_4: "No legal advice within the meaning of the German Legal Services Act (RDG) — only linguistic simplification and a clear text explanation without legal assessment or recommendation for action",
 
-        service1_title: "Get the full document explained",
+        service1_title: "Get the full insurance letter explained",
         service1_text: "Ideal if you want to fully understand the entire insurance letter.",
         service1_btn: "Start now for €6.90",
 
@@ -790,27 +842,42 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         service2_btn: "Ask now for €1.49",
 
         faq_title: "Frequently asked questions about insurance letters",
-        faq_sub: "These questions often come up with this kind of document:",
-        faq1_q: "Is an insurance letter important?",
-        faq1_a: "An insurance letter should be taken seriously. Many people are unsure because deadlines, benefits, premiums or notes are often written in a complicated way.",
-        faq2_q: "Are deadlines in an insurance letter important?",
-        faq2_a: "Yes, deadlines are often especially important. BriefHelden helps you identify these details clearly.",
-        faq3_q: "What is especially important in an insurance letter?",
-        faq3_a: "Especially important are deadlines, premiums, benefits, requested documents and all notes about what you are supposed to do.",
+        faq_sub: "These questions often come up with insurance letters:",
+        faq1_q: "Which details are written in an insurance letter?",
+        faq1_a: "An insurance letter often contains details about premiums, benefits, deadlines, contracts, changes and requested documents.",
+        faq2_q: "What do premiums or benefits mean?",
+        faq2_a: "The document often states whether it is about your premium, a benefit, a question or a change. Many people want these details explained clearly first.",
+        faq3_q: "Which points are especially important?",
+        faq3_a: "Especially important are deadlines, premiums, benefits, requested documents and all notes about what the document is about.",
         faq4_q: "Is BriefHelden legal advice?",
-        faq4_a: "No. BriefHelden does not provide legal advice. You only receive a clear explanation of the content.",
+        faq4_a: "No. BriefHelden does not provide legal advice within the meaning of the German Legal Services Act (RDG). You receive only a clear explanation and linguistic simplification of your document’s content. There is no legal assessment, no individual review, and no binding recommendation for action.",
 
         tip_title: "What should you look for in an insurance letter?",
         tip_sub: "These points are often especially important:",
-        tip1_title: "Check the deadline",
-        tip1_text: "Look whether the letter asks for a deadline, an appointment or a response.",
-        tip2_title: "Review the benefit or contract",
+        tip1_title: "Look at deadlines",
+        tip1_text: "Check whether the letter asks for a deadline, an appointment or a response.",
+        tip2_title: "Look at the benefit or contract",
         tip2_text: "Check whether the letter concerns a benefit, a change, a claim or your contract.",
         tip3_title: "Watch premiums or costs",
         tip3_text: "Pay attention to whether premiums, costs, reimbursements or payments are mentioned.",
         tip4_title: "Make the content understandable",
-        tip4_text: "If the letter is difficult to understand, a simple explanation often helps immediately.",
+        tip4_text: "If terms, notices or details seem unclear, a simple explanation often helps you grasp the included details more easily.",
 
+        more_title: "Understand more common letters",
+        more_1_title: "Understand a health insurance letter",
+        more_1_text: "Health insurance letters explained clearly.",
+        more_2_title: "Understand a fine notice",
+        more_2_text: "Fine notices explained simply.",
+        more_3_title: "Understand a utility cost statement",
+        more_3_text: "Utility cost statements explained in simple language.",
+        more_4_title: "Understand an electricity bill",
+        more_4_text: "Electricity bills explained clearly.",
+        more_5_title: "Understand a gas bill",
+        more_5_text: "Gas bills explained simply.",
+        more_6_title: "Understand a bank letter",
+        more_6_text: "Bank letters explained clearly.",
+
+        foot_copy: "© 2026 BriefHelden – All rights reserved",
         foot_home: "Home",
         foot_question: "Ask a question",
         foot_refund: "Withdrawal",
@@ -820,6 +887,11 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
       },
 
       tr: {
+        pageTitle: "Sigorta mektubunu anlayın – kolay açıklama | BriefHelden",
+        metaDescription: "Sigorta mektubunu kolay anlayın: BriefHelden içerik, süreler, primler, hizmetler ve belgede yer alan bilgileri sade ve anlaşılır şekilde açıklar.",
+        ogTitle: "Sigorta mektubunu anlayın – kolay açıklama | BriefHelden",
+        ogDescription: "Sigorta mektubu basitçe açıklanır. İçeriği, süreleri, primleri ve önemli bilgileri hızlı ve açık şekilde anlayın.",
+
         nav_home: "Ana Sayfa",
         nav_question: "Soru sor",
         nav_refund: "Cayma",
@@ -828,7 +900,7 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_privacy: "Gizlilik",
 
         hero_title: "Sigorta mektubunu anlayın",
-        hero_sub: "Bir sigorta mektubu çoğu zaman karmaşık ve endişe verici görünür. BriefHelden içeriği size basit, açık ve anlaşılır şekilde açıklar.",
+        hero_sub: "Bir sigorta mektubu çoğu zaman önemli uyarılar ve bilgiler içerir. BriefHelden içeriği, süreleri, primleri, hizmetleri ve yer alan bilgileri size basit ve açık şekilde açıklar.",
         hero_cta: "Sigorta mektubunu şimdi açıklat – 6,90 €",
         hero_question_cta: "Kısa soru sor – 1,49 €",
         meta_1: "Basit açıklandı",
@@ -836,20 +908,20 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         meta_3: "Gizli",
 
         intro_title: "Sigorta mektubu nedir?",
-        intro_text: "Sigorta mektubu, sigorta şirketinizden gelen ve çoğu zaman primler, sözleşmeler, hizmetler, değişiklikler, süreler veya sorularla ilgili olan bir yazıdır. Birçok kişi bu yazının ne anlama geldiğini, cevap vermesi gerekip gerekmediğini ve nelere dikkat etmesi gerektiğini tam bilmez. BriefHelden tam bu konuda yardımcı olur.",
+        intro_text: "Sigorta mektubu, sigorta şirketinizden gelen ve çoğu zaman primler, sözleşmeler, hizmetler, değişiklikler, süreler veya sorularla ilgili olan bir yazıdır. Ayrıca belge istenip istenmediği, primlerin değişip değişmediği veya hizmetlerin incelenip incelenmediği de yazabilir. Birçok kişi önce belgede hangi içeriklerin ve bilgilerin yer aldığını anlamak ister. BriefHelden tam bu konuda yardımcı olur.",
 
         left_title: "Basit açıklama",
         left_text_1: "Bir sigorta mektubunda sıkça sözleşmenizle ilgili bir bilgi, primler, bir hizmet, bir hasar konusu veya sigorta şirketinin sorusu yer alır.",
         left_text_2: "Önemli noktalar şunlardır: Sigorta şirketi tam olarak ne istiyor? Hangi süre belirtilmiş? Konu para, belge, hizmet veya sözleşme değişikliği mi?",
-        left_text_3: "BriefHelden içeriği basit dille açıklar, böylece yazıyı daha iyi anlayabilirsiniz.",
+        left_text_3: "BriefHelden içeriği basit dille açıklar, böylece sigorta mektubunu daha iyi anlayabilirsiniz.",
 
         right_title: "Nasıl çalışır",
         right_li_1: "Sigorta mektubunu güvenli şekilde yükleyin",
         right_li_2: "İçeriği okuyup açık şekilde açıklıyoruz",
         right_li_3: "Açıklamayı e-posta ile alırsınız",
-        right_li_4: "Hukuki danışmanlık değil – sadece anlaşılır açıklama",
+        right_li_4: "Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık verilmez — yalnızca dilsel sadeleştirme ve hukuki değerlendirme ya da eylem tavsiyesi olmadan anlaşılır metin açıklaması sunulur",
 
-        service1_title: "Belgenin tamamını açıklat",
+        service1_title: "Sigorta mektubunun tamamını açıklat",
         service1_text: "Sigorta mektubunun tamamını anlamak istiyorsanız idealdir.",
         service1_btn: "Şimdi 6,90 € ile başla",
 
@@ -858,27 +930,42 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         service2_btn: "Şimdi 1,49 € ile sor",
 
         faq_title: "Sigorta mektupları hakkında sık sorulan sorular",
-        faq_sub: "Bu tür yazılarda şu sorular sıkça ortaya çıkar:",
-        faq1_q: "Bir sigorta mektubu önemli midir?",
-        faq1_a: "Bir sigorta mektubu ciddiye alınmalıdır. Birçok kişi süreler, hizmetler, primler veya açıklamalar karmaşık yazıldığı için emin olamaz.",
-        faq2_q: "Sigorta mektubundaki süreler önemli midir?",
-        faq2_a: "Evet, süreler çoğu zaman özellikle önemlidir. BriefHelden bu bilgileri açık şekilde görmenize yardım eder.",
-        faq3_q: "Bir sigorta mektubunda en önemli olan nedir?",
-        faq3_a: "Süreler, primler, hizmetler, istenen belgeler ve ne yapmanız gerektiğine dair tüm bilgiler özellikle önemlidir.",
+        faq_sub: "Sigorta mektuplarında şu sorular sıkça ortaya çıkar:",
+        faq1_q: "Bir sigorta mektubunda hangi bilgiler yer alır?",
+        faq1_a: "Bir sigorta mektubu çoğu zaman primler, hizmetler, süreler, sözleşmeler, değişiklikler ve istenen belgelerle ilgili bilgiler içerir.",
+        faq2_q: "Primler veya hizmetler ne anlama gelir?",
+        faq2_a: "Belgede çoğu zaman bunun priminiz, bir hizmet, bir soru veya bir değişiklikle ilgili olup olmadığı yazılır. Birçok kişi bu bilgilerin önce açık şekilde açıklanmasını ister.",
+        faq3_q: "Hangi noktalar özellikle önemlidir?",
+        faq3_a: "Özellikle süreler, primler, hizmetler, istenen belgeler ve belgenin neyle ilgili olduğuna dair tüm bilgiler önemlidir.",
         faq4_q: "BriefHelden hukuki danışmanlık mı veriyor?",
-        faq4_a: "Hayır. BriefHelden hukuki danışmanlık vermez. Sadece içeriğin anlaşılır açıklamasını sunar.",
+        faq4_a: "Hayır. BriefHelden, Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık vermez. Yalnızca belgenizin içeriğinin anlaşılır açıklamasını ve dilsel sadeleştirmesini alırsınız. Hukuki değerlendirme, bireysel inceleme veya bağlayıcı bir hareket tavsiyesi yapılmaz.",
 
         tip_title: "Bir sigorta mektubunda nelere dikkat etmelisiniz?",
         tip_sub: "Bu noktalar genelde özellikle önemlidir:",
-        tip1_title: "Süreyi kontrol edin",
+        tip1_title: "Sürelere bakın",
         tip1_text: "Yazıda bir süre, randevu veya geri dönüş istenip istenmediğine bakın.",
         tip2_title: "Hizmeti veya sözleşmeyi inceleyin",
         tip2_text: "Yazının bir hizmet, değişiklik, hasar konusu veya sözleşmenizle ilgili olup olmadığını kontrol edin.",
         tip3_title: "Primleri veya masrafları dikkate alın",
         tip3_text: "Primler, masraflar, geri ödemeler veya ödemeler belirtilmiş mi buna dikkat edin.",
         tip4_title: "İçeriği anlaşılır hale getirin",
-        tip4_text: "Yazıyı anlamak zorsa, basit bir açıklama çoğu zaman hemen yardımcı olur.",
+        tip4_text: "Terimler, uyarılar veya bilgiler belirsiz görünüyorsa, basit bir açıklama çoğu zaman yer alan bilgileri daha iyi kavramanıza yardımcı olur.",
 
+        more_title: "Diğer sık görülen mektupları anlayın",
+        more_1_title: "Sağlık sigortası mektubunu anla",
+        more_1_text: "Sağlık sigortası yazıları açık şekilde açıklanır.",
+        more_2_title: "Ceza bildirimini anla",
+        more_2_text: "Ceza bildirimleri basit şekilde açıklanır.",
+        more_3_title: "Yan gider hesaplamasını anla",
+        more_3_text: "Yan gider hesaplamaları basit dille açıklanır.",
+        more_4_title: "Elektrik faturasını anla",
+        more_4_text: "Elektrik faturaları açık şekilde açıklanır.",
+        more_5_title: "Gaz faturasını anla",
+        more_5_text: "Gaz faturaları basit şekilde açıklanır.",
+        more_6_title: "Banka mektubunu anla",
+        more_6_text: "Banka yazıları açık şekilde açıklanır.",
+
+        foot_copy: "© 2026 BriefHelden – Tüm hakları saklıdır",
         foot_home: "Ana Sayfa",
         foot_question: "Soru sor",
         foot_refund: "Cayma",
@@ -888,6 +975,11 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
       },
 
       ru: {
+        pageTitle: "Понять письмо от страховой компании – простое объяснение | BriefHelden",
+        metaDescription: "Легко понять письмо от страховой компании: BriefHelden просто и понятно объясняет содержание, сроки, взносы, услуги и указанные в документе сведения.",
+        ogTitle: "Понять письмо от страховой компании – простое объяснение | BriefHelden",
+        ogDescription: "Письмо от страховой компании объясняется простым языком. Понятно разберитесь в содержании, сроках, взносах и важных сведениях.",
+
         nav_home: "Главная",
         nav_question: "Задать вопрос",
         nav_refund: "Отказ",
@@ -896,7 +988,7 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_privacy: "Конфиденциальность",
 
         hero_title: "Понять письмо от страховой компании",
-        hero_sub: "Письмо от страховой компании часто кажется сложным и тревожным. BriefHelden объяснит содержание просто, ясно и понятно.",
+        hero_sub: "Письмо от страховой компании часто содержит важные указания и сведения. BriefHelden объяснит содержание, сроки, взносы, услуги и указанные данные просто и ясно.",
         hero_cta: "Объяснить письмо от страховой компании – 6,90 €",
         hero_question_cta: "Задать короткий вопрос – 1,49 €",
         meta_1: "Просто объяснено",
@@ -904,20 +996,20 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         meta_3: "Конфиденциально",
 
         intro_title: "Что такое письмо от страховой компании?",
-        intro_text: "Письмо от страховой компании — это документ от вашего страховщика, который часто касается взносов, договоров, услуг, изменений, сроков или запросов. Многие люди не понимают, что означает это письмо, нужно ли на него реагировать и на что следует обратить внимание. Именно здесь помогает BriefHelden.",
+        intro_text: "Письмо от страховой компании — это документ от вашего страховщика, который часто касается взносов, договоров, услуг, изменений, сроков или запросов. В нём также может быть указано, запрашиваются ли документы, меняются ли взносы или проверяются ли услуги. Многие люди сначала хотят понять, какие именно сведения и данные указаны в документе. Именно здесь помогает BriefHelden.",
 
         left_title: "Просто объясняем",
         left_text_1: "В письме от страховой компании часто содержится информация о вашем договоре, взносах, страховой услуге, страховом случае или запрос от страховщика.",
         left_text_2: "Особенно важно следующее: Что именно хочет страховая компания? Какой срок указан? Речь идёт о деньгах, документах, услуге или изменении договора?",
-        left_text_3: "BriefHelden объясняет содержание простым языком, чтобы вам было легче понять письмо.",
+        left_text_3: "BriefHelden объясняет содержание простым языком, чтобы вам было легче понять письмо от страховой компании.",
 
         right_title: "Как это работает",
         right_li_1: "Безопасно загрузите письмо от страховой компании",
         right_li_2: "Мы читаем содержание и понятно объясняем его",
         right_li_3: "Вы получаете объяснение по e-mail",
-        right_li_4: "Не юридическая консультация – только понятное объяснение",
+        right_li_4: "Это не юридическая консультация в смысле немецкого Закона о юридических услугах (RDG) — только языковое упрощение и понятное текстовое объяснение без правовой оценки и без рекомендаций к действиям",
 
-        service1_title: "Получить полное объяснение документа",
+        service1_title: "Получить полное объяснение письма от страховой компании",
         service1_text: "Идеально, если вы хотите полностью понять всё письмо от страховой компании.",
         service1_btn: "Начать за 6,90 €",
 
@@ -926,27 +1018,42 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         service2_btn: "Спросить за 1,49 €",
 
         faq_title: "Частые вопросы о письмах от страховой компании",
-        faq_sub: "Эти вопросы особенно часто возникают по таким документам:",
-        faq1_q: "Письмо от страховой компании важно?",
-        faq1_a: "Письмо от страховой компании следует воспринимать серьёзно. Многие люди не уверены, потому что сроки, услуги, взносы или указания часто изложены сложно.",
-        faq2_q: "Важны ли сроки в письме от страховой компании?",
-        faq2_a: "Да, сроки часто особенно важны. BriefHelden помогает вам увидеть эти данные понятнее.",
-        faq3_q: "Что особенно важно в письме от страховой компании?",
-        faq3_a: "Особенно важны сроки, взносы, услуги, запрошенные документы и все указания о том, что вам нужно сделать.",
+        faq_sub: "Эти вопросы часто возникают по письмам от страховой компании:",
+        faq1_q: "Какие сведения содержатся в письме от страховой компании?",
+        faq1_a: "Письмо от страховой компании часто содержит сведения о взносах, услугах, сроках, договорах, изменениях и запрошенных документах.",
+        faq2_q: "Что означают взносы или услуги?",
+        faq2_a: "В документе часто указано, идёт ли речь о вашем взносе, услуге, запросе или изменении. Многие люди хотят сначала получить понятное объяснение этих сведений.",
+        faq3_q: "Какие пункты особенно важны?",
+        faq3_a: "Особенно важны сроки, взносы, услуги, запрошенные документы и все указания о том, о чём идёт речь в документе.",
         faq4_q: "BriefHelden — это юридическая консультация?",
-        faq4_a: "Нет. BriefHelden не даёт юридических консультаций. Вы получаете только понятное объяснение содержания.",
+        faq4_a: "Нет. BriefHelden не оказывает юридических консультаций в смысле немецкого Закона о юридических услугах (RDG). Вы получаете только понятное объяснение и языковое упрощение содержания вашего документа. Юридическая оценка, индивидуальная проверка и обязательные рекомендации к действиям не предоставляются.",
 
         tip_title: "На что стоит обратить внимание в письме от страховой компании?",
         tip_sub: "Эти пункты часто особенно важны:",
-        tip1_title: "Проверьте срок",
+        tip1_title: "Посмотрите на сроки",
         tip1_text: "Посмотрите, требует ли письмо соблюдения срока, даты или обратной связи.",
         tip2_title: "Изучите услугу или договор",
         tip2_text: "Проверьте, касается ли письмо услуги, изменения, страхового случая или вашего договора.",
         tip3_title: "Обратите внимание на взносы или расходы",
         tip3_text: "Посмотрите, указаны ли взносы, расходы, возмещения или платежи.",
         tip4_title: "Сделайте содержание понятным",
-        tip4_text: "Если письмо трудно понять, простое объяснение часто сразу помогает.",
+        tip4_text: "Если термины, указания или сведения кажутся неясными, простое объяснение часто помогает легче воспринять содержащиеся в нём данные.",
 
+        more_title: "Другие часто встречающиеся письма",
+        more_1_title: "Понять письмо от больничной кассы",
+        more_1_text: "Письма от больничной кассы объяснены понятно.",
+        more_2_title: "Понять постановление о штрафе",
+        more_2_text: "Постановления о штрафе объяснены просто.",
+        more_3_title: "Понять расчёт коммунальных расходов",
+        more_3_text: "Расчёты коммунальных расходов объяснены простым языком.",
+        more_4_title: "Понять счёт за электричество",
+        more_4_text: "Счета за электричество объяснены понятно.",
+        more_5_title: "Понять счёт за газ",
+        more_5_text: "Счета за газ объяснены просто.",
+        more_6_title: "Понять письмо из банка",
+        more_6_text: "Письма из банка объяснены понятно.",
+
+        foot_copy: "© 2026 BriefHelden – Все права защищены",
         foot_home: "Главная",
         foot_question: "Задать вопрос",
         foot_refund: "Отказ",
@@ -957,8 +1064,8 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
     };
 
     function updateLinks(lang){
-const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
-const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
+      const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
+      const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
 
       const stripeBtn = document.getElementById("stripeBtn");
       const servicePrimaryBtn = document.getElementById("servicePrimaryBtn");
@@ -971,9 +1078,24 @@ const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
       if(serviceQuestionBtn) serviceQuestionBtn.href = questionLink;
     }
 
+    function updateMeta(lang){
+      const dict = i18n[lang] || i18n.de;
+      document.title = dict.pageTitle;
+
+      const description = document.querySelector('meta[name="description"]');
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      const ogDescription = document.querySelector('meta[property="og:description"]');
+
+      if(description) description.setAttribute("content", dict.metaDescription);
+      if(ogTitle) ogTitle.setAttribute("content", dict.ogTitle);
+      if(ogDescription) ogDescription.setAttribute("content", dict.ogDescription);
+    }
+
     function applyLang(lang){
-const dict = i18n[lang] || i18n.de;
-      document.documentElement.lang = lang;
+      const currentLang = i18n[lang] ? lang : "de";
+      const dict = i18n[currentLang];
+
+      document.documentElement.lang = currentLang;
 
       document.querySelectorAll("[data-i18n]").forEach((el) => {
         const key = el.getAttribute("data-i18n");
@@ -982,8 +1104,9 @@ const dict = i18n[lang] || i18n.de;
         }
       });
 
-      updateLinks(lang);
-      localStorage.setItem("briefhelden_lang", lang);
+      updateMeta(currentLang);
+      updateLinks(currentLang);
+      localStorage.setItem("briefhelden_lang", currentLang);
     }
 
     const select = document.getElementById("langSelect");
