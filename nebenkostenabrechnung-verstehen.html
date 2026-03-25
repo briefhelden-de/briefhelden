@@ -3,11 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <title>Nebenkostenabrechnung verstehen – einfach erklärt | BriefHelden</title>
   <meta
     name="description"
-    content="Nebenkostenabrechnung sprachlich verständlich einordnen: BriefHelden erklärt, welche Angaben im Schreiben enthalten sind – klar, einfach und ohne komplizierte Fachsprache."
+    content="Nebenkostenabrechnung verständlich erklärt: BriefHelden erklärt Nachzahlung, Guthaben, Abrechnungszeitraum, Kostenpositionen und enthaltene Angaben klar, einfach und ohne komplizierte Fachsprache."
   />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.briefhelden-service.de/nebenkostenabrechnung-verstehen.html" />
@@ -15,13 +14,13 @@
   <meta property="og:title" content="Nebenkostenabrechnung verstehen – einfach erklärt | BriefHelden" />
   <meta
     property="og:description"
-    content="Nebenkostenabrechnung verständlich erklärt. BriefHelden hilft dabei, Inhalt, Fristen, Nachzahlung, Guthaben und die Angaben im Schreiben sprachlich verständlich einzuordnen."
+    content="Nebenkostenabrechnung einfach erklärt. Verstehen Sie Nachzahlung, Guthaben, Fristen und wichtige Angaben schnell und verständlich."
   />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://www.briefhelden-service.de/nebenkostenabrechnung-verstehen.html" />
   <meta property="og:image" content="https://www.briefhelden-service.de/og-image.jpg" />
   <meta property="og:site_name" content="BriefHelden" />
-  <meta name="theme-color" content="#0f2740" />
+  <meta name="theme-color" content="#0b1220" />
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
   <script>
@@ -55,6 +54,7 @@
 
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
+
     body{
       margin:0;
       font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
@@ -107,6 +107,7 @@
         linear-gradient(180deg, rgba(55,120,255,.9), rgba(20,70,190,.9));
       box-shadow:0 10px 18px rgba(0,0,0,.18);
       position:relative;
+      flex:0 0 auto;
     }
 
     .brand .logo:after{
@@ -153,7 +154,9 @@
       outline:none;
     }
 
-    .langSelect:focus{box-shadow:0 0 0 3px rgba(90,160,255,.25)}
+    .langSelect:focus{
+      box-shadow:0 0 0 3px rgba(90,160,255,.25);
+    }
 
     .langWrap:after{
       content:"▾";
@@ -193,10 +196,10 @@
 
     .hero p{
       margin:0 auto 18px;
-      max-width:900px;
+      max-width:860px;
       color:var(--heroMuted);
       font-size:clamp(15px, 2vw, 18px);
-      line-height:1.58;
+      line-height:1.55;
     }
 
     .ctaGroup{
@@ -264,7 +267,8 @@
     .pad{padding:22px}
 
     .headline,
-    .sectionTitle{
+    .sectionTitle,
+    .moreLinks h2{
       text-align:center;
       margin:0 0 10px;
       font-weight:950;
@@ -276,9 +280,9 @@
     .sectionSub{
       text-align:center;
       margin:0 auto 16px;
-      max-width:950px;
+      max-width:920px;
       color:rgba(11,18,32,.76);
-      line-height:1.72;
+      line-height:1.7;
       font-size:16px;
     }
 
@@ -303,6 +307,7 @@
       margin:0 0 10px;
       font-size:22px;
       font-weight:950;
+      line-height:1.25;
     }
 
     .faqItem h3,
@@ -322,7 +327,11 @@
     }
 
     .infoCard p + p{margin-top:12px;}
-    .infoCard ul{margin:0; padding-left:18px;}
+
+    .infoCard ul{
+      margin:0;
+      padding-left:18px;
+    }
 
     .faqGrid,
     .moreGrid{
@@ -350,17 +359,17 @@
       margin:0 0 8px;
       font-size:20px;
       font-weight:950;
+      line-height:1.3;
     }
 
     .serviceMini .box p{
       margin:0;
       color:rgba(11,18,32,.74);
-      line-height:1.58;
+      line-height:1.55;
       font-weight:700;
     }
 
-    .miniBtn,
-    .moreBtn{
+    .miniBtn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
@@ -375,20 +384,23 @@
       text-align:center;
     }
 
-    .miniBtn.primary,
-    .moreBtn{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
+    .miniBtn.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
     .miniBtn.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
 
-    .disclaimerBar{
-      margin-top:16px;
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,.55);
-      background:rgba(255,255,255,.24);
-      padding:16px;
-      text-align:center;
-      color:rgba(11,18,32,.78);
-      font-weight:800;
-      line-height:1.65;
+    .moreLinks{
+      max-width:var(--max);
+      margin:28px auto 0;
+      padding:0 18px 30px;
+    }
+
+    .moreCard{
+      display:block;
+      transition:transform .18s ease, background .18s ease;
+    }
+
+    .moreCard:hover{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,.30);
     }
 
     footer{
@@ -420,25 +432,14 @@
     .footLinks a{color:rgba(255,255,255,.80)}
     .footLinks a:hover{color:#fff}
 
-    .moreSection{
-      padding:0 18px 30px;
-    }
-
-    .moreCard a{display:block}
-    .moreCard:hover{
-      transform:translateY(-2px);
-      transition:.18s ease;
-      background:rgba(255,255,255,.28);
-    }
-
     @media (max-width:900px){
       nav.links{display:none}
       .grid2,
       .faqGrid,
-      .serviceMini,
-      .moreGrid{grid-template-columns:1fr}
+      .moreGrid,
+      .serviceMini{grid-template-columns:1fr}
       .cta{min-width:92vw}
-      .miniBtn,.moreBtn{min-width:100%}
+      .miniBtn{min-width:100%}
     }
   </style>
 </head>
@@ -474,7 +475,7 @@
     <div class="wrap">
       <h1 data-i18n="hero_title">Nebenkostenabrechnung verstehen</h1>
       <p data-i18n="hero_sub">
-        Eine Nebenkostenabrechnung wirkt oft kompliziert und verunsichernd. BriefHelden hilft dabei, den Inhalt sprachlich verständlich einzuordnen und zu verstehen, welche Angaben im Schreiben enthalten sind.
+        Eine Nebenkostenabrechnung enthält oft viele Zahlen, Begriffe und wichtige Angaben. BriefHelden erklärt Inhalt, Abrechnungszeitraum, Nachzahlung, Guthaben und enthaltene Angaben einfach und verständlich.
       </p>
 
       <div class="ctaGroup">
@@ -501,22 +502,22 @@
     <div class="wrap">
       <div class="glassCard">
         <div class="pad">
-          <h2 class="headline" data-i18n="intro_title">Was ist eine Nebenkostenabrechnung?</h2>
+          <h2 class="headline" data-i18n="intro_title">Was bedeutet eine Nebenkostenabrechnung?</h2>
           <p class="lead" data-i18n="intro_text">
-            Eine Nebenkostenabrechnung ist ein Schreiben Ihres Vermieters oder Ihrer Hausverwaltung, in dem laufende Kosten für Wohnung oder Haus aufgeführt werden. Häufig geht es um Nachzahlung, Guthaben, Abrechnungszeitraum, einzelne Kostenpositionen oder Fristen. Viele Menschen möchten besser verstehen, welche Angaben im Schreiben enthalten sind und wie der Inhalt sprachlich verständlich einzuordnen ist. Genau dabei hilft BriefHelden mit einer verständlichen Texterklärung.
+            Eine Nebenkostenabrechnung enthält Angaben zu den laufenden Kosten einer Wohnung oder eines Hauses. Darin stehen häufig Informationen zu Heizkosten, Wasserkosten, Hausreinigung, Müll, Abrechnungszeitraum, Nachzahlung, Guthaben und weiteren Kostenpositionen. Viele Menschen möchten zuerst verstehen, welche Inhalte und Angaben im Schreiben stehen. Genau dabei hilft BriefHelden.
           </p>
 
           <div class="grid2">
             <div class="infoCard">
-              <h3 data-i18n="left_title">Sprachlich verständlich erklärt</h3>
+              <h3 data-i18n="left_title">Einfach erklärt</h3>
               <p data-i18n="left_text_1">
-                In einer Nebenkostenabrechnung geht es häufig um Kosten wie Heizung, Wasser, Müll, Hausreinigung oder andere Betriebskosten rund um die Wohnung.
+                In einer Nebenkostenabrechnung geht es meist um Betriebskosten wie Heizung, Wasser, Müll, Hausreinigung, Allgemeinstrom oder weitere laufende Kosten rund um die Wohnung.
               </p>
               <p data-i18n="left_text_2">
-                Wichtig sind dabei vor allem: Für welchen Zeitraum wird abgerechnet? Gibt es eine Nachzahlung oder ein Guthaben? Welche Kosten werden genannt?
+                Wichtig sind dabei vor allem: Für welchen Zeitraum wird abgerechnet? Gibt es eine Nachzahlung oder ein Guthaben? Welche Kostenpositionen sind enthalten? Und welche Fristen oder Hinweise stehen im Schreiben?
               </p>
               <p data-i18n="left_text_3">
-                BriefHelden bietet eine sprachliche Vereinfachung des Inhalts, damit Sie das Schreiben besser verstehen und einordnen können.
+                BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie die Nebenkostenabrechnung besser sprachlich verständlich einordnen können.
               </p>
             </div>
 
@@ -524,18 +525,18 @@
               <h3 data-i18n="right_title">So funktioniert es</h3>
               <ul>
                 <li data-i18n="right_li_1">Nebenkostenabrechnung sicher hochladen</li>
-                <li data-i18n="right_li_2">Wir lesen den Inhalt und erstellen eine verständliche Texterklärung</li>
+                <li data-i18n="right_li_2">Wir lesen den Inhalt und erklären ihn verständlich</li>
                 <li data-i18n="right_li_3">Sie erhalten die Erklärung per E-Mail</li>
-                <li data-i18n="right_li_4">Keine Rechtsberatung, keine rechtliche Bewertung, keine Handlungsempfehlung</li>
+                <li data-i18n="right_li_4">Keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) – nur sprachliche Vereinfachung und verständliche Texterklärung ohne rechtliche Bewertung oder Handlungsempfehlung</li>
               </ul>
             </div>
           </div>
 
           <div class="serviceMini">
             <div class="box">
-              <h3 data-i18n="service1_title">Komplettes Schreiben erklären lassen</h3>
+              <h3 data-i18n="service1_title">Komplette Nebenkostenabrechnung erklären lassen</h3>
               <p data-i18n="service1_text">
-                Ideal, wenn Sie die ganze Nebenkostenabrechnung vollständig sprachlich verständlich erklärt bekommen möchten.
+                Ideal, wenn Sie die ganze Nebenkostenabrechnung vollständig verstehen möchten.
               </p>
               <a class="miniBtn primary" id="servicePrimaryBtn" href="#" rel="noopener">
                 <span data-i18n="service1_btn">Jetzt für 6,90 € starten</span>
@@ -546,17 +547,13 @@
             <div class="box">
               <h3 data-i18n="service2_title">Kurze Rückfrage stellen</h3>
               <p data-i18n="service2_text">
-                Ideal, wenn Sie nur eine kurze Frage zu Nachzahlung, Guthaben, Frist oder Inhalt haben.
+                Ideal, wenn Sie nur eine kurze Frage zu Nachzahlung, Guthaben, Fristen oder Inhalt haben.
               </p>
               <a class="miniBtn secondary" id="serviceQuestionBtn" href="#" rel="noopener">
                 <span data-i18n="service2_btn">Jetzt für 1,49 € fragen</span>
                 <span aria-hidden="true">›</span>
               </a>
             </div>
-          </div>
-
-          <div class="disclaimerBar" data-i18n="disclaimer_bar">
-            BriefHelden ordnet Schreiben sprachlich verständlich ein und erstellt eine verständliche Texterklärung. Es erfolgt keine Rechtsberatung, keine rechtliche Bewertung und keine Handlungsempfehlung.
           </div>
         </div>
       </div>
@@ -567,35 +564,35 @@
         <div class="pad">
           <h2 class="sectionTitle" data-i18n="faq_title">Häufige Fragen zu Nebenkostenabrechnungen</h2>
           <p class="sectionSub" data-i18n="faq_sub">
-            Diese Fragen tauchen bei solchen Schreiben besonders oft auf:
+            Diese Fragen tauchen bei Nebenkostenabrechnungen besonders oft auf:
           </p>
 
           <div class="faqGrid">
             <div class="faqItem">
-              <h3 data-i18n="faq1_q">Ist eine Nebenkostenabrechnung wichtig?</h3>
+              <h3 data-i18n="faq1_q">Welche Angaben stehen in einer Nebenkostenabrechnung?</h3>
               <p data-i18n="faq1_a">
-                Viele Menschen sind unsicher, weil Beträge, Zeiträume und Kostenpositionen oft kompliziert dargestellt werden. Eine verständliche Texterklärung kann helfen, den Inhalt sprachlich verständlich einzuordnen.
+                Eine Nebenkostenabrechnung enthält häufig Angaben zu Abrechnungszeitraum, Kostenpositionen, Vorauszahlungen, Nachzahlung, Guthaben und weiteren Hinweisen.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="faq2_q">Sind Fristen in einer Nebenkostenabrechnung wichtig?</h3>
+              <h3 data-i18n="faq2_q">Was bedeutet Nachzahlung oder Guthaben?</h3>
               <p data-i18n="faq2_a">
-                Ja, Fristen sind oft besonders wichtig. BriefHelden hilft dabei, diese Angaben im Schreiben verständlich zu erkennen.
+                In der Abrechnung steht oft, ob noch ein Betrag nachgezahlt werden soll oder ob ein Guthaben ausgewiesen ist. Viele Menschen möchten diese Angaben zuerst verständlich erklärt bekommen.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="faq3_q">Was ist bei einer Nebenkostenabrechnung besonders wichtig?</h3>
+              <h3 data-i18n="faq3_q">Welche Punkte sind besonders wichtig?</h3>
               <p data-i18n="faq3_a">
-                Besonders wichtig sind Abrechnungszeitraum, Nachzahlung oder Guthaben, einzelne Kostenpositionen und alle genannten Fristen oder Hinweise.
+                Besonders wichtig sind Abrechnungszeitraum, einzelne Kostenpositionen, Vorauszahlungen, Nachzahlung oder Guthaben sowie genannte Fristen und Hinweise.
               </p>
             </div>
 
             <div class="faqItem">
               <h3 data-i18n="faq4_q">Ist BriefHelden eine Rechtsberatung?</h3>
               <p data-i18n="faq4_a">
-                Nein. BriefHelden bietet keine Rechtsberatung, keine rechtliche Bewertung und keine Handlungsempfehlung. Sie erhalten eine sprachliche Vereinfachung und verständliche Texterklärung des Inhalts.
+                Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Erklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.
               </p>
             </div>
           </div>
@@ -606,37 +603,37 @@
 
       <div class="glassCard">
         <div class="pad">
-          <h2 class="sectionTitle" data-i18n="tip_title">Welche Angaben im Schreiben sind oft besonders wichtig?</h2>
+          <h2 class="sectionTitle" data-i18n="tip_title">Worauf sollten Sie bei einer Nebenkostenabrechnung achten?</h2>
           <p class="sectionSub" data-i18n="tip_sub">
-            Diese Punkte stehen in Nebenkostenabrechnungen häufig im Mittelpunkt:
+            Diese Punkte sind oft besonders wichtig:
           </p>
 
           <div class="faqGrid">
             <div class="faqItem">
-              <h3 data-i18n="tip1_title">Abrechnungszeitraum prüfen</h3>
+              <h3 data-i18n="tip1_title">Abrechnungszeitraum ansehen</h3>
               <p data-i18n="tip1_text">
-                Schauen Sie, für welchen Zeitraum die Nebenkosten aufgeführt werden und ob dieser klar genannt ist.
+                Schauen Sie, für welchen Zeitraum die Kosten abgerechnet werden und ob dieser Zeitraum klar genannt ist.
               </p>
             </div>
 
             <div class="faqItem">
               <h3 data-i18n="tip2_title">Nachzahlung oder Guthaben ansehen</h3>
               <p data-i18n="tip2_text">
-                Prüfen Sie, ob am Ende eine Nachzahlung genannt wird oder ob ein Guthaben für Sie ausgewiesen ist.
+                Achten Sie darauf, ob eine Nachzahlung gefordert wird oder ob ein Guthaben in der Abrechnung ausgewiesen ist.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="tip3_title">Kostenpositionen beachten</h3>
+              <h3 data-i18n="tip3_title">Kostenpositionen ansehen</h3>
               <p data-i18n="tip3_text">
-                Achten Sie darauf, welche Kosten aufgeführt werden und wie diese im Schreiben dargestellt sind.
+                Achten Sie auf einzelne Positionen wie Heizung, Wasser, Müll, Hausreinigung oder weitere Betriebskosten.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="tip4_title">Inhalt sprachlich verständlich machen</h3>
+              <h3 data-i18n="tip4_title">Inhalt verständlich machen</h3>
               <p data-i18n="tip4_text">
-                Wenn das Schreiben schwer verständlich ist, hilft eine sprachliche Vereinfachung oft sofort weiter.
+                Wenn Zahlen, Begriffe oder einzelne Positionen kompliziert wirken, hilft eine einfache Erklärung oft dabei, die enthaltenen Angaben besser zu erfassen.
               </p>
             </div>
           </div>
@@ -645,50 +642,39 @@
 
       <div style="height:18px"></div>
 
-      <div class="glassCard moreSection">
-        <div class="pad">
-          <h2 class="sectionTitle" data-i18n="more_title">Weitere häufige Briefe verstehen</h2>
-          <p class="sectionSub" data-i18n="more_sub">
-            Hier finden Sie weitere Schreiben, die BriefHelden sprachlich verständlich einordnen kann.
-          </p>
+      <div class="moreLinks">
+        <h2 data-i18n="more_title">Weitere häufige Briefe verstehen</h2>
 
-          <div class="moreGrid">
-            <a class="moreCard" href="/krankenkasse-brief-verstehen.html">
-              <h3 data-i18n="more_1_title">Krankenkasse Brief verstehen</h3>
-              <p data-i18n="more_1_text">Schreiben der Krankenkasse verständlich erklärt.</p>
-              <span class="moreBtn" data-i18n="more_btn">Seite ansehen</span>
-            </a>
+        <div class="moreGrid">
+          <a class="moreCard" href="/mietvertrag-verstehen.html">
+            <h3 data-i18n="more_1_title">Mietvertrag verstehen</h3>
+            <p data-i18n="more_1_text">Mietverträge klar und verständlich erklärt.</p>
+          </a>
 
-            <a class="moreCard" href="/versicherung-brief-verstehen.html">
-              <h3 data-i18n="more_2_title">Versicherung Brief verstehen</h3>
-              <p data-i18n="more_2_text">Versicherungsschreiben einfach einordnen.</p>
-              <span class="moreBtn" data-i18n="more_btn">Seite ansehen</span>
-            </a>
+          <a class="moreCard" href="/kuendigung-verstehen.html">
+            <h3 data-i18n="more_2_title">Kündigung verstehen</h3>
+            <p data-i18n="more_2_text">Kündigungen einfach erklärt.</p>
+          </a>
 
-            <a class="moreCard" href="/bussgeldbescheid-verstehen.html">
-              <h3 data-i18n="more_3_title">Bußgeldbescheid verstehen</h3>
-              <p data-i18n="more_3_text">Inhalt eines Bußgeldbescheids klar erklärt.</p>
-              <span class="moreBtn" data-i18n="more_btn">Seite ansehen</span>
-            </a>
+          <a class="moreCard" href="/jobcenter-brief-verstehen.html">
+            <h3 data-i18n="more_3_title">Jobcenter Brief verstehen</h3>
+            <p data-i18n="more_3_text">Jobcenter Schreiben in einfacher Sprache erklärt.</p>
+          </a>
 
-            <a class="moreCard" href="/stromrechnung-verstehen.html">
-              <h3 data-i18n="more_4_title">Stromrechnung verstehen</h3>
-              <p data-i18n="more_4_text">Stromkosten und Angaben im Schreiben besser verstehen.</p>
-              <span class="moreBtn" data-i18n="more_btn">Seite ansehen</span>
-            </a>
+          <a class="moreCard" href="/stromrechnung-verstehen.html">
+            <h3 data-i18n="more_4_title">Stromrechnung verstehen</h3>
+            <p data-i18n="more_4_text">Stromrechnungen klar und verständlich erklärt.</p>
+          </a>
 
-            <a class="moreCard" href="/gasrechnung-verstehen.html">
-              <h3 data-i18n="more_5_title">Gasrechnung verstehen</h3>
-              <p data-i18n="more_5_text">Gasrechnung sprachlich verständlich erklärt.</p>
-              <span class="moreBtn" data-i18n="more_btn">Seite ansehen</span>
-            </a>
+          <a class="moreCard" href="/gasrechnung-verstehen.html">
+            <h3 data-i18n="more_5_title">Gasrechnung verstehen</h3>
+            <p data-i18n="more_5_text">Gasrechnungen einfach erklärt.</p>
+          </a>
 
-            <a class="moreCard" href="/bank-brief-verstehen.html">
-              <h3 data-i18n="more_6_title">Bank Brief verstehen</h3>
-              <p data-i18n="more_6_text">Bankschreiben klar und einfach erklärt.</p>
-              <span class="moreBtn" data-i18n="more_btn">Seite ansehen</span>
-            </a>
-          </div>
+          <a class="moreCard" href="/versicherung-brief-verstehen.html">
+            <h3 data-i18n="more_6_title">Versicherung Brief verstehen</h3>
+            <p data-i18n="more_6_text">Versicherungsschreiben klar und verständlich erklärt.</p>
+          </a>
         </div>
       </div>
     </div>
@@ -725,10 +711,10 @@
 
     const i18n = {
       de: {
-        meta_title: "Nebenkostenabrechnung verstehen – einfach erklärt | BriefHelden",
-        meta_description: "Nebenkostenabrechnung sprachlich verständlich einordnen: BriefHelden erklärt, welche Angaben im Schreiben enthalten sind – klar, einfach und ohne komplizierte Fachsprache.",
-        og_title: "Nebenkostenabrechnung verstehen – einfach erklärt | BriefHelden",
-        og_description: "Nebenkostenabrechnung verständlich erklärt. BriefHelden hilft dabei, Inhalt, Fristen, Nachzahlung, Guthaben und die Angaben im Schreiben sprachlich verständlich einzuordnen.",
+        pageTitle: "Nebenkostenabrechnung verstehen – einfach erklärt | BriefHelden",
+        metaDescription: "Nebenkostenabrechnung verständlich erklärt: BriefHelden erklärt Nachzahlung, Guthaben, Abrechnungszeitraum, Kostenpositionen und enthaltene Angaben klar, einfach und ohne komplizierte Fachsprache.",
+        ogTitle: "Nebenkostenabrechnung verstehen – einfach erklärt | BriefHelden",
+        ogDescription: "Nebenkostenabrechnung einfach erklärt. Verstehen Sie Nachzahlung, Guthaben, Fristen und wichtige Angaben schnell und verständlich.",
 
         nav_home: "Startseite",
         nav_question: "Frage stellen",
@@ -738,74 +724,70 @@
         nav_privacy: "Datenschutz",
 
         hero_title: "Nebenkostenabrechnung verstehen",
-        hero_sub: "Eine Nebenkostenabrechnung wirkt oft kompliziert und verunsichernd. BriefHelden hilft dabei, den Inhalt sprachlich verständlich einzuordnen und zu verstehen, welche Angaben im Schreiben enthalten sind.",
+        hero_sub: "Eine Nebenkostenabrechnung enthält oft viele Zahlen, Begriffe und wichtige Angaben. BriefHelden erklärt Inhalt, Abrechnungszeitraum, Nachzahlung, Guthaben und enthaltene Angaben einfach und verständlich.",
         hero_cta: "Jetzt Nebenkostenabrechnung erklären lassen – 6,90 €",
         hero_question_cta: "Kurze Frage stellen – 1,49 €",
         meta_1: "Einfach erklärt",
         meta_2: "Schnelle Rückmeldung",
         meta_3: "Vertraulich",
 
-        intro_title: "Was ist eine Nebenkostenabrechnung?",
-        intro_text: "Eine Nebenkostenabrechnung ist ein Schreiben Ihres Vermieters oder Ihrer Hausverwaltung, in dem laufende Kosten für Wohnung oder Haus aufgeführt werden. Häufig geht es um Nachzahlung, Guthaben, Abrechnungszeitraum, einzelne Kostenpositionen oder Fristen. Viele Menschen möchten besser verstehen, welche Angaben im Schreiben enthalten sind und wie der Inhalt sprachlich verständlich einzuordnen ist. Genau dabei hilft BriefHelden mit einer verständlichen Texterklärung.",
+        intro_title: "Was bedeutet eine Nebenkostenabrechnung?",
+        intro_text: "Eine Nebenkostenabrechnung enthält Angaben zu den laufenden Kosten einer Wohnung oder eines Hauses. Darin stehen häufig Informationen zu Heizkosten, Wasserkosten, Hausreinigung, Müll, Abrechnungszeitraum, Nachzahlung, Guthaben und weiteren Kostenpositionen. Viele Menschen möchten zuerst verstehen, welche Inhalte und Angaben im Schreiben stehen. Genau dabei hilft BriefHelden.",
 
-        left_title: "Sprachlich verständlich erklärt",
-        left_text_1: "In einer Nebenkostenabrechnung geht es häufig um Kosten wie Heizung, Wasser, Müll, Hausreinigung oder andere Betriebskosten rund um die Wohnung.",
-        left_text_2: "Wichtig sind dabei vor allem: Für welchen Zeitraum wird abgerechnet? Gibt es eine Nachzahlung oder ein Guthaben? Welche Kosten werden genannt?",
-        left_text_3: "BriefHelden bietet eine sprachliche Vereinfachung des Inhalts, damit Sie das Schreiben besser verstehen und einordnen können.",
+        left_title: "Einfach erklärt",
+        left_text_1: "In einer Nebenkostenabrechnung geht es meist um Betriebskosten wie Heizung, Wasser, Müll, Hausreinigung, Allgemeinstrom oder weitere laufende Kosten rund um die Wohnung.",
+        left_text_2: "Wichtig sind dabei vor allem: Für welchen Zeitraum wird abgerechnet? Gibt es eine Nachzahlung oder ein Guthaben? Welche Kostenpositionen sind enthalten? Und welche Fristen oder Hinweise stehen im Schreiben?",
+        left_text_3: "BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie die Nebenkostenabrechnung besser sprachlich verständlich einordnen können.",
 
         right_title: "So funktioniert es",
         right_li_1: "Nebenkostenabrechnung sicher hochladen",
-        right_li_2: "Wir lesen den Inhalt und erstellen eine verständliche Texterklärung",
+        right_li_2: "Wir lesen den Inhalt und erklären ihn verständlich",
         right_li_3: "Sie erhalten die Erklärung per E-Mail",
-        right_li_4: "Keine Rechtsberatung, keine rechtliche Bewertung, keine Handlungsempfehlung",
+        right_li_4: "Keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) – nur sprachliche Vereinfachung und verständliche Texterklärung ohne rechtliche Bewertung oder Handlungsempfehlung",
 
-        service1_title: "Komplettes Schreiben erklären lassen",
-        service1_text: "Ideal, wenn Sie die ganze Nebenkostenabrechnung vollständig sprachlich verständlich erklärt bekommen möchten.",
+        service1_title: "Komplette Nebenkostenabrechnung erklären lassen",
+        service1_text: "Ideal, wenn Sie die ganze Nebenkostenabrechnung vollständig verstehen möchten.",
         service1_btn: "Jetzt für 6,90 € starten",
 
         service2_title: "Kurze Rückfrage stellen",
-        service2_text: "Ideal, wenn Sie nur eine kurze Frage zu Nachzahlung, Guthaben, Frist oder Inhalt haben.",
+        service2_text: "Ideal, wenn Sie nur eine kurze Frage zu Nachzahlung, Guthaben, Fristen oder Inhalt haben.",
         service2_btn: "Jetzt für 1,49 € fragen",
 
-        disclaimer_bar: "BriefHelden ordnet Schreiben sprachlich verständlich ein und erstellt eine verständliche Texterklärung. Es erfolgt keine Rechtsberatung, keine rechtliche Bewertung und keine Handlungsempfehlung.",
-
         faq_title: "Häufige Fragen zu Nebenkostenabrechnungen",
-        faq_sub: "Diese Fragen tauchen bei solchen Schreiben besonders oft auf:",
-        faq1_q: "Ist eine Nebenkostenabrechnung wichtig?",
-        faq1_a: "Viele Menschen sind unsicher, weil Beträge, Zeiträume und Kostenpositionen oft kompliziert dargestellt werden. Eine verständliche Texterklärung kann helfen, den Inhalt sprachlich verständlich einzuordnen.",
-        faq2_q: "Sind Fristen in einer Nebenkostenabrechnung wichtig?",
-        faq2_a: "Ja, Fristen sind oft besonders wichtig. BriefHelden hilft dabei, diese Angaben im Schreiben verständlich zu erkennen.",
-        faq3_q: "Was ist bei einer Nebenkostenabrechnung besonders wichtig?",
-        faq3_a: "Besonders wichtig sind Abrechnungszeitraum, Nachzahlung oder Guthaben, einzelne Kostenpositionen und alle genannten Fristen oder Hinweise.",
+        faq_sub: "Diese Fragen tauchen bei Nebenkostenabrechnungen besonders oft auf:",
+        faq1_q: "Welche Angaben stehen in einer Nebenkostenabrechnung?",
+        faq1_a: "Eine Nebenkostenabrechnung enthält häufig Angaben zu Abrechnungszeitraum, Kostenpositionen, Vorauszahlungen, Nachzahlung, Guthaben und weiteren Hinweisen.",
+        faq2_q: "Was bedeutet Nachzahlung oder Guthaben?",
+        faq2_a: "In der Abrechnung steht oft, ob noch ein Betrag nachgezahlt werden soll oder ob ein Guthaben ausgewiesen ist. Viele Menschen möchten diese Angaben zuerst verständlich erklärt bekommen.",
+        faq3_q: "Welche Punkte sind besonders wichtig?",
+        faq3_a: "Besonders wichtig sind Abrechnungszeitraum, einzelne Kostenpositionen, Vorauszahlungen, Nachzahlung oder Guthaben sowie genannte Fristen und Hinweise.",
         faq4_q: "Ist BriefHelden eine Rechtsberatung?",
-        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung, keine rechtliche Bewertung und keine Handlungsempfehlung. Sie erhalten eine sprachliche Vereinfachung und verständliche Texterklärung des Inhalts.",
+        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Erklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.",
 
-        tip_title: "Welche Angaben im Schreiben sind oft besonders wichtig?",
-        tip_sub: "Diese Punkte stehen in Nebenkostenabrechnungen häufig im Mittelpunkt:",
-        tip1_title: "Abrechnungszeitraum prüfen",
-        tip1_text: "Schauen Sie, für welchen Zeitraum die Nebenkosten aufgeführt werden und ob dieser klar genannt ist.",
+        tip_title: "Worauf sollten Sie bei einer Nebenkostenabrechnung achten?",
+        tip_sub: "Diese Punkte sind oft besonders wichtig:",
+        tip1_title: "Abrechnungszeitraum ansehen",
+        tip1_text: "Schauen Sie, für welchen Zeitraum die Kosten abgerechnet werden und ob dieser Zeitraum klar genannt ist.",
         tip2_title: "Nachzahlung oder Guthaben ansehen",
-        tip2_text: "Prüfen Sie, ob am Ende eine Nachzahlung genannt wird oder ob ein Guthaben für Sie ausgewiesen ist.",
-        tip3_title: "Kostenpositionen beachten",
-        tip3_text: "Achten Sie darauf, welche Kosten aufgeführt werden und wie diese im Schreiben dargestellt sind.",
-        tip4_title: "Inhalt sprachlich verständlich machen",
-        tip4_text: "Wenn das Schreiben schwer verständlich ist, hilft eine sprachliche Vereinfachung oft sofort weiter.",
+        tip2_text: "Achten Sie darauf, ob eine Nachzahlung gefordert wird oder ob ein Guthaben in der Abrechnung ausgewiesen ist.",
+        tip3_title: "Kostenpositionen ansehen",
+        tip3_text: "Achten Sie auf einzelne Positionen wie Heizung, Wasser, Müll, Hausreinigung oder weitere Betriebskosten.",
+        tip4_title: "Inhalt verständlich machen",
+        tip4_text: "Wenn Zahlen, Begriffe oder einzelne Positionen kompliziert wirken, hilft eine einfache Erklärung oft dabei, die enthaltenen Angaben besser zu erfassen.",
 
         more_title: "Weitere häufige Briefe verstehen",
-        more_sub: "Hier finden Sie weitere Schreiben, die BriefHelden sprachlich verständlich einordnen kann.",
-        more_1_title: "Krankenkasse Brief verstehen",
-        more_1_text: "Schreiben der Krankenkasse verständlich erklärt.",
-        more_2_title: "Versicherung Brief verstehen",
-        more_2_text: "Versicherungsschreiben einfach einordnen.",
-        more_3_title: "Bußgeldbescheid verstehen",
-        more_3_text: "Inhalt eines Bußgeldbescheids klar erklärt.",
+        more_1_title: "Mietvertrag verstehen",
+        more_1_text: "Mietverträge klar und verständlich erklärt.",
+        more_2_title: "Kündigung verstehen",
+        more_2_text: "Kündigungen einfach erklärt.",
+        more_3_title: "Jobcenter Brief verstehen",
+        more_3_text: "Jobcenter Schreiben in einfacher Sprache erklärt.",
         more_4_title: "Stromrechnung verstehen",
-        more_4_text: "Stromkosten und Angaben im Schreiben besser verstehen.",
+        more_4_text: "Stromrechnungen klar und verständlich erklärt.",
         more_5_title: "Gasrechnung verstehen",
-        more_5_text: "Gasrechnung sprachlich verständlich erklärt.",
-        more_6_title: "Bank Brief verstehen",
-        more_6_text: "Bankschreiben klar und einfach erklärt.",
-        more_btn: "Seite ansehen",
+        more_5_text: "Gasrechnungen einfach erklärt.",
+        more_6_title: "Versicherung Brief verstehen",
+        more_6_text: "Versicherungsschreiben klar und verständlich erklärt.",
 
         foot_copy: "© 2026 BriefHelden – Alle Rechte vorbehalten",
         foot_home: "Startseite",
@@ -817,10 +799,10 @@
       },
 
       en: {
-        meta_title: "Understand utility cost statement – simple explanation | BriefHelden",
-        meta_description: "Understand a utility cost statement in plain language: BriefHelden explains which details are included in the document clearly and simply, without complicated legal language.",
-        og_title: "Understand utility cost statement – simple explanation | BriefHelden",
-        og_description: "Utility cost statement explained clearly. BriefHelden helps you understand the content, deadlines, additional payment, credit balance and which details are included in the document.",
+        pageTitle: "Understand a utility cost statement – explained clearly | BriefHelden",
+        metaDescription: "Understand a utility cost statement easily: BriefHelden explains additional payment, credit balance, billing period, cost items and included details clearly and in simple language.",
+        ogTitle: "Understand a utility cost statement – explained clearly | BriefHelden",
+        ogDescription: "Utility cost statement explained simply. Understand additional payment, credit balance, deadlines and important details quickly and clearly.",
 
         nav_home: "Home",
         nav_question: "Ask a question",
@@ -830,74 +812,70 @@
         nav_privacy: "Privacy",
 
         hero_title: "Understand a utility cost statement",
-        hero_sub: "A utility cost statement often seems complicated and unsettling. BriefHelden helps classify the content in plain language and understand which details are included in the document.",
+        hero_sub: "A utility cost statement often contains many numbers, terms and important details. BriefHelden explains the content, billing period, additional payment, credit balance and included details simply and clearly.",
         hero_cta: "Get utility cost statement explained now – €6.90",
         hero_question_cta: "Ask a short question – €1.49",
         meta_1: "Clearly explained",
         meta_2: "Fast response",
         meta_3: "Confidential",
 
-        intro_title: "What is a utility cost statement?",
-        intro_text: "A utility cost statement is a document from your landlord or property management listing ongoing costs for the apartment or house. It often concerns an additional payment, credit balance, billing period, individual cost items or deadlines. Many people want to understand which details are included in the document and how to classify the content in simple language. This is exactly where BriefHelden helps with a plain-language explanation.",
+        intro_title: "What does a utility cost statement mean?",
+        intro_text: "A utility cost statement contains details about the ongoing costs of an apartment or house. It often includes information about heating costs, water costs, building cleaning, garbage, billing period, additional payment, credit balance and further cost items. Many people first want to understand which contents and details are written in the document. That is exactly where BriefHelden helps.",
 
-        left_title: "Explained in simple language",
-        left_text_1: "A utility cost statement often includes costs such as heating, water, garbage collection, building cleaning or other operating costs related to the apartment.",
-        left_text_2: "Important points are: For which period is the billing made? Is there an additional payment or a credit balance? Which costs are listed?",
-        left_text_3: "BriefHelden provides a plain-language simplification of the content so you can better understand and classify the document.",
+        left_title: "Simply explained",
+        left_text_1: "A utility cost statement usually deals with operating costs such as heating, water, garbage, building cleaning, common electricity or other ongoing costs related to the apartment.",
+        left_text_2: "Important points are: For which period is the billing made? Is there an additional payment or a credit balance? Which cost items are included? And which deadlines or notices are written in the document?",
+        left_text_3: "BriefHelden explains the content in simple language so you can better understand the utility cost statement.",
 
         right_title: "How it works",
         right_li_1: "Upload utility cost statement securely",
-        right_li_2: "We read the content and prepare a plain-language explanation",
+        right_li_2: "We read the content and explain it clearly",
         right_li_3: "You receive the explanation by email",
-        right_li_4: "No legal advice, no legal assessment, no recommendation for action",
+        right_li_4: "No legal advice within the meaning of the German Legal Services Act (RDG) — only linguistic simplification and a clear text explanation without legal assessment or recommendation for action",
 
-        service1_title: "Get the full document explained",
-        service1_text: "Ideal if you want the entire utility cost statement explained clearly in simple language.",
+        service1_title: "Get the full utility cost statement explained",
+        service1_text: "Ideal if you want to fully understand the entire utility cost statement.",
         service1_btn: "Start now for €6.90",
 
         service2_title: "Ask a short follow-up question",
-        service2_text: "Ideal if you only have a short question about additional payment, credit balance, deadline or content.",
+        service2_text: "Ideal if you only have a short question about additional payment, credit balance, deadlines or content.",
         service2_btn: "Ask now for €1.49",
 
-        disclaimer_bar: "BriefHelden classifies documents in plain language and provides a clear text explanation. No legal advice, no legal assessment and no recommendation for action are provided.",
-
         faq_title: "Frequently asked questions about utility cost statements",
-        faq_sub: "These questions often come up with this kind of document:",
-        faq1_q: "Is a utility cost statement important?",
-        faq1_a: "Many people feel unsure because amounts, periods and cost items are often presented in a complicated way. A plain-language explanation can help classify the content more clearly.",
-        faq2_q: "Are deadlines in a utility cost statement important?",
-        faq2_a: "Yes, deadlines are often especially important. BriefHelden helps you identify these details in the document clearly.",
-        faq3_q: "What is especially important in a utility cost statement?",
-        faq3_a: "Especially important are the billing period, additional payment or credit balance, individual cost items and all stated deadlines or notes.",
+        faq_sub: "These questions often come up with utility cost statements:",
+        faq1_q: "Which details are written in a utility cost statement?",
+        faq1_a: "A utility cost statement often contains details about the billing period, cost items, advance payments, additional payment, credit balance and further notices.",
+        faq2_q: "What does additional payment or credit balance mean?",
+        faq2_a: "The statement often shows whether an amount still has to be paid or whether a credit balance is listed. Many people want these details explained clearly first.",
+        faq3_q: "Which points are especially important?",
+        faq3_a: "Especially important are the billing period, individual cost items, advance payments, additional payment or credit balance as well as stated deadlines and notices.",
         faq4_q: "Is BriefHelden legal advice?",
-        faq4_a: "No. BriefHelden does not provide legal advice, legal assessment or recommendations for action. You receive a plain-language simplification and clear explanation of the content.",
+        faq4_a: "No. BriefHelden does not provide legal advice within the meaning of the German Legal Services Act (RDG). You receive only a clear explanation and linguistic simplification of your document’s content. There is no legal assessment, no individual review, and no binding recommendation for action.",
 
-        tip_title: "Which details in the document are often especially important?",
-        tip_sub: "These points are often central in utility cost statements:",
-        tip1_title: "Check the billing period",
-        tip1_text: "Look at which period the utility costs refer to and whether this is clearly stated.",
-        tip2_title: "Check additional payment or credit balance",
-        tip2_text: "See whether an additional payment is listed at the end or whether a credit balance is shown for you.",
-        tip3_title: "Review the cost items",
-        tip3_text: "Pay attention to which costs are listed and how they are presented in the document.",
-        tip4_title: "Make the content easier to understand",
-        tip4_text: "If the document is difficult to understand, a plain-language simplification often helps immediately.",
+        tip_title: "What should you look for in a utility cost statement?",
+        tip_sub: "These points are often especially important:",
+        tip1_title: "Look at the billing period",
+        tip1_text: "See for which period the costs are billed and whether this period is clearly stated.",
+        tip2_title: "Look at additional payment or credit balance",
+        tip2_text: "Pay attention to whether an additional payment is requested or whether a credit balance is shown in the statement.",
+        tip3_title: "Look at the cost items",
+        tip3_text: "Pay attention to individual items such as heating, water, garbage, building cleaning or other operating costs.",
+        tip4_title: "Make the content understandable",
+        tip4_text: "If numbers, terms or individual items seem complicated, a simple explanation often helps you grasp the included details more easily.",
 
-        more_title: "Understand other common letters",
-        more_sub: "Here you can find other documents that BriefHelden can classify in simple language.",
-        more_1_title: "Understand health insurance letter",
-        more_1_text: "Health insurance letters explained clearly.",
-        more_2_title: "Understand insurance letter",
-        more_2_text: "Classify insurance letters more easily.",
-        more_3_title: "Understand fine notice",
-        more_3_text: "Content of a fine notice explained clearly.",
-        more_4_title: "Understand electricity bill",
-        more_4_text: "Better understand electricity costs and document details.",
-        more_5_title: "Understand gas bill",
-        more_5_text: "Gas bill explained in simple language.",
-        more_6_title: "Understand bank letter",
-        more_6_text: "Bank letters explained clearly and simply.",
-        more_btn: "Open page",
+        more_title: "Understand more common letters",
+        more_1_title: "Understand a rental agreement",
+        more_1_text: "Rental agreements explained clearly.",
+        more_2_title: "Understand a cancellation",
+        more_2_text: "Cancellations explained simply.",
+        more_3_title: "Understand a Jobcenter letter",
+        more_3_text: "Jobcenter letters explained in simple language.",
+        more_4_title: "Understand an electricity bill",
+        more_4_text: "Electricity bills explained clearly.",
+        more_5_title: "Understand a gas bill",
+        more_5_text: "Gas bills explained simply.",
+        more_6_title: "Understand an insurance letter",
+        more_6_text: "Insurance letters explained clearly.",
 
         foot_copy: "© 2026 BriefHelden – All rights reserved",
         foot_home: "Home",
@@ -909,10 +887,10 @@
       },
 
       tr: {
-        meta_title: "Yan gider hesaplamasını anlayın – basit açıklama | BriefHelden",
-        meta_description: "Yan gider hesaplamasını anlaşılır şekilde değerlendirin: BriefHelden yazıda hangi bilgilerin yer aldığını açık ve basit şekilde açıklar.",
-        og_title: "Yan gider hesaplamasını anlayın – basit açıklama | BriefHelden",
-        og_description: "Yan gider hesaplaması anlaşılır şekilde açıklandı. BriefHelden içerik, süreler, ek ödeme, alacak ve yazıda hangi bilgilerin yer aldığını anlamanıza yardımcı olur.",
+        pageTitle: "Yan gider hesaplamasını anlayın – kolay açıklama | BriefHelden",
+        metaDescription: "Yan gider hesaplamasını kolay anlayın: BriefHelden ek ödeme, alacak, hesap dönemi, gider kalemleri ve belgede yer alan bilgileri sade ve anlaşılır şekilde açıklar.",
+        ogTitle: "Yan gider hesaplamasını anlayın – kolay açıklama | BriefHelden",
+        ogDescription: "Yan gider hesaplaması basitçe açıklanır. Ek ödeme, alacak, süreler ve önemli bilgileri hızlı ve açık şekilde anlayın.",
 
         nav_home: "Ana Sayfa",
         nav_question: "Soru sor",
@@ -922,74 +900,70 @@
         nav_privacy: "Gizlilik",
 
         hero_title: "Yan gider hesaplamasını anlayın",
-        hero_sub: "Bir yan gider hesaplaması çoğu zaman karmaşık ve endişe verici görünür. BriefHelden içeriği anlaşılır şekilde sınıflandırmanıza ve yazıda hangi bilgilerin yer aldığını anlamanıza yardımcı olur.",
+        hero_sub: "Bir yan gider hesaplaması çoğu zaman birçok sayı, terim ve önemli bilgi içerir. BriefHelden içeriği, hesap dönemini, ek ödemeyi, alacağı ve belgede yer alan bilgileri size basit ve açık şekilde açıklar.",
         hero_cta: "Yan gider hesaplamasını şimdi açıklat – 6,90 €",
         hero_question_cta: "Kısa soru sor – 1,49 €",
         meta_1: "Basit açıklandı",
         meta_2: "Hızlı dönüş",
         meta_3: "Gizli",
 
-        intro_title: "Yan gider hesaplaması nedir?",
-        intro_text: "Yan gider hesaplaması, ev sahibinizden veya yönetimden gelen ve daire ya da ev için düzenli giderlerin yer aldığı bir yazıdır. Çoğu zaman ek ödeme, alacak, hesap dönemi, tek tek gider kalemleri veya süreler söz konusu olur. Birçok kişi yazıda hangi bilgilerin yer aldığını ve içeriğin nasıl anlaşılır şekilde sınıflandırılacağını bilmek ister. BriefHelden tam bu konuda anlaşılır bir metin açıklaması ile yardımcı olur.",
+        intro_title: "Bir yan gider hesaplaması ne anlama gelir?",
+        intro_text: "Bir yan gider hesaplaması, daire veya evin sürekli giderlerine ilişkin bilgileri içerir. Bu belgede çoğu zaman ısıtma giderleri, su giderleri, bina temizliği, çöp, hesap dönemi, ek ödeme, alacak ve diğer gider kalemleri yer alır. Birçok kişi önce belgede hangi içeriklerin ve bilgilerin yer aldığını anlamak ister. BriefHelden tam bu konuda yardımcı olur.",
 
-        left_title: "Anlaşılır dille açıklandı",
-        left_text_1: "Bir yan gider hesaplamasında çoğu zaman ısınma, su, çöp, bina temizliği veya daireyle ilgili başka işletme giderleri yer alır.",
-        left_text_2: "Önemli noktalar şunlardır: Hangi dönem için hesaplama yapılıyor? Ek ödeme mi var yoksa alacak mı? Hangi giderler yazıyor?",
-        left_text_3: "BriefHelden içeriğin anlaşılır bir sadeleştirmesini sunar, böylece yazıyı daha iyi anlayabilir ve değerlendirebilirsiniz.",
+        left_title: "Basit açıklama",
+        left_text_1: "Bir yan gider hesaplamasında genelde ısıtma, su, çöp, bina temizliği, ortak elektrik veya daireyle ilgili diğer sürekli giderler yer alır.",
+        left_text_2: "Özellikle şunlar önemlidir: Hangi dönem için hesaplama yapılıyor? Ek ödeme mi var yoksa alacak mı? Hangi gider kalemleri yer alıyor? Ve belgede hangi süreler veya notlar yazıyor?",
+        left_text_3: "BriefHelden içeriği basit dille açıklar, böylece yan gider hesaplamasını daha iyi anlayabilirsiniz.",
 
         right_title: "Nasıl çalışır",
         right_li_1: "Yan gider hesaplamasını güvenli şekilde yükleyin",
-        right_li_2: "İçeriği okuyup anlaşılır bir metin açıklaması hazırlıyoruz",
+        right_li_2: "İçeriği okuyup açık şekilde açıklıyoruz",
         right_li_3: "Açıklamayı e-posta ile alırsınız",
-        right_li_4: "Hukuki danışmanlık yok, hukuki değerlendirme yok, ne yapılması gerektiğine dair öneri yok",
+        right_li_4: "Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık verilmez — yalnızca dilsel sadeleştirme ve hukuki değerlendirme ya da eylem tavsiyesi olmadan anlaşılır metin açıklaması sunulur",
 
-        service1_title: "Belgenin tamamını açıklat",
-        service1_text: "Yan gider hesaplamasının tamamını anlaşılır ve basit şekilde açıklatmak istiyorsanız idealdir.",
+        service1_title: "Yan gider hesaplamasının tamamını açıklat",
+        service1_text: "Yan gider hesaplamasının tamamını anlamak istiyorsanız idealdir.",
         service1_btn: "Şimdi 6,90 € ile başla",
 
         service2_title: "Kısa bir soru sor",
-        service2_text: "Sadece ek ödeme, alacak, süre veya içerikle ilgili kısa bir sorunuz varsa idealdir.",
+        service2_text: "Sadece ek ödeme, alacak, süreler veya içerikle ilgili kısa bir sorunuz varsa idealdir.",
         service2_btn: "Şimdi 1,49 € ile sor",
 
-        disclaimer_bar: "BriefHelden belgeleri anlaşılır şekilde sınıflandırır ve açık bir metin açıklaması sunar. Hukuki danışmanlık, hukuki değerlendirme veya ne yapılması gerektiğine dair öneri sunulmaz.",
-
         faq_title: "Yan gider hesaplamaları hakkında sık sorulan sorular",
-        faq_sub: "Bu tür yazılarda şu sorular sıkça ortaya çıkar:",
-        faq1_q: "Bir yan gider hesaplaması önemli midir?",
-        faq1_a: "Birçok kişi tutarlar, dönemler ve gider kalemleri karmaşık gösterildiği için emin olamaz. Anlaşılır bir açıklama, içeriği daha net değerlendirmeye yardımcı olabilir.",
-        faq2_q: "Yan gider hesaplamasındaki süreler önemli midir?",
-        faq2_a: "Evet, süreler çoğu zaman özellikle önemlidir. BriefHelden bu bilgileri yazı içinde daha anlaşılır şekilde görmenize yardım eder.",
-        faq3_q: "Bir yan gider hesaplamasında en önemli olan nedir?",
-        faq3_a: "Hesap dönemi, ek ödeme veya alacak, tek tek gider kalemleri ve belirtilen tüm süreler veya notlar özellikle önemlidir.",
+        faq_sub: "Yan gider hesaplamalarında şu sorular sıkça ortaya çıkar:",
+        faq1_q: "Bir yan gider hesaplamasında hangi bilgiler yer alır?",
+        faq1_a: "Bir yan gider hesaplaması çoğu zaman hesap dönemi, gider kalemleri, peşin ödemeler, ek ödeme, alacak ve diğer notlara ilişkin bilgiler içerir.",
+        faq2_q: "Ek ödeme veya alacak ne anlama gelir?",
+        faq2_a: "Hesaplamada çoğu zaman ek bir ödeme yapılıp yapılmayacağı veya bir alacak gösterilip gösterilmediği yer alır. Birçok kişi bu bilgilerin önce açık şekilde açıklanmasını ister.",
+        faq3_q: "Hangi noktalar özellikle önemlidir?",
+        faq3_a: "Özellikle hesap dönemi, tek tek gider kalemleri, peşin ödemeler, ek ödeme veya alacak ile belirtilen süreler ve notlar önemlidir.",
         faq4_q: "BriefHelden hukuki danışmanlık mı veriyor?",
-        faq4_a: "Hayır. BriefHelden hukuki danışmanlık, hukuki değerlendirme veya ne yapılması gerektiğine dair öneri vermez. Sadece içeriğin anlaşılır bir sadeleştirmesini ve metin açıklamasını sunar.",
+        faq4_a: "Hayır. BriefHelden, Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık vermez. Yalnızca belgenizin içeriğinin anlaşılır açıklamasını ve dilsel sadeleştirmesini alırsınız. Hukuki değerlendirme, bireysel inceleme veya bağlayıcı bir hareket tavsiyesi yapılmaz.",
 
-        tip_title: "Yazıdaki hangi bilgiler özellikle önemlidir?",
-        tip_sub: "Bu noktalar yan gider hesaplamalarında sıkça merkezde olur:",
-        tip1_title: "Hesap dönemini kontrol edin",
-        tip1_text: "Yan giderlerin hangi dönem için yazıldığını ve bunun açıkça belirtilip belirtilmediğini inceleyin.",
-        tip2_title: "Ek ödeme veya alacağı inceleyin",
-        tip2_text: "Sonunda ek ödeme yazıp yazmadığını veya sizin için bir alacak gösterilip gösterilmediğini kontrol edin.",
-        tip3_title: "Gider kalemlerine dikkat edin",
-        tip3_text: "Hangi giderlerin yer aldığını ve bunların yazıda nasıl gösterildiğini inceleyin.",
-        tip4_title: "İçeriği daha anlaşılır hale getirin",
-        tip4_text: "Yazıyı anlamak zorsa, anlaşılır bir sadeleştirme çoğu zaman hemen yardımcı olur.",
+        tip_title: "Bir yan gider hesaplamasında nelere dikkat etmelisiniz?",
+        tip_sub: "Bu noktalar genelde özellikle önemlidir:",
+        tip1_title: "Hesap dönemine bakın",
+        tip1_text: "Masrafların hangi dönem için hesaplandığına ve bu dönemin açıkça yazılıp yazılmadığına bakın.",
+        tip2_title: "Ek ödeme veya alacağa bakın",
+        tip2_text: "Ek ödeme istenip istenmediğine veya hesaplamada bir alacak gösterilip gösterilmediğine dikkat edin.",
+        tip3_title: "Gider kalemlerine bakın",
+        tip3_text: "Isıtma, su, çöp, bina temizliği veya diğer işletme giderleri gibi tek tek kalemlere dikkat edin.",
+        tip4_title: "İçeriği anlaşılır hale getirin",
+        tip4_text: "Sayılar, terimler veya tek tek kalemler karmaşık görünüyorsa, basit bir açıklama çoğu zaman yer alan bilgileri daha iyi kavramanıza yardımcı olur.",
 
         more_title: "Diğer sık görülen mektupları anlayın",
-        more_sub: "Burada BriefHelden’in anlaşılır şekilde açıklayabildiği diğer yazıları bulabilirsiniz.",
-        more_1_title: "Sağlık sigortası mektubunu anlayın",
-        more_1_text: "Sağlık sigortası yazıları açık şekilde açıklanır.",
-        more_2_title: "Sigorta mektubunu anlayın",
-        more_2_text: "Sigorta yazılarını daha kolay değerlendirin.",
-        more_3_title: "Ceza bildirimini anlayın",
-        more_3_text: "Ceza bildiriminin içeriği açık şekilde açıklanır.",
-        more_4_title: "Elektrik faturasını anlayın",
-        more_4_text: "Elektrik giderlerini ve yazıdaki bilgileri daha iyi anlayın.",
-        more_5_title: "Gaz faturasını anlayın",
-        more_5_text: "Gaz faturası anlaşılır dille açıklanır.",
-        more_6_title: "Banka mektubunu anlayın",
-        more_6_text: "Banka yazıları açık ve basit şekilde açıklanır.",
-        more_btn: "Sayfayı aç",
+        more_1_title: "Kira sözleşmesini anla",
+        more_1_text: "Kira sözleşmeleri açık şekilde açıklanır.",
+        more_2_title: "Fesih yazısını anla",
+        more_2_text: "Fesih yazıları basit şekilde açıklanır.",
+        more_3_title: "Jobcenter mektubunu anla",
+        more_3_text: "Jobcenter yazıları basit dille açıklanır.",
+        more_4_title: "Elektrik faturasını anla",
+        more_4_text: "Elektrik faturaları açık şekilde açıklanır.",
+        more_5_title: "Gaz faturasını anla",
+        more_5_text: "Gaz faturaları basit şekilde açıklanır.",
+        more_6_title: "Sigorta mektubunu anla",
+        more_6_text: "Sigorta yazıları açık şekilde açıklanır.",
 
         foot_copy: "© 2026 BriefHelden – Tüm hakları saklıdır",
         foot_home: "Ana Sayfa",
@@ -1001,10 +975,10 @@
       },
 
       ru: {
-        meta_title: "Понять расчёт коммунальных расходов – простое объяснение | BriefHelden",
-        meta_description: "Понять расчёт коммунальных расходов простым языком: BriefHelden объясняет, какие данные содержатся в документе, ясно и понятно.",
-        og_title: "Понять расчёт коммунальных расходов – простое объяснение | BriefHelden",
-        og_description: "Расчёт коммунальных расходов объяснён понятно. BriefHelden помогает понять содержание, сроки, доплату, переплату и какие данные указаны в документе.",
+        pageTitle: "Понять расчёт коммунальных расходов – простое объяснение | BriefHelden",
+        metaDescription: "Легко понять расчёт коммунальных расходов: BriefHelden просто и понятно объясняет доплату, переплату, расчётный период, статьи расходов и указанные в документе сведения.",
+        ogTitle: "Понять расчёт коммунальных расходов – простое объяснение | BriefHelden",
+        ogDescription: "Расчёт коммунальных расходов объясняется простым языком. Понятно разберитесь в доплате, переплате, сроках и важных сведениях.",
 
         nav_home: "Главная",
         nav_question: "Задать вопрос",
@@ -1014,74 +988,70 @@
         nav_privacy: "Конфиденциальность",
 
         hero_title: "Понять расчёт коммунальных расходов",
-        hero_sub: "Расчёт коммунальных расходов часто кажется сложным и тревожным. BriefHelden помогает понятно разобраться в содержании и понять, какие данные указаны в документе.",
+        hero_sub: "Расчёт коммунальных расходов часто содержит много цифр, терминов и важных данных. BriefHelden объяснит содержание, расчётный период, доплату, переплату и указанные в документе сведения просто и ясно.",
         hero_cta: "Объяснить расчёт коммунальных расходов – 6,90 €",
         hero_question_cta: "Задать короткий вопрос – 1,49 €",
         meta_1: "Просто объяснено",
         meta_2: "Быстрый ответ",
         meta_3: "Конфиденциально",
 
-        intro_title: "Что такое расчёт коммунальных расходов?",
-        intro_text: "Расчёт коммунальных расходов — это документ от вашего арендодателя или управляющей компании, где указаны текущие расходы по квартире или дому. Часто речь идёт о доплате, переплате, расчётном периоде, отдельных статьях расходов или сроках. Многие люди хотят понять, какие данные содержатся в документе и как разобраться в содержании простым языком. Именно здесь BriefHelden помогает с понятным текстовым объяснением.",
+        intro_title: "Что означает расчёт коммунальных расходов?",
+        intro_text: "Расчёт коммунальных расходов содержит сведения о текущих расходах по квартире или дому. В нём часто есть информация о расходах на отопление, воду, уборку дома, мусор, расчётный период, доплату, переплату и другие статьи расходов. Многие люди сначала хотят понять, какие именно сведения и данные указаны в документе. Именно здесь помогает BriefHelden.",
 
-        left_title: "Понятно простым языком",
-        left_text_1: "В расчёте коммунальных расходов часто указываются расходы на отопление, воду, мусор, уборку дома или другие эксплуатационные расходы по квартире.",
-        left_text_2: "Особенно важно следующее: За какой период сделан расчёт? Есть ли доплата или переплата? Какие расходы указаны?",
-        left_text_3: "BriefHelden делает содержание проще и понятнее, чтобы вам было легче понять и классифицировать документ.",
+        left_title: "Просто объясняем",
+        left_text_1: "В расчёте коммунальных расходов обычно речь идёт об эксплуатационных расходах, таких как отопление, вода, мусор, уборка дома, общий электрический ток или другие текущие расходы по квартире.",
+        left_text_2: "Особенно важно следующее: За какой период сделан расчёт? Есть ли доплата или переплата? Какие статьи расходов включены? И какие сроки или примечания указаны в документе?",
+        left_text_3: "BriefHelden объясняет содержание простым языком, чтобы вам было легче понять расчёт коммунальных расходов.",
 
         right_title: "Как это работает",
         right_li_1: "Безопасно загрузите расчёт коммунальных расходов",
-        right_li_2: "Мы читаем содержание и готовим понятное текстовое объяснение",
+        right_li_2: "Мы читаем содержание и понятно объясняем его",
         right_li_3: "Вы получаете объяснение по e-mail",
-        right_li_4: "Без юридической консультации, без правовой оценки, без рекомендаций к действиям",
+        right_li_4: "Это не юридическая консультация в смысле немецкого Закона о юридических услугах (RDG) — только языковое упрощение и понятное текстовое объяснение без правовой оценки и без рекомендаций к действиям",
 
-        service1_title: "Получить полное объяснение документа",
-        service1_text: "Идеально, если вы хотите, чтобы весь расчёт коммунальных расходов был объяснён просто и понятно.",
+        service1_title: "Получить полное объяснение расчёта коммунальных расходов",
+        service1_text: "Идеально, если вы хотите полностью понять весь расчёт коммунальных расходов.",
         service1_btn: "Начать за 6,90 €",
 
         service2_title: "Задать короткий вопрос",
-        service2_text: "Идеально, если у вас только короткий вопрос о доплате, переплате, сроке или содержании.",
+        service2_text: "Идеально, если у вас только короткий вопрос о доплате, переплате, сроках или содержании.",
         service2_btn: "Спросить за 1,49 €",
 
-        disclaimer_bar: "BriefHelden помогает понятно разобраться в документах и предоставляет ясное текстовое объяснение. Юридическая консультация, правовая оценка и рекомендации к действиям не предоставляются.",
-
         faq_title: "Частые вопросы о расчётах коммунальных расходов",
-        faq_sub: "Эти вопросы особенно часто возникают по таким документам:",
-        faq1_q: "Расчёт коммунальных расходов важен?",
-        faq1_a: "Многие люди не уверены, потому что суммы, периоды и статьи расходов часто представлены сложно. Понятное объяснение может помочь лучше разобраться в содержании.",
-        faq2_q: "Важны ли сроки в расчёте коммунальных расходов?",
-        faq2_a: "Да, сроки часто особенно важны. BriefHelden помогает вам увидеть эти данные в документе более понятно.",
-        faq3_q: "Что особенно важно в расчёте коммунальных расходов?",
-        faq3_a: "Особенно важны расчётный период, доплата или переплата, отдельные статьи расходов и все указанные сроки или примечания.",
+        faq_sub: "Эти вопросы особенно часто возникают по расчётам коммунальных расходов:",
+        faq1_q: "Какие сведения содержатся в расчёте коммунальных расходов?",
+        faq1_a: "Расчёт коммунальных расходов часто содержит сведения о расчётном периоде, статьях расходов, авансовых платежах, доплате, переплате и других примечаниях.",
+        faq2_q: "Что означает доплата или переплата?",
+        faq2_a: "В расчёте часто указано, нужно ли доплатить определённую сумму или показана переплата. Многие люди хотят сначала получить понятное объяснение этих сведений.",
+        faq3_q: "Какие пункты особенно важны?",
+        faq3_a: "Особенно важны расчётный период, отдельные статьи расходов, авансовые платежи, доплата или переплата, а также указанные сроки и примечания.",
         faq4_q: "BriefHelden — это юридическая консультация?",
-        faq4_a: "Нет. BriefHelden не предоставляет юридических консультаций, правовой оценки и рекомендаций к действиям. Вы получаете только понятное упрощение и текстовое объяснение содержания.",
+        faq4_a: "Нет. BriefHelden не оказывает юридических консультаций в смысле немецкого Закона о юридических услугах (RDG). Вы получаете только понятное объяснение и языковое упрощение содержания вашего документа. Юридическая оценка, индивидуальная проверка и обязательные рекомендации к действиям не предоставляются.",
 
-        tip_title: "Какие данные в документе часто особенно важны?",
-        tip_sub: "Эти пункты часто находятся в центре внимания в расчётах коммунальных расходов:",
-        tip1_title: "Проверьте расчётный период",
-        tip1_text: "Посмотрите, за какой период указаны коммунальные расходы и ясно ли это обозначено.",
-        tip2_title: "Проверьте доплату или переплату",
-        tip2_text: "Проверьте, указана ли в конце доплата или для вас показана переплата.",
-        tip3_title: "Обратите внимание на статьи расходов",
-        tip3_text: "Посмотрите, какие расходы указаны и как они представлены в документе.",
-        tip4_title: "Сделайте содержание понятнее",
-        tip4_text: "Если документ трудно понять, простое и понятное объяснение часто сразу помогает.",
+        tip_title: "На что стоит обратить внимание в расчёте коммунальных расходов?",
+        tip_sub: "Эти пункты часто особенно важны:",
+        tip1_title: "Посмотрите на расчётный период",
+        tip1_text: "Посмотрите, за какой период начислены расходы и ясно ли этот период указан.",
+        tip2_title: "Посмотрите на доплату или переплату",
+        tip2_text: "Обратите внимание, требуется ли доплата или указана ли переплата в расчёте.",
+        tip3_title: "Посмотрите на статьи расходов",
+        tip3_text: "Обратите внимание на отдельные позиции, такие как отопление, вода, мусор, уборка дома или другие эксплуатационные расходы.",
+        tip4_title: "Сделайте содержание понятным",
+        tip4_text: "Если цифры, термины или отдельные позиции кажутся сложными, простое объяснение часто помогает легче воспринять содержащиеся в нём сведения.",
 
-        more_title: "Понять другие распространённые письма",
-        more_sub: "Здесь вы найдёте другие документы, которые BriefHelden может объяснить простым языком.",
-        more_1_title: "Понять письмо от больничной кассы",
-        more_1_text: "Письма от больничной кассы объясняются понятно.",
-        more_2_title: "Понять письмо от страховой",
-        more_2_text: "Легче разобраться в страховых письмах.",
-        more_3_title: "Понять постановление о штрафе",
-        more_3_text: "Содержание постановления о штрафе объясняется ясно.",
+        more_title: "Другие часто встречающиеся письма",
+        more_1_title: "Понять договор аренды",
+        more_1_text: "Договоры аренды объяснены понятно.",
+        more_2_title: "Понять расторжение",
+        more_2_text: "Расторжения объяснены просто.",
+        more_3_title: "Понять письмо Jobcenter",
+        more_3_text: "Письма Jobcenter объяснены простым языком.",
         more_4_title: "Понять счёт за электричество",
-        more_4_text: "Лучше понять расходы на электричество и данные в документе.",
+        more_4_text: "Счета за электричество объяснены понятно.",
         more_5_title: "Понять счёт за газ",
-        more_5_text: "Счёт за газ объясняется простым языком.",
-        more_6_title: "Понять письмо из банка",
-        more_6_text: "Банковские письма объясняются ясно и просто.",
-        more_btn: "Открыть страницу",
+        more_5_text: "Счета за газ объяснены просто.",
+        more_6_title: "Понять письмо от страховой",
+        more_6_text: "Письма от страховой объяснены понятно.",
 
         foot_copy: "© 2026 BriefHelden – Все права защищены",
         foot_home: "Главная",
@@ -1102,40 +1072,41 @@
       const questionBtn = document.getElementById("questionBtn");
       const serviceQuestionBtn = document.getElementById("serviceQuestionBtn");
 
-      if (stripeBtn) stripeBtn.href = mainLink;
-      if (servicePrimaryBtn) servicePrimaryBtn.href = mainLink;
-      if (questionBtn) questionBtn.href = questionLink;
-      if (serviceQuestionBtn) serviceQuestionBtn.href = questionLink;
+      if(stripeBtn) stripeBtn.href = mainLink;
+      if(servicePrimaryBtn) servicePrimaryBtn.href = mainLink;
+      if(questionBtn) questionBtn.href = questionLink;
+      if(serviceQuestionBtn) serviceQuestionBtn.href = questionLink;
     }
 
     function updateMeta(lang){
       const dict = i18n[lang] || i18n.de;
+      document.title = dict.pageTitle;
 
-      document.title = dict.meta_title;
-
-      const metaDescription = document.querySelector('meta[name="description"]');
+      const description = document.querySelector('meta[name="description"]');
       const ogTitle = document.querySelector('meta[property="og:title"]');
       const ogDescription = document.querySelector('meta[property="og:description"]');
 
-      if (metaDescription) metaDescription.setAttribute("content", dict.meta_description);
-      if (ogTitle) ogTitle.setAttribute("content", dict.og_title);
-      if (ogDescription) ogDescription.setAttribute("content", dict.og_description);
+      if(description) description.setAttribute("content", dict.metaDescription);
+      if(ogTitle) ogTitle.setAttribute("content", dict.ogTitle);
+      if(ogDescription) ogDescription.setAttribute("content", dict.ogDescription);
     }
 
     function applyLang(lang){
-      const dict = i18n[lang] || i18n.de;
-      document.documentElement.lang = lang;
+      const currentLang = i18n[lang] ? lang : "de";
+      const dict = i18n[currentLang];
+
+      document.documentElement.lang = currentLang;
 
       document.querySelectorAll("[data-i18n]").forEach((el) => {
         const key = el.getAttribute("data-i18n");
-        if (key in dict) {
+        if(key in dict){
           el.textContent = dict[key];
         }
       });
 
-      updateMeta(lang);
-      updateLinks(lang);
-      localStorage.setItem("briefhelden_lang", lang);
+      updateMeta(currentLang);
+      updateLinks(currentLang);
+      localStorage.setItem("briefhelden_lang", currentLang);
     }
 
     const select = document.getElementById("langSelect");
