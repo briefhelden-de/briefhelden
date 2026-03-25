@@ -6,10 +6,10 @@
   <title>Polizei Brief verstehen – einfach erklärt | BriefHelden</title>
   <meta
     name="description"
-    content="Polizei Brief einfach verstehen: BriefHelden erklärt Anhörung, Vorladung, Fristen und wichtige Angaben klar, einfach und ohne komplizierte Fachsprache."
+    content="Polizei Brief verständlich erklärt: BriefHelden erklärt Anhörung, Vorladung, Fristen, Aktenzeichen und enthaltene Angaben klar, einfach und ohne komplizierte Fachsprache."
   />
   <meta name="robots" content="index, follow" />
-<link rel="canonical" href="https://www.briefhelden-service.de/polizei-brief-verstehen.html" />
+  <link rel="canonical" href="https://www.briefhelden-service.de/polizei-brief-verstehen.html" />
 
   <meta property="og:title" content="Polizei Brief verstehen – einfach erklärt | BriefHelden" />
   <meta
@@ -17,9 +17,12 @@
     content="Polizei Brief einfach erklärt. Verstehen Sie Anhörung, Vorladung, Fristen und wichtige Angaben schnell und verständlich."
   />
   <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.briefhelden-service.de/polizei-brief-verstehen.html" />
+  <meta property="og:url" content="https://www.briefhelden-service.de/polizei-brief-verstehen.html" />
+  <meta property="og:image" content="https://www.briefhelden-service.de/og-image.jpg" />
+  <meta property="og:site_name" content="BriefHelden" />
+  <meta name="theme-color" content="#0b1220" />
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -104,6 +107,7 @@
         linear-gradient(180deg, rgba(55,120,255,.9), rgba(20,70,190,.9));
       box-shadow:0 10px 18px rgba(0,0,0,.18);
       position:relative;
+      flex:0 0 auto;
     }
 
     .brand .logo:after{
@@ -171,7 +175,7 @@
       padding:68px 18px 40px;
       background:
         linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.58)),
-url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=2200&q=60");
+        url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=2200&q=60");
       background-size:cover;
       background-position:center;
     }
@@ -263,7 +267,8 @@ url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fi
     .pad{padding:22px}
 
     .headline,
-    .sectionTitle{
+    .sectionTitle,
+    .moreLinks h2{
       text-align:center;
       margin:0 0 10px;
       font-weight:950;
@@ -288,7 +293,8 @@ url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fi
     }
 
     .infoCard,
-    .faqItem{
+    .faqItem,
+    .moreCard{
       border-radius:var(--radius-lg);
       border:1px solid rgba(255,255,255,.55);
       background:rgba(255,255,255,.20);
@@ -296,20 +302,24 @@ url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fi
     }
 
     .infoCard h3,
-    .faqItem h3{
+    .faqItem h3,
+    .moreCard h3{
       margin:0 0 10px;
       font-size:22px;
       font-weight:950;
+      line-height:1.25;
     }
 
-    .faqItem h3{
+    .faqItem h3,
+    .moreCard h3{
       font-size:18px;
       margin-bottom:8px;
     }
 
     .infoCard p,
     .infoCard li,
-    .faqItem p{
+    .faqItem p,
+    .moreCard p{
       color:rgba(11,18,32,.76);
       line-height:1.65;
       font-weight:700;
@@ -323,7 +333,8 @@ url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fi
       padding-left:18px;
     }
 
-    .faqGrid{
+    .faqGrid,
+    .moreGrid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:14px;
@@ -348,6 +359,7 @@ url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fi
       margin:0 0 8px;
       font-size:20px;
       font-weight:950;
+      line-height:1.3;
     }
 
     .serviceMini .box p{
@@ -374,6 +386,22 @@ url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fi
 
     .miniBtn.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
     .miniBtn.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
+
+    .moreLinks{
+      max-width:var(--max);
+      margin:28px auto 0;
+      padding:0 18px 30px;
+    }
+
+    .moreCard{
+      display:block;
+      transition:transform .18s ease, background .18s ease;
+    }
+
+    .moreCard:hover{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,.30);
+    }
 
     footer{
       margin-top:18px;
@@ -408,6 +436,7 @@ url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fi
       nav.links{display:none}
       .grid2,
       .faqGrid,
+      .moreGrid,
       .serviceMini{grid-template-columns:1fr}
       .cta{min-width:92vw}
       .miniBtn{min-width:100%}
@@ -446,7 +475,7 @@ url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fi
     <div class="wrap">
       <h1 data-i18n="hero_title">Polizei Brief verstehen</h1>
       <p data-i18n="hero_sub">
-        Ein Schreiben von der Polizei wirkt oft ernst oder belastend. BriefHelden erklärt Ihnen Anhörung, Vorladung, Fristen und wichtige Angaben einfach und verständlich.
+        Ein Schreiben von der Polizei enthält oft ernste Hinweise und wichtige Angaben. BriefHelden erklärt Anhörung, Vorladung, Fristen und enthaltene Angaben einfach und verständlich.
       </p>
 
       <div class="ctaGroup">
@@ -473,9 +502,9 @@ url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fi
     <div class="wrap">
       <div class="glassCard">
         <div class="pad">
-          <h2 class="headline" data-i18n="intro_title">Was ist ein Polizei Brief?</h2>
+          <h2 class="headline" data-i18n="intro_title">Was bedeutet ein Polizei Brief?</h2>
           <p class="lead" data-i18n="intro_text">
-            Ein Brief von der Polizei kann zum Beispiel eine Anhörung, eine Vorladung, eine Nachfrage oder einen Hinweis auf ein Verfahren enthalten. Viele Menschen möchten verstehen, worum es genau geht, ob eine Frist gilt und welche Angaben besonders wichtig sind. Genau dabei hilft BriefHelden.
+            Ein Brief von der Polizei enthält häufig Angaben zu einem Vorgang, einer Anhörung, einer Vorladung, einer Nachfrage oder einem Hinweis auf ein Verfahren. Darin stehen oft Informationen zu Aktenzeichen, Datum, Fristen und weiteren Hinweisen. Viele Menschen möchten zuerst verstehen, welche Inhalte und Angaben im Schreiben stehen. Genau dabei hilft BriefHelden.
           </p>
 
           <div class="grid2">
@@ -488,7 +517,7 @@ url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fi
                 Wichtig sind dabei vor allem: Welche Art von Schreiben liegt vor? Gibt es eine Frist? Wird eine Rückmeldung erwartet? Und welche Angaben zum Vorgang oder Aktenzeichen stehen im Brief?
               </p>
               <p data-i18n="left_text_3">
-                BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie den Polizei Brief besser einordnen können.
+                BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie den Polizei Brief besser sprachlich verständlich einordnen können.
               </p>
             </div>
 
@@ -498,14 +527,14 @@ url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fi
                 <li data-i18n="right_li_1">Polizei Brief sicher hochladen</li>
                 <li data-i18n="right_li_2">Wir lesen den Inhalt und erklären ihn verständlich</li>
                 <li data-i18n="right_li_3">Sie erhalten die Erklärung per E-Mail</li>
-                <li data-i18n="right_li_4">Keine Rechtsberatung – nur verständliche Texterklärung</li>
+                <li data-i18n="right_li_4">Keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) – nur sprachliche Vereinfachung und verständliche Texterklärung ohne rechtliche Bewertung oder Handlungsempfehlung</li>
               </ul>
             </div>
           </div>
 
           <div class="serviceMini">
             <div class="box">
-              <h3 data-i18n="service1_title">Komplettes Schreiben erklären lassen</h3>
+              <h3 data-i18n="service1_title">Kompletten Polizei Brief erklären lassen</h3>
               <p data-i18n="service1_text">
                 Ideal, wenn Sie den ganzen Polizei Brief vollständig verstehen möchten.
               </p>
@@ -533,28 +562,28 @@ url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fi
 
       <div class="glassCard">
         <div class="pad">
-          <h2 class="sectionTitle" data-i18n="faq_title">Häufige Fragen zum Polizei Brief</h2>
+          <h2 class="sectionTitle" data-i18n="faq_title">Häufige Fragen zu Polizei Briefen</h2>
           <p class="sectionSub" data-i18n="faq_sub">
             Diese Fragen tauchen bei Schreiben von der Polizei besonders oft auf:
           </p>
 
           <div class="faqGrid">
             <div class="faqItem">
-              <h3 data-i18n="faq1_q">Was steht meist in einem Polizei Brief?</h3>
+              <h3 data-i18n="faq1_q">Welche Angaben stehen in einem Polizei Brief?</h3>
               <p data-i18n="faq1_a">
-                Oft geht es um eine Anhörung, eine Vorladung, eine Nachfrage oder Hinweise zu einem bestimmten Vorgang. Welche Art von Schreiben vorliegt, ist entscheidend.
+                Ein Polizei Brief enthält häufig Angaben zu Art des Schreibens, Aktenzeichen, Datum, Fristen und Hinweisen dazu, worauf sich der Vorgang bezieht.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="faq2_q">Sind Fristen besonders wichtig?</h3>
+              <h3 data-i18n="faq2_q">Was bedeuten Anhörung oder Vorladung?</h3>
               <p data-i18n="faq2_a">
-                Ja, Fristen und genannte Termine sollten genau beachtet werden. Viele Menschen möchten zuerst verstehen, was im Schreiben überhaupt verlangt wird.
+                Im Schreiben steht oft, ob es sich um eine Anhörung, eine Vorladung oder eine andere Anfrage handelt. Viele Menschen möchten diese Angaben zuerst verständlich erklärt bekommen.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="faq3_q">Welche Angaben sollte ich prüfen?</h3>
+              <h3 data-i18n="faq3_q">Welche Punkte sind besonders wichtig?</h3>
               <p data-i18n="faq3_a">
                 Besonders wichtig sind Aktenzeichen, Datum, Art des Schreibens, genannte Fristen und Hinweise dazu, worauf sich der Brief bezieht.
               </p>
@@ -563,7 +592,7 @@ url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fi
             <div class="faqItem">
               <h3 data-i18n="faq4_q">Ist BriefHelden eine Rechtsberatung?</h3>
               <p data-i18n="faq4_a">
-                Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.
+                Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Erklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.
               </p>
             </div>
           </div>
@@ -581,21 +610,21 @@ url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fi
 
           <div class="faqGrid">
             <div class="faqItem">
-              <h3 data-i18n="tip1_title">Art des Schreibens prüfen</h3>
+              <h3 data-i18n="tip1_title">Art des Schreibens ansehen</h3>
               <p data-i18n="tip1_text">
                 Schauen Sie, ob es sich um eine Anhörung, Vorladung, Nachfrage oder einen anderen Hinweis handelt.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="tip2_title">Frist beachten</h3>
+              <h3 data-i18n="tip2_title">Fristen ansehen</h3>
               <p data-i18n="tip2_text">
                 Prüfen Sie, ob ein Termin, eine Antwortfrist oder ein bestimmtes Datum genannt wird.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="tip3_title">Aktenzeichen ansehen</h3>
+              <h3 data-i18n="tip3_title">Aktenzeichen und Angaben ansehen</h3>
               <p data-i18n="tip3_text">
                 Achten Sie auf Aktenzeichen, Vorgangsnummer und Angaben dazu, worauf sich der Brief genau bezieht.
               </p>
@@ -604,10 +633,48 @@ url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fi
             <div class="faqItem">
               <h3 data-i18n="tip4_title">Inhalt verständlich machen</h3>
               <p data-i18n="tip4_text">
-                Wenn das Schreiben ernst oder unklar wirkt, hilft eine einfache Erklärung oft sofort weiter.
+                Wenn Formulierungen oder Hinweise ernst oder unklar wirken, hilft eine einfache Erklärung oft dabei, die enthaltenen Angaben besser zu erfassen.
               </p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div style="height:18px"></div>
+
+      <div class="moreLinks">
+        <h2 data-i18n="more_title">Weitere häufige Briefe verstehen</h2>
+
+        <div class="moreGrid">
+          <a class="moreCard" href="/inkasso-brief-verstehen.html">
+            <h3 data-i18n="more_1_title">Inkasso Brief verstehen</h3>
+            <p data-i18n="more_1_text">Inkasso Schreiben klar und verständlich erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/mahnbescheid-verstehen.html">
+            <h3 data-i18n="more_2_title">Mahnbescheid verstehen</h3>
+            <p data-i18n="more_2_text">Mahnbescheide einfach erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/jobcenter-brief-verstehen.html">
+            <h3 data-i18n="more_3_title">Jobcenter Brief verstehen</h3>
+            <p data-i18n="more_3_text">Jobcenter Schreiben in einfacher Sprache erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/pfaendungsbescheid-verstehen.html">
+            <h3 data-i18n="more_4_title">Pfändungsbescheid verstehen</h3>
+            <p data-i18n="more_4_text">Pfändungsbescheide klar und verständlich erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/vollstreckungsbescheid-verstehen.html">
+            <h3 data-i18n="more_5_title">Vollstreckungsbescheid verstehen</h3>
+            <p data-i18n="more_5_text">Vollstreckungsbescheide einfach erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/finanzamt-brief-verstehen.html">
+            <h3 data-i18n="more_6_title">Finanzamt Brief verstehen</h3>
+            <p data-i18n="more_6_text">Schreiben vom Finanzamt klar und verständlich erklärt.</p>
+          </a>
         </div>
       </div>
     </div>
@@ -615,7 +682,7 @@ url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fi
 
   <footer>
     <div class="footWrap">
-      <div>© 2026 BriefHelden – Alle Rechte vorbehalten</div>
+      <div data-i18n="foot_copy">© 2026 BriefHelden – Alle Rechte vorbehalten</div>
       <div class="footLinks">
         <a href="index.html" data-i18n="foot_home">Startseite</a>
         <a href="frage.html" data-i18n="foot_question">Frage stellen</a>
@@ -629,21 +696,26 @@ url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fi
 
   <script>
     const STRIPE_LINKS = {
-de: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
-en: "https://buy.stripe.com/fZubJ0dpXbMAbfpcIZ4sE01",
-tr: "https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
-ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
+      de: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
+      en: "https://buy.stripe.com/fZubJ0dpXbMAbfpcIZ4sE01",
+      tr: "https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
+      ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
     };
 
     const QUESTION_LINKS = {
-de: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
-en: "https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
-tr: "https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
-ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
+      de: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
+      en: "https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
+      tr: "https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
+      ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
     };
 
     const i18n = {
       de: {
+        pageTitle: "Polizei Brief verstehen – einfach erklärt | BriefHelden",
+        metaDescription: "Polizei Brief verständlich erklärt: BriefHelden erklärt Anhörung, Vorladung, Fristen, Aktenzeichen und enthaltene Angaben klar, einfach und ohne komplizierte Fachsprache.",
+        ogTitle: "Polizei Brief verstehen – einfach erklärt | BriefHelden",
+        ogDescription: "Polizei Brief einfach erklärt. Verstehen Sie Anhörung, Vorladung, Fristen und wichtige Angaben schnell und verständlich.",
+
         nav_home: "Startseite",
         nav_question: "Frage stellen",
         nav_refund: "Widerruf",
@@ -652,28 +724,28 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_privacy: "Datenschutz",
 
         hero_title: "Polizei Brief verstehen",
-        hero_sub: "Ein Schreiben von der Polizei wirkt oft ernst oder belastend. BriefHelden erklärt Ihnen Anhörung, Vorladung, Fristen und wichtige Angaben einfach und verständlich.",
+        hero_sub: "Ein Schreiben von der Polizei enthält oft ernste Hinweise und wichtige Angaben. BriefHelden erklärt Anhörung, Vorladung, Fristen und enthaltene Angaben einfach und verständlich.",
         hero_cta: "Jetzt Polizei Brief erklären lassen – 6,90 €",
         hero_question_cta: "Kurze Frage stellen – 1,49 €",
         meta_1: "Einfach erklärt",
         meta_2: "Schnelle Rückmeldung",
         meta_3: "Vertraulich",
 
-        intro_title: "Was ist ein Polizei Brief?",
-        intro_text: "Ein Brief von der Polizei kann zum Beispiel eine Anhörung, eine Vorladung, eine Nachfrage oder einen Hinweis auf ein Verfahren enthalten. Viele Menschen möchten verstehen, worum es genau geht, ob eine Frist gilt und welche Angaben besonders wichtig sind. Genau dabei hilft BriefHelden.",
+        intro_title: "Was bedeutet ein Polizei Brief?",
+        intro_text: "Ein Brief von der Polizei enthält häufig Angaben zu einem Vorgang, einer Anhörung, einer Vorladung, einer Nachfrage oder einem Hinweis auf ein Verfahren. Darin stehen oft Informationen zu Aktenzeichen, Datum, Fristen und weiteren Hinweisen. Viele Menschen möchten zuerst verstehen, welche Inhalte und Angaben im Schreiben stehen. Genau dabei hilft BriefHelden.",
 
         left_title: "Einfach erklärt",
         left_text_1: "Ein Polizei Brief kann sich auf ein bestimmtes Ereignis, einen Vorwurf, eine Zeugenanfrage oder eine Bitte um Rückmeldung beziehen.",
         left_text_2: "Wichtig sind dabei vor allem: Welche Art von Schreiben liegt vor? Gibt es eine Frist? Wird eine Rückmeldung erwartet? Und welche Angaben zum Vorgang oder Aktenzeichen stehen im Brief?",
-        left_text_3: "BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie den Polizei Brief besser einordnen können.",
+        left_text_3: "BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie den Polizei Brief besser sprachlich verständlich einordnen können.",
 
         right_title: "So funktioniert es",
         right_li_1: "Polizei Brief sicher hochladen",
         right_li_2: "Wir lesen den Inhalt und erklären ihn verständlich",
         right_li_3: "Sie erhalten die Erklärung per E-Mail",
-        right_li_4: "Keine Rechtsberatung – nur verständliche Texterklärung",
+        right_li_4: "Keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) – nur sprachliche Vereinfachung und verständliche Texterklärung ohne rechtliche Bewertung oder Handlungsempfehlung",
 
-        service1_title: "Komplettes Schreiben erklären lassen",
+        service1_title: "Kompletten Polizei Brief erklären lassen",
         service1_text: "Ideal, wenn Sie den ganzen Polizei Brief vollständig verstehen möchten.",
         service1_btn: "Jetzt für 6,90 € starten",
 
@@ -681,28 +753,43 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         service2_text: "Ideal, wenn Sie nur eine kurze Frage zu Frist, Anhörung oder Inhalt haben.",
         service2_btn: "Jetzt für 1,49 € fragen",
 
-        faq_title: "Häufige Fragen zum Polizei Brief",
+        faq_title: "Häufige Fragen zu Polizei Briefen",
         faq_sub: "Diese Fragen tauchen bei Schreiben von der Polizei besonders oft auf:",
-        faq1_q: "Was steht meist in einem Polizei Brief?",
-        faq1_a: "Oft geht es um eine Anhörung, eine Vorladung, eine Nachfrage oder Hinweise zu einem bestimmten Vorgang. Welche Art von Schreiben vorliegt, ist entscheidend.",
-        faq2_q: "Sind Fristen besonders wichtig?",
-        faq2_a: "Ja, Fristen und genannte Termine sollten genau beachtet werden. Viele Menschen möchten zuerst verstehen, was im Schreiben überhaupt verlangt wird.",
-        faq3_q: "Welche Angaben sollte ich prüfen?",
+        faq1_q: "Welche Angaben stehen in einem Polizei Brief?",
+        faq1_a: "Ein Polizei Brief enthält häufig Angaben zu Art des Schreibens, Aktenzeichen, Datum, Fristen und Hinweisen dazu, worauf sich der Vorgang bezieht.",
+        faq2_q: "Was bedeuten Anhörung oder Vorladung?",
+        faq2_a: "Im Schreiben steht oft, ob es sich um eine Anhörung, eine Vorladung oder eine andere Anfrage handelt. Viele Menschen möchten diese Angaben zuerst verständlich erklärt bekommen.",
+        faq3_q: "Welche Punkte sind besonders wichtig?",
         faq3_a: "Besonders wichtig sind Aktenzeichen, Datum, Art des Schreibens, genannte Fristen und Hinweise dazu, worauf sich der Brief bezieht.",
         faq4_q: "Ist BriefHelden eine Rechtsberatung?",
-        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.",
+        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Erklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.",
 
         tip_title: "Worauf sollten Sie bei einem Polizei Brief achten?",
         tip_sub: "Diese Punkte sind oft besonders wichtig:",
-        tip1_title: "Art des Schreibens prüfen",
+        tip1_title: "Art des Schreibens ansehen",
         tip1_text: "Schauen Sie, ob es sich um eine Anhörung, Vorladung, Nachfrage oder einen anderen Hinweis handelt.",
-        tip2_title: "Frist beachten",
+        tip2_title: "Fristen ansehen",
         tip2_text: "Prüfen Sie, ob ein Termin, eine Antwortfrist oder ein bestimmtes Datum genannt wird.",
-        tip3_title: "Aktenzeichen ansehen",
+        tip3_title: "Aktenzeichen und Angaben ansehen",
         tip3_text: "Achten Sie auf Aktenzeichen, Vorgangsnummer und Angaben dazu, worauf sich der Brief genau bezieht.",
         tip4_title: "Inhalt verständlich machen",
-        tip4_text: "Wenn das Schreiben ernst oder unklar wirkt, hilft eine einfache Erklärung oft sofort weiter.",
+        tip4_text: "Wenn Formulierungen oder Hinweise ernst oder unklar wirken, hilft eine einfache Erklärung oft dabei, die enthaltenen Angaben besser zu erfassen.",
 
+        more_title: "Weitere häufige Briefe verstehen",
+        more_1_title: "Inkasso Brief verstehen",
+        more_1_text: "Inkasso Schreiben klar und verständlich erklärt.",
+        more_2_title: "Mahnbescheid verstehen",
+        more_2_text: "Mahnbescheide einfach erklärt.",
+        more_3_title: "Jobcenter Brief verstehen",
+        more_3_text: "Jobcenter Schreiben in einfacher Sprache erklärt.",
+        more_4_title: "Pfändungsbescheid verstehen",
+        more_4_text: "Pfändungsbescheide klar und verständlich erklärt.",
+        more_5_title: "Vollstreckungsbescheid verstehen",
+        more_5_text: "Vollstreckungsbescheide einfach erklärt.",
+        more_6_title: "Finanzamt Brief verstehen",
+        more_6_text: "Schreiben vom Finanzamt klar und verständlich erklärt.",
+
+        foot_copy: "© 2026 BriefHelden – Alle Rechte vorbehalten",
         foot_home: "Startseite",
         foot_question: "Frage stellen",
         foot_refund: "Widerruf",
@@ -710,7 +797,13 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         foot_terms: "AGB",
         foot_privacy: "Datenschutz"
       },
+
       en: {
+        pageTitle: "Understand a police letter – explained clearly | BriefHelden",
+        metaDescription: "Understand a police letter easily: BriefHelden explains hearing, summons, deadlines, file number and included details clearly and in simple language.",
+        ogTitle: "Understand a police letter – explained clearly | BriefHelden",
+        ogDescription: "Police letter explained simply. Understand hearing, summons, deadlines and important details quickly and clearly.",
+
         nav_home: "Home",
         nav_question: "Ask a question",
         nav_refund: "Withdrawal",
@@ -719,15 +812,15 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_privacy: "Privacy",
 
         hero_title: "Understand a police letter",
-        hero_sub: "A letter from the police often feels serious or stressful. BriefHelden explains hearings, summons, deadlines and important details simply and clearly.",
+        hero_sub: "A letter from the police often contains serious notices and important details. BriefHelden explains hearing, summons, deadlines and included details simply and clearly.",
         hero_cta: "Get police letter explained now – €6.90",
         hero_question_cta: "Ask a short question – €1.49",
         meta_1: "Clearly explained",
         meta_2: "Fast response",
         meta_3: "Confidential",
 
-        intro_title: "What is a police letter?",
-        intro_text: "A letter from the police may, for example, contain a hearing, a summons, a follow-up question or information about proceedings. Many people want to understand what exactly it is about, whether a deadline applies and which details are especially important. That is exactly where BriefHelden helps.",
+        intro_title: "What does a police letter mean?",
+        intro_text: "A letter from the police often contains details about a case, a hearing, a summons, a follow-up question or information about proceedings. It often includes information about file number, date, deadlines and further notices. Many people first want to understand which contents and details are written in the document. That is exactly where BriefHelden helps.",
 
         left_title: "Simply explained",
         left_text_1: "A police letter may relate to a specific event, an allegation, a witness request or a request for feedback.",
@@ -738,9 +831,9 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         right_li_1: "Upload police letter securely",
         right_li_2: "We read the content and explain it clearly",
         right_li_3: "You receive the explanation by email",
-        right_li_4: "No legal advice – plain-language explanation only",
+        right_li_4: "No legal advice within the meaning of the German Legal Services Act (RDG) — only linguistic simplification and a clear text explanation without legal assessment or recommendation for action",
 
-        service1_title: "Get the full document explained",
+        service1_title: "Get the full police letter explained",
         service1_text: "Ideal if you want to fully understand the entire police letter.",
         service1_btn: "Start now for €6.90",
 
@@ -750,26 +843,41 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
 
         faq_title: "Frequently asked questions about police letters",
         faq_sub: "These questions often come up with letters from the police:",
-        faq1_q: "What is usually written in a police letter?",
-        faq1_a: "It is often about a hearing, a summons, a follow-up question or information about a specific case. The exact type of letter is decisive.",
-        faq2_q: "Are deadlines especially important?",
-        faq2_a: "Yes, deadlines and stated appointments should be checked carefully. Many people first want to understand what is actually being requested in the letter.",
-        faq3_q: "Which details should I check?",
-        faq3_a: "Especially important are the file number, date, type of letter, stated deadlines and references to what the letter is about.",
+        faq1_q: "Which details are written in a police letter?",
+        faq1_a: "A police letter often contains details about the type of letter, file number, date, deadlines and notices about what the case concerns.",
+        faq2_q: "What do hearing or summons mean?",
+        faq2_a: "The document often states whether it is a hearing, a summons or another request. Many people want these details explained clearly first.",
+        faq3_q: "Which points are especially important?",
+        faq3_a: "Especially important are file number, date, type of letter, stated deadlines and notices about what the letter concerns.",
         faq4_q: "Is BriefHelden legal advice?",
-        faq4_a: "No. BriefHelden does not provide legal advice. You only receive a clear explanation of the content.",
+        faq4_a: "No. BriefHelden does not provide legal advice within the meaning of the German Legal Services Act (RDG). You receive only a clear explanation and linguistic simplification of your document’s content. There is no legal assessment, no individual review, and no binding recommendation for action.",
 
         tip_title: "What should you look for in a police letter?",
         tip_sub: "These points are often especially important:",
-        tip1_title: "Check the type of letter",
+        tip1_title: "Look at the type of letter",
         tip1_text: "See whether it is a hearing, summons, follow-up question or another notice.",
-        tip2_title: "Check the deadline",
-        tip2_text: "Check whether a date, response deadline or appointment is mentioned.",
-        tip3_title: "Look at the file number",
-        tip3_text: "Pay attention to file numbers, case numbers and references to what exactly the letter concerns.",
+        tip2_title: "Look at the deadlines",
+        tip2_text: "Check whether an appointment, response deadline or a specific date is mentioned.",
+        tip3_title: "Look at file number and details",
+        tip3_text: "Pay attention to file numbers, case numbers and details about what exactly the letter concerns.",
         tip4_title: "Make the content understandable",
-        tip4_text: "If the letter seems serious or unclear, a simple explanation often helps immediately.",
+        tip4_text: "If wording or notices seem serious or unclear, a simple explanation often helps you grasp the included details more easily.",
 
+        more_title: "Understand more common letters",
+        more_1_title: "Understand an inkasso letter",
+        more_1_text: "Debt collection letters explained clearly.",
+        more_2_title: "Understand a payment order",
+        more_2_text: "Payment orders explained simply.",
+        more_3_title: "Understand a Jobcenter letter",
+        more_3_text: "Jobcenter letters explained in simple language.",
+        more_4_title: "Understand a seizure order",
+        more_4_text: "Seizure orders explained clearly.",
+        more_5_title: "Understand an enforcement order",
+        more_5_text: "Enforcement orders explained simply.",
+        more_6_title: "Understand a tax office letter",
+        more_6_text: "Letters from the tax office explained clearly.",
+
+        foot_copy: "© 2026 BriefHelden – All rights reserved",
         foot_home: "Home",
         foot_question: "Ask a question",
         foot_refund: "Withdrawal",
@@ -777,7 +885,13 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         foot_terms: "Terms",
         foot_privacy: "Privacy"
       },
+
       tr: {
+        pageTitle: "Polis mektubunu anlayın – kolay açıklama | BriefHelden",
+        metaDescription: "Polis mektubunu kolay anlayın: BriefHelden ifade alma, çağrı, süreler, dosya numarası ve belgede yer alan bilgileri sade ve anlaşılır şekilde açıklar.",
+        ogTitle: "Polis mektubunu anlayın – kolay açıklama | BriefHelden",
+        ogDescription: "Polis mektubu basitçe açıklanır. İfade alma, çağrı, süreler ve önemli bilgileri hızlı ve açık şekilde anlayın.",
+
         nav_home: "Ana Sayfa",
         nav_question: "Soru sor",
         nav_refund: "Cayma",
@@ -786,15 +900,15 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_privacy: "Gizlilik",
 
         hero_title: "Polis mektubunu anlayın",
-        hero_sub: "Polisten gelen bir yazı çoğu zaman ciddi veya stresli görünür. BriefHelden ifade alma, çağrı, süreler ve önemli bilgileri size basit ve açık şekilde açıklar.",
+        hero_sub: "Polisten gelen bir yazı çoğu zaman ciddi uyarılar ve önemli bilgiler içerir. BriefHelden ifade alma, çağrı, süreler ve yer alan bilgileri size basit ve açık şekilde açıklar.",
         hero_cta: "Polis mektubunu şimdi açıklat – 6,90 €",
         hero_question_cta: "Kısa soru sor – 1,49 €",
         meta_1: "Basit açıklandı",
         meta_2: "Hızlı dönüş",
         meta_3: "Gizli",
 
-        intro_title: "Polis mektubu nedir?",
-        intro_text: "Polisten gelen bir yazı örneğin ifade alma, çağrı, ek soru veya bir süreç hakkında bilgi içerebilir. Birçok kişi tam olarak neyle ilgili olduğunu, bir sürenin olup olmadığını ve hangi bilgilerin önemli olduğunu anlamak ister. BriefHelden tam bu konuda yardımcı olur.",
+        intro_title: "Bir polis mektubu ne anlama gelir?",
+        intro_text: "Polisten gelen bir yazı çoğu zaman bir olay, ifade alma, çağrı, ek soru veya bir süreç hakkında bilgiler içerir. Belgede sıkça dosya numarası, tarih, süreler ve başka uyarılar yer alır. Birçok kişi önce belgede hangi içeriklerin ve bilgilerin yer aldığını anlamak ister. BriefHelden tam bu konuda yardımcı olur.",
 
         left_title: "Basit açıklama",
         left_text_1: "Bir polis mektubu belirli bir olay, bir iddia, tanık talebi veya geri dönüş isteği ile ilgili olabilir.",
@@ -805,9 +919,9 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         right_li_1: "Polis mektubunu güvenli şekilde yükleyin",
         right_li_2: "İçeriği okuyup açık şekilde açıklıyoruz",
         right_li_3: "Açıklamayı e-posta ile alırsınız",
-        right_li_4: "Hukuki danışmanlık değil – sadece anlaşılır açıklama",
+        right_li_4: "Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık verilmez — yalnızca dilsel sadeleştirme ve hukuki değerlendirme ya da eylem tavsiyesi olmadan anlaşılır metin açıklaması sunulur",
 
-        service1_title: "Belgenin tamamını açıklat",
+        service1_title: "Polis mektubunun tamamını açıklat",
         service1_text: "Polis mektubunun tamamını anlamak istiyorsanız idealdir.",
         service1_btn: "Şimdi 6,90 € ile başla",
 
@@ -815,28 +929,43 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         service2_text: "Sadece süre, ifade alma veya içerikle ilgili kısa bir sorunuz varsa idealdir.",
         service2_btn: "Şimdi 1,49 € ile sor",
 
-        faq_title: "Polis mektubu hakkında sık sorulan sorular",
+        faq_title: "Polis mektupları hakkında sık sorulan sorular",
         faq_sub: "Polisten gelen yazılarda şu sorular sıkça ortaya çıkar:",
-        faq1_q: "Bir polis mektubunda genelde ne yazar?",
-        faq1_a: "Çoğu zaman ifade alma, çağrı, ek soru veya belirli bir olay hakkında bilgi söz konusudur. Belirleyici olan yazının tam türüdür.",
-        faq2_q: "Süreler özellikle önemli mi?",
-        faq2_a: "Evet, süreler ve belirtilen tarihler dikkatle incelenmelidir. Birçok kişi önce yazıda tam olarak ne istendiğini anlamak ister.",
-        faq3_q: "Hangi bilgileri kontrol etmeliyim?",
-        faq3_a: "Dosya numarası, tarih, yazının türü, belirtilen süreler ve yazının neyle ilgili olduğuna dair bilgiler özellikle önemlidir.",
+        faq1_q: "Bir polis mektubunda hangi bilgiler yer alır?",
+        faq1_a: "Bir polis mektubu çoğu zaman yazının türü, dosya numarası, tarih, süreler ve olayın neyle ilgili olduğuna dair bilgiler içerir.",
+        faq2_q: "İfade alma veya çağrı ne anlama gelir?",
+        faq2_a: "Belgede çoğu zaman bunun ifade alma, çağrı veya başka bir talep olup olmadığı yazılır. Birçok kişi bu bilgilerin önce açık şekilde açıklanmasını ister.",
+        faq3_q: "Hangi noktalar özellikle önemlidir?",
+        faq3_a: "Özellikle dosya numarası, tarih, yazının türü, belirtilen süreler ve mektubun neyle ilgili olduğuna dair bilgiler önemlidir.",
         faq4_q: "BriefHelden hukuki danışmanlık mı veriyor?",
-        faq4_a: "Hayır. BriefHelden hukuki danışmanlık vermez. Sadece içeriğin anlaşılır açıklamasını sunar.",
+        faq4_a: "Hayır. BriefHelden, Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık vermez. Yalnızca belgenizin içeriğinin anlaşılır açıklamasını ve dilsel sadeleştirmesini alırsınız. Hukuki değerlendirme, bireysel inceleme veya bağlayıcı bir hareket tavsiyesi yapılmaz.",
 
         tip_title: "Bir polis mektubunda nelere dikkat etmelisiniz?",
         tip_sub: "Bu noktalar genelde özellikle önemlidir:",
-        tip1_title: "Yazının türünü kontrol edin",
+        tip1_title: "Yazının türüne bakın",
         tip1_text: "İfade alma, çağrı, ek soru veya başka bir bildirim olup olmadığına bakın.",
-        tip2_title: "Süreyi dikkate alın",
-        tip2_text: "Bir tarih, cevap süresi veya randevu yazılı mı kontrol edin.",
-        tip3_title: "Dosya numarasına bakın",
+        tip2_title: "Sürelere bakın",
+        tip2_text: "Bir randevu, cevap süresi veya belirli bir tarihin yazılı olup olmadığını kontrol edin.",
+        tip3_title: "Dosya numarası ve bilgilere bakın",
         tip3_text: "Dosya numarası, işlem numarası ve mektubun tam olarak neyle ilgili olduğuna dair bilgilere dikkat edin.",
         tip4_title: "İçeriği anlaşılır hale getirin",
-        tip4_text: "Yazı ciddi veya belirsiz görünüyorsa, basit bir açıklama çoğu zaman hemen yardımcı olur.",
+        tip4_text: "İfadeler veya uyarılar ciddi ya da belirsiz görünüyorsa, basit bir açıklama çoğu zaman yer alan bilgileri daha iyi kavramanıza yardımcı olur.",
 
+        more_title: "Diğer sık görülen mektupları anlayın",
+        more_1_title: "Inkasso mektubunu anla",
+        more_1_text: "Tahsilat yazıları açık şekilde açıklanır.",
+        more_2_title: "Ödeme emrini anla",
+        more_2_text: "Ödeme emirleri basit şekilde açıklanır.",
+        more_3_title: "Jobcenter mektubunu anla",
+        more_3_text: "Jobcenter yazıları basit dille açıklanır.",
+        more_4_title: "Haciz kararını anla",
+        more_4_text: "Haciz kararları açık şekilde açıklanır.",
+        more_5_title: "İcra kararını anla",
+        more_5_text: "İcra kararları basit şekilde açıklanır.",
+        more_6_title: "Vergi dairesi mektubunu anla",
+        more_6_text: "Vergi dairesinden gelen yazılar açık şekilde açıklanır.",
+
+        foot_copy: "© 2026 BriefHelden – Tüm hakları saklıdır",
         foot_home: "Ana Sayfa",
         foot_question: "Soru sor",
         foot_refund: "Cayma",
@@ -844,7 +973,13 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         foot_terms: "Şartlar",
         foot_privacy: "Gizlilik"
       },
+
       ru: {
+        pageTitle: "Понять письмо из полиции – простое объяснение | BriefHelden",
+        metaDescription: "Легко понять письмо из полиции: BriefHelden просто и понятно объясняет допрос, вызов, сроки, номер дела и указанные в документе сведения.",
+        ogTitle: "Понять письмо из полиции – простое объяснение | BriefHelden",
+        ogDescription: "Письмо из полиции объясняется простым языком. Понятно разберитесь в допросе, вызове, сроках и важных сведениях.",
+
         nav_home: "Главная",
         nav_question: "Задать вопрос",
         nav_refund: "Отказ",
@@ -853,15 +988,15 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_privacy: "Конфиденциальность",
 
         hero_title: "Понять письмо из полиции",
-        hero_sub: "Письмо из полиции часто кажется серьёзным или стрессовым. BriefHelden объяснит допрос, вызов, сроки и важные данные просто и ясно.",
+        hero_sub: "Письмо из полиции часто содержит серьёзные указания и важные сведения. BriefHelden объяснит допрос, вызов, сроки и указанные данные просто и ясно.",
         hero_cta: "Объяснить письмо из полиции – 6,90 €",
         hero_question_cta: "Задать короткий вопрос – 1,49 €",
         meta_1: "Просто объяснено",
         meta_2: "Быстрый ответ",
         meta_3: "Конфиденциально",
 
-        intro_title: "Что такое письмо из полиции?",
-        intro_text: "Письмо из полиции может, например, содержать приглашение на объяснение, вызов, уточняющий вопрос или информацию о производстве. Многие люди хотят понять, о чём именно идёт речь, есть ли срок и какие данные особенно важны. Именно здесь помогает BriefHelden.",
+        intro_title: "Что означает письмо из полиции?",
+        intro_text: "Письмо из полиции часто содержит сведения о деле, допросе, вызове, уточняющем вопросе или указание на производство. В нём часто есть информация о номере дела, дате, сроках и других указаниях. Многие люди сначала хотят понять, какие именно сведения и данные указаны в документе. Именно здесь помогает BriefHelden.",
 
         left_title: "Просто объясняем",
         left_text_1: "Письмо из полиции может относиться к определённому событию, обвинению, запросу как к свидетелю или просьбе дать ответ.",
@@ -872,38 +1007,53 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         right_li_1: "Безопасно загрузите письмо из полиции",
         right_li_2: "Мы читаем содержание и понятно объясняем его",
         right_li_3: "Вы получаете объяснение по e-mail",
-        right_li_4: "Не юридическая консультация – только понятное объяснение",
+        right_li_4: "Это не юридическая консультация в смысле немецкого Закона о юридических услугах (RDG) — только языковое упрощение и понятное текстовое объяснение без правовой оценки и без рекомендаций к действиям",
 
-        service1_title: "Получить полное объяснение документа",
+        service1_title: "Получить полное объяснение письма из полиции",
         service1_text: "Идеально, если вы хотите полностью понять всё письмо из полиции.",
         service1_btn: "Начать за 6,90 €",
 
         service2_title: "Задать короткий вопрос",
-        service2_text: "Идеально, если у вас только короткий вопрос о сроке, вызове или содержании.",
+        service2_text: "Идеально, если у вас только короткий вопрос о сроке, допросе или содержании.",
         service2_btn: "Спросить за 1,49 €",
 
-        faq_title: "Частые вопросы о письме из полиции",
+        faq_title: "Частые вопросы о письмах из полиции",
         faq_sub: "Эти вопросы особенно часто возникают по письмам из полиции:",
-        faq1_q: "Что обычно написано в письме из полиции?",
-        faq1_a: "Часто речь идёт об объяснении, вызове, уточняющем вопросе или информации по определённому делу. Точный тип письма имеет решающее значение.",
-        faq2_q: "Сроки особенно важны?",
-        faq2_a: "Да, сроки и указанные даты нужно внимательно проверить. Многие люди сначала хотят понять, что именно вообще требуется в письме.",
-        faq3_q: "Какие данные мне нужно проверить?",
-        faq3_a: "Особенно важны номер дела, дата, тип письма, указанные сроки и сведения о том, к чему относится письмо.",
+        faq1_q: "Какие сведения содержатся в письме из полиции?",
+        faq1_a: "Письмо из полиции часто содержит сведения о типе письма, номере дела, дате, сроках и указаниях о том, к чему относится дело.",
+        faq2_q: "Что означают допрос или вызов?",
+        faq2_a: "В документе часто указано, идёт ли речь о допросе, вызове или другом запросе. Многие люди хотят сначала получить понятное объяснение этих сведений.",
+        faq3_q: "Какие пункты особенно важны?",
+        faq3_a: "Особенно важны номер дела, дата, тип письма, указанные сроки и указания о том, к чему относится письмо.",
         faq4_q: "BriefHelden — это юридическая консультация?",
-        faq4_a: "Нет. BriefHelden не предоставляет юридических консультаций. Вы получаете только понятное объяснение содержания.",
+        faq4_a: "Нет. BriefHelden не оказывает юридических консультаций в смысле немецкого Закона о юридических услугах (RDG). Вы получаете только понятное объяснение и языковое упрощение содержания вашего документа. Юридическая оценка, индивидуальная проверка и обязательные рекомендации к действиям не предоставляются.",
 
         tip_title: "На что стоит обратить внимание в письме из полиции?",
         tip_sub: "Эти пункты часто особенно важны:",
-        tip1_title: "Проверьте тип письма",
-        tip1_text: "Посмотрите, идёт ли речь об объяснении, вызове, уточняющем вопросе или другом уведомлении.",
-        tip2_title: "Проверьте срок",
-        tip2_text: "Проверьте, указан ли срок ответа, дата или назначенный термин.",
-        tip3_title: "Посмотрите номер дела",
+        tip1_title: "Посмотрите на тип письма",
+        tip1_text: "Посмотрите, идёт ли речь о допросе, вызове, уточняющем вопросе или другом уведомлении.",
+        tip2_title: "Посмотрите на сроки",
+        tip2_text: "Проверьте, указан ли срок ответа, дата встречи или конкретная дата.",
+        tip3_title: "Посмотрите номер дела и сведения",
         tip3_text: "Обратите внимание на номер дела, номер производства и сведения о том, к чему именно относится письмо.",
         tip4_title: "Сделайте содержание понятным",
-        tip4_text: "Если письмо кажется серьёзным или непонятным, простое объяснение часто сразу помогает.",
+        tip4_text: "Если формулировки или указания кажутся серьёзными или непонятными, простое объяснение часто помогает легче воспринять содержащиеся в нём сведения.",
 
+        more_title: "Другие часто встречающиеся письма",
+        more_1_title: "Понять письмо от инкассо",
+        more_1_text: "Письма о взыскании объяснены понятно.",
+        more_2_title: "Понять платёжный приказ",
+        more_2_text: "Платёжные приказы объяснены просто.",
+        more_3_title: "Понять письмо Jobcenter",
+        more_3_text: "Письма Jobcenter объяснены простым языком.",
+        more_4_title: "Понять постановление о взыскании",
+        more_4_text: "Постановления о взыскании объяснены понятно.",
+        more_5_title: "Понять исполнительный приказ",
+        more_5_text: "Исполнительные приказы объяснены просто.",
+        more_6_title: "Понять письмо из налоговой",
+        more_6_text: "Письма из налоговой объяснены понятно.",
+
+        foot_copy: "© 2026 BriefHelden – Все права защищены",
         foot_home: "Главная",
         foot_question: "Задать вопрос",
         foot_refund: "Отказ",
@@ -914,8 +1064,8 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
     };
 
     function updateLinks(lang){
-const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
-const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
+      const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
+      const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
 
       const stripeBtn = document.getElementById("stripeBtn");
       const servicePrimaryBtn = document.getElementById("servicePrimaryBtn");
@@ -928,9 +1078,24 @@ const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
       if(serviceQuestionBtn) serviceQuestionBtn.href = questionLink;
     }
 
+    function updateMeta(lang){
+      const dict = i18n[lang] || i18n.de;
+      document.title = dict.pageTitle;
+
+      const description = document.querySelector('meta[name="description"]');
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      const ogDescription = document.querySelector('meta[property="og:description"]');
+
+      if(description) description.setAttribute("content", dict.metaDescription);
+      if(ogTitle) ogTitle.setAttribute("content", dict.ogTitle);
+      if(ogDescription) ogDescription.setAttribute("content", dict.ogDescription);
+    }
+
     function applyLang(lang){
-const dict = i18n[lang] || i18n.de;
-      document.documentElement.lang = lang;
+      const currentLang = i18n[lang] ? lang : "de";
+      const dict = i18n[currentLang];
+
+      document.documentElement.lang = currentLang;
 
       document.querySelectorAll("[data-i18n]").forEach((el) => {
         const key = el.getAttribute("data-i18n");
@@ -939,8 +1104,9 @@ const dict = i18n[lang] || i18n.de;
         }
       });
 
-      updateLinks(lang);
-      localStorage.setItem("briefhelden_lang", lang);
+      updateMeta(currentLang);
+      updateLinks(currentLang);
+      localStorage.setItem("briefhelden_lang", currentLang);
     }
 
     const select = document.getElementById("langSelect");
@@ -954,15 +1120,5 @@ const dict = i18n[lang] || i18n.de;
       applyLang(select.value);
     });
   </script>
-  <h2>Weitere häufige Briefe verstehen</h2>
-
-<ul>
-<li><a href="/inkasso-brief-verstehen.html">Inkasso Brief verstehen</a></li>
-<li><a href="/mahnbescheid-verstehen.html">Mahnbescheid verstehen</a></li>
-<li><a href="/jobcenter-brief-verstehen.html">Jobcenter Brief verstehen</a></li>
-<li><a href="/pfaendungsbescheid-verstehen.html">Pfändungsbescheid verstehen</a></li>
-<li><a href="/vollstreckungsbescheid-verstehen.html">Vollstreckungsbescheid verstehen</a></li>
-<li><a href="/finanzamt-brief-verstehen.html">Finanzamt Brief verstehen</a></li>
-</ul>
 </body>
 </html>
