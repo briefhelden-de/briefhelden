@@ -6,10 +6,10 @@
   <title>Rechnung verstehen – einfach erklärt | BriefHelden</title>
   <meta
     name="description"
-    content="Rechnung einfach verstehen: BriefHelden erklärt Beträge, Zahlungsziel, Rechnungsinhalt und wichtige Punkte klar, einfach und ohne komplizierte Fachsprache."
+    content="Rechnung verständlich erklärt: BriefHelden erklärt Beträge, Zahlungsziel, Rechnungsinhalt und enthaltene Angaben klar, einfach und ohne komplizierte Fachsprache."
   />
   <meta name="robots" content="index, follow" />
-<link rel="canonical" href="https://www.briefhelden-service.de/rechnung-verstehen.html" />
+  <link rel="canonical" href="https://www.briefhelden-service.de/rechnung-verstehen.html" />
 
   <meta property="og:title" content="Rechnung verstehen – einfach erklärt | BriefHelden" />
   <meta
@@ -17,9 +17,12 @@
     content="Rechnung einfach erklärt. Verstehen Sie Beträge, Zahlungsziel und wichtige Angaben schnell und verständlich."
   />
   <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.briefhelden-service.de/rechnung-verstehen.html" />
+  <meta property="og:url" content="https://www.briefhelden-service.de/rechnung-verstehen.html" />
+  <meta property="og:image" content="https://www.briefhelden-service.de/og-image.jpg" />
+  <meta property="og:site_name" content="BriefHelden" />
+  <meta name="theme-color" content="#0b1220" />
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -104,6 +107,7 @@
         linear-gradient(180deg, rgba(55,120,255,.9), rgba(20,70,190,.9));
       box-shadow:0 10px 18px rgba(0,0,0,.18);
       position:relative;
+      flex:0 0 auto;
     }
 
     .brand .logo:after{
@@ -171,7 +175,7 @@
       padding:68px 18px 40px;
       background:
         linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.58)),
-url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=2200&q=60");
+        url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=2200&q=60");
       background-size:cover;
       background-position:center;
     }
@@ -263,7 +267,8 @@ url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=c
     .pad{padding:22px}
 
     .headline,
-    .sectionTitle{
+    .sectionTitle,
+    .moreLinks h2{
       text-align:center;
       margin:0 0 10px;
       font-weight:950;
@@ -288,7 +293,8 @@ url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=c
     }
 
     .infoCard,
-    .faqItem{
+    .faqItem,
+    .moreCard{
       border-radius:var(--radius-lg);
       border:1px solid rgba(255,255,255,.55);
       background:rgba(255,255,255,.20);
@@ -296,20 +302,24 @@ url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=c
     }
 
     .infoCard h3,
-    .faqItem h3{
+    .faqItem h3,
+    .moreCard h3{
       margin:0 0 10px;
       font-size:22px;
       font-weight:950;
+      line-height:1.25;
     }
 
-    .faqItem h3{
+    .faqItem h3,
+    .moreCard h3{
       font-size:18px;
       margin-bottom:8px;
     }
 
     .infoCard p,
     .infoCard li,
-    .faqItem p{
+    .faqItem p,
+    .moreCard p{
       color:rgba(11,18,32,.76);
       line-height:1.65;
       font-weight:700;
@@ -323,7 +333,8 @@ url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=c
       padding-left:18px;
     }
 
-    .faqGrid{
+    .faqGrid,
+    .moreGrid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:14px;
@@ -348,6 +359,7 @@ url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=c
       margin:0 0 8px;
       font-size:20px;
       font-weight:950;
+      line-height:1.3;
     }
 
     .serviceMini .box p{
@@ -374,6 +386,22 @@ url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=c
 
     .miniBtn.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
     .miniBtn.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
+
+    .moreLinks{
+      max-width:var(--max);
+      margin:28px auto 0;
+      padding:0 18px 30px;
+    }
+
+    .moreCard{
+      display:block;
+      transition:transform .18s ease, background .18s ease;
+    }
+
+    .moreCard:hover{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,.30);
+    }
 
     footer{
       margin-top:18px;
@@ -408,6 +436,7 @@ url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=c
       nav.links{display:none}
       .grid2,
       .faqGrid,
+      .moreGrid,
       .serviceMini{grid-template-columns:1fr}
       .cta{min-width:92vw}
       .miniBtn{min-width:100%}
@@ -446,7 +475,7 @@ url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=c
     <div class="wrap">
       <h1 data-i18n="hero_title">Rechnung verstehen</h1>
       <p data-i18n="hero_sub">
-        Eine Rechnung ist nicht immer sofort klar. BriefHelden erklärt Ihnen Inhalt, Beträge und wichtige Angaben einfach und verständlich.
+        Eine Rechnung enthält oft wichtige Beträge und Angaben. BriefHelden erklärt Inhalt, Gesamtbetrag, Zahlungsziel und enthaltene Angaben einfach und verständlich.
       </p>
 
       <div class="ctaGroup">
@@ -475,7 +504,7 @@ url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=c
         <div class="pad">
           <h2 class="headline" data-i18n="intro_title">Was steht in einer Rechnung?</h2>
           <p class="lead" data-i18n="intro_text">
-            In einer Rechnung stehen meist Leistungen, Produkte, Beträge, Rechnungsdatum und ein Zahlungsziel. Viele Menschen möchten verstehen, wie sich der Betrag zusammensetzt, ob zusätzliche Positionen enthalten sind und bis wann gezahlt werden soll. Genau dabei hilft BriefHelden.
+            In einer Rechnung stehen häufig Angaben zu Leistungen, Produkten, Einzelpositionen, Gesamtbetrag, Rechnungsdatum und Zahlungsziel. Darin kann auch stehen, ob Mehrwertsteuer, Zusatzkosten oder Gebühren enthalten sind. Viele Menschen möchten zuerst verstehen, welche Inhalte und Angaben im Schreiben stehen. Genau dabei hilft BriefHelden.
           </p>
 
           <div class="grid2">
@@ -488,7 +517,7 @@ url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=c
                 Wichtig sind dabei vor allem: Wer hat die Rechnung geschickt? Welche Positionen sind aufgeführt? Gibt es Mehrwertsteuer, Zusatzkosten oder Gebühren? Bis wann soll gezahlt werden?
               </p>
               <p data-i18n="left_text_3">
-                BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie die Rechnung besser verstehen können.
+                BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie die Rechnung besser sprachlich verständlich einordnen können.
               </p>
             </div>
 
@@ -498,14 +527,14 @@ url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=c
                 <li data-i18n="right_li_1">Rechnung sicher hochladen</li>
                 <li data-i18n="right_li_2">Wir lesen den Inhalt und erklären ihn verständlich</li>
                 <li data-i18n="right_li_3">Sie erhalten die Erklärung per E-Mail</li>
-                <li data-i18n="right_li_4">Keine Rechtsberatung – nur verständliche Texterklärung</li>
+                <li data-i18n="right_li_4">Keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) – nur sprachliche Vereinfachung und verständliche Texterklärung ohne rechtliche Bewertung oder Handlungsempfehlung</li>
               </ul>
             </div>
           </div>
 
           <div class="serviceMini">
             <div class="box">
-              <h3 data-i18n="service1_title">Komplettes Schreiben erklären lassen</h3>
+              <h3 data-i18n="service1_title">Komplette Rechnung erklären lassen</h3>
               <p data-i18n="service1_text">
                 Ideal, wenn Sie die ganze Rechnung vollständig verstehen möchten.
               </p>
@@ -540,30 +569,30 @@ url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=c
 
           <div class="faqGrid">
             <div class="faqItem">
-              <h3 data-i18n="faq1_q">Was ist auf einer Rechnung besonders wichtig?</h3>
+              <h3 data-i18n="faq1_q">Welche Angaben stehen in einer Rechnung?</h3>
               <p data-i18n="faq1_a">
-                Besonders wichtig sind Gesamtbetrag, einzelne Positionen, Rechnungsdatum, Zahlungsziel und der Absender der Rechnung.
+                Eine Rechnung enthält häufig Angaben zu Gesamtbetrag, einzelnen Positionen, Rechnungsdatum, Zahlungsziel und dem Absender der Rechnung.
               </p>
             </div>
 
             <div class="faqItem">
               <h3 data-i18n="faq2_q">Was bedeutet Zahlungsziel?</h3>
               <p data-i18n="faq2_a">
-                Das Zahlungsziel zeigt, bis wann die Rechnung bezahlt werden soll. BriefHelden hilft Ihnen, solche Angaben klar zu erkennen.
+                Das Zahlungsziel zeigt, bis wann die Rechnung bezahlt werden soll. Viele Menschen möchten diese Angabe zuerst verständlich erklärt bekommen.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="faq3_q">Warum ist der Betrag höher als gedacht?</h3>
+              <h3 data-i18n="faq3_q">Welche Punkte sind besonders wichtig?</h3>
               <p data-i18n="faq3_a">
-                Oft kommen Zusatzkosten, Versand, Gebühren oder Mehrwertsteuer hinzu. Eine verständliche Erklärung hilft beim Einordnen der Positionen.
+                Besonders wichtig sind Gesamtbetrag, einzelne Positionen, Rechnungsdatum, Zahlungsziel sowie mögliche Zusatzkosten, Gebühren oder Mehrwertsteuer.
               </p>
             </div>
 
             <div class="faqItem">
               <h3 data-i18n="faq4_q">Ist BriefHelden eine Rechtsberatung?</h3>
               <p data-i18n="faq4_a">
-                Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.
+                Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Erklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.
               </p>
             </div>
           </div>
@@ -581,33 +610,71 @@ url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=c
 
           <div class="faqGrid">
             <div class="faqItem">
-              <h3 data-i18n="tip1_title">Beträge prüfen</h3>
+              <h3 data-i18n="tip1_title">Beträge ansehen</h3>
               <p data-i18n="tip1_text">
-                Schauen Sie, wie sich der Gesamtbetrag zusammensetzt und ob Zusatzkosten oder Steuer aufgeführt sind.
+                Schauen Sie, wie sich der Gesamtbetrag zusammensetzt und ob Zusatzkosten, Gebühren oder Steuer aufgeführt sind.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="tip2_title">Zahlungsziel beachten</h3>
+              <h3 data-i18n="tip2_title">Zahlungsziel ansehen</h3>
               <p data-i18n="tip2_text">
                 Prüfen Sie, bis wann laut Rechnung gezahlt werden soll.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="tip3_title">Positionen ansehen</h3>
+              <h3 data-i18n="tip3_title">Positionen und Angaben ansehen</h3>
               <p data-i18n="tip3_text">
-                Achten Sie darauf, welche Produkte, Leistungen oder Gebühren genau genannt werden.
+                Achten Sie darauf, welche Produkte, Leistungen oder Gebühren genau genannt werden und welche Angaben zur Rechnung enthalten sind.
               </p>
             </div>
 
             <div class="faqItem">
               <h3 data-i18n="tip4_title">Inhalt verständlich machen</h3>
               <p data-i18n="tip4_text">
-                Wenn die Rechnung unklar oder kompliziert wirkt, hilft eine einfache Erklärung oft sofort weiter.
+                Wenn Begriffe, Positionen oder Angaben unklar wirken, hilft eine einfache Erklärung oft dabei, die enthaltenen Angaben besser zu erfassen.
               </p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div style="height:18px"></div>
+
+      <div class="moreLinks">
+        <h2 data-i18n="more_title">Weitere häufige Briefe verstehen</h2>
+
+        <div class="moreGrid">
+          <a class="moreCard" href="/inkasso-brief-verstehen.html">
+            <h3 data-i18n="more_1_title">Inkasso Brief verstehen</h3>
+            <p data-i18n="more_1_text">Inkasso Schreiben klar und verständlich erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/mahnbescheid-verstehen.html">
+            <h3 data-i18n="more_2_title">Mahnbescheid verstehen</h3>
+            <p data-i18n="more_2_text">Mahnbescheide einfach erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/jobcenter-brief-verstehen.html">
+            <h3 data-i18n="more_3_title">Jobcenter Brief verstehen</h3>
+            <p data-i18n="more_3_text">Jobcenter Schreiben in einfacher Sprache erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/stromrechnung-verstehen.html">
+            <h3 data-i18n="more_4_title">Stromrechnung verstehen</h3>
+            <p data-i18n="more_4_text">Stromrechnungen klar und verständlich erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/gasrechnung-verstehen.html">
+            <h3 data-i18n="more_5_title">Gasrechnung verstehen</h3>
+            <p data-i18n="more_5_text">Gasrechnungen einfach erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/versicherung-brief-verstehen.html">
+            <h3 data-i18n="more_6_title">Versicherung Brief verstehen</h3>
+            <p data-i18n="more_6_text">Versicherungsschreiben klar und verständlich erklärt.</p>
+          </a>
         </div>
       </div>
     </div>
@@ -615,7 +682,7 @@ url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=c
 
   <footer>
     <div class="footWrap">
-      <div>© 2026 BriefHelden – Alle Rechte vorbehalten</div>
+      <div data-i18n="foot_copy">© 2026 BriefHelden – Alle Rechte vorbehalten</div>
       <div class="footLinks">
         <a href="index.html" data-i18n="foot_home">Startseite</a>
         <a href="frage.html" data-i18n="foot_question">Frage stellen</a>
@@ -629,21 +696,26 @@ url("https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=c
 
   <script>
     const STRIPE_LINKS = {
-de: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
-en: "https://buy.stripe.com/fZubJ0dpXbMAbfpcIZ4sE01",
-tr: "https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
-ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
+      de: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
+      en: "https://buy.stripe.com/fZubJ0dpXbMAbfpcIZ4sE01",
+      tr: "https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
+      ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
     };
 
     const QUESTION_LINKS = {
-de: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
-en: "https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
-tr: "https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
-ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
+      de: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
+      en: "https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
+      tr: "https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
+      ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
     };
 
     const i18n = {
       de: {
+        pageTitle: "Rechnung verstehen – einfach erklärt | BriefHelden",
+        metaDescription: "Rechnung verständlich erklärt: BriefHelden erklärt Beträge, Zahlungsziel, Rechnungsinhalt und enthaltene Angaben klar, einfach und ohne komplizierte Fachsprache.",
+        ogTitle: "Rechnung verstehen – einfach erklärt | BriefHelden",
+        ogDescription: "Rechnung einfach erklärt. Verstehen Sie Beträge, Zahlungsziel und wichtige Angaben schnell und verständlich.",
+
         nav_home: "Startseite",
         nav_question: "Frage stellen",
         nav_refund: "Widerruf",
@@ -652,7 +724,7 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_privacy: "Datenschutz",
 
         hero_title: "Rechnung verstehen",
-        hero_sub: "Eine Rechnung ist nicht immer sofort klar. BriefHelden erklärt Ihnen Inhalt, Beträge und wichtige Angaben einfach und verständlich.",
+        hero_sub: "Eine Rechnung enthält oft wichtige Beträge und Angaben. BriefHelden erklärt Inhalt, Gesamtbetrag, Zahlungsziel und enthaltene Angaben einfach und verständlich.",
         hero_cta: "Jetzt Rechnung erklären lassen – 6,90 €",
         hero_question_cta: "Kurze Frage stellen – 1,49 €",
         meta_1: "Einfach erklärt",
@@ -660,20 +732,20 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         meta_3: "Vertraulich",
 
         intro_title: "Was steht in einer Rechnung?",
-        intro_text: "In einer Rechnung stehen meist Leistungen, Produkte, Beträge, Rechnungsdatum und ein Zahlungsziel. Viele Menschen möchten verstehen, wie sich der Betrag zusammensetzt, ob zusätzliche Positionen enthalten sind und bis wann gezahlt werden soll. Genau dabei hilft BriefHelden.",
+        intro_text: "In einer Rechnung stehen häufig Angaben zu Leistungen, Produkten, Einzelpositionen, Gesamtbetrag, Rechnungsdatum und Zahlungsziel. Darin kann auch stehen, ob Mehrwertsteuer, Zusatzkosten oder Gebühren enthalten sind. Viele Menschen möchten zuerst verstehen, welche Inhalte und Angaben im Schreiben stehen. Genau dabei hilft BriefHelden.",
 
         left_title: "Einfach erklärt",
         left_text_1: "Eine Rechnung zeigt meistens, wofür Geld verlangt wird und wie hoch der Gesamtbetrag ist.",
         left_text_2: "Wichtig sind dabei vor allem: Wer hat die Rechnung geschickt? Welche Positionen sind aufgeführt? Gibt es Mehrwertsteuer, Zusatzkosten oder Gebühren? Bis wann soll gezahlt werden?",
-        left_text_3: "BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie die Rechnung besser verstehen können.",
+        left_text_3: "BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie die Rechnung besser sprachlich verständlich einordnen können.",
 
         right_title: "So funktioniert es",
         right_li_1: "Rechnung sicher hochladen",
         right_li_2: "Wir lesen den Inhalt und erklären ihn verständlich",
         right_li_3: "Sie erhalten die Erklärung per E-Mail",
-        right_li_4: "Keine Rechtsberatung – nur verständliche Texterklärung",
+        right_li_4: "Keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) – nur sprachliche Vereinfachung und verständliche Texterklärung ohne rechtliche Bewertung oder Handlungsempfehlung",
 
-        service1_title: "Komplettes Schreiben erklären lassen",
+        service1_title: "Komplette Rechnung erklären lassen",
         service1_text: "Ideal, wenn Sie die ganze Rechnung vollständig verstehen möchten.",
         service1_btn: "Jetzt für 6,90 € starten",
 
@@ -683,26 +755,41 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
 
         faq_title: "Häufige Fragen zu Rechnungen",
         faq_sub: "Diese Fragen tauchen bei Rechnungen besonders oft auf:",
-        faq1_q: "Was ist auf einer Rechnung besonders wichtig?",
-        faq1_a: "Besonders wichtig sind Gesamtbetrag, einzelne Positionen, Rechnungsdatum, Zahlungsziel und der Absender der Rechnung.",
+        faq1_q: "Welche Angaben stehen in einer Rechnung?",
+        faq1_a: "Eine Rechnung enthält häufig Angaben zu Gesamtbetrag, einzelnen Positionen, Rechnungsdatum, Zahlungsziel und dem Absender der Rechnung.",
         faq2_q: "Was bedeutet Zahlungsziel?",
-        faq2_a: "Das Zahlungsziel zeigt, bis wann die Rechnung bezahlt werden soll. BriefHelden hilft Ihnen, solche Angaben klar zu erkennen.",
-        faq3_q: "Warum ist der Betrag höher als gedacht?",
-        faq3_a: "Oft kommen Zusatzkosten, Versand, Gebühren oder Mehrwertsteuer hinzu. Eine verständliche Erklärung hilft beim Einordnen der Positionen.",
+        faq2_a: "Das Zahlungsziel zeigt, bis wann die Rechnung bezahlt werden soll. Viele Menschen möchten diese Angabe zuerst verständlich erklärt bekommen.",
+        faq3_q: "Welche Punkte sind besonders wichtig?",
+        faq3_a: "Besonders wichtig sind Gesamtbetrag, einzelne Positionen, Rechnungsdatum, Zahlungsziel sowie mögliche Zusatzkosten, Gebühren oder Mehrwertsteuer.",
         faq4_q: "Ist BriefHelden eine Rechtsberatung?",
-        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.",
+        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Erklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.",
 
         tip_title: "Worauf sollten Sie bei einer Rechnung achten?",
         tip_sub: "Diese Punkte sind oft besonders wichtig:",
-        tip1_title: "Beträge prüfen",
-        tip1_text: "Schauen Sie, wie sich der Gesamtbetrag zusammensetzt und ob Zusatzkosten oder Steuer aufgeführt sind.",
-        tip2_title: "Zahlungsziel beachten",
+        tip1_title: "Beträge ansehen",
+        tip1_text: "Schauen Sie, wie sich der Gesamtbetrag zusammensetzt und ob Zusatzkosten, Gebühren oder Steuer aufgeführt sind.",
+        tip2_title: "Zahlungsziel ansehen",
         tip2_text: "Prüfen Sie, bis wann laut Rechnung gezahlt werden soll.",
-        tip3_title: "Positionen ansehen",
-        tip3_text: "Achten Sie darauf, welche Produkte, Leistungen oder Gebühren genau genannt werden.",
+        tip3_title: "Positionen und Angaben ansehen",
+        tip3_text: "Achten Sie darauf, welche Produkte, Leistungen oder Gebühren genau genannt werden und welche Angaben zur Rechnung enthalten sind.",
         tip4_title: "Inhalt verständlich machen",
-        tip4_text: "Wenn die Rechnung unklar oder kompliziert wirkt, hilft eine einfache Erklärung oft sofort weiter.",
+        tip4_text: "Wenn Begriffe, Positionen oder Angaben unklar wirken, hilft eine einfache Erklärung oft dabei, die enthaltenen Angaben besser zu erfassen.",
 
+        more_title: "Weitere häufige Briefe verstehen",
+        more_1_title: "Inkasso Brief verstehen",
+        more_1_text: "Inkasso Schreiben klar und verständlich erklärt.",
+        more_2_title: "Mahnbescheid verstehen",
+        more_2_text: "Mahnbescheide einfach erklärt.",
+        more_3_title: "Jobcenter Brief verstehen",
+        more_3_text: "Jobcenter Schreiben in einfacher Sprache erklärt.",
+        more_4_title: "Stromrechnung verstehen",
+        more_4_text: "Stromrechnungen klar und verständlich erklärt.",
+        more_5_title: "Gasrechnung verstehen",
+        more_5_text: "Gasrechnungen einfach erklärt.",
+        more_6_title: "Versicherung Brief verstehen",
+        more_6_text: "Versicherungsschreiben klar und verständlich erklärt.",
+
+        foot_copy: "© 2026 BriefHelden – Alle Rechte vorbehalten",
         foot_home: "Startseite",
         foot_question: "Frage stellen",
         foot_refund: "Widerruf",
@@ -712,6 +799,11 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
       },
 
       en: {
+        pageTitle: "Understand an invoice – explained clearly | BriefHelden",
+        metaDescription: "Understand an invoice easily: BriefHelden explains amounts, payment deadline, invoice content and included details clearly and in simple language.",
+        ogTitle: "Understand an invoice – explained clearly | BriefHelden",
+        ogDescription: "Invoice explained simply. Understand amounts, payment deadline and important details quickly and clearly.",
+
         nav_home: "Home",
         nav_question: "Ask a question",
         nav_refund: "Withdrawal",
@@ -720,7 +812,7 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_privacy: "Privacy",
 
         hero_title: "Understand an invoice",
-        hero_sub: "An invoice is not always immediately clear. BriefHelden explains the content, amounts and important details simply and clearly.",
+        hero_sub: "An invoice often contains important amounts and details. BriefHelden explains the content, total amount, payment deadline and included details simply and clearly.",
         hero_cta: "Get invoice explained now – €6.90",
         hero_question_cta: "Ask a short question – €1.49",
         meta_1: "Clearly explained",
@@ -728,7 +820,7 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         meta_3: "Confidential",
 
         intro_title: "What is written on an invoice?",
-        intro_text: "An invoice usually contains services, products, amounts, invoice date and a payment deadline. Many people want to understand how the amount is made up, whether extra items are included and by when payment is due. That is exactly where BriefHelden helps.",
+        intro_text: "An invoice often contains details about services, products, individual items, total amount, invoice date and payment deadline. It may also show whether VAT, extra costs or fees are included. Many people first want to understand which contents and details are written in the document. That is exactly where BriefHelden helps.",
 
         left_title: "Simply explained",
         left_text_1: "An invoice usually shows what money is being charged for and what the total amount is.",
@@ -739,9 +831,9 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         right_li_1: "Upload invoice securely",
         right_li_2: "We read the content and explain it clearly",
         right_li_3: "You receive the explanation by email",
-        right_li_4: "No legal advice – plain-language explanation only",
+        right_li_4: "No legal advice within the meaning of the German Legal Services Act (RDG) — only linguistic simplification and a clear text explanation without legal assessment or recommendation for action",
 
-        service1_title: "Get the full document explained",
+        service1_title: "Get the full invoice explained",
         service1_text: "Ideal if you want to fully understand the entire invoice.",
         service1_btn: "Start now for €6.90",
 
@@ -751,26 +843,41 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
 
         faq_title: "Frequently asked questions about invoices",
         faq_sub: "These questions often come up with invoices:",
-        faq1_q: "What is especially important on an invoice?",
-        faq1_a: "Especially important are total amount, individual items, invoice date, payment deadline and the sender of the invoice.",
+        faq1_q: "Which details are written on an invoice?",
+        faq1_a: "An invoice often contains details about total amount, individual items, invoice date, payment deadline and the sender of the invoice.",
         faq2_q: "What does payment deadline mean?",
-        faq2_a: "The payment deadline shows by when the invoice should be paid. BriefHelden helps you identify such details clearly.",
-        faq3_q: "Why is the amount higher than expected?",
-        faq3_a: "Extra costs, shipping, fees or VAT are often added. A clear explanation helps classify the individual items.",
+        faq2_a: "The payment deadline shows by when the invoice should be paid. Many people want this detail explained clearly first.",
+        faq3_q: "Which points are especially important?",
+        faq3_a: "Especially important are total amount, individual items, invoice date, payment deadline as well as possible extra costs, fees or VAT.",
         faq4_q: "Is BriefHelden legal advice?",
-        faq4_a: "No. BriefHelden does not provide legal advice. You only receive a clear explanation of the content.",
+        faq4_a: "No. BriefHelden does not provide legal advice within the meaning of the German Legal Services Act (RDG). You receive only a clear explanation and linguistic simplification of your document’s content. There is no legal assessment, no individual review, and no binding recommendation for action.",
 
         tip_title: "What should you look for on an invoice?",
         tip_sub: "These points are often especially important:",
-        tip1_title: "Check the amounts",
-        tip1_text: "See how the total amount is made up and whether extra costs or taxes are listed.",
-        tip2_title: "Check the payment deadline",
-        tip2_text: "Check by when the invoice must be paid.",
-        tip3_title: "Review the listed items",
-        tip3_text: "Pay attention to which products, services or fees are specifically listed.",
+        tip1_title: "Look at the amounts",
+        tip1_text: "See how the total amount is made up and whether extra costs, fees or taxes are listed.",
+        tip2_title: "Look at the payment deadline",
+        tip2_text: "Check by when the invoice should be paid according to the document.",
+        tip3_title: "Look at items and details",
+        tip3_text: "Pay attention to which products, services or fees are specifically listed and which details about the invoice are included.",
         tip4_title: "Make the content understandable",
-        tip4_text: "If the invoice seems unclear or complicated, a simple explanation often helps immediately.",
+        tip4_text: "If terms, items or details seem unclear, a simple explanation often helps you grasp the included details more easily.",
 
+        more_title: "Understand more common letters",
+        more_1_title: "Understand an inkasso letter",
+        more_1_text: "Debt collection letters explained clearly.",
+        more_2_title: "Understand a payment order",
+        more_2_text: "Payment orders explained simply.",
+        more_3_title: "Understand a Jobcenter letter",
+        more_3_text: "Jobcenter letters explained in simple language.",
+        more_4_title: "Understand an electricity bill",
+        more_4_text: "Electricity bills explained clearly.",
+        more_5_title: "Understand a gas bill",
+        more_5_text: "Gas bills explained simply.",
+        more_6_title: "Understand an insurance letter",
+        more_6_text: "Insurance letters explained clearly.",
+
+        foot_copy: "© 2026 BriefHelden – All rights reserved",
         foot_home: "Home",
         foot_question: "Ask a question",
         foot_refund: "Withdrawal",
@@ -780,6 +887,11 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
       },
 
       tr: {
+        pageTitle: "Faturayı anlayın – kolay açıklama | BriefHelden",
+        metaDescription: "Faturayı kolay anlayın: BriefHelden tutarları, ödeme süresini, fatura içeriğini ve belgede yer alan bilgileri sade ve anlaşılır şekilde açıklar.",
+        ogTitle: "Faturayı anlayın – kolay açıklama | BriefHelden",
+        ogDescription: "Fatura basitçe açıklanır. Tutarları, ödeme süresini ve önemli bilgileri hızlı ve açık şekilde anlayın.",
+
         nav_home: "Ana Sayfa",
         nav_question: "Soru sor",
         nav_refund: "Cayma",
@@ -788,7 +900,7 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_privacy: "Gizlilik",
 
         hero_title: "Faturayı anlayın",
-        hero_sub: "Bir fatura her zaman hemen anlaşılmaz. BriefHelden içeriği, tutarları ve önemli bilgileri size basit ve açık şekilde açıklar.",
+        hero_sub: "Bir fatura çoğu zaman önemli tutarlar ve bilgiler içerir. BriefHelden içeriği, toplam tutarı, ödeme süresini ve yer alan bilgileri size basit ve açık şekilde açıklar.",
         hero_cta: "Faturayı şimdi açıklat – 6,90 €",
         hero_question_cta: "Kısa soru sor – 1,49 €",
         meta_1: "Basit açıklandı",
@@ -796,7 +908,7 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         meta_3: "Gizli",
 
         intro_title: "Bir faturada neler yazar?",
-        intro_text: "Bir faturada genelde hizmetler, ürünler, tutarlar, fatura tarihi ve ödeme süresi yer alır. Birçok kişi tutarın nasıl oluştuğunu, ek kalemler olup olmadığını ve ödemenin ne zamana kadar yapılması gerektiğini anlamak ister. BriefHelden tam bu konuda yardımcı olur.",
+        intro_text: "Bir faturada çoğu zaman hizmetler, ürünler, tek tek kalemler, toplam tutar, fatura tarihi ve ödeme süresi ile ilgili bilgiler yer alır. Ayrıca KDV, ek masraflar veya ücretlerin dahil olup olmadığı da yazabilir. Birçok kişi önce belgede hangi içeriklerin ve bilgilerin yer aldığını anlamak ister. BriefHelden tam bu konuda yardımcı olur.",
 
         left_title: "Basit açıklama",
         left_text_1: "Bir fatura genelde paranın ne için istendiğini ve toplam tutarın ne kadar olduğunu gösterir.",
@@ -807,9 +919,9 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         right_li_1: "Faturayı güvenli şekilde yükleyin",
         right_li_2: "İçeriği okuyup açık şekilde açıklıyoruz",
         right_li_3: "Açıklamayı e-posta ile alırsınız",
-        right_li_4: "Hukuki danışmanlık değil – sadece anlaşılır açıklama",
+        right_li_4: "Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık verilmez — yalnızca dilsel sadeleştirme ve hukuki değerlendirme ya da eylem tavsiyesi olmadan anlaşılır metin açıklaması sunulur",
 
-        service1_title: "Belgenin tamamını açıklat",
+        service1_title: "Faturanın tamamını açıklat",
         service1_text: "Faturanın tamamını anlamak istiyorsanız idealdir.",
         service1_btn: "Şimdi 6,90 € ile başla",
 
@@ -819,26 +931,41 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
 
         faq_title: "Faturalar hakkında sık sorulan sorular",
         faq_sub: "Faturalarda şu sorular sıkça ortaya çıkar:",
-        faq1_q: "Bir faturada en önemli olan nedir?",
-        faq1_a: "Toplam tutar, tek tek kalemler, fatura tarihi, ödeme süresi ve faturayı gönderen taraf özellikle önemlidir.",
+        faq1_q: "Bir faturada hangi bilgiler yer alır?",
+        faq1_a: "Bir fatura çoğu zaman toplam tutar, tek tek kalemler, fatura tarihi, ödeme süresi ve faturayı gönderen tarafla ilgili bilgiler içerir.",
         faq2_q: "Ödeme süresi ne demektir?",
-        faq2_a: "Ödeme süresi, faturanın en geç ne zamana kadar ödenmesi gerektiğini gösterir. BriefHelden bu bilgileri açık şekilde görmenize yardım eder.",
-        faq3_q: "Neden tutar beklediğimden daha yüksek?",
-        faq3_a: "Çoğu zaman ek masraflar, kargo, ücretler veya KDV eklenir. Açık bir açıklama kalemleri daha iyi anlamanıza yardımcı olur.",
+        faq2_a: "Ödeme süresi, faturanın en geç ne zamana kadar ödenmesi gerektiğini gösterir. Birçok kişi bu bilgiyi önce açık şekilde açıklanmış olarak görmek ister.",
+        faq3_q: "Hangi noktalar özellikle önemlidir?",
+        faq3_a: "Özellikle toplam tutar, tek tek kalemler, fatura tarihi, ödeme süresi ve olası ek masraflar, ücretler veya KDV önemlidir.",
         faq4_q: "BriefHelden hukuki danışmanlık mı veriyor?",
-        faq4_a: "Hayır. BriefHelden hukuki danışmanlık vermez. Sadece içeriğin anlaşılır açıklamasını sunar.",
+        faq4_a: "Hayır. BriefHelden, Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık vermez. Yalnızca belgenizin içeriğinin anlaşılır açıklamasını ve dilsel sadeleştirmesini alırsınız. Hukuki değerlendirme, bireysel inceleme veya bağlayıcı bir hareket tavsiyesi yapılmaz.",
 
         tip_title: "Bir faturada nelere dikkat etmelisiniz?",
         tip_sub: "Bu noktalar genelde özellikle önemlidir:",
-        tip1_title: "Tutarları kontrol edin",
-        tip1_text: "Toplam tutarın nasıl oluştuğuna ve ek masraf veya vergi olup olmadığına bakın.",
-        tip2_title: "Ödeme süresini kontrol edin",
-        tip2_text: "Faturaya göre ödemenin en geç ne zamana kadar yapılması gerektiğini kontrol edin.",
-        tip3_title: "Kalemlere bakın",
-        tip3_text: "Hangi ürünlerin, hizmetlerin veya ücretlerin özellikle yazıldığını inceleyin.",
+        tip1_title: "Tutarlara bakın",
+        tip1_text: "Toplam tutarın nasıl oluştuğuna ve ek masraf, ücret veya verginin listelenip listelenmediğine bakın.",
+        tip2_title: "Ödeme süresine bakın",
+        tip2_text: "Belgeye göre faturanın en geç ne zamana kadar ödenmesi gerektiğini kontrol edin.",
+        tip3_title: "Kalemlere ve bilgilere bakın",
+        tip3_text: "Hangi ürünlerin, hizmetlerin veya ücretlerin özellikle yazıldığını ve faturaya dair hangi bilgilerin yer aldığını inceleyin.",
         tip4_title: "İçeriği anlaşılır hale getirin",
-        tip4_text: "Fatura karışık veya anlaşılmaz görünüyorsa, basit bir açıklama çoğu zaman hemen yardımcı olur.",
+        tip4_text: "Terimler, kalemler veya bilgiler belirsiz görünüyorsa, basit bir açıklama çoğu zaman yer alan bilgileri daha iyi kavramanıza yardımcı olur.",
 
+        more_title: "Diğer sık görülen mektupları anlayın",
+        more_1_title: "Inkasso mektubunu anla",
+        more_1_text: "Tahsilat yazıları açık şekilde açıklanır.",
+        more_2_title: "Ödeme emrini anla",
+        more_2_text: "Ödeme emirleri basit şekilde açıklanır.",
+        more_3_title: "Jobcenter mektubunu anla",
+        more_3_text: "Jobcenter yazıları basit dille açıklanır.",
+        more_4_title: "Elektrik faturasını anla",
+        more_4_text: "Elektrik faturaları açık şekilde açıklanır.",
+        more_5_title: "Gaz faturasını anla",
+        more_5_text: "Gaz faturaları basit şekilde açıklanır.",
+        more_6_title: "Sigorta mektubunu anla",
+        more_6_text: "Sigorta yazıları açık şekilde açıklanır.",
+
+        foot_copy: "© 2026 BriefHelden – Tüm hakları saklıdır",
         foot_home: "Ana Sayfa",
         foot_question: "Soru sor",
         foot_refund: "Cayma",
@@ -848,6 +975,11 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
       },
 
       ru: {
+        pageTitle: "Понять счёт – простое объяснение | BriefHelden",
+        metaDescription: "Легко понять счёт: BriefHelden просто и понятно объясняет суммы, срок оплаты, содержание счёта и указанные в документе сведения.",
+        ogTitle: "Понять счёт – простое объяснение | BriefHelden",
+        ogDescription: "Счёт объясняется простым языком. Понятно разберитесь в суммах, сроке оплаты и важных сведениях.",
+
         nav_home: "Главная",
         nav_question: "Задать вопрос",
         nav_refund: "Отказ",
@@ -856,7 +988,7 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_privacy: "Конфиденциальность",
 
         hero_title: "Понять счёт",
-        hero_sub: "Счёт не всегда сразу понятен. BriefHelden объяснит содержание, суммы и важные данные просто и ясно.",
+        hero_sub: "Счёт часто содержит важные суммы и сведения. BriefHelden объяснит содержание, общую сумму, срок оплаты и указанные данные просто и ясно.",
         hero_cta: "Объяснить счёт – 6,90 €",
         hero_question_cta: "Задать короткий вопрос – 1,49 €",
         meta_1: "Просто объяснено",
@@ -864,7 +996,7 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         meta_3: "Конфиденциально",
 
         intro_title: "Что указано в счёте?",
-        intro_text: "В счёте обычно указаны услуги, товары, суммы, дата счёта и срок оплаты. Многие люди хотят понять, из чего складывается сумма, есть ли дополнительные позиции и до какого срока нужно оплатить. Именно здесь помогает BriefHelden.",
+        intro_text: "В счёте часто указаны сведения об услугах, товарах, отдельных позициях, общей сумме, дате счёта и сроке оплаты. Также может быть указано, включены ли НДС, дополнительные расходы или сборы. Многие люди сначала хотят понять, какие именно сведения и данные указаны в документе. Именно здесь помогает BriefHelden.",
 
         left_title: "Просто объясняем",
         left_text_1: "Счёт обычно показывает, за что требуют деньги и какова общая сумма.",
@@ -875,9 +1007,9 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         right_li_1: "Безопасно загрузите счёт",
         right_li_2: "Мы читаем содержание и понятно объясняем его",
         right_li_3: "Вы получаете объяснение по e-mail",
-        right_li_4: "Не юридическая консультация – только понятное объяснение",
+        right_li_4: "Это не юридическая консультация в смысле немецкого Закона о юридических услугах (RDG) — только языковое упрощение и понятное текстовое объяснение без правовой оценки и без рекомендаций к действиям",
 
-        service1_title: "Получить полное объяснение документа",
+        service1_title: "Получить полное объяснение счёта",
         service1_text: "Идеально, если вы хотите полностью понять весь счёт.",
         service1_btn: "Начать за 6,90 €",
 
@@ -887,26 +1019,41 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
 
         faq_title: "Частые вопросы о счетах",
         faq_sub: "Эти вопросы часто возникают по счетам:",
-        faq1_q: "Что особенно важно в счёте?",
-        faq1_a: "Особенно важны общая сумма, отдельные позиции, дата счёта, срок оплаты и отправитель счёта.",
+        faq1_q: "Какие сведения содержатся в счёте?",
+        faq1_a: "Счёт часто содержит сведения об общей сумме, отдельных позициях, дате счёта, сроке оплаты и отправителе счёта.",
         faq2_q: "Что означает срок оплаты?",
-        faq2_a: "Срок оплаты показывает, до какого времени счёт нужно оплатить. BriefHelden помогает вам увидеть такие данные понятнее.",
-        faq3_q: "Почему сумма выше, чем я ожидал?",
-        faq3_a: "Часто добавляются дополнительные расходы, доставка, сборы или НДС. Понятное объяснение помогает лучше понять отдельные позиции.",
+        faq2_a: "Срок оплаты показывает, до какого времени счёт нужно оплатить. Многие люди хотят сначала получить понятное объяснение этого указания.",
+        faq3_q: "Какие пункты особенно важны?",
+        faq3_a: "Особенно важны общая сумма, отдельные позиции, дата счёта, срок оплаты, а также возможные дополнительные расходы, сборы или НДС.",
         faq4_q: "BriefHelden — это юридическая консультация?",
-        faq4_a: "Нет. BriefHelden не даёт юридических консультаций. Вы получаете только понятное объяснение содержания.",
+        faq4_a: "Нет. BriefHelden не оказывает юридических консультаций в смысле немецкого Закона о юридических услугах (RDG). Вы получаете только понятное объяснение и языковое упрощение содержания вашего документа. Юридическая оценка, индивидуальная проверка и обязательные рекомендации к действиям не предоставляются.",
 
         tip_title: "На что стоит обратить внимание в счёте?",
         tip_sub: "Эти пункты часто особенно важны:",
-        tip1_title: "Проверьте суммы",
-        tip1_text: "Посмотрите, как складывается общая сумма и указаны ли дополнительные расходы или налоги.",
-        tip2_title: "Проверьте срок оплаты",
-        tip2_text: "Проверьте, до какого срока по счёту нужно оплатить.",
-        tip3_title: "Посмотрите позиции",
-        tip3_text: "Обратите внимание, какие товары, услуги или сборы конкретно указаны.",
+        tip1_title: "Посмотрите на суммы",
+        tip1_text: "Посмотрите, как складывается общая сумма и указаны ли дополнительные расходы, сборы или налоги.",
+        tip2_title: "Посмотрите на срок оплаты",
+        tip2_text: "Проверьте, до какого срока по документу нужно оплатить счёт.",
+        tip3_title: "Посмотрите позиции и сведения",
+        tip3_text: "Обратите внимание, какие товары, услуги или сборы конкретно указаны и какие сведения о счёте включены.",
         tip4_title: "Сделайте содержание понятным",
-        tip4_text: "Если счёт кажется непонятным или сложным, простое объяснение часто сразу помогает.",
+        tip4_text: "Если термины, позиции или сведения кажутся неясными, простое объяснение часто помогает легче воспринять содержащиеся в нём сведения.",
 
+        more_title: "Другие часто встречающиеся письма",
+        more_1_title: "Понять письмо от инкассо",
+        more_1_text: "Письма о взыскании объяснены понятно.",
+        more_2_title: "Понять платёжный приказ",
+        more_2_text: "Платёжные приказы объяснены просто.",
+        more_3_title: "Понять письмо Jobcenter",
+        more_3_text: "Письма Jobcenter объяснены простым языком.",
+        more_4_title: "Понять счёт за электричество",
+        more_4_text: "Счета за электричество объяснены понятно.",
+        more_5_title: "Понять счёт за газ",
+        more_5_text: "Счета за газ объяснены просто.",
+        more_6_title: "Понять письмо от страховой",
+        more_6_text: "Письма от страховой объяснены понятно.",
+
+        foot_copy: "© 2026 BriefHelden – Все права защищены",
         foot_home: "Главная",
         foot_question: "Задать вопрос",
         foot_refund: "Отказ",
@@ -917,8 +1064,8 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
     };
 
     function updateLinks(lang){
-const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
-const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
+      const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
+      const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
 
       const stripeBtn = document.getElementById("stripeBtn");
       const servicePrimaryBtn = document.getElementById("servicePrimaryBtn");
@@ -931,9 +1078,24 @@ const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
       if(serviceQuestionBtn) serviceQuestionBtn.href = questionLink;
     }
 
+    function updateMeta(lang){
+      const dict = i18n[lang] || i18n.de;
+      document.title = dict.pageTitle;
+
+      const description = document.querySelector('meta[name="description"]');
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      const ogDescription = document.querySelector('meta[property="og:description"]');
+
+      if(description) description.setAttribute("content", dict.metaDescription);
+      if(ogTitle) ogTitle.setAttribute("content", dict.ogTitle);
+      if(ogDescription) ogDescription.setAttribute("content", dict.ogDescription);
+    }
+
     function applyLang(lang){
-const dict = i18n[lang] || i18n.de;
-      document.documentElement.lang = lang;
+      const currentLang = i18n[lang] ? lang : "de";
+      const dict = i18n[currentLang];
+
+      document.documentElement.lang = currentLang;
 
       document.querySelectorAll("[data-i18n]").forEach((el) => {
         const key = el.getAttribute("data-i18n");
@@ -942,8 +1104,9 @@ const dict = i18n[lang] || i18n.de;
         }
       });
 
-      updateLinks(lang);
-      localStorage.setItem("briefhelden_lang", lang);
+      updateMeta(currentLang);
+      updateLinks(currentLang);
+      localStorage.setItem("briefhelden_lang", currentLang);
     }
 
     const select = document.getElementById("langSelect");
@@ -957,15 +1120,5 @@ const dict = i18n[lang] || i18n.de;
       applyLang(select.value);
     });
   </script>
-  <h2>Weitere häufige Briefe verstehen</h2>
-
-<ul>
-<li><a href="/inkasso-brief-verstehen.html">Inkasso Brief verstehen</a></li>
-<li><a href="/mahnbescheid-verstehen.html">Mahnbescheid verstehen</a></li>
-<li><a href="/jobcenter-brief-verstehen.html">Jobcenter Brief verstehen</a></li>
-<li><a href="/pfaendungsbescheid-verstehen.html">Pfändungsbescheid verstehen</a></li>
-<li><a href="/vollstreckungsbescheid-verstehen.html">Vollstreckungsbescheid verstehen</a></li>
-<li><a href="/finanzamt-brief-verstehen.html">Finanzamt Brief verstehen</a></li>
-</ul>
 </body>
 </html>
