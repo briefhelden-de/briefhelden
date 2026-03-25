@@ -6,20 +6,23 @@
   <title>Zahlungserinnerung verstehen – einfach erklärt | BriefHelden</title>
   <meta
     name="description"
-    content="Zahlungserinnerung einfach verstehen: BriefHelden erklärt Fristen, Beträge, Zahlungsaufforderung und wichtige Angaben klar, einfach und ohne komplizierte Fachsprache."
+    content="Zahlungserinnerung verständlich erklärt: BriefHelden erklärt Inhalt, Beträge, Fristen und welche Angaben im Schreiben enthalten sind – klar, einfach und ohne komplizierte Fachsprache."
   />
   <meta name="robots" content="index, follow" />
-<link rel="canonical" href="https://www.briefhelden-service.de/zahlungserinnerung-verstehen.html" />
+  <link rel="canonical" href="https://www.briefhelden-service.de/zahlungserinnerung-verstehen.html" />
 
   <meta property="og:title" content="Zahlungserinnerung verstehen – einfach erklärt | BriefHelden" />
   <meta
     property="og:description"
-    content="Zahlungserinnerung einfach erklärt. Verstehen Sie Fristen, Beträge und wichtige Angaben schnell und verständlich."
+    content="Zahlungserinnerung einfach erklärt. Verstehen Sie Beträge, Fristen und wichtige Angaben im Schreiben schnell und verständlich."
   />
   <meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.briefhelden-service.de/zahlungserinnerung-verstehen.html" />
+  <meta property="og:url" content="https://www.briefhelden-service.de/zahlungserinnerung-verstehen.html" />
+  <meta property="og:image" content="https://www.briefhelden-service.de/og-image.jpg" />
+  <meta property="og:site_name" content="BriefHelden" />
+  <meta name="theme-color" content="#0b1220" />
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -104,6 +107,7 @@
         linear-gradient(180deg, rgba(55,120,255,.9), rgba(20,70,190,.9));
       box-shadow:0 10px 18px rgba(0,0,0,.18);
       position:relative;
+      flex:0 0 auto;
     }
 
     .brand .logo:after{
@@ -171,7 +175,7 @@
       padding:68px 18px 40px;
       background:
         linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.58)),
-url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=2200&q=60");
+        url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=2200&q=60");
       background-size:cover;
       background-position:center;
     }
@@ -263,7 +267,8 @@ url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fi
     .pad{padding:22px}
 
     .headline,
-    .sectionTitle{
+    .sectionTitle,
+    .moreLinks h2{
       text-align:center;
       margin:0 0 10px;
       font-weight:950;
@@ -288,7 +293,8 @@ url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fi
     }
 
     .infoCard,
-    .faqItem{
+    .faqItem,
+    .moreCard{
       border-radius:var(--radius-lg);
       border:1px solid rgba(255,255,255,.55);
       background:rgba(255,255,255,.20);
@@ -296,20 +302,24 @@ url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fi
     }
 
     .infoCard h3,
-    .faqItem h3{
+    .faqItem h3,
+    .moreCard h3{
       margin:0 0 10px;
       font-size:22px;
       font-weight:950;
+      line-height:1.25;
     }
 
-    .faqItem h3{
+    .faqItem h3,
+    .moreCard h3{
       font-size:18px;
       margin-bottom:8px;
     }
 
     .infoCard p,
     .infoCard li,
-    .faqItem p{
+    .faqItem p,
+    .moreCard p{
       color:rgba(11,18,32,.76);
       line-height:1.65;
       font-weight:700;
@@ -323,7 +333,8 @@ url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fi
       padding-left:18px;
     }
 
-    .faqGrid{
+    .faqGrid,
+    .moreGrid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:14px;
@@ -348,6 +359,7 @@ url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fi
       margin:0 0 8px;
       font-size:20px;
       font-weight:950;
+      line-height:1.3;
     }
 
     .serviceMini .box p{
@@ -374,6 +386,22 @@ url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fi
 
     .miniBtn.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
     .miniBtn.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
+
+    .moreLinks{
+      max-width:var(--max);
+      margin:28px auto 0;
+      padding:0 18px 30px;
+    }
+
+    .moreCard{
+      display:block;
+      transition:transform .18s ease, background .18s ease;
+    }
+
+    .moreCard:hover{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,.30);
+    }
 
     footer{
       margin-top:18px;
@@ -408,6 +436,7 @@ url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fi
       nav.links{display:none}
       .grid2,
       .faqGrid,
+      .moreGrid,
       .serviceMini{grid-template-columns:1fr}
       .cta{min-width:92vw}
       .miniBtn{min-width:100%}
@@ -446,7 +475,7 @@ url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fi
     <div class="wrap">
       <h1 data-i18n="hero_title">Zahlungserinnerung verstehen</h1>
       <p data-i18n="hero_sub">
-        Eine Zahlungserinnerung wirkt oft unangenehm oder dringend. BriefHelden erklärt Ihnen Inhalt, Frist und wichtige Angaben einfach und verständlich.
+        Eine Zahlungserinnerung enthält oft Beträge, Fristen und weitere Hinweise. BriefHelden erklärt den Inhalt einfach und verständlich, damit Sie sprachlich besser einordnen können, welche Angaben im Schreiben enthalten sind.
       </p>
 
       <div class="ctaGroup">
@@ -475,20 +504,20 @@ url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fi
         <div class="pad">
           <h2 class="headline" data-i18n="intro_title">Was ist eine Zahlungserinnerung?</h2>
           <p class="lead" data-i18n="intro_text">
-            Eine Zahlungserinnerung ist ein Schreiben, das daran erinnern soll, dass ein Betrag noch offen ist. Oft wird dabei auf eine Rechnung, ein Zahlungsziel oder eine frühere Forderung hingewiesen. Viele Menschen möchten verstehen, ob die Zahlungserinnerung schon ernst ist, welche Frist gilt und worauf sie achten sollten. Genau dabei hilft BriefHelden.
+            Eine Zahlungserinnerung ist ein Schreiben, das darauf hinweist, dass ein Betrag nach Angaben im Dokument noch offen ist. Häufig stehen darin Angaben zu einem Betrag, zu einer Rechnung, zu einer Frist und zu weiteren Hinweisen im Schreiben. Viele Menschen möchten zuerst verstehen, welche Angaben im Schreiben enthalten sind und wie der Inhalt sprachlich verständlich einzuordnen ist. Genau dabei hilft BriefHelden.
           </p>
 
           <div class="grid2">
             <div class="infoCard">
               <h3 data-i18n="left_title">Einfach erklärt</h3>
               <p data-i18n="left_text_1">
-                Eine Zahlungserinnerung bedeutet meistens, dass laut Schreiben noch nicht bezahlt wurde und jetzt erneut an die Zahlung erinnert wird.
+                Eine Zahlungserinnerung bedeutet meistens, dass laut Schreiben eine Zahlung noch nicht erfasst oder noch offen ist und nun erneut darauf hingewiesen wird.
               </p>
               <p data-i18n="left_text_2">
-                Wichtig sind dabei vor allem: Welcher Betrag wird genannt? Auf welche Rechnung oder Forderung bezieht sich das Schreiben? Gibt es eine neue Frist? Und ist von weiteren Schritten die Rede?
+                Wichtig sind dabei vor allem: Welcher Betrag wird genannt? Auf welche Rechnung oder Forderung bezieht sich das Schreiben? Gibt es eine Frist oder ein Datum? Und welche weiteren Hinweise sind enthalten?
               </p>
               <p data-i18n="left_text_3">
-                BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie die Zahlungserinnerung besser einordnen können.
+                BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie die Zahlungserinnerung besser sprachlich verständlich einordnen können.
               </p>
             </div>
 
@@ -498,14 +527,14 @@ url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fi
                 <li data-i18n="right_li_1">Zahlungserinnerung sicher hochladen</li>
                 <li data-i18n="right_li_2">Wir lesen den Inhalt und erklären ihn verständlich</li>
                 <li data-i18n="right_li_3">Sie erhalten die Erklärung per E-Mail</li>
-                <li data-i18n="right_li_4">Keine Rechtsberatung – nur verständliche Texterklärung</li>
+                <li data-i18n="right_li_4">Keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) – nur sprachliche Vereinfachung und verständliche Texterklärung ohne rechtliche Bewertung oder Handlungsempfehlung</li>
               </ul>
             </div>
           </div>
 
           <div class="serviceMini">
             <div class="box">
-              <h3 data-i18n="service1_title">Komplettes Schreiben erklären lassen</h3>
+              <h3 data-i18n="service1_title">Komplette Zahlungserinnerung erklären lassen</h3>
               <p data-i18n="service1_text">
                 Ideal, wenn Sie die ganze Zahlungserinnerung vollständig verstehen möchten.
               </p>
@@ -540,30 +569,30 @@ url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fi
 
           <div class="faqGrid">
             <div class="faqItem">
-              <h3 data-i18n="faq1_q">Ist eine Zahlungserinnerung schon eine Mahnung?</h3>
+              <h3 data-i18n="faq1_q">Welche Angaben stehen in einer Zahlungserinnerung?</h3>
               <p data-i18n="faq1_a">
-                Nicht immer. Eine Zahlungserinnerung ist oft zunächst ein Hinweis darauf, dass eine Zahlung noch offen sein soll. Der genaue Inhalt des Schreibens ist entscheidend.
+                Eine Zahlungserinnerung enthält häufig Angaben zu Betrag, Rechnung, Datum, Frist, Forderungsbezug und weiteren Hinweisen im Schreiben.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="faq2_q">Welche Angaben sind besonders wichtig?</h3>
+              <h3 data-i18n="faq2_q">Was bedeuten Betrag oder Frist?</h3>
               <p data-i18n="faq2_a">
-                Besonders wichtig sind Betrag, Bezug zur Rechnung oder Forderung, neue Frist und mögliche Hinweise auf weitere Schritte.
+                Im Schreiben steht oft, welcher Betrag genannt wird und bis wann eine Zahlung erfolgen soll oder erinnert wird. Viele Menschen möchten diese Angaben zuerst verständlich erklärt bekommen.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="faq3_q">Muss ich auf eine Zahlungserinnerung achten?</h3>
+              <h3 data-i18n="faq3_q">Welche Punkte sind besonders wichtig?</h3>
               <p data-i18n="faq3_a">
-                Ja, solche Schreiben sollten ernst genommen werden. Viele Menschen möchten zuerst verstehen, worauf sich die Erinnerung genau bezieht.
+                Besonders wichtig sind genannter Betrag, Bezug zur Rechnung oder Forderung, Datum, Frist und weitere Hinweise dazu, welche Angaben im Schreiben enthalten sind.
               </p>
             </div>
 
             <div class="faqItem">
               <h3 data-i18n="faq4_q">Ist BriefHelden eine Rechtsberatung?</h3>
               <p data-i18n="faq4_a">
-                Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.
+                Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Texterklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.
               </p>
             </div>
           </div>
@@ -581,33 +610,71 @@ url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fi
 
           <div class="faqGrid">
             <div class="faqItem">
-              <h3 data-i18n="tip1_title">Betrag prüfen</h3>
+              <h3 data-i18n="tip1_title">Betrag ansehen</h3>
               <p data-i18n="tip1_text">
-                Schauen Sie, welcher offene Betrag genannt wird und ob zusätzliche Kosten erwähnt werden.
+                Schauen Sie, welcher offene Betrag genannt wird und ob zusätzliche Kosten, Gebühren oder andere Hinweise aufgeführt sind.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="tip2_title">Frist beachten</h3>
+              <h3 data-i18n="tip2_title">Fristen ansehen</h3>
               <p data-i18n="tip2_text">
-                Prüfen Sie, ob eine neue Zahlungsfrist oder ein konkretes Datum genannt wird.
+                Achten Sie darauf, ob ein Datum, eine Frist oder ein Zeitraum im Schreiben genannt wird.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="tip3_title">Bezug ansehen</h3>
+              <h3 data-i18n="tip3_title">Bezug und Angaben prüfen</h3>
               <p data-i18n="tip3_text">
-                Achten Sie darauf, auf welche Rechnung, Forderung oder frühere Zahlung sich das Schreiben bezieht.
+                Prüfen Sie, auf welche Rechnung, Forderung oder frühere Angabe sich das Schreiben bezieht und welche weiteren Informationen enthalten sind.
               </p>
             </div>
 
             <div class="faqItem">
               <h3 data-i18n="tip4_title">Inhalt verständlich machen</h3>
               <p data-i18n="tip4_text">
-                Wenn die Formulierungen unklar oder kompliziert wirken, hilft eine einfache Erklärung oft sofort weiter.
+                Wenn Begriffe, Hinweise oder Formulierungen unklar wirken, hilft eine sprachliche Vereinfachung oft dabei, den Inhalt besser zu erfassen.
               </p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div style="height:18px"></div>
+
+      <div class="moreLinks">
+        <h2 data-i18n="more_title">Weitere häufige Briefe verstehen</h2>
+
+        <div class="moreGrid">
+          <a class="moreCard" href="/inkasso-brief-verstehen.html">
+            <h3 data-i18n="more_1_title">Inkasso Brief verstehen</h3>
+            <p data-i18n="more_1_text">Inkasso Schreiben klar und verständlich erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/mahnbescheid-verstehen.html">
+            <h3 data-i18n="more_2_title">Mahnbescheid verstehen</h3>
+            <p data-i18n="more_2_text">Mahnbescheide einfach erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/jobcenter-brief-verstehen.html">
+            <h3 data-i18n="more_3_title">Jobcenter Brief verstehen</h3>
+            <p data-i18n="more_3_text">Jobcenter Schreiben in einfacher Sprache erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/pfaendungsbescheid-verstehen.html">
+            <h3 data-i18n="more_4_title">Pfändungsbescheid verstehen</h3>
+            <p data-i18n="more_4_text">Pfändungsbescheide klar und verständlich erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/vollstreckungsbescheid-verstehen.html">
+            <h3 data-i18n="more_5_title">Vollstreckungsbescheid verstehen</h3>
+            <p data-i18n="more_5_text">Vollstreckungsbescheide einfach erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/finanzamt-brief-verstehen.html">
+            <h3 data-i18n="more_6_title">Finanzamt Brief verstehen</h3>
+            <p data-i18n="more_6_text">Schreiben vom Finanzamt klar und verständlich erklärt.</p>
+          </a>
         </div>
       </div>
     </div>
@@ -615,7 +682,7 @@ url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fi
 
   <footer>
     <div class="footWrap">
-      <div>© 2026 BriefHelden – Alle Rechte vorbehalten</div>
+      <div data-i18n="foot_copy">© 2026 BriefHelden – Alle Rechte vorbehalten</div>
       <div class="footLinks">
         <a href="index.html" data-i18n="foot_home">Startseite</a>
         <a href="frage.html" data-i18n="foot_question">Frage stellen</a>
@@ -629,21 +696,26 @@ url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fi
 
   <script>
     const STRIPE_LINKS = {
-de: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
-en: "https://buy.stripe.com/fZubJ0dpXbMAbfpcIZ4sE01",
-tr: "https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
-ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
+      de: "https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
+      en: "https://buy.stripe.com/fZubJ0dpXbMAbfpcIZ4sE01",
+      tr: "https://buy.stripe.com/dRm14m4Tr3g43MX7oF4sE02",
+      ru: "https://buy.stripe.com/5kQbJ0fy59EsbfpeR74sE03"
     };
 
     const QUESTION_LINKS = {
-de: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
-en: "https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
-tr: "https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
-ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
+      de: "https://buy.stripe.com/8x228q71z5occjt4ct4sE04",
+      en: "https://buy.stripe.com/4gM3cu1Hf5occjtgZf4sE05",
+      tr: "https://buy.stripe.com/bJe3cu99Hg2QcjjtaAR4sE06",
+      ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
     };
 
     const i18n = {
       de: {
+        pageTitle: "Zahlungserinnerung verstehen – einfach erklärt | BriefHelden",
+        metaDescription: "Zahlungserinnerung verständlich erklärt: BriefHelden erklärt Inhalt, Beträge, Fristen und welche Angaben im Schreiben enthalten sind – klar, einfach und ohne komplizierte Fachsprache.",
+        ogTitle: "Zahlungserinnerung verstehen – einfach erklärt | BriefHelden",
+        ogDescription: "Zahlungserinnerung einfach erklärt. Verstehen Sie Beträge, Fristen und wichtige Angaben im Schreiben schnell und verständlich.",
+
         nav_home: "Startseite",
         nav_question: "Frage stellen",
         nav_refund: "Widerruf",
@@ -652,7 +724,7 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_privacy: "Datenschutz",
 
         hero_title: "Zahlungserinnerung verstehen",
-        hero_sub: "Eine Zahlungserinnerung wirkt oft unangenehm oder dringend. BriefHelden erklärt Ihnen Inhalt, Frist und wichtige Angaben einfach und verständlich.",
+        hero_sub: "Eine Zahlungserinnerung enthält oft Beträge, Fristen und weitere Hinweise. BriefHelden erklärt den Inhalt einfach und verständlich, damit Sie sprachlich besser einordnen können, welche Angaben im Schreiben enthalten sind.",
         hero_cta: "Jetzt Zahlungserinnerung erklären lassen – 6,90 €",
         hero_question_cta: "Kurze Frage stellen – 1,49 €",
         meta_1: "Einfach erklärt",
@@ -660,20 +732,20 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         meta_3: "Vertraulich",
 
         intro_title: "Was ist eine Zahlungserinnerung?",
-        intro_text: "Eine Zahlungserinnerung ist ein Schreiben, das daran erinnern soll, dass ein Betrag noch offen ist. Oft wird dabei auf eine Rechnung, ein Zahlungsziel oder eine frühere Forderung hingewiesen. Viele Menschen möchten verstehen, ob die Zahlungserinnerung schon ernst ist, welche Frist gilt und worauf sie achten sollten. Genau dabei hilft BriefHelden.",
+        intro_text: "Eine Zahlungserinnerung ist ein Schreiben, das darauf hinweist, dass ein Betrag nach Angaben im Dokument noch offen ist. Häufig stehen darin Angaben zu einem Betrag, zu einer Rechnung, zu einer Frist und zu weiteren Hinweisen im Schreiben. Viele Menschen möchten zuerst verstehen, welche Angaben im Schreiben enthalten sind und wie der Inhalt sprachlich verständlich einzuordnen ist. Genau dabei hilft BriefHelden.",
 
         left_title: "Einfach erklärt",
-        left_text_1: "Eine Zahlungserinnerung bedeutet meistens, dass laut Schreiben noch nicht bezahlt wurde und jetzt erneut an die Zahlung erinnert wird.",
-        left_text_2: "Wichtig sind dabei vor allem: Welcher Betrag wird genannt? Auf welche Rechnung oder Forderung bezieht sich das Schreiben? Gibt es eine neue Frist? Und ist von weiteren Schritten die Rede?",
-        left_text_3: "BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie die Zahlungserinnerung besser einordnen können.",
+        left_text_1: "Eine Zahlungserinnerung bedeutet meistens, dass laut Schreiben eine Zahlung noch nicht erfasst oder noch offen ist und nun erneut darauf hingewiesen wird.",
+        left_text_2: "Wichtig sind dabei vor allem: Welcher Betrag wird genannt? Auf welche Rechnung oder Forderung bezieht sich das Schreiben? Gibt es eine Frist oder ein Datum? Und welche weiteren Hinweise sind enthalten?",
+        left_text_3: "BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie die Zahlungserinnerung besser sprachlich verständlich einordnen können.",
 
         right_title: "So funktioniert es",
         right_li_1: "Zahlungserinnerung sicher hochladen",
         right_li_2: "Wir lesen den Inhalt und erklären ihn verständlich",
         right_li_3: "Sie erhalten die Erklärung per E-Mail",
-        right_li_4: "Keine Rechtsberatung – nur verständliche Texterklärung",
+        right_li_4: "Keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) – nur sprachliche Vereinfachung und verständliche Texterklärung ohne rechtliche Bewertung oder Handlungsempfehlung",
 
-        service1_title: "Komplettes Schreiben erklären lassen",
+        service1_title: "Komplette Zahlungserinnerung erklären lassen",
         service1_text: "Ideal, wenn Sie die ganze Zahlungserinnerung vollständig verstehen möchten.",
         service1_btn: "Jetzt für 6,90 € starten",
 
@@ -683,26 +755,41 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
 
         faq_title: "Häufige Fragen zur Zahlungserinnerung",
         faq_sub: "Diese Fragen tauchen bei Zahlungserinnerungen besonders oft auf:",
-        faq1_q: "Ist eine Zahlungserinnerung schon eine Mahnung?",
-        faq1_a: "Nicht immer. Eine Zahlungserinnerung ist oft zunächst ein Hinweis darauf, dass eine Zahlung noch offen sein soll. Der genaue Inhalt des Schreibens ist entscheidend.",
-        faq2_q: "Welche Angaben sind besonders wichtig?",
-        faq2_a: "Besonders wichtig sind Betrag, Bezug zur Rechnung oder Forderung, neue Frist und mögliche Hinweise auf weitere Schritte.",
-        faq3_q: "Muss ich auf eine Zahlungserinnerung achten?",
-        faq3_a: "Ja, solche Schreiben sollten ernst genommen werden. Viele Menschen möchten zuerst verstehen, worauf sich die Erinnerung genau bezieht.",
+        faq1_q: "Welche Angaben stehen in einer Zahlungserinnerung?",
+        faq1_a: "Eine Zahlungserinnerung enthält häufig Angaben zu Betrag, Rechnung, Datum, Frist, Forderungsbezug und weiteren Hinweisen im Schreiben.",
+        faq2_q: "Was bedeuten Betrag oder Frist?",
+        faq2_a: "Im Schreiben steht oft, welcher Betrag genannt wird und bis wann eine Zahlung erfolgen soll oder erinnert wird. Viele Menschen möchten diese Angaben zuerst verständlich erklärt bekommen.",
+        faq3_q: "Welche Punkte sind besonders wichtig?",
+        faq3_a: "Besonders wichtig sind genannter Betrag, Bezug zur Rechnung oder Forderung, Datum, Frist und weitere Hinweise dazu, welche Angaben im Schreiben enthalten sind.",
         faq4_q: "Ist BriefHelden eine Rechtsberatung?",
-        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung an. Sie erhalten nur eine verständliche Erklärung des Inhalts.",
+        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Texterklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.",
 
         tip_title: "Worauf sollten Sie bei einer Zahlungserinnerung achten?",
         tip_sub: "Diese Punkte sind oft besonders wichtig:",
-        tip1_title: "Betrag prüfen",
-        tip1_text: "Schauen Sie, welcher offene Betrag genannt wird und ob zusätzliche Kosten erwähnt werden.",
-        tip2_title: "Frist beachten",
-        tip2_text: "Prüfen Sie, ob eine neue Zahlungsfrist oder ein konkretes Datum genannt wird.",
-        tip3_title: "Bezug ansehen",
-        tip3_text: "Achten Sie darauf, auf welche Rechnung, Forderung oder frühere Zahlung sich das Schreiben bezieht.",
+        tip1_title: "Betrag ansehen",
+        tip1_text: "Schauen Sie, welcher offene Betrag genannt wird und ob zusätzliche Kosten, Gebühren oder andere Hinweise aufgeführt sind.",
+        tip2_title: "Fristen ansehen",
+        tip2_text: "Achten Sie darauf, ob ein Datum, eine Frist oder ein Zeitraum im Schreiben genannt wird.",
+        tip3_title: "Bezug und Angaben prüfen",
+        tip3_text: "Prüfen Sie, auf welche Rechnung, Forderung oder frühere Angabe sich das Schreiben bezieht und welche weiteren Informationen enthalten sind.",
         tip4_title: "Inhalt verständlich machen",
-        tip4_text: "Wenn die Formulierungen unklar oder kompliziert wirken, hilft eine einfache Erklärung oft sofort weiter.",
+        tip4_text: "Wenn Begriffe, Hinweise oder Formulierungen unklar wirken, hilft eine sprachliche Vereinfachung oft dabei, den Inhalt besser zu erfassen.",
 
+        more_title: "Weitere häufige Briefe verstehen",
+        more_1_title: "Inkasso Brief verstehen",
+        more_1_text: "Inkasso Schreiben klar und verständlich erklärt.",
+        more_2_title: "Mahnbescheid verstehen",
+        more_2_text: "Mahnbescheide einfach erklärt.",
+        more_3_title: "Jobcenter Brief verstehen",
+        more_3_text: "Jobcenter Schreiben in einfacher Sprache erklärt.",
+        more_4_title: "Pfändungsbescheid verstehen",
+        more_4_text: "Pfändungsbescheide klar und verständlich erklärt.",
+        more_5_title: "Vollstreckungsbescheid verstehen",
+        more_5_text: "Vollstreckungsbescheide einfach erklärt.",
+        more_6_title: "Finanzamt Brief verstehen",
+        more_6_text: "Schreiben vom Finanzamt klar und verständlich erklärt.",
+
+        foot_copy: "© 2026 BriefHelden – Alle Rechte vorbehalten",
         foot_home: "Startseite",
         foot_question: "Frage stellen",
         foot_refund: "Widerruf",
@@ -712,6 +799,11 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
       },
 
       en: {
+        pageTitle: "Understand a payment reminder – explained clearly | BriefHelden",
+        metaDescription: "Understand a payment reminder easily: BriefHelden explains the content, amounts, deadlines and which details are included in the document clearly and in simple language.",
+        ogTitle: "Understand a payment reminder – explained clearly | BriefHelden",
+        ogDescription: "Payment reminder explained simply. Understand amounts, deadlines and important details in the document quickly and clearly.",
+
         nav_home: "Home",
         nav_question: "Ask a question",
         nav_refund: "Withdrawal",
@@ -720,7 +812,7 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_privacy: "Privacy",
 
         hero_title: "Understand a payment reminder",
-        hero_sub: "A payment reminder often feels unpleasant or urgent. BriefHelden explains the content, deadline and important details simply and clearly.",
+        hero_sub: "A payment reminder often contains amounts, deadlines and other notices. BriefHelden explains the content simply and clearly so you can better understand which details are included in the document.",
         hero_cta: "Get payment reminder explained now – €6.90",
         hero_question_cta: "Ask a short question – €1.49",
         meta_1: "Clearly explained",
@@ -728,20 +820,20 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         meta_3: "Confidential",
 
         intro_title: "What is a payment reminder?",
-        intro_text: "A payment reminder is a document intended to remind you that an amount is still outstanding. It often refers to an invoice, a payment target or an earlier claim. Many people want to understand whether the reminder is already serious, which deadline applies and what they should pay attention to. That is exactly where BriefHelden helps.",
+        intro_text: "A payment reminder is a document indicating that, according to the document, an amount is still outstanding. It often contains details about an amount, an invoice, a deadline and other notices in the document. Many people first want to understand which details are included in the document and how the content can be understood more clearly. That is exactly where BriefHelden helps.",
 
         left_title: "Simply explained",
-        left_text_1: "A payment reminder usually means that, according to the document, payment has not yet been made and you are now being reminded again.",
-        left_text_2: "Important points are: Which amount is mentioned? Which invoice or claim does the document refer to? Is there a new deadline? Are further steps mentioned?",
+        left_text_1: "A payment reminder usually means that, according to the document, a payment has not yet been recorded or is still open and is now being pointed out again.",
+        left_text_2: "Important points are: Which amount is stated? Which invoice or claim does the document refer to? Is there a deadline or a date? And which additional notices are included?",
         left_text_3: "BriefHelden explains the content in simple language so you can better understand the payment reminder.",
 
         right_title: "How it works",
         right_li_1: "Upload payment reminder securely",
         right_li_2: "We read the content and explain it clearly",
         right_li_3: "You receive the explanation by email",
-        right_li_4: "No legal advice – plain-language explanation only",
+        right_li_4: "No legal advice within the meaning of the German Legal Services Act (RDG) — only linguistic simplification and a clear text explanation without legal assessment or recommendation for action",
 
-        service1_title: "Get the full document explained",
+        service1_title: "Get the full payment reminder explained",
         service1_text: "Ideal if you want to fully understand the entire payment reminder.",
         service1_btn: "Start now for €6.90",
 
@@ -751,26 +843,41 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
 
         faq_title: "Frequently asked questions about payment reminders",
         faq_sub: "These questions often come up with payment reminders:",
-        faq1_q: "Is a payment reminder already a formal reminder?",
-        faq1_a: "Not always. A payment reminder is often first an indication that a payment is still said to be open. The exact content of the document is decisive.",
-        faq2_q: "Which details are especially important?",
-        faq2_a: "Especially important are the amount, the reference to the invoice or claim, the new deadline and possible indications of further steps.",
-        faq3_q: "Should I pay attention to a payment reminder?",
-        faq3_a: "Yes, such documents should be taken seriously. Many people first want to understand what exactly the reminder refers to.",
+        faq1_q: "Which details are written in a payment reminder?",
+        faq1_a: "A payment reminder often contains details about the amount, invoice, date, deadline, reference to the claim and additional notices in the document.",
+        faq2_q: "What do the amount or deadline mean?",
+        faq2_a: "The document often states which amount is named and by when a payment should be made or is being reminded. Many people want these details explained clearly first.",
+        faq3_q: "Which points are especially important?",
+        faq3_a: "Especially important are the stated amount, the reference to the invoice or claim, the date, deadline and further notes about which details are included in the document.",
         faq4_q: "Is BriefHelden legal advice?",
-        faq4_a: "No. BriefHelden does not provide legal advice. You only receive a clear explanation of the content.",
+        faq4_a: "No. BriefHelden does not provide legal advice within the meaning of the German Legal Services Act (RDG). You receive only a clear text explanation and linguistic simplification of your document’s content. There is no legal assessment, no individual review, and no binding recommendation for action.",
 
         tip_title: "What should you look for in a payment reminder?",
         tip_sub: "These points are often especially important:",
-        tip1_title: "Check the amount",
-        tip1_text: "See which outstanding amount is mentioned and whether extra costs are listed.",
-        tip2_title: "Check the deadline",
-        tip2_text: "Check whether a new payment deadline or a specific date is mentioned.",
-        tip3_title: "Check the reference",
-        tip3_text: "Pay attention to which invoice, claim or previous payment the document refers to.",
+        tip1_title: "Look at the amount",
+        tip1_text: "Check which outstanding amount is stated and whether additional costs, fees or other notices are listed.",
+        tip2_title: "Look at deadlines",
+        tip2_text: "Pay attention to whether a date, a deadline or a period of time is mentioned in the document.",
+        tip3_title: "Check reference and details",
+        tip3_text: "Check which invoice, claim or earlier information the document refers to and which further details are included.",
         tip4_title: "Make the content understandable",
-        tip4_text: "If the wording seems unclear or complicated, a simple explanation often helps immediately.",
+        tip4_text: "If terms, notices or wording seem unclear, linguistic simplification often helps you understand the content more easily.",
 
+        more_title: "Understand more common letters",
+        more_1_title: "Understand a debt collection letter",
+        more_1_text: "Debt collection letters explained clearly.",
+        more_2_title: "Understand a payment order",
+        more_2_text: "Payment orders explained simply.",
+        more_3_title: "Understand a Jobcenter letter",
+        more_3_text: "Jobcenter letters explained in simple language.",
+        more_4_title: "Understand a seizure order",
+        more_4_text: "Seizure orders explained clearly.",
+        more_5_title: "Understand an enforcement order",
+        more_5_text: "Enforcement orders explained simply.",
+        more_6_title: "Understand a tax office letter",
+        more_6_text: "Tax office letters explained clearly.",
+
+        foot_copy: "© 2026 BriefHelden – All rights reserved",
         foot_home: "Home",
         foot_question: "Ask a question",
         foot_refund: "Withdrawal",
@@ -780,6 +887,11 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
       },
 
       tr: {
+        pageTitle: "Ödeme hatırlatmasını anlayın – kolay açıklama | BriefHelden",
+        metaDescription: "Ödeme hatırlatmasını kolay anlayın: BriefHelden içeriği, tutarları, süreleri ve belgede hangi bilgilerin yer aldığını sade ve anlaşılır şekilde açıklar.",
+        ogTitle: "Ödeme hatırlatmasını anlayın – kolay açıklama | BriefHelden",
+        ogDescription: "Ödeme hatırlatması basitçe açıklanır. Tutarları, süreleri ve belgede yer alan önemli bilgileri hızlı ve açık şekilde anlayın.",
+
         nav_home: "Ana Sayfa",
         nav_question: "Soru sor",
         nav_refund: "Cayma",
@@ -788,7 +900,7 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_privacy: "Gizlilik",
 
         hero_title: "Ödeme hatırlatmasını anlayın",
-        hero_sub: "Bir ödeme hatırlatması çoğu zaman rahatsız edici veya acil görünebilir. BriefHelden içeriği, süreyi ve önemli bilgileri size basit ve açık şekilde açıklar.",
+        hero_sub: "Bir ödeme hatırlatması çoğu zaman tutarlar, süreler ve başka bilgiler içerir. BriefHelden içeriği basit ve açık şekilde açıklar, böylece belgede hangi bilgilerin yer aldığını daha iyi anlayabilirsiniz.",
         hero_cta: "Ödeme hatırlatmasını şimdi açıklat – 6,90 €",
         hero_question_cta: "Kısa soru sor – 1,49 €",
         meta_1: "Basit açıklandı",
@@ -796,49 +908,64 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         meta_3: "Gizli",
 
         intro_title: "Ödeme hatırlatması nedir?",
-        intro_text: "Ödeme hatırlatması, bir tutarın hâlâ açık olduğunu hatırlatmak için gönderilen bir yazıdır. Çoğu zaman bir faturaya, ödeme süresine veya önceki bir alacağa atıf yapılır. Birçok kişi bunun ne kadar ciddi olduğunu, hangi sürenin geçerli olduğunu ve nelere dikkat etmesi gerektiğini anlamak ister. BriefHelden tam bu konuda yardımcı olur.",
+        intro_text: "Ödeme hatırlatması, belgede yer alan bilgilere göre bir tutarın hâlâ açık olduğunu belirten bir yazıdır. Çoğu zaman içinde tutar, fatura, süre ve başka bilgiler yer alır. Birçok kişi önce belgede hangi bilgilerin yer aldığını ve içeriğin nasıl daha anlaşılır şekilde açıklanabileceğini anlamak ister. BriefHelden tam bu konuda yardımcı olur.",
 
         left_title: "Basit açıklama",
-        left_text_1: "Ödeme hatırlatması genelde, yazıya göre ödemenin henüz yapılmadığı ve şimdi yeniden hatırlatıldığı anlamına gelir.",
-        left_text_2: "Önemli noktalar şunlardır: Hangi tutar belirtilmiş? Yazı hangi fatura veya alacakla ilgili? Yeni bir süre var mı? Sonraki adımlardan söz ediliyor mu?",
+        left_text_1: "Bir ödeme hatırlatması genelde, belgeye göre bir ödemenin henüz kaydedilmediği veya hâlâ açık olduğu ve şimdi tekrar hatırlatıldığı anlamına gelir.",
+        left_text_2: "Önemli noktalar şunlardır: Hangi tutar belirtilmiş? Yazı hangi fatura veya alacakla ilgili? Bir süre veya tarih var mı? Ve başka hangi bilgiler yer alıyor?",
         left_text_3: "BriefHelden içeriği basit dille açıklar, böylece ödeme hatırlatmasını daha iyi anlayabilirsiniz.",
 
         right_title: "Nasıl çalışır",
         right_li_1: "Ödeme hatırlatmasını güvenli şekilde yükleyin",
         right_li_2: "İçeriği okuyup açık şekilde açıklıyoruz",
         right_li_3: "Açıklamayı e-posta ile alırsınız",
-        right_li_4: "Hukuki danışmanlık değil – sadece anlaşılır açıklama",
+        right_li_4: "Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık verilmez — yalnızca dilsel sadeleştirme ve hukuki değerlendirme ya da eylem tavsiyesi olmadan anlaşılır metin açıklaması sunulur",
 
-        service1_title: "Belgenin tamamını açıklat",
-        service1_text: "Ödeme hatırlatmasının tamamını anlamak istiyorsanız idealdir.",
+        service1_title: "Ödeme hatırlatmasının tamamını açıklat",
+        service1_text: "Ödeme hatırlatmasının tamamını tam olarak anlamak istiyorsanız idealdir.",
         service1_btn: "Şimdi 6,90 € ile başla",
 
         service2_title: "Kısa bir soru sor",
         service2_text: "Sadece tutar, süre veya içerikle ilgili kısa bir sorunuz varsa idealdir.",
         service2_btn: "Şimdi 1,49 € ile sor",
 
-        faq_title: "Ödeme hatırlatması hakkında sık sorulan sorular",
-        faq_sub: "Ödeme hatırlatmalarında şu sorular sıkça ortaya çıkar:",
-        faq1_q: "Ödeme hatırlatması zaten ihtar mıdır?",
-        faq1_a: "Her zaman değil. Ödeme hatırlatması çoğu zaman önce, ödemenin hâlâ açık olduğu yönünde bir uyarıdır. Asıl belirleyici olan yazının tam içeriğidir.",
-        faq2_q: "Hangi bilgiler özellikle önemlidir?",
-        faq2_a: "Tutar, faturaya veya alacağa yapılan atıf, yeni süre ve olası sonraki adımlara dair bilgiler özellikle önemlidir.",
-        faq3_q: "Ödeme hatırlatmasını dikkate almalı mıyım?",
-        faq3_a: "Evet, bu tür yazılar ciddiye alınmalıdır. Birçok kişi önce hatırlatmanın tam olarak neye ilişkin olduğunu anlamak ister.",
+        faq_title: "Ödeme hatırlatmaları hakkında sık sorulan sorular",
+        faq_sub: "Bu sorular ödeme hatırlatmalarında özellikle sık ortaya çıkar:",
+        faq1_q: "Bir ödeme hatırlatmasında hangi bilgiler yer alır?",
+        faq1_a: "Bir ödeme hatırlatması çoğu zaman tutar, fatura, tarih, süre, alacakla ilgili bağlantı ve belgede yer alan ek bilgileri içerir.",
+        faq2_q: "Tutar veya süre ne anlama gelir?",
+        faq2_a: "Belgede çoğu zaman hangi tutarın belirtildiği ve ödemenin ne zamana kadar yapılmasının beklendiği veya hatırlatıldığı yazılır. Birçok kişi bu bilgilerin önce açık şekilde açıklanmasını ister.",
+        faq3_q: "Hangi noktalar özellikle önemlidir?",
+        faq3_a: "Özellikle belirtilen tutar, fatura veya alacakla bağlantı, tarih, süre ve belgede hangi bilgilerin yer aldığı önemlidir.",
         faq4_q: "BriefHelden hukuki danışmanlık mı veriyor?",
-        faq4_a: "Hayır. BriefHelden hukuki danışmanlık vermez. Sadece içeriğin anlaşılır açıklamasını sunar.",
+        faq4_a: "Hayır. BriefHelden, Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık vermez. Yalnızca belgenizin içeriğinin anlaşılır metin açıklamasını ve dilsel sadeleştirmesini alırsınız. Hukuki değerlendirme, bireysel inceleme veya bağlayıcı bir hareket tavsiyesi yapılmaz.",
 
-        tip_title: "Ödeme hatırlatmasında nelere dikkat etmelisiniz?",
+        tip_title: "Bir ödeme hatırlatmasında nelere dikkat etmelisiniz?",
         tip_sub: "Bu noktalar genelde özellikle önemlidir:",
-        tip1_title: "Tutarı kontrol edin",
-        tip1_text: "Hangi açık tutarın yazıldığını ve ek masraf olup olmadığını kontrol edin.",
-        tip2_title: "Süreyi kontrol edin",
-        tip2_text: "Yeni bir ödeme süresi veya belirli bir tarih yazılı mı bakın.",
-        tip3_title: "İlgili belgeyi inceleyin",
-        tip3_text: "Yazının hangi fatura, alacak veya önceki ödemeye dayandığına dikkat edin.",
+        tip1_title: "Tutara bakın",
+        tip1_text: "Hangi açık tutarın yazdığına ve ek masraf, ücret veya başka bilgilerin olup olmadığına bakın.",
+        tip2_title: "Sürelere bakın",
+        tip2_text: "Belgede bir tarih, bir süre veya zaman aralığı yazılı olup olmadığına dikkat edin.",
+        tip3_title: "Bağlantıyı ve bilgileri kontrol edin",
+        tip3_text: "Belgenin hangi fatura, alacak veya önceki bilgiye dayandığını ve hangi ek bilgilerin yer aldığını kontrol edin.",
         tip4_title: "İçeriği anlaşılır hale getirin",
-        tip4_text: "İfade belirsiz veya karmaşık görünüyorsa, basit bir açıklama çoğu zaman hemen yardımcı olur.",
+        tip4_text: "Terimler, uyarılar veya ifadeler belirsiz görünüyorsa, dilsel sadeleştirme çoğu zaman içeriği daha iyi anlamanıza yardımcı olur.",
 
+        more_title: "Diğer sık görülen mektupları anlayın",
+        more_1_title: "Inkasso mektubunu anla",
+        more_1_text: "Inkasso yazıları açık şekilde açıklanır.",
+        more_2_title: "Mahnbescheid anla",
+        more_2_text: "Mahn yazıları basit şekilde açıklanır.",
+        more_3_title: "Jobcenter mektubunu anla",
+        more_3_text: "Jobcenter yazıları basit dille açıklanır.",
+        more_4_title: "Haciz kararını anla",
+        more_4_text: "Haciz kararları açık şekilde açıklanır.",
+        more_5_title: "İcra emrini anla",
+        more_5_text: "İcra emirleri basit şekilde açıklanır.",
+        more_6_title: "Vergi dairesi mektubunu anla",
+        more_6_text: "Vergi dairesi yazıları açık şekilde açıklanır.",
+
+        foot_copy: "© 2026 BriefHelden – Tüm hakları saklıdır",
         foot_home: "Ana Sayfa",
         foot_question: "Soru sor",
         foot_refund: "Cayma",
@@ -848,6 +975,11 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
       },
 
       ru: {
+        pageTitle: "Понять напоминание об оплате – простое объяснение | BriefHelden",
+        metaDescription: "Легко понять напоминание об оплате: BriefHelden просто и понятно объясняет содержание, суммы, сроки и какие сведения указаны в документе.",
+        ogTitle: "Понять напоминание об оплате – простое объяснение | BriefHelden",
+        ogDescription: "Напоминание об оплате объясняется простым языком. Понятно разберитесь в суммах, сроках и важных сведениях в документе.",
+
         nav_home: "Главная",
         nav_question: "Задать вопрос",
         nav_refund: "Отказ",
@@ -856,7 +988,7 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         nav_privacy: "Конфиденциальность",
 
         hero_title: "Понять напоминание об оплате",
-        hero_sub: "Напоминание об оплате часто кажется неприятным или срочным. BriefHelden объяснит содержание, срок и важные данные просто и ясно.",
+        hero_sub: "Напоминание об оплате часто содержит суммы, сроки и другие указания. BriefHelden объяснит содержание просто и понятно, чтобы вам было легче разобраться, какие сведения указаны в документе.",
         hero_cta: "Объяснить напоминание об оплате – 6,90 €",
         hero_question_cta: "Задать короткий вопрос – 1,49 €",
         meta_1: "Просто объяснено",
@@ -864,20 +996,20 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         meta_3: "Конфиденциально",
 
         intro_title: "Что такое напоминание об оплате?",
-        intro_text: "Напоминание об оплате — это документ, который должен напомнить о том, что сумма всё ещё считается открытой. Часто в нём есть ссылка на счёт, срок оплаты или предыдущее требование. Многие люди хотят понять, насколько это уже серьёзно, какой срок действует и на что стоит обратить внимание. Именно здесь помогает BriefHelden.",
+        intro_text: "Напоминание об оплате — это документ, указывающий на то, что, согласно данным в документе, сумма всё ещё считается открытой. Часто в нём содержатся сведения о сумме, счёте, сроке и других указаниях. Многие люди сначала хотят понять, какие именно сведения указаны в документе и как можно понятнее объяснить его содержание. Именно здесь помогает BriefHelden.",
 
         left_title: "Просто объясняем",
-        left_text_1: "Напоминание об оплате обычно означает, что, согласно документу, платёж ещё не поступил и теперь об этом напоминают снова.",
-        left_text_2: "Особенно важно следующее: Какая сумма указана? К какому счёту или требованию относится документ? Есть ли новый срок? Упоминаются ли дальнейшие шаги?",
+        left_text_1: "Напоминание об оплате обычно означает, что, согласно документу, платёж ещё не зафиксирован или всё ещё считается открытым, и на это снова обращают внимание.",
+        left_text_2: "Особенно важно следующее: Какая сумма указана? К какому счёту или требованию относится документ? Есть ли срок или дата? И какие ещё указания содержатся?",
         left_text_3: "BriefHelden объясняет содержание простым языком, чтобы вам было легче понять напоминание об оплате.",
 
         right_title: "Как это работает",
         right_li_1: "Безопасно загрузите напоминание об оплате",
         right_li_2: "Мы читаем содержание и понятно объясняем его",
         right_li_3: "Вы получаете объяснение по e-mail",
-        right_li_4: "Не юридическая консультация – только понятное объяснение",
+        right_li_4: "Это не юридическая консультация в смысле немецкого Закона о юридических услугах (RDG) — только языковое упрощение и понятное текстовое объяснение без правовой оценки и без рекомендаций к действиям",
 
-        service1_title: "Получить полное объяснение документа",
+        service1_title: "Получить полное объяснение напоминания об оплате",
         service1_text: "Идеально, если вы хотите полностью понять всё напоминание об оплате.",
         service1_btn: "Начать за 6,90 €",
 
@@ -885,28 +1017,43 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
         service2_text: "Идеально, если у вас только короткий вопрос о сумме, сроке или содержании.",
         service2_btn: "Спросить за 1,49 €",
 
-        faq_title: "Частые вопросы о напоминании об оплате",
+        faq_title: "Частые вопросы о напоминаниях об оплате",
         faq_sub: "Эти вопросы особенно часто возникают по напоминаниям об оплате:",
-        faq1_q: "Напоминание об оплате — это уже официальная претензия?",
-        faq1_a: "Не всегда. Напоминание об оплате часто сначала является указанием на то, что платёж якобы всё ещё открыт. Решающим является точное содержание документа.",
-        faq2_q: "Какие данные особенно важны?",
-        faq2_a: "Особенно важны сумма, ссылка на счёт или требование, новый срок и возможные указания на дальнейшие шаги.",
-        faq3_q: "Нужно ли обращать внимание на напоминание об оплате?",
-        faq3_a: "Да, такие документы следует воспринимать серьёзно. Многие люди сначала хотят понять, к чему именно относится это напоминание.",
+        faq1_q: "Какие сведения содержатся в напоминании об оплате?",
+        faq1_a: "Напоминание об оплате часто содержит сведения о сумме, счёте, дате, сроке, связи с требованием и дополнительных указаниях в документе.",
+        faq2_q: "Что означают сумма или срок?",
+        faq2_a: "В документе часто указано, какая сумма названа и до какого срока ожидается оплата или о ней напоминают. Многие люди хотят сначала получить понятное объяснение этих сведений.",
+        faq3_q: "Какие пункты особенно важны?",
+        faq3_a: "Особенно важны указанная сумма, связь со счётом или требованием, дата, срок и дополнительные указания о том, какие сведения содержатся в документе.",
         faq4_q: "BriefHelden — это юридическая консультация?",
-        faq4_a: "Нет. BriefHelden не даёт юридических консультаций. Вы получаете только понятное объяснение содержания.",
+        faq4_a: "Нет. BriefHelden не оказывает юридических консультаций в смысле немецкого Закона о юридических услугах (RDG). Вы получаете только понятное текстовое объяснение и языковое упрощение содержания вашего документа. Юридическая оценка, индивидуальная проверка и обязательные рекомендации к действиям не предоставляются.",
 
         tip_title: "На что стоит обратить внимание в напоминании об оплате?",
         tip_sub: "Эти пункты часто особенно важны:",
-        tip1_title: "Проверьте сумму",
-        tip1_text: "Посмотрите, какая открытая сумма указана и упоминаются ли дополнительные расходы.",
-        tip2_title: "Проверьте срок",
-        tip2_text: "Проверьте, указан ли новый срок оплаты или конкретная дата.",
-        tip3_title: "Посмотрите, к чему есть ссылка",
-        tip3_text: "Обратите внимание, к какому счёту, требованию или предыдущему платежу относится документ.",
+        tip1_title: "Посмотрите на сумму",
+        tip1_text: "Посмотрите, какая открытая сумма указана и есть ли дополнительные расходы, сборы или другие указания.",
+        tip2_title: "Посмотрите на сроки",
+        tip2_text: "Проверьте, указаны ли в документе дата, срок или период времени.",
+        tip3_title: "Проверьте связь и сведения",
+        tip3_text: "Проверьте, к какому счёту, требованию или более ранней информации относится документ и какие дополнительные сведения указаны.",
         tip4_title: "Сделайте содержание понятным",
-        tip4_text: "Если формулировки кажутся непонятными или сложными, простое объяснение часто сразу помогает.",
+        tip4_text: "Если термины, указания или формулировки кажутся неясными, языковое упрощение часто помогает лучше понять содержание.",
 
+        more_title: "Другие часто встречающиеся письма",
+        more_1_title: "Понять письмо от коллекторов",
+        more_1_text: "Письма от коллекторов объяснены понятно.",
+        more_2_title: "Понять судебный приказ",
+        more_2_text: "Судебные приказы объяснены просто.",
+        more_3_title: "Понять письмо Jobcenter",
+        more_3_text: "Письма Jobcenter объяснены простым языком.",
+        more_4_title: "Понять постановление о взыскании",
+        more_4_text: "Постановления о взыскании объяснены понятно.",
+        more_5_title: "Понять исполнительный приказ",
+        more_5_text: "Исполнительные приказы объяснены просто.",
+        more_6_title: "Понять письмо из налоговой",
+        more_6_text: "Письма из налоговой объяснены понятно.",
+
+        foot_copy: "© 2026 BriefHelden – Все права защищены",
         foot_home: "Главная",
         foot_question: "Задать вопрос",
         foot_refund: "Отказ",
@@ -917,8 +1064,8 @@ ru: "https://buy.stripe.com/28EfZg4TrbMAdnxaAR4sE07"
     };
 
     function updateLinks(lang){
-const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
-const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
+      const mainLink = STRIPE_LINKS[lang] || STRIPE_LINKS.de;
+      const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
 
       const stripeBtn = document.getElementById("stripeBtn");
       const servicePrimaryBtn = document.getElementById("servicePrimaryBtn");
@@ -931,9 +1078,24 @@ const questionLink = QUESTION_LINKS[lang] || QUESTION_LINKS.de;
       if(serviceQuestionBtn) serviceQuestionBtn.href = questionLink;
     }
 
+    function updateMeta(lang){
+      const dict = i18n[lang] || i18n.de;
+      document.title = dict.pageTitle;
+
+      const description = document.querySelector('meta[name="description"]');
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      const ogDescription = document.querySelector('meta[property="og:description"]');
+
+      if(description) description.setAttribute("content", dict.metaDescription);
+      if(ogTitle) ogTitle.setAttribute("content", dict.ogTitle);
+      if(ogDescription) ogDescription.setAttribute("content", dict.ogDescription);
+    }
+
     function applyLang(lang){
-const dict = i18n[lang] || i18n.de;
-      document.documentElement.lang = lang;
+      const currentLang = i18n[lang] ? lang : "de";
+      const dict = i18n[currentLang];
+
+      document.documentElement.lang = currentLang;
 
       document.querySelectorAll("[data-i18n]").forEach((el) => {
         const key = el.getAttribute("data-i18n");
@@ -942,8 +1104,9 @@ const dict = i18n[lang] || i18n.de;
         }
       });
 
-      updateLinks(lang);
-      localStorage.setItem("briefhelden_lang", lang);
+      updateMeta(currentLang);
+      updateLinks(currentLang);
+      localStorage.setItem("briefhelden_lang", currentLang);
     }
 
     const select = document.getElementById("langSelect");
@@ -957,15 +1120,5 @@ const dict = i18n[lang] || i18n.de;
       applyLang(select.value);
     });
   </script>
-  <h2>Weitere häufige Briefe verstehen</h2>
-
-<ul>
-<li><a href="/inkasso-brief-verstehen.html">Inkasso Brief verstehen</a></li>
-<li><a href="/mahnbescheid-verstehen.html">Mahnbescheid verstehen</a></li>
-<li><a href="/jobcenter-brief-verstehen.html">Jobcenter Brief verstehen</a></li>
-<li><a href="/pfaendungsbescheid-verstehen.html">Pfändungsbescheid verstehen</a></li>
-<li><a href="/vollstreckungsbescheid-verstehen.html">Vollstreckungsbescheid verstehen</a></li>
-<li><a href="/finanzamt-brief-verstehen.html">Finanzamt Brief verstehen</a></li>
-</ul>
 </body>
 </html>
