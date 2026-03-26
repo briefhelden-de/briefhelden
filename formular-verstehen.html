@@ -8,20 +8,20 @@
 
   <meta
     name="description"
-    content="Formular einfach verstehen: BriefHelden erklärt Behördenformulare, Anträge und Dokumente verständlich, klar und ohne komplizierte Fachsprache."
+    content="Formular verständlich erklärt: BriefHelden erklärt Behördenformulare, Anträge und Dokumente klar, einfach und ohne komplizierte Fachsprache."
   />
   <meta name="robots" content="index, follow" />
-
   <link rel="canonical" href="https://www.briefhelden-service.de/formular-verstehen.html" />
 
   <meta property="og:title" content="Formular verstehen – einfach erklärt | BriefHelden" />
   <meta
     property="og:description"
-    content="Formulare von Behörden und Ämtern einfach erklärt. Verstehen Sie Angaben, Felder und wichtige Punkte schnell und verständlich."
+    content="Formulare von Behörden und Ämtern einfach erklärt. Verstehen Sie Felder, Angaben und wichtige Punkte schnell und verständlich."
   />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://www.briefhelden-service.de/formular-verstehen.html" />
   <meta property="og:image" content="https://www.briefhelden-service.de/og-image.jpg" />
+  <meta property="og:site_name" content="BriefHelden" />
   <meta name="theme-color" content="#0b1220" />
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
@@ -270,7 +270,8 @@
     .pad{padding:22px}
 
     .headline,
-    .sectionTitle{
+    .sectionTitle,
+    .moreLinks h2{
       text-align:center;
       margin:0 0 10px;
       font-weight:950;
@@ -295,7 +296,8 @@
     }
 
     .infoCard,
-    .faqItem{
+    .faqItem,
+    .moreCard{
       border-radius:var(--radius-lg);
       border:1px solid rgba(255,255,255,.55);
       background:rgba(255,255,255,.20);
@@ -303,21 +305,24 @@
     }
 
     .infoCard h3,
-    .faqItem h3{
+    .faqItem h3,
+    .moreCard h3{
       margin:0 0 10px;
       font-size:22px;
       font-weight:950;
       line-height:1.25;
     }
 
-    .faqItem h3{
+    .faqItem h3,
+    .moreCard h3{
       font-size:18px;
       margin-bottom:8px;
     }
 
     .infoCard p,
     .infoCard li,
-    .faqItem p{
+    .faqItem p,
+    .moreCard p{
       color:rgba(11,18,32,.76);
       line-height:1.65;
       font-weight:700;
@@ -332,7 +337,8 @@
       color:rgba(11,18,32,.76);
     }
 
-    .faqGrid{
+    .faqGrid,
+    .moreGrid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:14px;
@@ -387,23 +393,18 @@
 
     .moreLinks{
       max-width:var(--max);
-      margin:0 auto;
-      padding:0 18px 28px;
+      margin:28px auto 0;
+      padding:0 18px 30px;
     }
 
-    .moreLinks h2{
-      margin:0 0 12px;
-      font-size:24px;
-      font-weight:950;
-      color:#0b1220;
+    .moreCard{
+      display:block;
+      transition:transform .18s ease, background .18s ease;
     }
 
-    .moreLinks ul{
-      margin:0;
-      padding-left:18px;
-      color:rgba(11,18,32,.82);
-      font-weight:700;
-      line-height:1.8;
+    .moreCard:hover{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,.30);
     }
 
     footer{
@@ -437,7 +438,7 @@
 
     @media (max-width:900px){
       nav.links{display:none}
-      .grid2,.faqGrid,.serviceMini{grid-template-columns:1fr}
+      .grid2,.faqGrid,.moreGrid,.serviceMini{grid-template-columns:1fr}
       .cta{min-width:92vw}
       .miniBtn{min-width:100%}
     }
@@ -477,7 +478,7 @@
       <h1 data-i18n="hero_title">Formular verstehen</h1>
 
       <p data-i18n="hero_sub">
-        Viele Formulare von Behörden oder Firmen sind kompliziert aufgebaut. BriefHelden erklärt Felder, Angaben und Inhalte einfach und verständlich.
+        Viele Formulare von Behörden, Versicherungen, Banken oder Firmen enthalten Felder, Hinweise und Bezeichnungen, die nicht sofort verständlich sind. BriefHelden erklärt den Inhalt einfach und verständlich, damit Sie sprachlich besser einordnen können, welche Angaben im Schreiben enthalten sind.
       </p>
 
       <div class="ctaGroup">
@@ -507,7 +508,7 @@
           <h2 class="headline" data-i18n="intro_title">Was ist ein Formular?</h2>
 
           <p class="lead" data-i18n="intro_text">
-            Ein Formular ist ein Dokument mit verschiedenen Feldern, in das Informationen eingetragen werden. Viele Formulare kommen von Behörden, Versicherungen, Banken oder Unternehmen. Häufig sind Bezeichnungen, Pflichtfelder oder Hinweise nicht sofort verständlich. Genau dabei hilft BriefHelden.
+            Ein Formular ist ein Dokument mit verschiedenen Feldern, in das Informationen eingetragen werden. Viele Formulare kommen von Behörden, Versicherungen, Banken oder Unternehmen. Häufig sind Bezeichnungen, Pflichtfelder, Hinweise oder Zusatzangaben nicht sofort verständlich. Viele Menschen möchten zuerst verstehen, welche Angaben im Schreiben enthalten sind und welche Felder wofür gedacht sind. Genau dabei hilft BriefHelden.
           </p>
 
           <div class="grid2">
@@ -519,6 +520,9 @@
                 <li data-i18n="left_li_3">Bankformulare</li>
                 <li data-i18n="left_li_4">Formulare vom Arbeitsamt oder Jobcenter</li>
               </ul>
+              <p data-i18n="left_text">
+                BriefHelden erklärt, welche Felder, Angaben und Hinweise im Formular enthalten sind und wie sich der Inhalt sprachlich verständlich einordnen lässt.
+              </p>
             </div>
 
             <div class="infoCard">
@@ -592,7 +596,7 @@
             <div class="faqItem">
               <h3 data-i18n="faq4_q">Ist BriefHelden eine Rechtsberatung?</h3>
               <p data-i18n="faq4_a">
-                Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Erklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.
+                Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Texterklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.
               </p>
             </div>
           </div>
@@ -633,10 +637,48 @@
             <div class="faqItem">
               <h3 data-i18n="tip4_title">Inhalt verständlich machen</h3>
               <p data-i18n="tip4_text">
-                Wenn Begriffe oder Felder unklar sind, hilft eine einfache Erklärung oft dabei, die enthaltenen Angaben besser zu erfassen.
+                Wenn Begriffe, Felder oder Hinweise unklar sind, hilft eine sprachliche Vereinfachung oft dabei, die enthaltenen Angaben besser zu erfassen.
               </p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div style="height:18px"></div>
+
+      <div class="moreLinks">
+        <h2 data-i18n="more_title">Weitere häufige Briefe verstehen</h2>
+
+        <div class="moreGrid">
+          <a class="moreCard" href="/inkasso-brief-verstehen.html">
+            <h3 data-i18n="more_1_title">Inkasso Brief verstehen</h3>
+            <p data-i18n="more_1_text">Inkasso Schreiben klar und verständlich erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/mahnbescheid-verstehen.html">
+            <h3 data-i18n="more_2_title">Mahnbescheid verstehen</h3>
+            <p data-i18n="more_2_text">Mahnbescheide einfach erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/jobcenter-brief-verstehen.html">
+            <h3 data-i18n="more_3_title">Jobcenter Brief verstehen</h3>
+            <p data-i18n="more_3_text">Jobcenter Schreiben in einfacher Sprache erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/pfaendungsbescheid-verstehen.html">
+            <h3 data-i18n="more_4_title">Pfändungsbescheid verstehen</h3>
+            <p data-i18n="more_4_text">Pfändungsbescheide klar und verständlich erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/vollstreckungsbescheid-verstehen.html">
+            <h3 data-i18n="more_5_title">Vollstreckungsbescheid verstehen</h3>
+            <p data-i18n="more_5_text">Vollstreckungsbescheide einfach erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/finanzamt-brief-verstehen.html">
+            <h3 data-i18n="more_6_title">Finanzamt Brief verstehen</h3>
+            <p data-i18n="more_6_text">Schreiben vom Finanzamt klar und verständlich erklärt.</p>
+          </a>
         </div>
       </div>
     </div>
@@ -656,18 +698,6 @@
     </div>
   </footer>
 
-  <div class="moreLinks">
-    <h2 data-i18n="more_title">Weitere häufige Briefe verstehen</h2>
-    <ul>
-      <li><a href="/inkasso-brief-verstehen.html" data-i18n="more_1">Inkasso Brief verstehen</a></li>
-      <li><a href="/mahnbescheid-verstehen.html" data-i18n="more_2">Mahnbescheid verstehen</a></li>
-      <li><a href="/jobcenter-brief-verstehen.html" data-i18n="more_3">Jobcenter Brief verstehen</a></li>
-      <li><a href="/pfaendungsbescheid-verstehen.html" data-i18n="more_4">Pfändungsbescheid verstehen</a></li>
-      <li><a href="/vollstreckungsbescheid-verstehen.html" data-i18n="more_5">Vollstreckungsbescheid verstehen</a></li>
-      <li><a href="/finanzamt-brief-verstehen.html" data-i18n="more_6">Finanzamt Brief verstehen</a></li>
-    </ul>
-  </div>
-
   <script>
     const STRIPE_LINKS = {
       de:"https://buy.stripe.com/14A9ASbhP2c083deR74sE00",
@@ -686,9 +716,9 @@
     const i18n = {
       de: {
         pageTitle: "Formular verstehen – einfach erklärt | BriefHelden",
-        metaDescription: "Formular einfach verstehen: BriefHelden erklärt Behördenformulare, Anträge und Dokumente verständlich, klar und ohne komplizierte Fachsprache.",
+        metaDescription: "Formular verständlich erklärt: BriefHelden erklärt Behördenformulare, Anträge und Dokumente klar, einfach und ohne komplizierte Fachsprache.",
         ogTitle: "Formular verstehen – einfach erklärt | BriefHelden",
-        ogDescription: "Formulare von Behörden und Ämtern einfach erklärt. Verstehen Sie Angaben, Felder und wichtige Punkte schnell und verständlich.",
+        ogDescription: "Formulare von Behörden und Ämtern einfach erklärt. Verstehen Sie Felder, Angaben und wichtige Punkte schnell und verständlich.",
 
         nav_home: "Startseite",
         nav_question: "Frage stellen",
@@ -698,7 +728,7 @@
         nav_privacy: "Datenschutz",
 
         hero_title: "Formular verstehen",
-        hero_sub: "Viele Formulare von Behörden oder Firmen sind kompliziert aufgebaut. BriefHelden erklärt Felder, Angaben und Inhalte einfach und verständlich.",
+        hero_sub: "Viele Formulare von Behörden, Versicherungen, Banken oder Firmen enthalten Felder, Hinweise und Bezeichnungen, die nicht sofort verständlich sind. BriefHelden erklärt den Inhalt einfach und verständlich, damit Sie sprachlich besser einordnen können, welche Angaben im Schreiben enthalten sind.",
         hero_cta: "Jetzt Formular erklären lassen – 6,90 €",
         hero_question_cta: "Kurze Frage stellen – 1,49 €",
         meta_1: "Einfach erklärt",
@@ -706,13 +736,14 @@
         meta_3: "Vertraulich",
 
         intro_title: "Was ist ein Formular?",
-        intro_text: "Ein Formular ist ein Dokument mit verschiedenen Feldern, in das Informationen eingetragen werden. Viele Formulare kommen von Behörden, Versicherungen, Banken oder Unternehmen. Häufig sind Bezeichnungen, Pflichtfelder oder Hinweise nicht sofort verständlich. Genau dabei hilft BriefHelden.",
+        intro_text: "Ein Formular ist ein Dokument mit verschiedenen Feldern, in das Informationen eingetragen werden. Viele Formulare kommen von Behörden, Versicherungen, Banken oder Unternehmen. Häufig sind Bezeichnungen, Pflichtfelder, Hinweise oder Zusatzangaben nicht sofort verständlich. Viele Menschen möchten zuerst verstehen, welche Angaben im Schreiben enthalten sind und welche Felder wofür gedacht sind. Genau dabei hilft BriefHelden.",
 
         left_title: "Typische Formulare",
         left_li_1: "Anträge bei Behörden",
         left_li_2: "Versicherungsformulare",
         left_li_3: "Bankformulare",
         left_li_4: "Formulare vom Arbeitsamt oder Jobcenter",
+        left_text: "BriefHelden erklärt, welche Felder, Angaben und Hinweise im Formular enthalten sind und wie sich der Inhalt sprachlich verständlich einordnen lässt.",
 
         right_title: "So hilft BriefHelden",
         right_li_1: "Formular sicher hochladen",
@@ -737,7 +768,7 @@
         faq3_q: "Welche Angaben sind besonders wichtig?",
         faq3_a: "Besonders wichtig sind Pflichtfelder, Fristen, Unterschriften und Hinweise dazu, welche Unterlagen zusätzlich eingereicht werden sollen.",
         faq4_q: "Ist BriefHelden eine Rechtsberatung?",
-        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Erklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.",
+        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Texterklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.",
 
         tip_title: "Worauf sollten Sie bei einem Formular achten?",
         tip_sub: "Diese Punkte sind oft besonders wichtig:",
@@ -748,15 +779,21 @@
         tip3_title: "Unterlagen beachten",
         tip3_text: "Schauen Sie, ob Nachweise, Belege oder weitere Dokumente genannt werden.",
         tip4_title: "Inhalt verständlich machen",
-        tip4_text: "Wenn Begriffe oder Felder unklar sind, hilft eine einfache Erklärung oft dabei, die enthaltenen Angaben besser zu erfassen.",
+        tip4_text: "Wenn Begriffe, Felder oder Hinweise unklar sind, hilft eine sprachliche Vereinfachung oft dabei, die enthaltenen Angaben besser zu erfassen.",
 
         more_title: "Weitere häufige Briefe verstehen",
-        more_1: "Inkasso Brief verstehen",
-        more_2: "Mahnbescheid verstehen",
-        more_3: "Jobcenter Brief verstehen",
-        more_4: "Pfändungsbescheid verstehen",
-        more_5: "Vollstreckungsbescheid verstehen",
-        more_6: "Finanzamt Brief verstehen",
+        more_1_title: "Inkasso Brief verstehen",
+        more_1_text: "Inkasso Schreiben klar und verständlich erklärt.",
+        more_2_title: "Mahnbescheid verstehen",
+        more_2_text: "Mahnbescheide einfach erklärt.",
+        more_3_title: "Jobcenter Brief verstehen",
+        more_3_text: "Jobcenter Schreiben in einfacher Sprache erklärt.",
+        more_4_title: "Pfändungsbescheid verstehen",
+        more_4_text: "Pfändungsbescheide klar und verständlich erklärt.",
+        more_5_title: "Vollstreckungsbescheid verstehen",
+        more_5_text: "Vollstreckungsbescheide einfach erklärt.",
+        more_6_title: "Finanzamt Brief verstehen",
+        more_6_text: "Schreiben vom Finanzamt klar und verständlich erklärt.",
 
         foot_copy: "© 2026 BriefHelden – Alle Rechte vorbehalten",
         foot_home: "Startseite",
@@ -771,7 +808,7 @@
         pageTitle: "Understand a form – explained clearly | BriefHelden",
         metaDescription: "Understand a form easily: BriefHelden explains government forms, applications and documents clearly and in simple language.",
         ogTitle: "Understand a form – explained clearly | BriefHelden",
-        ogDescription: "Government and official forms explained simply. Understand entries, fields and important points quickly and clearly.",
+        ogDescription: "Government and official forms explained simply. Understand fields, entries and important points quickly and clearly.",
 
         nav_home: "Home",
         nav_question: "Ask a question",
@@ -781,7 +818,7 @@
         nav_privacy: "Privacy",
 
         hero_title: "Understand a form",
-        hero_sub: "Many forms from authorities or companies are complicated. BriefHelden explains the fields, entries and contents simply and clearly.",
+        hero_sub: "Many forms from authorities, insurers, banks or companies contain fields, notes and labels that are not immediately clear. BriefHelden explains the content simply and clearly so you can better understand which details are included in the document.",
         hero_cta: "Get form explained now – €6.90",
         hero_question_cta: "Ask a short question – €1.49",
         meta_1: "Clearly explained",
@@ -789,13 +826,14 @@
         meta_3: "Confidential",
 
         intro_title: "What is a form?",
-        intro_text: "A form is a document with different fields where information is entered. Many forms come from authorities, insurers, banks or companies. Labels, mandatory fields or instructions are often not immediately clear. That is exactly where BriefHelden helps.",
+        intro_text: "A form is a document with different fields where information is entered. Many forms come from authorities, insurers, banks or companies. Labels, mandatory fields, notes or additional details are often not immediately understandable. Many people first want to understand which details are included in the document and what the fields are meant for. That is exactly where BriefHelden helps.",
 
         left_title: "Typical forms",
         left_li_1: "Applications for authorities",
         left_li_2: "Insurance forms",
         left_li_3: "Bank forms",
         left_li_4: "Forms from the employment office or Jobcenter",
+        left_text: "BriefHelden explains which fields, details and notes are included in the form and how the content can be understood more clearly.",
 
         right_title: "How BriefHelden helps",
         right_li_1: "Upload form securely",
@@ -814,32 +852,38 @@
         faq_title: "Frequently asked questions about forms",
         faq_sub: "These questions often come up with forms:",
         faq1_q: "Why are forms often complicated?",
-        faq1_a: "Many forms contain technical terms, unclear field labels or special instructions that are not immediately understandable.",
+        faq1_a: "Many forms contain technical terms, unclear field labels or special notes that are not immediately understandable.",
         faq2_q: "Which details are often included in a form?",
         faq2_a: "That depends on the form. Personal data, supporting documents, information about your situation or other details are often requested.",
         faq3_q: "Which details are especially important?",
         faq3_a: "Especially important are mandatory fields, deadlines, signatures and notes about which additional documents should be submitted.",
         faq4_q: "Is BriefHelden legal advice?",
-        faq4_a: "No. BriefHelden does not provide legal advice within the meaning of the German Legal Services Act (RDG). You receive only a clear explanation and linguistic simplification of your document’s content. There is no legal assessment, no individual review, and no binding recommendation for action.",
+        faq4_a: "No. BriefHelden does not provide legal advice within the meaning of the German Legal Services Act (RDG). You receive only a clear text explanation and linguistic simplification of your document’s content. There is no legal assessment, no individual review, and no binding recommendation for action.",
 
         tip_title: "What should you look for in a form?",
         tip_sub: "These points are often especially important:",
         tip1_title: "Check mandatory fields",
-        tip1_text: "Pay attention to which fields should be completed.",
-        tip2_title: "Read instructions",
+        tip1_text: "Pay attention to which fields must be completed.",
+        tip2_title: "Read notes",
         tip2_text: "Check whether the form contains explanations, additional notes or filling instructions.",
         tip3_title: "Watch supporting documents",
         tip3_text: "See whether proofs, records or other documents are mentioned.",
         tip4_title: "Make the content understandable",
-        tip4_text: "If terms or fields are unclear, a simple explanation often helps you grasp the included details more easily.",
+        tip4_text: "If terms, fields or notes are unclear, linguistic simplification often helps you grasp the included details more easily.",
 
         more_title: "Understand more common letters",
-        more_1: "Understand a debt collection letter",
-        more_2: "Understand a payment order",
-        more_3: "Understand a Jobcenter letter",
-        more_4: "Understand a garnishment notice",
-        more_5: "Understand an enforcement order",
-        more_6: "Understand a tax office letter",
+        more_1_title: "Understand a debt collection letter",
+        more_1_text: "Debt collection letters explained clearly.",
+        more_2_title: "Understand a payment order",
+        more_2_text: "Payment orders explained simply.",
+        more_3_title: "Understand a Jobcenter letter",
+        more_3_text: "Jobcenter letters explained in simple language.",
+        more_4_title: "Understand a garnishment notice",
+        more_4_text: "Garnishment notices explained clearly.",
+        more_5_title: "Understand an enforcement order",
+        more_5_text: "Enforcement orders explained simply.",
+        more_6_title: "Understand a tax office letter",
+        more_6_text: "Tax office letters explained clearly.",
 
         foot_copy: "© 2026 BriefHelden – All rights reserved",
         foot_home: "Home",
@@ -864,7 +908,7 @@
         nav_privacy: "Gizlilik",
 
         hero_title: "Formu anlayın",
-        hero_sub: "Resmi kurumlar veya şirketlerden gelen birçok form karmaşıktır. BriefHelden alanları, bilgileri ve içerikleri size basit ve açık şekilde açıklar.",
+        hero_sub: "Resmi kurumlar, sigortalar, bankalar veya şirketlerden gelen birçok formda alanlar, notlar ve açıklamalar bulunur. BriefHelden içeriği basit ve açık şekilde açıklar, böylece belgede hangi bilgilerin yer aldığını daha iyi anlayabilirsiniz.",
         hero_cta: "Formu şimdi açıklat – 6,90 €",
         hero_question_cta: "Kısa soru sor – 1,49 €",
         meta_1: "Basit açıklandı",
@@ -872,13 +916,14 @@
         meta_3: "Gizli",
 
         intro_title: "Form nedir?",
-        intro_text: "Form, içine bilgi girilen farklı alanlardan oluşan bir belgedir. Birçok form resmi kurumlardan, sigortalardan, bankalardan veya şirketlerden gelir. Alan isimleri, zorunlu bölümler veya açıklamalar çoğu zaman hemen anlaşılmaz. BriefHelden tam bu konuda yardımcı olur.",
+        intro_text: "Form, içine bilgi girilen farklı alanlardan oluşan bir belgedir. Birçok form resmi kurumlardan, sigortalardan, bankalardan veya şirketlerden gelir. Alan isimleri, zorunlu alanlar, notlar veya ek bilgiler çoğu zaman hemen anlaşılmaz. Birçok kişi önce belgede hangi bilgilerin yer aldığını ve alanların ne için olduğunu anlamak ister. BriefHelden tam bu konuda yardımcı olur.",
 
         left_title: "Tipik formlar",
         left_li_1: "Resmi başvuru formları",
         left_li_2: "Sigorta formları",
         left_li_3: "Banka formları",
         left_li_4: "İş kurumu veya Jobcenter formları",
+        left_text: "BriefHelden, formda hangi alanların, bilgilerin ve notların yer aldığını ve içeriğin nasıl daha anlaşılır hale geldiğini açıklar.",
 
         right_title: "BriefHelden nasıl yardımcı olur",
         right_li_1: "Formu güvenli şekilde yükleyin",
@@ -897,32 +942,38 @@
         faq_title: "Formlar hakkında sık sorulan sorular",
         faq_sub: "Bu sorular formlarda sıkça ortaya çıkar:",
         faq1_q: "Formlar neden çoğu zaman karmaşıktır?",
-        faq1_a: "Birçok form teknik terimler, belirsiz alan isimleri veya hemen anlaşılmayan özel açıklamalar içerir.",
+        faq1_a: "Birçok form teknik terimler, belirsiz alan isimleri veya hemen anlaşılmayan özel notlar içerir.",
         faq2_q: "Bir formda hangi bilgiler sıkça yer alır?",
         faq2_a: "Bu forma bağlıdır. Genelde kişisel bilgiler, belgeler, durumunuza ilişkin bilgiler veya başka veriler istenir.",
         faq3_q: "Hangi bilgiler özellikle önemlidir?",
         faq3_a: "Zorunlu alanlar, süreler, imzalar ve ayrıca hangi belgelerin eklenmesi gerektiğine dair notlar özellikle önemlidir.",
         faq4_q: "BriefHelden hukuki danışmanlık mı veriyor?",
-        faq4_a: "Hayır. BriefHelden, Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık vermez. Yalnızca belgenizin içeriğinin anlaşılır açıklamasını ve dilsel sadeleştirmesini alırsınız. Hukuki değerlendirme, bireysel inceleme veya bağlayıcı bir hareket tavsiyesi yapılmaz.",
+        faq4_a: "Hayır. BriefHelden, Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık vermez. Yalnızca belgenizin içeriğinin anlaşılır metin açıklamasını ve dilsel sadeleştirmesini alırsınız. Hukuki değerlendirme, bireysel inceleme veya bağlayıcı bir hareket tavsiyesi yapılmaz.",
 
         tip_title: "Bir formda nelere dikkat etmelisiniz?",
         tip_sub: "Bu noktalar genelde özellikle önemlidir:",
         tip1_title: "Zorunlu alanları kontrol edin",
-        tip1_text: "Hangi alanların doldurulması gerektiğine dikkat edin.",
-        tip2_title: "Açıklamaları okuyun",
+        tip1_text: "Hangi alanların mutlaka doldurulması gerektiğine dikkat edin.",
+        tip2_title: "Notları okuyun",
         tip2_text: "Formda açıklama, ek not veya doldurma bilgileri olup olmadığını kontrol edin.",
         tip3_title: "Belgeleri dikkate alın",
         tip3_text: "Kanıt, belge veya başka evrakların belirtilip belirtilmediğine bakın.",
         tip4_title: "İçeriği anlaşılır hale getirin",
-        tip4_text: "Terimler veya alanlar belirsizse, basit bir açıklama yer alan bilgileri daha kolay kavramanıza yardımcı olur.",
+        tip4_text: "Terimler, alanlar veya notlar belirsizse, dilsel sadeleştirme çoğu zaman belgede yer alan bilgileri daha iyi anlamanıza yardımcı olur.",
 
         more_title: "Diğer sık görülen mektupları anlayın",
-        more_1: "İnkasso mektubunu anlayın",
-        more_2: "Ödeme emrini anlayın",
-        more_3: "Jobcenter mektubunu anlayın",
-        more_4: "Haciz bildirimini anlayın",
-        more_5: "İcra kararını anlayın",
-        more_6: "Vergi dairesi mektubunu anlayın",
+        more_1_title: "İnkasso mektubunu anlayın",
+        more_1_text: "İnkasso yazıları açık şekilde açıklanır.",
+        more_2_title: "Ödeme emrini anlayın",
+        more_2_text: "Ödeme emirleri basit şekilde açıklanır.",
+        more_3_title: "Jobcenter mektubunu anlayın",
+        more_3_text: "Jobcenter yazıları basit dille açıklanır.",
+        more_4_title: "Haciz bildirimini anlayın",
+        more_4_text: "Haciz bildirimleri açık şekilde açıklanır.",
+        more_5_title: "İcra kararını anlayın",
+        more_5_text: "İcra kararları basit şekilde açıklanır.",
+        more_6_title: "Vergi dairesi mektubunu anlayın",
+        more_6_text: "Vergi dairesi yazıları açık şekilde açıklanır.",
 
         foot_copy: "© 2026 BriefHelden – Tüm hakları saklıdır",
         foot_home: "Ana Sayfa",
@@ -947,7 +998,7 @@
         nav_privacy: "Конфиденциальность",
 
         hero_title: "Понять форму",
-        hero_sub: "Многие формы от ведомств или компаний бывают сложными. BriefHelden объяснит поля, данные и содержание просто и понятно.",
+        hero_sub: "Многие формы от ведомств, страховых компаний, банков или фирм содержат поля, примечания и обозначения, которые не сразу понятны. BriefHelden объяснит содержание просто и понятно, чтобы вам было легче разобраться, какие сведения указаны в документе.",
         hero_cta: "Объяснить форму – 6,90 €",
         hero_question_cta: "Задать короткий вопрос – 1,49 €",
         meta_1: "Просто объяснено",
@@ -955,13 +1006,14 @@
         meta_3: "Конфиденциально",
 
         intro_title: "Что такое форма?",
-        intro_text: "Форма — это документ с разными полями, в которые вносится информация. Многие формы приходят от ведомств, страховых компаний, банков или фирм. Названия полей, обязательные разделы или пояснения часто не сразу понятны. Именно здесь помогает BriefHelden.",
+        intro_text: "Форма — это документ с разными полями, в которые вносится информация. Многие формы приходят от ведомств, страховых компаний, банков или фирм. Названия полей, обязательные поля, примечания или дополнительные данные часто не сразу понятны. Многие люди сначала хотят понять, какие именно сведения указаны в документе и для чего предназначены поля. Именно здесь помогает BriefHelden.",
 
         left_title: "Типичные формы",
         left_li_1: "Заявления в ведомства",
         left_li_2: "Страховые формы",
         left_li_3: "Банковские формы",
         left_li_4: "Формы службы занятости или Jobcenter",
+        left_text: "BriefHelden объясняет, какие поля, данные и примечания содержатся в форме и как можно понятнее понять её содержание.",
 
         right_title: "Как помогает BriefHelden",
         right_li_1: "Безопасно загрузите форму",
@@ -980,32 +1032,38 @@
         faq_title: "Частые вопросы о формах",
         faq_sub: "Эти вопросы часто возникают по формам:",
         faq1_q: "Почему формы часто сложные?",
-        faq1_a: "Многие формы содержат специальные термины, неясные названия полей или особые указания, которые сразу непонятны.",
+        faq1_a: "Многие формы содержат специальные термины, неясные названия полей или особые примечания, которые сразу непонятны.",
         faq2_q: "Какие данные часто содержатся в форме?",
         faq2_a: "Это зависит от формы. Часто требуются личные данные, подтверждающие документы, сведения о вашей ситуации или другая информация.",
         faq3_q: "Какие данные особенно важны?",
         faq3_a: "Особенно важны обязательные поля, сроки, подписи и указания о том, какие дополнительные документы нужно приложить.",
         faq4_q: "BriefHelden — это юридическая консультация?",
-        faq4_a: "Нет. BriefHelden не оказывает юридических консультаций в смысле немецкого Закона о юридических услугах (RDG). Вы получаете только понятное объяснение и языковое упрощение содержания вашего документа. Юридическая оценка, индивидуальная проверка и обязательные рекомендации к действиям не предоставляются.",
+        faq4_a: "Нет. BriefHelden не оказывает юридических консультаций в смысле немецкого Закона о юридических услугах (RDG). Вы получаете только понятное текстовое объяснение и языковое упрощение содержания вашего документа. Юридическая оценка, индивидуальная проверка и обязательные рекомендации к действиям не предоставляются.",
 
         tip_title: "На что стоит обратить внимание в форме?",
         tip_sub: "Эти пункты часто особенно важны:",
         tip1_title: "Проверьте обязательные поля",
-        tip1_text: "Обратите внимание, какие поля следует заполнить.",
-        tip2_title: "Читайте пояснения",
+        tip1_text: "Обратите внимание, какие поля обязательно должны быть заполнены.",
+        tip2_title: "Читайте примечания",
         tip2_text: "Проверьте, есть ли в форме объяснения, дополнительные примечания или инструкции по заполнению.",
         tip3_title: "Учитывайте документы",
         tip3_text: "Посмотрите, указаны ли подтверждения, справки или другие документы.",
         tip4_title: "Сделайте содержание понятным",
-        tip4_text: "Если термины или поля непонятны, простое объяснение часто помогает легче воспринять содержащиеся в документе сведения.",
+        tip4_text: "Если термины, поля или примечания непонятны, языковое упрощение часто помогает лучше понять содержащиеся в документе сведения.",
 
         more_title: "Понять другие частые письма",
-        more_1: "Понять письмо от инкассо",
-        more_2: "Понять судебный приказ",
-        more_3: "Понять письмо от Jobcenter",
-        more_4: "Понять уведомление об аресте",
-        more_5: "Понять исполнительный документ",
-        more_6: "Понять письмо из налоговой",
+        more_1_title: "Понять письмо от инкассо",
+        more_1_text: "Письма от инкассо объяснены понятно.",
+        more_2_title: "Понять судебный приказ",
+        more_2_text: "Судебные приказы объяснены просто.",
+        more_3_title: "Понять письмо от Jobcenter",
+        more_3_text: "Письма Jobcenter объяснены простым языком.",
+        more_4_title: "Понять уведомление об аресте",
+        more_4_text: "Уведомления об аресте объяснены понятно.",
+        more_5_title: "Понять исполнительный документ",
+        more_5_text: "Исполнительные документы объяснены просто.",
+        more_6_title: "Понять письмо из налоговой",
+        more_6_text: "Письма из налоговой объяснены понятно.",
 
         foot_copy: "© 2026 BriefHelden – Все права защищены",
         foot_home: "Главная",
