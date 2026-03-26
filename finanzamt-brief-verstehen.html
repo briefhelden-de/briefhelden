@@ -19,6 +19,7 @@
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://www.briefhelden-service.de/finanzamt-brief-verstehen.html" />
   <meta property="og:image" content="https://www.briefhelden-service.de/og-image.jpg" />
+  <meta property="og:site_name" content="BriefHelden" />
   <meta name="theme-color" content="#0b1220" />
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
@@ -266,7 +267,8 @@
     .pad{padding:22px}
 
     .headline,
-    .sectionTitle{
+    .sectionTitle,
+    .moreLinks h2{
       text-align:center;
       margin:0 0 10px;
       font-weight:950;
@@ -291,7 +293,8 @@
     }
 
     .infoCard,
-    .faqItem{
+    .faqItem,
+    .moreCard{
       border-radius:var(--radius-lg);
       border:1px solid rgba(255,255,255,.55);
       background:rgba(255,255,255,.20);
@@ -299,21 +302,24 @@
     }
 
     .infoCard h3,
-    .faqItem h3{
+    .faqItem h3,
+    .moreCard h3{
       margin:0 0 10px;
       font-size:22px;
       font-weight:950;
       line-height:1.25;
     }
 
-    .faqItem h3{
+    .faqItem h3,
+    .moreCard h3{
       font-size:18px;
       margin-bottom:8px;
     }
 
     .infoCard p,
     .infoCard li,
-    .faqItem p{
+    .faqItem p,
+    .moreCard p{
       color:rgba(11,18,32,.76);
       line-height:1.65;
       font-weight:700;
@@ -327,7 +333,8 @@
       padding-left:18px;
     }
 
-    .faqGrid{
+    .faqGrid,
+    .moreGrid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:14px;
@@ -380,6 +387,22 @@
     .miniBtn.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
     .miniBtn.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
 
+    .moreLinks{
+      max-width:var(--max);
+      margin:28px auto 0;
+      padding:0 18px 30px;
+    }
+
+    .moreCard{
+      display:block;
+      transition:transform .18s ease, background .18s ease;
+    }
+
+    .moreCard:hover{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,.30);
+    }
+
     footer{
       margin-top:18px;
       padding:18px 18px 28px;
@@ -409,31 +432,11 @@
     .footLinks a{color:rgba(255,255,255,.80)}
     .footLinks a:hover{color:#fff}
 
-    .moreLinks{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:0 18px 28px;
-    }
-
-    .moreLinks h2{
-      font-size:24px;
-      margin:0 0 12px;
-      font-weight:950;
-      color:#0b1220;
-    }
-
-    .moreLinks ul{
-      margin:0;
-      padding-left:18px;
-      color:rgba(11,18,32,.82);
-      font-weight:700;
-      line-height:1.8;
-    }
-
     @media (max-width:900px){
       nav.links{display:none}
       .grid2,
       .faqGrid,
+      .moreGrid,
       .serviceMini{grid-template-columns:1fr}
       .cta{min-width:92vw}
       .miniBtn{min-width:100%}
@@ -472,7 +475,7 @@
     <div class="wrap">
       <h1 data-i18n="hero_title">Finanzamt Brief verstehen</h1>
       <p data-i18n="hero_sub">
-        Ein Schreiben vom Finanzamt wirkt oft kompliziert oder wichtig. BriefHelden erklärt Inhalt, Fristen, Beträge und wichtige Angaben einfach und verständlich.
+        Ein Schreiben vom Finanzamt wirkt oft kompliziert oder wichtig. BriefHelden hilft dabei, Inhalt, Fristen, Beträge und enthaltene Angaben sprachlich verständlich einzuordnen.
       </p>
 
       <div class="ctaGroup">
@@ -501,7 +504,7 @@
         <div class="pad">
           <h2 class="headline" data-i18n="intro_title">Was ist ein Brief vom Finanzamt?</h2>
           <p class="lead" data-i18n="intro_text">
-            Ein Brief vom Finanzamt enthält oft wichtige Informationen zu Steuern, Fristen, Nachzahlungen, Erstattungen, Rückfragen oder Bescheiden. Viele Menschen möchten verstehen, was genau im Schreiben steht und welche Angaben besonders wichtig sind. Genau dabei hilft BriefHelden.
+            Ein Brief vom Finanzamt enthält oft wichtige Informationen zu Steuern, Fristen, Nachzahlungen, Erstattungen, Rückfragen oder Bescheiden. Viele Menschen möchten verstehen, was genau im Schreiben steht und welche Angaben im Schreiben enthalten sind. Genau dabei hilft BriefHelden mit einer verständlichen Texterklärung.
           </p>
 
           <div class="grid2">
@@ -514,7 +517,7 @@
                 Wichtig sind dabei vor allem: Welche Frist wird genannt? Geht es um einen Betrag? Auf welches Jahr, welche Steuer oder welches Thema bezieht sich das Schreiben?
               </p>
               <p data-i18n="left_text_3">
-                BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie den Finanzamt Brief besser sprachlich verständlich einordnen können.
+                BriefHelden hilft dabei, den Inhalt in einfacher Sprache sprachlich verständlich einzuordnen.
               </p>
             </div>
 
@@ -522,7 +525,7 @@
               <h3 data-i18n="right_title">So funktioniert es</h3>
               <ul>
                 <li data-i18n="right_li_1">Finanzamt Brief sicher hochladen</li>
-                <li data-i18n="right_li_2">Wir lesen den Inhalt und erklären ihn verständlich</li>
+                <li data-i18n="right_li_2">Wir lesen den Inhalt und erstellen eine verständliche Texterklärung</li>
                 <li data-i18n="right_li_3">Sie erhalten die Erklärung per E-Mail</li>
                 <li data-i18n="right_li_4">Keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) und keine Steuerberatung – nur sprachliche Vereinfachung und verständliche Texterklärung ohne rechtliche Bewertung oder Handlungsempfehlung</li>
               </ul>
@@ -575,7 +578,7 @@
             <div class="faqItem">
               <h3 data-i18n="faq2_q">Geht es immer um eine Nachzahlung?</h3>
               <p data-i18n="faq2_a">
-                Nicht immer. Ein Finanzamt Brief kann auch eine Erstattung, einen Hinweis, eine Nachfrage oder einen Bescheid enthalten. Der genaue Inhalt ist entscheidend.
+                Nicht immer. Ein Finanzamt Brief kann auch eine Erstattung, einen Hinweis, eine Nachfrage oder einen Bescheid enthalten. Viele Menschen möchten zuerst sprachlich verständlich einordnen, welche Angaben im Schreiben enthalten sind.
               </p>
             </div>
 
@@ -589,7 +592,7 @@
             <div class="faqItem">
               <h3 data-i18n="faq4_q">Ist BriefHelden eine Steuerberatung?</h3>
               <p data-i18n="faq4_a">
-                Nein. BriefHelden bietet keine Steuerberatung und keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Erklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.
+                Nein. BriefHelden bietet keine Steuerberatung und keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Texterklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.
               </p>
             </div>
           </div>
@@ -630,10 +633,46 @@
             <div class="faqItem">
               <h3 data-i18n="tip4_title">Inhalt verständlich machen</h3>
               <p data-i18n="tip4_text">
-                Wenn das Schreiben kompliziert oder unklar formuliert ist, hilft eine einfache Erklärung oft dabei, die enthaltenen Angaben besser zu erfassen.
+                Wenn das Schreiben kompliziert oder unklar formuliert ist, hilft eine verständliche Texterklärung oft dabei, die enthaltenen Angaben besser zu erfassen.
               </p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="moreLinks">
+        <h2 data-i18n="more_title">Weitere häufige Briefe verstehen</h2>
+
+        <div class="moreGrid">
+          <a class="moreCard" href="/inkasso-brief-verstehen.html">
+            <h3 data-i18n="more_1_title">Inkasso Brief verstehen</h3>
+            <p data-i18n="more_1_text">Inkasso Schreiben klar und verständlich erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/mahnbescheid-verstehen.html">
+            <h3 data-i18n="more_2_title">Mahnbescheid verstehen</h3>
+            <p data-i18n="more_2_text">Mahnbescheide einfach erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/jobcenter-brief-verstehen.html">
+            <h3 data-i18n="more_3_title">Jobcenter Brief verstehen</h3>
+            <p data-i18n="more_3_text">Jobcenter Schreiben in einfacher Sprache erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/pfaendungsbescheid-verstehen.html">
+            <h3 data-i18n="more_4_title">Pfändungsbescheid verstehen</h3>
+            <p data-i18n="more_4_text">Pfändungsbescheide klar und verständlich erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/vollstreckungsbescheid-verstehen.html">
+            <h3 data-i18n="more_5_title">Vollstreckungsbescheid verstehen</h3>
+            <p data-i18n="more_5_text">Vollstreckungsbescheide einfach erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/finanzamt-brief-verstehen.html">
+            <h3 data-i18n="more_6_title">Finanzamt Brief verstehen</h3>
+            <p data-i18n="more_6_text">Schreiben vom Finanzamt klar und verständlich erklärt.</p>
+          </a>
         </div>
       </div>
     </div>
@@ -652,18 +691,6 @@
       </div>
     </div>
   </footer>
-
-  <div class="moreLinks">
-    <h2 data-i18n="more_title">Weitere häufige Briefe verstehen</h2>
-    <ul>
-      <li><a href="/inkasso-brief-verstehen.html" data-i18n="more_1">Inkasso Brief verstehen</a></li>
-      <li><a href="/mahnbescheid-verstehen.html" data-i18n="more_2">Mahnbescheid verstehen</a></li>
-      <li><a href="/jobcenter-brief-verstehen.html" data-i18n="more_3">Jobcenter Brief verstehen</a></li>
-      <li><a href="/pfaendungsbescheid-verstehen.html" data-i18n="more_4">Pfändungsbescheid verstehen</a></li>
-      <li><a href="/vollstreckungsbescheid-verstehen.html" data-i18n="more_5">Vollstreckungsbescheid verstehen</a></li>
-      <li><a href="/finanzamt-brief-verstehen.html" data-i18n="more_6">Finanzamt Brief verstehen</a></li>
-    </ul>
-  </div>
 
   <script>
     const STRIPE_LINKS = {
@@ -695,7 +722,7 @@
         nav_privacy: "Datenschutz",
 
         hero_title: "Finanzamt Brief verstehen",
-        hero_sub: "Ein Schreiben vom Finanzamt wirkt oft kompliziert oder wichtig. BriefHelden erklärt Inhalt, Fristen, Beträge und wichtige Angaben einfach und verständlich.",
+        hero_sub: "Ein Schreiben vom Finanzamt wirkt oft kompliziert oder wichtig. BriefHelden hilft dabei, Inhalt, Fristen, Beträge und enthaltene Angaben sprachlich verständlich einzuordnen.",
         hero_cta: "Jetzt Finanzamt Brief erklären lassen – 6,90 €",
         hero_question_cta: "Kurze Frage stellen – 1,49 €",
         meta_1: "Einfach erklärt",
@@ -703,16 +730,16 @@
         meta_3: "Vertraulich",
 
         intro_title: "Was ist ein Brief vom Finanzamt?",
-        intro_text: "Ein Brief vom Finanzamt enthält oft wichtige Informationen zu Steuern, Fristen, Nachzahlungen, Erstattungen, Rückfragen oder Bescheiden. Viele Menschen möchten verstehen, was genau im Schreiben steht und welche Angaben besonders wichtig sind. Genau dabei hilft BriefHelden.",
+        intro_text: "Ein Brief vom Finanzamt enthält oft wichtige Informationen zu Steuern, Fristen, Nachzahlungen, Erstattungen, Rückfragen oder Bescheiden. Viele Menschen möchten verstehen, was genau im Schreiben steht und welche Angaben im Schreiben enthalten sind. Genau dabei hilft BriefHelden mit einer verständlichen Texterklärung.",
 
         left_title: "Einfach erklärt",
         left_text_1: "Ein Finanzamt Brief kann sich zum Beispiel auf einen Steuerbescheid, eine Nachzahlung, eine Erstattung oder die Anforderung weiterer Unterlagen beziehen.",
         left_text_2: "Wichtig sind dabei vor allem: Welche Frist wird genannt? Geht es um einen Betrag? Auf welches Jahr, welche Steuer oder welches Thema bezieht sich das Schreiben?",
-        left_text_3: "BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie den Finanzamt Brief besser sprachlich verständlich einordnen können.",
+        left_text_3: "BriefHelden hilft dabei, den Inhalt in einfacher Sprache sprachlich verständlich einzuordnen.",
 
         right_title: "So funktioniert es",
         right_li_1: "Finanzamt Brief sicher hochladen",
-        right_li_2: "Wir lesen den Inhalt und erklären ihn verständlich",
+        right_li_2: "Wir lesen den Inhalt und erstellen eine verständliche Texterklärung",
         right_li_3: "Sie erhalten die Erklärung per E-Mail",
         right_li_4: "Keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) und keine Steuerberatung – nur sprachliche Vereinfachung und verständliche Texterklärung ohne rechtliche Bewertung oder Handlungsempfehlung",
 
@@ -729,11 +756,11 @@
         faq1_q: "Welche Angaben sind besonders wichtig?",
         faq1_a: "Besonders wichtig sind Fristen, genannte Beträge, das betroffene Steuerjahr, die Art des Schreibens und Hinweise auf Unterlagen oder Rückfragen.",
         faq2_q: "Geht es immer um eine Nachzahlung?",
-        faq2_a: "Nicht immer. Ein Finanzamt Brief kann auch eine Erstattung, einen Hinweis, eine Nachfrage oder einen Bescheid enthalten. Der genaue Inhalt ist entscheidend.",
+        faq2_a: "Nicht immer. Ein Finanzamt Brief kann auch eine Erstattung, einen Hinweis, eine Nachfrage oder einen Bescheid enthalten. Viele Menschen möchten zuerst sprachlich verständlich einordnen, welche Angaben im Schreiben enthalten sind.",
         faq3_q: "Was ist bei einem Finanzamt Brief besonders wichtig?",
         faq3_a: "Besonders wichtig sind Fristen, Beträge, das genannte Thema, das Steuerjahr und weitere Angaben im Schreiben.",
         faq4_q: "Ist BriefHelden eine Steuerberatung?",
-        faq4_a: "Nein. BriefHelden bietet keine Steuerberatung und keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Erklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.",
+        faq4_a: "Nein. BriefHelden bietet keine Steuerberatung und keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Texterklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.",
 
         tip_title: "Worauf sollten Sie bei einem Finanzamt Brief achten?",
         tip_sub: "Diese Punkte sind oft besonders wichtig:",
@@ -744,15 +771,21 @@
         tip3_title: "Thema erkennen",
         tip3_text: "Achten Sie darauf, auf welches Steuerjahr oder welche Art von Steuer sich der Brief bezieht.",
         tip4_title: "Inhalt verständlich machen",
-        tip4_text: "Wenn das Schreiben kompliziert oder unklar formuliert ist, hilft eine einfache Erklärung oft dabei, die enthaltenen Angaben besser zu erfassen.",
+        tip4_text: "Wenn das Schreiben kompliziert oder unklar formuliert ist, hilft eine verständliche Texterklärung oft dabei, die enthaltenen Angaben besser zu erfassen.",
 
         more_title: "Weitere häufige Briefe verstehen",
-        more_1: "Inkasso Brief verstehen",
-        more_2: "Mahnbescheid verstehen",
-        more_3: "Jobcenter Brief verstehen",
-        more_4: "Pfändungsbescheid verstehen",
-        more_5: "Vollstreckungsbescheid verstehen",
-        more_6: "Finanzamt Brief verstehen",
+        more_1_title: "Inkasso Brief verstehen",
+        more_1_text: "Inkasso Schreiben klar und verständlich erklärt.",
+        more_2_title: "Mahnbescheid verstehen",
+        more_2_text: "Mahnbescheide einfach erklärt.",
+        more_3_title: "Jobcenter Brief verstehen",
+        more_3_text: "Jobcenter Schreiben in einfacher Sprache erklärt.",
+        more_4_title: "Pfändungsbescheid verstehen",
+        more_4_text: "Pfändungsbescheide klar und verständlich erklärt.",
+        more_5_title: "Vollstreckungsbescheid verstehen",
+        more_5_text: "Vollstreckungsbescheide einfach erklärt.",
+        more_6_title: "Finanzamt Brief verstehen",
+        more_6_text: "Schreiben vom Finanzamt klar und verständlich erklärt.",
 
         foot_copy: "© 2026 BriefHelden – Alle Rechte vorbehalten",
         foot_home: "Startseite",
@@ -777,7 +810,7 @@
         nav_privacy: "Privacy",
 
         hero_title: "Understand a tax office letter",
-        hero_sub: "A letter from the tax office often seems complicated or important. BriefHelden explains the content, deadlines, amounts and key details simply and clearly.",
+        hero_sub: "A letter from the tax office often seems complicated or important. BriefHelden helps you understand the content, deadlines, amounts and included details in clear language.",
         hero_cta: "Get tax office letter explained now – €6.90",
         hero_question_cta: "Ask a short question – €1.49",
         meta_1: "Clearly explained",
@@ -785,16 +818,16 @@
         meta_3: "Confidential",
 
         intro_title: "What is a letter from the tax office?",
-        intro_text: "A letter from the tax office often contains important information about taxes, deadlines, additional payments, refunds, follow-up questions or notices. Many people want to understand what exactly the document says and which details are especially important. That is exactly where BriefHelden helps.",
+        intro_text: "A letter from the tax office often contains important information about taxes, deadlines, additional payments, refunds, follow-up questions or notices. Many people want to understand what exactly the document says and which details are included in it. That is exactly where BriefHelden helps with a clear text explanation.",
 
         left_title: "Simply explained",
         left_text_1: "A tax office letter may refer, for example, to a tax assessment, an additional payment, a refund or a request for further documents.",
         left_text_2: "Especially important are: Which deadline is mentioned? Is there an amount involved? Which year, tax or topic does the document refer to?",
-        left_text_3: "BriefHelden explains the content in simple language so you can better understand the tax office letter.",
+        left_text_3: "BriefHelden helps explain the content in simple language so you can understand it more easily.",
 
         right_title: "How it works",
         right_li_1: "Upload tax office letter securely",
-        right_li_2: "We read the content and explain it clearly",
+        right_li_2: "We read the content and create a clear text explanation",
         right_li_3: "You receive the explanation by email",
         right_li_4: "No legal advice within the meaning of the German Legal Services Act (RDG) and no tax advice — only linguistic simplification and a clear text explanation without legal assessment or recommendation for action",
 
@@ -811,11 +844,11 @@
         faq1_q: "Which details are especially important?",
         faq1_a: "Especially important are deadlines, stated amounts, the relevant tax year, the type of document and references to documents or follow-up questions.",
         faq2_q: "Does it always concern an additional payment?",
-        faq2_a: "Not always. A tax office letter can also contain a refund, a notice, a query or an assessment. The exact content is decisive.",
+        faq2_a: "Not always. A tax office letter can also contain a refund, a notice, a query or an assessment. Many people first want to understand clearly which details are included in the document.",
         faq3_q: "What is especially important in a tax office letter?",
         faq3_a: "Especially important are deadlines, amounts, the stated topic, the tax year and further details in the document.",
         faq4_q: "Is BriefHelden tax advice?",
-        faq4_a: "No. BriefHelden does not provide tax advice and does not provide legal advice within the meaning of the German Legal Services Act (RDG). You receive only a clear explanation and linguistic simplification of your document’s content. There is no legal assessment, no individual review, and no binding recommendation for action.",
+        faq4_a: "No. BriefHelden does not provide tax advice and does not provide legal advice within the meaning of the German Legal Services Act (RDG). You receive only a clear text explanation and linguistic simplification of your document’s content. There is no legal assessment, no individual review, and no binding recommendation for action.",
 
         tip_title: "What should you look for in a tax office letter?",
         tip_sub: "These points are often especially important:",
@@ -826,15 +859,21 @@
         tip3_title: "Recognize the topic",
         tip3_text: "Pay attention to which tax year or which type of tax the document refers to.",
         tip4_title: "Make the content understandable",
-        tip4_text: "If the wording seems complicated or unclear, a simple explanation often helps you grasp the included details more easily.",
+        tip4_text: "If the wording seems complicated or unclear, a clear text explanation often helps you grasp the included details more easily.",
 
         more_title: "Understand more common letters",
-        more_1: "Understand a debt collection letter",
-        more_2: "Understand a payment order",
-        more_3: "Understand a Jobcenter letter",
-        more_4: "Understand a garnishment notice",
-        more_5: "Understand an enforcement order",
-        more_6: "Understand a tax office letter",
+        more_1_title: "Understand a debt collection letter",
+        more_1_text: "Debt collection letters explained clearly.",
+        more_2_title: "Understand a payment order",
+        more_2_text: "Payment orders explained simply.",
+        more_3_title: "Understand a Jobcenter letter",
+        more_3_text: "Jobcenter letters explained in simple language.",
+        more_4_title: "Understand a garnishment notice",
+        more_4_text: "Garnishment notices explained clearly.",
+        more_5_title: "Understand an enforcement order",
+        more_5_text: "Enforcement orders explained simply.",
+        more_6_title: "Understand a tax office letter",
+        more_6_text: "Tax office letters explained clearly.",
 
         foot_copy: "© 2026 BriefHelden – All rights reserved",
         foot_home: "Home",
@@ -859,7 +898,7 @@
         nav_privacy: "Gizlilik",
 
         hero_title: "Vergi dairesi mektubunu anlayın",
-        hero_sub: "Vergi dairesinden gelen bir yazı çoğu zaman karmaşık veya önemli görünür. BriefHelden içeriği, süreleri, tutarları ve önemli bilgileri size basit ve açık şekilde açıklar.",
+        hero_sub: "Vergi dairesinden gelen bir yazı çoğu zaman karmaşık veya önemli görünür. BriefHelden içerik, süreler, tutarlar ve belgede yer alan bilgileri daha anlaşılır hale getirir.",
         hero_cta: "Vergi dairesi mektubunu şimdi açıklat – 6,90 €",
         hero_question_cta: "Kısa soru sor – 1,49 €",
         meta_1: "Basit açıklandı",
@@ -867,16 +906,16 @@
         meta_3: "Gizli",
 
         intro_title: "Vergi dairesinden gelen mektup nedir?",
-        intro_text: "Vergi dairesinden gelen bir mektup çoğu zaman vergiler, süreler, ek ödeme, geri ödeme, ek sorular veya bildirimlerle ilgili önemli bilgiler içerir. Birçok kişi yazıda tam olarak ne dendiğini ve hangi bilgilerin özellikle önemli olduğunu anlamak ister. BriefHelden tam bu konuda yardımcı olur.",
+        intro_text: "Vergi dairesinden gelen bir mektup çoğu zaman vergiler, süreler, ek ödeme, geri ödeme, ek sorular veya bildirimlerle ilgili önemli bilgiler içerir. Birçok kişi yazıda tam olarak ne dendiğini ve hangi bilgilerin yer aldığını anlamak ister. BriefHelden bunu anlaşılır metin açıklamasıyla kolaylaştırır.",
 
         left_title: "Basit açıklama",
         left_text_1: "Vergi dairesi mektubu örneğin vergi bildirimi, ek ödeme, geri ödeme veya ek belge talebiyle ilgili olabilir.",
         left_text_2: "Özellikle şunlar önemlidir: Hangi süre belirtilmiş? Bir tutar var mı? Yazı hangi yıl, hangi vergi veya hangi konuyla ilgilidir?",
-        left_text_3: "BriefHelden içeriği basit dille açıklar, böylece vergi dairesi mektubunu daha iyi anlayabilirsiniz.",
+        left_text_3: "BriefHelden içeriği basit dille açıklar, böylece mektubu daha kolay anlayabilirsiniz.",
 
         right_title: "Nasıl çalışır",
         right_li_1: "Vergi dairesi mektubunu güvenli şekilde yükleyin",
-        right_li_2: "İçeriği okuyup açık şekilde açıklıyoruz",
+        right_li_2: "İçeriği okuyup anlaşılır bir metin açıklaması hazırlıyoruz",
         right_li_3: "Açıklamayı e-posta ile alırsınız",
         right_li_4: "Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık verilmez ve vergi danışmanlığı sunulmaz — yalnızca dilsel sadeleştirme ve hukuki değerlendirme ya da eylem tavsiyesi olmadan anlaşılır metin açıklaması sunulur",
 
@@ -893,11 +932,11 @@
         faq1_q: "Hangi bilgiler özellikle önemlidir?",
         faq1_a: "Özellikle süreler, belirtilen tutarlar, ilgili vergi yılı, yazının türü ve belgeler veya ek sorularla ilgili bilgiler önemlidir.",
         faq2_q: "Her zaman ek ödeme mi söz konusudur?",
-        faq2_a: "Hayır. Vergi dairesi mektubu geri ödeme, bilgi, soru veya bir bildirim de içerebilir. Belirleyici olan tam içeriktir.",
+        faq2_a: "Hayır. Vergi dairesi mektubu geri ödeme, bilgi, soru veya bir bildirim de içerebilir. Birçok kişi önce belgede hangi bilgilerin yer aldığını açık şekilde anlamak ister.",
         faq3_q: "Vergi dairesi mektubunda özellikle önemli olan nedir?",
         faq3_a: "Özellikle süreler, tutarlar, belirtilen konu, vergi yılı ve yazıdaki diğer bilgiler önemlidir.",
         faq4_q: "BriefHelden vergi danışmanlığı mı veriyor?",
-        faq4_a: "Hayır. BriefHelden vergi danışmanlığı sunmaz ve Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık vermez. Yalnızca belgenizin içeriğinin anlaşılır açıklamasını ve dilsel sadeleştirmesini alırsınız. Hukuki değerlendirme, bireysel inceleme veya bağlayıcı bir hareket tavsiyesi yapılmaz.",
+        faq4_a: "Hayır. BriefHelden vergi danışmanlığı sunmaz ve Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık vermez. Yalnızca belgenizin içeriğinin anlaşılır metin açıklamasını ve dilsel sadeleştirmesini alırsınız. Hukuki değerlendirme, bireysel inceleme veya bağlayıcı bir hareket tavsiyesi yapılmaz.",
 
         tip_title: "Vergi dairesi mektubunda nelere dikkat etmelisiniz?",
         tip_sub: "Bu noktalar genelde özellikle önemlidir:",
@@ -908,15 +947,21 @@
         tip3_title: "Konuyu tanıyın",
         tip3_text: "Yazının hangi vergi yılına veya hangi vergi türüne ait olduğuna dikkat edin.",
         tip4_title: "İçeriği anlaşılır hale getirin",
-        tip4_text: "İfadeler karmaşık veya belirsiz görünüyorsa, basit bir açıklama yer alan bilgileri daha kolay kavramanıza yardımcı olur.",
+        tip4_text: "İfadeler karmaşık veya belirsiz görünüyorsa, anlaşılır bir metin açıklaması bilgileri daha kolay kavramanıza yardımcı olur.",
 
         more_title: "Diğer sık görülen mektupları anlayın",
-        more_1: "İnkasso mektubunu anlayın",
-        more_2: "Ödeme emrini anlayın",
-        more_3: "Jobcenter mektubunu anlayın",
-        more_4: "Haciz bildirimini anlayın",
-        more_5: "İcra kararını anlayın",
-        more_6: "Vergi dairesi mektubunu anlayın",
+        more_1_title: "İnkasso mektubunu anlayın",
+        more_1_text: "İnkasso yazıları açık şekilde açıklanır.",
+        more_2_title: "Ödeme emrini anlayın",
+        more_2_text: "Ödeme emirleri basit şekilde açıklanır.",
+        more_3_title: "Jobcenter mektubunu anlayın",
+        more_3_text: "Jobcenter yazıları basit dille açıklanır.",
+        more_4_title: "Haciz bildirimini anlayın",
+        more_4_text: "Haciz bildirimleri açık şekilde açıklanır.",
+        more_5_title: "İcra kararını anlayın",
+        more_5_text: "İcra kararları basit şekilde açıklanır.",
+        more_6_title: "Vergi dairesi mektubunu anlayın",
+        more_6_text: "Vergi dairesi yazıları açık şekilde açıklanır.",
 
         foot_copy: "© 2026 BriefHelden – Tüm hakları saklıdır",
         foot_home: "Ana Sayfa",
@@ -941,7 +986,7 @@
         nav_privacy: "Конфиденциальность",
 
         hero_title: "Понять письмо из налоговой",
-        hero_sub: "Письмо из налоговой часто кажется сложным или важным. BriefHelden объяснит содержание, сроки, суммы и важные данные просто и ясно.",
+        hero_sub: "Письмо из налоговой часто кажется сложным или важным. BriefHelden помогает понять содержание, сроки, суммы и указанные в документе сведения простым языком.",
         hero_cta: "Объяснить письмо из налоговой – 6,90 €",
         hero_question_cta: "Задать короткий вопрос – 1,49 €",
         meta_1: "Просто объяснено",
@@ -949,16 +994,16 @@
         meta_3: "Конфиденциально",
 
         intro_title: "Что такое письмо из налоговой?",
-        intro_text: "Письмо из налоговой часто содержит важную информацию о налогах, сроках, доплатах, возвратах, уточняющих вопросах или уведомлениях. Многие люди хотят понять, что именно написано в документе и какие данные особенно важны. Именно здесь помогает BriefHelden.",
+        intro_text: "Письмо из налоговой часто содержит важную информацию о налогах, сроках, доплатах, возвратах, уточняющих вопросах или уведомлениях. Многие люди хотят понять, что именно написано в документе и какие сведения в нём содержатся. Именно здесь помогает BriefHelden с понятным текстовым объяснением.",
 
         left_title: "Просто объясняем",
         left_text_1: "Письмо из налоговой может касаться, например, налогового уведомления, доплаты, возврата или запроса дополнительных документов.",
         left_text_2: "Особенно важно следующее: Какой срок указан? Есть ли сумма? К какому году, какому налогу или какой теме относится документ?",
-        left_text_3: "BriefHelden объясняет содержание простым языком, чтобы вам было легче понять письмо из налоговой.",
+        left_text_3: "BriefHelden объясняет содержание простым языком, чтобы вам было легче понять документ.",
 
         right_title: "Как это работает",
         right_li_1: "Безопасно загрузите письмо из налоговой",
-        right_li_2: "Мы читаем содержание и понятно объясняем его",
+        right_li_2: "Мы читаем содержание и готовим понятное текстовое объяснение",
         right_li_3: "Вы получаете объяснение по e-mail",
         right_li_4: "Это не юридическая консультация в смысле немецкого Закона о юридических услугах (RDG) и не налоговая консультация — только языковое упрощение и понятное текстовое объяснение без правовой оценки и без рекомендаций к действиям",
 
@@ -975,11 +1020,11 @@
         faq1_q: "Какие данные особенно важны?",
         faq1_a: "Особенно важны сроки, указанные суммы, соответствующий налоговый год, вид документа и сведения о документах или уточняющих вопросах.",
         faq2_q: "Речь всегда идёт о доплате?",
-        faq2_a: "Не всегда. Письмо из налоговой может также содержать возврат, уведомление, запрос или решение. Решающее значение имеет точное содержание.",
+        faq2_a: "Не всегда. Письмо из налоговой может также содержать возврат, уведомление, запрос или решение. Многие люди сначала хотят понять, какие сведения содержатся в документе.",
         faq3_q: "Что особенно важно в письме из налоговой?",
         faq3_a: "Особенно важны сроки, суммы, указанная тема, налоговый год и другие сведения в документе.",
         faq4_q: "BriefHelden — это налоговая консультация?",
-        faq4_a: "Нет. BriefHelden не оказывает налоговых консультаций и не оказывает юридических консультаций в смысле немецкого Закона о юридических услугах (RDG). Вы получаете только понятное объяснение и языковое упрощение содержания вашего документа. Юридическая оценка, индивидуальная проверка и обязательные рекомендации к действиям не предоставляются.",
+        faq4_a: "Нет. BriefHelden не оказывает налоговых консультаций и не оказывает юридических консультаций в смысле немецкого Закона о юридических услугах (RDG). Вы получаете только понятное текстовое объяснение и языковое упрощение содержания вашего документа. Юридическая оценка, индивидуальная проверка и обязательные рекомендации к действиям не предоставляются.",
 
         tip_title: "На что стоит обратить внимание в письме из налоговой?",
         tip_sub: "Эти пункты часто особенно важны:",
@@ -990,15 +1035,21 @@
         tip3_title: "Определите тему",
         tip3_text: "Обратите внимание, к какому налоговому году или какому виду налога относится письмо.",
         tip4_title: "Сделайте содержание понятным",
-        tip4_text: "Если формулировки кажутся сложными или неясными, простое объяснение часто помогает легче воспринять содержащиеся в нём сведения.",
+        tip4_text: "Если формулировки кажутся сложными или неясными, понятное текстовое объяснение часто помогает легче воспринять содержащиеся в нём сведения.",
 
         more_title: "Понять другие частые письма",
-        more_1: "Понять письмо от инкассо",
-        more_2: "Понять судебный приказ",
-        more_3: "Понять письмо от Jobcenter",
-        more_4: "Понять уведомление об аресте",
-        more_5: "Понять исполнительный документ",
-        more_6: "Понять письмо из налоговой",
+        more_1_title: "Понять письмо от инкассо",
+        more_1_text: "Письма от инкассо объяснены понятно.",
+        more_2_title: "Понять судебный приказ",
+        more_2_text: "Судебные приказы объяснены просто.",
+        more_3_title: "Понять письмо от Jobcenter",
+        more_3_text: "Письма Jobcenter объяснены простым языком.",
+        more_4_title: "Понять уведомление об аресте",
+        more_4_text: "Уведомления об аресте объяснены понятно.",
+        more_5_title: "Понять исполнительный документ",
+        more_5_text: "Исполнительные документы объяснены просто.",
+        more_6_title: "Понять письмо из налоговой",
+        more_6_text: "Письма из налоговой объяснены понятно.",
 
         foot_copy: "© 2026 BriefHelden – Все права защищены",
         foot_home: "Главная",
