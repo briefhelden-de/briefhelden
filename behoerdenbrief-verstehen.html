@@ -18,6 +18,9 @@
   />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://www.briefhelden-service.de/behoerdenbrief-verstehen.html" />
+  <meta property="og:image" content="https://www.briefhelden-service.de/og-image.jpg" />
+  <meta property="og:site_name" content="BriefHelden" />
+  <meta name="theme-color" content="#0b1220" />
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
   <script>
@@ -104,6 +107,7 @@
         linear-gradient(180deg, rgba(55,120,255,.9), rgba(20,70,190,.9));
       box-shadow:0 10px 18px rgba(0,0,0,.18);
       position:relative;
+      flex:0 0 auto;
     }
 
     .brand .logo:after{
@@ -263,7 +267,8 @@
     .pad{padding:22px}
 
     .headline,
-    .sectionTitle{
+    .sectionTitle,
+    .moreLinks h2{
       text-align:center;
       margin:0 0 10px;
       font-weight:950;
@@ -288,7 +293,8 @@
     }
 
     .infoCard,
-    .faqItem{
+    .faqItem,
+    .moreCard{
       border-radius:var(--radius-lg);
       border:1px solid rgba(255,255,255,.55);
       background:rgba(255,255,255,.20);
@@ -296,20 +302,24 @@
     }
 
     .infoCard h3,
-    .faqItem h3{
+    .faqItem h3,
+    .moreCard h3{
       margin:0 0 10px;
       font-size:22px;
       font-weight:950;
+      line-height:1.25;
     }
 
-    .faqItem h3{
+    .faqItem h3,
+    .moreCard h3{
       font-size:18px;
       margin-bottom:8px;
     }
 
     .infoCard p,
     .infoCard li,
-    .faqItem p{
+    .faqItem p,
+    .moreCard p{
       color:rgba(11,18,32,.76);
       line-height:1.65;
       font-weight:700;
@@ -323,7 +333,8 @@
       padding-left:18px;
     }
 
-    .faqGrid{
+    .faqGrid,
+    .moreGrid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:14px;
@@ -348,6 +359,7 @@
       margin:0 0 8px;
       font-size:20px;
       font-weight:950;
+      line-height:1.3;
     }
 
     .serviceMini .box p{
@@ -374,6 +386,22 @@
 
     .miniBtn.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
     .miniBtn.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
+
+    .moreLinks{
+      max-width:var(--max);
+      margin:28px auto 0;
+      padding:0 18px 30px;
+    }
+
+    .moreCard{
+      display:block;
+      transition:transform .18s ease, background .18s ease;
+    }
+
+    .moreCard:hover{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,.30);
+    }
 
     footer{
       margin-top:18px;
@@ -404,48 +432,11 @@
     .footLinks a{color:rgba(255,255,255,.80)}
     .footLinks a:hover{color:#fff}
 
-    .moreLinks{
-      max-width:var(--max);
-      margin:28px auto 0;
-      padding:0 18px 30px;
-    }
-
-    .moreLinksCard{
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,.55);
-      background:rgba(255,255,255,.20);
-      padding:18px;
-      box-shadow:var(--shadow);
-      backdrop-filter:blur(14px) saturate(140%);
-      -webkit-backdrop-filter:blur(14px) saturate(140%);
-    }
-
-    .moreLinks h2{
-      margin:0 0 14px;
-      font-size:26px;
-      font-weight:950;
-      color:#0b1220;
-    }
-
-    .moreLinks ul{
-      margin:0;
-      padding-left:20px;
-    }
-
-    .moreLinks li{
-      margin:8px 0;
-      font-weight:700;
-      color:rgba(11,18,32,.82);
-    }
-
-    .moreLinks a:hover{
-      text-decoration:underline;
-    }
-
     @media (max-width:900px){
       nav.links{display:none}
       .grid2,
       .faqGrid,
+      .moreGrid,
       .serviceMini{grid-template-columns:1fr}
       .cta{min-width:92vw}
       .miniBtn{min-width:100%}
@@ -484,7 +475,7 @@
     <div class="wrap">
       <h1 data-i18n="hero_title">Behördenbrief verstehen</h1>
       <p data-i18n="hero_sub">
-        Behördenbriefe sind oft kompliziert und schwer verständlich. BriefHelden erklärt Ihnen den Inhalt einfach, klar und verständlich.
+        Behördenbriefe wirken oft kompliziert und schwer verständlich. BriefHelden hilft dabei, Inhalt, Fristen und enthaltene Angaben sprachlich verständlich einzuordnen.
       </p>
 
       <div class="ctaGroup">
@@ -513,7 +504,7 @@
         <div class="pad">
           <h2 class="headline" data-i18n="intro_title">Was ist ein Behördenbrief?</h2>
           <p class="lead" data-i18n="intro_text">
-            Ein Behördenbrief ist ein offizielles Schreiben von einer staatlichen Stelle oder einem Amt. Darin können Fristen, Aufforderungen, Bescheide, Nachweise oder Entscheidungen stehen. Viele Menschen möchten verstehen, was das Schreiben bedeutet und welche Angaben darin enthalten sind. Genau dabei hilft BriefHelden.
+            Ein Behördenbrief ist ein offizielles Schreiben von einer staatlichen Stelle oder einem Amt. Darin können Fristen, Aufforderungen, Bescheide, Nachweise oder Entscheidungen stehen. Viele Menschen möchten verstehen, was das Schreiben bedeutet und welche Angaben im Schreiben enthalten sind. Genau dabei hilft BriefHelden mit einer verständlichen Texterklärung.
           </p>
 
           <div class="grid2">
@@ -526,7 +517,7 @@
                 Wichtig sind dabei vor allem: Von welcher Behörde kommt das Schreiben? Gibt es eine Frist? Werden Unterlagen verlangt? Welche Angaben werden genannt?
               </p>
               <p data-i18n="left_text_3">
-                BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie das Schreiben besser einordnen können.
+                BriefHelden hilft dabei, den Inhalt in einfacher Sprache sprachlich verständlich einzuordnen.
               </p>
             </div>
 
@@ -534,9 +525,9 @@
               <h3 data-i18n="right_title">So funktioniert es</h3>
               <ul>
                 <li data-i18n="right_li_1">Behördenbrief sicher hochladen</li>
-                <li data-i18n="right_li_2">Wir lesen den Inhalt und erklären ihn verständlich</li>
+                <li data-i18n="right_li_2">Wir lesen den Inhalt und erstellen eine verständliche Texterklärung</li>
                 <li data-i18n="right_li_3">Sie erhalten die Erklärung per E-Mail</li>
-                <li data-i18n="right_li_4">Keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) – ausschließlich verständliche Erklärung und sprachliche Vereinfachung des Inhalts ohne rechtliche Prüfung, Bewertung oder Handlungsempfehlung</li>
+                <li data-i18n="right_li_4">Keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) – ausschließlich sprachliche Vereinfachung und verständliche Texterklärung ohne rechtliche Bewertung oder Handlungsempfehlung</li>
               </ul>
             </div>
           </div>
@@ -580,14 +571,14 @@
             <div class="faqItem">
               <h3 data-i18n="faq1_q">Was steht in einem Behördenbrief besonders im Fokus?</h3>
               <p data-i18n="faq1_a">
-                Häufig stehen in einem Behördenbrief Fristen, Nachweise, Rückmeldungen oder wichtige Hinweise. BriefHelden hilft Ihnen, diese Angaben klar und verständlich zu erkennen.
+                Häufig stehen in einem Behördenbrief Fristen, Nachweise, Rückmeldungen oder wichtige Hinweise. BriefHelden hilft dabei, diese Angaben klar und verständlich zu erkennen.
               </p>
             </div>
 
             <div class="faqItem">
               <h3 data-i18n="faq2_q">Sind Fristen in Behördenbriefen wichtig?</h3>
               <p data-i18n="faq2_a">
-                Ja, Fristen sind oft besonders wichtig. Deshalb sollte man genau ansehen, ob ein Datum oder eine genannte Frist im Schreiben steht.
+                Ja, Fristen sind oft besonders wichtig. Viele Menschen möchten deshalb zuerst sprachlich verständlich einordnen, ob im Schreiben ein Datum oder eine genannte Frist enthalten ist.
               </p>
             </div>
 
@@ -601,7 +592,7 @@
             <div class="faqItem">
               <h3 data-i18n="faq4_q">Ist BriefHelden eine Rechtsberatung?</h3>
               <p data-i18n="faq4_a">
-                Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Erklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Rechtsprüfung und keine verbindliche Handlungsempfehlung.
+                Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Texterklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Rechtsprüfung und keine verbindliche Handlungsempfehlung.
               </p>
             </div>
           </div>
@@ -642,10 +633,46 @@
             <div class="faqItem">
               <h3 data-i18n="tip4_title">Inhalt verständlich machen</h3>
               <p data-i18n="tip4_text">
-                Wenn das Schreiben schwer verständlich ist, hilft eine einfache Erklärung oft sofort weiter.
+                Wenn das Schreiben schwer verständlich ist, hilft eine verständliche Texterklärung oft dabei, die enthaltenen Angaben besser zu erfassen.
               </p>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div class="moreLinks">
+        <h2 data-i18n="more_title">Weitere häufige Briefe verstehen</h2>
+
+        <div class="moreGrid">
+          <a class="moreCard" href="/inkasso-brief-verstehen.html">
+            <h3 data-i18n="more_1_title">Inkasso Brief verstehen</h3>
+            <p data-i18n="more_1_text">Inkasso Schreiben klar und verständlich erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/mahnbescheid-verstehen.html">
+            <h3 data-i18n="more_2_title">Mahnbescheid verstehen</h3>
+            <p data-i18n="more_2_text">Mahnbescheide einfach erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/jobcenter-brief-verstehen.html">
+            <h3 data-i18n="more_3_title">Jobcenter Brief verstehen</h3>
+            <p data-i18n="more_3_text">Jobcenter Schreiben in einfacher Sprache erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/pfaendungsbescheid-verstehen.html">
+            <h3 data-i18n="more_4_title">Pfändungsbescheid verstehen</h3>
+            <p data-i18n="more_4_text">Pfändungsbescheide klar und verständlich erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/vollstreckungsbescheid-verstehen.html">
+            <h3 data-i18n="more_5_title">Vollstreckungsbescheid verstehen</h3>
+            <p data-i18n="more_5_text">Vollstreckungsbescheide einfach erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/finanzamt-brief-verstehen.html">
+            <h3 data-i18n="more_6_title">Finanzamt Brief verstehen</h3>
+            <p data-i18n="more_6_text">Schreiben vom Finanzamt klar und verständlich erklärt.</p>
+          </a>
         </div>
       </div>
     </div>
@@ -653,7 +680,7 @@
 
   <footer>
     <div class="footWrap">
-      <div>© 2026 BriefHelden – Alle Rechte vorbehalten</div>
+      <div data-i18n="foot_copy">© 2026 BriefHelden – Alle Rechte vorbehalten</div>
       <div class="footLinks">
         <a href="index.html" data-i18n="foot_home">Startseite</a>
         <a href="frage.html" data-i18n="foot_question">Frage stellen</a>
@@ -664,20 +691,6 @@
       </div>
     </div>
   </footer>
-
-  <div class="moreLinks">
-    <div class="moreLinksCard">
-      <h2>Weitere häufige Briefe verstehen</h2>
-      <ul>
-        <li><a href="/inkasso-brief-verstehen.html">Inkasso Brief verstehen</a></li>
-        <li><a href="/mahnbescheid-verstehen.html">Mahnbescheid verstehen</a></li>
-        <li><a href="/jobcenter-brief-verstehen.html">Jobcenter Brief verstehen</a></li>
-        <li><a href="/pfaendungsbescheid-verstehen.html">Pfändungsbescheid verstehen</a></li>
-        <li><a href="/vollstreckungsbescheid-verstehen.html">Vollstreckungsbescheid verstehen</a></li>
-        <li><a href="/finanzamt-brief-verstehen.html">Finanzamt Brief verstehen</a></li>
-      </ul>
-    </div>
-  </div>
 
   <script>
     const STRIPE_LINKS = {
@@ -696,6 +709,11 @@
 
     const i18n = {
       de: {
+        pageTitle: "Behördenbrief verstehen – einfach erklärt | BriefHelden",
+        metaDescription: "Behördenbrief einfach verstehen: BriefHelden erklärt Inhalt, Fristen und wichtige Angaben verständlich, klar und ohne komplizierte Fachsprache.",
+        ogTitle: "Behördenbrief verstehen – einfach erklärt | BriefHelden",
+        ogDescription: "Behördenbrief einfach erklärt. Verstehen Sie Fristen, Angaben und wichtige Punkte schnell und verständlich.",
+
         nav_home: "Startseite",
         nav_question: "Frage stellen",
         nav_refund: "Widerruf",
@@ -704,7 +722,7 @@
         nav_privacy: "Datenschutz",
 
         hero_title: "Behördenbrief verstehen",
-        hero_sub: "Behördenbriefe sind oft kompliziert und schwer verständlich. BriefHelden erklärt Ihnen den Inhalt einfach, klar und verständlich.",
+        hero_sub: "Behördenbriefe wirken oft kompliziert und schwer verständlich. BriefHelden hilft dabei, Inhalt, Fristen und enthaltene Angaben sprachlich verständlich einzuordnen.",
         hero_cta: "Jetzt Behördenbrief erklären lassen – 6,90 €",
         hero_question_cta: "Kurze Frage stellen – 1,49 €",
         meta_1: "Einfach erklärt",
@@ -712,18 +730,18 @@
         meta_3: "Vertraulich",
 
         intro_title: "Was ist ein Behördenbrief?",
-        intro_text: "Ein Behördenbrief ist ein offizielles Schreiben von einer staatlichen Stelle oder einem Amt. Darin können Fristen, Aufforderungen, Bescheide, Nachweise oder Entscheidungen stehen. Viele Menschen möchten verstehen, was das Schreiben bedeutet und welche Angaben darin enthalten sind. Genau dabei hilft BriefHelden.",
+        intro_text: "Ein Behördenbrief ist ein offizielles Schreiben von einer staatlichen Stelle oder einem Amt. Darin können Fristen, Aufforderungen, Bescheide, Nachweise oder Entscheidungen stehen. Viele Menschen möchten verstehen, was das Schreiben bedeutet und welche Angaben im Schreiben enthalten sind. Genau dabei hilft BriefHelden mit einer verständlichen Texterklärung.",
 
         left_title: "Einfach erklärt",
         left_text_1: "In einem Behördenbrief geht es oft um Anträge, Nachweise, Fristen, Entscheidungen oder Rückmeldungen von einem Amt.",
         left_text_2: "Wichtig sind dabei vor allem: Von welcher Behörde kommt das Schreiben? Gibt es eine Frist? Werden Unterlagen verlangt? Welche Angaben werden genannt?",
-        left_text_3: "BriefHelden erklärt Ihnen den Inhalt in einfacher Sprache, damit Sie das Schreiben besser einordnen können.",
+        left_text_3: "BriefHelden hilft dabei, den Inhalt in einfacher Sprache sprachlich verständlich einzuordnen.",
 
         right_title: "So funktioniert es",
         right_li_1: "Behördenbrief sicher hochladen",
-        right_li_2: "Wir lesen den Inhalt und erklären ihn verständlich",
+        right_li_2: "Wir lesen den Inhalt und erstellen eine verständliche Texterklärung",
         right_li_3: "Sie erhalten die Erklärung per E-Mail",
-        right_li_4: "Keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) – ausschließlich verständliche Erklärung und sprachliche Vereinfachung des Inhalts ohne rechtliche Prüfung, Bewertung oder Handlungsempfehlung",
+        right_li_4: "Keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) – ausschließlich sprachliche Vereinfachung und verständliche Texterklärung ohne rechtliche Bewertung oder Handlungsempfehlung",
 
         service1_title: "Komplettes Schreiben erklären lassen",
         service1_text: "Ideal, wenn Sie den ganzen Behördenbrief vollständig verstehen möchten.",
@@ -736,13 +754,13 @@
         faq_title: "Häufige Fragen zu Behördenbriefen",
         faq_sub: "Diese Fragen tauchen bei solchen Schreiben besonders oft auf:",
         faq1_q: "Was steht in einem Behördenbrief besonders im Fokus?",
-        faq1_a: "Häufig stehen in einem Behördenbrief Fristen, Nachweise, Rückmeldungen oder wichtige Hinweise. BriefHelden hilft Ihnen, diese Angaben klar und verständlich zu erkennen.",
+        faq1_a: "Häufig stehen in einem Behördenbrief Fristen, Nachweise, Rückmeldungen oder wichtige Hinweise. BriefHelden hilft dabei, diese Angaben klar und verständlich zu erkennen.",
         faq2_q: "Sind Fristen in Behördenbriefen wichtig?",
-        faq2_a: "Ja, Fristen sind oft besonders wichtig. Deshalb sollte man genau ansehen, ob ein Datum oder eine genannte Frist im Schreiben steht.",
+        faq2_a: "Ja, Fristen sind oft besonders wichtig. Viele Menschen möchten deshalb zuerst sprachlich verständlich einordnen, ob im Schreiben ein Datum oder eine genannte Frist enthalten ist.",
         faq3_q: "Was ist bei einem Behördenbrief besonders wichtig?",
         faq3_a: "Besonders wichtig sind Absender, Fristen, geforderte Unterlagen, der Grund des Schreibens und die genannten Hinweise im Schreiben.",
         faq4_q: "Ist BriefHelden eine Rechtsberatung?",
-        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Erklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Rechtsprüfung und keine verbindliche Handlungsempfehlung.",
+        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Texterklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Rechtsprüfung und keine verbindliche Handlungsempfehlung.",
 
         tip_title: "Worauf sollten Sie bei einem Behördenbrief achten?",
         tip_sub: "Diese Punkte sind oft besonders wichtig:",
@@ -753,8 +771,23 @@
         tip3_title: "Unterlagen ansehen",
         tip3_text: "Schauen Sie, ob Nachweise, Formulare oder andere Unterlagen verlangt werden.",
         tip4_title: "Inhalt verständlich machen",
-        tip4_text: "Wenn das Schreiben schwer verständlich ist, hilft eine einfache Erklärung oft sofort weiter.",
+        tip4_text: "Wenn das Schreiben schwer verständlich ist, hilft eine verständliche Texterklärung oft dabei, die enthaltenen Angaben besser zu erfassen.",
 
+        more_title: "Weitere häufige Briefe verstehen",
+        more_1_title: "Inkasso Brief verstehen",
+        more_1_text: "Inkasso Schreiben klar und verständlich erklärt.",
+        more_2_title: "Mahnbescheid verstehen",
+        more_2_text: "Mahnbescheide einfach erklärt.",
+        more_3_title: "Jobcenter Brief verstehen",
+        more_3_text: "Jobcenter Schreiben in einfacher Sprache erklärt.",
+        more_4_title: "Pfändungsbescheid verstehen",
+        more_4_text: "Pfändungsbescheide klar und verständlich erklärt.",
+        more_5_title: "Vollstreckungsbescheid verstehen",
+        more_5_text: "Vollstreckungsbescheide einfach erklärt.",
+        more_6_title: "Finanzamt Brief verstehen",
+        more_6_text: "Schreiben vom Finanzamt klar und verständlich erklärt.",
+
+        foot_copy: "© 2026 BriefHelden – Alle Rechte vorbehalten",
         foot_home: "Startseite",
         foot_question: "Frage stellen",
         foot_refund: "Widerruf",
@@ -764,6 +797,11 @@
       },
 
       en: {
+        pageTitle: "Understand an authority letter – explained clearly | BriefHelden",
+        metaDescription: "Understand an authority letter easily: BriefHelden explains the content, deadlines and important details clearly and in simple language.",
+        ogTitle: "Understand an authority letter – explained clearly | BriefHelden",
+        ogDescription: "Authority letter explained simply. Understand deadlines, details and key points quickly and clearly.",
+
         nav_home: "Home",
         nav_question: "Ask a question",
         nav_refund: "Withdrawal",
@@ -772,7 +810,7 @@
         nav_privacy: "Privacy",
 
         hero_title: "Understand an authority letter",
-        hero_sub: "Authority letters are often complicated and difficult to understand. BriefHelden explains the content simply, clearly and understandably.",
+        hero_sub: "Authority letters often seem complicated and difficult to understand. BriefHelden helps explain the content, deadlines and included details in clear language.",
         hero_cta: "Get authority letter explained now – €6.90",
         hero_question_cta: "Ask a short question – €1.49",
         meta_1: "Clearly explained",
@@ -780,18 +818,18 @@
         meta_3: "Confidential",
 
         intro_title: "What is an authority letter?",
-        intro_text: "An authority letter is an official document from a public office or authority. It may contain deadlines, requests, notices, required documents or decisions. Many people want to understand what the letter means and which details it contains. That is exactly where BriefHelden helps.",
+        intro_text: "An authority letter is an official document from a public office or authority. It may contain deadlines, requests, notices, required documents or decisions. Many people want to understand what the letter means and which details are included in it. That is exactly where BriefHelden helps with a clear text explanation.",
 
         left_title: "Simply explained",
         left_text_1: "An authority letter often concerns applications, proof documents, deadlines, decisions or feedback from an office.",
         left_text_2: "Important points are: Which authority sent the letter? Is there a deadline? Are documents required? Which details are mentioned?",
-        left_text_3: "BriefHelden explains the content in simple language so you can better understand the letter.",
+        left_text_3: "BriefHelden helps explain the content in simple language so you can understand it more easily.",
 
         right_title: "How it works",
         right_li_1: "Upload authority letter securely",
-        right_li_2: "We read the content and explain it clearly",
+        right_li_2: "We read the content and create a clear text explanation",
         right_li_3: "You receive the explanation by email",
-        right_li_4: "No legal advice within the meaning of the German Legal Services Act (RDG) — only a clear explanation and linguistic simplification of the content without legal review, assessment, or recommendation for action",
+        right_li_4: "No legal advice within the meaning of the German Legal Services Act (RDG) — only linguistic simplification and a clear text explanation without legal assessment or recommendation for action",
 
         service1_title: "Get the full document explained",
         service1_text: "Ideal if you want to fully understand the entire authority letter.",
@@ -804,25 +842,40 @@
         faq_title: "Frequently asked questions about authority letters",
         faq_sub: "These questions often come up with this kind of document:",
         faq1_q: "What is especially in focus in an authority letter?",
-        faq1_a: "Authority letters often include deadlines, proof documents, replies, or important notices. BriefHelden helps you recognize these details clearly and understandably.",
+        faq1_a: "Authority letters often include deadlines, proof documents, replies or important notices. BriefHelden helps you recognize these details clearly and understandably.",
         faq2_q: "Are deadlines in authority letters important?",
-        faq2_a: "Yes, deadlines are often especially important. That is why it helps to look closely at whether a date or a stated deadline appears in the letter.",
+        faq2_a: "Yes, deadlines are often especially important. Many people first want to understand clearly whether the document contains a date or a stated deadline.",
         faq3_q: "What is especially important in an authority letter?",
-        faq3_a: "Especially important are the sender, deadlines, requested documents, the reason for the letter, and the notices mentioned in the letter.",
+        faq3_a: "Especially important are the sender, deadlines, requested documents, the reason for the letter and the notices mentioned in the document.",
         faq4_q: "Is BriefHelden legal advice?",
-        faq4_a: "No. BriefHelden does not provide legal advice within the meaning of the German Legal Services Act (RDG). You receive only a clear explanation and linguistic simplification of your document’s content. There is no legal assessment, no individual legal review, and no binding recommendation for action.",
+        faq4_a: "No. BriefHelden does not provide legal advice within the meaning of the German Legal Services Act (RDG). You receive only a clear text explanation and linguistic simplification of your document’s content. There is no legal assessment, no individual legal review and no binding recommendation for action.",
 
         tip_title: "What should you look for in an authority letter?",
         tip_sub: "These points are often especially important:",
         tip1_title: "Look at the deadline",
-        tip1_text: "Pay attention to whether the letter mentions a deadline or whether a date appears in the letter.",
+        tip1_text: "Pay attention to whether the document mentions a deadline or whether a date appears in it.",
         tip2_title: "Look at the sender",
         tip2_text: "See which office or authority sent the letter.",
         tip3_title: "Look at the documents",
         tip3_text: "See whether proof documents, forms or other papers are requested.",
         tip4_title: "Make the content understandable",
-        tip4_text: "If the letter is difficult to understand, a simple explanation often helps immediately.",
+        tip4_text: "If the document is difficult to understand, a clear text explanation often helps you grasp the included details more easily.",
 
+        more_title: "Understand more common letters",
+        more_1_title: "Understand a debt collection letter",
+        more_1_text: "Debt collection letters explained clearly.",
+        more_2_title: "Understand a payment order",
+        more_2_text: "Payment orders explained simply.",
+        more_3_title: "Understand a Jobcenter letter",
+        more_3_text: "Jobcenter letters explained in simple language.",
+        more_4_title: "Understand a garnishment notice",
+        more_4_text: "Garnishment notices explained clearly.",
+        more_5_title: "Understand an enforcement order",
+        more_5_text: "Enforcement orders explained simply.",
+        more_6_title: "Understand a tax office letter",
+        more_6_text: "Tax office letters explained clearly.",
+
+        foot_copy: "© 2026 BriefHelden – All rights reserved",
         foot_home: "Home",
         foot_question: "Ask a question",
         foot_refund: "Withdrawal",
@@ -832,6 +885,11 @@
       },
 
       tr: {
+        pageTitle: "Resmi kurum mektubunu anlayın – kolay açıklama | BriefHelden",
+        metaDescription: "Resmi kurum mektubunu kolay anlayın: BriefHelden içerik, süreler ve önemli bilgileri sade ve anlaşılır şekilde açıklar.",
+        ogTitle: "Resmi kurum mektubunu anlayın – kolay açıklama | BriefHelden",
+        ogDescription: "Resmi kurum mektubu basitçe açıklanır. Süreleri, bilgileri ve önemli noktaları hızlı ve açık şekilde anlayın.",
+
         nav_home: "Ana Sayfa",
         nav_question: "Soru sor",
         nav_refund: "Cayma",
@@ -840,7 +898,7 @@
         nav_privacy: "Gizlilik",
 
         hero_title: "Resmi kurum mektubunu anlayın",
-        hero_sub: "Resmi kurum mektupları çoğu zaman karmaşık ve anlaşılması zor olur. BriefHelden içeriği size basit, açık ve anlaşılır şekilde açıklar.",
+        hero_sub: "Resmi kurum mektupları çoğu zaman karmaşık ve anlaşılması zor olur. BriefHelden içerik, süreler ve belgede yer alan bilgileri daha anlaşılır hale getirir.",
         hero_cta: "Resmi kurum mektubunu şimdi açıklat – 6,90 €",
         hero_question_cta: "Kısa soru sor – 1,49 €",
         meta_1: "Basit açıklandı",
@@ -848,18 +906,18 @@
         meta_3: "Gizli",
 
         intro_title: "Resmi kurum mektubu nedir?",
-        intro_text: "Resmi kurum mektubu, devlet kurumu veya resmi daire tarafından gönderilen resmi bir yazıdır. İçinde süreler, talepler, kararlar, belgeler veya başka resmi bilgiler olabilir. Birçok kişi mektubun ne anlama geldiğini ve hangi bilgileri içerdiğini anlamak ister. BriefHelden tam bu konuda yardımcı olur.",
+        intro_text: "Resmi kurum mektubu, devlet kurumu veya resmi daire tarafından gönderilen resmi bir yazıdır. İçinde süreler, talepler, kararlar, belgeler veya başka resmi bilgiler olabilir. Birçok kişi mektubun ne anlama geldiğini ve hangi bilgilerin belgede yer aldığını anlamak ister. BriefHelden bunu anlaşılır metin açıklamasıyla kolaylaştırır.",
 
         left_title: "Basit açıklama",
         left_text_1: "Resmi kurum mektubunda çoğu zaman başvurular, belgeler, süreler, kararlar veya kurumlardan gelen geri bildirimler yer alır.",
         left_text_2: "Önemli noktalar şunlardır: Mektup hangi kurumdan geliyor? Süre var mı? Belgeler isteniyor mu? Hangi bilgiler belirtiliyor?",
-        left_text_3: "BriefHelden içeriği basit dille açıklar, böylece mektubu daha iyi anlayabilirsiniz.",
+        left_text_3: "BriefHelden içeriği basit dille açıklar ve belgeyi daha anlaşılır hale getirir.",
 
         right_title: "Nasıl çalışır",
         right_li_1: "Resmi kurum mektubunu güvenli şekilde yükleyin",
-        right_li_2: "İçeriği okuyup açık şekilde açıklıyoruz",
+        right_li_2: "İçeriği okuyup anlaşılır bir metin açıklaması hazırlıyoruz",
         right_li_3: "Açıklamayı e-posta ile alırsınız",
-        right_li_4: "Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık verilmez — yalnızca içeriğin anlaşılır açıklaması ve dilsel sadeleştirmesi sunulur; hukuki inceleme, değerlendirme veya eylem tavsiyesi yapılmaz",
+        right_li_4: "Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık verilmez — yalnızca dilsel sadeleştirme ve anlaşılır metin açıklaması sunulur; hukuki değerlendirme veya eylem tavsiyesi yapılmaz",
 
         service1_title: "Belgenin tamamını açıklat",
         service1_text: "Resmi kurum mektubunun tamamını anlamak istiyorsanız idealdir.",
@@ -872,25 +930,40 @@
         faq_title: "Resmi kurum mektupları hakkında sık sorulan sorular",
         faq_sub: "Bu tür yazılarda şu sorular sıkça ortaya çıkar:",
         faq1_q: "Bir resmi kurum mektubunda en çok neler öne çıkar?",
-        faq1_a: "Resmi kurum mektuplarında çoğu zaman süreler, belgeler, geri bildirimler veya önemli bilgiler yer alır. BriefHelden bu bilgileri açık ve anlaşılır şekilde görmenize yardım eder.",
+        faq1_a: "Resmi kurum mektuplarında çoğu zaman süreler, belgeler, geri bildirimler veya önemli bilgiler yer alır. BriefHelden bu bilgileri açık ve anlaşılır şekilde anlamanıza yardımcı olur.",
         faq2_q: "Resmi kurum mektuplarında süreler önemli midir?",
-        faq2_a: "Evet, süreler çoğu zaman özellikle önemlidir. Bu yüzden mektupta tarih veya belirtilen bir süre olup olmadığına dikkatlice bakmak faydalıdır.",
+        faq2_a: "Evet, süreler çoğu zaman özellikle önemlidir. Birçok kişi önce belgede tarih veya belirtilen bir süre olup olmadığını açık şekilde anlamak ister.",
         faq3_q: "Bir resmi kurum mektubunda en önemli olan nedir?",
-        faq3_a: "Gönderen, süreler, istenen belgeler, mektubun nedeni ve mektupta belirtilen bilgiler özellikle önemlidir.",
+        faq3_a: "Gönderen, süreler, istenen belgeler, mektubun nedeni ve belgede belirtilen bilgiler özellikle önemlidir.",
         faq4_q: "BriefHelden hukuki danışmanlık mı veriyor?",
-        faq4_a: "Hayır. BriefHelden, Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık vermez. Yalnızca belgenizin içeriğinin anlaşılır açıklamasını ve dilsel sadeleştirmesini alırsınız. Hukuki değerlendirme, bireysel hukuki inceleme veya bağlayıcı bir hareket tavsiyesi yapılmaz.",
+        faq4_a: "Hayır. BriefHelden, Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık vermez. Yalnızca belgenizin içeriğinin anlaşılır metin açıklamasını ve dilsel sadeleştirmesini alırsınız. Hukuki değerlendirme, bireysel hukuki inceleme veya bağlayıcı bir hareket tavsiyesi yapılmaz.",
 
         tip_title: "Bir resmi kurum mektubunda nelere dikkat etmelisiniz?",
         tip_sub: "Bu noktalar genelde özellikle önemlidir:",
         tip1_title: "Süreye bakın",
-        tip1_text: "Mektupta bir süre belirtilip belirtilmediğine veya mektupta bir tarih olup olmadığına dikkat edin.",
+        tip1_text: "Belgede bir süre belirtilip belirtilmediğine veya bir tarih olup olmadığına dikkat edin.",
         tip2_title: "Göndereni inceleyin",
         tip2_text: "Mektubun hangi kurum veya resmi daireden geldiğine bakın.",
         tip3_title: "Belgeleri inceleyin",
         tip3_text: "Kanıt, form veya başka belgelerin istenip istenmediğine bakın.",
         tip4_title: "İçeriği anlaşılır hale getirin",
-        tip4_text: "Mektubu anlamak zorsa, basit bir açıklama çoğu zaman hemen yardımcı olur.",
+        tip4_text: "Belgeyi anlamak zorsa, anlaşılır bir metin açıklaması çoğu zaman bilgileri daha kolay kavramanıza yardımcı olur.",
 
+        more_title: "Diğer sık görülen mektupları anlayın",
+        more_1_title: "İnkasso mektubunu anlayın",
+        more_1_text: "İnkasso yazıları açık şekilde açıklanır.",
+        more_2_title: "Ödeme emrini anlayın",
+        more_2_text: "Ödeme emirleri basit şekilde açıklanır.",
+        more_3_title: "Jobcenter mektubunu anlayın",
+        more_3_text: "Jobcenter yazıları basit dille açıklanır.",
+        more_4_title: "Haciz bildirimini anlayın",
+        more_4_text: "Haciz bildirimleri açık şekilde açıklanır.",
+        more_5_title: "İcra kararını anlayın",
+        more_5_text: "İcra kararları basit şekilde açıklanır.",
+        more_6_title: "Vergi dairesi mektubunu anlayın",
+        more_6_text: "Vergi dairesi yazıları açık şekilde açıklanır.",
+
+        foot_copy: "© 2026 BriefHelden – Tüm hakları saklıdır",
         foot_home: "Ana Sayfa",
         foot_question: "Soru sor",
         foot_refund: "Cayma",
@@ -900,6 +973,11 @@
       },
 
       ru: {
+        pageTitle: "Понять письмо от ведомства – простое объяснение | BriefHelden",
+        metaDescription: "Легко понять письмо от ведомства: BriefHelden просто и понятно объясняет содержание, сроки и важные сведения.",
+        ogTitle: "Понять письмо от ведомства – простое объяснение | BriefHelden",
+        ogDescription: "Письмо от ведомства объясняется простым языком. Понятно разберитесь в сроках, сведениях и важных пунктах.",
+
         nav_home: "Главная",
         nav_question: "Задать вопрос",
         nav_refund: "Отказ",
@@ -908,7 +986,7 @@
         nav_privacy: "Конфиденциальность",
 
         hero_title: "Понять письмо от ведомства",
-        hero_sub: "Письма от ведомств часто бывают сложными и трудными для понимания. BriefHelden объяснит содержание просто, ясно и понятно.",
+        hero_sub: "Письма от ведомств часто бывают сложными и трудными для понимания. BriefHelden помогает сделать содержание, сроки и сведения в документе более понятными.",
         hero_cta: "Объяснить письмо от ведомства – 6,90 €",
         hero_question_cta: "Задать короткий вопрос – 1,49 €",
         meta_1: "Просто объяснено",
@@ -916,18 +994,18 @@
         meta_3: "Конфиденциально",
 
         intro_title: "Что такое письмо от ведомства?",
-        intro_text: "Письмо от ведомства — это официальный документ от государственного органа или учреждения. В нём могут быть сроки, требования, решения, документы или другая официальная информация. Многие люди хотят понять, что означает письмо и какие данные в нём содержатся. Именно здесь помогает BriefHelden.",
+        intro_text: "Письмо от ведомства — это официальный документ от государственного органа или учреждения. В нём могут быть сроки, требования, решения, документы или другая официальная информация. Многие люди хотят понять, что означает письмо и какие сведения содержатся в документе. Именно здесь помогает BriefHelden с понятным текстовым объяснением.",
 
         left_title: "Просто объясняем",
         left_text_1: "В письме от ведомства часто речь идёт о заявлениях, подтверждающих документах, сроках, решениях или ответах от учреждения.",
         left_text_2: "Особенно важно следующее: От какого ведомства письмо? Есть ли срок? Требуются ли документы? Какие данные указаны?",
-        left_text_3: "BriefHelden объясняет содержание простым языком, чтобы вам было легче понять письмо.",
+        left_text_3: "BriefHelden объясняет содержание простым языком и делает документ более понятным.",
 
         right_title: "Как это работает",
         right_li_1: "Безопасно загрузите письмо от ведомства",
-        right_li_2: "Мы читаем содержание и понятно объясняем его",
+        right_li_2: "Мы читаем содержание и готовим понятное текстовое объяснение",
         right_li_3: "Вы получаете объяснение по e-mail",
-        right_li_4: "Это не юридическая консультация в смысле немецкого Закона о юридических услугах (RDG) — предоставляется только понятное объяснение и языковое упрощение содержания без правовой проверки, оценки или рекомендаций к действиям",
+        right_li_4: "Это не юридическая консультация в смысле немецкого Закона о юридических услугах (RDG) — предоставляется только языковое упрощение и понятное текстовое объяснение без правовой оценки и без рекомендаций к действиям",
 
         service1_title: "Получить полное объяснение документа",
         service1_text: "Идеально, если вы хотите полностью понять всё письмо от ведомства.",
@@ -940,25 +1018,40 @@
         faq_title: "Частые вопросы о письмах от ведомств",
         faq_sub: "Эти вопросы особенно часто возникают по таким письмам:",
         faq1_q: "Что чаще всего важно в письме от ведомства?",
-        faq1_a: "В письме от ведомства часто встречаются сроки, документы, ответы или важные указания. BriefHelden помогает вам ясно и понятно увидеть эти данные.",
+        faq1_a: "В письме от ведомства часто встречаются сроки, документы, ответы или важные указания. BriefHelden помогает вам ясно и понятно понять эти данные.",
         faq2_q: "Важны ли сроки в письмах от ведомств?",
-        faq2_a: "Да, сроки часто особенно важны. Поэтому полезно внимательно посмотреть, указаны ли в письме дата или установленный срок.",
+        faq2_a: "Да, сроки часто особенно важны. Многие люди сначала хотят понять, указаны ли в документе дата или установленный срок.",
         faq3_q: "Что особенно важно в письме от ведомства?",
-        faq3_a: "Особенно важны отправитель, сроки, требуемые документы, причина письма и указания, содержащиеся в письме.",
+        faq3_a: "Особенно важны отправитель, сроки, требуемые документы, причина письма и указания, содержащиеся в документе.",
         faq4_q: "BriefHelden — это юридическая консультация?",
-        faq4_a: "Нет. BriefHelden не оказывает юридических консультаций в смысле немецкого Закона о юридических услугах (RDG). Вы получаете только понятное объяснение и языковое упрощение содержания вашего документа. Юридическая оценка, индивидуальная правовая проверка и обязательные рекомендации к действиям не предоставляются.",
+        faq4_a: "Нет. BriefHelden не оказывает юридических консультаций в смысле немецкого Закона о юридических услугах (RDG). Вы получаете только понятное текстовое объяснение и языковое упрощение содержания вашего документа. Юридическая оценка, индивидуальная правовая проверка и обязательные рекомендации к действиям не предоставляются.",
 
         tip_title: "На что стоит обратить внимание в письме от ведомства?",
         tip_sub: "Эти пункты часто особенно важны:",
         tip1_title: "Посмотрите на срок",
-        tip1_text: "Обратите внимание, указан ли в письме срок или есть ли в письме дата.",
+        tip1_text: "Обратите внимание, указан ли в документе срок или есть ли в нём дата.",
         tip2_title: "Посмотрите на отправителя",
         tip2_text: "Посмотрите, от какого ведомства или учреждения пришло письмо.",
         tip3_title: "Посмотрите на документы",
         tip3_text: "Посмотрите, требуются ли подтверждения, формы или другие документы.",
         tip4_title: "Сделайте содержание понятным",
-        tip4_text: "Если письмо трудно понять, простое объяснение часто сразу помогает.",
+        tip4_text: "Если документ трудно понять, понятное текстовое объяснение часто помогает лучше воспринять содержащиеся в нём сведения.",
 
+        more_title: "Понять другие частые письма",
+        more_1_title: "Понять письмо от инкассо",
+        more_1_text: "Письма от инкассо объяснены понятно.",
+        more_2_title: "Понять судебный приказ",
+        more_2_text: "Судебные приказы объяснены просто.",
+        more_3_title: "Понять письмо от Jobcenter",
+        more_3_text: "Письма Jobcenter объяснены простым языком.",
+        more_4_title: "Понять уведомление об аресте",
+        more_4_text: "Уведомления об аресте объяснены понятно.",
+        more_5_title: "Понять исполнительный приказ",
+        more_5_text: "Исполнительные приказы объяснены просто.",
+        more_6_title: "Понять письмо из налоговой",
+        more_6_text: "Письма из налоговой объяснены понятно.",
+
+        foot_copy: "© 2026 BriefHelden – Все права защищены",
         foot_home: "Главная",
         foot_question: "Задать вопрос",
         foot_refund: "Отказ",
@@ -983,9 +1076,24 @@
       if(serviceQuestionBtn) serviceQuestionBtn.href = questionLink;
     }
 
-    function applyLang(lang){
+    function updateMeta(lang){
       const dict = i18n[lang] || i18n.de;
-      document.documentElement.lang = lang;
+      document.title = dict.pageTitle;
+
+      const description = document.querySelector('meta[name="description"]');
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      const ogDescription = document.querySelector('meta[property="og:description"]');
+
+      if(description) description.setAttribute("content", dict.metaDescription);
+      if(ogTitle) ogTitle.setAttribute("content", dict.ogTitle);
+      if(ogDescription) ogDescription.setAttribute("content", dict.ogDescription);
+    }
+
+    function applyLang(lang){
+      const currentLang = i18n[lang] ? lang : "de";
+      const dict = i18n[currentLang];
+
+      document.documentElement.lang = currentLang;
 
       document.querySelectorAll("[data-i18n]").forEach((el) => {
         const key = el.getAttribute("data-i18n");
@@ -994,8 +1102,9 @@
         }
       });
 
-      updateLinks(lang);
-      localStorage.setItem("briefhelden_lang", lang);
+      updateMeta(currentLang);
+      updateLinks(currentLang);
+      localStorage.setItem("briefhelden_lang", currentLang);
     }
 
     const select = document.getElementById("langSelect");
