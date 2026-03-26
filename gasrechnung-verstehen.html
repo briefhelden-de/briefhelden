@@ -7,7 +7,7 @@
   <title>Gasrechnung verstehen – einfach erklärt | BriefHelden</title>
   <meta
     name="description"
-    content="Gasrechnung einfach verstehen: BriefHelden erklärt Verbrauch, Abschlag, Kosten, Zählerstand und wichtige Angaben verständlich, klar und ohne komplizierte Fachsprache."
+    content="Gasrechnung verständlich erklärt: BriefHelden erklärt Verbrauch, Abschlag, Kosten, Zählerstand und welche Angaben im Schreiben enthalten sind – klar, einfach und ohne komplizierte Fachsprache."
   />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.briefhelden-service.de/gasrechnung-verstehen.html" />
@@ -15,7 +15,7 @@
   <meta property="og:title" content="Gasrechnung verstehen – einfach erklärt | BriefHelden" />
   <meta
     property="og:description"
-    content="Gasrechnung einfach erklärt. Verstehen Sie Verbrauch, Abschlag, Kosten und wichtige Angaben schnell und verständlich."
+    content="Gasrechnung einfach erklärt. Verstehen Sie Verbrauch, Abschlag, Kosten und wichtige Angaben im Schreiben schnell und verständlich."
   />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://www.briefhelden-service.de/gasrechnung-verstehen.html" />
@@ -268,7 +268,8 @@
     .pad{padding:22px}
 
     .headline,
-    .sectionTitle{
+    .sectionTitle,
+    .moreLinks h2{
       text-align:center;
       margin:0 0 10px;
       font-weight:950;
@@ -293,7 +294,8 @@
     }
 
     .infoCard,
-    .faqItem{
+    .faqItem,
+    .moreCard{
       border-radius:var(--radius-lg);
       border:1px solid rgba(255,255,255,.55);
       background:rgba(255,255,255,.20);
@@ -301,21 +303,24 @@
     }
 
     .infoCard h3,
-    .faqItem h3{
+    .faqItem h3,
+    .moreCard h3{
       margin:0 0 10px;
       font-size:22px;
       font-weight:950;
       line-height:1.25;
     }
 
-    .faqItem h3{
+    .faqItem h3,
+    .moreCard h3{
       font-size:18px;
       margin-bottom:8px;
     }
 
     .infoCard p,
     .infoCard li,
-    .faqItem p{
+    .faqItem p,
+    .moreCard p{
       color:rgba(11,18,32,.76);
       line-height:1.65;
       font-weight:700;
@@ -329,7 +334,8 @@
       padding-left:18px;
     }
 
-    .faqGrid{
+    .faqGrid,
+    .moreGrid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:14px;
@@ -382,6 +388,22 @@
     .miniBtn.primary{background:linear-gradient(180deg, var(--btn1), var(--btn2))}
     .miniBtn.secondary{background:linear-gradient(180deg, var(--btnGreen1), var(--btnGreen2))}
 
+    .moreLinks{
+      max-width:var(--max);
+      margin:28px auto 0;
+      padding:0 18px 30px;
+    }
+
+    .moreCard{
+      display:block;
+      transition:transform .18s ease, background .18s ease;
+    }
+
+    .moreCard:hover{
+      transform:translateY(-2px);
+      background:rgba(255,255,255,.30);
+    }
+
     footer{
       margin-top:18px;
       padding:18px 18px 28px;
@@ -411,55 +433,12 @@
     .footLinks a{color:rgba(255,255,255,.80)}
     .footLinks a:hover{color:#fff}
 
-    .moreLinks{
-      max-width:var(--max);
-      margin:28px auto 0;
-      padding:0 18px 30px;
-    }
-
-    .moreLinksCard{
-      background:linear-gradient(180deg, rgba(255,255,255,.34), rgba(255,255,255,.18));
-      border:1px solid rgba(255,255,255,.50);
-      border-radius:24px;
-      box-shadow:0 18px 40px rgba(0,0,0,.12);
-      padding:22px;
-    }
-
-    .moreLinks h2{
-      margin:0 0 14px;
-      font-size:26px;
-      font-weight:950;
-      color:#0b1220;
-      text-align:center;
-    }
-
-    .moreLinksGrid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:12px;
-    }
-
-    .moreLinksItem{
-      border-radius:16px;
-      border:1px solid rgba(255,255,255,.55);
-      background:rgba(255,255,255,.22);
-      padding:14px 16px;
-      font-weight:800;
-      color:rgba(11,18,32,.82);
-      display:block;
-    }
-
-    .moreLinksItem:hover{
-      background:rgba(255,255,255,.32);
-      text-decoration:underline;
-    }
-
     @media (max-width:900px){
       nav.links{display:none}
       .grid2,
       .faqGrid,
-      .serviceMini,
-      .moreLinksGrid{grid-template-columns:1fr}
+      .moreGrid,
+      .serviceMini{grid-template-columns:1fr}
       .cta{min-width:92vw}
       .miniBtn{min-width:100%}
     }
@@ -497,7 +476,7 @@
     <div class="wrap">
       <h1 data-i18n="hero_title">Gasrechnung verstehen</h1>
       <p data-i18n="hero_sub">
-        Eine Gasrechnung wirkt oft kompliziert und verunsichernd. BriefHelden erklärt den Inhalt einfach, klar und verständlich.
+        Eine Gasrechnung enthält oft Angaben zu Verbrauch, Abschlag, Kosten, Zählerstand und Abrechnungszeitraum. BriefHelden erklärt den Inhalt einfach und verständlich, damit Sie sprachlich besser einordnen können, welche Angaben im Schreiben enthalten sind.
       </p>
 
       <div class="ctaGroup">
@@ -526,20 +505,20 @@
         <div class="pad">
           <h2 class="headline" data-i18n="intro_title">Was ist eine Gasrechnung?</h2>
           <p class="lead" data-i18n="intro_text">
-            Eine Gasrechnung ist ein Schreiben Ihres Energieanbieters, in dem Gasverbrauch, Abschläge, Kosten und der Abrechnungszeitraum dargestellt werden. Oft geht es um Nachzahlung, Guthaben, Zählerstand oder eine neue Abschlagshöhe. Viele Menschen wissen nicht genau, was die einzelnen Angaben bedeuten und welche Informationen im Schreiben enthalten sind. Genau dabei hilft BriefHelden.
+            Eine Gasrechnung ist ein Schreiben Ihres Energieanbieters, in dem meist Gasverbrauch, Abschläge, Kosten und der Abrechnungszeitraum dargestellt werden. Häufig geht es dabei um Nachzahlung, Guthaben, Zählerstand oder eine neue Abschlagshöhe. Viele Menschen möchten zuerst verstehen, welche Angaben im Schreiben enthalten sind und wie der Inhalt sprachlich verständlich einzuordnen ist. Genau dabei hilft BriefHelden.
           </p>
 
           <div class="grid2">
             <div class="infoCard">
               <h3 data-i18n="left_title">Einfach erklärt</h3>
               <p data-i18n="left_text_1">
-                In einer Gasrechnung geht es häufig um Ihren verbrauchten Gasbedarf, den Arbeitspreis, den Grundpreis sowie bereits gezahlte Abschläge.
+                In einer Gasrechnung geht es häufig um Ihren Verbrauch, den Arbeitspreis, den Grundpreis sowie bereits gezahlte Abschläge.
               </p>
               <p data-i18n="left_text_2">
-                Wichtig sind dabei vor allem: Für welchen Zeitraum wird abgerechnet? Wie hoch ist der Verbrauch? Gibt es eine Nachzahlung oder ein Guthaben? Wurde der Abschlag geändert?
+                Wichtig sind dabei vor allem: Für welchen Zeitraum wird abgerechnet? Wie hoch ist der Verbrauch? Gibt es eine Nachzahlung oder ein Guthaben? Wurde der Abschlag geändert? Welche Angaben zum Zählerstand sind enthalten?
               </p>
               <p data-i18n="left_text_3">
-                BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie das Schreiben besser sprachlich verständlich einordnen können.
+                BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie die Gasrechnung besser sprachlich verständlich einordnen können.
               </p>
             </div>
 
@@ -556,7 +535,7 @@
 
           <div class="serviceMini">
             <div class="box">
-              <h3 data-i18n="service1_title">Komplettes Schreiben erklären lassen</h3>
+              <h3 data-i18n="service1_title">Komplette Gasrechnung erklären lassen</h3>
               <p data-i18n="service1_text">
                 Ideal, wenn Sie die ganze Gasrechnung vollständig verstehen möchten.
               </p>
@@ -586,35 +565,35 @@
         <div class="pad">
           <h2 class="sectionTitle" data-i18n="faq_title">Häufige Fragen zu Gasrechnungen</h2>
           <p class="sectionSub" data-i18n="faq_sub">
-            Diese Fragen tauchen bei solchen Schreiben besonders oft auf:
+            Diese Fragen tauchen bei Gasrechnungen besonders oft auf:
           </p>
 
           <div class="faqGrid">
             <div class="faqItem">
-              <h3 data-i18n="faq1_q">Ist eine Gasrechnung wichtig?</h3>
+              <h3 data-i18n="faq1_q">Welche Angaben stehen in einer Gasrechnung?</h3>
               <p data-i18n="faq1_a">
-                Eine Gasrechnung sollte ernst genommen werden. Viele Menschen sind unsicher, weil Verbrauch, Abschlag, Preise und Endbetrag oft kompliziert dargestellt werden.
+                Eine Gasrechnung enthält häufig Angaben zu Verbrauch, Abschlag, Arbeitspreis, Grundpreis, Zählerstand, Abrechnungszeitraum, Nachzahlung oder Guthaben.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="faq2_q">Sind Fristen in einer Gasrechnung wichtig?</h3>
+              <h3 data-i18n="faq2_q">Was bedeuten Abschlag oder Verbrauch?</h3>
               <p data-i18n="faq2_a">
-                Ja, Fristen sind oft besonders wichtig. BriefHelden hilft Ihnen, diese Angaben verständlich zu erkennen.
+                Im Schreiben steht oft, wie viel Gas verbraucht wurde und welche Abschläge bereits berücksichtigt wurden. Viele Menschen möchten diese Angaben zuerst verständlich erklärt bekommen.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="faq3_q">Was ist bei einer Gasrechnung besonders wichtig?</h3>
+              <h3 data-i18n="faq3_q">Welche Punkte sind besonders wichtig?</h3>
               <p data-i18n="faq3_a">
-                Besonders wichtig sind Abrechnungszeitraum, Verbrauch, Abschläge, Endbetrag, mögliche Nachzahlung oder Guthaben und alle genannten Hinweise.
+                Besonders wichtig sind Abrechnungszeitraum, Verbrauch, Abschläge, Endbetrag, Zählerstand sowie Hinweise auf Nachzahlung, Guthaben oder Änderungen beim Abschlag.
               </p>
             </div>
 
             <div class="faqItem">
               <h3 data-i18n="faq4_q">Ist BriefHelden eine Rechtsberatung?</h3>
               <p data-i18n="faq4_a">
-                Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Erklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.
+                Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Texterklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.
               </p>
             </div>
           </div>
@@ -632,48 +611,72 @@
 
           <div class="faqGrid">
             <div class="faqItem">
-              <h3 data-i18n="tip1_title">Verbrauch prüfen</h3>
+              <h3 data-i18n="tip1_title">Verbrauch ansehen</h3>
               <p data-i18n="tip1_text">
-                Schauen Sie, wie viel Gasverbrauch in der Rechnung angegeben wird und für welchen Zeitraum dieser gilt.
+                Schauen Sie, wie viel Verbrauch in der Rechnung angegeben wird und für welchen Zeitraum dieser gilt.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="tip2_title">Abschläge ansehen</h3>
+              <h3 data-i18n="tip2_title">Abschläge prüfen</h3>
               <p data-i18n="tip2_text">
                 Prüfen Sie, welche Abschläge bereits gezahlt wurden und ob sich der monatliche Abschlag geändert hat.
               </p>
             </div>
 
             <div class="faqItem">
-              <h3 data-i18n="tip3_title">Nachzahlung oder Guthaben beachten</h3>
+              <h3 data-i18n="tip3_title">Zählerstand und Endbetrag beachten</h3>
               <p data-i18n="tip3_text">
-                Achten Sie darauf, ob am Ende eine Nachzahlung genannt wird oder ob ein Guthaben für Sie ausgewiesen ist.
+                Achten Sie darauf, welche Angaben zum Zählerstand enthalten sind und ob am Ende eine Nachzahlung oder ein Guthaben genannt wird.
               </p>
             </div>
 
             <div class="faqItem">
               <h3 data-i18n="tip4_title">Inhalt verständlich machen</h3>
               <p data-i18n="tip4_text">
-                Wenn das Schreiben schwer verständlich ist, hilft eine einfache Erklärung oft dabei, die enthaltenen Angaben besser zu erfassen.
+                Wenn Begriffe, Hinweise oder Formulierungen unklar wirken, hilft eine sprachliche Vereinfachung oft dabei, die enthaltenen Angaben besser zu erfassen.
               </p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="moreLinks">
-    <div class="moreLinksCard">
-      <h2 data-i18n="more_title">Weitere häufige Briefe verstehen</h2>
-      <div class="moreLinksGrid">
-        <a class="moreLinksItem" href="/stromrechnung-verstehen.html" data-i18n="more_1">Stromrechnung verstehen</a>
-        <a class="moreLinksItem" href="/nebenkostenabrechnung-verstehen.html" data-i18n="more_2">Nebenkostenabrechnung verstehen</a>
-        <a class="moreLinksItem" href="/krankenkasse-brief-verstehen.html" data-i18n="more_3">Krankenkasse Brief verstehen</a>
-        <a class="moreLinksItem" href="/versicherung-brief-verstehen.html" data-i18n="more_4">Versicherung Brief verstehen</a>
-        <a class="moreLinksItem" href="/bank-brief-verstehen.html" data-i18n="more_5">Bank Brief verstehen</a>
-        <a class="moreLinksItem" href="/bussgeldbescheid-verstehen.html" data-i18n="more_6">Bußgeldbescheid verstehen</a>
+      <div style="height:18px"></div>
+
+      <div class="moreLinks">
+        <h2 data-i18n="more_title">Weitere häufige Briefe verstehen</h2>
+
+        <div class="moreGrid">
+          <a class="moreCard" href="/stromrechnung-verstehen.html">
+            <h3 data-i18n="more_1_title">Stromrechnung verstehen</h3>
+            <p data-i18n="more_1_text">Stromrechnungen klar und verständlich erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/nebenkostenabrechnung-verstehen.html">
+            <h3 data-i18n="more_2_title">Nebenkostenabrechnung verstehen</h3>
+            <p data-i18n="more_2_text">Nebenkostenabrechnungen einfach erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/krankenkasse-brief-verstehen.html">
+            <h3 data-i18n="more_3_title">Krankenkasse Brief verstehen</h3>
+            <p data-i18n="more_3_text">Schreiben der Krankenkasse in einfacher Sprache erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/versicherung-brief-verstehen.html">
+            <h3 data-i18n="more_4_title">Versicherung Brief verstehen</h3>
+            <p data-i18n="more_4_text">Versicherungsschreiben klar und verständlich erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/bank-brief-verstehen.html">
+            <h3 data-i18n="more_5_title">Bank Brief verstehen</h3>
+            <p data-i18n="more_5_text">Bankschreiben einfach erklärt.</p>
+          </a>
+
+          <a class="moreCard" href="/bussgeldbescheid-verstehen.html">
+            <h3 data-i18n="more_6_title">Bußgeldbescheid verstehen</h3>
+            <p data-i18n="more_6_text">Bußgeldbescheide klar und verständlich erklärt.</p>
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -710,9 +713,9 @@
     const i18n = {
       de: {
         pageTitle: "Gasrechnung verstehen – einfach erklärt | BriefHelden",
-        metaDescription: "Gasrechnung einfach verstehen: BriefHelden erklärt Verbrauch, Abschlag, Kosten, Zählerstand und wichtige Angaben verständlich, klar und ohne komplizierte Fachsprache.",
+        metaDescription: "Gasrechnung verständlich erklärt: BriefHelden erklärt Verbrauch, Abschlag, Kosten, Zählerstand und welche Angaben im Schreiben enthalten sind – klar, einfach und ohne komplizierte Fachsprache.",
         ogTitle: "Gasrechnung verstehen – einfach erklärt | BriefHelden",
-        ogDescription: "Gasrechnung einfach erklärt. Verstehen Sie Verbrauch, Abschlag, Kosten und wichtige Angaben schnell und verständlich.",
+        ogDescription: "Gasrechnung einfach erklärt. Verstehen Sie Verbrauch, Abschlag, Kosten und wichtige Angaben im Schreiben schnell und verständlich.",
 
         nav_home: "Startseite",
         nav_question: "Frage stellen",
@@ -722,7 +725,7 @@
         nav_privacy: "Datenschutz",
 
         hero_title: "Gasrechnung verstehen",
-        hero_sub: "Eine Gasrechnung wirkt oft kompliziert und verunsichernd. BriefHelden erklärt den Inhalt einfach, klar und verständlich.",
+        hero_sub: "Eine Gasrechnung enthält oft Angaben zu Verbrauch, Abschlag, Kosten, Zählerstand und Abrechnungszeitraum. BriefHelden erklärt den Inhalt einfach und verständlich, damit Sie sprachlich besser einordnen können, welche Angaben im Schreiben enthalten sind.",
         hero_cta: "Jetzt Gasrechnung erklären lassen – 6,90 €",
         hero_question_cta: "Kurze Frage stellen – 1,49 €",
         meta_1: "Einfach erklärt",
@@ -730,12 +733,12 @@
         meta_3: "Vertraulich",
 
         intro_title: "Was ist eine Gasrechnung?",
-        intro_text: "Eine Gasrechnung ist ein Schreiben Ihres Energieanbieters, in dem Gasverbrauch, Abschläge, Kosten und der Abrechnungszeitraum dargestellt werden. Oft geht es um Nachzahlung, Guthaben, Zählerstand oder eine neue Abschlagshöhe. Viele Menschen wissen nicht genau, was die einzelnen Angaben bedeuten und welche Informationen im Schreiben enthalten sind. Genau dabei hilft BriefHelden.",
+        intro_text: "Eine Gasrechnung ist ein Schreiben Ihres Energieanbieters, in dem meist Gasverbrauch, Abschläge, Kosten und der Abrechnungszeitraum dargestellt werden. Häufig geht es dabei um Nachzahlung, Guthaben, Zählerstand oder eine neue Abschlagshöhe. Viele Menschen möchten zuerst verstehen, welche Angaben im Schreiben enthalten sind und wie der Inhalt sprachlich verständlich einzuordnen ist. Genau dabei hilft BriefHelden.",
 
         left_title: "Einfach erklärt",
-        left_text_1: "In einer Gasrechnung geht es häufig um Ihren verbrauchten Gasbedarf, den Arbeitspreis, den Grundpreis sowie bereits gezahlte Abschläge.",
-        left_text_2: "Wichtig sind dabei vor allem: Für welchen Zeitraum wird abgerechnet? Wie hoch ist der Verbrauch? Gibt es eine Nachzahlung oder ein Guthaben? Wurde der Abschlag geändert?",
-        left_text_3: "BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie das Schreiben besser sprachlich verständlich einordnen können.",
+        left_text_1: "In einer Gasrechnung geht es häufig um Ihren Verbrauch, den Arbeitspreis, den Grundpreis sowie bereits gezahlte Abschläge.",
+        left_text_2: "Wichtig sind dabei vor allem: Für welchen Zeitraum wird abgerechnet? Wie hoch ist der Verbrauch? Gibt es eine Nachzahlung oder ein Guthaben? Wurde der Abschlag geändert? Welche Angaben zum Zählerstand sind enthalten?",
+        left_text_3: "BriefHelden erklärt den Inhalt in einfacher Sprache, damit Sie die Gasrechnung besser sprachlich verständlich einordnen können.",
 
         right_title: "So funktioniert es",
         right_li_1: "Gasrechnung sicher hochladen",
@@ -743,7 +746,7 @@
         right_li_3: "Sie erhalten die Erklärung per E-Mail",
         right_li_4: "Keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) – nur sprachliche Vereinfachung und verständliche Texterklärung ohne rechtliche Bewertung oder Handlungsempfehlung",
 
-        service1_title: "Komplettes Schreiben erklären lassen",
+        service1_title: "Komplette Gasrechnung erklären lassen",
         service1_text: "Ideal, wenn Sie die ganze Gasrechnung vollständig verstehen möchten.",
         service1_btn: "Jetzt für 6,90 € starten",
 
@@ -752,34 +755,40 @@
         service2_btn: "Jetzt für 1,49 € fragen",
 
         faq_title: "Häufige Fragen zu Gasrechnungen",
-        faq_sub: "Diese Fragen tauchen bei solchen Schreiben besonders oft auf:",
-        faq1_q: "Ist eine Gasrechnung wichtig?",
-        faq1_a: "Eine Gasrechnung sollte ernst genommen werden. Viele Menschen sind unsicher, weil Verbrauch, Abschlag, Preise und Endbetrag oft kompliziert dargestellt werden.",
-        faq2_q: "Sind Fristen in einer Gasrechnung wichtig?",
-        faq2_a: "Ja, Fristen sind oft besonders wichtig. BriefHelden hilft Ihnen, diese Angaben verständlich zu erkennen.",
-        faq3_q: "Was ist bei einer Gasrechnung besonders wichtig?",
-        faq3_a: "Besonders wichtig sind Abrechnungszeitraum, Verbrauch, Abschläge, Endbetrag, mögliche Nachzahlung oder Guthaben und alle genannten Hinweise.",
+        faq_sub: "Diese Fragen tauchen bei Gasrechnungen besonders oft auf:",
+        faq1_q: "Welche Angaben stehen in einer Gasrechnung?",
+        faq1_a: "Eine Gasrechnung enthält häufig Angaben zu Verbrauch, Abschlag, Arbeitspreis, Grundpreis, Zählerstand, Abrechnungszeitraum, Nachzahlung oder Guthaben.",
+        faq2_q: "Was bedeuten Abschlag oder Verbrauch?",
+        faq2_a: "Im Schreiben steht oft, wie viel Gas verbraucht wurde und welche Abschläge bereits berücksichtigt wurden. Viele Menschen möchten diese Angaben zuerst verständlich erklärt bekommen.",
+        faq3_q: "Welche Punkte sind besonders wichtig?",
+        faq3_a: "Besonders wichtig sind Abrechnungszeitraum, Verbrauch, Abschläge, Endbetrag, Zählerstand sowie Hinweise auf Nachzahlung, Guthaben oder Änderungen beim Abschlag.",
         faq4_q: "Ist BriefHelden eine Rechtsberatung?",
-        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Erklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.",
+        faq4_a: "Nein. BriefHelden bietet keine Rechtsberatung im Sinne des Rechtsdienstleistungsgesetzes (RDG) an. Sie erhalten ausschließlich eine verständliche Texterklärung und sprachliche Vereinfachung des Inhalts Ihres Dokuments. Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung und keine verbindliche Handlungsempfehlung.",
 
         tip_title: "Worauf sollten Sie bei einer Gasrechnung achten?",
         tip_sub: "Diese Punkte sind oft besonders wichtig:",
-        tip1_title: "Verbrauch prüfen",
-        tip1_text: "Schauen Sie, wie viel Gasverbrauch in der Rechnung angegeben wird und für welchen Zeitraum dieser gilt.",
-        tip2_title: "Abschläge ansehen",
+        tip1_title: "Verbrauch ansehen",
+        tip1_text: "Schauen Sie, wie viel Verbrauch in der Rechnung angegeben wird und für welchen Zeitraum dieser gilt.",
+        tip2_title: "Abschläge prüfen",
         tip2_text: "Prüfen Sie, welche Abschläge bereits gezahlt wurden und ob sich der monatliche Abschlag geändert hat.",
-        tip3_title: "Nachzahlung oder Guthaben beachten",
-        tip3_text: "Achten Sie darauf, ob am Ende eine Nachzahlung genannt wird oder ob ein Guthaben für Sie ausgewiesen ist.",
+        tip3_title: "Zählerstand und Endbetrag beachten",
+        tip3_text: "Achten Sie darauf, welche Angaben zum Zählerstand enthalten sind und ob am Ende eine Nachzahlung oder ein Guthaben genannt wird.",
         tip4_title: "Inhalt verständlich machen",
-        tip4_text: "Wenn das Schreiben schwer verständlich ist, hilft eine einfache Erklärung oft dabei, die enthaltenen Angaben besser zu erfassen.",
+        tip4_text: "Wenn Begriffe, Hinweise oder Formulierungen unklar wirken, hilft eine sprachliche Vereinfachung oft dabei, die enthaltenen Angaben besser zu erfassen.",
 
         more_title: "Weitere häufige Briefe verstehen",
-        more_1: "Stromrechnung verstehen",
-        more_2: "Nebenkostenabrechnung verstehen",
-        more_3: "Krankenkasse Brief verstehen",
-        more_4: "Versicherung Brief verstehen",
-        more_5: "Bank Brief verstehen",
-        more_6: "Bußgeldbescheid verstehen",
+        more_1_title: "Stromrechnung verstehen",
+        more_1_text: "Stromrechnungen klar und verständlich erklärt.",
+        more_2_title: "Nebenkostenabrechnung verstehen",
+        more_2_text: "Nebenkostenabrechnungen einfach erklärt.",
+        more_3_title: "Krankenkasse Brief verstehen",
+        more_3_text: "Schreiben der Krankenkasse in einfacher Sprache erklärt.",
+        more_4_title: "Versicherung Brief verstehen",
+        more_4_text: "Versicherungsschreiben klar und verständlich erklärt.",
+        more_5_title: "Bank Brief verstehen",
+        more_5_text: "Bankschreiben einfach erklärt.",
+        more_6_title: "Bußgeldbescheid verstehen",
+        more_6_text: "Bußgeldbescheide klar und verständlich erklärt.",
 
         foot_copy: "© 2026 BriefHelden – Alle Rechte vorbehalten",
         foot_home: "Startseite",
@@ -792,9 +801,9 @@
 
       en: {
         pageTitle: "Understand a gas bill – explained clearly | BriefHelden",
-        metaDescription: "Understand a gas bill easily: BriefHelden explains consumption, advance payment, costs, meter reading and important details clearly and in simple language.",
+        metaDescription: "Understand a gas bill easily: BriefHelden explains consumption, advance payment, costs, meter reading and which details are included in the document clearly and in simple language.",
         ogTitle: "Understand a gas bill – explained clearly | BriefHelden",
-        ogDescription: "Gas bill explained simply. Understand consumption, advance payment, costs and important details quickly and clearly.",
+        ogDescription: "Gas bill explained simply. Understand consumption, advance payment, costs and important details in the document quickly and clearly.",
 
         nav_home: "Home",
         nav_question: "Ask a question",
@@ -804,7 +813,7 @@
         nav_privacy: "Privacy",
 
         hero_title: "Understand a gas bill",
-        hero_sub: "A gas bill often seems complicated and unsettling. BriefHelden explains the content simply, clearly and understandably.",
+        hero_sub: "A gas bill often contains details about consumption, advance payments, costs, meter reading and the billing period. BriefHelden explains the content simply and clearly so you can better understand which details are included in the document.",
         hero_cta: "Get gas bill explained now – €6.90",
         hero_question_cta: "Ask a short question – €1.49",
         meta_1: "Clearly explained",
@@ -812,12 +821,12 @@
         meta_3: "Confidential",
 
         intro_title: "What is a gas bill?",
-        intro_text: "A gas bill is a document from your energy provider showing gas consumption, advance payments, costs and the billing period. It often concerns an additional payment, credit balance, meter reading or a new monthly advance payment. Many people do not know exactly what the individual details mean and which information is included in the document. That is exactly where BriefHelden helps.",
+        intro_text: "A gas bill is a document from your energy provider that usually shows gas consumption, advance payments, costs and the billing period. It often concerns an additional payment, credit balance, meter reading or a new monthly advance payment amount. Many people first want to understand which details are included in the document and how the content can be understood more clearly. That is exactly where BriefHelden helps.",
 
         left_title: "Simply explained",
-        left_text_1: "A gas bill often deals with your gas usage, the unit price, the base price and advance payments already made.",
-        left_text_2: "Important points are: For which period is the billing made? How high is the consumption? Is there an additional payment or a credit balance? Has the advance payment changed?",
-        left_text_3: "BriefHelden explains the content in simple language so you can better understand the document.",
+        left_text_1: "A gas bill often deals with your consumption, the unit price, the base price and advance payments already made.",
+        left_text_2: "Important points are: For which period is the billing made? How high is the consumption? Is there an additional payment or a credit balance? Has the advance payment changed? Which details about the meter reading are included?",
+        left_text_3: "BriefHelden explains the content in simple language so you can better understand the gas bill.",
 
         right_title: "How it works",
         right_li_1: "Upload gas bill securely",
@@ -825,7 +834,7 @@
         right_li_3: "You receive the explanation by email",
         right_li_4: "No legal advice within the meaning of the German Legal Services Act (RDG) — only linguistic simplification and a clear text explanation without legal assessment or recommendation for action",
 
-        service1_title: "Get the full document explained",
+        service1_title: "Get the full gas bill explained",
         service1_text: "Ideal if you want to fully understand the entire gas bill.",
         service1_btn: "Start now for €6.90",
 
@@ -834,34 +843,40 @@
         service2_btn: "Ask now for €1.49",
 
         faq_title: "Frequently asked questions about gas bills",
-        faq_sub: "These questions often come up with this kind of document:",
-        faq1_q: "Is a gas bill important?",
-        faq1_a: "A gas bill should be taken seriously. Many people are unsure because consumption, advance payments, prices and final amounts are often presented in a complicated way.",
-        faq2_q: "Are deadlines in a gas bill important?",
-        faq2_a: "Yes, deadlines are often especially important. BriefHelden helps you identify these details clearly.",
-        faq3_q: "What is especially important in a gas bill?",
-        faq3_a: "Especially important are the billing period, consumption, advance payments, final amount, possible additional payment or credit balance and all stated notes.",
+        faq_sub: "These questions often come up with gas bills:",
+        faq1_q: "Which details are written in a gas bill?",
+        faq1_a: "A gas bill often contains details about consumption, advance payment, unit price, base price, meter reading, billing period, additional payment or credit balance.",
+        faq2_q: "What do advance payment or consumption mean?",
+        faq2_a: "The document often states how much gas was consumed and which advance payments were already taken into account. Many people want these details explained clearly first.",
+        faq3_q: "Which points are especially important?",
+        faq3_a: "Especially important are the billing period, consumption, advance payments, final amount, meter reading and notes about additional payment, credit balance or changes to the advance payment.",
         faq4_q: "Is BriefHelden legal advice?",
-        faq4_a: "No. BriefHelden does not provide legal advice within the meaning of the German Legal Services Act (RDG). You receive only a clear explanation and linguistic simplification of your document’s content. There is no legal assessment, no individual review, and no binding recommendation for action.",
+        faq4_a: "No. BriefHelden does not provide legal advice within the meaning of the German Legal Services Act (RDG). You receive only a clear text explanation and linguistic simplification of your document’s content. There is no legal assessment, no individual review, and no binding recommendation for action.",
 
         tip_title: "What should you look for in a gas bill?",
         tip_sub: "These points are often especially important:",
-        tip1_title: "Check the consumption",
-        tip1_text: "Look at how much gas consumption is stated in the bill and for which period it applies.",
-        tip2_title: "Review the advance payments",
-        tip2_text: "Check which advance payments have already been made and whether the monthly advance payment has changed.",
-        tip3_title: "Watch additional payment or credit balance",
-        tip3_text: "Pay attention to whether an additional payment is named at the end or whether a credit balance is shown for you.",
+        tip1_title: "Look at the consumption",
+        tip1_text: "Check how much consumption is stated in the bill and for which period it applies.",
+        tip2_title: "Check the advance payments",
+        tip2_text: "Review which advance payments were already made and whether the monthly advance payment has changed.",
+        tip3_title: "Check meter reading and final amount",
+        tip3_text: "Pay attention to which details about the meter reading are included and whether an additional payment or a credit balance is stated at the end.",
         tip4_title: "Make the content understandable",
-        tip4_text: "If the document is difficult to understand, a simple explanation often helps you grasp the included details more easily.",
+        tip4_text: "If terms, notices or wording seem unclear, linguistic simplification often helps you understand the included details more easily.",
 
-        more_title: "More common letters explained",
-        more_1: "Understand electricity bill",
-        more_2: "Understand utility cost statement",
-        more_3: "Understand health insurance letter",
-        more_4: "Understand insurance letter",
-        more_5: "Understand bank letter",
-        more_6: "Understand fine notice",
+        more_title: "Understand more common letters",
+        more_1_title: "Understand electricity bill",
+        more_1_text: "Electricity bills explained clearly.",
+        more_2_title: "Understand utility cost statement",
+        more_2_text: "Utility cost statements explained simply.",
+        more_3_title: "Understand health insurance letter",
+        more_3_text: "Health insurance letters explained in simple language.",
+        more_4_title: "Understand insurance letter",
+        more_4_text: "Insurance letters explained clearly.",
+        more_5_title: "Understand bank letter",
+        more_5_text: "Bank letters explained simply.",
+        more_6_title: "Understand fine notice",
+        more_6_text: "Fine notices explained clearly.",
 
         foot_copy: "© 2026 BriefHelden – All rights reserved",
         foot_home: "Home",
@@ -874,9 +889,9 @@
 
       tr: {
         pageTitle: "Gaz faturasını anlayın – kolay açıklama | BriefHelden",
-        metaDescription: "Gaz faturasını kolay anlayın: BriefHelden tüketim, avans, maliyetler, sayaç bilgisi ve önemli noktaları sade ve anlaşılır şekilde açıklar.",
+        metaDescription: "Gaz faturasını kolay anlayın: BriefHelden tüketim, avans, maliyetler, sayaç bilgisi ve belgede hangi bilgilerin yer aldığını sade ve anlaşılır şekilde açıklar.",
         ogTitle: "Gaz faturasını anlayın – kolay açıklama | BriefHelden",
-        ogDescription: "Gaz faturası basitçe açıklanır. Tüketim, avans, maliyetler ve önemli bilgiler açık şekilde anlaşılır.",
+        ogDescription: "Gaz faturası basitçe açıklanır. Tüketim, avans, maliyetler ve belgede yer alan önemli bilgiler açık şekilde anlaşılır.",
 
         nav_home: "Ana Sayfa",
         nav_question: "Soru sor",
@@ -886,7 +901,7 @@
         nav_privacy: "Gizlilik",
 
         hero_title: "Gaz faturasını anlayın",
-        hero_sub: "Bir gaz faturası çoğu zaman karmaşık ve endişe verici görünür. BriefHelden içeriği size basit, açık ve anlaşılır şekilde açıklar.",
+        hero_sub: "Bir gaz faturası çoğu zaman tüketim, avans, maliyetler, sayaç bilgisi ve hesap dönemi hakkında bilgiler içerir. BriefHelden içeriği basit ve açık şekilde açıklar, böylece belgede hangi bilgilerin yer aldığını daha iyi anlayabilirsiniz.",
         hero_cta: "Gaz faturasını şimdi açıklat – 6,90 €",
         hero_question_cta: "Kısa soru sor – 1,49 €",
         meta_1: "Basit açıklandı",
@@ -894,12 +909,12 @@
         meta_3: "Gizli",
 
         intro_title: "Gaz faturası nedir?",
-        intro_text: "Gaz faturası, enerji sağlayıcınızdan gelen ve gaz tüketimi, avans ödemeleri, maliyetler ve hesap dönemi hakkında bilgi veren bir yazıdır. Çoğu zaman ek ödeme, alacak, sayaç değeri veya yeni aylık avans tutarı söz konusu olur. Birçok kişi bu bilgilerin ne anlama geldiğini ve belgede hangi bilgilerin yer aldığını tam bilmez. BriefHelden tam bu konuda yardımcı olur.",
+        intro_text: "Gaz faturası, enerji sağlayıcınızdan gelen ve genelde gaz tüketimi, avans ödemeleri, maliyetler ve hesap dönemi hakkında bilgi veren bir yazıdır. Sıkça ek ödeme, alacak, sayaç değeri veya yeni aylık avans tutarı söz konusu olur. Birçok kişi önce belgede hangi bilgilerin yer aldığını ve içeriğin nasıl daha anlaşılır şekilde açıklanabileceğini anlamak ister. BriefHelden tam bu konuda yardımcı olur.",
 
         left_title: "Basit açıklama",
-        left_text_1: "Bir gaz faturasında sıkça gaz tüketiminiz, birim fiyat, sabit ücret ve daha önce ödenmiş avanslar yer alır.",
-        left_text_2: "Önemli noktalar şunlardır: Hangi dönem için hesaplama yapılıyor? Tüketim ne kadar? Ek ödeme mi var yoksa alacak mı? Avans tutarı değişti mi?",
-        left_text_3: "BriefHelden içeriği basit dille açıklar, böylece yazıyı daha iyi anlayabilirsiniz.",
+        left_text_1: "Bir gaz faturasında sıkça tüketiminiz, birim fiyat, sabit ücret ve daha önce ödenmiş avanslar yer alır.",
+        left_text_2: "Önemli noktalar şunlardır: Hangi dönem için hesaplama yapılıyor? Tüketim ne kadar? Ek ödeme mi var yoksa alacak mı? Avans tutarı değişti mi? Sayaç bilgisi olarak neler yer alıyor?",
+        left_text_3: "BriefHelden içeriği basit dille açıklar, böylece gaz faturasını daha iyi anlayabilirsiniz.",
 
         right_title: "Nasıl çalışır",
         right_li_1: "Gaz faturasını güvenli şekilde yükleyin",
@@ -907,8 +922,8 @@
         right_li_3: "Açıklamayı e-posta ile alırsınız",
         right_li_4: "Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık verilmez — yalnızca dilsel sadeleştirme ve hukuki değerlendirme ya da eylem tavsiyesi olmadan anlaşılır metin açıklaması sunulur",
 
-        service1_title: "Belgenin tamamını açıklat",
-        service1_text: "Gaz faturasının tamamını anlamak istiyorsanız idealdir.",
+        service1_title: "Gaz faturasının tamamını açıklat",
+        service1_text: "Gaz faturasının tamamını tam olarak anlamak istiyorsanız idealdir.",
         service1_btn: "Şimdi 6,90 € ile başla",
 
         service2_title: "Kısa bir soru sor",
@@ -916,34 +931,40 @@
         service2_btn: "Şimdi 1,49 € ile sor",
 
         faq_title: "Gaz faturaları hakkında sık sorulan sorular",
-        faq_sub: "Bu tür yazılarda şu sorular sıkça ortaya çıkar:",
-        faq1_q: "Bir gaz faturası önemli midir?",
-        faq1_a: "Bir gaz faturası ciddiye alınmalıdır. Birçok kişi tüketim, avans, fiyatlar ve toplam tutar karmaşık gösterildiği için emin olamaz.",
-        faq2_q: "Gaz faturasındaki süreler önemli midir?",
-        faq2_a: "Evet, süreler çoğu zaman özellikle önemlidir. BriefHelden bu bilgileri açık şekilde görmenize yardım eder.",
-        faq3_q: "Bir gaz faturasında en önemli olan nedir?",
-        faq3_a: "Hesap dönemi, tüketim, avans ödemeleri, toplam tutar, olası ek ödeme veya alacak ve belirtilen tüm bilgiler özellikle önemlidir.",
+        faq_sub: "Bu sorular gaz faturalarında özellikle sık ortaya çıkar:",
+        faq1_q: "Bir gaz faturasında hangi bilgiler yer alır?",
+        faq1_a: "Bir gaz faturası çoğu zaman tüketim, avans, birim fiyat, sabit ücret, sayaç bilgisi, hesap dönemi, ek ödeme veya alacak gibi bilgileri içerir.",
+        faq2_q: "Avans veya tüketim ne anlama gelir?",
+        faq2_a: "Belgede çoğu zaman ne kadar gaz tüketildiği ve hangi avans ödemelerinin dikkate alındığı yazılır. Birçok kişi bu bilgilerin önce açık şekilde açıklanmasını ister.",
+        faq3_q: "Hangi noktalar özellikle önemlidir?",
+        faq3_a: "Hesap dönemi, tüketim, avans ödemeleri, toplam tutar, sayaç bilgisi ve ek ödeme, alacak veya avans değişikliği ile ilgili bilgiler özellikle önemlidir.",
         faq4_q: "BriefHelden hukuki danışmanlık mı veriyor?",
-        faq4_a: "Hayır. BriefHelden, Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık vermez. Yalnızca belgenizin içeriğinin anlaşılır açıklamasını ve dilsel sadeleştirmesini alırsınız. Hukuki değerlendirme, bireysel inceleme veya bağlayıcı bir hareket tavsiyesi yapılmaz.",
+        faq4_a: "Hayır. BriefHelden, Almanya Hukuki Hizmetler Yasası (RDG) kapsamında hukuki danışmanlık vermez. Yalnızca belgenizin içeriğinin anlaşılır metin açıklamasını ve dilsel sadeleştirmesini alırsınız. Hukuki değerlendirme, bireysel inceleme veya bağlayıcı bir hareket tavsiyesi yapılmaz.",
 
         tip_title: "Bir gaz faturasında nelere dikkat etmelisiniz?",
         tip_sub: "Bu noktalar genelde özellikle önemlidir:",
-        tip1_title: "Tüketimi kontrol edin",
-        tip1_text: "Faturada ne kadar gaz tüketimi yazdığına ve bunun hangi dönem için geçerli olduğuna bakın.",
-        tip2_title: "Avansları inceleyin",
+        tip1_title: "Tüketime bakın",
+        tip1_text: "Faturada ne kadar tüketim yazdığına ve bunun hangi dönem için geçerli olduğuna bakın.",
+        tip2_title: "Avansları kontrol edin",
         tip2_text: "Hangi avans ödemelerinin yapıldığını ve aylık avans tutarının değişip değişmediğini kontrol edin.",
-        tip3_title: "Ek ödeme veya alacağı dikkate alın",
-        tip3_text: "Sonunda bir ek ödeme belirtilip belirtilmediğine veya sizin için bir alacak gösterilip gösterilmediğine dikkat edin.",
+        tip3_title: "Sayaç bilgisi ve toplam tutarı inceleyin",
+        tip3_text: "Sayaç bilgisi olarak hangi verilerin yer aldığına ve sonunda ek ödeme ya da alacak belirtilip belirtilmediğine dikkat edin.",
         tip4_title: "İçeriği anlaşılır hale getirin",
-        tip4_text: "Yazıyı anlamak zorsa, basit bir açıklama çoğu zaman yer alan bilgileri daha iyi kavramanıza yardımcı olur.",
+        tip4_text: "Terimler, uyarılar veya ifadeler belirsiz görünüyorsa, dilsel sadeleştirme çoğu zaman belgede yer alan bilgileri daha iyi anlamanıza yardımcı olur.",
 
         more_title: "Diğer sık görülen mektupları anlayın",
-        more_1: "Stromrechnung verstehen",
-        more_2: "Nebenkostenabrechnung verstehen",
-        more_3: "Krankenkasse Brief verstehen",
-        more_4: "Versicherung Brief verstehen",
-        more_5: "Bank Brief verstehen",
-        more_6: "Bußgeldbescheid verstehen",
+        more_1_title: "Stromrechnung verstehen",
+        more_1_text: "Stromrechnungen klar und verständlich erklärt.",
+        more_2_title: "Nebenkostenabrechnung verstehen",
+        more_2_text: "Nebenkostenabrechnungen einfach erklärt.",
+        more_3_title: "Krankenkasse Brief verstehen",
+        more_3_text: "Schreiben der Krankenkasse in einfacher Sprache erklärt.",
+        more_4_title: "Versicherung Brief verstehen",
+        more_4_text: "Versicherungsschreiben klar und verständlich erklärt.",
+        more_5_title: "Bank Brief verstehen",
+        more_5_text: "Bankschreiben einfach erklärt.",
+        more_6_title: "Bußgeldbescheid verstehen",
+        more_6_text: "Bußgeldbescheide klar und verständlich erklärt.",
 
         foot_copy: "© 2026 BriefHelden – Tüm hakları saklıdır",
         foot_home: "Ana Sayfa",
@@ -956,9 +977,9 @@
 
       ru: {
         pageTitle: "Понять счёт за газ – простое объяснение | BriefHelden",
-        metaDescription: "Легко понять счёт за газ: BriefHelden просто и понятно объясняет потребление, аванс, расходы, показания счётчика и важные сведения.",
+        metaDescription: "Легко понять счёт за газ: BriefHelden просто и понятно объясняет потребление, аванс, расходы, показания счётчика и какие сведения указаны в документе.",
         ogTitle: "Понять счёт за газ – простое объяснение | BriefHelden",
-        ogDescription: "Счёт за газ объясняется простым языком. Понятно раскрываются потребление, аванс, расходы и важные сведения.",
+        ogDescription: "Счёт за газ объясняется простым языком. Понятно раскрываются потребление, аванс, расходы и важные сведения в документе.",
 
         nav_home: "Главная",
         nav_question: "Задать вопрос",
@@ -968,7 +989,7 @@
         nav_privacy: "Конфиденциальность",
 
         hero_title: "Понять счёт за газ",
-        hero_sub: "Счёт за газ часто кажется сложным и тревожным. BriefHelden объяснит содержание просто, ясно и понятно.",
+        hero_sub: "Счёт за газ часто содержит сведения о потреблении, авансовых платежах, расходах, показаниях счётчика и расчётном периоде. BriefHelden объяснит содержание просто и понятно, чтобы вам было легче разобраться, какие сведения указаны в документе.",
         hero_cta: "Объяснить счёт за газ – 6,90 €",
         hero_question_cta: "Задать короткий вопрос – 1,49 €",
         meta_1: "Просто объяснено",
@@ -976,12 +997,12 @@
         meta_3: "Конфиденциально",
 
         intro_title: "Что такое счёт за газ?",
-        intro_text: "Счёт за газ — это документ от вашего поставщика энергии, в котором указаны потребление газа, авансовые платежи, расходы и расчётный период. Часто речь идёт о доплате, переплате, показаниях счётчика или новом размере ежемесячного аванса. Многие люди не понимают, что означают отдельные данные и какие сведения содержатся в документе. Именно здесь помогает BriefHelden.",
+        intro_text: "Счёт за газ — это документ от вашего поставщика энергии, в котором обычно указаны потребление газа, авансовые платежи, расходы и расчётный период. Часто речь идёт о доплате, переплате, показаниях счётчика или новом размере ежемесячного аванса. Многие люди сначала хотят понять, какие именно сведения указаны в документе и как можно понятнее объяснить его содержание. Именно здесь помогает BriefHelden.",
 
         left_title: "Просто объясняем",
-        left_text_1: "В счёте за газ часто указываются ваше потребление газа, тариф за единицу, базовая цена и уже внесённые авансовые платежи.",
-        left_text_2: "Особенно важно следующее: За какой период сделан расчёт? Каков объём потребления? Есть ли доплата или переплата? Изменился ли авансовый платёж?",
-        left_text_3: "BriefHelden объясняет содержание простым языком, чтобы вам было легче понять документ.",
+        left_text_1: "В счёте за газ часто указываются ваше потребление, тариф за единицу, базовая цена и уже внесённые авансовые платежи.",
+        left_text_2: "Особенно важно следующее: За какой период сделан расчёт? Каков объём потребления? Есть ли доплата или переплата? Изменился ли авансовый платёж? Какие сведения о показаниях счётчика указаны?",
+        left_text_3: "BriefHelden объясняет содержание простым языком, чтобы вам было легче понять счёт за газ.",
 
         right_title: "Как это работает",
         right_li_1: "Безопасно загрузите счёт за газ",
@@ -989,7 +1010,7 @@
         right_li_3: "Вы получаете объяснение по e-mail",
         right_li_4: "Это не юридическая консультация в смысле немецкого Закона о юридических услугах (RDG) — только языковое упрощение и понятное текстовое объяснение без правовой оценки и без рекомендаций к действиям",
 
-        service1_title: "Получить полное объяснение документа",
+        service1_title: "Получить полное объяснение счёта за газ",
         service1_text: "Идеально, если вы хотите полностью понять весь счёт за газ.",
         service1_btn: "Начать за 6,90 €",
 
@@ -998,34 +1019,40 @@
         service2_btn: "Спросить за 1,49 €",
 
         faq_title: "Частые вопросы о счетах за газ",
-        faq_sub: "Эти вопросы особенно часто возникают по таким документам:",
-        faq1_q: "Счёт за газ важен?",
-        faq1_a: "Счёт за газ следует воспринимать серьёзно. Многие люди не уверены, потому что потребление, авансы, цены и итоговая сумма часто представлены сложно.",
-        faq2_q: "Важны ли сроки в счёте за газ?",
-        faq2_a: "Да, сроки часто особенно важны. BriefHelden помогает вам увидеть эти данные понятнее.",
-        faq3_q: "Что особенно важно в счёте за газ?",
-        faq3_a: "Особенно важны расчётный период, потребление, авансовые платежи, итоговая сумма, возможная доплата или переплата и все указанные сведения.",
+        faq_sub: "Эти вопросы особенно часто возникают по счетам за газ:",
+        faq1_q: "Какие сведения содержатся в счёте за газ?",
+        faq1_a: "Счёт за газ часто содержит сведения о потреблении, авансовом платеже, тарифе за единицу, базовой цене, показаниях счётчика, расчётном периоде, доплате или переплате.",
+        faq2_q: "Что означают аванс или потребление?",
+        faq2_a: "В документе часто указано, сколько газа было потреблено и какие авансовые платежи уже были учтены. Многие люди хотят сначала получить понятное объяснение этих сведений.",
+        faq3_q: "Какие пункты особенно важны?",
+        faq3_a: "Особенно важны расчётный период, потребление, авансовые платежи, итоговая сумма, показания счётчика и сведения о доплате, переплате или изменении аванса.",
         faq4_q: "BriefHelden — это юридическая консультация?",
-        faq4_a: "Нет. BriefHelden не оказывает юридических консультаций в смысле немецкого Закона о юридических услугах (RDG). Вы получаете только понятное объяснение и языковое упрощение содержания вашего документа. Юридическая оценка, индивидуальная проверка и обязательные рекомендации к действиям не предоставляются.",
+        faq4_a: "Нет. BriefHelden не оказывает юридических консультаций в смысле немецкого Закона о юридических услугах (RDG). Вы получаете только понятное текстовое объяснение и языковое упрощение содержания вашего документа. Юридическая оценка, индивидуальная проверка и обязательные рекомендации к действиям не предоставляются.",
 
         tip_title: "На что стоит обратить внимание в счёте за газ?",
         tip_sub: "Эти пункты часто особенно важны:",
-        tip1_title: "Проверьте потребление",
-        tip1_text: "Посмотрите, какой объём потребления газа указан в счёте и за какой период он рассчитан.",
-        tip2_title: "Изучите авансовые платежи",
+        tip1_title: "Посмотрите на потребление",
+        tip1_text: "Посмотрите, какой объём потребления указан в счёте и за какой период он рассчитан.",
+        tip2_title: "Проверьте авансовые платежи",
         tip2_text: "Проверьте, какие авансовые платежи уже были внесены и изменился ли ежемесячный аванс.",
-        tip3_title: "Обратите внимание на доплату или переплату",
-        tip3_text: "Посмотрите, указана ли в конце доплата или для вас показана переплата.",
+        tip3_title: "Проверьте показания счётчика и итоговую сумму",
+        tip3_text: "Обратите внимание, какие данные о показаниях счётчика указаны и названа ли в конце доплата или переплата.",
         tip4_title: "Сделайте содержание понятным",
-        tip4_text: "Если документ трудно понять, простое объяснение часто помогает легче воспринять содержащиеся в нём сведения.",
+        tip4_text: "Если термины, указания или формулировки кажутся неясными, языковое упрощение часто помогает лучше понять содержащиеся в документе сведения.",
 
-        more_title: "Другие частые письма",
-        more_1: "Stromrechnung verstehen",
-        more_2: "Nebenkostenabrechnung verstehen",
-        more_3: "Krankenkasse Brief verstehen",
-        more_4: "Versicherung Brief verstehen",
-        more_5: "Bank Brief verstehen",
-        more_6: "Bußgeldbescheid verstehen",
+        more_title: "Другие часто встречающиеся письма",
+        more_1_title: "Stromrechnung verstehen",
+        more_1_text: "Stromrechnungen klar und verständlich erklärt.",
+        more_2_title: "Nebenkostenabrechnung verstehen",
+        more_2_text: "Nebenkostenabrechnungen einfach erklärt.",
+        more_3_title: "Krankenkasse Brief verstehen",
+        more_3_text: "Schreiben der Krankenkasse in einfacher Sprache erklärt.",
+        more_4_title: "Versicherung Brief verstehen",
+        more_4_text: "Versicherungsschreiben klar und verständlich erklärt.",
+        more_5_title: "Bank Brief verstehen",
+        more_5_text: "Bankschreiben einfach erklärt.",
+        more_6_title: "Bußgeldbescheid verstehen",
+        more_6_text: "Bußgeldbescheide klar und verständlich erklärt.",
 
         foot_copy: "© 2026 BriefHelden – Все права защищены",
         foot_home: "Главная",
