@@ -1,287 +1,611 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Impressum – BriefHelden</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Impressum | BriefHelden</title>
+  <meta
+    name="description"
+    content="Impressum von BriefHelden mit Anbieterangaben, Kontakt, Verantwortlichkeit für Inhalte und Hinweisen zur Verbraucherstreitbeilegung."
+  />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.briefhelden-service.de/impressum.html" />
+
+  <meta property="og:title" content="Impressum | BriefHelden" />
+  <meta
+    property="og:description"
+    content="Impressum von BriefHelden mit Anbieterangaben, Kontakt und rechtlichen Pflichtangaben."
+  />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.briefhelden-service.de/impressum.html" />
+  <meta property="og:image" content="https://www.briefhelden-service.de/og-image.jpg" />
+  <meta property="og:site_name" content="BriefHelden" />
+  <meta name="theme-color" content="#0b1220" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CVRQ9QBE94');
+  </script>
+
   <style>
     :root{
-      --bg:#0b0f18;
-      --card:#ffffff;
-      --text:#0f172a;
-      --muted:#475569;
-      --accent:#2563eb;
+      --nav-bg: rgba(9,24,33,.78);
+      --nav-border: rgba(255,255,255,.10);
+      --text: #0b1220;
+      --muted: rgba(11,18,32,.72);
+      --heroText: #fff;
+      --heroMuted: rgba(255,255,255,.84);
+      --glass: rgba(255,255,255,.28);
+      --glass2: rgba(255,255,255,.16);
+      --stroke: rgba(255,255,255,.36);
+      --shadow: 0 18px 40px rgba(0,0,0,.18);
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --max: 1120px;
     }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+
     body{
       margin:0;
-      font-family:system-ui,Arial,sans-serif;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
       background:
-        radial-gradient(1200px 700px at 20% -10%, rgba(37,99,235,.35), transparent 60%),
-        radial-gradient(900px 600px at 90% 0%, rgba(99,102,241,.25), transparent 55%),
-        var(--bg);
-      color:#e5e7eb;
+        radial-gradient(1200px 700px at 12% 24%, rgba(120,180,255,.32), rgba(255,255,255,0) 60%),
+        radial-gradient(1200px 800px at 88% 18%, rgba(120,140,255,.26), rgba(255,255,255,0) 62%),
+        radial-gradient(1000px 700px at 50% 92%, rgba(170,210,255,.28), rgba(255,255,255,0) 60%),
+        linear-gradient(180deg, #f8fbff 0%, #eef6ff 45%, #f8fbff 100%);
+      min-height:100vh;
     }
-    .topbar{
-      max-width:980px;
-      margin:28px auto 14px;
-      padding:0 16px;
+
+    a{color:inherit;text-decoration:none}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:var(--nav-bg);
+      backdrop-filter:blur(12px) saturate(140%);
+      border-bottom:1px solid var(--nav-border);
+    }
+
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      color:#fff;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:900;
+      letter-spacing:.2px;
+      white-space:nowrap;
+    }
+
+    .brand .logo{
+      width:26px;
+      height:26px;
+      border-radius:10px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.85), rgba(255,255,255,.08)),
+        linear-gradient(180deg, rgba(55,120,255,.9), rgba(20,70,190,.9));
+      box-shadow:0 10px 18px rgba(0,0,0,.18);
+      position:relative;
+      flex:0 0 auto;
+    }
+
+    .brand .logo:after{
+      content:"";
+      position:absolute;
+      inset:7px 6px 7px 10px;
+      border-radius:8px;
+      background:rgba(255,255,255,.85);
+      clip-path:polygon(0 0, 100% 0, 85% 100%, 0 100%);
+      opacity:.12;
+    }
+
+    nav.links{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      flex-wrap:wrap;
+    }
+
+    nav.links a{
+      color:rgba(255,255,255,.82);
+      font-weight:700;
+      font-size:14px;
+    }
+
+    nav.links a:hover{color:#fff}
+
+    .langWrap{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      position:relative;
+    }
+
+    .langSelect{
+      appearance:none;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(0,0,0,.18);
+      color:#fff;
+      padding:8px 36px 8px 12px;
+      border-radius:12px;
+      font-weight:800;
+      cursor:pointer;
+      outline:none;
+    }
+
+    .langSelect:focus{
+      box-shadow:0 0 0 3px rgba(90,160,255,.25);
+    }
+
+    .langWrap:after{
+      content:"▾";
+      position:absolute;
+      right:12px;
+      top:50%;
+      transform:translateY(-50%);
+      color:rgba(255,255,255,.85);
+      pointer-events:none;
+      font-size:12px;
+    }
+
+    .hero{
+      position:relative;
+      color:var(--heroText);
+      padding:68px 18px 32px;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.58)),
+        url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=2200&q=60");
+      background-size:cover;
+      background-position:center;
+    }
+
+    .hero .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      text-align:center;
+    }
+
+    .hero h1{
+      margin:0 0 10px;
+      font-weight:950;
+      font-size:clamp(30px, 3.7vw, 46px);
+      letter-spacing:.2px;
+      text-shadow:0 10px 24px rgba(0,0,0,.35);
+    }
+
+    .hero p{
+      margin:0 auto;
+      max-width:900px;
+      color:var(--heroMuted);
+      font-size:clamp(15px, 2vw, 18px);
+      line-height:1.55;
+    }
+
+    .section{padding:26px 18px 10px}
+    .wrap{max-width:var(--max); margin:0 auto;}
+
+    .glassCard{
+      background:linear-gradient(180deg, var(--glass), var(--glass2));
+      border:1px solid var(--stroke);
+      border-radius:var(--radius-xl);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(14px) saturate(140%);
+      -webkit-backdrop-filter:blur(14px) saturate(140%);
+      overflow:hidden;
+    }
+
+    .pad{padding:22px}
+
+    .headline{
+      text-align:center;
+      margin:0 0 10px;
+      font-weight:950;
+      font-size:clamp(22px, 2.6vw, 34px);
+      letter-spacing:.2px;
+    }
+
+    .lead{
+      text-align:center;
+      margin:0 auto 16px;
+      max-width:920px;
+      color:rgba(11,18,32,.76);
+      line-height:1.7;
+      font-size:16px;
+    }
+
+    .legalNote{
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.55);
+      background:rgba(255,255,255,.20);
+      padding:18px;
+      color:rgba(11,18,32,.82);
+      line-height:1.65;
+      font-weight:700;
+      margin-bottom:16px;
+    }
+
+    .legalSection{
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.55);
+      background:rgba(255,255,255,.20);
+      padding:18px;
+      margin-top:14px;
+    }
+
+    .legalSection h2{
+      margin:0 0 8px;
+      font-size:20px;
+      font-weight:950;
+      line-height:1.3;
+    }
+
+    .legalSection p,
+    .legalSection li{
+      color:rgba(11,18,32,.82);
+      line-height:1.7;
+      font-weight:700;
+      margin:0;
+    }
+
+    .legalSection p + p{margin-top:10px}
+
+    footer{
+      margin-top:18px;
+      padding:18px 18px 28px;
+      color:rgba(255,255,255,.82);
+      background:rgba(9,24,33,.82);
+      border-top:1px solid rgba(255,255,255,.10);
+      backdrop-filter:blur(12px) saturate(140%);
+    }
+
+    .footWrap{
+      max-width:var(--max);
+      margin:0 auto;
       display:flex;
       justify-content:space-between;
       align-items:center;
+      flex-wrap:wrap;
       gap:12px;
-      flex-wrap:wrap;
     }
-    .brand{font-weight:700}
-    .nav{
+
+    .footLinks{
       display:flex;
+      gap:14px;
       flex-wrap:wrap;
-      gap:10px;
+      font-weight:800;
     }
-    .nav a{
-      text-decoration:none;
-      color:#e5e7eb;
-      padding:8px 14px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.2);
-    }
-    .nav a.active{border-color:#2563eb}
-    select{
-      padding:8px;
-      border-radius:8px;
-      border:1px solid #cbd5e1;
-    }
-    .wrap{
-      max-width:980px;
-      margin:auto;
-      padding:0 16px;
-    }
-    .card{
-      background:#fff;
-      color:#0f172a;
-      border-radius:18px;
-      padding:26px;
-      box-shadow:0 20px 60px rgba(0,0,0,.35);
-    }
-    h1{margin-top:0}
-    h2{margin-top:22px}
-    .note{
-      background:#f8fafc;
-      padding:12px;
-      border-radius:10px;
-      margin-bottom:18px;
-      color:#0f172a;
-    }
-    a{color:#2563eb}
-    .footer{
-      text-align:center;
-      margin:20px 0;
-      color:#ccc;
-      font-size:13px;
-    }
-    .small{
-      color:#334155;
-      font-size:14px;
+
+    .footLinks a{color:rgba(255,255,255,.80)}
+    .footLinks a:hover{color:#fff}
+
+    @media (max-width:900px){
+      nav.links{display:none}
     }
   </style>
 </head>
 <body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>BriefHelden</div>
+      </div>
 
-  <div class="topbar">
-    <div class="brand">BriefHelden</div>
+      <nav class="links" aria-label="Hauptnavigation">
+        <a href="index.html" data-i18n="nav_home">Startseite</a>
+        <a href="frage.html" data-i18n="nav_question">Frage stellen</a>
+        <a href="widerruf.html" data-i18n="nav_refund">Widerruf</a>
+        <a href="impressum.html" data-i18n="nav_imprint">Impressum</a>
+        <a href="agb.html" data-i18n="nav_terms">AGB</a>
+        <a href="datenschutz.html" data-i18n="nav_privacy">Datenschutz</a>
+      </nav>
 
-    <div class="nav" aria-label="Navigation">
-
-<a class="pill" href="/">Startseite</a>
-<a class="pill" href="/frage">Frage stellen (1,49 €)</a>
-<a class="pill" href="/#upload">Dokument erklären (6,90 €)</a>
-
-<a class="pill" href="/datenschutz">Datenschutz</a>
-<a class="pill" href="/agb">AGB</a>
-<a class="pill" href="/widerruf">Widerruf</a>
-<a class="pill" href="/impressum">Impressum</a>
-
-</div>
-
-    <select id="lang">
-      <option value="DE">DE</option>
-      <option value="EN">EN</option>
-      <option value="TR">TR</option>
-      <option value="RU">RU</option>
-    </select>
-  </div>
-
-  <div class="wrap">
-    <div class="card">
-      <h1 id="title"></h1>
-      <div class="note" id="note"></div>
-      <div id="content"></div>
+      <div class="langWrap">
+        <select class="langSelect" id="langSelect" aria-label="Sprache">
+          <option value="de">DE</option>
+          <option value="en">EN</option>
+          <option value="tr">TR</option>
+          <option value="ru">RU</option>
+        </select>
+      </div>
     </div>
-  </div>
+  </header>
 
-  <div class="footer">
-    © 2026 BriefHelden – Alle Rechte vorbehalten
-  </div>
+  <section class="hero">
+    <div class="wrap">
+      <h1 data-i18n="hero_title">Impressum</h1>
+      <p data-i18n="hero_sub">
+        Hier finden Sie die Anbieterangaben, Kontaktinformationen und gesetzlichen Pflichtangaben von BriefHelden.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="glassCard">
+        <div class="pad">
+          <h2 class="headline" data-i18n="main_title">Impressum</h2>
+          <p class="lead" data-i18n="main_sub">
+            Die folgenden Angaben gelten für das Online-Angebot von BriefHelden.
+          </p>
+
+          <div class="legalNote" data-i18n="note">
+            Hinweis: Die deutsche Version ist rechtlich maßgeblich. Übersetzungen dienen ausschließlich der besseren Verständlichkeit.
+          </div>
+
+          <div class="legalSection">
+            <h2 data-i18n="s1_title">1. Anbieter</h2>
+            <p><strong>BriefHelden</strong></p>
+          </div>
+
+          <div class="legalSection">
+            <h2 data-i18n="s2_title">2. Inhaber</h2>
+            <p>
+              <strong>David Hirschfeld</strong><br>
+              Carl-Maria-von-Weber-Str. 2<br>
+              74928 Hüffenhardt<br>
+              <span data-i18n="country_label">Deutschland</span>
+            </p>
+          </div>
+
+          <div class="legalSection">
+            <h2 data-i18n="s3_title">3. Kontakt</h2>
+            <p><span data-i18n="email_label">E-Mail:</span> <a href="mailto:kontakt@briefhelden-service.de">kontakt@briefhelden-service.de</a></p>
+          </div>
+
+          <div class="legalSection">
+            <h2 data-i18n="s4_title">4. Verantwortlich für den Inhalt</h2>
+            <p data-i18n="s4_p1">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</p>
+            <p>
+              <strong>David Hirschfeld</strong><br>
+              Carl-Maria-von-Weber-Str. 2<br>
+              74928 Hüffenhardt<br>
+              <span data-i18n="country_label_2">Deutschland</span>
+            </p>
+          </div>
+
+          <div class="legalSection">
+            <h2 data-i18n="s5_title">5. Verbraucherstreitbeilegung</h2>
+            <p data-i18n="s5_p1">Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footWrap">
+      <div data-i18n="foot_copy">© 2026 BriefHelden – Alle Rechte vorbehalten</div>
+      <div class="footLinks">
+        <a href="index.html" data-i18n="foot_home">Startseite</a>
+        <a href="frage.html" data-i18n="foot_question">Frage stellen</a>
+        <a href="widerruf.html" data-i18n="foot_refund">Widerruf</a>
+        <a href="impressum.html" data-i18n="foot_imprint">Impressum</a>
+        <a href="agb.html" data-i18n="foot_terms">AGB</a>
+        <a href="datenschutz.html" data-i18n="foot_privacy">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
 
   <script>
-    const DATA = {
-      ownerName: "David Hirschfeld",
-      brand: "BriefHelden",
-      street: "Carl-Maria-von-Weber-Str. 2",
-      zipCity: "74928 Hüffenhardt",
-      countryDE: "Deutschland",
-      countryEN: "Germany",
-email: "kontakt@briefhelden-service.de"
-    };
+    const i18n = {
+      de: {
+        pageTitle: "Impressum | BriefHelden",
+        metaDescription: "Impressum von BriefHelden mit Anbieterangaben, Kontakt, Verantwortlichkeit für Inhalte und Hinweisen zur Verbraucherstreitbeilegung.",
+        ogTitle: "Impressum | BriefHelden",
+        ogDescription: "Impressum von BriefHelden mit Anbieterangaben, Kontakt und rechtlichen Pflichtangaben.",
 
-    const TEXT = {
-      DE: {
-        title: "Impressum",
+        nav_home: "Startseite",
+        nav_question: "Frage stellen",
+        nav_refund: "Widerruf",
+        nav_imprint: "Impressum",
+        nav_terms: "AGB",
+        nav_privacy: "Datenschutz",
+
+        hero_title: "Impressum",
+        hero_sub: "Hier finden Sie die Anbieterangaben, Kontaktinformationen und gesetzlichen Pflichtangaben von BriefHelden.",
+
+        main_title: "Impressum",
+        main_sub: "Die folgenden Angaben gelten für das Online-Angebot von BriefHelden.",
         note: "Hinweis: Die deutsche Version ist rechtlich maßgeblich. Übersetzungen dienen ausschließlich der besseren Verständlichkeit.",
-        content: `
-          <p class="small">Angaben gemäß § 5 DDG.</p>
 
-          <h2>Anbieter</h2>
-          <p><strong>${DATA.brand}</strong></p>
+        s1_title: "1. Anbieter",
+        s2_title: "2. Inhaber",
+        s3_title: "3. Kontakt",
+        s4_title: "4. Verantwortlich für den Inhalt",
+        s4_p1: "Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:",
+        s5_title: "5. Verbraucherstreitbeilegung",
+        s5_p1: "Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.",
+        country_label: "Deutschland",
+        country_label_2: "Deutschland",
+        email_label: "E-Mail:",
 
-          <h2>Inhaber</h2>
-          <p>
-            <strong>${DATA.ownerName}</strong><br>
-            ${DATA.street}<br>
-            ${DATA.zipCity}<br>
-            ${DATA.countryDE}
-          </p>
-
-          <p><strong>E-Mail:</strong> <a href="mailto:${DATA.email}">${DATA.email}</a></p>
-
-          <h2>Verantwortlich für den Inhalt</h2>
-          <p class="small">Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</p>
-          <p>
-            <strong>${DATA.ownerName}</strong><br>
-            ${DATA.street}<br>
-            ${DATA.zipCity}<br>
-            ${DATA.countryDE}
-          </p>
-
-          <h2>Verbraucherstreitbeilegung / Universalschlichtungsstelle</h2>
-          <p>Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
-        `
+        foot_copy: "© 2026 BriefHelden – Alle Rechte vorbehalten",
+        foot_home: "Startseite",
+        foot_question: "Frage stellen",
+        foot_refund: "Widerruf",
+        foot_imprint: "Impressum",
+        foot_terms: "AGB",
+        foot_privacy: "Datenschutz"
       },
 
-      EN: {
-        title: "Imprint",
+      en: {
+        pageTitle: "Imprint | BriefHelden",
+        metaDescription: "Imprint of BriefHelden with provider details, contact information, responsibility for content and consumer dispute resolution notice.",
+        ogTitle: "Imprint | BriefHelden",
+        ogDescription: "Imprint of BriefHelden with provider details, contact information and legal notice.",
+
+        nav_home: "Home",
+        nav_question: "Ask a question",
+        nav_refund: "Withdrawal",
+        nav_imprint: "Imprint",
+        nav_terms: "Terms",
+        nav_privacy: "Privacy",
+
+        hero_title: "Imprint",
+        hero_sub: "Here you can find the provider details, contact information and legal notice of BriefHelden.",
+
+        main_title: "Imprint",
+        main_sub: "The following information applies to the online offer of BriefHelden.",
         note: "Note: The German version is legally binding. Translations are provided for convenience only.",
-        content: `
-          <p class="small">Information pursuant to § 5 DDG (German Digital Services Act).</p>
 
-          <h2>Provider</h2>
-          <p><strong>${DATA.brand}</strong></p>
+        s1_title: "1. Provider",
+        s2_title: "2. Owner",
+        s3_title: "3. Contact",
+        s4_title: "4. Responsible for Content",
+        s4_p1: "Responsible for content pursuant to § 18(2) MStV:",
+        s5_title: "5. Consumer Dispute Resolution",
+        s5_p1: "We are not obliged and not willing to participate in dispute resolution proceedings before a consumer arbitration board.",
+        country_label: "Germany",
+        country_label_2: "Germany",
+        email_label: "Email:",
 
-          <h2>Owner</h2>
-          <p>
-            <strong>${DATA.ownerName}</strong><br>
-            ${DATA.street}<br>
-            ${DATA.zipCity}<br>
-            ${DATA.countryEN}
-          </p>
-
-          <p><strong>Email:</strong> <a href="mailto:${DATA.email}">${DATA.email}</a></p>
-
-          <h2>Responsible for content</h2>
-          <p class="small">Responsible for content pursuant to § 18(2) MStV:</p>
-          <p>
-            <strong>${DATA.ownerName}</strong><br>
-            ${DATA.street}<br>
-            ${DATA.zipCity}<br>
-            ${DATA.countryEN}
-          </p>
-
-          <h2>Consumer dispute resolution</h2>
-          <p>We are not obliged and not willing to participate in dispute resolution proceedings before a consumer arbitration board.</p>
-        `
+        foot_copy: "© 2026 BriefHelden – All rights reserved",
+        foot_home: "Home",
+        foot_question: "Ask a question",
+        foot_refund: "Withdrawal",
+        foot_imprint: "Imprint",
+        foot_terms: "Terms",
+        foot_privacy: "Privacy"
       },
 
-      TR: {
-        title: "Künye",
+      tr: {
+        pageTitle: "Künye | BriefHelden",
+        metaDescription: "BriefHelden künyesi: sağlayıcı bilgileri, iletişim, içerik sorumluluğu ve tüketici uyuşmazlık çözümü bilgileri.",
+        ogTitle: "Künye | BriefHelden",
+        ogDescription: "BriefHelden künyesi: sağlayıcı bilgileri, iletişim ve yasal zorunlu bilgiler.",
+
+        nav_home: "Ana Sayfa",
+        nav_question: "Soru sor",
+        nav_refund: "Cayma",
+        nav_imprint: "Künye",
+        nav_terms: "Şartlar",
+        nav_privacy: "Gizlilik",
+
+        hero_title: "Künye",
+        hero_sub: "Burada BriefHelden'in sağlayıcı bilgilerini, iletişim bilgilerini ve yasal zorunlu bilgilerini bulabilirsiniz.",
+
+        main_title: "Künye",
+        main_sub: "Aşağıdaki bilgiler BriefHelden'in çevrim içi hizmeti için geçerlidir.",
         note: "Not: Hukuken bağlayıcı olan sürüm Almanca sürümdür. Çeviriler yalnızca kolaylık içindir.",
-        content: `
-          <p class="small">Alman Dijital Hizmetler Yasası (§ 5 DDG) uyarınca bilgiler.</p>
 
-          <h2>Sağlayıcı</h2>
-          <p><strong>${DATA.brand}</strong></p>
+        s1_title: "1. Sağlayıcı",
+        s2_title: "2. Sahip",
+        s3_title: "3. İletişim",
+        s4_title: "4. İçerikten Sorumlu",
+        s4_p1: "§ 18 Abs. 2 MStV uyarınca içerikten sorumlu kişi:",
+        s5_title: "5. Tüketici Uyuşmazlık Çözümü",
+        s5_p1: "Bir tüketici hakem heyeti önünde uyuşmazlık çözüm sürecine katılmak zorunda değiliz ve buna hazır da değiliz.",
+        country_label: "Almanya",
+        country_label_2: "Almanya",
+        email_label: "E-posta:",
 
-          <h2>Sahip</h2>
-          <p>
-            <strong>${DATA.ownerName}</strong><br>
-            ${DATA.street}<br>
-            ${DATA.zipCity}<br>
-            ${DATA.countryEN}
-          </p>
-
-          <p><strong>E-posta:</strong> <a href="mailto:${DATA.email}">${DATA.email}</a></p>
-
-          <h2>İçerikten sorumlu</h2>
-          <p class="small">§ 18(2) MStV uyarınca içerikten sorumlu kişi:</p>
-          <p>
-            <strong>${DATA.ownerName}</strong><br>
-            ${DATA.street}<br>
-            ${DATA.zipCity}<br>
-            ${DATA.countryEN}
-          </p>
-
-          <h2>Tüketici uyuşmazlık çözümü</h2>
-          <p>Bir tüketici hakem heyeti önünde uyuşmazlık çözüm sürecine katılmak zorunda değiliz ve buna hazır da değiliz.</p>
-        `
+        foot_copy: "© 2026 BriefHelden – Tüm hakları saklıdır",
+        foot_home: "Ana Sayfa",
+        foot_question: "Soru sor",
+        foot_refund: "Cayma",
+        foot_imprint: "Künye",
+        foot_terms: "Şartlar",
+        foot_privacy: "Gizlilik"
       },
 
-      RU: {
-        title: "Выходные данные",
+      ru: {
+        pageTitle: "Выходные данные | BriefHelden",
+        metaDescription: "Выходные данные BriefHelden: сведения о поставщике, контакты, ответственность за содержание и информация о потребительском урегулировании споров.",
+        ogTitle: "Выходные данные | BriefHelden",
+        ogDescription: "Выходные данные BriefHelden: сведения о поставщике, контакты и обязательная правовая информация.",
+
+        nav_home: "Главная",
+        nav_question: "Задать вопрос",
+        nav_refund: "Отказ",
+        nav_imprint: "Выходные данные",
+        nav_terms: "Условия",
+        nav_privacy: "Конфиденциальность",
+
+        hero_title: "Выходные данные",
+        hero_sub: "Здесь вы найдёте сведения о поставщике, контактную информацию и обязательные правовые данные BriefHelden.",
+
+        main_title: "Выходные данные",
+        main_sub: "Следующая информация относится к онлайн-предложению BriefHelden.",
         note: "Примечание: юридически обязательной является немецкая версия. Переводы приведены только для удобства.",
-        content: `
-          <p class="small">Информация согласно § 5 DDG (Закон Германии о цифровых услугах).</p>
 
-          <h2>Поставщик</h2>
-          <p><strong>${DATA.brand}</strong></p>
+        s1_title: "1. Поставщик",
+        s2_title: "2. Владелец",
+        s3_title: "3. Контакт",
+        s4_title: "4. Ответственный за Содержание",
+        s4_p1: "Ответственный за содержание согласно § 18 Abs. 2 MStV:",
+        s5_title: "5. Потребительское Урегулирование Споров",
+        s5_p1: "Мы не обязаны и не готовы участвовать в процедурах урегулирования споров в органе потребительского арбитража.",
+        country_label: "Германия",
+        country_label_2: "Германия",
+        email_label: "Email:",
 
-          <h2>Владелец</h2>
-          <p>
-            <strong>${DATA.ownerName}</strong><br>
-            ${DATA.street}<br>
-            ${DATA.zipCity}<br>
-            ${DATA.countryEN}
-          </p>
-
-          <p><strong>Email:</strong> <a href="mailto:${DATA.email}">${DATA.email}</a></p>
-
-          <h2>Ответственный за содержание</h2>
-          <p class="small">Ответственный за содержание согласно § 18(2) MStV:</p>
-          <p>
-            <strong>${DATA.ownerName}</strong><br>
-            ${DATA.street}<br>
-            ${DATA.zipCity}<br>
-            ${DATA.countryEN}
-          </p>
-
-          <h2>Потребительское урегулирование споров</h2>
-          <p>Мы не обязаны и не готовы участвовать в процедурах урегулирования споров в органе потребительского арбитража.</p>
-        `
+        foot_copy: "© 2026 BriefHelden – Все права защищены",
+        foot_home: "Главная",
+        foot_question: "Задать вопрос",
+        foot_refund: "Отказ",
+        foot_imprint: "Выходные данные",
+        foot_terms: "Условия",
+        foot_privacy: "Конфиденциальность"
       }
     };
 
-    const langSelect = document.getElementById("lang");
-    const title = document.getElementById("title");
-    const note = document.getElementById("note");
-    const content = document.getElementById("content");
+    function updateMeta(lang){
+      const dict = i18n[lang] || i18n.de;
+      document.title = dict.pageTitle;
 
-    function render(lang) {
-      title.innerHTML = TEXT[lang].title;
-      note.innerHTML = TEXT[lang].note;
-      content.innerHTML = TEXT[lang].content;
+      const description = document.querySelector('meta[name="description"]');
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      const ogDescription = document.querySelector('meta[property="og:description"]');
+
+      if(description) description.setAttribute("content", dict.metaDescription);
+      if(ogTitle) ogTitle.setAttribute("content", dict.ogTitle);
+      if(ogDescription) ogDescription.setAttribute("content", dict.ogDescription);
     }
 
-    langSelect.addEventListener("change", () => render(langSelect.value));
-    render("DE");
+    function applyLang(lang){
+      const currentLang = i18n[lang] ? lang : "de";
+      const dict = i18n[currentLang];
+
+      document.documentElement.lang = currentLang;
+
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        if(key in dict){
+          el.textContent = dict[key];
+        }
+      });
+
+      updateMeta(currentLang);
+      localStorage.setItem("briefhelden_lang", currentLang);
+    }
+
+    const select = document.getElementById("langSelect");
+    const savedLang = localStorage.getItem("briefhelden_lang");
+    const initialLang = ["de","en","tr","ru"].includes(savedLang) ? savedLang : "de";
+
+    select.value = initialLang;
+    applyLang(initialLang);
+
+    select.addEventListener("change", () => {
+      applyLang(select.value);
+    });
   </script>
 </body>
 </html>
-
-
