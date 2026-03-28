@@ -3,737 +3,873 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AGB – BriefHelden</title>
+  <title>AGB | BriefHelden</title>
+  <meta
+    name="description"
+    content="AGB von BriefHelden: Informationen zu Leistungsumfang, Vertragsschluss, Preisen, Haftung, Datenschutz und wichtigen rechtlichen Hinweisen."
+  />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.briefhelden-service.de/agb.html" />
+
+  <meta property="og:title" content="AGB | BriefHelden" />
+  <meta
+    property="og:description"
+    content="Allgemeine Geschäftsbedingungen von BriefHelden mit Informationen zu Leistungen, Vertrag, Zahlung, Haftung und Datenschutz."
+  />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.briefhelden-service.de/agb.html" />
+  <meta property="og:image" content="https://www.briefhelden-service.de/og-image.jpg" />
+  <meta property="og:site_name" content="BriefHelden" />
+  <meta name="theme-color" content="#0b1220" />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CVRQ9QBE94');
+  </script>
+
   <style>
     :root{
-      --bg:#0b0f18;
-      --card:#ffffff;
-      --text:#0f172a;
-      --muted:#475569;
-      --line:#e5e7eb;
-      --pill:#111827;
-      --pillText:#e5e7eb;
-      --accent:#2563eb;
+      --nav-bg: rgba(9,24,33,.78);
+      --nav-border: rgba(255,255,255,.10);
+      --text: #0b1220;
+      --muted: rgba(11,18,32,.72);
+      --heroText: #fff;
+      --heroMuted: rgba(255,255,255,.84);
+      --glass: rgba(255,255,255,.28);
+      --glass2: rgba(255,255,255,.16);
+      --stroke: rgba(255,255,255,.36);
+      --shadow: 0 18px 40px rgba(0,0,0,.18);
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --max: 1120px;
     }
+
     *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+
     body{
       margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Noto Sans",Arial,sans-serif;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
       background:
-        radial-gradient(1200px 700px at 20% -10%, rgba(37,99,235,.35), transparent 60%),
-        radial-gradient(900px 600px at 90% 0%, rgba(99,102,241,.25), transparent 55%),
-        var(--bg);
-      color:var(--pillText);
+        radial-gradient(1200px 700px at 12% 24%, rgba(120,180,255,.32), rgba(255,255,255,0) 60%),
+        radial-gradient(1200px 800px at 88% 18%, rgba(120,140,255,.26), rgba(255,255,255,0) 62%),
+        radial-gradient(1000px 700px at 50% 92%, rgba(170,210,255,.28), rgba(255,255,255,0) 60%),
+        linear-gradient(180deg, #f8fbff 0%, #eef6ff 45%, #f8fbff 100%);
+      min-height:100vh;
     }
-    .topbar{
-      max-width:980px;
-      margin:28px auto 14px;
-      padding:0 16px;
+
+    a{color:inherit;text-decoration:none}
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:var(--nav-bg);
+      backdrop-filter:blur(12px) saturate(140%);
+      border-bottom:1px solid var(--nav-border);
+    }
+
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 18px;
       display:flex;
       align-items:center;
       justify-content:space-between;
-      gap:12px;
-      flex-wrap:wrap;
+      gap:16px;
+      color:#fff;
     }
+
     .brand{
       display:flex;
       align-items:center;
       gap:10px;
-      font-weight:700;
+      font-weight:900;
       letter-spacing:.2px;
+      white-space:nowrap;
     }
-    .dot{
-      width:10px;
-      height:10px;
-      border-radius:50%;
-      background:var(--accent);
-      box-shadow:0 0 18px rgba(37,99,235,.7);
+
+    .brand .logo{
+      width:26px;
+      height:26px;
+      border-radius:10px;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,.85), rgba(255,255,255,.08)),
+        linear-gradient(180deg, rgba(55,120,255,.9), rgba(20,70,190,.9));
+      box-shadow:0 10px 18px rgba(0,0,0,.18);
+      position:relative;
+      flex:0 0 auto;
     }
-    .nav{
+
+    .brand .logo:after{
+      content:"";
+      position:absolute;
+      inset:7px 6px 7px 10px;
+      border-radius:8px;
+      background:rgba(255,255,255,.85);
+      clip-path:polygon(0 0, 100% 0, 85% 100%, 0 100%);
+      opacity:.12;
+    }
+
+    nav.links{
       display:flex;
-      gap:10px;
+      align-items:center;
+      gap:16px;
       flex-wrap:wrap;
     }
-    .pill{
-      border:1px solid rgba(229,231,235,.18);
-      background:rgba(17,24,39,.55);
-      color:var(--pillText);
-      padding:10px 14px;
-      border-radius:999px;
-      text-decoration:none;
-      font-weight:600;
+
+    nav.links a{
+      color:rgba(255,255,255,.82);
+      font-weight:700;
       font-size:14px;
-      backdrop-filter:blur(8px);
-      transition:.2s ease;
     }
-    .pill:hover{
-      border-color:rgba(37,99,235,.55);
-      box-shadow:0 0 0 3px rgba(37,99,235,.12);
-    }
-    .pill.active{
-      border-color:rgba(37,99,235,.75);
-      box-shadow:0 0 0 3px rgba(37,99,235,.18);
-    }
-    .lang{
+
+    nav.links a:hover{color:#fff}
+
+    .langWrap{
       display:flex;
       align-items:center;
       gap:10px;
+      position:relative;
     }
-    .lang label{font-size:14px; opacity:.9}
-    select{
-      border-radius:10px;
-      border:1px solid rgba(229,231,235,.25);
-      background:rgba(17,24,39,.55);
-      color:var(--pillText);
-      padding:10px 12px;
-      font-weight:700;
-      outline:none;
-      cursor:pointer;
-      backdrop-filter:blur(8px);
-    }
-    .wrap{
-      max-width:980px;
-      margin:0 auto 40px;
-      padding:0 16px;
-    }
-    .card{
-      background:var(--card);
-      color:var(--text);
-      border-radius:18px;
-      padding:26px 22px;
-      box-shadow:0 20px 60px rgba(0,0,0,.35);
-      border:1px solid rgba(255,255,255,.12);
-    }
-    .headerRow{
-      display:flex;
-      justify-content:space-between;
-      align-items:flex-start;
-      gap:14px;
-      margin-bottom:8px;
-      flex-wrap:wrap;
-    }
-    h1{
-      margin:0 0 8px 0;
-      font-size:34px;
-      line-height:1.15;
-      letter-spacing:-.2px;
-    }
-    .rightTag{
-      font-weight:700;
-      color:var(--muted);
-      white-space:nowrap;
-      padding-top:8px;
-    }
-    .note{
-      background:#f8fafc;
-      border:1px solid var(--line);
-      padding:12px 14px;
+
+    .langSelect{
+      appearance:none;
+      border:1px solid rgba(255,255,255,.18);
+      background:rgba(0,0,0,.18);
+      color:#fff;
+      padding:8px 36px 8px 12px;
       border-radius:12px;
-      color:#0f172a;
-      margin:10px 0 18px;
+      font-weight:800;
+      cursor:pointer;
+      outline:none;
     }
-    h2{
-      margin:22px 0 8px;
-      font-size:18px;
-      letter-spacing:.1px;
+
+    .langSelect:focus{
+      box-shadow:0 0 0 3px rgba(90,160,255,.25);
     }
-    p{margin:8px 0; line-height:1.55; color:#0f172a}
-    ul{margin:8px 0 8px 18px; color:#0f172a}
-    li{margin:6px 0}
-    .small{color:var(--muted); font-size:14px}
-    .content-link{color:var(--accent)}
-    .footer{
-      max-width:980px;
-      margin:18px auto 24px;
-      padding:0 16px;
+
+    .langWrap:after{
+      content:"▾";
+      position:absolute;
+      right:12px;
+      top:50%;
+      transform:translateY(-50%);
+      color:rgba(255,255,255,.85);
+      pointer-events:none;
+      font-size:12px;
+    }
+
+    .hero{
+      position:relative;
+      color:var(--heroText);
+      padding:68px 18px 32px;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.58)),
+        url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=2200&q=60");
+      background-size:cover;
+      background-position:center;
+    }
+
+    .hero .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      text-align:center;
+    }
+
+    .hero h1{
+      margin:0 0 10px;
+      font-weight:950;
+      font-size:clamp(30px, 3.7vw, 46px);
+      letter-spacing:.2px;
+      text-shadow:0 10px 24px rgba(0,0,0,.35);
+    }
+
+    .hero p{
+      margin:0 auto;
+      max-width:900px;
+      color:var(--heroMuted);
+      font-size:clamp(15px, 2vw, 18px);
+      line-height:1.55;
+    }
+
+    .section{padding:26px 18px 10px}
+    .wrap{max-width:var(--max); margin:0 auto;}
+
+    .glassCard{
+      background:linear-gradient(180deg, var(--glass), var(--glass2));
+      border:1px solid var(--stroke);
+      border-radius:var(--radius-xl);
+      box-shadow:var(--shadow);
+      backdrop-filter:blur(14px) saturate(140%);
+      -webkit-backdrop-filter:blur(14px) saturate(140%);
+      overflow:hidden;
+    }
+
+    .pad{padding:22px}
+
+    .headline{
+      text-align:center;
+      margin:0 0 10px;
+      font-weight:950;
+      font-size:clamp(22px, 2.6vw, 34px);
+      letter-spacing:.2px;
+    }
+
+    .lead{
+      text-align:center;
+      margin:0 auto 16px;
+      max-width:920px;
+      color:rgba(11,18,32,.76);
+      line-height:1.7;
+      font-size:16px;
+    }
+
+    .legalNote{
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.55);
+      background:rgba(255,255,255,.20);
+      padding:18px;
+      color:rgba(11,18,32,.82);
+      line-height:1.65;
+      font-weight:700;
+      margin-bottom:16px;
+    }
+
+    .legalSection{
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,.55);
+      background:rgba(255,255,255,.20);
+      padding:18px;
+      margin-top:14px;
+    }
+
+    .legalSection h2{
+      margin:0 0 8px;
+      font-size:20px;
+      font-weight:950;
+      line-height:1.3;
+    }
+
+    .legalSection p,
+    .legalSection li{
+      color:rgba(11,18,32,.82);
+      line-height:1.7;
+      font-weight:700;
+      margin:0;
+    }
+
+    .legalSection p + p{margin-top:10px}
+    .legalSection ul{
+      margin:10px 0 0 18px;
+      padding-left:0;
+    }
+
+    .content-link{
+      color:#2563eb;
+    }
+
+    footer{
+      margin-top:18px;
+      padding:18px 18px 28px;
+      color:rgba(255,255,255,.82);
+      background:rgba(9,24,33,.82);
+      border-top:1px solid rgba(255,255,255,.10);
+      backdrop-filter:blur(12px) saturate(140%);
+    }
+
+    .footWrap{
+      max-width:var(--max);
+      margin:0 auto;
       display:flex;
       justify-content:space-between;
-      gap:10px;
+      align-items:center;
       flex-wrap:wrap;
-      color:rgba(229,231,235,.85);
-      font-size:13px;
+      gap:12px;
     }
-    .footer a{
-      color:rgba(229,231,235,.95);
-      text-decoration:none;
-      border-bottom:1px dashed rgba(229,231,235,.45);
+
+    .footLinks{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      font-weight:800;
     }
-    .footer a:hover{border-bottom-color:rgba(229,231,235,.9)}
-    @media (max-width:760px){
-      h1{font-size:28px}
-      .topbar{margin-top:18px}
+
+    .footLinks a{color:rgba(255,255,255,.80)}
+    .footLinks a:hover{color:#fff}
+
+    @media (max-width:900px){
+      nav.links{display:none}
     }
   </style>
 </head>
 <body>
-  <div class="topbar">
-    <div class="brand">
-      <span class="dot"></span>
-      <span>BriefHelden</span>
-    </div>
-
-    <div class="nav" aria-label="Navigation">
-      <a class="pill" href="/">Startseite</a>
-      <a class="pill" href="/frage">Frage stellen (1,49 €)</a>
-      <a class="pill" href="/hupload">Dokument erklären (6,90 €)</a>
-      <a class="pill" href="/datenschutz">Datenschutz</a>
-      <a class="pill active" href="/agb">AGB</a>
-      <a class="pill" href="/widerruf">Widerruf</a>
-      <a class="pill" href="/impressum">Impressum</a>
-    </div>
-
-    <div class="lang">
-      <label for="langSelect" id="langLabel">Sprache</label>
-      <select id="langSelect" aria-label="Sprache wählen">
-        <option value="DE">DE</option>
-        <option value="EN">EN</option>
-        <option value="TR">TR</option>
-        <option value="RU">RU</option>
-      </select>
-    </div>
-  </div>
-
-  <div class="wrap">
-    <div class="card">
-      <div class="headerRow">
-        <div>
-          <h1 id="title">Allgemeine Geschäftsbedingungen (AGB)</h1>
-        </div>
-        <div class="rightTag">BriefHelden · Rechtliches</div>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>BriefHelden</div>
       </div>
 
-      <div class="note" id="bindingNote"></div>
-      <div id="content"></div>
+      <nav class="links" aria-label="Hauptnavigation">
+        <a href="index.html" data-i18n="nav_home">Startseite</a>
+        <a href="frage.html" data-i18n="nav_question">Frage stellen</a>
+        <a href="widerruf.html" data-i18n="nav_refund">Widerruf</a>
+        <a href="impressum.html" data-i18n="nav_imprint">Impressum</a>
+        <a href="agb.html" data-i18n="nav_terms">AGB</a>
+        <a href="datenschutz.html" data-i18n="nav_privacy">Datenschutz</a>
+      </nav>
+
+      <div class="langWrap">
+        <select class="langSelect" id="langSelect" aria-label="Sprache">
+          <option value="de">DE</option>
+          <option value="en">EN</option>
+          <option value="tr">TR</option>
+          <option value="ru">RU</option>
+        </select>
+      </div>
     </div>
-  </div>
+  </header>
 
-  <div class="footer">
-    <div>© <span id="year"></span> BriefHelden – Alle Rechte vorbehalten</div>
-    <div style="display:flex; gap:14px; flex-wrap:wrap;">
-      <a href="/">Startseite</a>
-      <a href="/frage">Frage stellen</a>
-      <a href="/hupload">Dokument erklären</a>
-      <a href="/datenschutz">Datenschutz</a>
-      <a href="/agb">AGB</a>
-      <a href="/widerruf">Widerruf</a>
-      <a href="/impressum">Impressum</a>
+  <section class="hero">
+    <div class="wrap">
+      <h1 data-i18n="hero_title">AGB</h1>
+      <p data-i18n="hero_sub">
+        Hier finden Sie die Allgemeinen Geschäftsbedingungen von BriefHelden mit Informationen zu Leistungen, Vertragsschluss, Zahlung, Haftung und Datenschutz.
+      </p>
     </div>
-  </div>
+  </section>
 
-<script>
-(function(){
-  document.getElementById("year").textContent = new Date().getFullYear();
+  <section class="section">
+    <div class="wrap">
+      <div class="glassCard">
+        <div class="pad">
+          <h2 class="headline" data-i18n="main_title">Allgemeine Geschäftsbedingungen (AGB)</h2>
+          <p class="lead" data-i18n="main_sub">
+            Die folgenden Bedingungen gelten für die Nutzung der Leistungen von BriefHelden.
+          </p>
 
-  const TEXT = {
-    DE: {
-      langLabel: "Sprache",
-      title: "Allgemeine Geschäftsbedingungen (AGB)",
-      bindingNote: "<strong>Hinweis:</strong> Die deutsche Version ist rechtlich maßgeblich. Übersetzungen dienen ausschließlich der besseren Verständlichkeit.",
-      sections: [
-        {
-          h: "1. Geltungsbereich",
-          p: [
-            "Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Leistungen, die über BriefHelden angeboten werden.",
-            "Abweichende Bedingungen von Kunden finden keine Anwendung, sofern wir ihrer Geltung nicht ausdrücklich schriftlich zustimmen."
-          ]
-        },
-        {
-          h: "2. Anbieter / Kontakt",
-          p: [
-"<strong>David Hirschfeld – BriefHelden</strong><br>Carl-Maria-von-Weber-Str. 2<br>74928 Hüffenhardt<br>Deutschland<br><br><strong>E-Mail:</strong> <a class=\"content-link\" href=\"mailto:kontakt@briefhelden-service.de\">kontakt@briefhelden-service.de</a>"
-          ]
-        },
-        {
-          h: "3. Leistungsbeschreibung",
-          p: [
-            "BriefHelden bietet eine verständliche sprachliche Erklärung von eingereichten Dokumenten, Schreiben, Formularen oder Mitteilungen an.",
-            "Die Leistung besteht ausschließlich in einer vereinfachten und allgemein verständlichen Darstellung des Inhalts eines eingereichten Dokuments.",
-            "Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung eines Einzelfalls und keine Empfehlung konkreter Maßnahmen."
-          ]
-        },
-        {
-          h: "4. Keine Rechtsberatung",
-          p: [
-            "BriefHelden erbringt keine Rechtsberatung und ersetzt keine anwaltliche, behördliche oder sonstige fachliche Beratung.",
-            "Es werden insbesondere keine verbindlichen rechtlichen Bewertungen, keine Einschätzungen von Erfolgsaussichten, keine Vertretung und keine individuelle rechtliche Prüfung übernommen."
-          ]
-        },
-        {
-          h: "5. Keine individuelle Einzelfallprüfung",
-          p: [
-            "Die von BriefHelden bereitgestellten Erklärungen erfolgen ausschließlich allgemein und unverbindlich.",
-            "Es erfolgt keine individuelle rechtliche Prüfung eines konkreten Einzelfalls.",
-            "Bei rechtlichen Fragen oder wenn konkrete Maßnahmen erforderlich sind, sollten sich Kunden an eine geeignete Beratungsstelle, Behörde oder einen Rechtsanwalt wenden."
-          ]
-        },
-        {
-          h: "6. Nutzungsvoraussetzungen / Mitwirkung",
-          p: [
-            "Kunden sind dafür verantwortlich, richtige und vollständige Angaben zu machen und die für die Bearbeitung erforderlichen Informationen oder Dokumente bereitzustellen.",
-            "Für eine Bearbeitung können Rückfragen erforderlich sein. Verzögerungen, die durch fehlende Mitwirkung entstehen, liegen nicht im Verantwortungsbereich von BriefHelden."
-          ]
-        },
-        {
-          h: "7. Vertragsschluss",
-          p: [
-            "Die Darstellung der Leistungen auf der Website stellt kein verbindliches Angebot dar.",
-            "Ein Vertrag kommt zustande, sobald der Kunde eine Anfrage übermittelt und die Zahlung erfolgreich abgeschlossen ist oder wir die Anfrage ausdrücklich bestätigen."
-          ]
-        },
-        {
-          h: "8. Preise und Zahlung",
-          p: [
-            "Die angegebenen Preise gelten zum Zeitpunkt der Bestellung.",
-            "Die Zahlungsabwicklung erfolgt über Stripe. Die jeweils verfügbaren Zahlungsmethoden werden im Checkout angezeigt.",
-            "Bis zur vollständigen Zahlung besteht kein Anspruch auf Leistungserbringung."
-          ]
-        },
-        {
-          h: "9. Lieferung / Bearbeitungszeit",
-          p: [
-            "Die Ergebnisse werden in der Regel per E-Mail übermittelt.",
-            "Eine konkrete Bearbeitungszeit kann je nach Umfang und Auslastung variieren. Wir bemühen uns um eine zügige Bearbeitung."
-          ]
-        },
-        {
-          h: "10. Widerruf (Verbraucherhinweis)",
-          p: [
-            "Für digitale Dienstleistungen kann das Widerrufsrecht unter bestimmten gesetzlichen Voraussetzungen vorzeitig erlöschen, wenn mit der Ausführung der Leistung begonnen wurde.",
-            "Einzelheiten hierzu finden Sie in der Widerrufsbelehrung auf der Seite <a class=\"content-link\" href=\"/widerruf\">Widerruf</a>."
-          ]
-        },
-        {
-          h: "11. Haftung",
-          p: [
-            "BriefHelden haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit sowie bei Verletzung von Leben, Körper oder Gesundheit.",
-            "Bei leichter Fahrlässigkeit haftet BriefHelden nur bei Verletzung wesentlicher Vertragspflichten und begrenzt auf den vorhersehbaren, vertragstypischen Schaden.",
-            "Da keine Rechtsberatung und keine individuelle rechtliche Prüfung erfolgt, übernehmen wir keine Verantwortung für Entscheidungen, Maßnahmen oder Unterlassungen, die auf Grundlage unserer sprachlichen Erklärung getroffen werden."
-          ]
-        },
-        {
-          h: "12. Verfügbarkeit / technische Störungen",
-          p: [
-            "Wir bemühen uns um eine hohe Verfügbarkeit der Website, können jedoch Unterbrechungen, Wartungen, technische Störungen oder Fälle höherer Gewalt nicht ausschließen.",
-            "Es besteht kein Anspruch auf eine jederzeit störungsfreie Nutzung."
-          ]
-        },
-        {
-          h: "13. Datenschutz",
-          p: [
-            "Informationen zur Verarbeitung personenbezogener Daten finden Sie in der Datenschutzerklärung unter <a class=\"content-link\" href=\"/datenschutz\">Datenschutz</a>."
-          ]
-        },
-        {
-          h: "14. Schlussbestimmungen",
-          p: [
-            "Es gilt deutsches Recht unter Ausschluss des UN-Kaufrechts, soweit gesetzlich zulässig.",
-            "Sollten einzelne Bestimmungen dieser AGB unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt."
-          ]
-        }
-      ]
-    },
+          <div class="legalNote" data-i18n="bindingNote">
+            Hinweis: Die deutsche Version ist rechtlich maßgeblich. Übersetzungen dienen ausschließlich der besseren Verständlichkeit.
+          </div>
 
-    EN: {
-      langLabel: "Language",
-      title: "Terms and Conditions",
-      bindingNote: "<strong>Note:</strong> The German version is legally binding. Translations are provided for convenience only.",
-      sections: [
-        {
-          h: "1. Scope",
-          p: [
-            "These Terms and Conditions apply to all services offered via BriefHelden.",
-            "Any differing customer terms do not apply unless we expressly agree to them in writing."
-          ]
-        },
-        {
-          h: "2. Provider / Contact",
-          p: [
-"<strong>David Hirschfeld – BriefHelden</strong><br>Carl-Maria-von-Weber-Str. 2<br>74928 Hüffenhardt<br>Germany<br><br><strong>Email:</strong> <a class=\"content-link\" href=\"mailto:kontakt@briefhelden-service.de\">kontakt@briefhelden-service.de</a>"
-          ]
-        },
-        {
-          h: "3. Service description",
-          p: [
-            "BriefHelden provides a plain-language explanation of submitted documents, letters, forms or notices.",
-            "The service consists exclusively of a simplified and generally understandable presentation of the content of a submitted document.",
-            "No legal assessment, no individual case review and no recommendation of concrete actions is provided."
-          ]
-        },
-        {
-          h: "4. No legal advice",
-          p: [
-            "BriefHelden does not provide legal advice and does not replace advice from a lawyer, public authority or other professional advisor.",
-            "In particular, we do not provide binding legal assessments, opinions on chances of success, representation or individual legal case reviews."
-          ]
-        },
-        {
-          h: "5. No individual case review",
-          p: [
-            "The explanations provided by BriefHelden are general and non-binding only.",
-            "No individual legal assessment of a specific case is carried out.",
-            "If legal questions arise or concrete action is required, customers should contact a suitable advisory body, authority or lawyer."
-          ]
-        },
-        {
-          h: "6. Customer obligations / cooperation",
-          p: [
-            "Customers are responsible for providing correct and complete information and for submitting the information or documents required for processing.",
-            "Follow-up questions may be necessary. Delays caused by missing cooperation are not our responsibility."
-          ]
-        },
-        {
-          h: "7. Contract formation",
-          p: [
-            "The presentation of services on the website does not constitute a binding offer.",
-            "A contract is formed once the customer submits a request and payment has been completed successfully or once we expressly confirm the request."
-          ]
-        },
-        {
-          h: "8. Prices and payment",
-          p: [
-            "The prices shown apply at the time of purchase.",
-            "Payments are processed via Stripe. Available payment methods are shown during checkout.",
-            "No service is owed until payment has been completed in full."
-          ]
-        },
-        {
-          h: "9. Delivery / processing time",
-          p: [
-            "Results are generally delivered by email.",
-            "Processing time may vary depending on scope and workload. We aim to process requests promptly."
-          ]
-        },
-        {
-          h: "10. Withdrawal (consumer notice)",
-          p: [
-            "For digital services, the right of withdrawal may expire early under certain legal conditions once performance has begun.",
-            "Details can be found on the <a class=\"content-link\" href=\"/widerruf\">Withdrawal</a> page."
-          ]
-        },
-        {
-          h: "11. Liability",
-          p: [
-            "BriefHelden is liable without limitation for intent and gross negligence as well as for injury to life, body or health.",
-            "In cases of slight negligence, BriefHelden is liable only for breach of essential contractual obligations and limited to the foreseeable typical contractual damage.",
-            "As no legal advice and no individual legal review is provided, we assume no responsibility for decisions, measures or omissions taken on the basis of our plain-language explanation."
-          ]
-        },
-        {
-          h: "12. Availability / technical issues",
-          p: [
-            "We strive for high availability of the website but cannot exclude interruptions, maintenance, technical faults or force majeure.",
-            "There is no entitlement to uninterrupted use at all times."
-          ]
-        },
-        {
-          h: "13. Data protection",
-          p: [
-            "Information on the processing of personal data can be found in our <a class=\"content-link\" href=\"/datenschutz\">Privacy Policy</a>."
-          ]
-        },
-        {
-          h: "14. Final provisions",
-          p: [
-            "German law applies to the extent legally permissible, excluding the UN Convention on Contracts for the International Sale of Goods (CISG).",
-            "Should individual provisions of these Terms be invalid, the validity of the remaining provisions shall remain unaffected."
-          ]
-        }
-      ]
-    },
+          <div class="legalSection">
+            <h2 data-i18n="s1_title">1. Geltungsbereich</h2>
+            <p data-i18n="s1_p1">Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Leistungen, die über BriefHelden angeboten werden.</p>
+            <p data-i18n="s1_p2">Abweichende Bedingungen von Kunden finden keine Anwendung, sofern wir ihrer Geltung nicht ausdrücklich schriftlich zustimmen.</p>
+          </div>
 
-    TR: {
-      langLabel: "Dil",
-      title: "Şartlar ve Koşullar",
-      bindingNote: "<strong>Not:</strong> Hukuken bağlayıcı olan sürüm Almanca sürümdür. Çeviriler yalnızca kolaylık içindir.",
-      sections: [
-        {
-          h: "1. Kapsam",
-          p: [
-            "Bu Şartlar ve Koşullar, BriefHelden üzerinden sunulan tüm hizmetler için geçerlidir.",
-            "Müşterinin farklı şartları, yazılı olarak açıkça kabul etmedikçe geçerli değildir."
-          ]
-        },
-        {
-          h: "2. Sağlayıcı / İletişim",
-          p: [
-"<strong>David Hirschfeld – BriefHelden</strong><br>Carl-Maria-von-Weber-Str. 2<br>74928 Hüffenhardt<br>Almanya<br><br><strong>E-posta:</strong> <a class=\"content-link\" href=\"mailto:kontakt@briefhelden-service.de\">kontakt@briefhelden-service.de</a>"
-          ]
-        },
-        {
-          h: "3. Hizmet tanımı",
-          p: [
-            "BriefHelden, gönderilen belgelerin, yazıların, formların veya bildirimlerin anlaşılır dille açıklanmasını sunar.",
-            "Hizmet yalnızca gönderilen belgenin içeriğinin sadeleştirilmiş ve genel olarak anlaşılır biçimde sunulmasından ibarettir.",
-            "Herhangi bir hukuki değerlendirme, bireysel olay incelemesi veya somut adım önerisi sunulmaz."
-          ]
-        },
-        {
-          h: "4. Hukuki danışmanlık yok",
-          p: [
-            "BriefHelden hukuki danışmanlık vermez ve avukat, resmi kurum veya başka bir uzman danışmanlığının yerine geçmez.",
-            "Özellikle bağlayıcı hukuki değerlendirme, başarı şansı analizi, temsil veya bireysel hukuki olay incelemesi yapılmaz."
-          ]
-        },
-        {
-          h: "5. Bireysel olay incelemesi yok",
-          p: [
-            "BriefHelden tarafından sağlanan açıklamalar yalnızca genel ve bağlayıcı olmayan niteliktedir.",
-            "Belirli bir olay hakkında bireysel hukuki değerlendirme yapılmaz.",
-            "Hukuki sorular ortaya çıkarsa veya somut adımlar gerekiyorsa, müşteri uygun bir danışma merkezi, kurum veya avukatla iletişime geçmelidir."
-          ]
-        },
-        {
-          h: "6. Müşteri yükümlülükleri / iş birliği",
-          p: [
-            "Müşteri doğru ve eksiksiz bilgi vermekten ve işlem için gerekli bilgi veya belgeleri sağlamaktan sorumludur.",
-            "Ek sorular gerekebilir. Eksik iş birliğinden doğan gecikmeler bizim sorumluluğumuzda değildir."
-          ]
-        },
-        {
-          h: "7. Sözleşmenin kurulması",
-          p: [
-            "Web sitesindeki hizmet sunumu bağlayıcı teklif oluşturmaz.",
-            "Müşteri talebi gönderdiğinde ve ödeme başarıyla tamamlandığında veya talep tarafımızdan açıkça onaylandığında sözleşme kurulmuş olur."
-          ]
-        },
-        {
-          h: "8. Fiyatlar ve ödeme",
-          p: [
-            "Gösterilen fiyatlar sipariş anında geçerlidir.",
-            "Ödeme işlemleri Stripe üzerinden yürütülür. Uygun ödeme yöntemleri ödeme sırasında gösterilir.",
-            "Ödeme tamamlanmadan hizmet sunma yükümlülüğü doğmaz."
-          ]
-        },
-        {
-          h: "9. Teslim / işlem süresi",
-          p: [
-            "Sonuçlar genellikle e-posta ile gönderilir.",
-            "İşlem süresi kapsam ve yoğunluğa göre değişebilir. Talepleri mümkün olduğunca hızlı işlemeye çalışırız."
-          ]
-        },
-        {
-          h: "10. Cayma (tüketici bilgilendirmesi)",
-          p: [
-            "Dijital hizmetlerde, hizmetin ifasına başlanmasıyla belirli yasal şartlar altında cayma hakkı erken sona erebilir.",
-            "Ayrıntılar <a class=\"content-link\" href=\"/widerruf\">Cayma</a> sayfasında yer alır."
-          ]
-        },
-        {
-          h: "11. Sorumluluk",
-          p: [
-            "BriefHelden, kasıt ve ağır ihmal ile yaşam, beden veya sağlık zararlarında sınırsız sorumludur.",
-            "Hafif ihmal halinde sorumluluk yalnızca esas sözleşme yükümlülüklerinin ihlalinde ve öngörülebilir tipik zarar ile sınırlıdır.",
-            "Hukuki danışmanlık ve bireysel hukuki inceleme verilmediğinden, sade açıklamamız temel alınarak alınan kararlar, önlemler veya ihmaller için sorumluluk üstlenmeyiz."
-          ]
-        },
-        {
-          h: "12. Erişilebilirlik / teknik sorunlar",
-          p: [
-            "Web sitesinin yüksek erişilebilirliğini hedefleriz; ancak kesinti, bakım, teknik arıza veya mücbir sebep halleri tamamen dışlanamaz.",
-            "Her zaman kesintisiz kullanım hakkı yoktur."
-          ]
-        },
-        {
-          h: "13. Veri koruma",
-          p: [
-            "Kişisel verilerin işlenmesine ilişkin bilgiler <a class=\"content-link\" href=\"/datenschutz\">Gizlilik Politikası</a> sayfasında yer alır."
-          ]
-        },
-        {
-          h: "14. Son hükümler",
-          p: [
-            "Yasal olarak izin verildiği ölçüde Alman hukuku uygulanır; CISG hariçtir.",
-            "Bu şartların herhangi bir hükmü geçersiz olursa, diğer hükümler geçerliliğini korur."
-          ]
-        }
-      ]
-    },
+          <div class="legalSection">
+            <h2 data-i18n="s2_title">2. Anbieter / Kontakt</h2>
+            <p>
+              <strong>David Hirschfeld – BriefHelden</strong><br>
+              Carl-Maria-von-Weber-Str. 2<br>
+              74928 Hüffenhardt<br>
+              <span data-i18n="country_label">Deutschland</span><br><br>
+              <span data-i18n="email_label">E-Mail:</span> <a class="content-link" href="mailto:kontakt@briefhelden-service.de">kontakt@briefhelden-service.de</a>
+            </p>
+          </div>
 
-    RU: {
-      langLabel: "Язык",
-      title: "Условия использования",
-      bindingNote: "<strong>Примечание:</strong> Юридически обязательной является немецкая версия. Переводы — только для удобства.",
-      sections: [
-        {
-          h: "1. Область применения",
-          p: [
-            "Настоящие условия применяются ко всем услугам, предоставляемым через BriefHelden.",
-            "Иные условия клиента не применяются, если мы явно не согласуем их в письменной форме."
-          ]
-        },
-        {
-          h: "2. Поставщик / Контакты",
-          p: [
-"<strong>David Hirschfeld – BriefHelden</strong><br>Carl-Maria-von-Weber-Str. 2<br>74928 Hüffenhardt<br>Германия<br><br><strong>Email:</strong> <a class=\"content-link\" href=\"mailto:kontakt@briefhelden-service.de\">kontakt@briefhelden-service.de</a>"
-          ]
-        },
-        {
-          h: "3. Описание услуги",
-          p: [
-            "BriefHelden предоставляет понятное языковое объяснение переданных документов, писем, форм или уведомлений.",
-            "Услуга заключается исключительно в упрощённом и в целом понятном изложении содержания переданного документа.",
-            "Никакая правовая оценка, индивидуальная проверка конкретного случая или рекомендация конкретных действий не предоставляется."
-          ]
-        },
-        {
-          h: "4. Отсутствие юридической консультации",
-          p: [
-            "BriefHelden не оказывает юридических консультаций и не заменяет консультации адвоката, государственного органа или иного специалиста.",
-            "В частности, мы не предоставляем обязательных правовых оценок, не оцениваем шансы на успех, не осуществляем представительство и не проводим индивидуальную правовую проверку случая."
-          ]
-        },
-        {
-          h: "5. Отсутствие индивидуальной проверки случая",
-          p: [
-            "Разъяснения BriefHelden носят исключительно общий и необязательный характер.",
-            "Индивидуальная правовая оценка конкретного случая не проводится.",
-            "Если возникают юридические вопросы или требуются конкретные действия, клиенту следует обратиться в соответствующий консультационный центр, орган или к адвокату."
-          ]
-        },
-        {
-          h: "6. Обязанности клиента / содействие",
-          p: [
-            "Клиент обязан предоставлять правильную и полную информацию, а также сведения или документы, необходимые для обработки.",
-            "Могут потребоваться дополнительные вопросы. Задержки из-за отсутствия содействия не относятся к нашей ответственности."
-          ]
-        },
-        {
-          h: "7. Заключение договора",
-          p: [
-            "Представление услуг на сайте не является обязательным предложением.",
-            "Договор считается заключённым после отправки клиентом запроса и успешного завершения оплаты либо после нашего явного подтверждения запроса."
-          ]
-        },
-        {
-          h: "8. Цены и оплата",
-          p: [
-            "Указанные цены действуют на момент заказа.",
-            "Оплата обрабатывается через Stripe. Доступные способы оплаты отображаются при оформлении.",
-            "До полной оплаты обязанность по оказанию услуги не возникает."
-          ]
-        },
-        {
-          h: "9. Доставка / срок обработки",
-          p: [
-            "Результаты, как правило, отправляются по электронной почте.",
-            "Срок обработки может меняться в зависимости от объёма и загрузки. Мы стремимся обрабатывать запросы как можно быстрее."
-          ]
-        },
-        {
-          h: "10. Отказ (информация для потребителей)",
-          p: [
-            "Для цифровых услуг право на отказ может прекратиться досрочно при определённых законных условиях после начала исполнения услуги.",
-            "Подробности указаны на странице <a class=\"content-link\" href=\"/widerruf\">Отказ</a>."
-          ]
-        },
-        {
-          h: "11. Ответственность",
-          p: [
-            "BriefHelden несёт неограниченную ответственность при умысле и грубой неосторожности, а также при причинении вреда жизни, телу или здоровью.",
-            "При лёгкой неосторожности ответственность ограничивается нарушением существенных договорных обязанностей и предсказуемым типичным ущербом.",
-            "Поскольку юридическая консультация и индивидуальная правовая проверка не предоставляются, мы не несём ответственности за решения, действия или бездействие, принятые на основе нашего понятного языкового объяснения."
-          ]
-        },
-        {
-          h: "12. Доступность / технические проблемы",
-          p: [
-            "Мы стремимся обеспечить высокую доступность сайта, однако нельзя полностью исключить перерывы, обслуживание, технические сбои или форс-мажор.",
-            "Право на бесперебойное использование в любое время не предоставляется."
-          ]
-        },
-        {
-          h: "13. Защита данных",
-          p: [
-            "Информация об обработке персональных данных содержится в разделе <a class=\"content-link\" href=\"/datenschutz\">Политика конфиденциальности</a>."
-          ]
-        },
-        {
-          h: "14. Заключительные положения",
-          p: [
-            "Применяется немецкое право в той мере, в какой это допускается законом, с исключением CISG.",
-            "Если отдельные положения настоящих условий окажутся недействительными, остальные положения сохраняют силу."
-          ]
-        }
-      ]
+          <div class="legalSection">
+            <h2 data-i18n="s3_title">3. Leistungsbeschreibung</h2>
+            <p data-i18n="s3_p1">BriefHelden bietet eine verständliche sprachliche Erklärung von eingereichten Dokumenten, Schreiben, Formularen oder Mitteilungen an.</p>
+            <p data-i18n="s3_p2">Die Leistung besteht ausschließlich in einer vereinfachten und allgemein verständlichen Darstellung des Inhalts eines eingereichten Dokuments.</p>
+            <p data-i18n="s3_p3">Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung eines Einzelfalls und keine Empfehlung konkreter Maßnahmen.</p>
+          </div>
+
+          <div class="legalSection">
+            <h2 data-i18n="s4_title">4. Keine Rechtsberatung</h2>
+            <p data-i18n="s4_p1">BriefHelden erbringt keine Rechtsberatung und ersetzt keine anwaltliche, behördliche oder sonstige fachliche Beratung.</p>
+            <p data-i18n="s4_p2">Es werden insbesondere keine verbindlichen rechtlichen Bewertungen, keine Einschätzungen von Erfolgsaussichten, keine Vertretung und keine individuelle rechtliche Prüfung übernommen.</p>
+          </div>
+
+          <div class="legalSection">
+            <h2 data-i18n="s5_title">5. Keine individuelle Einzelfallprüfung</h2>
+            <p data-i18n="s5_p1">Die von BriefHelden bereitgestellten Erklärungen erfolgen ausschließlich allgemein und unverbindlich.</p>
+            <p data-i18n="s5_p2">Es erfolgt keine individuelle rechtliche Prüfung eines konkreten Einzelfalls.</p>
+            <p data-i18n="s5_p3">Bei rechtlichen Fragen oder wenn konkrete Maßnahmen erforderlich sind, sollten sich Kunden an eine geeignete Beratungsstelle, Behörde oder einen Rechtsanwalt wenden.</p>
+          </div>
+
+          <div class="legalSection">
+            <h2 data-i18n="s6_title">6. Nutzungsvoraussetzungen / Mitwirkung</h2>
+            <p data-i18n="s6_p1">Kunden sind dafür verantwortlich, richtige und vollständige Angaben zu machen und die für die Bearbeitung erforderlichen Informationen oder Dokumente bereitzustellen.</p>
+            <p data-i18n="s6_p2">Für eine Bearbeitung können Rückfragen erforderlich sein. Verzögerungen, die durch fehlende Mitwirkung entstehen, liegen nicht im Verantwortungsbereich von BriefHelden.</p>
+          </div>
+
+          <div class="legalSection">
+            <h2 data-i18n="s7_title">7. Vertragsschluss</h2>
+            <p data-i18n="s7_p1">Die Darstellung der Leistungen auf der Website stellt kein verbindliches Angebot dar.</p>
+            <p data-i18n="s7_p2">Ein Vertrag kommt zustande, sobald der Kunde eine Anfrage übermittelt und die Zahlung erfolgreich abgeschlossen ist oder wir die Anfrage ausdrücklich bestätigen.</p>
+          </div>
+
+          <div class="legalSection">
+            <h2 data-i18n="s8_title">8. Preise und Zahlung</h2>
+            <p data-i18n="s8_p1">Die angegebenen Preise gelten zum Zeitpunkt der Bestellung.</p>
+            <p data-i18n="s8_p2">Die Zahlungsabwicklung erfolgt über Stripe. Die jeweils verfügbaren Zahlungsmethoden werden im Checkout angezeigt.</p>
+            <p data-i18n="s8_p3">Bis zur vollständigen Zahlung besteht kein Anspruch auf Leistungserbringung.</p>
+          </div>
+
+          <div class="legalSection">
+            <h2 data-i18n="s9_title">9. Lieferung / Bearbeitungszeit</h2>
+            <p data-i18n="s9_p1">Die Ergebnisse werden in der Regel per E-Mail übermittelt.</p>
+            <p data-i18n="s9_p2">Eine konkrete Bearbeitungszeit kann je nach Umfang und Auslastung variieren. Wir bemühen uns um eine zügige Bearbeitung.</p>
+          </div>
+
+          <div class="legalSection">
+            <h2 data-i18n="s10_title">10. Widerruf (Verbraucherhinweis)</h2>
+            <p data-i18n="s10_p1">Für digitale Dienstleistungen kann das Widerrufsrecht unter bestimmten gesetzlichen Voraussetzungen vorzeitig erlöschen, wenn mit der Ausführung der Leistung begonnen wurde.</p>
+            <p><span data-i18n="s10_p2a">Einzelheiten hierzu finden Sie auf der Seite</span> <a class="content-link" href="widerruf.html" data-i18n="s10_link">Widerruf</a>.</p>
+          </div>
+
+          <div class="legalSection">
+            <h2 data-i18n="s11_title">11. Haftung</h2>
+            <p data-i18n="s11_p1">BriefHelden haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit sowie bei Verletzung von Leben, Körper oder Gesundheit.</p>
+            <p data-i18n="s11_p2">Bei leichter Fahrlässigkeit haftet BriefHelden nur bei Verletzung wesentlicher Vertragspflichten und begrenzt auf den vorhersehbaren, vertragstypischen Schaden.</p>
+            <p data-i18n="s11_p3">Da keine Rechtsberatung und keine individuelle rechtliche Prüfung erfolgt, übernehmen wir keine Verantwortung für Entscheidungen, Maßnahmen oder Unterlassungen, die auf Grundlage unserer sprachlichen Erklärung getroffen werden.</p>
+          </div>
+
+          <div class="legalSection">
+            <h2 data-i18n="s12_title">12. Verfügbarkeit / technische Störungen</h2>
+            <p data-i18n="s12_p1">Wir bemühen uns um eine hohe Verfügbarkeit der Website, können jedoch Unterbrechungen, Wartungen, technische Störungen oder Fälle höherer Gewalt nicht ausschließen.</p>
+            <p data-i18n="s12_p2">Es besteht kein Anspruch auf eine jederzeit störungsfreie Nutzung.</p>
+          </div>
+
+          <div class="legalSection">
+            <h2 data-i18n="s13_title">13. Datenschutz</h2>
+            <p><span data-i18n="s13_p1a">Informationen zur Verarbeitung personenbezogener Daten finden Sie in der</span> <a class="content-link" href="datenschutz.html" data-i18n="s13_link">Datenschutzerklärung</a>.</p>
+          </div>
+
+          <div class="legalSection">
+            <h2 data-i18n="s14_title">14. Schlussbestimmungen</h2>
+            <p data-i18n="s14_p1">Es gilt deutsches Recht unter Ausschluss des UN-Kaufrechts, soweit gesetzlich zulässig.</p>
+            <p data-i18n="s14_p2">Sollten einzelne Bestimmungen dieser AGB unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footWrap">
+      <div data-i18n="foot_copy">© 2026 BriefHelden – Alle Rechte vorbehalten</div>
+      <div class="footLinks">
+        <a href="index.html" data-i18n="foot_home">Startseite</a>
+        <a href="frage.html" data-i18n="foot_question">Frage stellen</a>
+        <a href="widerruf.html" data-i18n="foot_refund">Widerruf</a>
+        <a href="impressum.html" data-i18n="foot_imprint">Impressum</a>
+        <a href="agb.html" data-i18n="foot_terms">AGB</a>
+        <a href="datenschutz.html" data-i18n="foot_privacy">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const i18n = {
+      de: {
+        pageTitle: "AGB | BriefHelden",
+        metaDescription: "AGB von BriefHelden: Informationen zu Leistungsumfang, Vertragsschluss, Preisen, Haftung, Datenschutz und wichtigen rechtlichen Hinweisen.",
+        ogTitle: "AGB | BriefHelden",
+        ogDescription: "Allgemeine Geschäftsbedingungen von BriefHelden mit Informationen zu Leistungen, Vertrag, Zahlung, Haftung und Datenschutz.",
+
+        nav_home: "Startseite",
+        nav_question: "Frage stellen",
+        nav_refund: "Widerruf",
+        nav_imprint: "Impressum",
+        nav_terms: "AGB",
+        nav_privacy: "Datenschutz",
+
+        hero_title: "AGB",
+        hero_sub: "Hier finden Sie die Allgemeinen Geschäftsbedingungen von BriefHelden mit Informationen zu Leistungen, Vertragsschluss, Zahlung, Haftung und Datenschutz.",
+
+        main_title: "Allgemeine Geschäftsbedingungen (AGB)",
+        main_sub: "Die folgenden Bedingungen gelten für die Nutzung der Leistungen von BriefHelden.",
+        bindingNote: "Hinweis: Die deutsche Version ist rechtlich maßgeblich. Übersetzungen dienen ausschließlich der besseren Verständlichkeit.",
+
+        s1_title: "1. Geltungsbereich",
+        s1_p1: "Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Leistungen, die über BriefHelden angeboten werden.",
+        s1_p2: "Abweichende Bedingungen von Kunden finden keine Anwendung, sofern wir ihrer Geltung nicht ausdrücklich schriftlich zustimmen.",
+
+        s2_title: "2. Anbieter / Kontakt",
+        country_label: "Deutschland",
+        email_label: "E-Mail:",
+
+        s3_title: "3. Leistungsbeschreibung",
+        s3_p1: "BriefHelden bietet eine verständliche sprachliche Erklärung von eingereichten Dokumenten, Schreiben, Formularen oder Mitteilungen an.",
+        s3_p2: "Die Leistung besteht ausschließlich in einer vereinfachten und allgemein verständlichen Darstellung des Inhalts eines eingereichten Dokuments.",
+        s3_p3: "Es erfolgt keine rechtliche Bewertung, keine individuelle Prüfung eines Einzelfalls und keine Empfehlung konkreter Maßnahmen.",
+
+        s4_title: "4. Keine Rechtsberatung",
+        s4_p1: "BriefHelden erbringt keine Rechtsberatung und ersetzt keine anwaltliche, behördliche oder sonstige fachliche Beratung.",
+        s4_p2: "Es werden insbesondere keine verbindlichen rechtlichen Bewertungen, keine Einschätzungen von Erfolgsaussichten, keine Vertretung und keine individuelle rechtliche Prüfung übernommen.",
+
+        s5_title: "5. Keine individuelle Einzelfallprüfung",
+        s5_p1: "Die von BriefHelden bereitgestellten Erklärungen erfolgen ausschließlich allgemein und unverbindlich.",
+        s5_p2: "Es erfolgt keine individuelle rechtliche Prüfung eines konkreten Einzelfalls.",
+        s5_p3: "Bei rechtlichen Fragen oder wenn konkrete Maßnahmen erforderlich sind, sollten sich Kunden an eine geeignete Beratungsstelle, Behörde oder einen Rechtsanwalt wenden.",
+
+        s6_title: "6. Nutzungsvoraussetzungen / Mitwirkung",
+        s6_p1: "Kunden sind dafür verantwortlich, richtige und vollständige Angaben zu machen und die für die Bearbeitung erforderlichen Informationen oder Dokumente bereitzustellen.",
+        s6_p2: "Für eine Bearbeitung können Rückfragen erforderlich sein. Verzögerungen, die durch fehlende Mitwirkung entstehen, liegen nicht im Verantwortungsbereich von BriefHelden.",
+
+        s7_title: "7. Vertragsschluss",
+        s7_p1: "Die Darstellung der Leistungen auf der Website stellt kein verbindliches Angebot dar.",
+        s7_p2: "Ein Vertrag kommt zustande, sobald der Kunde eine Anfrage übermittelt und die Zahlung erfolgreich abgeschlossen ist oder wir die Anfrage ausdrücklich bestätigen.",
+
+        s8_title: "8. Preise und Zahlung",
+        s8_p1: "Die angegebenen Preise gelten zum Zeitpunkt der Bestellung.",
+        s8_p2: "Die Zahlungsabwicklung erfolgt über Stripe. Die jeweils verfügbaren Zahlungsmethoden werden im Checkout angezeigt.",
+        s8_p3: "Bis zur vollständigen Zahlung besteht kein Anspruch auf Leistungserbringung.",
+
+        s9_title: "9. Lieferung / Bearbeitungszeit",
+        s9_p1: "Die Ergebnisse werden in der Regel per E-Mail übermittelt.",
+        s9_p2: "Eine konkrete Bearbeitungszeit kann je nach Umfang und Auslastung variieren. Wir bemühen uns um eine zügige Bearbeitung.",
+
+        s10_title: "10. Widerruf (Verbraucherhinweis)",
+        s10_p1: "Für digitale Dienstleistungen kann das Widerrufsrecht unter bestimmten gesetzlichen Voraussetzungen vorzeitig erlöschen, wenn mit der Ausführung der Leistung begonnen wurde.",
+        s10_p2a: "Einzelheiten hierzu finden Sie auf der Seite",
+        s10_link: "Widerruf",
+
+        s11_title: "11. Haftung",
+        s11_p1: "BriefHelden haftet unbeschränkt bei Vorsatz und grober Fahrlässigkeit sowie bei Verletzung von Leben, Körper oder Gesundheit.",
+        s11_p2: "Bei leichter Fahrlässigkeit haftet BriefHelden nur bei Verletzung wesentlicher Vertragspflichten und begrenzt auf den vorhersehbaren, vertragstypischen Schaden.",
+        s11_p3: "Da keine Rechtsberatung und keine individuelle rechtliche Prüfung erfolgt, übernehmen wir keine Verantwortung für Entscheidungen, Maßnahmen oder Unterlassungen, die auf Grundlage unserer sprachlichen Erklärung getroffen werden.",
+
+        s12_title: "12. Verfügbarkeit / technische Störungen",
+        s12_p1: "Wir bemühen uns um eine hohe Verfügbarkeit der Website, können jedoch Unterbrechungen, Wartungen, technische Störungen oder Fälle höherer Gewalt nicht ausschließen.",
+        s12_p2: "Es besteht kein Anspruch auf eine jederzeit störungsfreie Nutzung.",
+
+        s13_title: "13. Datenschutz",
+        s13_p1a: "Informationen zur Verarbeitung personenbezogener Daten finden Sie in der",
+        s13_link: "Datenschutzerklärung",
+
+        s14_title: "14. Schlussbestimmungen",
+        s14_p1: "Es gilt deutsches Recht unter Ausschluss des UN-Kaufrechts, soweit gesetzlich zulässig.",
+        s14_p2: "Sollten einzelne Bestimmungen dieser AGB unwirksam sein oder werden, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt.",
+
+        foot_copy: "© 2026 BriefHelden – Alle Rechte vorbehalten",
+        foot_home: "Startseite",
+        foot_question: "Frage stellen",
+        foot_refund: "Widerruf",
+        foot_imprint: "Impressum",
+        foot_terms: "AGB",
+        foot_privacy: "Datenschutz"
+      },
+
+      en: {
+        pageTitle: "Terms and Conditions | BriefHelden",
+        metaDescription: "Terms and Conditions of BriefHelden: information on services, contract formation, prices, liability, data protection and important legal notices.",
+        ogTitle: "Terms and Conditions | BriefHelden",
+        ogDescription: "Terms and Conditions of BriefHelden with information on services, contract, payment, liability and data protection.",
+
+        nav_home: "Home",
+        nav_question: "Ask a question",
+        nav_refund: "Withdrawal",
+        nav_imprint: "Imprint",
+        nav_terms: "Terms",
+        nav_privacy: "Privacy",
+
+        hero_title: "Terms and Conditions",
+        hero_sub: "Here you can find the Terms and Conditions of BriefHelden with information on services, contract formation, payment, liability and data protection.",
+
+        main_title: "Terms and Conditions",
+        main_sub: "The following terms apply to the use of BriefHelden services.",
+        bindingNote: "Note: The German version is legally binding. Translations are provided for convenience only.",
+
+        s1_title: "1. Scope",
+        s1_p1: "These Terms and Conditions apply to all services offered via BriefHelden.",
+        s1_p2: "Any differing customer terms do not apply unless we expressly agree to them in writing.",
+
+        s2_title: "2. Provider / Contact",
+        country_label: "Germany",
+        email_label: "Email:",
+
+        s3_title: "3. Service Description",
+        s3_p1: "BriefHelden provides a plain-language explanation of submitted documents, letters, forms or notices.",
+        s3_p2: "The service consists exclusively of a simplified and generally understandable presentation of the content of a submitted document.",
+        s3_p3: "No legal assessment, no individual case review and no recommendation of concrete actions is provided.",
+
+        s4_title: "4. No Legal Advice",
+        s4_p1: "BriefHelden does not provide legal advice and does not replace advice from a lawyer, public authority or other professional advisor.",
+        s4_p2: "In particular, we do not provide binding legal assessments, opinions on chances of success, representation or individual legal case reviews.",
+
+        s5_title: "5. No Individual Case Review",
+        s5_p1: "The explanations provided by BriefHelden are general and non-binding only.",
+        s5_p2: "No individual legal assessment of a specific case is carried out.",
+        s5_p3: "If legal questions arise or concrete action is required, customers should contact a suitable advisory body, authority or lawyer.",
+
+        s6_title: "6. Customer Obligations / Cooperation",
+        s6_p1: "Customers are responsible for providing correct and complete information and for submitting the information or documents required for processing.",
+        s6_p2: "Follow-up questions may be necessary. Delays caused by missing cooperation are not our responsibility.",
+
+        s7_title: "7. Contract Formation",
+        s7_p1: "The presentation of services on the website does not constitute a binding offer.",
+        s7_p2: "A contract is formed once the customer submits a request and payment has been completed successfully or once we expressly confirm the request.",
+
+        s8_title: "8. Prices and Payment",
+        s8_p1: "The prices shown apply at the time of purchase.",
+        s8_p2: "Payments are processed via Stripe. Available payment methods are shown during checkout.",
+        s8_p3: "No service is owed until payment has been completed in full.",
+
+        s9_title: "9. Delivery / Processing Time",
+        s9_p1: "Results are generally delivered by email.",
+        s9_p2: "Processing time may vary depending on scope and workload. We aim to process requests promptly.",
+
+        s10_title: "10. Withdrawal (Consumer Notice)",
+        s10_p1: "For digital services, the right of withdrawal may expire early under certain legal conditions once performance has begun.",
+        s10_p2a: "Details can be found on the",
+        s10_link: "Withdrawal",
+
+        s11_title: "11. Liability",
+        s11_p1: "BriefHelden is liable without limitation for intent and gross negligence as well as for injury to life, body or health.",
+        s11_p2: "In cases of slight negligence, BriefHelden is liable only for breach of essential contractual obligations and limited to the foreseeable typical contractual damage.",
+        s11_p3: "As no legal advice and no individual legal review is provided, we assume no responsibility for decisions, measures or omissions taken on the basis of our plain-language explanation.",
+
+        s12_title: "12. Availability / Technical Issues",
+        s12_p1: "We strive for high availability of the website but cannot exclude interruptions, maintenance, technical faults or force majeure.",
+        s12_p2: "There is no entitlement to uninterrupted use at all times.",
+
+        s13_title: "13. Data Protection",
+        s13_p1a: "Information on the processing of personal data can be found in our",
+        s13_link: "Privacy Policy",
+
+        s14_title: "14. Final Provisions",
+        s14_p1: "German law applies to the extent legally permissible, excluding the UN Convention on Contracts for the International Sale of Goods (CISG).",
+        s14_p2: "Should individual provisions of these Terms be invalid, the validity of the remaining provisions shall remain unaffected.",
+
+        foot_copy: "© 2026 BriefHelden – All rights reserved",
+        foot_home: "Home",
+        foot_question: "Ask a question",
+        foot_refund: "Withdrawal",
+        foot_imprint: "Imprint",
+        foot_terms: "Terms",
+        foot_privacy: "Privacy"
+      },
+
+      tr: {
+        pageTitle: "Şartlar ve Koşullar | BriefHelden",
+        metaDescription: "BriefHelden şartlar ve koşullar: hizmetler, sözleşmenin kurulması, fiyatlar, sorumluluk, veri koruma ve önemli yasal bilgiler.",
+        ogTitle: "Şartlar ve Koşullar | BriefHelden",
+        ogDescription: "BriefHelden şartlar ve koşullar: hizmetler, sözleşme, ödeme, sorumluluk ve veri koruma hakkında bilgiler.",
+
+        nav_home: "Ana Sayfa",
+        nav_question: "Soru sor",
+        nav_refund: "Cayma",
+        nav_imprint: "Künye",
+        nav_terms: "Şartlar",
+        nav_privacy: "Gizlilik",
+
+        hero_title: "Şartlar ve Koşullar",
+        hero_sub: "Burada BriefHelden şartlar ve koşullarını; hizmetler, sözleşmenin kurulması, ödeme, sorumluluk ve veri koruma bilgileriyle bulabilirsiniz.",
+
+        main_title: "Şartlar ve Koşullar",
+        main_sub: "Aşağıdaki koşullar BriefHelden hizmetlerinin kullanımı için geçerlidir.",
+        bindingNote: "Not: Hukuken bağlayıcı olan sürüm Almanca sürümdür. Çeviriler yalnızca kolaylık içindir.",
+
+        s1_title: "1. Kapsam",
+        s1_p1: "Bu Şartlar ve Koşullar, BriefHelden üzerinden sunulan tüm hizmetler için geçerlidir.",
+        s1_p2: "Müşterinin farklı şartları, yazılı olarak açıkça kabul etmedikçe geçerli değildir.",
+
+        s2_title: "2. Sağlayıcı / İletişim",
+        country_label: "Almanya",
+        email_label: "E-posta:",
+
+        s3_title: "3. Hizmet Tanımı",
+        s3_p1: "BriefHelden, gönderilen belgelerin, yazıların, formların veya bildirimlerin anlaşılır dille açıklanmasını sunar.",
+        s3_p2: "Hizmet yalnızca gönderilen belgenin içeriğinin sadeleştirilmiş ve genel olarak anlaşılır biçimde sunulmasından ibarettir.",
+        s3_p3: "Herhangi bir hukuki değerlendirme, bireysel olay incelemesi veya somut adım önerisi sunulmaz.",
+
+        s4_title: "4. Hukuki Danışmanlık Yok",
+        s4_p1: "BriefHelden hukuki danışmanlık vermez ve avukat, resmi kurum veya başka bir uzman danışmanlığının yerine geçmez.",
+        s4_p2: "Özellikle bağlayıcı hukuki değerlendirme, başarı şansı analizi, temsil veya bireysel hukuki olay incelemesi yapılmaz.",
+
+        s5_title: "5. Bireysel Olay İncelemesi Yok",
+        s5_p1: "BriefHelden tarafından sağlanan açıklamalar yalnızca genel ve bağlayıcı olmayan niteliktedir.",
+        s5_p2: "Belirli bir olay hakkında bireysel hukuki değerlendirme yapılmaz.",
+        s5_p3: "Hukuki sorular ortaya çıkarsa veya somut adımlar gerekiyorsa, müşteri uygun bir danışma merkezi, kurum veya avukatla iletişime geçmelidir.",
+
+        s6_title: "6. Müşteri Yükümlülükleri / İş Birliği",
+        s6_p1: "Müşteri doğru ve eksiksiz bilgi vermekten ve işlem için gerekli bilgi veya belgeleri sağlamaktan sorumludur.",
+        s6_p2: "Ek sorular gerekebilir. Eksik iş birliğinden doğan gecikmeler bizim sorumluluğumuzda değildir.",
+
+        s7_title: "7. Sözleşmenin Kurulması",
+        s7_p1: "Web sitesindeki hizmet sunumu bağlayıcı teklif oluşturmaz.",
+        s7_p2: "Müşteri talebi gönderdiğinde ve ödeme başarıyla tamamlandığında veya talep tarafımızdan açıkça onaylandığında sözleşme kurulmuş olur.",
+
+        s8_title: "8. Fiyatlar ve Ödeme",
+        s8_p1: "Gösterilen fiyatlar sipariş anında geçerlidir.",
+        s8_p2: "Ödeme işlemleri Stripe üzerinden yürütülür. Uygun ödeme yöntemleri ödeme sırasında gösterilir.",
+        s8_p3: "Ödeme tamamlanmadan hizmet sunma yükümlülüğü doğmaz.",
+
+        s9_title: "9. Teslim / İşlem Süresi",
+        s9_p1: "Sonuçlar genellikle e-posta ile gönderilir.",
+        s9_p2: "İşlem süresi kapsam ve yoğunluğa göre değişebilir. Talepleri mümkün olduğunca hızlı işlemeye çalışırız.",
+
+        s10_title: "10. Cayma (Tüketici Bilgilendirmesi)",
+        s10_p1: "Dijital hizmetlerde, hizmetin ifasına başlanmasıyla belirli yasal şartlar altında cayma hakkı erken sona erebilir.",
+        s10_p2a: "Ayrıntılar",
+        s10_link: "Cayma",
+
+        s11_title: "11. Sorumluluk",
+        s11_p1: "BriefHelden, kasıt ve ağır ihmal ile yaşam, beden veya sağlık zararlarında sınırsız sorumludur.",
+        s11_p2: "Hafif ihmal halinde sorumluluk yalnızca esas sözleşme yükümlülüklerinin ihlalinde ve öngörülebilir tipik zarar ile sınırlıdır.",
+        s11_p3: "Hukuki danışmanlık ve bireysel hukuki inceleme verilmediğinden, sade açıklamamız temel alınarak alınan kararlar, önlemler veya ihmaller için sorumluluk üstlenmeyiz.",
+
+        s12_title: "12. Erişilebilirlik / Teknik Sorunlar",
+        s12_p1: "Web sitesinin yüksek erişilebilirliğini hedefleriz; ancak kesinti, bakım, teknik arıza veya mücbir sebep halleri tamamen dışlanamaz.",
+        s12_p2: "Her zaman kesintisiz kullanım hakkı yoktur.",
+
+        s13_title: "13. Veri Koruma",
+        s13_p1a: "Kişisel verilerin işlenmesine ilişkin bilgiler",
+        s13_link: "Gizlilik Politikası",
+
+        s14_title: "14. Son Hükümler",
+        s14_p1: "Yasal olarak izin verildiği ölçüde Alman hukuku uygulanır; CISG hariçtir.",
+        s14_p2: "Bu şartların herhangi bir hükmü geçersiz olursa, diğer hükümler geçerliliğini korur.",
+
+        foot_copy: "© 2026 BriefHelden – Tüm hakları saklıdır",
+        foot_home: "Ana Sayfa",
+        foot_question: "Soru sor",
+        foot_refund: "Cayma",
+        foot_imprint: "Künye",
+        foot_terms: "Şartlar",
+        foot_privacy: "Gizlilik"
+      },
+
+      ru: {
+        pageTitle: "Условия использования | BriefHelden",
+        metaDescription: "Условия использования BriefHelden: информация об услугах, заключении договора, ценах, ответственности, защите данных и важных правовых положениях.",
+        ogTitle: "Условия использования | BriefHelden",
+        ogDescription: "Условия использования BriefHelden с информацией об услугах, договоре, оплате, ответственности и защите данных.",
+
+        nav_home: "Главная",
+        nav_question: "Задать вопрос",
+        nav_refund: "Отказ",
+        nav_imprint: "Выходные данные",
+        nav_terms: "Условия",
+        nav_privacy: "Конфиденциальность",
+
+        hero_title: "Условия использования",
+        hero_sub: "Здесь вы найдёте условия использования BriefHelden с информацией об услугах, заключении договора, оплате, ответственности и защите данных.",
+
+        main_title: "Условия использования",
+        main_sub: "Следующие условия применяются к использованию услуг BriefHelden.",
+        bindingNote: "Примечание: юридически обязательной является немецкая версия. Переводы — только для удобства.",
+
+        s1_title: "1. Область Применения",
+        s1_p1: "Настоящие условия применяются ко всем услугам, предоставляемым через BriefHelden.",
+        s1_p2: "Иные условия клиента не применяются, если мы явно не согласуем их в письменной форме.",
+
+        s2_title: "2. Поставщик / Контакты",
+        country_label: "Германия",
+        email_label: "Email:",
+
+        s3_title: "3. Описание Услуги",
+        s3_p1: "BriefHelden предоставляет понятное языковое объяснение переданных документов, писем, форм или уведомлений.",
+        s3_p2: "Услуга заключается исключительно в упрощённом и в целом понятном изложении содержания переданного документа.",
+        s3_p3: "Никакая правовая оценка, индивидуальная проверка конкретного случая или рекомендация конкретных действий не предоставляется.",
+
+        s4_title: "4. Отсутствие Юридической Консультации",
+        s4_p1: "BriefHelden не оказывает юридических консультаций и не заменяет консультации адвоката, государственного органа или иного специалиста.",
+        s4_p2: "В частности, мы не предоставляем обязательных правовых оценок, не оцениваем шансы на успех, не осуществляем представительство и не проводим индивидуальную правовую проверку случая.",
+
+        s5_title: "5. Отсутствие Индивидуальной Проверки Случая",
+        s5_p1: "Разъяснения BriefHelden носят исключительно общий и необязательный характер.",
+        s5_p2: "Индивидуальная правовая оценка конкретного случая не проводится.",
+        s5_p3: "Если возникают юридические вопросы или требуются конкретные действия, клиенту следует обратиться в соответствующий консультационный центр, орган или к адвокату.",
+
+        s6_title: "6. Обязанности Клиента / Содействие",
+        s6_p1: "Клиент обязан предоставлять правильную и полную информацию, а также сведения или документы, необходимые для обработки.",
+        s6_p2: "Могут потребоваться дополнительные вопросы. Задержки из-за отсутствия содействия не относятся к нашей ответственности.",
+
+        s7_title: "7. Заключение Договора",
+        s7_p1: "Представление услуг на сайте не является обязательным предложением.",
+        s7_p2: "Договор считается заключённым после отправки клиентом запроса и успешного завершения оплаты либо после нашего явного подтверждения запроса.",
+
+        s8_title: "8. Цены и Оплата",
+        s8_p1: "Указанные цены действуют на момент заказа.",
+        s8_p2: "Оплата обрабатывается через Stripe. Доступные способы оплаты отображаются при оформлении.",
+        s8_p3: "До полной оплаты обязанность по оказанию услуги не возникает.",
+
+        s9_title: "9. Доставка / Срок Обработки",
+        s9_p1: "Результаты, как правило, отправляются по электронной почте.",
+        s9_p2: "Срок обработки может меняться в зависимости от объёма и загрузки. Мы стремимся обрабатывать запросы как можно быстрее.",
+
+        s10_title: "10. Отказ (Информация для Потребителей)",
+        s10_p1: "Для цифровых услуг право на отказ может прекратиться досрочно при определённых законных условиях после начала исполнения услуги.",
+        s10_p2a: "Подробности указаны на странице",
+        s10_link: "Отказ",
+
+        s11_title: "11. Ответственность",
+        s11_p1: "BriefHelden несёт неограниченную ответственность при умысле и грубой неосторожности, а также при причинении вреда жизни, телу или здоровью.",
+        s11_p2: "При лёгкой неосторожности ответственность ограничивается нарушением существенных договорных обязанностей и предсказуемым типичным ущербом.",
+        s11_p3: "Поскольку юридическая консультация и индивидуальная правовая проверка не предоставляются, мы не несём ответственности за решения, действия или бездействие, принятые на основе нашего понятного языкового объяснения.",
+
+        s12_title: "12. Доступность / Технические Проблемы",
+        s12_p1: "Мы стремимся обеспечить высокую доступность сайта, однако нельзя полностью исключить перерывы, обслуживание, технические сбои или форс-мажор.",
+        s12_p2: "Право на бесперебойное использование в любое время не предоставляется.",
+
+        s13_title: "13. Защита Данных",
+        s13_p1a: "Информация об обработке персональных данных содержится в разделе",
+        s13_link: "Политика конфиденциальности",
+
+        s14_title: "14. Заключительные Положения",
+        s14_p1: "Применяется немецкое право в той мере, в какой это допускается законом, с исключением CISG.",
+        s14_p2: "Если отдельные положения настоящих условий окажутся недействительными, остальные положения сохраняют силу.",
+
+        foot_copy: "© 2026 BriefHelden – Все права защищены",
+        foot_home: "Главная",
+        foot_question: "Задать вопрос",
+        foot_refund: "Отказ",
+        foot_imprint: "Выходные данные",
+        foot_terms: "Условия",
+        foot_privacy: "Конфиденциальность"
+      }
+    };
+
+    function updateMeta(lang){
+      const dict = i18n[lang] || i18n.de;
+      document.title = dict.pageTitle;
+
+      const description = document.querySelector('meta[name="description"]');
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      const ogDescription = document.querySelector('meta[property="og:description"]');
+
+      if(description) description.setAttribute("content", dict.metaDescription);
+      if(ogTitle) ogTitle.setAttribute("content", dict.ogTitle);
+      if(ogDescription) ogDescription.setAttribute("content", dict.ogDescription);
     }
-  };
 
-  const langSelect = document.getElementById("langSelect");
-  const langLabel = document.getElementById("langLabel");
-  const titleEl = document.getElementById("title");
-  const noteEl = document.getElementById("bindingNote");
-  const contentEl = document.getElementById("content");
+    function applyLang(lang){
+      const currentLang = i18n[lang] ? lang : "de";
+      const dict = i18n[currentLang];
 
-  function escapeHtml(s){
-    return String(s).replace(/[&<>"']/g, function(c){
-      return {
-        "&":"&amp;",
-        "<":"&lt;",
-        ">":"&gt;",
-        "\"":"&quot;",
-        "'":"&#39;"
-      }[c];
+      document.documentElement.lang = currentLang;
+
+      document.querySelectorAll("[data-i18n]").forEach((el) => {
+        const key = el.getAttribute("data-i18n");
+        if(key in dict){
+          el.textContent = dict[key];
+        }
+      });
+
+      updateMeta(currentLang);
+      localStorage.setItem("briefhelden_lang", currentLang);
+    }
+
+    const select = document.getElementById("langSelect");
+    const savedLang = localStorage.getItem("briefhelden_lang");
+    const initialLang = ["de","en","tr","ru"].includes(savedLang) ? savedLang : "de";
+
+    select.value = initialLang;
+    applyLang(initialLang);
+
+    select.addEventListener("change", () => {
+      applyLang(select.value);
     });
-  }
-
-  function render(lang){
-    const t = TEXT[lang] || TEXT.DE;
-
-    document.documentElement.lang =
-      lang === "DE" ? "de" :
-      lang === "EN" ? "en" :
-      lang === "TR" ? "tr" : "ru";
-
-    langLabel.textContent = t.langLabel;
-    titleEl.textContent = t.title;
-    noteEl.innerHTML = t.bindingNote;
-
-    const parts = [];
-
-    for (const s of t.sections){
-      parts.push("<h2>" + escapeHtml(s.h) + "</h2>");
-
-      if (s.p){
-        for (const para of s.p){
-          parts.push("<p>" + para + "</p>");
-        }
-      }
-
-      if (s.ul){
-        parts.push("<ul>");
-        for (const li of s.ul){
-          parts.push("<li>" + escapeHtml(li) + "</li>");
-        }
-        parts.push("</ul>");
-      }
-    }
-
-    contentEl.innerHTML = parts.join("\n");
-  }
-
-  function getLangFromUrl(){
-    const url = new URL(window.location.href);
-    const q = (url.searchParams.get("lang") || "").toUpperCase().trim();
-    return ["DE","EN","TR","RU"].includes(q) ? q : null;
-  }
-
-  const saved = (localStorage.getItem("briefhelden_lang") || "").toUpperCase();
-  const fromUrl = getLangFromUrl();
-  const initial = fromUrl || (["DE","EN","TR","RU"].includes(saved) ? saved : "DE");
-
-  langSelect.value = initial;
-  render(initial);
-
-  langSelect.addEventListener("change", function(){
-    const lang = langSelect.value;
-    localStorage.setItem("briefhelden_lang", lang);
-    render(lang);
-
-    const url = new URL(window.location.href);
-    url.searchParams.set("lang", lang);
-    window.history.replaceState({}, "", url.toString());
-  });
-})();
-</script>
+  </script>
 </body>
 </html>
