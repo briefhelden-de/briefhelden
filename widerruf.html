@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Widerruf und Rückerstattung | BriefHelden</title>
+
+  <title>Widerruf und Rückerstattung – BriefHelden</title>
   <meta
     name="description"
     content="Widerruf und Rückerstattung bei BriefHelden: Informationen zum Widerrufsrecht, zum vorzeitigen Erlöschen bei digitalen Dienstleistungen und zur Rückerstattung."
@@ -11,7 +12,7 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.briefhelden-service.de/widerruf.html" />
 
-  <meta property="og:title" content="Widerruf und Rückerstattung | BriefHelden" />
+  <meta property="og:title" content="Widerruf und Rückerstattung – BriefHelden" />
   <meta
     property="og:description"
     content="Informationen zu Widerruf, vorzeitigem Erlöschen des Widerrufsrechts und Rückerstattung bei BriefHelden."
@@ -20,7 +21,7 @@
   <meta property="og:url" content="https://www.briefhelden-service.de/widerruf.html" />
   <meta property="og:image" content="https://www.briefhelden-service.de/og-image.jpg" />
   <meta property="og:site_name" content="BriefHelden" />
-  <meta name="theme-color" content="#0b1220" />
+  <meta name="theme-color" content="#0f2740" />
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
   <script>
@@ -167,7 +168,7 @@
     .hero{
       position:relative;
       color:var(--heroText);
-      padding:68px 18px 32px;
+      padding:68px 18px 40px;
       background:
         linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.58)),
         url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=2200&q=60");
@@ -190,11 +191,33 @@
     }
 
     .hero p{
-      margin:0 auto;
+      margin:0 auto 18px;
       max-width:900px;
       color:var(--heroMuted);
       font-size:clamp(15px, 2vw, 18px);
       line-height:1.55;
+    }
+
+    .heroMeta{
+      margin-top:14px;
+      display:flex;
+      gap:14px;
+      justify-content:center;
+      flex-wrap:wrap;
+      color:rgba(255,255,255,.86);
+      font-weight:700;
+      font-size:13px;
+    }
+
+    .heroMeta span{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.10);
+      border:1px solid rgba(255,255,255,.12);
+      backdrop-filter:blur(10px);
     }
 
     .section{padding:26px 18px 10px}
@@ -253,6 +276,7 @@
       font-size:20px;
       font-weight:950;
       line-height:1.3;
+      color:#0b1220;
     }
 
     .legalSection p,
@@ -313,7 +337,6 @@
 
       <nav class="links" aria-label="Hauptnavigation">
         <a href="index.html" data-i18n="nav_home">Startseite</a>
-        <a href="frage.html" data-i18n="nav_question">Frage stellen</a>
         <a href="widerruf.html" data-i18n="nav_refund">Widerruf</a>
         <a href="impressum.html" data-i18n="nav_imprint">Impressum</a>
         <a href="agb.html" data-i18n="nav_terms">AGB</a>
@@ -337,6 +360,12 @@
       <p data-i18n="hero_sub">
         Hier finden Sie die Informationen zu Ihrem Widerrufsrecht, zum möglichen vorzeitigen Erlöschen bei digitalen Dienstleistungen und zur Rückerstattung bei BriefHelden.
       </p>
+
+      <div class="heroMeta" aria-label="Kurzvorteile">
+        <span>📄 <span data-i18n="meta_1">Klar erklärt</span></span>
+        <span>⏱️ <span data-i18n="meta_2">Wichtige Fristen sichtbar</span></span>
+        <span>🌍 <span data-i18n="meta_3">DE / EN / TR / RU</span></span>
+      </div>
     </div>
   </section>
 
@@ -385,7 +414,7 @@
 
           <div class="legalSection">
             <h2 data-i18n="s5_title">5. Hinweis zu BriefHelden</h2>
-            <p data-i18n="s5_p1">BriefHelden erbringt digitale Dienstleistungen in Form einer verständlichen sprachlichen Erklärung von eingereichten Schreiben und Dokumenten.</p>
+            <p data-i18n="s5_p1">BriefHelden erbringt digitale Dienstleistungen in Form einer verständlichen Texterklärung und sprachlichen Vereinfachung von eingereichten Schreiben und Dokumenten.</p>
             <p data-i18n="s5_p2">Wenn Sie im Bestell- oder Anfrageprozess ausdrücklich zustimmen, dass wir vor Ablauf der Widerrufsfrist mit der Bearbeitung beginnen, und Sie gleichzeitig bestätigen, dass Sie dadurch Ihr Widerrufsrecht verlieren, erlischt Ihr Widerrufsrecht mit Beginn der Ausführung der Leistung.</p>
           </div>
 
@@ -409,7 +438,6 @@
       <div data-i18n="foot_copy">© 2026 BriefHelden – Alle Rechte vorbehalten</div>
       <div class="footLinks">
         <a href="index.html" data-i18n="foot_home">Startseite</a>
-        <a href="frage.html" data-i18n="foot_question">Frage stellen</a>
         <a href="widerruf.html" data-i18n="foot_refund">Widerruf</a>
         <a href="impressum.html" data-i18n="foot_imprint">Impressum</a>
         <a href="agb.html" data-i18n="foot_terms">AGB</a>
@@ -421,13 +449,12 @@
   <script>
     const i18n = {
       de: {
-        pageTitle: "Widerruf und Rückerstattung | BriefHelden",
+        pageTitle: "Widerruf und Rückerstattung – BriefHelden",
         metaDescription: "Widerruf und Rückerstattung bei BriefHelden: Informationen zum Widerrufsrecht, zum vorzeitigen Erlöschen bei digitalen Dienstleistungen und zur Rückerstattung.",
-        ogTitle: "Widerruf und Rückerstattung | BriefHelden",
+        ogTitle: "Widerruf und Rückerstattung – BriefHelden",
         ogDescription: "Informationen zu Widerruf, vorzeitigem Erlöschen des Widerrufsrechts und Rückerstattung bei BriefHelden.",
 
         nav_home: "Startseite",
-        nav_question: "Frage stellen",
         nav_refund: "Widerruf",
         nav_imprint: "Impressum",
         nav_terms: "AGB",
@@ -435,6 +462,9 @@
 
         hero_title: "Widerruf und Rückerstattung",
         hero_sub: "Hier finden Sie die Informationen zu Ihrem Widerrufsrecht, zum möglichen vorzeitigen Erlöschen bei digitalen Dienstleistungen und zur Rückerstattung bei BriefHelden.",
+        meta_1: "Klar erklärt",
+        meta_2: "Wichtige Fristen sichtbar",
+        meta_3: "DE / EN / TR / RU",
 
         main_title: "Widerrufsbelehrung und Rückerstattung",
         main_sub: "Die folgenden Informationen gelten für Verbraucher bei Fernabsatzverträgen mit BriefHelden.",
@@ -457,7 +487,7 @@
         s4_p1: "Bei digitalen Dienstleistungen kann das Widerrufsrecht vorzeitig erlöschen, wenn wir mit der Ausführung der Leistung begonnen haben, nachdem Sie ausdrücklich zugestimmt haben, dass wir vor Ablauf der Widerrufsfrist mit der Ausführung beginnen, und Sie bestätigt haben, dass Sie dadurch mit Beginn der Ausführung Ihr Widerrufsrecht verlieren.",
 
         s5_title: "5. Hinweis zu BriefHelden",
-        s5_p1: "BriefHelden erbringt digitale Dienstleistungen in Form einer verständlichen sprachlichen Erklärung von eingereichten Schreiben und Dokumenten.",
+        s5_p1: "BriefHelden erbringt digitale Dienstleistungen in Form einer verständlichen Texterklärung und sprachlichen Vereinfachung von eingereichten Schreiben und Dokumenten.",
         s5_p2: "Wenn Sie im Bestell- oder Anfrageprozess ausdrücklich zustimmen, dass wir vor Ablauf der Widerrufsfrist mit der Bearbeitung beginnen, und Sie gleichzeitig bestätigen, dass Sie dadurch Ihr Widerrufsrecht verlieren, erlischt Ihr Widerrufsrecht mit Beginn der Ausführung der Leistung.",
 
         s6_title: "6. Rückerstattung",
@@ -469,7 +499,6 @@
 
         foot_copy: "© 2026 BriefHelden – Alle Rechte vorbehalten",
         foot_home: "Startseite",
-        foot_question: "Frage stellen",
         foot_refund: "Widerruf",
         foot_imprint: "Impressum",
         foot_terms: "AGB",
@@ -477,13 +506,12 @@
       },
 
       en: {
-        pageTitle: "Withdrawal and Refunds | BriefHelden",
+        pageTitle: "Withdrawal and Refunds – BriefHelden",
         metaDescription: "Withdrawal and refunds at BriefHelden: information about the right of withdrawal, early expiry for digital services and refunds.",
-        ogTitle: "Withdrawal and Refunds | BriefHelden",
+        ogTitle: "Withdrawal and Refunds – BriefHelden",
         ogDescription: "Information about withdrawal, early expiry of the right of withdrawal and refunds at BriefHelden.",
 
         nav_home: "Home",
-        nav_question: "Ask a question",
         nav_refund: "Withdrawal",
         nav_imprint: "Imprint",
         nav_terms: "Terms",
@@ -491,6 +519,9 @@
 
         hero_title: "Withdrawal and Refunds",
         hero_sub: "Here you can find information about your right of withdrawal, possible early expiry for digital services and refunds at BriefHelden.",
+        meta_1: "Clearly explained",
+        meta_2: "Important deadlines visible",
+        meta_3: "DE / EN / TR / RU",
 
         main_title: "Withdrawal Information and Refunds",
         main_sub: "The following information applies to consumers in distance contracts with BriefHelden.",
@@ -513,7 +544,7 @@
         s4_p1: "For digital services, the right of withdrawal may expire early if we started performing the service after you expressly agreed that we begin performance before the withdrawal period expires and confirmed that you lose your right of withdrawal once performance begins.",
 
         s5_title: "5. Notice Regarding BriefHelden",
-        s5_p1: "BriefHelden provides digital services in the form of an understandable plain-language explanation of submitted letters and documents.",
+        s5_p1: "BriefHelden provides digital services in the form of an understandable clear text explanation and linguistic simplification of submitted letters and documents.",
         s5_p2: "If, during the order or request process, you expressly agree that we begin processing before the withdrawal period expires and at the same time confirm that you thereby lose your right of withdrawal, your right of withdrawal expires once performance begins.",
 
         s6_title: "6. Refunds",
@@ -525,7 +556,6 @@
 
         foot_copy: "© 2026 BriefHelden – All rights reserved",
         foot_home: "Home",
-        foot_question: "Ask a question",
         foot_refund: "Withdrawal",
         foot_imprint: "Imprint",
         foot_terms: "Terms",
@@ -533,13 +563,12 @@
       },
 
       tr: {
-        pageTitle: "Cayma ve İade | BriefHelden",
+        pageTitle: "Cayma ve İade – BriefHelden",
         metaDescription: "BriefHelden'de cayma ve iade: cayma hakkı, dijital hizmetlerde erken sona erme ve iade hakkında bilgiler.",
-        ogTitle: "Cayma ve İade | BriefHelden",
+        ogTitle: "Cayma ve İade – BriefHelden",
         ogDescription: "BriefHelden'de cayma, cayma hakkının erken sona ermesi ve iade hakkında bilgiler.",
 
         nav_home: "Ana Sayfa",
-        nav_question: "Soru sor",
         nav_refund: "Cayma",
         nav_imprint: "Künye",
         nav_terms: "Şartlar",
@@ -547,6 +576,9 @@
 
         hero_title: "Cayma ve İade",
         hero_sub: "Burada cayma hakkınız, dijital hizmetlerde olası erken sona erme ve BriefHelden'deki iade hakkında bilgi bulabilirsiniz.",
+        meta_1: "Net açıklandı",
+        meta_2: "Önemli süreler görünür",
+        meta_3: "DE / EN / TR / RU",
 
         main_title: "Cayma Bilgilendirmesi ve İade",
         main_sub: "Aşağıdaki bilgiler, BriefHelden ile yapılan mesafeli sözleşmelerde tüketiciler için geçerlidir.",
@@ -569,7 +601,7 @@
         s4_p1: "Dijital hizmetlerde cayma hakkı, hizmetin cayma süresi dolmadan başlamasını açıkça kabul etmeniz ve hizmetin başlamasıyla cayma hakkınızı kaybedeceğinizi onaylamanız halinde erken sona erebilir.",
 
         s5_title: "5. BriefHelden Hakkında Bilgi",
-        s5_p1: "BriefHelden, gönderilen yazı ve belgelerin anlaşılır dille açıklanması şeklinde dijital hizmet sunar.",
+        s5_p1: "BriefHelden, gönderilen yazı ve belgelerin anlaşılır metin açıklaması ve dilsel sadeleştirilmesi şeklinde dijital hizmet sunar.",
         s5_p2: "Sipariş veya başvuru sürecinde, hizmetin cayma süresi dolmadan başlamasını açıkça kabul eder ve bu nedenle cayma hakkınızı kaybedeceğinizi onaylarsanız, hizmetin başlamasıyla cayma hakkınız sona erer.",
 
         s6_title: "6. İade",
@@ -581,7 +613,6 @@
 
         foot_copy: "© 2026 BriefHelden – Tüm hakları saklıdır",
         foot_home: "Ana Sayfa",
-        foot_question: "Soru sor",
         foot_refund: "Cayma",
         foot_imprint: "Künye",
         foot_terms: "Şartlar",
@@ -589,13 +620,12 @@
       },
 
       ru: {
-        pageTitle: "Отказ и Возврат | BriefHelden",
+        pageTitle: "Отказ и Возврат – BriefHelden",
         metaDescription: "Отказ и возврат в BriefHelden: информация о праве на отказ, досрочном прекращении для цифровых услуг и возврате средств.",
-        ogTitle: "Отказ и Возврат | BriefHelden",
+        ogTitle: "Отказ и Возврат – BriefHelden",
         ogDescription: "Информация об отказе, досрочном прекращении права на отказ и возврате средств в BriefHelden.",
 
         nav_home: "Главная",
-        nav_question: "Задать вопрос",
         nav_refund: "Отказ",
         nav_imprint: "Выходные данные",
         nav_terms: "Условия",
@@ -603,6 +633,9 @@
 
         hero_title: "Отказ и Возврат",
         hero_sub: "Здесь вы найдёте информацию о праве на отказ, возможном досрочном прекращении для цифровых услуг и возврате средств в BriefHelden.",
+        meta_1: "Понятно объяснено",
+        meta_2: "Важные сроки видны",
+        meta_3: "DE / EN / TR / RU",
 
         main_title: "Информация об отказе и возврате",
         main_sub: "Следующая информация применяется к потребителям при дистанционных договорах с BriefHelden.",
@@ -625,7 +658,7 @@
         s4_p1: "Для цифровых услуг право на отказ может прекратиться досрочно, если вы прямо согласились на начало оказания услуги до истечения срока отказа и подтвердили, что с началом исполнения вы теряете право на отказ.",
 
         s5_title: "5. Уведомление Относительно BriefHelden",
-        s5_p1: "BriefHelden оказывает цифровые услуги в форме понятного языкового объяснения переданных писем и документов.",
+        s5_p1: "BriefHelden оказывает цифровые услуги в форме понятного текстового объяснения и языкового упрощения переданных писем и документов.",
         s5_p2: "Если в процессе заказа или запроса вы прямо соглашаетесь на начало обработки до истечения срока отказа и одновременно подтверждаете потерю права на отказ, это право прекращается с началом исполнения услуги.",
 
         s6_title: "6. Возврат Средств",
@@ -637,7 +670,6 @@
 
         foot_copy: "© 2026 BriefHelden – Все права защищены",
         foot_home: "Главная",
-        foot_question: "Задать вопрос",
         foot_refund: "Отказ",
         foot_imprint: "Выходные данные",
         foot_terms: "Условия",
@@ -647,6 +679,7 @@
 
     function updateMeta(lang){
       const dict = i18n[lang] || i18n.de;
+      document.documentElement.lang = lang;
       document.title = dict.pageTitle;
 
       const description = document.querySelector('meta[name="description"]');
@@ -661,8 +694,6 @@
     function applyLang(lang){
       const currentLang = i18n[lang] ? lang : "de";
       const dict = i18n[currentLang];
-
-      document.documentElement.lang = currentLang;
 
       document.querySelectorAll("[data-i18n]").forEach((el) => {
         const key = el.getAttribute("data-i18n");
