@@ -5,33 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BriefHelden – Briefe einfach verstehen | Klar, verständlich, mehrsprachig</title>
   <meta name="description" content="BriefHelden erklärt komplizierte Briefe, Bescheide, Mahnungen und Formulare in verständlicher Sprache. KI-gestützt, mehrsprachig, ohne Abo. Keine Rechtsberatung.">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
   <meta name="theme-color" content="#020b17">
   <!-- BriefHelden V2 Master: BRIEFHELDEN_V2_MASTER_DESIGN.png -->
-  <link rel="canonical" href="https://www.briefhelden-service.de/">
+  <link rel="canonical" href="https://briefhelden-service.de/">
 
   <meta property="og:title" content="BriefHelden – Dein Brief. Endlich verständlich.">
   <meta property="og:description" content="Foto oder PDF hochladen. BriefHelden erklärt komplizierte Schreiben klar und verständlich.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.briefhelden-service.de/">
+  <meta property="og:url" content="https://briefhelden-service.de/">
   <meta property="og:site_name" content="BriefHelden">
-  <meta property="og:image" content="https://www.briefhelden-service.de/assets/og-briefhelden.jpg">
+  <meta property="og:image" content="https://briefhelden-service.de/assets/og-briefhelden.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="de_DE">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BriefHelden – Dein Brief. Endlich verständlich.">
+  <meta name="twitter:description" content="Foto oder PDF hochladen. BriefHelden erklärt komplizierte Schreiben klar und verständlich.">
+  <meta name="twitter:image" content="https://briefhelden-service.de/assets/og-briefhelden.jpg">
+  <link rel="preload" as="image" href="assets/hero-visual.webp" type="image/webp" fetchpriority="high">
+  <link rel="sitemap" type="application/xml" href="https://briefhelden-service.de/sitemap.xml">
 
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@graph":[
-      {"@type":"Organization","name":"BriefHelden","url":"https://www.briefhelden-service.de/"},
-      {"@type":"WebSite","name":"BriefHelden","url":"https://www.briefhelden-service.de/"},
+      {
+        "@type":"Organization",
+        "@id":"https://briefhelden-service.de/#organization",
+        "name":"BriefHelden",
+        "url":"https://briefhelden-service.de/"
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://briefhelden-service.de/#website",
+        "name":"BriefHelden",
+        "url":"https://briefhelden-service.de/",
+        "publisher":{"@id":"https://briefhelden-service.de/#organization"},
+        "inLanguage":"de-DE"
+      },
       {
         "@type":"Service",
+        "@id":"https://briefhelden-service.de/#service",
         "name":"BriefHelden – Briefe verständlich erklärt",
-        "provider":{"@type":"Organization","name":"BriefHelden"},
-        "areaServed":"DE",
+        "url":"https://briefhelden-service.de/",
+        "provider":{"@id":"https://briefhelden-service.de/#organization"},
+        "areaServed":{"@type":"Country","name":"Deutschland"},
         "availableLanguage":["de","en","tr","ru"],
-        "description":"KI-gestützte, verständliche Erklärung und sprachliche Vereinfachung von Briefen und Dokumenten. Keine Rechtsberatung, keine rechtliche Prüfung und keine individuelle Handlungsempfehlung."
+        "description":"KI-gestützte, verständliche Erklärung und sprachliche Vereinfachung von Briefen und Dokumenten. Keine Rechtsberatung, keine rechtliche Prüfung und keine individuelle Handlungsempfehlung.",
+        "hasOfferCatalog":{
+          "@type":"OfferCatalog",
+          "name":"BriefHelden Leistungen",
+          "itemListElement":[
+            {"@type":"Offer","price":"6.90","priceCurrency":"EUR","name":"Kompletten Brief verständlich erklären lassen"},
+            {"@type":"Offer","price":"1.49","priceCurrency":"EUR","name":"Kurze Frage zu einem Schreiben stellen"}
+          ]
+        }
+      },
+      {
+        "@type":"FAQPage",
+        "@id":"https://briefhelden-service.de/#faq",
+        "mainEntity":[
+          {
+            "@type":"Question",
+            "name":"Wie erhalte ich meine Erklärung?",
+            "acceptedAnswer":{"@type":"Answer","text":"Nach Zahlung und Upload wird das Schreiben verarbeitet. Die verständliche Erklärung wird per E-Mail übermittelt."}
+          },
+          {
+            "@type":"Question",
+            "name":"Welche Dateien kann ich hochladen?",
+            "acceptedAnswer":{"@type":"Answer","text":"Geeignet sind insbesondere PDF-, JPG- und PNG-Dateien. Gute, gerade und gut lesbare Aufnahmen erleichtern die Texterkennung."}
+          },
+          {
+            "@type":"Question",
+            "name":"Ist BriefHelden eine Rechtsberatung?",
+            "acceptedAnswer":{"@type":"Answer","text":"Nein. BriefHelden erklärt den Inhalt und vereinfacht schwierige Sprache. Es erfolgt keine individuelle Rechtsprüfung oder verbindliche Handlungsempfehlung."}
+          },
+          {
+            "@type":"Question",
+            "name":"Wird künstliche Intelligenz verwendet?",
+            "acceptedAnswer":{"@type":"Answer","text":"Ja. Die Erklärung wird KI-gestützt erstellt. Welche Dienste eingesetzt werden und wie Daten verarbeitet werden, wird in der Datenschutzerklärung beschrieben."}
+          }
+        ]
       }
     ]
   }
@@ -690,7 +745,7 @@
 
   <header>
     <div class="wrap nav">
-      <a class="brand" href="#top" aria-label="BriefHelden Startseite">
+      <a class="brand" href="/" aria-label="BriefHelden Startseite">
         <svg class="brand-mark" viewBox="0 0 64 72" aria-hidden="true">
           <defs>
             <linearGradient id="lg1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#48d7ff"/><stop offset="1" stop-color="#1264ff"/></linearGradient>
@@ -708,8 +763,8 @@
       </a>
 
       <nav class="nav-center" aria-label="Hauptnavigation">
-        <a href="#top" data-i18n="nav_home">Startseite</a>
-        <a href="alle-briefe-verstehen.html" data-i18n="nav_letters">Briefe verstehen</a>
+        <a href="/" data-i18n="nav_home">Startseite</a>
+        <a href="/alle-briefe-verstehen" data-i18n="nav_letters">Briefe verstehen</a>
         <a href="#how" data-i18n="nav_how">So funktioniert's</a>
         <a href="#services" data-i18n="nav_prices">Preise</a>
         <a href="#faq" data-i18n="nav_faq">FAQ</a>
@@ -725,13 +780,13 @@
           </select>
         </div>
         <a class="nav-cta payLink" href="#" rel="noopener" data-i18n="nav_cta">Brief jetzt erklären</a>
-        <button class="menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileNav">Menü</button>
+        <button class="menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileNav" data-i18n="menu_btn">Menü</button>
       </div>
     </div>
 
     <div id="mobileNav" class="mobile-nav">
-      <a href="#top" data-i18n="nav_home">Startseite</a>
-      <a href="alle-briefe-verstehen.html" data-i18n="nav_letters">Briefe verstehen</a>
+      <a href="/" data-i18n="nav_home">Startseite</a>
+      <a href="/alle-briefe-verstehen" data-i18n="nav_letters">Briefe verstehen</a>
       <a href="#how" data-i18n="nav_how">So funktioniert's</a>
       <a href="#services" data-i18n="nav_prices">Preise</a>
       <a href="#faq" data-i18n="nav_faq">FAQ</a>
@@ -780,7 +835,7 @@
             <div class="hero-photo-frame">
               <img src="assets/hero-visual.webp" alt="" width="1048" height="616" fetchpriority="high">
             </div>
-            <div class="hero-photo-badge"><b>BriefHelden</b> · Klartext statt Fachchinesisch</div>
+            <div class="hero-photo-badge"><b>BriefHelden</b> · <span data-i18n="visual_badge">Klartext statt Fachchinesisch</span></div>
           </div>
         </div>
 
@@ -843,7 +898,7 @@
             <h2 class="section-title" data-i18n="compare_title">Vom Fachtext zu Klartext</h2>
             <p class="section-sub" data-i18n="compare_sub">So kann eine typische BriefHelden-Erklärung aussehen.</p>
           </div>
-          <a class="btn btn-ghost" href="alle-briefe-verstehen.html" data-i18n="examples_btn">Weitere Beispiele ansehen →</a>
+          <a class="btn btn-ghost" href="/alle-briefe-verstehen" data-i18n="examples_btn">Weitere Beispiele ansehen →</a>
         </div>
 
         <div class="compare-wrap">
@@ -925,17 +980,17 @@
             <h2 class="section-title" data-i18n="letters_title">Häufige Briefe – Beispiele</h2>
             <p class="section-sub" data-i18n="letters_sub">Jede Themenseite erklärt typische Inhalte und Begriffe passend zum jeweiligen Schreiben.</p>
           </div>
-          <a class="btn btn-ghost" href="alle-briefe-verstehen.html" data-i18n="all_letters">Alle Briefe ansehen →</a>
+          <a class="btn btn-ghost" href="/alle-briefe-verstehen" data-i18n="all_letters">Alle Briefe ansehen →</a>
         </div>
 
         <div class="categories">
-          <a class="category" href="mahnung-verstehen.html"><div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l9 17H3z"/><path d="M12 9v4m0 3h.01"/></svg></div><h3 data-i18n="cat1">Mahnung</h3><p data-i18n="cat1_sub">Zahlungsaufforderungen und genannte Fristen verstehen.</p><span class="go">→</span></a>
-          <a class="category" href="Inkasso-brief-verstehen.html"><div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg></div><h3 data-i18n="cat2">Inkasso</h3><p data-i18n="cat2_sub">Forderung, Gläubiger und Kostenbegriffe verstehen.</p><span class="go">→</span></a>
-          <a class="category" href="finanzamt-brief-verstehen.html"><div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10h18M5 10V7l7-4 7 4v3M6 10v8M10 10v8M14 10v8M18 10v8M3 18h18v3H3z"/></svg></div><h3 data-i18n="cat3">Finanzamt</h3><p data-i18n="cat3_sub">Steuerbescheid, Nachzahlung und Begriffe verstehen.</p><span class="go">→</span></a>
-          <a class="category" href="krankenkasse-brief-verstehen.html"><div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M12 8v8M8 12h8"/></svg></div><h3 data-i18n="cat4">Krankenkasse</h3><p data-i18n="cat4_sub">Leistungen, Zeiträume und Entscheidungen verstehen.</p><span class="go">→</span></a>
-          <a class="category" href="rechnung-verstehen.html"><div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg></div><h3 data-i18n="cat5">Rechnung</h3><p data-i18n="cat5_sub">Beträge, Positionen und Zahlungsinformationen verstehen.</p><span class="go">→</span></a>
-          <a class="category" href="vertragsbrief-verstehen.html"><div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h14v18H5z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div><h3 data-i18n="cat6">Verträge</h3><p data-i18n="cat6_sub">Laufzeit, Bedingungen und Formulierungen verstehen.</p><span class="go">→</span></a>
-          <a class="category" href="behoerdenbrief-verstehen.html"><div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10h18M5 10V7l7-4 7 4v3M6 10v8M10 10v8M14 10v8M18 10v8"/></svg></div><h3 data-i18n="cat7">Behörden</h3><p data-i18n="cat7_sub">Amtliche Schreiben und Bescheide einfacher verstehen.</p><span class="go">→</span></a>
+          <a class="category" href="/mahnung-verstehen"><div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l9 17H3z"/><path d="M12 9v4m0 3h.01"/></svg></div><h3 data-i18n="cat1">Mahnung</h3><p data-i18n="cat1_sub">Zahlungsaufforderungen und genannte Fristen verstehen.</p><span class="go">→</span></a>
+          <a class="category" href="/inkasso-brief-verstehen"><div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16v12H4z"/><path d="M4 7l8 6 8-6"/></svg></div><h3 data-i18n="cat2">Inkasso</h3><p data-i18n="cat2_sub">Forderung, Gläubiger und Kostenbegriffe verstehen.</p><span class="go">→</span></a>
+          <a class="category" href="/finanzamt-brief-verstehen"><div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10h18M5 10V7l7-4 7 4v3M6 10v8M10 10v8M14 10v8M18 10v8M3 18h18v3H3z"/></svg></div><h3 data-i18n="cat3">Finanzamt</h3><p data-i18n="cat3_sub">Steuerbescheid, Nachzahlung und Begriffe verstehen.</p><span class="go">→</span></a>
+          <a class="category" href="/krankenkasse-brief-verstehen"><div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M12 8v8M8 12h8"/></svg></div><h3 data-i18n="cat4">Krankenkasse</h3><p data-i18n="cat4_sub">Leistungen, Zeiträume und Entscheidungen verstehen.</p><span class="go">→</span></a>
+          <a class="category" href="/rechnung-verstehen"><div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg></div><h3 data-i18n="cat5">Rechnung</h3><p data-i18n="cat5_sub">Beträge, Positionen und Zahlungsinformationen verstehen.</p><span class="go">→</span></a>
+          <a class="category" href="/vertragsbrief-verstehen"><div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 3h14v18H5z"/><path d="M8 8h8M8 12h8M8 16h5"/></svg></div><h3 data-i18n="cat6">Verträge</h3><p data-i18n="cat6_sub">Laufzeit, Bedingungen und Formulierungen verstehen.</p><span class="go">→</span></a>
+          <a class="category" href="/behoerdenbrief-verstehen"><div class="cat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 10h18M5 10V7l7-4 7 4v3M6 10v8M10 10v8M14 10v8M18 10v8"/></svg></div><h3 data-i18n="cat7">Behörden</h3><p data-i18n="cat7_sub">Amtliche Schreiben und Bescheide einfacher verstehen.</p><span class="go">→</span></a>
         </div>
       </div>
     </section>
@@ -988,7 +1043,7 @@
 
   <footer>
     <div class="wrap footer-grid">
-      <a class="foot-brand" href="#top">
+      <a class="foot-brand" href="/">
         <svg class="brand-mark" viewBox="0 0 64 72" aria-hidden="true">
           <defs><linearGradient id="fg1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#48d7ff"/><stop offset="1" stop-color="#1264ff"/></linearGradient><linearGradient id="fg2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe55d"/><stop offset="1" stop-color="#ff9b16"/></linearGradient></defs>
           <path d="M24 5h25a7 7 0 0 1 7 7v48a7 7 0 0 1-7 7H24a7 7 0 0 1-7-7V12a7 7 0 0 1 7-7z" fill="url(#fg1)"/><path d="M5 48c11-2 16-9 20-17-1 11 2 18 12 22-13-2-22 2-30 8 4-5 4-9-2-13z" fill="url(#fg2)"/>
@@ -1036,6 +1091,7 @@
 
     const T = {
       de:{
+        skip_link:"Zum Inhalt springen",menu_btn:"Menü",visual_badge:"Klartext statt Fachchinesisch",
         brand_sub:"Dein Brief. Endlich verständlich.",
         nav_home:"Startseite",nav_letters:"Briefe verstehen",nav_how:"So funktioniert's",nav_prices:"Preise",nav_faq:"FAQ",nav_cta:"Brief jetzt erklären",
         hero_badge:"KI-gestützte Texterklärung",hero_1:"BRIEF DA?",hero_2:"Endlich verstehen,",hero_3:"was drinsteht.",hero_lead:"Foto oder PDF hochladen. BriefHelden erklärt komplizierte Schreiben in verständlicher Sprache – klar strukturiert und ohne Fachchinesisch.",
@@ -1054,6 +1110,7 @@
         consent_title:"Datenschutzeinstellungen",consent_text:"Notwendige Funktionen werden immer verwendet. Analyse mit Google Analytics laden wir erst nach Ihrer Zustimmung.",consent_only:"Nur notwendig",consent_allow:"Analyse erlauben",cookie_settings:"Cookie-Einstellungen"
       },
       en:{
+        skip_link:"Skip to content",menu_btn:"Menu",visual_badge:"Plain language instead of jargon",
         brand_sub:"Your letter. Finally understandable.",
         nav_home:"Home",nav_letters:"Understand letters",nav_how:"How it works",nav_prices:"Prices",nav_faq:"FAQ",nav_cta:"Explain my letter",
         hero_badge:"AI-assisted plain-language explanation",hero_1:"GOT A LETTER?",hero_2:"Finally understand",hero_3:"what it says.",hero_lead:"Upload a photo or PDF. BriefHelden explains complicated documents in clear, everyday language.",
@@ -1072,6 +1129,7 @@
         consent_title:"Privacy settings",consent_text:"Necessary functions are always used. Google Analytics is loaded only after your consent.",consent_only:"Necessary only",consent_allow:"Allow analytics",cookie_settings:"Cookie settings"
       },
       tr:{
+        skip_link:"İçeriğe geç",menu_btn:"Menü",visual_badge:"Karmaşık dil yerine açık anlatım",
         brand_sub:"Mektubunuz. Artık anlaşılır.",
         nav_home:"Ana Sayfa",nav_letters:"Mektupları anla",nav_how:"Nasıl çalışır",nav_prices:"Fiyatlar",nav_faq:"SSS",nav_cta:"Mektubu açıkla",
         hero_badge:"Yapay zekâ destekli anlaşılır açıklama",hero_1:"MEKTUP MU GELDİ?",hero_2:"İçinde ne yazdığını",hero_3:"nihayet anlayın.",hero_lead:"Fotoğraf veya PDF yükleyin. BriefHelden karmaşık yazıları açık ve günlük dille açıklar.",
@@ -1090,6 +1148,7 @@
         consent_title:"Gizlilik ayarları",consent_text:"Gerekli işlevler her zaman kullanılır. Google Analytics yalnızca onayınızdan sonra yüklenir.",consent_only:"Yalnızca gerekli",consent_allow:"Analize izin ver",cookie_settings:"Çerez ayarları"
       },
       ru:{
+        skip_link:"Перейти к содержанию",menu_btn:"Меню",visual_badge:"Понятно вместо сложного языка",
         brand_sub:"Ваше письмо. Наконец понятно.",
         nav_home:"Главная",nav_letters:"Понять письма",nav_how:"Как это работает",nav_prices:"Цены",nav_faq:"FAQ",nav_cta:"Объяснить письмо",
         hero_badge:"Понятное объяснение с помощью ИИ",hero_1:"ПРИШЛО ПИСЬМО?",hero_2:"Наконец понять,",hero_3:"что в нём написано.",hero_lead:"Загрузите фото или PDF. BriefHelden объяснит сложный документ простым и понятным языком.",
