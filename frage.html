@@ -1,757 +1,640 @@
 <!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>BriefHelden – Frage stellen</title>
-  <meta
-    name="description"
-    content="Stellen Sie Ihre Frage zu einem Brief, Formular oder Schreiben. BriefHelden hilft mit einer verständlichen Erklärung per E-Mail."
-  />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.briefhelden-service.de/frage.html" />
-
-  <meta property="og:title" content="BriefHelden – Frage stellen" />
-  <meta
-    property="og:description"
-    content="Stellen Sie Ihre Frage zu einem Brief, Formular oder Schreiben und erhalten Sie eine verständliche Antwort per E-Mail."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.briefhelden-service.de/frage.html" />
-  <meta property="og:site_name" content="BriefHelden" />
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-CVRQ9QBE94');
-  </script>
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kurze Frage senden | BriefHelden</title>
+  <meta name="description" content="Kurze Frage zu einem Brief, Formular oder Schreiben an BriefHelden senden und eine verständliche Erklärung per E-Mail erhalten.">
+  <meta name="robots" content="noindex, follow, noarchive">
+  <meta name="googlebot" content="noindex, follow">
+  <meta name="theme-color" content="#020b17">
+  <link rel="canonical" href="https://briefhelden-service.de/frage">
+  <meta property="og:title" content="Kurze Frage senden | BriefHelden">
+  <meta property="og:description" content="Stellen Sie eine konkrete Verständnisfrage zu einer Textstelle, einem Begriff, Betrag oder einer Formulierung.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://briefhelden-service.de/frage">
+  <meta property="og:site_name" content="BriefHelden">
+  <meta property="og:image" content="https://briefhelden-service.de/assets/og-briefhelden.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kurze Frage senden | BriefHelden">
+  <meta name="twitter:description" content="Stellen Sie eine konkrete Verständnisfrage zu einer Textstelle, einem Begriff, Betrag oder einer Formulierung.">
+  <meta name="twitter:image" content="https://briefhelden-service.de/assets/og-briefhelden.jpg">
   <style>
     :root{
-      --nav-bg: rgba(9,24,33,.84);
-      --nav-border: rgba(255,255,255,.10);
-      --text: #0b1220;
-      --muted: rgba(11,18,32,.72);
-      --glass: rgba(255,255,255,.28);
-      --glass2: rgba(255,255,255,.16);
-      --stroke: rgba(255,255,255,.36);
-      --shadow: 0 18px 40px rgba(0,0,0,.18);
-      --btn1: #2f6fff;
-      --btn2: #1f56b8;
-      --radius-xl: 24px;
-      --radius-lg: 18px;
-      --max: 1120px;
+      --bg:#010916;
+      --bg-soft:#061426;
+      --panel:#071a2d;
+      --panel-2:#09233c;
+      --panel-glass:rgba(7,28,49,.80);
+      --line:rgba(99,205,255,.18);
+      --line-strong:rgba(43,195,255,.55);
+      --white:#f8fbff;
+      --muted:#a9bfd1;
+      --cyan:#28caff;
+      --blue:#1677ff;
+      --blue2:#004ee8;
+      --purple:#9c5cff;
+      --green:#37d98d;
+      --yellow:#ffd84e;
+      --orange:#ffae1f;
+      --red:#ff616b;
+      --max:1280px;
+      --shadow:0 30px 90px rgba(0,0,0,.42);
+      --shadow-soft:0 18px 55px rgba(0,0,0,.28);
+      --radius-xl:30px;
+      --radius-lg:22px;
+      --radius-md:16px;
     }
 
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-
     body{
       margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      color:var(--text);
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      color:var(--white);
       background:
-        radial-gradient(1200px 700px at 12% 24%, rgba(120,180,255,.32), rgba(255,255,255,0) 60%),
-        radial-gradient(1200px 800px at 88% 18%, rgba(120,140,255,.26), rgba(255,255,255,0) 62%),
-        radial-gradient(1000px 700px at 50% 92%, rgba(170,210,255,.28), rgba(255,255,255,0) 60%),
-        linear-gradient(180deg, #f8fbff 0%, #eef6ff 45%, #f8fbff 100%);
+        radial-gradient(900px 600px at 12% -2%,rgba(0,142,255,.16),transparent 62%),
+        radial-gradient(850px 620px at 92% 18%,rgba(94,64,255,.15),transparent 66%),
+        linear-gradient(180deg,#020916 0%,#03111f 48%,#020a16 100%);
       min-height:100vh;
+      overflow-x:hidden;
+    }
+    body::before{
+      content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;
+      background:linear-gradient(rgba(255,255,255,.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.015) 1px,transparent 1px);
+      background-size:34px 34px;
+      mask-image:linear-gradient(to bottom,rgba(0,0,0,.75),transparent 82%);
+    }
+    body::after{
+      content:"";position:fixed;inset:-15%;z-index:-3;pointer-events:none;
+      background:radial-gradient(circle at 16% 24%,rgba(15,139,255,.12),transparent 24%),radial-gradient(circle at 82% 34%,rgba(117,72,255,.11),transparent 24%),radial-gradient(circle at 50% 72%,rgba(0,207,255,.07),transparent 26%);
+      filter:blur(22px);
     }
 
     a{color:inherit;text-decoration:none}
+    button,select{font:inherit}
+    svg{display:block}
+    :focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+    .skip{position:absolute;left:-9999px;top:12px;background:#fff;color:#000;padding:10px 14px;border-radius:10px;z-index:999;font-weight:900}
+    .skip:focus{left:12px}
+    .wrap{width:min(var(--max),calc(100% - 34px));margin-inline:auto}
+    .section{padding:52px 0}
+    .section.compact{padding:34px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:22px}
+    .section-head.center{display:block;text-align:center}
+    .section-head.center p{margin-inline:auto}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border-radius:999px;background:linear-gradient(180deg,rgba(34,190,255,.14),rgba(34,190,255,.06));border:1px solid rgba(56,205,255,.23);color:#8bdfff;font-weight:900;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+    h1,h2,h3,p{margin-top:0}
+    .section-title{margin:12px 0 8px;font-size:clamp(28px,3.5vw,46px);line-height:1.04;letter-spacing:-.04em}
+    .section-sub{margin:0;color:var(--muted);font-size:16px;line-height:1.65;max-width:820px}
 
-    .skipLink{
-      position:absolute;
-      left:-9999px;
-      top:auto;
-      width:1px;
-      height:1px;
-      overflow:hidden;
+    .master-ambient{
+      position:fixed;inset:-5%;z-index:0;pointer-events:none;opacity:.055;filter:blur(20px) saturate(1.32) contrast(1.05);transform:scale(1.06);
+      background-image:linear-gradient(180deg,rgba(1,9,22,.22),rgba(1,9,22,.72)),image-set(url("assets/BRIEFHELDEN_V2_MASTER_DESIGN.webp") type("image/webp"),url("assets/BRIEFHELDEN_V2_MASTER_DESIGN.png") type("image/png"));
+      background-size:cover,min(1024px,100vw) auto;background-repeat:no-repeat;background-position:center top;
     }
+    header,main,footer,.consent{position:relative;z-index:1}
 
-    .skipLink:focus{
-      left:16px;
-      top:16px;
-      width:auto;
-      height:auto;
-      z-index:999;
-      background:#fff;
-      color:#000;
-      padding:10px 14px;
-      border-radius:10px;
-      font-weight:800;
+    header{position:sticky;top:0;z-index:100;background:rgba(1,9,22,.78);backdrop-filter:blur(18px) saturate(150%);-webkit-backdrop-filter:blur(18px) saturate(150%);border-bottom:1px solid rgba(96,199,255,.12)}
+    .nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:10px;min-width:max-content}
+    .brand-mark{width:44px;height:50px;filter:drop-shadow(0 0 14px rgba(35,191,255,.42))}
+    .brand-copy strong{display:block;font-size:26px;letter-spacing:-.045em;line-height:1}
+    .brand-copy strong span{color:#43c7ff}
+    .brand-copy small{display:block;color:#b6cadd;font-size:10px;margin-top:4px;font-weight:700}
+    .nav-center{display:flex;align-items:center;gap:24px}
+    .nav-center a{font-size:13px;font-weight:850;color:#c8d7e5;transition:.18s}
+    .nav-center a:hover{color:#fff}
+    .nav-actions{display:flex;align-items:center;gap:10px}
+    .lang-wrap{position:relative}
+    .lang{appearance:none;background:#06192c;color:#fff;border:1px solid rgba(93,191,255,.25);border-radius:13px;padding:10px 38px 10px 14px;font-weight:900;cursor:pointer}
+    .lang-wrap::after{content:"▾";position:absolute;right:13px;top:50%;transform:translateY(-52%);color:#78cfff;pointer-events:none}
+    .nav-cta{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:14px;background:linear-gradient(180deg,#ffe879 0%,#ffc126 100%);color:#241700;font-weight:950;box-shadow:0 10px 30px rgba(255,191,33,.24),0 0 0 1px rgba(255,255,255,.25) inset;transition:.18s}
+    .nav-cta:hover{transform:translateY(-1px);filter:brightness(1.04)}
+    .menu{display:none;background:#09213a;color:#fff;border:1px solid rgba(90,192,255,.24);padding:10px 13px;border-radius:12px;font-weight:900;cursor:pointer}
+    .mobile-nav{display:none;padding:10px 18px 18px;border-top:1px solid rgba(90,192,255,.10)}
+    .mobile-nav a{display:block;padding:13px 4px;border-bottom:1px solid rgba(255,255,255,.06);font-weight:850;color:#d9e8f3}
+
+    .page-hero{padding:20px 0 0}
+    .page-hero-shell{
+      position:relative;overflow:hidden;border:1px solid rgba(62,195,255,.22);border-radius:0 0 32px 32px;
+      background:radial-gradient(circle at 83% 15%,rgba(20,158,255,.23),transparent 28%),radial-gradient(circle at 68% 70%,rgba(54,68,255,.18),transparent 34%),linear-gradient(90deg,rgba(3,16,31,.98) 0%,rgba(4,18,34,.94) 43%,rgba(5,20,38,.92) 100%);
+      box-shadow:0 24px 90px rgba(0,0,0,.42),0 0 40px rgba(0,133,255,.06) inset;
     }
+    .page-hero-shell::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 93% 20%,rgba(255,174,40,.16) 0 2%,transparent 8%),linear-gradient(110deg,transparent 0 58%,rgba(30,188,255,.035) 60%,transparent 65%)}
+    .page-hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(420px,.92fr);align-items:center;gap:34px;padding:58px 48px 42px}
+    .hero-badge{display:inline-flex;align-items:center;gap:8px;margin-bottom:16px;padding:8px 12px;border-radius:999px;border:1px solid rgba(77,207,255,.25);background:rgba(32,184,255,.08);color:#8fe3ff;font-size:11px;font-weight:950;letter-spacing:.11em;text-transform:uppercase}
+    .page-hero h1{margin:0;font-size:clamp(44px,5.2vw,78px);line-height:.96;letter-spacing:-.06em;max-width:780px}
+    .page-hero h1 .cyan{display:block;color:#41cfff;text-shadow:0 0 34px rgba(41,194,255,.20)}
+    .hero-lead{max-width:760px;margin:20px 0 0;color:#c5d7e5;font-size:17px;line-height:1.7;font-weight:650}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:11px;min-height:56px;padding:11px 18px;border-radius:15px;font-weight:950;box-shadow:0 14px 36px rgba(0,0,0,.28);transition:.18s}
+    .btn:hover{transform:translateY(-2px);filter:brightness(1.04)}
+    .btn-blue{background:linear-gradient(180deg,#3bd2ff 0%,#1579ff 52%,#0758e7 100%);color:#fff;border:1px solid rgba(159,232,255,.45)}
+    .btn-yellow{background:linear-gradient(180deg,#ffe773 0%,#ffc326 100%);color:#241700;border:1px solid rgba(255,255,255,.34)}
+    .btn-icon{width:29px;height:29px;border-radius:9px;display:grid;place-items:center;background:rgba(255,255,255,.14)}
+    .btn-yellow .btn-icon{background:rgba(80,52,0,.10)}
+    .btn-icon svg{width:17px;height:17px}
+    .btn-copy{display:block;text-align:left;line-height:1.05}
+    .btn-copy small{display:block;margin-top:5px;font-size:9px;opacity:.78;font-weight:800}
+    .hero-mini{display:flex;gap:13px;flex-wrap:wrap;margin-top:18px;color:#9fb7c8;font-size:11px;font-weight:800}
+    .hero-mini span{display:inline-flex;align-items:center;gap:6px}.hero-mini i{width:6px;height:6px;border-radius:50%;background:#35d98c;box-shadow:0 0 12px rgba(53,217,140,.55)}
+    .hero-art{position:relative;min-height:365px;display:grid;place-items:center}
+    .hero-art::before{content:"";position:absolute;width:90%;height:70%;border-radius:50%;background:radial-gradient(circle,rgba(0,178,255,.25),transparent 67%);filter:blur(18px)}
+    .hero-frame{position:relative;width:min(100%,570px);border-radius:26px;overflow:hidden;border:1px solid rgba(94,210,255,.30);box-shadow:0 32px 80px rgba(0,0,0,.45),0 0 50px rgba(0,147,255,.12);transform:perspective(900px) rotateY(-5deg) rotateZ(1deg)}
+    .hero-frame img{display:block;width:100%;height:auto}
+    .hero-art-badge{position:absolute;right:4%;bottom:7%;padding:8px 11px;border-radius:10px;background:rgba(2,14,26,.88);border:1px solid rgba(89,207,255,.26);font-size:10px;color:#d8e9f4;font-weight:850;box-shadow:0 12px 30px rgba(0,0,0,.35)}
+    .hero-art-badge b{color:#4fd5ff}
+    .hero-strip{position:relative;z-index:2;display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid rgba(74,190,255,.13);background:rgba(1,11,22,.55)}
+    .hero-strip>div{display:flex;align-items:center;justify-content:center;gap:8px;min-height:56px;padding:10px 8px;border-right:1px solid rgba(74,190,255,.10);color:#c7d9e6;font-size:11px;font-weight:850;text-align:center}
+    .hero-strip>div:last-child{border-right:0}.strip-icon{color:#4fd6ff}.strip-icon svg{width:18px;height:18px}
 
-    header{
-      position:sticky;
-      top:0;
-      z-index:30;
-      background:var(--nav-bg);
-      backdrop-filter:blur(12px) saturate(140%);
-      border-bottom:1px solid var(--nav-border);
-      color:#fff;
+    .premium-card{position:relative;background:linear-gradient(180deg,rgba(8,32,55,.86),rgba(5,21,37,.92));border:1px solid rgba(77,191,255,.16);border-radius:var(--radius-lg);box-shadow:var(--shadow-soft);overflow:hidden}
+    .premium-card::before{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(120deg,rgba(58,196,255,.05),transparent 34%,rgba(137,78,255,.04) 72%,transparent)}
+    .content-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .info-card{padding:20px;min-height:205px}
+    .info-icon{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;margin-bottom:15px;background:linear-gradient(180deg,rgba(43,200,255,.18),rgba(21,108,255,.12));border:1px solid rgba(74,203,255,.22);color:#6cddff}
+    .info-icon svg{width:22px;height:22px}
+    .info-card h3{margin-bottom:8px;font-size:18px;letter-spacing:-.02em}
+    .info-card p{margin:0;color:#a9bfd1;line-height:1.62;font-size:13px;font-weight:650}
+
+    .glossary{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .term{padding:20px}
+    .term b{display:block;color:#77dcff;font-size:12px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:7px}
+    .term h3{margin-bottom:7px;font-size:20px}.term p{margin:0;color:var(--muted);line-height:1.62;font-size:13px}
+
+    .process{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .step{display:grid;grid-template-columns:1fr 118px;gap:12px;align-items:center;padding:20px;min-height:205px}
+    .step-number{width:31px;height:31px;border-radius:10px;display:grid;place-items:center;margin-bottom:13px;background:linear-gradient(180deg,#45d5ff,#126cff);box-shadow:0 8px 22px rgba(0,123,255,.28);font-weight:950}
+    .step h3{margin-bottom:7px;font-size:19px}.step p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
+    .step-art{height:155px;display:grid;place-items:center}.step-art img{max-width:118px;max-height:150px;object-fit:contain;filter:drop-shadow(0 18px 24px rgba(0,0,0,.30))}
+
+    .compare{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .compare-card{padding:23px}
+    .compare-label{display:inline-flex;padding:6px 9px;border-radius:999px;font-size:10px;font-weight:950;text-transform:uppercase;letter-spacing:.09em;margin-bottom:13px}
+    .compare-label.blue{background:rgba(43,194,255,.10);border:1px solid rgba(70,205,255,.20);color:#70dcff}
+    .compare-label.yellow{background:rgba(255,201,46,.10);border:1px solid rgba(255,206,67,.20);color:#ffdb66}
+    .compare-card h3{font-size:24px;margin-bottom:10px}.compare-card p{color:var(--muted);line-height:1.68;margin-bottom:0}
+    .compare-list{margin:14px 0 0;padding:0;list-style:none}.compare-list li{position:relative;padding:7px 0 7px 24px;color:#c6d8e5;font-size:13px;line-height:1.45}.compare-list li::before{content:"";position:absolute;left:2px;top:13px;width:8px;height:8px;border-radius:50%;background:#41cfff;box-shadow:0 0 13px rgba(65,207,255,.55)}
+
+    .services{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .service-card{padding:24px;display:grid;grid-template-columns:1fr 150px;gap:16px;align-items:center}
+    .service-price{display:inline-flex;align-items:center;gap:7px;margin-bottom:12px;color:#9ce7ff;font-size:11px;font-weight:900}.service-price strong{font-size:28px;color:#fff;letter-spacing:-.04em}
+    .service-card h3{font-size:25px;margin-bottom:9px}.service-card p{color:var(--muted);line-height:1.6;font-size:13px}
+    .service-art{height:160px;display:grid;place-items:center}.service-art img{max-width:145px;max-height:155px;object-fit:contain;filter:drop-shadow(0 16px 26px rgba(0,0,0,.32))}
+    .service-card .btn{margin-top:8px;min-height:49px;font-size:13px}
+
+    .related{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
+    .related a{display:block;padding:18px;border-radius:18px;background:linear-gradient(180deg,rgba(7,28,48,.82),rgba(5,20,35,.90));border:1px solid rgba(75,191,255,.15);transition:.18s;min-height:130px}
+    .related a:hover{transform:translateY(-3px);border-color:rgba(70,207,255,.34);box-shadow:0 16px 38px rgba(0,0,0,.26)}
+    .related h3{font-size:17px;margin-bottom:7px}.related p{margin:0;color:var(--muted);font-size:12px;line-height:1.55}.related .arrow{display:inline-block;margin-top:12px;color:#54d7ff;font-weight:950}
+
+    .trust-band{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid rgba(78,193,255,.14);border-radius:20px;overflow:hidden;background:rgba(5,23,40,.70)}
+    .trust-item{padding:18px;text-align:center;border-right:1px solid rgba(78,193,255,.10)}.trust-item:last-child{border-right:0}
+    .trust-item strong{display:block;font-size:13px;margin-bottom:5px}.trust-item span{display:block;color:#9fb6c7;font-size:11px;line-height:1.45}
+
+    .faq{display:grid;grid-template-columns:1fr 1fr;gap:14px}.faq-item{padding:21px}.faq-item h3{font-size:18px;margin-bottom:9px}.faq-item p{margin:0;color:var(--muted);font-size:13px;line-height:1.65}
+
+    .notice{padding:18px 20px;border-radius:18px;background:linear-gradient(180deg,rgba(255,193,40,.08),rgba(255,193,40,.035));border:1px solid rgba(255,208,72,.18);color:#c8d8e3;font-size:12px;line-height:1.6}.notice strong{color:#ffe077}
+
+    .final-card{position:relative;overflow:hidden;padding:26px;border-radius:26px;border:1px solid rgba(73,196,255,.20);background:radial-gradient(circle at 86% 30%,rgba(28,166,255,.19),transparent 28%),linear-gradient(100deg,rgba(7,28,49,.96),rgba(7,24,43,.93));box-shadow:var(--shadow)}
+    .final-grid{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}.final-card h2{font-size:clamp(28px,4vw,48px);margin:8px 0 7px;letter-spacing:-.04em}.final-card p{margin:0;color:#b5c9d8}.final-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+
+    footer{padding:24px 0 30px;color:#9fb5c5}.footer-grid{display:grid;grid-template-columns:1fr auto auto;align-items:center;gap:22px}.foot-brand{display:flex;align-items:center;gap:9px}.foot-brand .brand-mark{width:34px;height:39px}.foot-brand strong{color:#fff}.foot-links{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;font-weight:800}.foot-links a:hover{color:#fff}.cookie-link{border:0;background:none;color:inherit;padding:0;font:inherit;font-size:12px;font-weight:800;cursor:pointer}.cookie-link:hover{color:#fff}.foot-lang{font-size:12px;font-weight:850;color:#d1e1ec}
+
+    .consent{display:none;position:fixed;left:18px;right:18px;bottom:18px;z-index:180;max-width:980px;margin:auto;padding:15px 16px;border-radius:18px;background:rgba(5,21,38,.96);border:1px solid rgba(72,193,255,.22);box-shadow:0 24px 70px rgba(0,0,0,.55);backdrop-filter:blur(16px)}
+    .consent.show{display:block}.consent-grid{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center}.consent strong{font-size:14px}.consent p{margin:4px 0 0;color:#a9bfd0;font-size:11px;line-height:1.45}.consent-actions{display:flex;gap:8px}.consent button{border:0;border-radius:11px;padding:10px 13px;font-weight:900;cursor:pointer}.consent .necessary{background:#102c49;color:#fff}.consent .analytics{background:linear-gradient(180deg,#40cbff,#1176ff);color:#fff}
+
+    @media (max-width:1100px){
+      .nav-center{gap:14px}.nav-center a{font-size:12px}
+      .page-hero-grid{grid-template-columns:1fr 1fr;padding:48px 32px 34px}.content-grid{grid-template-columns:1fr 1fr}.glossary{grid-template-columns:1fr 1fr}.service-card{grid-template-columns:1fr 120px}.related{grid-template-columns:1fr 1fr}.trust-band{grid-template-columns:1fr 1fr}.trust-item:nth-child(2){border-right:0}.trust-item:nth-child(-n+2){border-bottom:1px solid rgba(73,190,255,.12)}
     }
-
-    .nav{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:14px 18px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      color:#fff;
-    }
-
-    .brand{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      font-weight:900;
-      letter-spacing:.2px;
-      white-space:nowrap;
-      flex-shrink:0;
-    }
-
-    .brand .logo{
-      width:26px;
-      height:26px;
-      border-radius:10px;
-      background:
-        radial-gradient(circle at 30% 30%, rgba(255,255,255,.85), rgba(255,255,255,.08)),
-        linear-gradient(180deg, rgba(55,120,255,.9), rgba(20,70,190,.9));
-      box-shadow:0 10px 18px rgba(0,0,0,.18);
-      position:relative;
-    }
-
-    .brand .logo:after{
-      content:"";
-      position:absolute;
-      inset:7px 6px 7px 10px;
-      border-radius:8px;
-      background:rgba(255,255,255,.85);
-      clip-path:polygon(0 0, 100% 0, 85% 100%, 0 100%);
-      opacity:.12;
-    }
-
-    .navRight{
-      display:flex;
-      align-items:center;
-      gap:12px;
-    }
-
-    nav.links{
-      display:flex;
-      align-items:center;
-      gap:16px;
-      flex-wrap:wrap;
-    }
-
-    nav.links a{
-      color:rgba(255,255,255,.82);
-      font-weight:700;
-      font-size:14px;
-    }
-
-    nav.links a:hover{color:#fff}
-
-    .langWrap{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      position:relative;
-    }
-
-    .langSelect{
-      appearance:none;
-      border:1px solid rgba(255,255,255,.18);
-      background:rgba(0,0,0,.18);
-      color:#fff;
-      padding:8px 36px 8px 12px;
-      border-radius:12px;
-      font-weight:800;
-      cursor:pointer;
-      outline:none;
-    }
-
-    .langSelect:focus{
-      box-shadow:0 0 0 3px rgba(90,160,255,.25);
-    }
-
-    .langWrap:after{
-      content:"▾";
-      position:absolute;
-      right:12px;
-      top:50%;
-      transform:translateY(-50%);
-      color:rgba(255,255,255,.85);
-      pointer-events:none;
-      font-size:12px;
-    }
-
-    .menuBtn{
-      display:none;
-      border:1px solid rgba(255,255,255,.18);
-      background:rgba(255,255,255,.08);
-      color:#fff;
-      padding:10px 12px;
-      border-radius:12px;
-      font-weight:900;
-      cursor:pointer;
-    }
-
-    .mobileMenu{
-      display:none;
-      padding:0 18px 18px;
-      max-width:var(--max);
-      margin:0 auto;
-    }
-
-    .mobileMenuInner{
-      border:1px solid rgba(255,255,255,.12);
-      background:rgba(255,255,255,.06);
-      border-radius:18px;
-      overflow:hidden;
-      backdrop-filter:blur(10px);
-    }
-
-    .mobileMenu a{
-      display:block;
-      padding:14px 16px;
-      color:#fff;
-      font-weight:800;
-      border-bottom:1px solid rgba(255,255,255,.08);
-    }
-
-    .mobileMenu a:last-child{border-bottom:none}
-
-    .section{
-      padding:26px 18px 30px;
-    }
-
-    .wrap{
-      max-width:var(--max);
-      margin:0 auto;
-    }
-
-    .glassCard{
-      background:linear-gradient(180deg, var(--glass), var(--glass2));
-      border:1px solid var(--stroke);
-      border-radius:var(--radius-xl);
-      box-shadow:var(--shadow);
-      backdrop-filter:blur(14px) saturate(140%);
-      -webkit-backdrop-filter:blur(14px) saturate(140%);
-      overflow:hidden;
-    }
-
-    .pad{
-      padding:22px;
-    }
-
-    .title{
-      text-align:center;
-      margin:0 0 10px;
-      font-weight:950;
-      font-size:clamp(26px, 3vw, 40px);
-      letter-spacing:.2px;
-    }
-
-    .lead{
-      text-align:center;
-      margin:0 auto 18px;
-      max-width:860px;
-      color:rgba(11,18,32,.76);
-      line-height:1.65;
-      font-size:16px;
-    }
-
-    .statusBox{
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,.55);
-      background:rgba(255,255,255,.20);
-      padding:16px;
-      text-align:center;
-      font-weight:800;
-      color:rgba(11,18,32,.82);
-      margin-bottom:18px;
-    }
-
-    .infoGrid{
-      display:grid;
-      grid-template-columns:1fr 1fr 1fr;
-      gap:14px;
-      margin-bottom:18px;
-    }
-
-    .infoItem{
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,.55);
-      background:rgba(255,255,255,.20);
-      padding:16px;
-      text-align:center;
-    }
-
-    .infoItem h3{
-      margin:0 0 8px;
-      font-size:16px;
-      font-weight:900;
-    }
-
-    .infoItem p{
-      margin:0;
-      color:rgba(11,18,32,.74);
-      line-height:1.5;
-      font-weight:700;
-      font-size:14px;
-    }
-
-    .tallyFrameWrap{
-      border-radius:20px;
-      border:1px solid rgba(255,255,255,.55);
-      background:rgba(255,255,255,.22);
-      padding:10px;
-      min-height:760px;
-    }
-
-    .tallyFrame{
-      width:100%;
-      height:760px;
-      border:0;
-      border-radius:16px;
-      background:#fff;
-    }
-
-    .actions{
-      margin-top:18px;
-      display:flex;
-      justify-content:center;
-      gap:12px;
-      flex-wrap:wrap;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:8px;
-      padding:12px 18px;
-      border-radius:14px;
-      color:#fff;
-      font-weight:900;
-      min-width:240px;
-      box-shadow:0 10px 24px rgba(0,0,0,.16);
-      background:linear-gradient(180deg, var(--btn1), var(--btn2));
-      text-align:center;
-    }
-
-    .hint{
-      margin-top:16px;
-      text-align:center;
-      color:rgba(11,18,32,.72);
-      font-weight:700;
-      line-height:1.6;
-    }
-
-    .moreLinks{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:0 18px 24px;
-    }
-
-    .moreLinksCard{
-      background:linear-gradient(180deg, rgba(255,255,255,.34), rgba(255,255,255,.18));
-      border:1px solid rgba(255,255,255,.50);
-      border-radius:24px;
-      box-shadow:0 18px 40px rgba(0,0,0,.12);
-      padding:22px;
-    }
-
-    .moreLinksTitle{
-      margin:0 0 14px;
-      font-size:26px;
-      font-weight:950;
-      color:#0b1220;
-      text-align:center;
-    }
-
-    .moreLinksGrid{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:12px;
-    }
-
-    .moreLinkItem{
-      border-radius:16px;
-      border:1px solid rgba(255,255,255,.55);
-      background:rgba(255,255,255,.22);
-      padding:14px 16px;
-      font-weight:800;
-      color:rgba(11,18,32,.82);
-    }
-
-    .moreLinkItem:hover{
-      background:rgba(255,255,255,.32);
-    }
-
-    footer{
-      margin-top:18px;
-      padding:18px 18px 28px;
-      color:rgba(255,255,255,.82);
-      background:rgba(9,24,33,.82);
-      border-top:1px solid rgba(255,255,255,.10);
-      backdrop-filter:blur(12px) saturate(140%);
-    }
-
-    .footWrap{
-      max-width:var(--max);
-      margin:0 auto;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      flex-wrap:wrap;
-      gap:12px;
-    }
-
-    .footLinks{
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-      font-weight:800;
-    }
-
-    .footLinks a{color:rgba(255,255,255,.80)}
-    .footLinks a:hover{color:#fff}
-
     @media (max-width:900px){
-      nav.links{display:none}
-      .menuBtn{display:inline-flex}
-      .infoGrid{grid-template-columns:1fr}
-      .moreLinksGrid{grid-template-columns:1fr}
-      .tallyFrame{height:880px}
-      .tallyFrameWrap{min-height:880px}
-      .btn{min-width:100%}
+      .nav-center,.nav-cta{display:none}.menu{display:inline-flex}.nav{min-height:64px}
+      .page-hero-grid{grid-template-columns:1fr;padding:34px 20px 28px;gap:24px}.page-hero h1{font-size:clamp(42px,10vw,66px)}.hero-art{min-height:300px}.hero-frame{max-width:620px;transform:none}.hero-strip{grid-template-columns:1fr 1fr}.hero-strip>div:nth-child(2n){border-right:0}.hero-strip>div:last-child{grid-column:1/-1}
+      .process{grid-template-columns:1fr}.step{grid-template-columns:1fr 130px}.compare,.services,.faq{grid-template-columns:1fr}.service-card{grid-template-columns:1fr 130px}.final-grid{grid-template-columns:1fr}.final-actions{justify-content:flex-start}.footer-grid{grid-template-columns:1fr}.foot-links{gap:11px}
     }
-  </style>
+    @media (max-width:640px){
+      .wrap{width:min(var(--max),calc(100% - 22px))}.section{padding:38px 0}.section.compact{padding:28px 0}.brand-copy small{display:none}.brand-copy strong{font-size:22px}.brand-mark{width:37px;height:42px}.lang{padding:9px 34px 9px 11px}.page-hero{padding-top:10px}.page-hero-shell{border-radius:0 0 22px 22px}.page-hero-grid{padding:28px 15px 24px}.hero-lead{font-size:15px}.hero-actions{display:grid}.btn{width:100%}.hero-art{min-height:235px}.hero-art-badge{right:2%;bottom:2%;font-size:9px}.hero-strip{display:none}
+      .content-grid,.glossary,.related,.trust-band{grid-template-columns:1fr}.trust-item{border-right:0;border-bottom:1px solid rgba(73,190,255,.10)}.trust-item:last-child{border-bottom:0}.step,.service-card{grid-template-columns:1fr}.step-art,.service-art{height:125px}.step-art img,.service-art img{max-height:120px}.section-title{font-size:30px}.section-sub{font-size:14px}.final-actions{display:grid}.consent-grid{grid-template-columns:1fr}.consent-actions{display:grid;grid-template-columns:1fr 1fr}
+    }
+  
+    /* Unique layout: Bußgeldbescheid-Kompass */
+    .decision-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .decision-card{padding:20px;min-height:190px}
+    .decision-card .kicker{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:11px;margin-bottom:13px;background:linear-gradient(180deg,rgba(255,216,78,.20),rgba(255,174,31,.10));border:1px solid rgba(255,214,88,.25);color:#ffe06d;font-weight:950}
+    .decision-card h3{font-size:18px;margin-bottom:8px}.decision-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.62}
+    .document-map{display:grid;grid-template-columns:.82fr 1.18fr;gap:18px;align-items:stretch}
+    .map-side{padding:24px}
+    .map-side h3{font-size:26px;margin-bottom:10px}
+    .map-side p{color:var(--muted);line-height:1.68;margin-bottom:0}
+    .map-stack{display:grid;gap:10px}
+    .map-row{display:grid;grid-template-columns:42px 1fr;gap:13px;align-items:start;padding:15px 16px;border-radius:16px;background:linear-gradient(180deg,rgba(8,32,55,.82),rgba(5,21,37,.90));border:1px solid rgba(77,191,255,.14)}
+    .map-row .n{width:36px;height:36px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(180deg,#43d4ff,#126eff);font-weight:950;box-shadow:0 8px 22px rgba(0,123,255,.22)}
+    .map-row strong{display:block;margin:1px 0 5px;font-size:15px}.map-row span{display:block;color:var(--muted);font-size:12px;line-height:1.52}
+    .example-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .example-card{padding:24px}
+    .example-card .label{display:inline-flex;padding:6px 10px;border-radius:999px;font-size:10px;font-weight:950;letter-spacing:.08em;text-transform:uppercase;margin-bottom:13px}
+    .label-red{background:rgba(255,97,107,.11);border:1px solid rgba(255,97,107,.20);color:#ff9aa2}
+    .label-green{background:rgba(55,217,141,.10);border:1px solid rgba(55,217,141,.20);color:#7ee9b1}
+    .example-card blockquote{margin:0;color:#c9d9e6;font-size:14px;line-height:1.72}
+    .clear-list{display:grid;gap:9px;margin-top:4px}
+    .clear-item{padding:11px 12px;border-radius:12px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.06)}
+    .clear-item b{display:block;color:#eaf6ff;font-size:12px;margin-bottom:3px}.clear-item span{color:var(--muted);font-size:12px;line-height:1.5}
+    @media(max-width:980px){.decision-grid{grid-template-columns:1fr 1fr}.document-map{grid-template-columns:1fr}}
+    @media(max-width:680px){.decision-grid,.example-grid{grid-template-columns:1fr}}
+
+
+    /* Finanzamt-Seite: eigener thematischer Aufbau */
+    .type-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+    .type-card{padding:18px;min-height:185px}
+    .type-card .type-icon{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;margin-bottom:13px;background:linear-gradient(180deg,rgba(255,210,70,.18),rgba(255,153,22,.08));border:1px solid rgba(255,210,70,.22);color:#ffdb66}
+    .type-card h3{font-size:17px;margin-bottom:8px}
+    .type-card p{margin:0;color:var(--muted);font-size:12px;line-height:1.58}
+    .money-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;align-items:stretch}
+    .money-step{position:relative;padding:20px;min-height:176px}
+    .money-step::after{content:"→";position:absolute;right:-12px;top:50%;transform:translateY(-50%);z-index:3;color:#62d7ff;font-size:23px;font-weight:950;text-shadow:0 0 18px rgba(70,207,255,.42)}
+    .money-step:last-child::after{display:none}
+    .money-step .n{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;margin-bottom:12px;background:linear-gradient(180deg,#ffe36b,#ffb61b);color:#241700;font-weight:950}
+    .money-step h3{font-size:18px;margin-bottom:7px}
+    .money-step p{margin:0;color:var(--muted);font-size:12px;line-height:1.58}
+    .money-note{margin-top:14px;padding:14px 16px;border-radius:15px;border:1px solid rgba(255,202,60,.18);background:rgba(255,188,33,.06);color:#d8c98e;font-size:12px;line-height:1.6}
+    .tax-detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .tax-detail{padding:19px;min-height:178px}
+    .tax-detail b{display:inline-flex;margin-bottom:9px;padding:5px 8px;border-radius:999px;background:rgba(42,199,255,.09);border:1px solid rgba(64,203,255,.18);color:#7bdfff;font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+    .tax-detail h3{font-size:18px;margin-bottom:7px}
+    .tax-detail p{margin:0;color:var(--muted);font-size:12px;line-height:1.58}
+    .tax-example{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .tax-example .example-card{padding:22px;min-height:310px}
+    .tax-sheet{margin-top:12px;padding:18px;border-radius:16px;background:#f7f9fc;color:#172131;border:1px solid #dbe3ec;box-shadow:0 15px 36px rgba(0,0,0,.18)}
+    .tax-sheet .sheet-head{font-weight:950;margin-bottom:12px}
+    .tax-sheet .sheet-row{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid #dde5ee;font-size:13px}
+    .tax-sheet .sheet-row:last-child{border-bottom:0}
+    .tax-sheet .sheet-row strong{white-space:nowrap}
+    .explain-lines{display:grid;gap:10px;margin-top:14px}
+    .explain-line{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:start;padding:11px;border-radius:13px;background:rgba(52,213,139,.07);border:1px solid rgba(52,213,139,.14)}
+    .explain-line .dot{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:rgba(52,213,139,.15);color:#59e6a3;font-weight:950}
+    .explain-line strong{display:block;font-size:13px;margin-bottom:3px}
+    .explain-line span{display:block;color:#b8cdbe;font-size:11px;line-height:1.5}
+    @media (max-width:1050px){
+      .type-grid{grid-template-columns:repeat(2,1fr)}
+      .money-flow{grid-template-columns:repeat(2,1fr)}
+      .money-step::after{display:none}
+      .tax-detail-grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:720px){
+      .type-grid,.money-flow,.tax-detail-grid,.tax-example{grid-template-columns:1fr}
+    }
+
+
+.form-types{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.form-type{padding:18px;min-height:184px}.form-icon{width:43px;height:43px;border-radius:13px;display:grid;place-items:center;margin-bottom:13px;background:linear-gradient(180deg,rgba(156,92,255,.20),rgba(40,202,255,.09));border:1px solid rgba(159,111,255,.24);color:#c9a9ff;font-size:19px;font-weight:950}.form-type h3,.field-card h3,.rule-card h3{font-size:17px;margin-bottom:8px}.form-type p,.field-card p,.rule-card p{margin:0;color:var(--muted);font-size:12px;line-height:1.58}
+.field-map{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.field-card{padding:20px;min-height:190px}.field-num{width:31px;height:31px;border-radius:10px;display:grid;place-items:center;margin-bottom:13px;background:linear-gradient(180deg,#b26cff,#6f46ff);box-shadow:0 8px 22px rgba(112,70,255,.25);font-weight:950}
+.form-reading{display:grid;grid-template-columns:1fr 1fr;gap:14px}.form-sheet,.form-explain{padding:22px;min-height:350px}.fake-form{margin-top:13px;padding:18px;border-radius:17px;background:#f7f9fc;color:#172131;border:1px solid #dbe3ec;box-shadow:0 15px 36px rgba(0,0,0,.18)}.fake-form-title{font-weight:950;font-size:17px;margin-bottom:13px}.fake-label{display:block;font-size:11px;font-weight:900;color:#4e6071;margin:12px 0 6px}.fake-input{min-height:38px;border:1px solid #c9d4df;background:#fff;border-radius:9px;padding:9px 11px;font-size:12px;color:#687887}.fake-row{display:grid;grid-template-columns:1fr 1fr;gap:9px}.fake-check{display:flex;gap:8px;align-items:center;margin-top:11px;font-size:12px}.fake-box{width:15px;height:15px;border:1px solid #aebbc8;border-radius:3px;background:#fff}.form-notice{margin-top:12px;padding:10px 12px;border-radius:10px;background:#fff4cf;border:1px solid #f1d477;color:#665116;font-size:11px;line-height:1.5}.explain-stack{display:grid;gap:10px;margin-top:13px}.explain-row{display:grid;grid-template-columns:36px 1fr;gap:10px;align-items:start;padding:12px;border-radius:14px;background:rgba(91,217,255,.07);border:1px solid rgba(91,217,255,.15)}.e-icon{width:31px;height:31px;border-radius:9px;display:grid;place-items:center;background:rgba(45,195,255,.13);color:#6edfff;font-weight:950}.explain-row strong{display:block;font-size:13px;margin-bottom:3px}.explain-row span{display:block;color:#b8cad8;font-size:11px;line-height:1.5}
+.form-rules{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.rule-card{padding:20px;min-height:180px}.rule-badge{display:inline-flex;margin-bottom:10px;padding:5px 8px;border-radius:999px;background:rgba(255,205,56,.09);border:1px solid rgba(255,205,56,.18);color:#ffda63;font-size:10px;font-weight:950;letter-spacing:.08em;text-transform:uppercase}
+.boundary-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.boundary-card{padding:22px;min-height:245px}.boundary-card h3{font-size:23px;margin-bottom:10px}.boundary-list{list-style:none;margin:0;padding:0}.boundary-list li{position:relative;padding:8px 0 8px 25px;color:#bfd1de;font-size:13px;line-height:1.5}.boundary-list li:before{content:'';position:absolute;left:2px;top:14px;width:8px;height:8px;border-radius:50%;background:#44d6ff;box-shadow:0 0 12px rgba(68,214,255,.45)}.boundary-card.no .boundary-list li:before{background:#ffbd41;box-shadow:0 0 12px rgba(255,189,65,.35)}
+@media(max-width:1050px){.form-types{grid-template-columns:repeat(2,1fr)}.field-map{grid-template-columns:repeat(2,1fr)}.form-rules{grid-template-columns:repeat(2,1fr)}}@media(max-width:720px){.form-types,.field-map,.form-reading,.form-rules,.boundary-grid{grid-template-columns:1fr}}
+
+
+/* frage.html – transaktionaler Frage-Service, kein SEO-Landingpage-Klon */
+.question-hero{padding:28px 0 18px}
+.question-shell{position:relative;overflow:hidden;border:1px solid rgba(62,195,255,.22);border-radius:0 0 32px 32px;background:
+  radial-gradient(circle at 84% 20%,rgba(156,92,255,.20),transparent 30%),
+  radial-gradient(circle at 20% 8%,rgba(40,202,255,.18),transparent 28%),
+  linear-gradient(135deg,rgba(4,18,34,.98),rgba(5,20,38,.95));
+  box-shadow:0 24px 90px rgba(0,0,0,.42)}
+.question-head{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:30px;align-items:center;padding:48px 46px 30px}
+.question-head h1{margin:12px 0 12px;font-size:clamp(38px,5vw,68px);line-height:.98;letter-spacing:-.055em}
+.question-head h1 .cyan{display:block;color:#43d0ff;text-shadow:0 0 34px rgba(41,194,255,.22)}
+.question-lead{max-width:760px;color:#c5d7e5;font-size:16px;line-height:1.72;margin:0}
+.service-card-top{padding:20px;border:1px solid rgba(91,205,255,.20);border-radius:22px;background:linear-gradient(180deg,rgba(8,34,59,.88),rgba(5,21,37,.94));box-shadow:0 20px 55px rgba(0,0,0,.30)}
+.service-kicker{display:flex;align-items:center;gap:9px;color:#9be4ff;font-size:11px;font-weight:950;letter-spacing:.10em;text-transform:uppercase}
+.service-kicker i{width:8px;height:8px;border-radius:50%;background:#38d88c;box-shadow:0 0 12px rgba(56,216,140,.58)}
+.service-card-top strong{display:block;font-size:23px;margin:12px 0 8px}
+.service-card-top p{margin:0;color:#9fb8cb;font-size:12px;line-height:1.6}
+.question-strip{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(74,190,255,.13);background:rgba(1,11,22,.50)}
+.question-strip>div{display:flex;align-items:center;justify-content:center;gap:8px;min-height:55px;padding:10px 8px;border-right:1px solid rgba(74,190,255,.10);color:#c7d9e6;font-size:11px;font-weight:850;text-align:center}
+.question-strip>div:last-child{border-right:0}
+.question-strip b{color:#56d7ff}
+
+.quick-guide{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.guide-card{padding:20px;min-height:185px}
+.guide-num{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;margin-bottom:12px;background:linear-gradient(180deg,#48d5ff,#176dff);box-shadow:0 8px 22px rgba(0,123,255,.28);font-weight:950}
+.guide-card h3{font-size:18px;margin-bottom:7px}
+.guide-card p{margin:0;color:var(--muted);font-size:12px;line-height:1.62}
+
+.form-stage{position:relative;padding:22px;border-radius:26px;background:linear-gradient(180deg,rgba(8,32,55,.88),rgba(4,18,32,.96));border:1px solid rgba(83,198,255,.19);box-shadow:0 28px 80px rgba(0,0,0,.32)}
+.form-stage::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 80% 0%,rgba(140,74,255,.10),transparent 32%),radial-gradient(circle at 8% 100%,rgba(40,202,255,.09),transparent 28%)}
+.form-head{position:relative;z-index:1;display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:16px}
+.form-head h2{font-size:clamp(27px,3vw,40px);margin:8px 0 6px;letter-spacing:-.035em}
+.form-head p{margin:0;color:var(--muted);line-height:1.6;font-size:13px;max-width:760px}
+.form-status{min-width:max-content;display:inline-flex;align-items:center;gap:8px;padding:8px 11px;border-radius:999px;background:rgba(54,216,139,.08);border:1px solid rgba(54,216,139,.18);color:#8ce5b7;font-size:10px;font-weight:900}
+.form-status i{width:7px;height:7px;border-radius:50%;background:#3bd991;box-shadow:0 0 10px rgba(59,217,145,.6)}
+.tally-wrap{position:relative;z-index:1;border-radius:20px;padding:8px;background:#fff;border:1px solid rgba(255,255,255,.30);box-shadow:0 18px 45px rgba(0,0,0,.25);overflow:hidden}
+.tally-frame{display:block;width:100%;height:760px;border:0;background:#fff;border-radius:14px}
+.form-privacy{position:relative;z-index:1;margin:13px 2px 0;color:#8fa9bd;font-size:11px;line-height:1.55}
+.form-privacy a{color:#65d7ff;text-decoration:underline;text-underline-offset:2px}
+
+.after-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.after-card{padding:20px;min-height:180px}
+.after-icon{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;margin-bottom:12px;background:linear-gradient(180deg,rgba(156,92,255,.18),rgba(29,112,255,.10));border:1px solid rgba(156,120,255,.20);color:#c7adff;font-weight:950}
+.after-card h3{font-size:18px;margin-bottom:7px}
+.after-card p{margin:0;color:var(--muted);font-size:12px;line-height:1.62}
+
+.boundary-box{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.boundary-part{padding:22px;min-height:230px}
+.boundary-part h3{font-size:22px;margin-bottom:10px}
+.boundary-list{list-style:none;margin:0;padding:0}
+.boundary-list li{position:relative;padding:8px 0 8px 24px;color:#bfd1de;font-size:13px;line-height:1.48}
+.boundary-list li::before{content:"";position:absolute;left:2px;top:14px;width:8px;height:8px;border-radius:50%;background:#43d4ff;box-shadow:0 0 12px rgba(67,212,255,.45)}
+.boundary-part.no .boundary-list li::before{background:#ffbd41;box-shadow:0 0 12px rgba(255,189,65,.35)}
+
+.question-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:22px}
+.question-actions a{min-width:210px}
+
+@media(max-width:980px){
+  .question-head{grid-template-columns:1fr;padding:42px 30px 28px}
+  .service-card-top{max-width:520px}
+  .quick-guide,.after-grid{grid-template-columns:1fr}
+}
+@media(max-width:720px){
+  .question-head{padding:34px 20px 24px}
+  .question-strip{grid-template-columns:1fr 1fr}
+  .question-strip>div:nth-child(2){border-right:0}
+  .question-strip>div:nth-child(-n+2){border-bottom:1px solid rgba(74,190,255,.10)}
+  .form-head{align-items:flex-start;flex-direction:column}
+  .form-stage{padding:14px}
+  .tally-frame{height:900px}
+  .boundary-box{grid-template-columns:1fr}
+}
+</style>
 </head>
 <body>
-  <a class="skipLink" href="#mainContent">Zum Inhalt springen</a>
-
-  <header>
-    <div class="nav">
-      <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <div>BriefHelden</div>
+  <div class="master-ambient" aria-hidden="true"></div>
+  <a class="skip" href="#main" data-i18n="skip_link">Zum Inhalt springen</a>
+  
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/" aria-label="BriefHelden Startseite">
+      <svg class="brand-mark" viewBox="0 0 64 72" aria-hidden="true">
+        <defs>
+          <linearGradient id="qLg1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#48d7ff"/><stop offset="1" stop-color="#1264ff"/></linearGradient>
+          <linearGradient id="qLg2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffe55d"/><stop offset="1" stop-color="#ff9b16"/></linearGradient>
+        </defs>
+        <path d="M24 5h25a7 7 0 0 1 7 7v48a7 7 0 0 1-7 7H24a7 7 0 0 1-7-7V12a7 7 0 0 1 7-7z" fill="url(#qLg1)" stroke="#b8f0ff" stroke-width="2"/>
+        <path d="M23 17h27v20H23z" fill="#081c33" opacity=".92"/><path d="M23 17l13.5 11L50 17" fill="none" stroke="#aef0ff" stroke-width="2"/>
+        <path d="M5 48c11-2 16-9 20-17-1 11 2 18 12 22-13-2-22 2-30 8 4-5 4-9-2-13z" fill="url(#qLg2)" filter="drop-shadow(0 0 6px #ffbd20)"/>
+      </svg>
+      <span class="brand-copy"><strong>Brief<span>Helden</span></strong><small data-i18n="brand_sub">Dein Brief. Endlich verständlich.</small></span>
+    </a>
+    <nav class="nav-center" aria-label="Hauptnavigation">
+      <a href="/" data-i18n="nav_home">Startseite</a>
+      <a href="/alle-briefe-verstehen" data-i18n="nav_letters">Briefe verstehen</a>
+      <a href="/widerruf" data-i18n="nav_refund">Widerruf</a>
+      <a href="/datenschutz" data-i18n="nav_privacy">Datenschutz</a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-wrap">
+        <select class="lang" id="langSelect" aria-label="Sprache wählen">
+          <option value="de">DE</option><option value="en">EN</option><option value="tr">TR</option><option value="ru">RU</option>
+        </select>
       </div>
+      <a class="nav-cta" href="/" data-i18n="nav_back">Zur Startseite</a>
+      <button class="menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileNav" data-i18n="menu_btn">Menü</button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="/" data-i18n="nav_home">Startseite</a>
+    <a href="/alle-briefe-verstehen" data-i18n="nav_letters">Briefe verstehen</a>
+    <a href="/widerruf" data-i18n="nav_refund">Widerruf</a>
+    <a href="/datenschutz" data-i18n="nav_privacy">Datenschutz</a>
+  </div>
+</header>
 
-      <div class="navRight">
-        <nav class="links" aria-label="Hauptnavigation">
-          <a href="index.html" data-i18n="nav_home">Startseite</a>
-          <a href="widerruf.html" data-i18n="nav_refund">Widerruf und Rückerstattung</a>
-          <a href="impressum.html" data-i18n="nav_imprint">Impressum</a>
-          <a href="agb.html" data-i18n="nav_terms">AGB</a>
-          <a href="datenschutz.html" data-i18n="nav_privacy">Datenschutz</a>
-        </nav>
-
-        <div class="langWrap">
-          <select class="langSelect" id="langSelect" aria-label="Sprache">
-            <option value="de">DE</option>
-            <option value="en">EN</option>
-            <option value="tr">TR</option>
-            <option value="ru">RU</option>
-          </select>
+  
+<main id="main">
+  <section class="question-hero">
+    <div class="wrap question-shell">
+      <div class="question-head">
+        <div>
+          <span class="eyebrow" data-i18n="hero_badge">Kurze Frage · BriefHelden</span>
+          <h1><span data-i18n="hero_1">Ihre Frage.</span><span class="cyan" data-i18n="hero_2">Verständlich beantwortet.</span></h1>
+          <p class="question-lead" data-i18n="hero_lead">Stellen Sie hier eine konkrete Frage zu einer Textstelle, einem Begriff, einem Betrag oder einer Formulierung aus Ihrem Brief, Formular oder Schreiben. BriefHelden erklärt den Inhalt anschließend verständlich per E-Mail.</p>
         </div>
-
-        <button class="menuBtn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mobileMenu">
-          Menü
-        </button>
+        <aside class="service-card-top">
+          <div class="service-kicker"><i></i><span data-i18n="service_kicker">Frage-Service</span></div>
+          <strong data-i18n="service_title">Eine konkrete Frage reicht.</strong>
+          <p data-i18n="service_text">Am hilfreichsten ist eine kurze, möglichst genaue Frage mit dem relevanten Wortlaut oder Kontext aus Ihrem Dokument.</p>
+        </aside>
+      </div>
+      <div class="question-strip">
+        <div><b>01</b><span data-i18n="strip_1">Frage eingeben</span></div>
+        <div><b>02</b><span data-i18n="strip_2">Kontext nennen</span></div>
+        <div><b>03</b><span data-i18n="strip_3">E-Mail angeben</span></div>
+        <div><b>04</b><span data-i18n="strip_4">Erklärung erhalten</span></div>
       </div>
     </div>
+  </section>
 
-    <div class="mobileMenu" id="mobileMenu">
-      <div class="mobileMenuInner">
-        <a href="index.html" data-i18n="nav_home">Startseite</a>
-        <a href="widerruf.html" data-i18n="nav_refund">Widerruf und Rückerstattung</a>
-        <a href="impressum.html" data-i18n="nav_imprint">Impressum</a>
-        <a href="agb.html" data-i18n="nav_terms">AGB</a>
-        <a href="datenschutz.html" data-i18n="nav_privacy">Datenschutz</a>
+  <section class="section compact">
+    <div class="wrap">
+      <div class="section-head center">
+        <span class="eyebrow" data-i18n="guide_badge">Damit wir Ihre Frage gut verstehen</span>
+        <h2 class="section-title" data-i18n="guide_title">Drei Angaben machen Ihre Frage klarer</h2>
+        <p class="section-sub" data-i18n="guide_sub">Sie müssen keinen langen Text schreiben. Ein kurzer, konkreter Zusammenhang hilft bei einer verständlichen Erklärung.</p>
+      </div>
+      <div class="quick-guide">
+        <article class="premium-card guide-card"><div class="guide-num">1</div><h3 data-i18n="g1_title">Was ist unklar?</h3><p data-i18n="g1_text">Nennen Sie möglichst genau den Begriff, Satz, Betrag oder Abschnitt, den Sie nicht verstehen.</p></article>
+        <article class="premium-card guide-card"><div class="guide-num">2</div><h3 data-i18n="g2_title">Welcher Kontext gehört dazu?</h3><p data-i18n="g2_text">Ein kurzer Ausschnitt aus dem Schreiben hilft dabei, die Formulierung im richtigen Zusammenhang zu erklären.</p></article>
+        <article class="premium-card guide-card"><div class="guide-num">3</div><h3 data-i18n="g3_title">Wohin soll die Antwort?</h3><p data-i18n="g3_text">Geben Sie die E-Mail-Adresse an, an die die verständliche Erklärung gesendet werden soll.</p></article>
       </div>
     </div>
-  </header>
+  </section>
 
-  <main id="mainContent">
-    <section class="section">
-      <div class="wrap">
-        <div class="glassCard">
-          <div class="pad">
-            <h1 class="title" data-i18n="title">Vielen Dank für Ihre Zahlung</h1>
-
-            <p class="lead" data-i18n="lead">
-              Bitte stellen Sie jetzt Ihre Frage zu Ihrem Brief, Formular oder Schreiben. Sie erhalten anschließend eine verständliche Antwort per E-Mail.
-            </p>
-
-            <div class="statusBox" data-i18n="status">
-              Sie sind jetzt im Frage-Service von BriefHelden.
-            </div>
-
-            <div class="infoGrid">
-              <div class="infoItem">
-                <h3 data-i18n="box1_title">Kurze Frage</h3>
-                <p data-i18n="box1_text">Beschreiben Sie kurz Ihr Anliegen oder Ihre Unsicherheit zum Schreiben.</p>
-              </div>
-
-              <div class="infoItem">
-                <h3 data-i18n="box2_title">Schnelles Formular</h3>
-                <p data-i18n="box2_text">Füllen Sie nur wenige Felder aus und senden Sie Ihre kurze Frage direkt online.</p>
-              </div>
-
-              <div class="infoItem">
-                <h3 data-i18n="box3_title">Antwort per E-Mail</h3>
-                <p data-i18n="box3_text">Sie erhalten eine verständliche Antwort an die angegebene E-Mail-Adresse.</p>
-              </div>
-            </div>
-
-            <div class="tallyFrameWrap">
-              <iframe
-                id="tallyFrame"
-                class="tallyFrame"
-                src=""
-                loading="lazy"
-                title="BriefHelden Tally Formular"
-              ></iframe>
-            </div>
-
-            <div class="actions">
-              <a href="index.html" class="btn" data-i18n="back_home">Zur Startseite</a>
-            </div>
-
-            <div class="hint" data-i18n="hint">
-              Kein Rechtsrat – nur verständliche Erklärung in einfacher Sprache.
-            </div>
+  <section class="section" id="question-form">
+    <div class="wrap">
+      <div class="form-stage">
+        <div class="form-head">
+          <div>
+            <span class="eyebrow" data-i18n="form_badge">Ihre kurze Frage</span>
+            <h2 data-i18n="form_title">Frage jetzt eingeben</h2>
+            <p data-i18n="form_sub">Füllen Sie die wenigen Felder im Formular aus. Ihre Frage wird anschließend über den bestehenden BriefHelden-Frage-Service verarbeitet.</p>
           </div>
+          <span class="form-status"><i></i><span data-i18n="form_status">Formular bereit</span></span>
         </div>
-      </div>
-    </section>
 
-    <section class="moreLinks">
-      <div class="moreLinksCard">
-        <h2 class="moreLinksTitle" data-i18n="more_title">Weitere häufige Briefe verstehen</h2>
-
-        <div class="moreLinksGrid">
-          <a class="moreLinkItem" href="/inkasso-brief-verstehen.html" data-i18n="more_1">Inkasso Brief verstehen</a>
-          <a class="moreLinkItem" href="/mahnbescheid-verstehen.html" data-i18n="more_2">Mahnbescheid verstehen</a>
-          <a class="moreLinkItem" href="/jobcenter-brief-verstehen.html" data-i18n="more_3">Jobcenter Brief verstehen</a>
-          <a class="moreLinkItem" href="/pfaendungsbescheid-verstehen.html" data-i18n="more_4">Pfändungsbescheid verstehen</a>
-          <a class="moreLinkItem" href="/vollstreckungsbescheid-verstehen.html" data-i18n="more_5">Vollstreckungsbescheid verstehen</a>
-          <a class="moreLinkItem" href="/finanzamt-brief-verstehen.html" data-i18n="more_6">Finanzamt Brief verstehen</a>
+        <div class="tally-wrap">
+          <iframe id="tallyFrame" class="tally-frame" src="" loading="lazy" title="BriefHelden Frage-Formular" referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
-      </div>
-    </section>
-  </main>
 
-  <footer>
-    <div class="footWrap">
-      <div>© 2026 BriefHelden – Alle Rechte vorbehalten</div>
-      <div class="footLinks">
-        <a href="index.html" data-i18n="foot_home">Startseite</a>
-        <a href="alle-briefe-verstehen.html" data-i18n="foot_all_letters">Alle Briefe verstehen</a>
-        <a href="widerruf.html" data-i18n="foot_refund">Widerruf</a>
-        <a href="impressum.html" data-i18n="foot_imprint">Impressum</a>
-        <a href="agb.html" data-i18n="foot_terms">AGB</a>
-        <a href="datenschutz.html" data-i18n="foot_privacy">Datenschutz</a>
+        <p class="form-privacy" data-i18n-html="form_privacy">Das eingebettete Formular wird über Tally bereitgestellt. Informationen zur Verarbeitung Ihrer Angaben finden Sie in unserer <a href="/datenschutz">Datenschutzerklärung</a>.</p>
       </div>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    const TALLY_LINKS = {
-      de: "https://tally.so/r/VLlZjy",
-      en: "https://tally.so/r/XxGe9P",
-      tr: "https://tally.so/r/RG4zvv",
-      ru: "https://tally.so/r/QKrAEY"
-    };
+  <section class="section compact" id="after">
+    <div class="wrap">
+      <div class="section-head center">
+        <span class="eyebrow" data-i18n="after_badge">Danach</span>
+        <h2 class="section-title" data-i18n="after_title">Was mit Ihrer Frage passiert</h2>
+        <p class="section-sub" data-i18n="after_sub">Der bestehende Frage-Service bleibt technisch unverändert angebunden. Die Seite erklärt nur den Ablauf klarer und im neuen V2-Design.</p>
+      </div>
+      <div class="after-grid">
+        <article class="premium-card after-card"><div class="after-icon">1</div><h3 data-i18n="a1_title">Frage wird übermittelt</h3><p data-i18n="a1_text">Ihre Angaben aus dem Formular werden an den bestehenden BriefHelden-Verarbeitungsablauf übergeben.</p></article>
+        <article class="premium-card after-card"><div class="after-icon">2</div><h3 data-i18n="a2_title">Inhalt wird erklärt</h3><p data-i18n="a2_text">Die konkrete Frage wird auf verständliche Sprache ausgerichtet beantwortet. Es erfolgt keine individuelle rechtliche Prüfung.</p></article>
+        <article class="premium-card after-card"><div class="after-icon">3</div><h3 data-i18n="a3_title">Antwort per E-Mail</h3><p data-i18n="a3_text">Die verständliche Erklärung wird an die im Formular angegebene E-Mail-Adresse gesendet.</p></article>
+      </div>
+    </div>
+  </section>
 
-    const i18n = {
-      de: {
-        nav_home: "Startseite",
-        nav_refund: "Widerruf und Rückerstattung",
-        nav_imprint: "Impressum",
-        nav_terms: "AGB",
-        nav_privacy: "Datenschutz",
-        title: "Vielen Dank für Ihre Zahlung",
-        lead: "Bitte stellen Sie jetzt Ihre Frage zu Ihrem Brief, Formular oder Schreiben. Sie erhalten anschließend eine verständliche Antwort per E-Mail.",
-        status: "Sie sind jetzt im Frage-Service von BriefHelden.",
-        box1_title: "Kurze Frage",
-        box1_text: "Beschreiben Sie kurz Ihr Anliegen oder Ihre Unsicherheit zum Schreiben.",
-        box2_title: "Schnelles Formular",
-        box2_text: "Füllen Sie nur wenige Felder aus und senden Sie Ihre kurze Frage direkt online.",
-        box3_title: "Antwort per E-Mail",
-        box3_text: "Sie erhalten eine verständliche Antwort an die angegebene E-Mail-Adresse.",
-        back_home: "Zur Startseite",
-        hint: "Kein Rechtsrat – nur verständliche Erklärung in einfacher Sprache.",
-        more_title: "Weitere häufige Briefe verstehen",
-        more_1: "Inkasso Brief verstehen",
-        more_2: "Mahnbescheid verstehen",
-        more_3: "Jobcenter Brief verstehen",
-        more_4: "Pfändungsbescheid verstehen",
-        more_5: "Vollstreckungsbescheid verstehen",
-        more_6: "Finanzamt Brief verstehen",
-        foot_home: "Startseite",
-        foot_all_letters: "Alle Briefe verstehen",
-        foot_refund: "Widerruf",
-        foot_imprint: "Impressum",
-        foot_terms: "AGB",
-        foot_privacy: "Datenschutz"
-      },
+  <section class="section" id="boundary">
+    <div class="wrap">
+      <div class="section-head center">
+        <span class="eyebrow" data-i18n="boundary_badge">Klare Abgrenzung</span>
+        <h2 class="section-title" data-i18n="boundary_title">Was die kurze Frage leisten kann – und was nicht</h2>
+        <p class="section-sub" data-i18n="boundary_sub">BriefHelden erklärt den Inhalt Ihres Dokuments. Die rechtliche oder fachliche Entscheidung bleibt ausdrücklich außerhalb des Services.</p>
+      </div>
+      <div class="boundary-box">
+        <article class="premium-card boundary-part">
+          <h3 data-i18n="yes_title">Geeignet für</h3>
+          <ul class="boundary-list">
+            <li data-i18n="yes1">eine konkrete Formulierung oder einen einzelnen Satz</li>
+            <li data-i18n="yes2">einen schwierigen Begriff aus dem Schreiben</li>
+            <li data-i18n="yes3">die Bedeutung eines im Dokument genannten Betrags oder Datums</li>
+            <li data-i18n="yes4">eine kurze Verständnisfrage zum Inhalt</li>
+          </ul>
+        </article>
+        <article class="premium-card boundary-part no">
+          <h3 data-i18n="no_title">Nicht Bestandteil</h3>
+          <ul class="boundary-list">
+            <li data-i18n="no1">rechtliche Prüfung oder Rechtsberatung</li>
+            <li data-i18n="no2">Prüfung, ob eine Forderung oder Entscheidung rechtlich wirksam ist</li>
+            <li data-i18n="no3">individuelle Handlungsempfehlung</li>
+            <li data-i18n="no4">Entscheidung darüber, was Sie tun sollten</li>
+          </ul>
+        </article>
+      </div>
+      <div class="question-actions">
+        <a class="btn btn-blue" href="#question-form" data-i18n="back_form">Zur Frage zurück</a>
+        <a class="btn btn-yellow" href="/" data-i18n="back_home">Zur Startseite</a>
+      </div>
+    </div>
+  </section>
+</main>
 
-      en: {
-        nav_home: "Home",
-        nav_refund: "Withdrawal and Refunds",
-        nav_imprint: "Imprint",
-        nav_terms: "Terms",
-        nav_privacy: "Privacy",
-        title: "Thank you for your payment",
-        lead: "Please ask your question about your letter, form or document now. You will then receive a clear answer by email.",
-        status: "You are now in the BriefHelden question service.",
-        box1_title: "Short question",
-        box1_text: "Briefly describe your concern or uncertainty about the document.",
-        box2_title: "Quick form",
-        box2_text: "Fill in just a few fields and send your short question directly online.",
-        box3_title: "Reply by email",
-        box3_text: "You will receive a clear answer at the email address you provide.",
-        back_home: "Back to home",
-        hint: "No legal advice — only a clear explanation in simple language.",
-        more_title: "More common letters explained",
-        more_1: "Understand debt collection letter",
-        more_2: "Understand payment order",
-        more_3: "Understand Jobcenter letter",
-        more_4: "Understand garnishment order",
-        more_5: "Understand enforcement order",
-        more_6: "Understand tax office letter",
-        foot_home: "Home",
-        foot_all_letters: "All letters",
-        foot_refund: "Withdrawal",
-        foot_imprint: "Imprint",
-        foot_terms: "Terms",
-        foot_privacy: "Privacy"
-      },
+  
+<footer>
+  <div class="wrap foot">
+    <a class="brand" href="/" aria-label="BriefHelden Startseite">
+      <span class="brand-copy"><strong>Brief<span>Helden</span></strong><small data-i18n="brand_sub">Dein Brief. Endlich verständlich.</small></span>
+    </a>
+    <div class="foot-links">
+      <a href="/impressum" data-i18n="foot_imprint">Impressum</a>
+      <a href="/datenschutz" data-i18n="foot_privacy">Datenschutz</a>
+      <a href="/agb" data-i18n="foot_terms">AGB</a>
+      <a href="/widerruf" data-i18n="foot_refund">Widerruf</a>
+      <button id="cookieSettings" class="cookie-link" type="button" data-i18n="cookie_settings">Cookie-Einstellungen</button>
+    </div>
+  </div>
+</footer>
 
-      tr: {
-        nav_home: "Ana Sayfa",
-        nav_refund: "Cayma ve İade",
-        nav_imprint: "Künye",
-        nav_terms: "Şartlar",
-        nav_privacy: "Gizlilik",
-        title: "Ödemeniz için teşekkür ederiz",
-        lead: "Lütfen şimdi mektubunuz, formunuz veya belgeniz hakkında sorunuzu sorun. Daha sonra e-posta ile anlaşılır bir yanıt alacaksınız.",
-        status: "Artık BriefHelden soru hizmetindesiniz.",
-        box1_title: "Kısa soru",
-        box1_text: "Belgeyle ilgili sorununuzu veya karışık bulduğunuz noktayı kısaca açıklayın.",
-        box2_title: "Hızlı form",
-        box2_text: "Sadece birkaç alan doldurun ve kısa sorunuzu doğrudan çevrimiçi gönderin.",
-        box3_title: "E-posta ile yanıt",
-        box3_text: "Girdiğiniz e-posta adresine anlaşılır bir yanıt gönderilir.",
-        back_home: "Ana sayfaya dön",
-        hint: "Hukuki danışmanlık yok — sadece basit dille anlaşılır açıklama.",
-        more_title: "Diğer sık görülen mektupları anlayın",
-        more_1: "İnkasso mektubunu anla",
-        more_2: "Mahkeme ödeme emrini anla",
-        more_3: "Jobcenter mektubunu anla",
-        more_4: "Haciz yazısını anla",
-        more_5: "İcra kararını anla",
-        more_6: "Vergi dairesi mektubunu anla",
-        foot_home: "Ana Sayfa",
-        foot_all_letters: "Tüm mektuplar",
-        foot_refund: "Cayma",
-        foot_imprint: "Künye",
-        foot_terms: "Şartlar",
-        foot_privacy: "Gizlilik"
-      },
+  
+<div class="consent" id="consent" role="dialog" aria-live="polite" aria-label="Datenschutzeinstellungen">
+  <div class="consent-inner">
+    <div>
+      <strong data-i18n="consent_title">Datenschutzeinstellungen</strong>
+      <p data-i18n="consent_text">Notwendige Funktionen werden immer verwendet. Google Analytics laden wir erst nach Ihrer Zustimmung.</p>
+    </div>
+    <div class="consent-actions">
+      <button class="consent-secondary" id="necessaryBtn" type="button" data-i18n="consent_only">Nur notwendig</button>
+      <button class="consent-primary" id="analyticsBtn" type="button" data-i18n="consent_allow">Analyse erlauben</button>
+    </div>
+  </div>
+</div>
 
-      ru: {
-        nav_home: "Главная",
-        nav_refund: "Отказ и возврат",
-        nav_imprint: "Выходные данные",
-        nav_terms: "Условия",
-        nav_privacy: "Конфиденциальность",
-        title: "Спасибо за вашу оплату",
-        lead: "Пожалуйста, задайте сейчас ваш вопрос о письме, форме или документе. Затем вы получите понятный ответ по электронной почте.",
-        status: "Сейчас вы находитесь в сервисе вопросов BriefHelden.",
-        box1_title: "Короткий вопрос",
-        box1_text: "Кратко опишите ваш вопрос или то, что вам непонятно в документе.",
-        box2_title: "Быстрая форма",
-        box2_text: "Заполните всего несколько полей и сразу отправьте ваш короткий вопрос онлайн.",
-        box3_title: "Ответ по e-mail",
-        box3_text: "Вы получите понятный ответ на указанный адрес электронной почты.",
-        back_home: "На главную",
-        hint: "Не юридическая консультация — только понятное объяснение простым языком.",
-        more_title: "Другие частые письма",
-        more_1: "Понять письмо от инкассо",
-        more_2: "Понять платёжный приказ",
-        more_3: "Понять письмо Jobcenter",
-        more_4: "Понять письмо о взыскании",
-        more_5: "Понять исполнительный приказ",
-        more_6: "Понять письмо из налоговой",
-        foot_home: "Главная",
-        foot_all_letters: "Все письма",
-        foot_refund: "Отказ",
-        foot_imprint: "Выходные данные",
-        foot_terms: "Условия",
-        foot_privacy: "Конфиденциальность"
-      }
-    };
+  
+<script>
+const TALLY_LINKS={"de":"https://tally.so/r/VLlZjy","en":"https://tally.so/r/XxGe9P","tr":"https://tally.so/r/RG4zvv","ru":"https://tally.so/r/QKrAEY"};
+const T={"de":{"page_title":"Kurze Frage senden | BriefHelden","meta_description":"Kurze Frage zu einem Brief, Formular oder Schreiben an BriefHelden senden und eine verständliche Erklärung per E-Mail erhalten.","og_title":"Kurze Frage senden | BriefHelden","og_description":"Stellen Sie eine konkrete Verständnisfrage zu einer Textstelle, einem Begriff, Betrag oder einer Formulierung.","brand_sub":"Dein Brief. Endlich verständlich.","nav_home":"Startseite","nav_letters":"Briefe verstehen","nav_refund":"Widerruf","nav_privacy":"Datenschutz","nav_back":"Zur Startseite","menu_btn":"Menü","hero_badge":"Kurze Frage · BriefHelden","hero_1":"Ihre Frage.","hero_2":"Verständlich beantwortet.","hero_lead":"Stellen Sie hier eine konkrete Frage zu einer Textstelle, einem Begriff, einem Betrag oder einer Formulierung aus Ihrem Brief, Formular oder Schreiben. BriefHelden erklärt den Inhalt anschließend verständlich per E-Mail.","service_kicker":"Frage-Service","service_title":"Eine konkrete Frage reicht.","service_text":"Am hilfreichsten ist eine kurze, möglichst genaue Frage mit dem relevanten Wortlaut oder Kontext aus Ihrem Dokument.","strip_1":"Frage eingeben","strip_2":"Kontext nennen","strip_3":"E-Mail angeben","strip_4":"Erklärung erhalten","guide_badge":"Damit wir Ihre Frage gut verstehen","guide_title":"Drei Angaben machen Ihre Frage klarer","guide_sub":"Sie müssen keinen langen Text schreiben. Ein kurzer, konkreter Zusammenhang hilft bei einer verständlichen Erklärung.","g1_title":"Was ist unklar?","g1_text":"Nennen Sie möglichst genau den Begriff, Satz, Betrag oder Abschnitt, den Sie nicht verstehen.","g2_title":"Welcher Kontext gehört dazu?","g2_text":"Ein kurzer Ausschnitt aus dem Schreiben hilft dabei, die Formulierung im richtigen Zusammenhang zu erklären.","g3_title":"Wohin soll die Antwort?","g3_text":"Geben Sie die E-Mail-Adresse an, an die die verständliche Erklärung gesendet werden soll.","form_badge":"Ihre kurze Frage","form_title":"Frage jetzt eingeben","form_sub":"Füllen Sie die wenigen Felder im Formular aus. Ihre Frage wird anschließend über den bestehenden BriefHelden-Frage-Service verarbeitet.","form_status":"Formular bereit","form_privacy":"Das eingebettete Formular wird über Tally bereitgestellt. Informationen zur Verarbeitung Ihrer Angaben finden Sie in unserer <a href=\"/datenschutz\">Datenschutzerklärung</a>.","frame_title":"BriefHelden Frage-Formular","after_badge":"Danach","after_title":"Was mit Ihrer Frage passiert","after_sub":"Der bestehende Frage-Service bleibt technisch unverändert angebunden. Die Seite erklärt nur den Ablauf klarer und im neuen V2-Design.","a1_title":"Frage wird übermittelt","a1_text":"Ihre Angaben aus dem Formular werden an den bestehenden BriefHelden-Verarbeitungsablauf übergeben.","a2_title":"Inhalt wird erklärt","a2_text":"Die konkrete Frage wird auf verständliche Sprache ausgerichtet beantwortet. Es erfolgt keine individuelle rechtliche Prüfung.","a3_title":"Antwort per E-Mail","a3_text":"Die verständliche Erklärung wird an die im Formular angegebene E-Mail-Adresse gesendet.","boundary_badge":"Klare Abgrenzung","boundary_title":"Was die kurze Frage leisten kann – und was nicht","boundary_sub":"BriefHelden erklärt den Inhalt Ihres Dokuments. Die rechtliche oder fachliche Entscheidung bleibt ausdrücklich außerhalb des Services.","yes_title":"Geeignet für","yes1":"eine konkrete Formulierung oder einen einzelnen Satz","yes2":"einen schwierigen Begriff aus dem Schreiben","yes3":"die Bedeutung eines im Dokument genannten Betrags oder Datums","yes4":"eine kurze Verständnisfrage zum Inhalt","no_title":"Nicht Bestandteil","no1":"rechtliche Prüfung oder Rechtsberatung","no2":"Prüfung, ob eine Forderung oder Entscheidung rechtlich wirksam ist","no3":"individuelle Handlungsempfehlung","no4":"Entscheidung darüber, was Sie tun sollten","back_form":"Zur Frage zurück","back_home":"Zur Startseite","foot_imprint":"Impressum","foot_privacy":"Datenschutz","foot_terms":"AGB","foot_refund":"Widerruf","cookie_settings":"Cookie-Einstellungen","consent_title":"Datenschutzeinstellungen","consent_text":"Notwendige Funktionen werden immer verwendet. Google Analytics laden wir erst nach Ihrer Zustimmung.","consent_only":"Nur notwendig","consent_allow":"Analyse erlauben"},"en":{"page_title":"Send a short question | BriefHelden","meta_description":"Send BriefHelden a short question about a letter, form or document and receive a clear explanation by email.","og_title":"Send a short question | BriefHelden","og_description":"Ask a specific question about a passage, term, amount or wording from a document.","brand_sub":"Your letter. Finally understandable.","nav_home":"Home","nav_letters":"Understand letters","nav_refund":"Withdrawal","nav_privacy":"Privacy","nav_back":"Back to home","menu_btn":"Menu","hero_badge":"Short question · BriefHelden","hero_1":"Your question.","hero_2":"Clearly explained.","hero_lead":"Ask one specific question about a passage, term, amount or wording in your letter, form or document. BriefHelden will then explain the content clearly by email.","service_kicker":"Question service","service_title":"One concrete question is enough.","service_text":"A short, precise question with the relevant wording or context from your document is most helpful.","strip_1":"Enter question","strip_2":"Add context","strip_3":"Enter email","strip_4":"Receive explanation","guide_badge":"Help us understand your question","guide_title":"Three details make your question clearer","guide_sub":"You do not need to write a long message. A short, specific context helps us provide a clear explanation.","g1_title":"What is unclear?","g1_text":"Name the exact term, sentence, amount or section that you do not understand.","g2_title":"What context belongs to it?","g2_text":"A short excerpt from the document helps explain the wording in the correct context.","g3_title":"Where should the reply go?","g3_text":"Enter the email address where the clear explanation should be sent.","form_badge":"Your short question","form_title":"Enter your question now","form_sub":"Complete the few fields in the form. Your question will then be processed through the existing BriefHelden question service.","form_status":"Form ready","form_privacy":"The embedded form is provided via Tally. Information about how your data is processed is available in our <a href=\"/datenschutz\">privacy policy</a>.","frame_title":"BriefHelden question form","after_badge":"What happens next","after_title":"What happens to your question","after_sub":"The existing question-service workflow remains technically unchanged. This page only makes the process clearer and uses the new V2 design.","a1_title":"Question is submitted","a1_text":"Your form entries are passed to the existing BriefHelden processing workflow.","a2_title":"Content is explained","a2_text":"The specific question is answered with a focus on clear language. No individual legal review is performed.","a3_title":"Reply by email","a3_text":"The clear explanation is sent to the email address entered in the form.","boundary_badge":"Clear boundaries","boundary_title":"What the short question can do – and what it cannot","boundary_sub":"BriefHelden explains the content of your document. Legal or professional decisions are expressly outside the service.","yes_title":"Suitable for","yes1":"a specific wording or a single sentence","yes2":"a difficult term in the document","yes3":"the meaning of an amount or date stated in the document","yes4":"a short question about understanding the content","no_title":"Not included","no1":"legal review or legal advice","no2":"checking whether a claim or decision is legally valid","no3":"individual recommendation for action","no4":"deciding what you should do","back_form":"Back to the question","back_home":"Back to home","foot_imprint":"Imprint","foot_privacy":"Privacy","foot_terms":"Terms","foot_refund":"Withdrawal","cookie_settings":"Cookie settings","consent_title":"Privacy settings","consent_text":"Necessary functions are always used. Google Analytics is loaded only after your consent.","consent_only":"Necessary only","consent_allow":"Allow analytics"},"tr":{"page_title":"Kısa soru gönder | BriefHelden","meta_description":"Bir mektup, form veya belge hakkında BriefHelden'a kısa bir soru gönderin ve e-posta ile anlaşılır bir açıklama alın.","og_title":"Kısa soru gönder | BriefHelden","og_description":"Bir metin bölümü, terim, tutar veya ifade hakkında somut bir soru sorun.","brand_sub":"Mektubunuz. Artık anlaşılır.","nav_home":"Ana Sayfa","nav_letters":"Mektupları anla","nav_refund":"Cayma","nav_privacy":"Gizlilik","nav_back":"Ana sayfaya dön","menu_btn":"Menü","hero_badge":"Kısa soru · BriefHelden","hero_1":"Sorunuz.","hero_2":"Anlaşılır şekilde açıklanır.","hero_lead":"Mektup, form veya belgenizdeki bir metin bölümü, terim, tutar veya ifade hakkında tek bir somut soru sorun. BriefHelden içeriği daha sonra e-posta ile anlaşılır şekilde açıklar.","service_kicker":"Soru hizmeti","service_title":"Tek bir somut soru yeterli.","service_text":"Belgenizdeki ilgili ifade veya bağlamla birlikte kısa ve net bir soru en faydalı olandır.","strip_1":"Soruyu girin","strip_2":"Bağlamı ekleyin","strip_3":"E-posta girin","strip_4":"Açıklamayı alın","guide_badge":"Sorunuzu iyi anlayabilmemiz için","guide_title":"Üç bilgi sorunuzu daha açık hale getirir","guide_sub":"Uzun bir metin yazmanız gerekmez. Kısa ve somut bir bağlam anlaşılır bir açıklamaya yardımcı olur.","g1_title":"Neresi belirsiz?","g1_text":"Anlamadığınız terimi, cümleyi, tutarı veya bölümü mümkün olduğunca net belirtin.","g2_title":"Hangi bağlam önemli?","g2_text":"Belgeden kısa bir bölüm, ifadenin doğru bağlamda açıklanmasına yardımcı olur.","g3_title":"Yanıt nereye gelsin?","g3_text":"Anlaşılır açıklamanın gönderileceği e-posta adresini girin.","form_badge":"Kısa sorunuz","form_title":"Soruyu şimdi girin","form_sub":"Formdaki birkaç alanı doldurun. Sorunuz daha sonra mevcut BriefHelden soru hizmeti üzerinden işlenir.","form_status":"Form hazır","form_privacy":"Gömülü form Tally üzerinden sağlanır. Verilerinizin işlenmesi hakkında bilgileri <a href=\"/datenschutz\">gizlilik politikamızda</a> bulabilirsiniz.","frame_title":"BriefHelden soru formu","after_badge":"Sonrasında","after_title":"Sorunuza ne olur","after_sub":"Mevcut soru hizmetinin teknik akışı değiştirilmez. Bu sayfa yalnızca süreci daha açık anlatır ve yeni V2 tasarımını kullanır.","a1_title":"Soru iletilir","a1_text":"Formdaki bilgileriniz mevcut BriefHelden işleme akışına aktarılır.","a2_title":"İçerik açıklanır","a2_text":"Somut soru anlaşılır dile odaklanarak cevaplanır. Bireysel hukuki inceleme yapılmaz.","a3_title":"E-posta ile yanıt","a3_text":"Anlaşılır açıklama formda verdiğiniz e-posta adresine gönderilir.","boundary_badge":"Net sınırlar","boundary_title":"Kısa soru ne yapabilir – ne yapamaz","boundary_sub":"BriefHelden belgenizin içeriğini açıklar. Hukuki veya mesleki kararlar hizmetin açıkça dışındadır.","yes_title":"Uygun olduğu durumlar","yes1":"belirli bir ifade veya tek bir cümle","yes2":"belgedeki zor bir terim","yes3":"belgede belirtilen bir tutar veya tarihin anlamı","yes4":"içeriği anlamaya yönelik kısa bir soru","no_title":"Hizmete dahil değildir","no1":"hukuki inceleme veya hukuki danışmanlık","no2":"bir talep veya kararın hukuken geçerli olup olmadığını kontrol etmek","no3":"bireysel eylem tavsiyesi","no4":"ne yapmanız gerektiğine karar vermek","back_form":"Soruya dön","back_home":"Ana sayfaya dön","foot_imprint":"Künye","foot_privacy":"Gizlilik","foot_terms":"Şartlar","foot_refund":"Cayma","cookie_settings":"Çerez ayarları","consent_title":"Gizlilik ayarları","consent_text":"Gerekli işlevler her zaman kullanılır. Google Analytics yalnızca onayınızdan sonra yüklenir.","consent_only":"Yalnızca gerekli","consent_allow":"Analize izin ver"},"ru":{"page_title":"Отправить короткий вопрос | BriefHelden","meta_description":"Отправьте BriefHelden короткий вопрос о письме, форме или документе и получите понятное объяснение по электронной почте.","og_title":"Отправить короткий вопрос | BriefHelden","og_description":"Задайте конкретный вопрос о фрагменте, термине, сумме или формулировке в документе.","brand_sub":"Ваше письмо. Наконец понятно.","nav_home":"Главная","nav_letters":"Понять письма","nav_refund":"Отказ","nav_privacy":"Конфиденциальность","nav_back":"На главную","menu_btn":"Меню","hero_badge":"Короткий вопрос · BriefHelden","hero_1":"Ваш вопрос.","hero_2":"Понятное объяснение.","hero_lead":"Задайте один конкретный вопрос о фрагменте, термине, сумме или формулировке из письма, формы или документа. BriefHelden затем объяснит содержание понятным языком по электронной почте.","service_kicker":"Сервис вопросов","service_title":"Достаточно одного конкретного вопроса.","service_text":"Лучше всего короткий и точный вопрос с соответствующей формулировкой или контекстом из документа.","strip_1":"Введите вопрос","strip_2":"Добавьте контекст","strip_3":"Укажите e-mail","strip_4":"Получите объяснение","guide_badge":"Чтобы мы хорошо поняли вопрос","guide_title":"Три детали делают вопрос понятнее","guide_sub":"Не нужно писать длинный текст. Короткий и конкретный контекст помогает дать понятное объяснение.","g1_title":"Что непонятно?","g1_text":"Укажите точный термин, предложение, сумму или раздел, который вы не понимаете.","g2_title":"Какой контекст важен?","g2_text":"Короткий фрагмент из документа помогает объяснить формулировку в правильном контексте.","g3_title":"Куда отправить ответ?","g3_text":"Укажите адрес электронной почты, на который нужно отправить понятное объяснение.","form_badge":"Ваш короткий вопрос","form_title":"Введите вопрос сейчас","form_sub":"Заполните несколько полей формы. Затем вопрос будет обработан через существующий сервис вопросов BriefHelden.","form_status":"Форма готова","form_privacy":"Встроенная форма предоставляется через Tally. Информация об обработке данных доступна в нашей <a href=\"/datenschutz\">политике конфиденциальности</a>.","frame_title":"Форма вопросов BriefHelden","after_badge":"Что дальше","after_title":"Что происходит с вашим вопросом","after_sub":"Существующий технический процесс сервиса вопросов остаётся без изменений. Эта страница только делает процесс понятнее и использует новый дизайн V2.","a1_title":"Вопрос отправляется","a1_text":"Данные формы передаются в существующий процесс обработки BriefHelden.","a2_title":"Содержание объясняется","a2_text":"На конкретный вопрос даётся ответ с упором на понятный язык. Индивидуальная юридическая проверка не проводится.","a3_title":"Ответ по e-mail","a3_text":"Понятное объяснение отправляется на адрес электронной почты, указанный в форме.","boundary_badge":"Чёткие границы","boundary_title":"Что может короткий вопрос – и чего он не делает","boundary_sub":"BriefHelden объясняет содержание документа. Юридические и профессиональные решения прямо не входят в услугу.","yes_title":"Подходит для","yes1":"конкретной формулировки или одного предложения","yes2":"сложного термина из документа","yes3":"значения суммы или даты, указанной в документе","yes4":"короткого вопроса для понимания содержания","no_title":"Не входит в услугу","no1":"юридическая проверка или юридическая консультация","no2":"проверка юридической действительности требования или решения","no3":"индивидуальная рекомендация к действиям","no4":"решение о том, что вам следует делать","back_form":"Вернуться к вопросу","back_home":"На главную","foot_imprint":"Выходные данные","foot_privacy":"Конфиденциальность","foot_terms":"Условия","foot_refund":"Отказ","cookie_settings":"Настройки cookie","consent_title":"Настройки конфиденциальности","consent_text":"Необходимые функции используются всегда. Google Analytics загружается только после вашего согласия.","consent_only":"Только необходимое","consent_allow":"Разрешить аналитику"}};
 
-    function getLang(){
-      const params = new URLSearchParams(window.location.search);
-      const qLang = params.get("lang");
-      const savedLang = localStorage.getItem("briefhelden_lang");
-      const valid = ["de","en","tr","ru"];
-      if(valid.includes(qLang)) return qLang;
-      if(valid.includes(savedLang)) return savedLang;
-      return "de";
-    }
+function getLang(){
+  const params=new URLSearchParams(window.location.search);
+  const qLang=params.get("lang");
+  const saved=localStorage.getItem("briefhelden_lang");
+  const valid=["de","en","tr","ru"];
+  if(valid.includes(qLang)) return qLang;
+  if(valid.includes(saved)) return saved;
+  return "de";
+}
 
-    function applyLang(lang){
-      const dict = i18n[lang] || i18n.de;
-      document.documentElement.lang = lang;
+function applyLanguage(lang){
+  const d=T[lang]||T.de;
+  document.documentElement.lang=lang;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const k=el.dataset.i18n;
+    if(Object.prototype.hasOwnProperty.call(d,k)) el.textContent=d[k];
+  });
+  document.querySelectorAll("[data-i18n-html]").forEach(el=>{
+    const k=el.dataset.i18nHtml;
+    if(Object.prototype.hasOwnProperty.call(d,k)) el.innerHTML=d[k];
+  });
+  document.title=d.page_title||T.de.page_title;
+  const desc=document.querySelector('meta[name="description"]'); if(desc) desc.setAttribute("content",d.meta_description||T.de.meta_description);
+  const ogt=document.querySelector('meta[property="og:title"]'); if(ogt) ogt.setAttribute("content",d.og_title||T.de.og_title);
+  const ogd=document.querySelector('meta[property="og:description"]'); if(ogd) ogd.setAttribute("content",d.og_description||T.de.og_description);
+  const twt=document.querySelector('meta[name="twitter:title"]'); if(twt) twt.setAttribute("content",d.og_title||T.de.og_title);
+  const twd=document.querySelector('meta[name="twitter:description"]'); if(twd) twd.setAttribute("content",d.og_description||T.de.og_description);
 
-      const select = document.getElementById("langSelect");
-      if(select) select.value = lang;
+  const frame=document.getElementById("tallyFrame");
+  if(frame){
+    frame.src=TALLY_LINKS[lang]||TALLY_LINKS.de;
+    frame.title=d.frame_title||T.de.frame_title;
+  }
+  const select=document.getElementById("langSelect"); if(select) select.value=lang;
+  localStorage.setItem("briefhelden_lang",lang);
+}
 
-      document.querySelectorAll("[data-i18n]").forEach((el) => {
-        const key = el.getAttribute("data-i18n");
-        if(key in dict){
-          el.textContent = dict[key];
-        }
-      });
+const startLang=getLang();
+applyLanguage(startLang);
+document.getElementById("langSelect").addEventListener("change",e=>applyLanguage(e.target.value));
 
-      localStorage.setItem("briefhelden_lang", lang);
+const menuBtn=document.getElementById("menuBtn"),mobileNav=document.getElementById("mobileNav");
+menuBtn.addEventListener("click",()=>{
+  const open=mobileNav.style.display==="block";
+  mobileNav.style.display=open?"none":"block";
+  menuBtn.setAttribute("aria-expanded",String(!open));
+});
+mobileNav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{
+  mobileNav.style.display="none";
+  menuBtn.setAttribute("aria-expanded","false");
+}));
 
-      const frame = document.getElementById("tallyFrame");
-      if(frame){
-        frame.src = TALLY_LINKS[lang] || TALLY_LINKS.de;
-      }
-    }
+function loadAnalytics(){
+  if(window.__bhGaLoaded) return;
+  window.__bhGaLoaded=true;
+  const s=document.createElement("script");
+  s.async=true;
+  s.src="https://www.googletagmanager.com/gtag/js?id=G-CVRQ9QBE94";
+  document.head.appendChild(s);
+  window.dataLayer=window.dataLayer||[];
+  window.gtag=function(){dataLayer.push(arguments)};
+  gtag("js",new Date());
+  gtag("config","G-CVRQ9QBE94",{anonymize_ip:true});
+}
+const consent=document.getElementById("consent");
+const consentState=localStorage.getItem("briefhelden_analytics_consent");
+if(consentState==="yes") loadAnalytics();
+if(!consentState) consent.classList.add("show");
+document.getElementById("necessaryBtn").addEventListener("click",()=>{
+  localStorage.setItem("briefhelden_analytics_consent","no");
+  consent.classList.remove("show");
+});
+document.getElementById("analyticsBtn").addEventListener("click",()=>{
+  localStorage.setItem("briefhelden_analytics_consent","yes");
+  consent.classList.remove("show");
+  loadAnalytics();
+});
+document.getElementById("cookieSettings").addEventListener("click",()=>consent.classList.add("show"));
+</script>
 
-    const initialLang = getLang();
-    applyLang(initialLang);
-
-    document.getElementById("langSelect").addEventListener("change", (e) => {
-      applyLang(e.target.value);
-    });
-
-    const menuBtn = document.getElementById("menuBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
-
-    if(menuBtn && mobileMenu){
-      menuBtn.addEventListener("click", () => {
-        const isOpen = mobileMenu.style.display === "block";
-        mobileMenu.style.display = isOpen ? "none" : "block";
-        menuBtn.setAttribute("aria-expanded", String(!isOpen));
-      });
-    }
-  </script>
 </body>
 </html>
