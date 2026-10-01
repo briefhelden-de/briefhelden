@@ -1,92 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<url>
-<loc>https://www.briefhelden-service.de/</loc>
-</url>
+  <url>
+    <loc>https://briefhelden-service.de/</loc>
+  </url>
 
-<url>
-<loc>https://www.briefhelden-service.de/brief-verstehen.html</loc>
-</url>
+  <url>
+    <loc>https://briefhelden-service.de/alle-briefe-verstehen</loc>
+  </url>
 
-<url>
-<loc>https://www.briefhelden-service.de/inkasso-brief-verstehen.html</loc>
-</url>
+  <url>
+    <loc>https://briefhelden-service.de/brief-verstehen</loc>
+  </url>
 
-<url>
-<loc>https://www.briefhelden-service.de/inkasso-forderung-pruefen.html</loc>
-</url>
+  <url>
+    <loc>https://briefhelden-service.de/inkasso-brief-verstehen</loc>
+  </url>
 
-<url>
-<loc>https://www.briefhelden-service.de/mahnung-verstehen.html</loc>
-</url>
+  <url>
+    <loc>https://briefhelden-service.de/inkasso-forderung-verstehen</loc>
+  </url>
 
-<url>
-<loc>https://www.briefhelden-service.de/mahnbescheid-verstehen.html</loc>
-</url>
+  <url>
+    <loc>https://briefhelden-service.de/mahnung-verstehen</loc>
+  </url>
 
-<url>
-<loc>https://www.briefhelden-service.de/vollstreckungsbescheid-verstehen.html</loc>
-</url>
+  <url>
+    <loc>https://briefhelden-service.de/mahnung-inkasso-unterschied</loc>
+  </url>
 
-<url>
-<loc>https://www.briefhelden-service.de/pfaendungsbescheid-verstehen.html</loc>
-</url>
+  <url>
+    <loc>https://briefhelden-service.de/mahnbescheid-verstehen</loc>
+  </url>
 
-<url>
-<loc>https://www.briefhelden-service.de/zahlungsaufforderung-verstehen.html</loc>
-</url>
+  <url>
+    <loc>https://briefhelden-service.de/vollstreckungsbescheid-verstehen</loc>
+  </url>
 
-<url>
-<loc>https://www.briefhelden-service.de/zahlungserinnerung-verstehen.html</loc>
-</url>
+  <url>
+    <loc>https://briefhelden-service.de/pfaendungsbescheid-verstehen</loc>
+  </url>
 
-<url>
-<loc>https://www.briefhelden-service.de/zahlungsfrist-verstehen.html</loc>
-</url>
+  <url>
+    <loc>https://briefhelden-service.de/zahlungsaufforderung-verstehen</loc>
+  </url>
 
-<url>
-<loc>https://www.briefhelden-service.de/rechnung-verstehen.html</loc>
-</url>
+  <url>
+    <loc>https://briefhelden-service.de/zahlungserinnerung-verstehen</loc>
+  </url>
 
-<url>
-<loc>https://www.briefhelden-service.de/jobcenter-brief-verstehen.html</loc>
-</url>
+  <url>
+    <loc>https://briefhelden-service.de/zahlungsfrist-verstehen</loc>
+  </url>
 
-<url>
-<loc>https://www.briefhelden-service.de/arbeitsamt-brief-verstehen.html</loc>
-</url>
+  <url>
+    <loc>https://briefhelden-service.de/rechnung-verstehen</loc>
+  </url>
 
-<url>
-<loc>https://www.briefhelden-service.de/behoerdenbrief-verstehen.html</loc>
-</url>
+  <url>
+    <loc>https://briefhelden-service.de/jobcenter-brief-verstehen</loc>
+  </url>
 
-<url>
-<loc>https://www.briefhelden-service.de/finanzamt-brief-verstehen.html</loc>
-</url>
+  <url>
+    <loc>https://briefhelden-service.de/arbeitsamt-brief-verstehen</loc>
+  </url>
 
-<url>
-<loc>https://www.briefhelden-service.de/anwalt-brief-verstehen.html</loc>
-</url>
+  <url>
+    <loc>https://briefhelden-service.de/behoerdenbrief-verstehen</loc>
+  </url>
 
-<url>
-<loc>https://www.briefhelden-service.de/gericht-brief-verstehen.html</loc>
-</url>
+  <url>
+    <loc>https://briefhelden-service.de/finanzamt-brief-verstehen</loc>
+  </url>
 
-<url>
-<loc>https://www.briefhelden-service.de/polizei-brief-verstehen.html</loc>
-</url>
+  <url>
+    <loc>https://briefhelden-service.de/anwalt-brief-verstehen</loc>
+  </url>
 
-<url>
-<loc>https://www.briefhelden-service.de/mietvertrag-verstehen.html</loc>
-</url>
+  <url>
+    <loc>https://briefhelden-service.de/gericht-brief-verstehen</loc>
+  </url>
 
-<url>
-<loc>https://www.briefhelden-service.de/kuendigung-verstehen.html</loc>
-</url>
+  <url>
+    <loc>https://briefhelden-service.de/polizei-brief-verstehen</loc>
+  </url>
 
-<url>
-<loc>https://www.briefhelden-service.de/formular-verstehen.html</loc>
-</url>
+  <url>
+    <loc>https://briefhelden-service.de/mietvertrag-verstehen</loc>
+  </url>
+
+  <url>
+    <loc>https://briefhelden-service.de/kuendigung-verstehen</loc>
+  </url>
+
+  <url>
+    <loc>https://briefhelden-service.de/formular-verstehen</loc>
+  </url>
+
+  <url>
+    <loc>https://briefhelden-service.de/bussgeldbescheid-verstehen</loc>
+  </url>
+
+  <url>
+    <loc>https://briefhelden-service.de/krankenkasse-brief-verstehen</loc>
+  </url>
+
+  <url>
+    <loc>https://briefhelden-service.de/nebenkostenabrechnung-verstehen</loc>
+  </url>
+
+  <url>
+    <loc>https://briefhelden-service.de/stromrechnung-verstehen</loc>
+  </url>
+
+  <url>
+    <loc>https://briefhelden-service.de/gasrechnung-verstehen</loc>
+  </url>
+
+  <url>
+    <loc>https://briefhelden-service.de/bank-brief-verstehen</loc>
+  </url>
+
+  <url>
+    <loc>https://briefhelden-service.de/kreditvertrag-verstehen</loc>
+  </url>
+
+  <url>
+    <loc>https://briefhelden-service.de/versicherung-brief-verstehen</loc>
+  </url>
+
+  <url>
+    <loc>https://briefhelden-service.de/vertragsbrief-verstehen</loc>
+  </url>
+
+  <url>
+    <loc>https://briefhelden-service.de/agb</loc>
+  </url>
+
+  <url>
+    <loc>https://briefhelden-service.de/datenschutz</loc>
+  </url>
+
+  <url>
+    <loc>https://briefhelden-service.de/impressum</loc>
+  </url>
+
+  <url>
+    <loc>https://briefhelden-service.de/widerruf</loc>
+  </url>
 
 </urlset>
