@@ -991,10 +991,38 @@ function safeFormTarget(raw){
 
 const uploadBtn=document.getElementById("uploadBtn");
 const formWarning=document.getElementById("formWarning");
+
+// Stripe Checkout Session aus der Weiterleitungs-URL übernehmen.
+// Erwartetes Format:
+// /success?session_id=cs_live_...&form=https://tally.so/r/...
+const rawSessionId=(params.get("session_id")||"").trim();
+
+// Nur gültig aussehende Stripe Checkout Session IDs akzeptieren.
+const validSessionId=/^cs_(live|test)_[A-Za-z0-9_-]+$/.test(rawSessionId)
+  ? rawSessionId
+  : "";
+
+// Vorhandenes Formularziel weiterhin über die bestehende Sicherheitsprüfung validieren.
 const target=safeFormTarget(params.get("form"));
-if(target){
-  uploadBtn.href=target;
+
+if(target && validSessionId){
+  try{
+    const targetUrl=new URL(target,location.origin);
+
+    // Stripe Session-ID an das versteckte Tally-Feld bh_session weitergeben.
+    targetUrl.searchParams.set("bh_session",validSessionId);
+
+    uploadBtn.href=
+      targetUrl.origin===location.origin
+        ? targetUrl.pathname+targetUrl.search+targetUrl.hash
+        : targetUrl.href;
+  }catch(e){
+    uploadBtn.href="/";
+    uploadBtn.textContent=T[startLang].tx_home;
+    formWarning.classList.add("show");
+  }
 }else{
+  // Ohne gültige Stripe Session-ID kein direkter Zugang zum Upload-Formular.
   uploadBtn.href="/";
   uploadBtn.textContent=T[startLang].tx_home;
   formWarning.classList.add("show");
