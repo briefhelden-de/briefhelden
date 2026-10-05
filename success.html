@@ -1028,6 +1028,59 @@ if(target && validSessionId){
   formWarning.classList.add("show");
 }
 
+/* BriefHelden Funnel-Messung für den Premium-Ablauf.
+   WICHTIG: Dieses Ereignis ist bewusst KEIN GA4-"purchase".
+   Die Seite bestätigt die Zahlung nicht serverseitig, sondern misst nur die
+   Rückkehr aus dem Checkout mit syntaktisch gültiger Session und Formularziel. */
+const premiumCheckoutReturnEligible=Boolean(target && validSessionId);
+
+function bhSessionFingerprint(value){
+  let h=2166136261;
+  for(let i=0;i<value.length;i++){
+    h^=value.charCodeAt(i);
+    h=Math.imul(h,16777619);
+  }
+  return (h>>>0).toString(36);
+}
+
+function trackPremiumCheckoutReturn(){
+  if(localStorage.getItem("briefhelden_analytics_consent")!=="yes") return;
+  if(!premiumCheckoutReturnEligible) return;
+
+  loadAnalytics();
+  if(typeof gtag!=="function") return;
+
+  const key="bh_premium_checkout_return_"+bhSessionFingerprint(validSessionId);
+  if(sessionStorage.getItem(key)==="1") return;
+
+  sessionStorage.setItem(key,"1");
+  gtag("event","premium_checkout_return",{
+    currency:"EUR",
+    value:3.90,
+    service_type:"premium",
+    site_language:startLang,
+    funnel_step:"checkout_return"
+  });
+}
+
+if(uploadBtn){
+  uploadBtn.addEventListener("click",()=>{
+    if(localStorage.getItem("briefhelden_analytics_consent")!=="yes") return;
+    if(!premiumCheckoutReturnEligible) return;
+
+    loadAnalytics();
+    if(typeof gtag!=="function") return;
+
+    gtag("event","premium_upload_click",{
+      currency:"EUR",
+      value:3.90,
+      service_type:"premium",
+      site_language:startLang,
+      funnel_step:"upload_form_open"
+    });
+  });
+}
+
 const menuBtn=document.getElementById("menuBtn"),mobileNav=document.getElementById("mobileNav");
 if(menuBtn&&mobileNav){
   menuBtn.addEventListener("click",()=>{
@@ -1056,13 +1109,21 @@ function loadAnalytics(){
 const consent=document.getElementById("consent");
 const consentState=localStorage.getItem("briefhelden_analytics_consent");
 if(consent){
-  if(consentState==="yes") loadAnalytics();
+  if(consentState==="yes"){
+    loadAnalytics();
+    trackPremiumCheckoutReturn();
+  }
   if(!consentState) consent.classList.add("show");
   const necessaryBtn=document.getElementById("necessaryBtn");
   const analyticsBtn=document.getElementById("analyticsBtn");
   const cookieSettings=document.getElementById("cookieSettings");
   if(necessaryBtn) necessaryBtn.addEventListener("click",()=>{localStorage.setItem("briefhelden_analytics_consent","no");consent.classList.remove("show");});
-  if(analyticsBtn) analyticsBtn.addEventListener("click",()=>{localStorage.setItem("briefhelden_analytics_consent","yes");consent.classList.remove("show");loadAnalytics();});
+  if(analyticsBtn) analyticsBtn.addEventListener("click",()=>{
+    localStorage.setItem("briefhelden_analytics_consent","yes");
+    consent.classList.remove("show");
+    loadAnalytics();
+    trackPremiumCheckoutReturn();
+  });
   if(cookieSettings) cookieSettings.addEventListener("click",()=>consent.classList.add("show"));
 }
 </script>
