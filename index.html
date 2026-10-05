@@ -1209,6 +1209,78 @@
       gtag("js",new Date());
       gtag("config","G-CVRQ9QBE94",{anonymize_ip:true});
     }
+    /* BriefHelden Funnel-Messung
+       Misst nur nach ausdrücklicher Analytics-Zustimmung.
+       Der bestehende Zahlungs-/Checkout-Flow bleibt unverändert. */
+    function getCheckoutCtaLocation(link){
+      if(link.closest("#mobileNav"))return "mobile_nav";
+      if(link.closest("header"))return "header";
+      if(link.closest(".hero"))return "hero";
+      if(link.closest("#services"))return "services";
+      if(link.closest(".final"))return "final";
+      return "other";
+    }
+
+    function trackCheckoutStart(link,service,value,itemId,itemName){
+      if(localStorage.getItem("briefhelden_analytics_consent")!=="yes")return false;
+
+      loadAnalytics();
+
+      const destination=link.href;
+      const lang=document.documentElement.lang||"de";
+      let redirected=false;
+
+      const continueToCheckout=()=>{
+        if(redirected)return;
+        redirected=true;
+        window.location.assign(destination);
+      };
+
+      try{
+        gtag("event","begin_checkout",{
+          currency:"EUR",
+          value:value,
+          service_type:service,
+          site_language:lang,
+          cta_location:getCheckoutCtaLocation(link),
+          items:[{
+            item_id:itemId,
+            item_name:itemName,
+            price:value,
+            quantity:1
+          }],
+          event_callback:continueToCheckout,
+          event_timeout:600
+        });
+
+        window.setTimeout(continueToCheckout,650);
+        return true;
+      }catch(e){
+        return false;
+      }
+    }
+
+    document.addEventListener("click",e=>{
+      const link=e.target.closest("a.payLink, a.questionLink");
+      if(!link)return;
+
+      /* Sonderklicks wie Strg-/Cmd-Klick oder Mittelklick nicht blockieren. */
+      if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
+
+      if(localStorage.getItem("briefhelden_analytics_consent")!=="yes")return;
+
+      const isPremium=link.classList.contains("payLink");
+      const tracked=trackCheckoutStart(
+        link,
+        isPremium?"premium":"question",
+        isPremium?3.90:0.99,
+        isPremium?"briefhelden_premium":"briefhelden_question",
+        isPremium?"BriefHelden Premium-Dokumentenerklärung":"BriefHelden kurze Frage"
+      );
+
+      if(tracked)e.preventDefault();
+    });
+
     const consent=document.getElementById("consent");
     const consentState=localStorage.getItem("briefhelden_analytics_consent");
     if(consentState==="yes")loadAnalytics();
