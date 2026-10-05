@@ -638,6 +638,43 @@ const startLang=getLang();
 applyLanguage(startLang);
 document.getElementById("langSelect").addEventListener("change",e=>applyLanguage(e.target.value));
 
+/* BriefHelden Funnel-Messung für den 0,99-€-Frage-Service.
+   WICHTIG: Dieses Ereignis ist bewusst KEIN GA4-"purchase".
+   Die Seite bestätigt die Zahlung nicht serverseitig, sondern misst nur die
+   Rückkehr aus dem Checkout mit syntaktisch gültiger Checkout-Session. */
+function bhSessionFingerprint(value){
+  let h=2166136261;
+  for(let i=0;i<value.length;i++){
+    h^=value.charCodeAt(i);
+    h=Math.imul(h,16777619);
+  }
+  return (h>>>0).toString(36);
+}
+
+function trackQuestionCheckoutReturn(){
+  if(localStorage.getItem("briefhelden_analytics_consent")!=="yes") return;
+  if(!CHECKOUT_SESSION_ID) return;
+
+  const currentLang=getLang();
+  const formUrl=buildQuestionFormUrl(currentLang);
+  if(!formUrl) return;
+
+  loadAnalytics();
+  if(typeof gtag!=="function") return;
+
+  const key="bh_question_checkout_return_"+bhSessionFingerprint(CHECKOUT_SESSION_ID);
+  if(sessionStorage.getItem(key)==="1") return;
+
+  sessionStorage.setItem(key,"1");
+  gtag("event","question_checkout_return",{
+    currency:"EUR",
+    value:0.99,
+    service_type:"question",
+    site_language:currentLang,
+    funnel_step:"question_form_open"
+  });
+}
+
 const menuBtn=document.getElementById("menuBtn"),mobileNav=document.getElementById("mobileNav");
 menuBtn.addEventListener("click",()=>{
   const open=mobileNav.style.display==="block";
@@ -663,7 +700,10 @@ function loadAnalytics(){
 }
 const consent=document.getElementById("consent");
 const consentState=localStorage.getItem("briefhelden_analytics_consent");
-if(consentState==="yes") loadAnalytics();
+if(consentState==="yes"){
+  loadAnalytics();
+  trackQuestionCheckoutReturn();
+}
 if(!consentState) consent.classList.add("show");
 document.getElementById("necessaryBtn").addEventListener("click",()=>{
   localStorage.setItem("briefhelden_analytics_consent","no");
@@ -673,6 +713,7 @@ document.getElementById("analyticsBtn").addEventListener("click",()=>{
   localStorage.setItem("briefhelden_analytics_consent","yes");
   consent.classList.remove("show");
   loadAnalytics();
+  trackQuestionCheckoutReturn();
 });
 document.getElementById("cookieSettings").addEventListener("click",()=>consent.classList.add("show"));
 </script>
