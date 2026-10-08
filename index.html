@@ -386,6 +386,108 @@
       background:linear-gradient(120deg,rgba(255,255,255,.025),transparent 30%,transparent 70%,rgba(49,185,255,.03))
     }
 
+
+
+    /* HOMEPAGE-VIDEOS – BriefHelden Avatar-Videos */
+    .video-feature{position:relative}
+    .video-feature::before{
+      content:"";
+      position:absolute;
+      width:420px;
+      height:300px;
+      border-radius:50%;
+      background:radial-gradient(circle,rgba(36,196,255,.11),transparent 68%);
+      filter:blur(18px);
+      pointer-events:none;
+    }
+    .video-feature.video-one::before{right:4%;top:6%}
+    .video-feature.video-two::before{left:3%;top:10%;background:radial-gradient(circle,rgba(255,196,46,.08),transparent 68%)}
+    .video-feature-grid{
+      position:relative;
+      z-index:1;
+      display:grid;
+      grid-template-columns:.86fr 1.14fr;
+      gap:30px;
+      align-items:center;
+    }
+    .video-feature-grid.reverse{grid-template-columns:1.14fr .86fr}
+    .video-copy{padding:6px 8px}
+    .video-copy .section-title{max-width:620px}
+    .video-copy .section-sub{max-width:660px}
+    .video-copy-note{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      margin-top:16px;
+      padding:8px 11px;
+      border-radius:999px;
+      background:rgba(9,36,61,.72);
+      border:1px solid rgba(69,199,255,.16);
+      color:#bcd5e5;
+      font-size:11px;
+      font-weight:850;
+    }
+    .video-copy-note::before{
+      content:"▶";
+      color:var(--yellow);
+      font-size:10px;
+    }
+    .video-card{
+      padding:11px;
+      border-radius:26px;
+      border-color:rgba(75,207,255,.34);
+      box-shadow:0 26px 70px rgba(0,0,0,.36),0 0 38px rgba(32,183,255,.08);
+    }
+    .video-frame{
+      position:relative;
+      overflow:hidden;
+      aspect-ratio:16 / 9;
+      border-radius:18px;
+      background:#020812;
+      border:1px solid rgba(108,218,255,.18);
+      box-shadow:0 0 0 1px rgba(255,255,255,.025) inset;
+    }
+    .video-frame video{
+      width:100%;
+      height:100%;
+      display:block;
+      object-fit:contain;
+      background:#000;
+    }
+    .video-frame::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      box-shadow:inset 0 0 42px rgba(0,0,0,.16);
+      border-radius:inherit;
+    }
+    .video-card-footer{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:10px 7px 2px;
+      color:#a9bfd1;
+      font-size:10px;
+      font-weight:800;
+    }
+    .video-card-footer strong{color:#e8f7ff;font-size:11px}
+
+    @media (max-width:900px){
+      .video-feature-grid,.video-feature-grid.reverse{grid-template-columns:1fr;gap:20px}
+      .video-feature-grid.reverse .video-copy{order:1}
+      .video-feature-grid.reverse .video-card{order:2}
+      .video-copy{padding:0}
+    }
+    @media (max-width:640px){
+      .video-card{padding:7px;border-radius:20px}
+      .video-frame{border-radius:14px}
+      .video-card-footer{padding:8px 4px 1px;font-size:9px}
+      .video-card-footer strong{font-size:10px}
+      .video-copy-note{font-size:10px}
+    }
+
     /* STEPS */
     .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .step{min-height:250px;padding:21px;display:grid;grid-template-columns:1fr 120px;gap:12px;align-items:center}
@@ -849,6 +951,29 @@
       </div>
     </section>
 
+    <section class="section compact video-feature video-one" aria-labelledby="video1-title">
+      <div class="wrap">
+        <div class="video-feature-grid">
+          <div class="video-copy">
+            <span class="eyebrow" data-i18n="video1_badge">Kurz erklärt · 47 Sekunden</span>
+            <h2 class="section-title" id="video1-title" data-i18n="video1_title">BriefHelden in weniger als einer Minute</h2>
+            <p class="section-sub" data-i18n="video1_sub">Mahnung, Amt, Versicherung, Bank, Arbeitgeber oder Vertrag: Das Video zeigt, warum schwierige Schreiben schnell Fragen auslösen und wie BriefHelden beim Verstehen hilft.</p>
+            <span class="video-copy-note" data-i18n="video1_hint">Video auf Deutsch · Ton startet erst nach Klick</span>
+          </div>
+
+          <div class="premium-card video-card">
+            <div class="video-frame">
+              <video controls preload="metadata" playsinline aria-label="BriefHelden kurz erklärt">
+                <source src="assets/videos/BH_001_Homepage_Frau_Kurz-Erklaert_16x9_web.mp4" type="video/mp4">
+                Ihr Browser unterstützt die Videowiedergabe nicht.
+              </video>
+            </div>
+            <div class="video-card-footer"><strong>BriefHelden</strong><span>16:9 · 1080p</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section compact" id="how">
       <div class="wrap">
         <div class="section-head">
@@ -886,6 +1011,29 @@
             </div>
             <div class="step-art-img" aria-hidden="true"><img src="assets/step-email.webp" alt="" width="280" height="260" loading="lazy"></div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section compact video-feature video-two" aria-labelledby="video2-title">
+      <div class="wrap">
+        <div class="video-feature-grid reverse">
+          <div class="premium-card video-card">
+            <div class="video-frame">
+              <video controls preload="metadata" playsinline aria-label="BriefHelden am Briefkasten">
+                <source src="assets/videos/BH_002_Homepage_Frau_Briefkasten_16x9_web.mp4" type="video/mp4">
+                Ihr Browser unterstützt die Videowiedergabe nicht.
+              </video>
+            </div>
+            <div class="video-card-footer"><strong>BriefHelden</strong><span>16:9 · 1080p</span></div>
+          </div>
+
+          <div class="video-copy">
+            <span class="eyebrow" data-i18n="video2_badge">Alltagssituation · 56 Sekunden</span>
+            <h2 class="section-title" id="video2-title" data-i18n="video2_title">Was ist heute wieder im Briefkasten?</h2>
+            <p class="section-sub" data-i18n="video2_sub">Post kommt an, Fragen entstehen und die Suche beginnt. Das Briefkasten-Video zeigt eine typische Alltagssituation und wie BriefHelden beim Verstehen schwieriger Schreiben unterstützt.</p>
+            <span class="video-copy-note" data-i18n="video2_hint">Video auf Deutsch · Ton startet erst nach Klick</span>
+          </div>
         </div>
       </div>
     </section>
@@ -1099,6 +1247,8 @@
         mini_1:"Keine Anmeldung",mini_2:"Einmalzahlung",mini_4:"Keine Rechtsberatung",
         visual_authority:"Behörde",visual_letter:"Offizielles Schreiben",visual_complex:"„Gemäß § … wird hiermit festgestellt, dass …“",visual_easy:"Einfach erklärt:",visual_what:"Worum geht es?",visual_what_sub:"Kurz und verständlich zusammengefasst",visual_amounts:"Beträge",visual_amounts_sub:"Alle wichtigen Beträge im Überblick",visual_dates:"Termine & Fristen",visual_dates_sub:"Alle genannten Daten und Fristen",visual_terms:"Wichtige Begriffe",visual_terms_sub:"Fachbegriffe einfach erklärt",visual_meaning:"Was bedeutet das für Sie?",visual_meaning_sub:"Neutral erklärt – Sie entscheiden selbst",
         strip_1:"Keine Anmeldung",strip_2:"Einmalzahlung",strip_4:"KI-gestützte Erklärung",strip_5:"Keine Rechtsberatung",
+        video1_badge:"Kurz erklärt · 47 Sekunden",video1_title:"BriefHelden in weniger als einer Minute",video1_sub:"Mahnung, Amt, Versicherung, Bank, Arbeitgeber oder Vertrag: Das Video zeigt, warum schwierige Schreiben schnell Fragen auslösen und wie BriefHelden beim Verstehen hilft.",video1_hint:"Video auf Deutsch · Ton startet erst nach Klick",
+        video2_badge:"Alltagssituation · 56 Sekunden",video2_title:"Was ist heute wieder im Briefkasten?",video2_sub:"Post kommt an, Fragen entstehen und die Suche beginnt. Das Briefkasten-Video zeigt eine typische Alltagssituation und wie BriefHelden beim Verstehen schwieriger Schreiben unterstützt.",video2_hint:"Video auf Deutsch · Ton startet erst nach Klick",
         how_badge:"Einfacher Ablauf",how_title:"So funktioniert es",how_sub:"In wenigen Schritten zu einer verständlichen Erklärung Ihres Schreibens.",step1:"Brief hochladen",step1_sub:"Nach der Zahlung laden Sie Ihr Dokument als PDF, JPG oder PNG hoch.",step2:"Verständlich erklären lassen",step2_sub:"Der Inhalt wird KI-gestützt strukturiert und in einfacher Sprache erklärt.",step3:"Erklärung erhalten",step3_sub:"Sie erhalten die verständliche Erklärung bequem per E-Mail.",
         compare_badge:"Beispiel · fiktiv",compare_title:"Vom Fachtext zu Klartext",compare_sub:"So kann eine typische BriefHelden-Erklärung aussehen.",examples_btn:"Weitere Beispiele ansehen →",original:"Original im Brief",original_text:"„Hiermit wird Ihnen gemäß den geltenden Vorschriften ein Verspätungszuschlag in Höhe von 125,00 € festgesetzt. Der Grund und der betreffende Zeitraum ergeben sich aus diesem Schreiben.“",easy_explained:"BriefHelden erklärt",easy_1:"Worum geht es?",easy_1_sub:"Das Schreiben informiert über einen Verspätungszuschlag.",easy_2:"Betrag",easy_2_sub:"Im Schreiben werden 125,00 € genannt.",easy_3:"Datum / Zeitraum",easy_3_sub:"Der betreffende Zeitraum steht im Schreiben.",easy_4:"Begriff",easy_4_sub:"„Verspätungszuschlag“ bedeutet eine zusätzliche Zahlung wegen verspäteter Abgabe.",
         service_badge:"Klare Preise · kein Abo",service_title:"Unsere Leistungen",service_sub:"Wählen Sie den Service, der zu Ihrer Frage passt.",one_time:"Einmalzahlung",service1_title:"Kompletten Brief erklären",service1_li1:"Komplettes Schreiben verständlich erklärt",service1_li2:"Wichtige Punkte, Beträge und genannte Daten übersichtlich",service1_li3:"Schwierige Begriffe in einfacher Sprache",service1_li4:"Erklärung bequem per E-Mail",service1_btn:"Jetzt Brief erklären",service2_title:"Kurze Frage stellen",service2_li1:"Eine konkrete Frage zum Schreiben",service2_li2:"Direkte und verständliche Erklärung",service2_li3:"Ideal für einzelne Begriffe oder Sätze",service2_li4:"Antwort bequem per E-Mail",service2_btn:"Jetzt Frage stellen",
@@ -1118,6 +1268,8 @@
         mini_1:"No account needed",mini_2:"One-time payment",mini_4:"No legal advice",
         visual_authority:"Authority",visual_letter:"Official letter",visual_complex:"“Pursuant to § … it is hereby determined that …”",visual_easy:"Simply explained:",visual_what:"What is it about?",visual_what_sub:"Brief, clear summary",visual_amounts:"Amounts",visual_amounts_sub:"Important amounts at a glance",visual_dates:"Dates & deadlines",visual_dates_sub:"Dates mentioned in the document",visual_terms:"Important terms",visual_terms_sub:"Technical wording explained simply",visual_meaning:"What does it mean for you?",visual_meaning_sub:"Explained neutrally – you decide",
         strip_1:"No account",strip_2:"One-time payment",strip_4:"AI-assisted explanation",strip_5:"No legal advice",
+        video1_badge:"Explained briefly · 47 seconds",video1_title:"BriefHelden in under a minute",video1_sub:"Reminder, authority, insurance, bank, employer or contract: the video shows why difficult letters quickly raise questions and how BriefHelden helps you understand them.",video1_hint:"Video in German · sound starts after you click",
+        video2_badge:"Everyday situation · 56 seconds",video2_title:"What is in the mailbox today?",video2_sub:"Mail arrives, questions come up and the search begins. The mailbox video shows a familiar everyday situation and how BriefHelden supports you in understanding difficult letters.",video2_hint:"Video in German · sound starts after you click",
         how_badge:"Simple process",how_title:"How it works",how_sub:"A few clear steps from document to understandable explanation.",step1:"Upload letter",step1_sub:"After payment, upload your document as PDF, JPG or PNG.",step2:"Get a clear explanation",step2_sub:"The content is structured with AI assistance and explained in plain language.",step3:"Receive your explanation",step3_sub:"The clear explanation is sent conveniently by email.",
         compare_badge:"Example · fictional",compare_title:"From jargon to plain language",compare_sub:"This is what a typical BriefHelden explanation can look like.",examples_btn:"See more examples →",original:"Original wording",original_text:"“In accordance with the applicable provisions, a late-filing surcharge of €125.00 is hereby assessed. The reason and relevant period are stated in this notice.”",easy_explained:"BriefHelden explains",easy_1:"What is it about?",easy_1_sub:"The letter tells you about a late-filing surcharge.",easy_2:"Amount",easy_2_sub:"The letter mentions €125.00.",easy_3:"Date / period",easy_3_sub:"The relevant period is stated in the letter.",easy_4:"Term",easy_4_sub:"A late-filing surcharge is an additional charge linked to a late filing.",
         service_badge:"Clear prices · no subscription",service_title:"Our services",service_sub:"Choose the service that fits your question.",one_time:"One-time payment",service1_title:"Explain the full letter",service1_li1:"Clear explanation of the complete document",service1_li2:"Important points, amounts and dates organised clearly",service1_li3:"Difficult terms explained simply",service1_li4:"Explanation sent by email",service1_btn:"Explain my letter",service2_title:"Ask a short question",service2_li1:"One specific question about a document",service2_li2:"Direct and understandable explanation",service2_li3:"Ideal for individual terms or sentences",service2_li4:"Answer sent by email",service2_btn:"Ask a question",
@@ -1137,6 +1289,8 @@
         mini_1:"Üyelik gerekmez",mini_2:"Tek seferlik ödeme",mini_4:"Hukuki danışmanlık yok",
         visual_authority:"Kurum",visual_letter:"Resmî yazı",visual_complex:"“§ … uyarınca şu husus tespit edilmiştir …”",visual_easy:"Basitçe açıklandı:",visual_what:"Konu nedir?",visual_what_sub:"Kısa ve anlaşılır özet",visual_amounts:"Tutarlar",visual_amounts_sub:"Önemli tutarlar bir arada",visual_dates:"Tarih ve süreler",visual_dates_sub:"Belgede geçen tarih ve süreler",visual_terms:"Önemli kavramlar",visual_terms_sub:"Zor terimler basitçe açıklanır",visual_meaning:"Sizin için ne anlama geliyor?",visual_meaning_sub:"Tarafsız açıklama – kararı siz verirsiniz",
         strip_1:"Üyelik yok",strip_2:"Tek seferlik ödeme",strip_4:"YZ destekli açıklama",strip_5:"Hukuki danışmanlık yok",
+        video1_badge:"Kısaca anlatım · 47 saniye",video1_title:"Bir dakikadan kısa sürede BriefHelden",video1_sub:"İhtar, resmî kurum, sigorta, banka, işveren veya sözleşme: video, zor yazıların neden hızlıca soru işaretleri oluşturduğunu ve BriefHelden'in anlamaya nasıl yardımcı olduğunu gösterir.",video1_hint:"Video Almanca · ses tıklamadan sonra başlar",
+        video2_badge:"Günlük durum · 56 saniye",video2_title:"Bugün posta kutusunda ne var?",video2_sub:"Posta gelir, sorular başlar ve arama süreci devreye girer. Posta kutusu videosu tanıdık bir günlük durumu ve BriefHelden'in zor yazıları anlamaya nasıl destek olduğunu gösterir.",video2_hint:"Video Almanca · ses tıklamadan sonra başlar",
         how_badge:"Basit süreç",how_title:"Nasıl çalışır",how_sub:"Belgeden anlaşılır açıklamaya birkaç basit adım.",step1:"Mektubu yükleyin",step1_sub:"Ödemeden sonra belgenizi PDF, JPG veya PNG olarak yükleyin.",step2:"Anlaşılır açıklama alın",step2_sub:"İçerik yapay zekâ desteğiyle düzenlenir ve sade dille açıklanır.",step3:"Açıklamayı alın",step3_sub:"Anlaşılır açıklama e-posta ile gönderilir.",
         compare_badge:"Örnek · kurgusal",compare_title:"Karmaşık dilden sade anlatıma",compare_sub:"Tipik bir BriefHelden açıklaması böyle görünebilir.",examples_btn:"Daha fazla örnek →",original:"Mektuptaki metin",original_text:"“Geçerli hükümler uyarınca 125,00 € tutarında gecikme ek ücreti belirlenmiştir. Nedeni ve ilgili dönem bu yazıda belirtilmiştir.”",easy_explained:"BriefHelden açıklar",easy_1:"Konu nedir?",easy_1_sub:"Yazı bir gecikme ek ücreti hakkında bilgi veriyor.",easy_2:"Tutar",easy_2_sub:"Yazıda 125,00 € belirtiliyor.",easy_3:"Tarih / dönem",easy_3_sub:"İlgili dönem yazıda yer alıyor.",easy_4:"Kavram",easy_4_sub:"Gecikme ek ücreti, geç teslimle bağlantılı ek bir ödemedir.",
         service_badge:"Net fiyat · abonelik yok",service_title:"Hizmetlerimiz",service_sub:"Sorunuza uygun hizmeti seçin.",one_time:"Tek seferlik ödeme",service1_title:"Mektubun tamamını açıkla",service1_li1:"Belgenin tamamı anlaşılır şekilde açıklanır",service1_li2:"Önemli noktalar, tutarlar ve tarihler düzenli gösterilir",service1_li3:"Zor terimler sade dille açıklanır",service1_li4:"Açıklama e-posta ile gönderilir",service1_btn:"Mektubu açıkla",service2_title:"Kısa soru sor",service2_li1:"Belge hakkında tek bir somut soru",service2_li2:"Doğrudan ve anlaşılır açıklama",service2_li3:"Tek tek terim veya cümleler için ideal",service2_li4:"Yanıt e-posta ile gönderilir",service2_btn:"Soru sor",
@@ -1156,6 +1310,8 @@
         mini_1:"Без регистрации",mini_2:"Разовая оплата",mini_4:"Без юридической консультации",
         visual_authority:"Ведомство",visual_letter:"Официальное письмо",visual_complex:"«В соответствии с § … настоящим устанавливается, что …»",visual_easy:"Простое объяснение:",visual_what:"О чём речь?",visual_what_sub:"Краткое и понятное резюме",visual_amounts:"Суммы",visual_amounts_sub:"Важные суммы одним взглядом",visual_dates:"Даты и сроки",visual_dates_sub:"Все указанные даты и сроки",visual_terms:"Важные термины",visual_terms_sub:"Сложные слова простым языком",visual_meaning:"Что это значит для вас?",visual_meaning_sub:"Нейтральное объяснение – решение за вами",
         strip_1:"Без регистрации",strip_2:"Разовая оплата",strip_4:"Объяснение с ИИ",strip_5:"Без юридической консультации",
+        video1_badge:"Коротко · 47 секунд",video1_title:"BriefHelden меньше чем за минуту",video1_sub:"Напоминание, ведомство, страховка, банк, работодатель или договор: видео показывает, почему сложные письма быстро вызывают вопросы и как BriefHelden помогает их понять.",video1_hint:"Видео на немецком · звук включается после нажатия",
+        video2_badge:"Повседневная ситуация · 56 секунд",video2_title:"Что сегодня снова в почтовом ящике?",video2_sub:"Приходит письмо, появляются вопросы и начинается поиск. Видео у почтового ящика показывает знакомую жизненную ситуацию и то, как BriefHelden помогает понимать сложные письма.",video2_hint:"Видео на немецком · звук включается после нажатия",
         how_badge:"Простой процесс",how_title:"Как это работает",how_sub:"Несколько простых шагов от документа к понятному объяснению.",step1:"Загрузить письмо",step1_sub:"После оплаты загрузите документ в формате PDF, JPG или PNG.",step2:"Получить понятное объяснение",step2_sub:"Содержание структурируется с помощью ИИ и объясняется простым языком.",step3:"Получить объяснение",step3_sub:"Понятное объяснение будет отправлено по электронной почте.",
         compare_badge:"Пример · вымышленный",compare_title:"От сложного текста к ясному смыслу",compare_sub:"Так может выглядеть типичное объяснение BriefHelden.",examples_btn:"Больше примеров →",original:"Оригинал письма",original_text:"«В соответствии с действующими положениями установлен штраф за просрочку в размере 125,00 €. Причина и соответствующий период указаны в письме.»",easy_explained:"BriefHelden объясняет",easy_1:"О чём речь?",easy_1_sub:"Письмо сообщает о штрафе за просрочку.",easy_2:"Сумма",easy_2_sub:"В письме указано 125,00 €.",easy_3:"Дата / период",easy_3_sub:"Соответствующий период указан в письме.",easy_4:"Термин",easy_4_sub:"Штраф за просрочку — это дополнительная сумма, связанная с поздней подачей.",
         service_badge:"Понятные цены · без подписки",service_title:"Наши услуги",service_sub:"Выберите услугу, которая подходит вашему вопросу.",one_time:"Разовая оплата",service1_title:"Объяснить всё письмо",service1_li1:"Понятное объяснение всего документа",service1_li2:"Важные пункты, суммы и даты структурированы",service1_li3:"Сложные термины объясняются простым языком",service1_li4:"Объяснение приходит по электронной почте",service1_btn:"Объяснить письмо",service2_title:"Задать короткий вопрос",service2_li1:"Один конкретный вопрос по документу",service2_li2:"Прямое и понятное объяснение",service2_li3:"Подходит для отдельных слов или предложений",service2_li4:"Ответ приходит по электронной почте",service2_btn:"Задать вопрос",
