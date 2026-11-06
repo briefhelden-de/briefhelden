@@ -839,6 +839,77 @@
       .final-device-art{width:210px}
     }
 
+    /* ============================================================
+       BRIEFHELDEN: NUR UMLAUFENDE LICHTKANTE (06.11.2026)
+       Die Inhalte, Kartenflächen, Icons und Klickziele bleiben gleich.
+       Der Lichtimpuls läuft automatisch auf Smartphone und Desktop.
+       ============================================================ */
+    @property --bh-border-angle {
+      syntax: "<angle>";
+      inherits: false;
+      initial-value: 0deg;
+    }
+
+    /* Bereits existierende Briefkategorien behalten alle Innenstile. */
+    .category::before,
+    .bh-letter-list-cta::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      box-sizing: border-box;
+      padding: 2px;
+      border-radius: inherit;
+      pointer-events: none;
+      background: conic-gradient(
+        from var(--bh-border-angle),
+        transparent 0deg,
+        transparent 230deg,
+        rgba(25, 167, 250, 0.04) 263deg,
+        rgba(31, 190, 255, 0.28) 291deg,
+        rgba(53, 207, 255, 0.85) 319deg,
+        #edfdff 326deg,
+        rgba(42, 201, 255, 0.88) 334deg,
+        transparent 355deg,
+        transparent 360deg
+      );
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+      animation: bh-orbit-border 4.8s linear infinite;
+    }
+
+    /* Die bestehende Hintergrunddekoration hinter der Lichtkante lassen. */
+    .category::after { z-index: 0; pointer-events: none; }
+
+    /* Nur der einzelne Link 'Alle Briefe ansehen' erhält denselben Rand. */
+    .bh-letter-list-cta {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .bh-letter-list-cta::before { animation-delay: -1.4s; }
+    .category:nth-child(2)::before { animation-delay: -0.5s; }
+    .category:nth-child(3)::before { animation-delay: -1.0s; }
+    .category:nth-child(4)::before { animation-delay: -1.5s; }
+    .category:nth-child(5)::before { animation-delay: -2.0s; }
+    .category:nth-child(6)::before { animation-delay: -2.5s; }
+    .category:nth-child(7)::before { animation-delay: -3.0s; }
+
+    @keyframes bh-orbit-border {
+      to { --bh-border-angle: 360deg; }
+    }
+
+    /* Bewegung nach Geräteeinstellung abschalten; Rand bleibt erkennbar. */
+    @media (prefers-reduced-motion: reduce) {
+      .category::before,
+      .bh-letter-list-cta::before {
+        animation: none !important;
+        background: rgba(68, 210, 255, 0.72);
+      }
+    }
+
   </style>
 </head>
 <body id="top">
@@ -1128,7 +1199,7 @@
             <h2 class="section-title" data-i18n="letters_title">Häufige Briefe – Beispiele</h2>
             <p class="section-sub" data-i18n="letters_sub">Jede Themenseite erklärt typische Inhalte und Begriffe passend zum jeweiligen Schreiben.</p>
           </div>
-          <a class="btn btn-ghost" href="/alle-briefe-verstehen" data-i18n="all_letters">Alle Briefe ansehen →</a>
+          <a class="btn btn-ghost bh-letter-list-cta" href="/alle-briefe-verstehen" data-i18n="all_letters">Alle Briefe ansehen →</a>
         </div>
 
         <div class="categories">
@@ -1214,7 +1285,7 @@
     <div class="consent-grid">
       <div>
         <strong data-i18n="consent_title">Datenschutzeinstellungen</strong>
-        <p data-i18n="consent_text">Notwendige Funktionen werden immer verwendet. Analysefunktionen laden wir erst nach Ihrer Zustimmung.</p>
+        <p data-i18n="consent_text">Cloudflare Web Analytics erfasst Seitenaufrufe ohne Analyse-Cookies. Google Analytics laden wir nur mit Ihrer Zustimmung.</p>
       </div>
       <div class="consent-actions">
         <button class="necessary" id="necessaryBtn" type="button" data-i18n="consent_only">Nur notwendig</button>
@@ -1257,7 +1328,7 @@
         faq_title:"Häufige Fragen",faq_sub:"Kurz und verständlich beantwortet.",faq1_q:"Wie erhalte ich meine Erklärung?",faq1_a:"Nach Zahlung und Upload wird Ihr Schreiben verarbeitet. Die verständliche Erklärung erhalten Sie per E-Mail.",faq2_q:"Welche Dateien kann ich hochladen?",faq2_a:"Geeignet sind insbesondere PDF-, JPG- und PNG-Dateien. Gute, gerade und gut lesbare Aufnahmen erleichtern die Texterkennung.",faq3_q:"Ist BriefHelden eine Rechtsberatung?",faq3_a:"Nein. BriefHelden erklärt den Inhalt und vereinfacht schwierige Sprache. Es erfolgt keine individuelle Rechtsprüfung oder verbindliche Handlungsempfehlung.",faq4_q:"Wird künstliche Intelligenz verwendet?",faq4_a:"Ja. Die Erklärung wird KI-gestützt erstellt. Weitere Informationen zur Verarbeitung personenbezogener Daten finden Sie in der Datenschutzerklärung.",
         final_badge:"BriefHelden",final_title:"Ihr Brief. Unsere Erklärung.",final_sub:"Kompliziert war gestern. Jetzt einfach verstehen.",final_pay:"Brief erklären – 3,90 €",final_question:"Kurze Frage – 0,99 €",
         foot_imprint:"Impressum",foot_privacy:"Datenschutz",foot_terms:"AGB",foot_refund:"Widerruf",
-        consent_title:"Datenschutzeinstellungen",consent_text:"Notwendige Funktionen werden immer verwendet. Analysefunktionen laden wir erst nach Ihrer Zustimmung.",consent_only:"Nur notwendig",consent_allow:"Analyse erlauben",cookie_settings:"Cookie-Einstellungen"
+        consent_title:"Datenschutzeinstellungen",consent_text:"Cloudflare Web Analytics erfasst Seitenaufrufe ohne Analyse-Cookies. Google Analytics laden wir nur mit Ihrer Zustimmung.",consent_only:"Nur notwendig",consent_allow:"Analyse erlauben",cookie_settings:"Cookie-Einstellungen"
       },
       en:{
         skip_link:"Skip to content",menu_btn:"Menu",visual_badge:"Plain language instead of jargon",
@@ -1278,7 +1349,7 @@
         faq_title:"Frequently asked questions",faq_sub:"Answered briefly and clearly.",faq1_q:"How do I receive my explanation?",faq1_a:"After payment and upload, your document is processed and the explanation is sent by email.",faq2_q:"Which files can I upload?",faq2_a:"PDF, JPG and PNG are particularly suitable. Clear, straight photos improve text recognition.",faq3_q:"Is BriefHelden legal advice?",faq3_a:"No. BriefHelden explains the content and simplifies difficult language. No individual legal assessment or binding recommendation is provided.",faq4_q:"Is artificial intelligence used?",faq4_a:"Yes. The explanation is AI-assisted. Further information about the processing of personal data is available in the privacy policy.",
         final_badge:"BriefHelden",final_title:"Your letter. Our explanation.",final_sub:"Complicated was yesterday. Understand it now.",final_pay:"Explain letter – €3.90",final_question:"Short question – €0.99",
         foot_imprint:"Imprint",foot_privacy:"Privacy",foot_terms:"Terms",foot_refund:"Withdrawal",
-        consent_title:"Privacy settings",consent_text:"Necessary functions are always used. Analytics functions are loaded only after your consent.",consent_only:"Necessary only",consent_allow:"Allow analytics",cookie_settings:"Cookie settings"
+        consent_title:"Privacy settings",consent_text:"Cloudflare Web Analytics measures page views without analytics cookies. Google Analytics loads only with your consent.",consent_only:"Necessary only",consent_allow:"Allow analytics",cookie_settings:"Cookie settings"
       },
       tr:{
         skip_link:"İçeriğe geç",menu_btn:"Menü",visual_badge:"Karmaşık dil yerine açık anlatım",
@@ -1299,7 +1370,7 @@
         faq_title:"Sık sorulan sorular",faq_sub:"Kısa ve anlaşılır cevaplar.",faq1_q:"Açıklamamı nasıl alırım?",faq1_a:"Ödeme ve yüklemeden sonra belgeniz işlenir ve açıklama e-posta ile gönderilir.",faq2_q:"Hangi dosyaları yükleyebilirim?",faq2_a:"Özellikle PDF, JPG ve PNG uygundur. Net ve düz çekilmiş fotoğraflar metin tanımayı iyileştirir.",faq3_q:"BriefHelden hukuki danışmanlık mı?",faq3_a:"Hayır. BriefHelden içeriği açıklar ve zor dili sadeleştirir. Bireysel hukuki değerlendirme veya bağlayıcı eylem tavsiyesi verilmez.",faq4_q:"Yapay zekâ kullanılıyor mu?",faq4_a:"Evet. Açıklama yapay zekâ desteğiyle hazırlanır. Kişisel verilerin işlenmesi hakkında daha fazla bilgi gizlilik politikasında yer alır.",
         final_badge:"BriefHelden",final_title:"Mektubunuz. Bizim açıklamamız.",final_sub:"Karmaşıklık dünde kaldı. Şimdi anlayın.",final_pay:"Mektubu açıkla – 3,90 €",final_question:"Kısa soru – 0,99 €",
         foot_imprint:"Künye",foot_privacy:"Gizlilik",foot_terms:"Şartlar",foot_refund:"Cayma",
-        consent_title:"Gizlilik ayarları",consent_text:"Gerekli işlevler her zaman kullanılır. Analiz işlevleri yalnızca onayınızdan sonra yüklenir.",consent_only:"Yalnızca gerekli",consent_allow:"Analize izin ver",cookie_settings:"Çerez ayarları"
+        consent_title:"Gizlilik ayarları",consent_text:"Cloudflare Web Analytics sayfa görüntülemelerini analiz çerezleri olmadan ölçer. Google Analytics yalnızca izninizle yüklenir.",consent_only:"Yalnızca gerekli",consent_allow:"Analize izin ver",cookie_settings:"Çerez ayarları"
       },
       ru:{
         skip_link:"Перейти к содержанию",menu_btn:"Меню",visual_badge:"Понятно вместо сложного языка",
@@ -1320,7 +1391,7 @@
         faq_title:"Частые вопросы",faq_sub:"Короткие и понятные ответы.",faq1_q:"Как я получу объяснение?",faq1_a:"После оплаты и загрузки документ обрабатывается, а понятное объяснение отправляется по электронной почте.",faq2_q:"Какие файлы можно загрузить?",faq2_a:"Подходят прежде всего PDF, JPG и PNG. Чёткие и ровные фотографии улучшают распознавание текста.",faq3_q:"BriefHelden — это юридическая консультация?",faq3_a:"Нет. BriefHelden объясняет содержание и упрощает сложный язык. Индивидуальная юридическая оценка и обязательные рекомендации не предоставляются.",faq4_q:"Используется ли искусственный интеллект?",faq4_a:"Да. Объяснение создаётся с помощью ИИ. Дополнительная информация об обработке персональных данных содержится в политике конфиденциальности.",
         final_badge:"BriefHelden",final_title:"Ваше письмо. Наше объяснение.",final_sub:"Сложное осталось в прошлом. Теперь всё понятно.",final_pay:"Объяснить письмо – 3,90 €",final_question:"Короткий вопрос – 0,99 €",
         foot_imprint:"Выходные данные",foot_privacy:"Конфиденциальность",foot_terms:"Условия",foot_refund:"Отказ",
-        consent_title:"Настройки конфиденциальности",consent_text:"Необходимые функции используются всегда. Функции аналитики загружаются только после вашего согласия.",consent_only:"Только необходимое",consent_allow:"Разрешить аналитику",cookie_settings:"Настройки cookie"
+        consent_title:"Настройки конфиденциальности",consent_text:"Cloudflare Web Analytics измеряет просмотры страниц без аналитических cookie. Google Analytics загружается только с вашего согласия.",consent_only:"Только необходимое",consent_allow:"Разрешить аналитику",cookie_settings:"Настройки cookie"
       }
     };
 
@@ -1448,5 +1519,8 @@
       cookieSettings.addEventListener("click",()=>consent.classList.add("show"));
     }
   </script>
+  <!-- Cloudflare Web Analytics – cookiefreie Reichweitenmessung -->
+  <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "7e07b51d621d4a639324fd93c4a0311b"}'></script>
+  <!-- End Cloudflare Web Analytics -->
 </body>
 </html>
